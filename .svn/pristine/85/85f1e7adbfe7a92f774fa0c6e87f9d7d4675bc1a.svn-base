@@ -1,0 +1,72 @@
+<include file="Public/head" title="{$webtitle}"/>
+<link href="__PUBLIC__/static/um/themes/default/css/umeditor.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+ <body>
+    <div data-role="page" id="page">
+        <div  class="heads">
+            <h1>随手赚</h1>
+        </div>
+        <div data-role="content">
+            <div class="head_top">
+                <p>任务推荐</p>
+            </div>
+            <div class="head_con">
+                <p>任务推荐</p>
+            </div>
+            <div class="head_con2">
+                 <div class="editor" style="height: 100%;width: 580px;float: left;">
+                    <script type="text/plain" id="editor4" style="width:580px;height:350px;" name="editor4"></script>
+                </div>
+            </div>
+            <div>
+                经销商姓名: <input type="text" id="dealerName" style="width: 100%" />
+                经销商手机: <input type="text" id="dealerPhone" style="width: 100%" />
+                经销商公司名: <input type="text" id="dealerCompanyName" style="width: 100%" />
+                经销商行业: <input type="text" id="dealerIndustry" style="width: 100%" />
+                经销商地址: <input type="text" id="dealerAddress" style="width: 100%" />
+                经销商电话: <input type="text" id="dealerTel" style="width: 100%" />
+                经销商传真: <input type="text" id="dealerFax" style="width: 100%" />
+                <input type="hidden" id="userid" name="userid" value="{$userid}" />
+                <input type="hidden" id="taskid" name="taskid" value="{$taskid}" />
+                <input type="button" id="btn_widely_four" value="提交"  onclick="submit()"/>
+            </div>
+        </div>
+    </div>
+
+</body>
+<include file="Public/loadjs"/>
+ <script type="text/javascript">
+     //实例化编译器
+     var ue=UM.getEditor('editor4',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     
+     UM.getEditor('editor4').setContent('{$re.f_recommend}');
+     UM.getEditor('editor4').setDisabled('fullscreen');
+
+     function submit(){
+        var taskid=$("#taskid").val();
+        var userid=$("#userid").val();
+        var dealerName=$("#dealerName").val();
+        var dealerPhone=$("#dealerPhone").val();
+        var dealerCompanyName=$("#dealerCompanyName").val();
+        var dealerIndustry=$("#dealerIndustry").val();
+        var dealerAddress=$("#dealerAddress").val();
+        var dealerTel=$("#dealerTel").val();
+        var dealerFax=$("#dealerFax").val();
+
+
+        $.post(APP+"/Mobileweb/Events/spreadSure",
+        "taskid="+taskid+"&userid="+userid+"&dealerName="+dealerName+"&dealerPhone="+dealerPhone+"&dealerCompanyName="+dealerCompanyName+"&dealerIndustry="+dealerIndustry+"&dealerAddress="+dealerAddress+"&dealerTel="+dealerTel+"&dealerFax="+dealerFax,
+        function(data){
+            layer.msg("点击右上方按钮结束！");
+        },"json");
+     }
+</script>
+</html>

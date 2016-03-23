@@ -1,0 +1,50 @@
+<include file="Public/head" />
+<style type="text/css">
+body{
+    background-color: #fff;
+}
+.content_btn{
+    margin-left: 48%;
+}
+.line_input input{
+    width: 30%;
+}
+.modi .modi_business .line_note{
+    width: 35%;
+    float: right;
+    margin-top: -15px;
+}
+
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="modi">
+            <div class="modi_business">
+                <div class="page_next" id="push_one">
+                    <div class="line">
+                        <div class="line_input">
+                            <input type="hidden" id="id" placeholder="序列" value="{$reModi.list.id}">
+                            <span>角色名：</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="accessName" placeholder="角色名" value="{$reModi.list.accessname}">
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="content_input">
+                           {$relist}
+                        </div>
+                    </div>
+                    <input type="hidden" id="num"  value="{$lastCount.f_id}">
+
+                    <div class="content_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_modi_access" style="margin-top: 30px;">确定</a>
+                    </div>
+
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

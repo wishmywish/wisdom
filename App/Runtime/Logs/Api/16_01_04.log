@@ -1,0 +1,483 @@
+[ 2016-01-04T09:27:23+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-04T09:27:24+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T09:27:25+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-01-04' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0030s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0050s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-01-04T09:27:40+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-01-04' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0030s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T09:27:43+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-01-04T09:27:50+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T09:27:53+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-01-04' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0030s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:29:05+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-01-04' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0030s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0060s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-04T09:29:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T09:29:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-01-04T09:29:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'1002','3','1451870975','145187097537607452','f','0','0','2016-01-05','2016-01-12','v','17757128602','6','0','') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','711','1451870975','招商任务新增第一步') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T09:29:44+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增区域','711','1451870984') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('711','天津市|天津市|河西区','22') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T09:29:44+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=711
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=711 )  [ RunTime:0.0020s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=711 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-04T09:29:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2198 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2199 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0050s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第二步','711','1451870994') [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_shuiw_commission`,`f_shangw_commission`,`f_tuig_commission`,`f_piny_commission`) VALUES ('711',NULL,NULL,'0','100','0','0','0','100','2506.25','5012.5','501.25','501.25','501.25','1002.5') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-01-04T09:29:58+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2316 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2317 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2318 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2319 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2320 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2321 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2322 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_taskmtdetailedinfo` (`f_taskid`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_distributorsrequir`,`f_retailoutlets`,`f_channelpolicy`,`f_note`,`f_product`,`f_company_note`) VALUES ('711',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'<p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.产品展示<ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol>','<p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.参与方式<ul style=\"margin-left: 15px;\"><li>1.1通过微信或QQ分享给6个朋友，可以获得更多佣金</li></ul></li><li>2.招商要求<ul style=\"margin-left: 15px;\"><li>2.1招商说明</li><li>2.2招商区域及数量</li></ul></li><li>3.政策支持<ul style=\"margin-left: 15px;\"><li>3.1渠道政策</li><li>3.2广宣政策</li></ul></li><li>4.产品价格</li></ol>','<p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.企业简介</li><li>2.企业文化</li><li>3.企业服务</li></ol>') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第四步','711','1451870998') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T09:30:10+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb223dc67.jpg','20160104/','1451871010') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:30:23+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb2f27019.png','20160104/','1451871023') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-01-04T09:30:38+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb3e4f805.jpg','20160104/','1451871038') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T09:30:49+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/rar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb494527f.rar','20160104/','1451871049') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:30:53+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/doc,docx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb4d03c75.doc','20160104/','1451871053') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:30:56+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/rar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb50ded3c.rar','20160104/','1451871056') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:31:00+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/doc,docx,xls,xlsx,pdf.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb54b59ef.doc','20160104/','1451871060') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T09:31:04+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/doc,docx,,xls,xlsx,pdf.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb58c397f.doc','20160104/','1451871064') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:31:08+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/ai,cdr.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb5bea74c.ai','20160104/','1451871068') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:31:12+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5689cb60c75e2.png','20160104/','1451871072') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T09:31:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增完成','711','1451871078') [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_taskmtattach` (`f_fileid1`,`f_fileld2`,`f_fileid3`,`f_fileid4`,`f_fileid5`,`f_fileid6`,`f_taskid`) VALUES ('9874','9875','9876','9877','9878','9879','711') [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: creatuserid D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2050 行.
+NOTIC: [8] Undefined index: indexid D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2066 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`=NULL,`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='3',`f_title`='f',`f_fileid`='9870',`f_fileid_ban`='9873',`f_begindate`='2016-01-05',`f_enddate`='2016-01-12',`f_linkman`='v',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='' WHERE ( f_tid=711 ) [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','711','1451871078','招商任务编辑第一步') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-01-04T09:31:32+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-01-04' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0060s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

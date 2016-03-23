@@ -1,0 +1,44 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 招商APP管理平台</div>
+                <div class="tabli">
+                    <ul id="tabli_business">
+                        <li value="1" class='selected' id="businessIn"><a href="__APP__/Taskadmin/Index/main" style="text-decoration:none;">招商录入</a></li>
+                        <li value="2" id="widelyRecommend"><a href="__APP__/Taskadmin/Index/recommend" style="text-decoration:none;">随手推荐</a></li>
+                    </ul>
+                    <ul class="action">
+                        <li id="businessBidDealer" value="1">审核</li>
+                        <li id="businessRejectDealer" value="2">驳回</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                        <li style='width:25%;'>推荐标题</li>
+                        <li style='width:20%;'>业务员信息</li>
+                        <li style='width:20%;'>经销商信息</li>
+                        <li style='width:15%;'>时间</li>
+                        <li style='width:15%;'>状态</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+   <script>
+    $(function(){
+        //获取列表信息
+        plist_AllRecommendDealer();
+    });
+
+    </script>
+</html>

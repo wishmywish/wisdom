@@ -1,0 +1,134 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class TaskController extends Controller {
+    
+    public function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $access = I('get.access','000000');
+        A("Api/Fun")->isAccess($access);//判断菜单权限
+        $this->assign('access',$access);//传入HTML，功能权限使用
+
+        $this->display();
+    }
+    
+    /**
+     * 随手赚
+     */
+    public function add_widely() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','2');
+        $this->assign("tab", $tab);
+        $this->display();
+    }
+    /**
+     * 推广赚
+     */
+    public function add_push() {
+        set_theme();
+        
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','1');
+        $this->assign("tab", $tab);
+        
+        
+        $this->display();
+        
+    }
+    /**
+     * 招商赚
+     */
+    public function add_business() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+         //pt($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','3');
+        $this->assign("tab", $tab);
+        $this->display();
+    }
+
+    /**
+     * 驳回任务
+     */
+    public function reject() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 客服审核
+     */
+    public function review() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 财务审核
+     */
+    public function cwReview() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 任务延时
+     */
+    public function taskDelay() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $reModi = A('Api/Web')->getDelayTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 预览任务
+     */
+    public function preview() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $this->diaplay();
+    }
+
+}

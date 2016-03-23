@@ -1,0 +1,91 @@
+<include file="Public/head" title="经销商管理" />
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 经销商管理</div>
+        <div class="tabli">
+
+            <ul id="tabli_bid">
+                <li value="0" class="selected">经销商列表</li>
+            </ul>
+            <ul class="">
+                <div class="field" id="searchform">
+                  <input type="text" id="searchdealername" placeholder="请输入公司名" style="width:140px;height: 30px;line-height: 30px;"/>
+                  <input type="text" id="searchindustrytype" placeholder="请输入行业" style="width:140px;height: 30px;line-height: 30px;"/>
+<!--                   <select id="searchindustrytype">
+                    <option value="1"></option>
+                  </select> -->
+                  <input type="text" id="searcharea" placeholder="请输入区域" style="width:140px;height: 30px;line-height: 30px;"/>
+                  <!-- <input type="text" id="searchstatus" placeholder="请输入状态" /> -->
+                  <select id="searchstatus" style="width:120px;height: 30px;">
+                      <option value="0">未联系</option>
+                      <option value="1">已接通</option>
+                      <option value="2">关机</option>
+                      <option value="3">不愿回访</option>
+                      <option value="4">空号</option>
+                      <option value="5">没人接</option>
+                      <option value="6">同事</option>
+                  </select>
+                  <button type="button" id="searchdealer" style="width:60px;height: 30px;line-height: 30px;border: 0px;background:#3c8dbc;color: #fff;">搜索</button>
+                </div>
+            </ul>
+
+            <!--<ul class="action">-->
+                <!--<li id="companyBid" value="1">审核</li>-->
+                <!--<li id="companyReject" value="2">驳回</li>-->
+                <!--<li id="companyAdd" value="3">导入企业</li>-->
+            <!--</ul>-->
+        </div>
+
+        <div class="list">
+            <ul>
+                <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                <li style='width:20%;'>公司全称</li>
+                <li style='width:15%;'>所处行业</li>
+                <li style='width:10%;'>所在区域</li>
+                <li style='width:10%;'>手机号</li>
+                <li style='width:10%;'>电话</li>
+                <li style='width:10%;'>负责人</li>
+                <li style='width:10%;'>渠道</li>
+                <li style='width:10%;'>状态</li>
+            </ul>
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%;'>暂无数据</li>
+                </ul>
+            </div>
+            <div class="page"></div>
+        </div>
+
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        var searchdealername="",searchindustrytype="",searcharea="",searchstatus="";
+        //获取列表信息
+        plist_dealer_list(searchdealername,searchindustrytype,searcharea,searchstatus);
+        $("#searchdealer").click(function(){
+            searchdealername = $("#searchdealername").val();
+            searchindustrytype = $("#searchindustrytype").val();
+            searcharea = $("#searcharea").val();
+            searchstatus = $("#searchstatus").val();
+            //console.log(searchdealername+searchindustrytype+searcharea+searchstatus);
+
+            plist_dealer_list(searchdealername,searchindustrytype,searcharea,searchstatus);
+        });
+    });
+
+    function setStatus(id,selectId){
+        index = layer.open({
+            title: '填写说明',
+            type: 2,
+            area: ['600px', '450px'],
+            content: APP+'/Taskadmin/Dealer/addShowNote?selectId='+selectId+ '&id='+id
+        });
+    }
+</script>
+</html>

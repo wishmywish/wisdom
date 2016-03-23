@@ -1,0 +1,372 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+        }
+        body {
+            background: #E7121D;
+        }
+        .c_head img{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+        }
+        .content .s_left{
+            width: 18%;
+            float: left;
+        }
+        .content .s_right{
+            width: 18%;
+            float: right;
+        }
+        .content .s_content{
+            width: 64%;
+            float: left;
+        }
+        .content .s_list{
+            background-image: url('__IMG__/cs_02.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 80%;
+            /* margin: 0 0 0 0%; */
+            padding: 10%;
+            min-height: 25%;
+            text-align: center;
+
+        }
+        .content .s_list p{
+            width: 100%;
+            text-align: center;
+        }
+        .content .btns{
+            width: 96%;
+            /* float: left; */
+            margin: 10% 2% 0 2%;
+            text-align: center;
+            /* border: 1px solid; */
+            min-height: 16%;
+        }
+        .btn0{
+            background: url('__IMG__/c_btns01.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 6% 15% 5% 20%;
+            letter-spacing: 6px;
+            font-weight: bold;
+            display: inline-block;
+            /* text-align: center; */
+            text-shadow: none;
+            line-height: 20px;
+            /* text-indent: 21px; */
+        }
+        .btn1{
+            background: url('__IMG__/c_btns02.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 5% 2% 5% 10%;
+            font-weight: bold;
+            text-shadow: none;
+            border: none;
+            margin: 4% 0 0 0;
+        }
+        .btns1{
+            width: 76%;
+            padding: 5% 12%;
+            height: 5%;
+        }
+        .btns1  .btn2{
+            background: url('__IMG__/c_btns03.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 3% 0% 3% 0%;
+            letter-spacing: 6px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            text-shadow: none;
+            line-height: 20px;
+            width: 47%;
+            margin: 0 1%;
+            float: left;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: #b40104;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:    #b40104;
+            opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:    #b40104;
+            opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color:    #b40104;
+        }
+        .content .choose_box{
+            width: 100%;
+            text-align: center;
+        }
+        .content  .tips{
+            width: 100%;
+            text-align: center;
+            float: left;
+            line-height: 25px;
+
+        }
+        .bg{
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .sm{
+            font-size: 12px;
+
+        }
+        .content .foot{
+            width: 100%;
+            float: left;
+        }
+
+        #mcover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 20000;
+        }
+        #mcover img {
+            position: fixed;
+            right: 18px;
+            top: 5px;
+            width: 260px!important;
+            height: 180px!important;
+            z-index: 20001;
+        }
+
+
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+    </script>
+    <js href="__STATIC__/jquery-1.11.2.min.js"/>
+    <js href="__STATIC__/layer/layer.js"/>
+    <css href="__STATIC__/layer/skin/layer.css"/>
+    <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+    <js href="__STATIC__/jquery-1.11.2.min.js"/>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    </script>
+    <script type='text/javascript' src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <script>
+        var appid="{$data.appid}";
+        var timestamp="{$data.timestamp}";
+        var nonceStr="{$data.nonceStr}";
+        var signature="{$data.signature}";
+        //        alert("---");
+        //        alert(appid+"**"+timestamp+"**"+nonceStr+"**"+signature+"**");
+        //对页面进行数字签名验证
+        wx.config({
+            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            debug:false,
+            // 必填，公众号的唯一标识
+            appId:appid,
+            // 必填，生成签名的时间戳
+            timestamp:timestamp,
+            // 必填，生成签名的随机串
+            nonceStr:nonceStr,
+            // 必填，签名，见附录1
+            signature:signature,
+            // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            jsApiList:["onMenuShareAppMessage","onMenuShareTimeline","showMenuItems"]
+        });
+
+        wx.ready(function() {
+            wx.showMenuItems({
+                menuList: ["share:appMessage","share:timeline"]
+            });
+
+            wx.onMenuShareAppMessage({
+                title:"{$list.f_wechatnick}给你送祝福啦",
+                desc: "给你送祝福啦", // 分享描述
+                link: "{$shareurl}", // 分享链接
+                imgUrl:"<?php  echo $shareimg;?>", // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    //                   alert("分享成功");
+                    layer.msg("分享成功",{
+                        offset: 0,
+                        shift: 6
+                    });
+                    $("#mcover").hide();
+
+                },
+                cancel: function () {
+                    //                   alert("分享失败");
+                    layer.msg("分享失败",{
+                        offset: 0,
+                        shift: 6
+                    });
+                }
+            });
+
+
+            //            获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+            wx.onMenuShareTimeline({
+                title: '{$list.f_wechatnick}给你送祝福啦', // 分享标题
+                desc: "给你送祝福啦", // 分享描述
+                link:"{$shareurl}", // 分享链接
+                imgUrl:"<?php  echo $shareimg;?>", // 分享图标
+                success: function () {
+                    layer.msg("分享成功",{
+                        offset: 0,
+                        shift: 6
+                    });
+                    $("#mcover").hide();
+                },
+                cancel: function () {
+                    layer.msg("分享失败",{
+                        offset: 0,
+                        shift: 6
+                    });
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content" style="padding: 0">
+        <div class="c_head"><img src="__IMG__/c_head.jpg"></div>
+        <div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+            <img src="__IMG__/guide.png" />
+        </div>
+        <div class="content">
+            <div class="s_left">
+                <img style="width: 100%;" src="__IMG__/c_dl1.jpg">
+            </div>
+            <div class="s_right">
+                <img style="width: 100%;" src="__IMG__/c_dl2.jpg">
+            </div>
+            <form>
+                <div class="s_content">
+                    <div class="s_list"  id="s_list">
+                        {$list.f_shi|default=""}
+                    </div>
+
+                    <div class="btns">
+                        <!--<img style="width: 100%;" src="__IMG__/c_btns01.png"> -->
+                        <span class="btn0">藏头诗制作</span>
+                        <input class="btn1" type="text" name="word" id="word" placeholder="输入你的祝福（口令）"  value="{$list.f_word|default=''}">
+                    </div>
+                    <p style="font-size: 12px;  text-align: center;  line-height: 25px;">限8字并选取诗中的字词建立一个口令</p>
+                </div>
+                <div style="width: 100%;float: left;">
+                    <div class="choose_box">
+                        <label>藏头<input name="cang" type="radio" value="1" /> </label>
+                        <label>藏尾<input name="cang" type="radio" value="2" /> </label>
+                        <label>藏中<input name="cang" type="radio" value="3" /> </label>
+                        <label>递增<input name="cang" type="radio" value="4" /> </label>
+                        <label>递减<input name="cang" type="radio" value="5" /> </label>
+                    </div>
+                    <div class="btns1">
+                        <span class="btn2"  id="submit">生成</span>
+                        <span class="btn2"  onclick="document.getElementById('mcover').style.display='block';">我要分享</span>
+                    </div>
+                    <input type="hidden" id="type" name="type" value="1">
+                    <input type="hidden" id="length" name="length" value="7">
+                    <input type="hidden" id="id" name="id" value="{$list.f_id|default=0}">
+                    <input type="hidden" id="uid" name="uid" value="{$list.f_uid|default=0}">
+                    <p class="tips bg">试一试将祝福输入支付宝口令红包中</p>
+                    <p class="tips bg">请好友来猜口令、拆红包</p>
+                    <p class="tips sm">进入支付宝→选群红包→发红包→使用红包口令→输入祝福口令</p>
+                </div>
+            </form>
+            <div class="foot">
+                <img style="width: 100%" src="__IMG__/s_foot.jpg" >
+            </div>
+
+        </div>
+
+    </div><!-- /content -->
+</div>
+<script>
+    $("#submit").click(function(){
+        var uid = $("#uid").val();
+        var word= $.trim($("#word").val());
+        var cang=$("input[name='cang']:checked").val();
+        if(!word){
+            layer.msg("请输出口令",{
+                offset: 0,
+                shift: 6
+            });
+            return false;
+        }
+        if(!(word.length<=8&&word.length>=1)){
+            layer.msg("口令只限制8字",{
+                offset: 0,
+                shift: 6
+            });
+            return false;
+        }
+        if(!(/^[\u2E80-\u9FFF]+$/).test(word)){
+           layer.msg("只能是汉字",{
+               offset: 0,
+               shift: 6
+           });
+            return false;
+        }
+
+        if(cang==undefined){
+            layer.msg("请选择生成类型",{
+                offset: 0,
+                shift: 6
+            });
+            return false;
+        }
+        if(parseInt(uid)===0){
+            layer.msg("请关闭后,重新加截",{
+                offset: 0,
+                shift: 6
+            });
+            return false;
+        }
+        var param = $("form").serialize();
+        layer.load(1);
+        $.post("{:U('curl_chitousi')}",param, function(val){
+            layer.closeAll();
+            $("#id").val(val.id);
+            if(val.shi==""){
+                layer.msg("请输从新生成",{
+                    offset: 0,
+                    shift: 6
+                });
+            }
+            $("#s_list").html(val.shi);
+        },'json');
+    });
+</script>
+</body>
+</html>

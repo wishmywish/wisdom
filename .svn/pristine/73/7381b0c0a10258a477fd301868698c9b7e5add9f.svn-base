@@ -1,0 +1,19 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content">
+
+        <if condition="$taskinfo.type_label eq 'business'">
+            <div><img src="{$weburl}/Public/upfile/{$taskinfo.info.f_filepath}{$taskinfo.info.f_filename}"></div>
+            <div>客服电话：0571-88195693<br>结束时间：{$taskinfo.info.f_enddate}</div>
+            <div>{$taskinfo.info.f_note}</div>
+            <elseif condition="$taskinfo.type_label eq 'widely'"/>
+            <div>{$taskinfo.info.f_taskrequirements}</div>
+            <elseif condition="$taskinfo.type_label eq 'push'"/>
+            <div>{$taskinfo.info.f_taskrequirements}</div>
+        </if>
+        <div>注册填写邀请码有惊喜：<span style='color:red;'>{$invitationCode}</span></div>
+    </div><!-- /content -->
+</div>
+</body>
+<include file="Public/foot" />

@@ -1,0 +1,194 @@
+<include file="Public/head" title="招商APP管理平台::任务审核" />
+<style type="text/css">   
+.list {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    height: 100%;
+}
+
+body{
+    width: 100%;height: 100%; background-color: #fff;
+}
+.listinfo {   
+    padding-top:10px;
+    float: left;
+    line-height: 40px;
+    width:82%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px #ecf0f5 solid;
+}   
+
+.tabli{
+    /*float: left;*/
+    padding-left: 22.5%;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    background-color: #ecf0f5;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#tabli_bid .selected{
+    background-color: #fff;
+}
+
+.listinfo1 {   
+    float: right;
+    line-height: 40px;
+    width: 78%;
+    text-align: center;
+    background-color: #fff;
+    border: 0px #ecf0f5 solid;
+    overflow: hidden;
+} 
+
+.listinfo2 {   
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+} 
+
+.checkBtn{
+    float: left;
+    margin: 470px 0 20px -84%;
+    width: 30%;
+    height: 25px;
+    /*position: fixed;*/
+    /*z-index: 999;*/
+}
+
+.page2{
+    padding-left:15px;
+    margin: -85px 0 0px 0px;
+    overflow: hidden;
+    width:100%;
+    /*position: fixed;*/
+}
+
+</style> 
+<script language="JavaScript">
+    function responseMouseEvent(obj,type)
+    {
+        if(type==1){
+            obj.style.backgroundColor = "#6699CC"
+        }else if(type==2){
+            obj.style.backgroundColor = "#FFFFFF"
+        } 
+    }
+
+    function responseClickEvent(obj)
+    {
+
+        if(obj.children[0].checked==true)
+            { 
+                obj.children[0].checked = false;
+                obj.style.backgroundColor = "#FFFFFF" 
+                obj.onmouseover = function(){responseMouseEvent(obj,1);};
+                obj.onmouseout = function(){responseMouseEvent(obj,2);};
+                $('.listinfo2').empty();
+        }else{
+
+                var taskid = $("input[name='pubTaskId']:checked");
+
+                if(taskid.length===0){
+                    obj.children[0].checked = true;
+                    obj.style.backgroundColor = "#DFD027";
+                    obj.onmouseover = null;
+                    obj.onmouseout = null;
+                }else{
+                    layer.msg("只能查看一条记录，请先将上条数据取消查看",{'icon':8});
+                    return false;
+                }
+
+                plist_dealer(obj.children[0].value);
+        }
+    }
+
+ </script>
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 任务审核</div>
+                <div class="tabli">
+                    <ul id="tabli_bid">
+                        <li value="1" class='selected'>智能选标</li>
+                        <li value="2">手动选标</li>
+                        <li value="3">已选中</li>
+                    </ul>
+
+                    <ul class="action">
+                        <li id="bid" value="1">审核</li>
+                    </ul>
+                </div>
+                <div class="list" >
+
+                    <div class='listinfo1'>
+                        <ul>
+                            <li style='width:15%;'>选择</li>
+                                <li style='width:15%;'>序号</li>
+                                <li style='width:15%;'>分数</li>
+                                <li style='width:20%;'>业务员名称</li>
+                                <li style='width:35%;'>经销商名称</li>
+                        </ul>
+                        <div class='listinfo2'></div>
+                        <div class="page"></div>
+                    </div>
+
+                    <div style="overflow: hidden;">
+                        <ul style="margin-left:20px;width:100%;">
+                            <li id="tabid" value="1" style="width:82%;">
+                                <input name="searchTname" id="searchTname" value="" placeholder="请输入任务名称" style="height: 40px;width:100%;">
+                                <input type="hidden" name="searchTid" id="searchTid" value="0">
+                            </li>
+                        </ul>
+
+                        <div style="clear:both;"></div>
+                        <div class='listinfo' style="margin-left:20px;">任务列表</div>
+                        <button  id="checkBtn" class="checkBtn"  onClick="showDetail()" >查看任务详情</button>
+                    </div>
+                    <div class="page2"></div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+    $(function(){
+        
+        
+        //获取列表信息
+        plist_publish();
+    });
+    
+    //查找任务
+
+    $("#searchTname").bigAutocomplete({width:300,
+        url:"{:U('Taskadmin/Fun/searchTname')}",
+        callback:function(data){
+            console.log(data.result);
+            $('#searchTid').val(data.result);
+            plist_dealer(data.result);
+            $('.listinfo').empty();
+                    var html = '';
+            $.post(APP+"/Api/Web/getReturnTitle","f_tid="+data.result,function(v){
+                    // console.log(v.result);
+                    html += "<ul>";
+                    html += "<li style='width:100%;cursor:pointer;text-align:left;background-color: rgb(223, 208, 39);' class='showDetail' onclick='responseClickEvent(this);' onmouseover='responseMouseEvent(this,1);' onmouseout='responseMouseEvent(this,2)' id='publishTask"+v.f_tid+"'><input name='pubTaskId' style='margin: 14px 15px 0px;line-height: normal;float:left;' type='checkbox' checked='checked' value='"+v.f_tid+"'>"+v.f_title+"</li><br>";
+                    html += "</ul>";
+
+                    $('.listinfo').append(html);
+                },'json');
+        }
+    });
+
+    </script>
+</html>

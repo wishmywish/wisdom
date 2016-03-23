@@ -1,0 +1,331 @@
+<?php
+/**
+ * 部门的	增删查改
+ * 员工的	增删查改
+ * @author Administrator
+ */
+namespace Admin\Controller;
+use Think\Controller;
+class GroupController extends Controller {
+	static public $treeList = array();
+	
+    function index(){
+        //获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+
+//		dump($deptListArr_tree);
+        
+        //分页
+        $page = I('page');
+        if( $page == '' ){
+        	$page = 0;
+        }
+        
+        $pageSize = 5;
+        $page_start = $page*$pageSize;	
+        $page_end = ($page+1)*$pageSize-1;
+
+		$departId = I('departId');	//要获取信息的部门id
+
+		//公司员工,如果部门id为空，那么就是显示公司下的所有员工,否则显示对应部门id下的员工
+		if( $departId == '-1' || $departId == ""){
+			$deptUser = A("Api/Jhttp")->getUsersInfo($companyId,$page_start,$page_end,0);	//0为全部，1为实名认证的员工
+		}else{
+			$deptUser = A("Api/Jhttp")->getUsersByDepart($departId,$page_start,$page_end);		//返回数据中count即为总数
+		}
+
+		$deptUser_arr = json_decode($deptUser,true);	//员工列表
+		$total = $deptUser_arr['count'];	//总记录数
+		$pageTotal =  $totalPage = ceil($total/$pageSize); //总页数	
+		
+		$prePage = $page -1;	//上一页
+		$nextPage = $page + 1;	//下一页
+		if( $prePage <= 0 ){
+			$prePage = 0;
+		}
+		
+		if( $nextPage >= $pageTotal ){
+			$nextPage = $pageTotal-1;
+		}
+
+		
+        $this->assign("departId",$departId);
+        $this->assign("page_start",$page_start);
+        $this->assign("nextPage",$nextPage);
+        $this->assign("prePage",$prePage);
+        $this->assign("page",$page);
+        $this->assign("pageTotal",$pageTotal);
+        $this->assign("total",$total);
+        $this->assign ("pageSize", $pageSize );
+        $this->assign('first_dept_user_arr',$deptUser_arr['list']);
+        
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+    
+   /*  function page($currentPage=0,$pageSize=10,$pageStart,$pageEnd,$totalPage,$totalNum){
+    	$pageStart = $currentPage*$pageSize;	//开始位置
+    	$pageEnd = ($currentPage+1)*$pageSize-1;	//结束位置
+    } */
+
+
+	function batchImport(){
+		$this->display();
+	}
+
+	function import_do(){
+		header("Content-type:text/html;charset:utf-8");
+		//全局变量
+		$succ_result=0;
+		$error_result=0;
+		$file=$_FILES['filename'];
+		$max_size="2000000"; //最大文件限制（单位：byte）
+		$fname=$file['name'];
+		$ftype=strtolower(substr(strrchr($fname,'.'),1));
+		$dir=dirname(__FILE__);                       //获取当前脚本的绝对路径
+		$dir=str_replace("//","/",$dir)."/";
+
+		//文件格式
+		$uploadfile=$file['tmp_name'];
+		if($_SERVER['REQUEST_METHOD']=='POST'){
+			if(is_uploaded_file($uploadfile)){
+				if($file['size']>$max_size){
+					echo "文件过大！";
+					exit;
+				}
+				if($ftype!='xls' && $ftype!='xlsx' && $ftype!='xlsm' && $ftype!='xltx' && $ftype!='xltm' && $ftype!='xlsb' && $ftype!='xlam'){
+					echo "文件格式错误！";
+					exit;
+				}
+			}else{
+				echo "文件为空！";
+				exit;
+			}
+		}
+		$filename='uploadFile.xls';
+		$result=move_uploaded_file($uploadfile,$dir.$filename);//假如上传到当前目录下
+		if($result)  //如果上传文件成功，就执行导入excel操作
+		{
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel.php';
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel/IOFactory.php';
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel/Reader/Excel5.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/IOFactory.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/Reader/Excel5.php';
+
+
+			$objReader = \PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
+			$objPHPExcel = $objReader->load($dir.$filename);
+
+			$sheet = $objPHPExcel->getSheet(0);
+
+			$highestRow = $sheet->getHighestRow(); // 取得总行数
+			$highestColumn = $sheet->getHighestColumn(); // 取得总列数
+			$arr_result=array();
+			$strs=array();
+
+			for($j=2;$j<=$highestRow;$j++)
+			{
+				unset($arr_result);
+				unset($strs);
+				for($k='A';$k<= $highestColumn;$k++)
+				{
+					//读取单元格
+					$arr_result  .= $objPHPExcel->getActiveSheet()->getCell("$k$j")->getValue().',';
+				}
+				$strs=explode(",",$arr_result);  //单元格中数据拆分
+				dump($arr_result);exit;
+
+				$re = A('Api/Jhttp')->companyAdd($strs[0],$strs[1],$strs[2],$strs[3],$strs[4],$strs[5]);  //插入数据到库中
+				$content = json_decode($re, true);
+				if($content['resCode']=='000000' || $content['resCode']==000000){
+					$succ_result+=1;
+				}else{
+					$error_result+=1;
+				}
+			}
+		}
+		$this->assign('succ_result',$succ_result);
+		$this->assign('error_result',$error_result);
+
+		unlink($dir.$filename); //删除临时生成的文件
+
+		$this->display();
+	}
+    
+    
+    
+    //新建员工
+     function addStaff(){
+        //获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->display();
+    }
+    
+    //编辑员工
+    function editStaff(){    	
+    	//获取员工信息
+    	$userId = I('userId');
+    	$userInfo = A('Api/Jhttp')->getUserinfo2($userId);
+    	$userInfo_arr = json_decode($userInfo,true);
+    	//获取员工头像
+    	if( $userInfo_arr['list']['headLogo'] ){
+    		$headLogo = M('files')->where('f_id='.$userInfo_arr['list']['headLogo'])->find();    		
+    	}
+    	if( $headLogo ){
+    		$userInfo_arr['list']['headLogo'] = 'upfile/'.$headLogo['f_filepath'].$headLogo['f_filename'];    		
+    	}
+    	
+    	//获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();    
+
+    	$this->assign('userInfo',$userInfo_arr['list']);
+    	$this->assign('deptListArr_tree',$deptListArr_tree);
+    	$this->assign("companyId", $companyId);
+    	$this->display();
+    }
+    
+    
+    //新建部门
+    function  addDept(){        
+        //获取部门列表
+//        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+        
+       	$this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+    
+    //编辑部门
+    function  editDept(){
+    	//获取部门信息
+    	$departInfo['departId'] = I('departId');
+    	$departInfo['departName'] = I('departName');
+    	$departInfo['parentId'] = I('parentId');
+    	  
+    	//获取部门列表
+    	$companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();   	
+    	
+    	$this->assign('deptListArr_tree',$deptListArr_tree);
+    	$this->assign("companyId", $companyId);
+    	$this->assign("companyName", $companyName);
+    	$this->assign('departInfo',$departInfo);
+    	$this->display();
+    }
+    
+    
+    //获取部门列表(公共部分，不要轻易修改)
+    function getDept(){ 
+    	set_theme();
+    	
+    	$deptListArr = array();	//树状部门关系
+    	$companyId=cookie("companyId");
+    	$companyName=cookie("companyName");
+    	$result = A("Api/Jhttp")->getDeparts($companyId);	//公司下已有部门列表
+    	$deptListArr = json_decode($result,true);    	
+ 	
+    	$deptListArr_tree = $this->tree( $deptListArr['list'] );	//树状显示
+    	
+    	return $deptListArr_tree;    	
+    }    
+
+   
+    //树状显示
+    static public function tree(&$arr,$pid=0,$count=0){
+    	foreach( $arr as $key=>$vo ){    		
+    		if( $vo['parentId'] == $pid ){
+    			$vo['count'] = $count;    			
+    			self::$treeList[] = $vo;
+    			unset($arr[$key]);
+    			self::tree($arr,$vo['departId'],$count+1);
+    		}  		
+    	}  
+    	
+    	return self::$treeList;
+    }
+    
+    //判断是否有子孙项,有子孙项的是不能删除的
+    function hasChild(){
+    	$departId = I('departId');
+    	$deptListArr_tree = $this->getDept();
+    	foreach( $deptListArr_tree as $vo){
+    		if( $vo['parentId'] == $departId ){
+    			$data = array('text'=>'success');
+    			$this->ajaxReturn($data);exit;
+    		}else{
+    			$data = array('text'=>'error');    			
+    		}
+    	}
+    	
+    	$this->ajaxReturn($data);
+    } 
+    
+    //判断是否是自己的孙子，老子不能当儿子的子类
+    function isChild(){
+    	$departId = I('departId');
+    	$parentId = I('parentId');
+    	
+    	$deptListArr_tree = $this->getDept();
+    	$result = $this->getChildren($deptListArr_tree, $departId);	//得到子孙
+    	foreach( $result as $v ){	//子孙中是否存在现在选择的所属类
+    		if( $v['departId'] == $parentId ){
+    			$data['text'] = 'success';
+    			$this->ajaxReturn($data);
+    		}
+    	}
+    	$data['text'] = 'error';
+    	$this->ajaxReturn($data);    	
+    	
+    }
+    
+    //得到子孙
+    static public $children = array();
+    function getChildren($arr,$pid){    
+    	foreach( $arr as $key=>$vo ){
+    		if( $vo['parentId'] == $pid ){    			
+    			self::$children[] = $vo;
+    			unset($arr[$key]);
+    			$this->getChildren($arr,$vo['departId']);
+    		}
+    	}
+    	
+    	return self::$children;
+    	
+    }
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

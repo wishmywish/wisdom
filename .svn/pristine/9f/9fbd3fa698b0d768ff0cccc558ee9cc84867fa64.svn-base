@@ -1,0 +1,64 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+
+class DealerProController extends Controller {
+    function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $access = I('get.access','000000');
+        A("Api/Fun")->isAccess($access);//判断菜单权限
+        $this->display();
+    }
+    
+    function showProDetail(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        
+        $dealerid = isset($_GET['dealerid'])? $_GET['dealerid'] : 0 ;
+        $this->assign("dealerid",$dealerid);
+        $map["f_dealerid"]=$dealerid;
+        $map['f_prostatus']  = array('neq',0);
+        $result = M("business_progress")->where($map)->order('f_id asc')->select();
+        foreach ($result as $key => $value) {
+            $result[$key]['user'] = $this->getUserDetail($value['f_userid']);
+            $result[$key]['f_protime'] = date("Y/m/d",$value['f_protime']);
+        }
+        $this->assign("result",$result);
+
+        $this->display();
+    }
+
+    function dispatchCheck(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        
+        $dealerid = isset($_GET['dealerid'])? $_GET['dealerid'] : 0 ;
+        $this->assign("dealerid",$dealerid);
+        $map['f_proname'] = 'dispatch';
+        $map['f_prostatus'] = 0;
+        $map['f_dealerid'] = $dealerid;
+        $result = M('business_progress')->where($map)->find();
+
+        $this->assign("result",$result);
+        // var_dump($result);
+        // var_dump($dealerid);
+        // exit();
+        $this->display();
+    }
+
+    function getUserDetail($userid){
+        $re = A("Api/Jhttp")->getUserinfo2($userid);
+        $arr = json_decode($re,true);
+        
+        return $arr["list"];
+    }
+
+    function getCompanyDetail($companyid){
+        $re = A("Api/Jhttp")->getCompanyInfo($companyid);
+        $arr = json_decode($re,true);
+
+        return $arr["list"];
+    }
+
+}

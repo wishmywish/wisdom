@@ -1,0 +1,23 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+    html, body {
+        margin: 0 auto;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+        background: #FFF;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+
+    }
+</style>
+<body>
+    <span>开奖参数：</span> <input type="text" id="param" name="param" placeholder="请输入纳斯达克指数" value=""><br><br>
+    <button class="btn btn-default" id="openL" <neq name="mobile" value="">disabled</neq>>确定</button><br>
+    <input type="hidden" id="shopid" value="{$shopid}" >
+    <span>开奖信息：{$nsdk}</span><br>
+    <span>开奖号码：{$lottery}</span><br>
+    <span>中奖人员：{$mobile}</span><br>
+</body>
+<include file="Public/loadjs" />
+</html>

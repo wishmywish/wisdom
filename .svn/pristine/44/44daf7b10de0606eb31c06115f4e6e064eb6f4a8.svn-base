@@ -1,0 +1,142 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<div class="company">
+    <div class="admin_left fl">
+        <ul>
+            <li>
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl">首页</span>
+            </li>
+            <li >
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 38px;">通讯录</span>
+            </li>
+            <li  class="current">
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 34px;">企业设置</span>
+            </li>
+            <li>
+                <i class="fa fa-gear  fa-3x fl"></i>
+                <span class="fl" style="margin-left: 32px;">权限设置</span>
+            </li>
+        </ul>
+    </div>
+    <div class="company_right fl">
+        <div class="company_nav">
+            <span class="nav_one currs">企业设置</span>
+            <span class="nav_two">登录页面设置</span>
+            <span class="nav_three">客户管理设置</span>
+            <span class="nav_four">信息发送设置</span>
+        </div>
+        <div class="company_con">
+            <h6>企业设置</h6>
+            <ul class="company_ul">
+                <li>企业LOGO</li>
+                <li>
+                    <textarea class="txts1"></textarea>
+                </li>
+                <li>
+                    <button class="buts">上传LOGO</button>
+                    <button class="buts">恢复默认</button>
+                </li>
+                <li>企业logo的大小为332px,格式为png,jpg,gif</li>
+                <li>
+                    <input type="text" class="inpts">
+                    <button class="butt">保存</button>
+                </li>
+                <li>全公司默认字符串</li>
+                <li>
+                    <input type="text" class="inpts">
+                    <button class="butt">保存</button>
+                </li>
+            </ul>
+        </div>
+        <div class="company_con company_cons">
+            <h6>登录页设置</h6>
+            <ul class="company_ul">
+                <li>企业主图</li>
+                <li>
+                    <textarea class="txts1 txts "></textarea>
+                </li>
+                <li>
+                    <button class="buts">上传LOGO</button>
+                    <button class="buts">恢复默认</button>
+                </li>
+                <li>企业登录页面主图大小为480*270px,格式为png,jpg,gif</li>
+                <li>登录页背景色</li>
+                <li  style="margin-top:10px ;">
+                    <button class="inps1">f08300</button>
+                    <button class="inps2"></button>
+                    <span class="fl" style="margin-top: 5px;">选择颜色:</span>
+                    <button class="inps2"></button>
+                </li>
+                <li>
+                    <button class="inps3">保存</button>
+                    <button class="inps4">恢复默认</button>
+                </li>
+                <li  class="li_footer">背景色为:6位字母或数字字符,列如:254d5v</li>
+            </ul>
+        </div>
+        <div class="company_con company_set">
+            <h6>客户管理设置</h6>
+            <ul class="set_ul">
+                <li>
+                    <span class="fl sp9">修改上级权限:</span>
+                    <input class="fl inpt" type="checkbox"/>
+                    <span class="fl">禁止个人修改自己的直属上级</span>
+                </li>
+                <li>
+                    <button class="inps_save">保存</button>
+                </li>
+                <li>
+                    <span class="fl sp9">修改上级权限:</span>
+                    <input class="fl inpt" type="checkbox"/>
+                    <span class="fl">禁止员工导出客户和联系人</span>
+                </li>
+                <li>
+                    <button class="inps_save">保存</button>
+                </li>
+                <li>
+                    <span class="fl sp9">修改上级权限:</span>
+                    <input class="fl inpt" type="checkbox"/>
+                    <span class="fl">禁止员工添加客户</span>
+                </li>
+                <li>
+                    <button class="inps_save">保存</button>
+                </li>
+            </ul>
+        </div>
+        <div class="company_con company_footer">
+            <h6>信息发送范围设置</h6>
+            <ul class="footer_ul">
+                <li>
+                    <span>被禁止的员工(0)</span>
+                    <button>保存</button>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" title="杭州利伊享" />
+<script>
+    $(function(){
+        $(".company_nav .nav_one").click(function(e) {
+            $(this).addClass("currs").siblings().removeClass("currs");
+            $("html,body").animate({scrollTop:$(".company_con").offset().top},500)});
+    })
+    $(function(){
+        $(".company_nav .nav_two").click(function(e) {
+            $(this).addClass("currs").siblings().removeClass("currs");
+            $("html,body").animate({scrollTop:$(".company_cons").offset().top},500)});
+    })
+    $(function(){
+        $(".company_nav .nav_three").click(function(e) {
+            $(this).addClass("currs").siblings().removeClass("currs");
+            $("html,body").animate({scrollTop:$(".company_set").offset().top},500)});
+    })
+    $(function(){
+        $(".company_nav .nav_four").click(function(e) {
+            $(this).addClass("currs").siblings().removeClass("currs");
+            $("html,body").animate({scrollTop:$(".company_footer").offset().top},500)});
+    })
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>[title]</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="image/x-icon" href="/favicon.ico" rel="icon">
+        <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+        <script>
+            var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+            var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+            //var 
+            //var UPFILE = "__UPFILE__";
+            var IMG = "__IMG__";
+            var STATIC = "__STATIC__";
+            var UPFILE = "__UPFILE__";
+            var THEME = "__THEME__";
+            var accessVal = true;
+        </script>
+        <css href="__STATIC__/css/bootstrap.min.css" />
+        <css href="__STATIC__/css/font-awesome.min.css" />
+        <css href="__STATIC__/css/jquery.bigautocomplete.css" />
+        <css href="__STATIC__/laypage/skin/laypage.css" />
+        <css href="__STATIC__/layer/skin/layer.css" />
+        <css href="__STATIC__/laydate/need/laydate.css" />
+        <css href="__STATIC__/laydate/skins/default/laydate.css" />
+<!--        <css href="__STATIC__/um/themes/default/css/umeditor.css" />-->
+        <css href="__CSS__/style.css" />
+        <css href="__STATIC__/um/themes/default/css/umeditor.css"/>
+<!--        <css href="__STATIC__/um/themes/default/css/umeditor.min.css"/>-->

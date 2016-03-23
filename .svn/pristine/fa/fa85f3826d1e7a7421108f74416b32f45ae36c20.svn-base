@@ -1,0 +1,82 @@
+
+function is_conf(conf_auth,auth_code){
+    if(conf_auth==='F'){
+        return '0';
+    }else{
+        if(auth_code==='conf_success'){
+            return '1';
+        }
+    }
+}
+
+
+//招商业务计算佣金
+function psum(){
+    var pricesum = 0;
+    var payment = $('#payment').val()===""?0:$('#payment').val();
+    var bond = $('#bond').val()===""?0:$('#bond').val();
+    var franchise = $('#franchise').val()===""?0:$('#franchise').val();
+    var otherprice = $('#otherprice').val()===""?0:$('#otherprice').val();
+    pricesum = Number(payment)+Number(bond)+Number(franchise)+Number(otherprice);
+    $('#pricesum_txt').html(pricesum);
+    $('#pricesum').val(pricesum);
+    
+    $('#commission').val(pricesum*0.25);
+    $('#agents_commission').val(pricesum*0.25*0.5);
+    $('#commission_txt').html(pricesum*0.25);
+    $('#agents_commission_txt').html(pricesum*0.25*0.5);
+}
+
+function a_comm(){
+    var agents_commission = $('#agents_commission').val()===""?0:$('#agents_commission').val();
+    $('#commission').val(agents_commission*2);
+    //$('#agents_commission').val(agents_commission);
+    $('#commission_txt').html(agents_commission*2);
+    $('#agents_commission_txt').html(agents_commission);
+}
+
+
+//获取短信验证码
+var wait=60;
+var num = 1;  
+function time(o) 
+{  
+    var phone = $("#login_mobile").val();
+    if(phone===""){
+        layer.msg("手机号不能为空",{icon:8});
+        return false;
+    }else if(!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(phone)){
+        layer.msg("手机格式不正确",{icon:8});
+        return false;
+    }else {
+        if (wait == 0) 
+        {  
+            o.removeAttribute("disabled");            
+            o.value="获取验证码";  
+            wait = 60;  
+            num = 1;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="" + wait + "秒后重新获取";  
+            wait--;  
+            num--;  
+            if (num == 0)
+            {
+                $.getJSON(APP + "/Api/Info/conf", "command=voicecode&voicephone=" + phone, function (val) {
+                    if (val.error_code === "success") 
+                    {
+                        layer.msg("验证码已发送");
+                    } else {
+                        layer.msg("验证码发送失败，请重新确认");
+                    }
+                });
+            };
+
+ 
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000) 
+        }  
+    }
+}  

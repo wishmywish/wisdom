@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>扫描小宝二维码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--&lt;!&ndash;标准mui.css&ndash;&gt;-->
+    <!--<script type="text/javascript" src="http://wisdom.51lick.com//Public/static/jquery-1.11.2.min.js"></script>-->
+
+    <link rel="stylesheet" href="__CSS__/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__CSS__/app.css"/>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="__CSS__/css.css" rel="stylesheet" type="text/css">
+    <style>
+        html,body{
+            background-color:#FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="mui-bar mui-bar-nav">
+    <a  class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#FFFFFF"></a>
+    <h1 class="mui-title"  id="title" style="color:#FFFFFF">扫描二维码</h1>
+</div>
+<div class="mui-content-padded" style="padding-top:45px">
+    <div style="margin-top: 70px;text-align: center;">
+        <h5 style="margin-bottom:20px;">请扫描二维码下载小宝APP进行参与活动。</h5>
+        <img style="width: 250px;height: 250px;" src="__IMG__/xiazai.png">
+    </div>
+
+</div>
+<script src="__JS__/mui.min.js"></script>
+</body>
+
+</html>
+

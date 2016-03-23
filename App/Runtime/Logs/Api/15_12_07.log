@@ -1,0 +1,822 @@
+[ 2015-12-07T11:08:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-12-07T11:08:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T14:22:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T14:22:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:17+08:00 ] ::1 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=1 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '1002' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:17+08:00 ] ::1 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '1002' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:19+08:00 ] ::1 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:20+08:00 ] ::1 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-12-07' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:23+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:44:23+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:44:38+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('566538e65eba2.png','20151207/','1449474278') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-07T15:44:44+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/size/102400/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('566538ec01c9c.jpg','20151207/','1449474284') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-07T15:44:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'1002','3','1449474293','144947429333789703','jjk','9195','9196','2015-12-08','2015-12-15','jj','17757128602','6','0','jj') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','630','1449474293','招商任务新增第一步') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T15:46:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: commission D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2095 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第二步','630','1449474414') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('630','vv','vvv','2','1000','1000','1000','1000','44000','2750',NULL) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:47:03+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增区域','630','1449474423') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('630','北京市|北京市|西城区','1111') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:47:03+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=630 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:47:14+08:00 ] ::1 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-12-07' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-07T15:47:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=630 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:47:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=630 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:47:23+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`='0',`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='3',`f_title`='jjk',`f_fileid`='9195',`f_fileid_ban`='9196',`f_begindate`='2015-12-08',`f_enddate`='2015-12-15',`f_linkman`='jj',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='jj' WHERE ( f_tid=630 ) [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','630','1449474443','招商任务编辑第一步') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T15:47:25+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: commission D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2095 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','630','1449474445') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='630',`f_mtbrand`='vv',`f_mtgoods`='vvv',`f_tradeid`='2',`f_unitfirstAmount`='1000',`f_unitcashdeposit`='1000',`f_unitfranchisefee`='1000',`f_unitotheramount`='1000',`f_unittotalamount`='44000',`f_unitcommission`='2750',`f_unitpreownedgold`=NULL WHERE ( f_indexid=156 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:48:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增区域','630','1449474528') [ RunTime:0.0010s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('630','天津市|天津市|河东区','22') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:48:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=630 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:53:09+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2159 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2160 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2161 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2162 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2163 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2164 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2165 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskmtdetailedinfo` (`f_taskid`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_distributorsrequir`,`f_retailoutlets`,`f_channelpolicy`,`f_note`,`f_product`) VALUES ('630',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第四步','630','1449474789') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:53:11+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增完成','630','1449474791') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtattach` (`f_fileid1`,`f_fileld2`,`f_fileid3`,`f_fileid4`,`f_fileid5`,`f_fileid6`,`f_taskid`) VALUES ('0','0','0','0','0','0','630') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:53:11+08:00 ] ::1 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0070s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-12-07' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T15:53:23+08:00 ] ::1 /wisdom/Index.php/Api/Web/role_list?companyid=1002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3495 行.
+SQL: SELECT * FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 0,11   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T15:53:32+08:00 ] ::1 /wisdom/Index.php/Api/Web/role_list?companyid=1002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3495 行.
+SQL: SELECT * FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 0,11   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T16:06:54+08:00 ] ::1 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-07T16:06:55+08:00 ] ::1 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-12-07' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:06:57+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-07T16:06:57+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:07:03+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653e271bcfc.png','20151207/','1449475623') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-07T16:07:07+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/size/102400/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653e2bc0ac0.jpg','20151207/','1449475627') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:07:22+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'1002','3','1449475642','144947564231295806','ceshi','9203','9204','2015-12-09','2015-12-23','jj','17757128602','6','0','jjj') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','631','1449475642','招商任务新增第一步') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T16:08:01+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: commission D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2095 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第二步','631','1449475681') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('631','ceshi','hh','2','5000','2000','1000','1000','49000','3062.5',NULL) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T16:08:14+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增区域','631','1449475694') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('631','天津市|天津市|河北区','10') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:08:14+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=631
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=631 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:08:25+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增区域','631','1449475705') [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('631','河北省|张家口市|桥东区','100') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:08:25+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=631
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=631 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:09:15+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2159 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2160 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2161 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2162 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2163 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2164 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 2165 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskmtdetailedinfo` (`f_taskid`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_distributorsrequir`,`f_retailoutlets`,`f_channelpolicy`,`f_note`,`f_product`) VALUES ('631',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'<ol style=\"white-space: normal; font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体; font-size: 12px; color: red; line-height: 20px;\"><li>1.产品展示</li><li><ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.产品展示</li><li><ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol>','<ol style=\"white-space: normal; font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体; font-size: 12px; color: red; line-height: 20px;\"><li>1.产品展示</li><li><ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.参与方式<ul style=\"margin-left: 15px;\"><li>1.1通过微信或QQ分享给6个朋友，可以获得更多佣金</li></ul></li><li>2.招商要求<ul style=\"margin-left: 15px;\"><li>2.1招商说明</li><li>2.2招商区域及数量</li></ul></li><li>3.政策支持<ul style=\"margin-left: 15px;\"><li>3.1渠道政策</li><li>3.2广宣政策</li></ul></li><li>4.产品价格</li></ol>') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增第四步','631','1449475755') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:09:23+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/rar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653eb3245be.rar','20151207/','1449475763') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-07T16:09:27+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/doc,docx.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653eb77c4f7.doc','20151207/','1449475767') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-07T16:09:31+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/rar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653ebb03828.rar','20151207/','1449475771') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-07T16:09:35+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/doc,docx,xls,xlsx,pdf.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653ebef1d8b.doc','20151207/','1449475775') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-12-07T16:09:38+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/doc,docx,,xls,xlsx,pdf.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653ec2ab95f.doc','20151207/','1449475778') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-12-07T16:09:42+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/ai,cdr.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653ec64883d.ai','20151207/','1449475782') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-12-07T16:09:46+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/2/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('56653eca63ea8.png','20151207/','1449475786') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-12-07T16:10:12+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务新增完成','631','1449475812') [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskmtattach` (`f_fileid1`,`f_fileld2`,`f_fileid3`,`f_fileid4`,`f_fileid5`,`f_fileid6`,`f_taskid`) VALUES ('9207','9208','9209','9210','9211','9212','631') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T16:10:12+08:00 ] ::1 /wisdom/Index.php/Api/Web/changeStatutask
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='2' WHERE `f_companyid` = '1002' AND `f_tid` = '631' [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-07T16:10:13+08:00 ] ::1 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-12-07' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-07T16:10:21+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=631 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+

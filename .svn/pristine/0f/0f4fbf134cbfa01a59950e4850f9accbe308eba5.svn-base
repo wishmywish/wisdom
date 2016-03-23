@@ -1,0 +1,169 @@
+<?php
+/**
+ * 微信
+ */
+namespace Home\Controller;
+use Think\Controller;
+
+class WechatController extends Controller
+{
+
+
+    /**
+     * 请求CODE,可生成扫码登录的的地址
+     * 通过此方法获取扫码登录地址,微信扫描后点击确认登录，会跳转到指定页面，会返回CODE,
+     * 再调用 getUserInfo方法返回的url，访问即可获取返回的相关信息
+     * index.php/Home/Wechat/getCode
+     */
+    function getCode(){
+        //微信公众平台里认证的应用里面有
+        $AppID = 'wxb17e1d74611b1aa7';
+        $AppSecret = '46d5286ea1208733da9f99c9eaa25102';
+//        $redirect_url = 'http://wisdom.51lick.com/index.php/Home/Login/login.html'; //回调地址
+        $redirect_url = 'http://wisdom.51lick.com/index.php/Home/Wechat/is_auth'; //回调地址
+        $scope = "snsapi_login"; //应用授权作用域，拥有多个作用域用逗号（,）分隔，网页应用目前仅填写snsapi_login即可
+        $state = "888"; //state 	否 	用于保持请求和回调的状态，授权请求后原样带回给第三方。该参数可用于防止csrf攻击（跨站请求伪造攻击），建议第三方带上该参数，可设置为简单的随机数加session进行校验
+
+//        $url = 'https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect';
+        $url = "https://open.weixin.qq.com/connect/qrconnect?appid=".$AppID."&redirect_uri=".$redirect_url."&response_type=code&scope=".$scope."&state=STATE#wechat_redirect";
+
+        dump($url);
+
+
+        //跳转到扫码页
+        echo "<script>location.href='".$url."'</script>";
+//        $this->redirect($url);
+
+    }
+
+
+    /**
+     * 判断是否绑定了微信的unionid
+     * 会传一个code
+     * index.php/Home/Wechat/is_auth?code=
+     */
+    public function is_auth(){
+        $appid = "wxb17e1d74611b1aa7";
+        $secret = "46d5286ea1208733da9f99c9eaa25102";
+        $code = I("code");  //扫码登录跳转回来后自带的一个code
+        $get_token_url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$secret.'&code='.$code.'&grant_type=authorization_code';
+
+        $get_id = json_decode(file_get_contents($get_token_url),true);
+        dump($get_id);  //获取微信用户的opendid 和 unionid
+
+        $unionid = $get_id['unionid'];
+
+        //调用java接口判断是否绑定
+        $auth_result = A("Api/Jhttp")->weixinLogin($unionid);
+        $auth_array = json_decode($auth_result,true);
+
+        $resCode = $auth_array['resCode'];
+//        dump($resCode);
+        if( $resCode == '000000' ){  //已经绑定过了
+
+        }else{  //没有绑定跳转到注册页面
+            echo "haha";
+//            $this->redirect('/Home/Wechat/regist');
+        }
+
+//        dump($auth_result);  //调用接口结果
+
+
+    }
+
+
+    /**
+     * 用户绑定微信unionid
+     */
+    public function addWeixin(){
+        $unionid = I('unionid');
+        $mobile = I('mobile');
+
+        $add_result = A("Api/Jhttp")->addWeixin($unionid,$mobile);
+
+        dump($add_result);
+    }
+
+
+    /**
+     * 获取微信的token
+     * index.php/Home/Wechat/getToken
+     */
+    function getToken(){
+
+        //微信公众平台里认证的应用里面有
+        $AppID = 'wxb17e1d74611b1aa7';
+        $AppSecret = '46d5286ea1208733da9f99c9eaa25102';
+
+        //调用网址
+        $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$AppID."&secret=".$AppSecret;
+
+        //调用结果
+        $content = json_decode(file_get_contents($url),true);
+
+        //打印token结果
+        dump($content);
+    }
+
+
+    /**
+     * 查询授权用户信息(测试)
+     * index.php/Home/Wechat/getUserInfo?code=
+     */
+    function getUserInfo(){
+        $appid = "wxb17e1d74611b1aa7";
+        $secret = "46d5286ea1208733da9f99c9eaa25102";
+        $code = $_GET["code"];
+        $get_token_url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.$appid.'&secret='.$secret.'&code='.$code.'&grant_type=authorization_code';
+
+
+        $get_openid = json_decode(file_get_contents($get_token_url),true);
+
+        dump($get_openid);
+        dump($get_token_url);exit;
+
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$get_token_url);
+        curl_setopt($ch,CURLOPT_HEADER,0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        $res = curl_exec($ch);
+        curl_close($ch);
+        $json_obj = json_decode($res,true);
+
+        //通过登录获取的code查询用户的openid
+        dump($json_obj);exit;
+
+//根据openid和access_token查询用户信息
+        $access_token = $json_obj['access_token'];
+        $openid = $json_obj['openid'];
+        $get_user_info_url = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
+
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$get_user_info_url);
+        curl_setopt($ch,CURLOPT_HEADER,0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        $res = curl_exec($ch);
+        curl_close($ch);
+
+//解析json
+        $user_obj = json_decode($res,true);
+        $_SESSION['user'] = $user_obj;
+        print_r($user_obj);
+    }
+
+    /**
+     * 注册页面
+     * 微信未绑定跳转到此注册页面(需要通过这个手机查看是否注册，如果没有为注册，有的话就是绑定微信号
+     * index.php/Home/Wechat/regist
+     */
+    public function regist(){
+        $this->display();
+    }
+
+
+
+
+
+}

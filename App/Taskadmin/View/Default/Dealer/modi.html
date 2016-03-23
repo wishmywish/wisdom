@@ -1,0 +1,47 @@
+<include file="Public/head" />
+
+    <body>
+        <div class="add">
+         <span style="font-size:18px;">经销商信息</span><br><br>
+
+             <span>&nbsp;&nbsp;&nbsp;&nbsp;经销商名称： <input type="text" id="f_dealername"  style="width:285px;" value="{$reModi.f_dealername}"/></span><br><br>
+
+            <span style="padding-left:12px;">经营区域： <input type="text" id="f_area" value="{$reModi.f_area}"/></span>
+            <span style="padding-left:12px;">主营行业： <input type="text" id="f_industrytype" value="{$reModi.f_industrytype}"/></span>
+            <span style="padding-left:12px;">渠道类型： <input type="text" id="f_channeltype" value="{$reModi.f_channeltype}"/></span>
+            <br><br>
+            <span style="padding-left:12px;">收货地址： <input type="text" id="f_managementlife" value="{$reModi.f_managementlife}"/></span>
+            <span style="padding-left:12px;">经营年限： <input type="text" id="f_goodsreceiptadd" value="{$reModi.f_goodsreceiptadd}"/></span>
+            <span style="padding-left:12px;">年营业额（万）： <input type="text" id="f_annualturnover" value="{$reModi.f_annualturnover}"/></span><br><br>
+            <span style="padding-left:12px;">物流车数： <input type="text" id="f_logisticsqty" value="{$reModi.f_logisticsqty}"/></span>
+            <span style="padding-left:12px;">销售人数： <input type="text" id="f_employeeqty" value="{$reModi.f_employeeqty}"/></span>
+            <span style="padding-left:12px;">主营产品： <input type="text" id="f_mainproduct" value="{$reModi.f_mainproduct}"/></span><br><br>
+            <span style="padding-left:12px;">仓库面积(M2)： <input type="text" id="f_warehousearea" value="{$reModi.f_warehousearea}"/></span>
+            <span style="padding-left:12px;">覆盖县区数： <input type="text" id="f_coverageqty" value="{$reModi.f_coverageqty}"/></span>
+            <span style="padding-left:12px;">下属客户数： <input type="text" id="f_customerqty" value="{$reModi.f_customerqty}"/></span><br><br>
+            <span style="padding-left:12px;">网点数量： <input type="text" id="f_dotqty" value="{$reModi.f_dotqty}"/></span><br><br>
+
+            <span style="font-size:18px;">负责人信息</span><br><br>
+
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;负责人姓名： <input type="text" id="f_chargeperson"  style="width:285px;" value="{$reModi.f_chargeperson}"/></span><br><br>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;联系手机： <input type="text" id="f_moblie"  style="width:285px;" value="{$reModi.f_moblie}"/></span><br><br>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;联系电话： <input type="text" id="f_telPhone"  style="width:285px;" value="{$reModi.f_telPhone}"/></span><br><br>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;联系传真： <input type="text" id="f_fax"  style="width:285px;" value="{$reModi.f_fax}"/></span><br><br>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;通讯地址： <input type="text" id="f_communadd"  style="width:285px;" value="{$reModi.f_communadd}"/></span><br><br>
+            <input type="hidden" id="dealerid" value="{$id}">
+            <button style="text-align: center;margin-left: 428px;" id="modiBtn"> 确定 </button>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+    $("#modiBtn").click(function(){
+            var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+            $.post(APP+"/Api/web/modiDealerBtn",
+            "f_indexid="+$('#dealerid').val()+"&f_dealername="+$('#f_dealername').val()+"&f_area="+$('#f_area').val()+"&f_industrytype="+$('#f_industrytype').val()+"&f_channeltype="+$('#f_channeltype').val()+"&f_managementlife="+$('#f_managementlife').val()+"&f_goodsreceiptadd="+$('#f_goodsreceiptadd').val()+"&f_annualturnover="+$('#f_annualturnover').val()+"&f_logisticsqty="+$('#f_logisticsqty').val()+"&f_employeeqty="+$('#f_employeeqty').val()+"&f_mainproduct="+$('#f_mainproduct').val()+"&f_warehousearea="+$('#f_warehousearea').val()+"&f_coverageqty="+$('#f_coverageqty').val()+"&f_customerqty="+$('#f_customerqty').val()+"&f_dotqty="+$('#f_dotqty').val()+"&f_chargeperson="+$('#f_chargeperson').val()+"&f_moblie="+$('#f_moblie').val()+"&f_telPhone="+$('#f_telPhone').val()+"&f_fax="+$('#f_fax').val()+"&f_communadd="+$('#f_communadd').val(),
+            function(data){
+                parent.location.reload();
+                parent.layer.close(index);
+            },"json");
+    });
+    </script>
+</html>

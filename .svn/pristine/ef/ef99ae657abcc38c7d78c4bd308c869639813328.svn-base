@@ -1,0 +1,55 @@
+<include file="Public/head" />
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+
+                    <div class="line">
+                        <div class="line_input">
+                           <span>用户名:</span> &nbsp;&nbsp;&nbsp;<input type="text" id="username" placeholder="用户名" value="">
+                        </div>
+                        <div class="line_note">*用户名</div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                           <span>密码：</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" placeholder="用户密码" value="">
+                        </div>
+                        <div class="line_note">*用户密码</div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                           <span>真实姓名：</span> <input type="text" id="realname" placeholder="真实姓名" value="">
+                        </div>
+                        <div class="line_note">*用户真实姓名</div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                           <span>所属角色：</span> 
+                           <select id="user_accessname">
+                            <option  value="-1" >选择所属角色</option>
+                            <volist name="result" id="vo" key="k">
+                                <option  value="{$vo.id}">
+                                    {$vo.accessname}
+                                </option>
+                            </volist>
+                           </select>
+                        </div>
+                        <div class="line_note">*用户所属角色</div>
+                    </div>
+                    
+                    <div class="next_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_add_user" style="margin-top: 115px;">确定</a>
+                    </div>
+                    <div class="line_one"></div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+
+    </script>
+</html>

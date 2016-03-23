@@ -1,0 +1,84 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<div class="address">
+    <div class="admin_left fl">
+        <ul>
+            <li>
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl">首页</span>
+            </li>
+            <li  class="current">
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 38px;">通讯录</span>
+            </li>
+            <li>
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 34px;">企业设置</span>
+            </li>
+            <li>
+                <i class="fa fa-gear  fa-3x fl"></i>
+                <span class="fl" style="margin-left: 32px;">权限设置</span>
+            </li>
+        </ul>
+    </div>
+    <div class="address_con fl">
+        <div class="con_top fl">
+            <button>新建部门+</button>
+        </div>
+        <div class="con_nav fl">
+            <h3><i class="fa fa-sort-desc fa-lg"></i><span>全公司</span></h3>
+            <div class="nav_in">
+                <h4><i class="fa fa-sort-desc fa-lg"></i><span>集团总部</span></h4>
+                <ul>
+                    <li>销售部</li>
+                    <li>产品研发部门</li>
+                    <li>总经理办公室</li>
+                </ul>
+            </div>
+            <h3 ><i class="fa fa-sort-desc fa-lg"></i><span>西北地区</span></h3>
+            <div class="nav_in">
+                <h4><i class="fa fa-sort-desc fa-lg"></i><span>集团总部</span></h4>
+                <ul>
+                    <li>销售部</li>
+                    <li>产品研发部门</li>
+                    <li>总经理办公室</li>
+                </ul>
+            </div>
+            <h3 ><i class="fa fa-sort-desc fa-lg"></i><span>东南地区</span></h3>
+            <div class="nav_in">
+                <h4><i class="fa fa-sort-desc fa-lg"></i><span>集团总部</span></h4>
+                <ul>
+                    <li>销售部</li>
+                    <li>产品研发部门</li>
+                    <li>总经理办公室</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="address_right fl">
+        <div class="right_top">
+            <h5>
+                <a href="#">新建员工</a>
+                <a href="#">批量导入</a>
+                <a href="#">导出员工</a>
+            </h5>
+        </div>
+    </div>
+</div>
+
+<include file="Public/footer" title="杭州利伊享" />
+<script>
+    $(function(){
+        $(".con_nav h3").click(function(){
+            $(this).next(".nav_in").toggle();
+        })
+    })
+        $(function(){
+          $(".nav_in h4").click(function(){
+              $(this).siblings(".nav_in ul").toggle();
+              $(this).closest('.nav_in').siblings().find('h4').removeClass('curr');
+          })
+
+        })
+
+
+</script>

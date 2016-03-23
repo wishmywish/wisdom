@@ -1,0 +1,148 @@
+<include file="Public/head" title="{$webtitle}" />
+<body>
+<div data-role="page" id="pageone">
+
+
+    <div data-role="content">
+        <div class="head_top">
+            <p>吸烟有害健康</p>
+        </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">1</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#pagetwo" class="ui-btns a5" data-icon="arrow-r" data-role="button"> </a>
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>巡店站点信息</p>
+        </div>
+        <div  class="head_con1">
+            <p><i class="fa fa-camera fa-lg"></i><span class="sp7">上传图片</span></p>
+        </div>
+        <div class="head_con2 head_con3">
+            <div class="ui-grid-b">
+                <div class="ui-block-a ui_block">
+                  <a href="#" >
+                      <img  src="__IMG__/two-dimension.png" >
+                  </a>
+                </div>
+                <div class="ui-block-b nav_cent ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png">
+                    </a>
+                </div>
+                <div class="ui-block-c ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png" >
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="content">
+        <div class="head_top">
+            <p>吸烟有害健康</p>
+        </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#pageone" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">2</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#pagethree" class="ui-btns a5" data-icon="arrow-r" data-role="button"> </a>
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>巡店站点信息</p>
+        </div>
+        <div class="head_con2 head_con3">
+
+            <div class="ui-grid-b">
+                <div class="ui-block-a ui_block">
+                    <a href="#" >
+                        <img  src="__IMG__/two-dimension.png" >
+                    </a>
+                </div>
+                <div class="ui-block-b nav_cent ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png">
+                    </a>
+                </div>
+                <div class="ui-block-c ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png" >
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div data-role="page" id="pagethree">
+    <div data-role="content">
+        <div class="head_top">
+            <p>吸烟有害健康</p>
+        </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#pagetwo" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">3</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <!--<a href="#pagetwo" data-icon="arrow-r" data-role="button"> </a>-->
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>巡店站点信息</p>
+        </div>
+        <div class="head_con2 head_con3">
+
+            <div class="ui-grid-b">
+                <div class="ui-block-a ui_block">
+                    <a href="#" >
+                        <img  src="__IMG__/two-dimension.png" >
+                    </a>
+                </div>
+                <div class="ui-block-b nav_cent ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png">
+                    </a>
+                </div>
+                <div class="ui-block-c ui_block">
+                    <a href="#">
+                        <img src="__IMG__/two-dimension.png" >
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

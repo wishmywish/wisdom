@@ -1,0 +1,48 @@
+[ 2015-10-13T16:51:33+08:00 ] 127.0.0.1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 44 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 45 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-13T16:53:32+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 44 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 45 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 312 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

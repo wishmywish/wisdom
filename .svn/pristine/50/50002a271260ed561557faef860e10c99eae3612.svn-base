@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>                                                        
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="alternate" media="handheld" href="#" />
+<link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商详情</title>
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+ </script>
+</head>
+
+<style type="text/css">
+
+</style>
+<body>
+    <div  style="min-height:400px;">
+        <volist  name="result" id="vo">
+            <eq name="vo.f_proname" value="bid">
+                状态：已中标&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+            </eq>
+
+            <eq name="vo.f_proname" value="contract">
+                <eq name="vo.f_prostatus" value="1">
+                状态：经销商合同已签订&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+                </eq>
+                <eq name="vo.f_prostatus" value="2">
+                状态：厂家合同已签订&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+                </eq>
+            </eq>
+
+            <eq name="vo.f_proname" value="remit">
+                <eq name="vo.f_prostatus" value="1">
+                状态：经销商已打款&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+                <else/>
+                状态：等待发货&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+                </eq>
+            </eq>
+
+            <eq name="vo.f_proname" value="dispatch">
+                状态：已发货&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+            </eq>
+
+            <eq name="vo.f_proname" value="receive">
+                状态：已收货&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+            </eq><br>
+
+            <eq name="vo.f_proname" value="commissionsquare">
+                状态：经销商收货，并已经佣金结算&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+            </eq><br>
+
+            <eq name="vo.f_proname" value="Settlement">
+                状态：管理平台已经对首批款进行了结算，并已经确认。&nbsp;<span>操作人：<?php if (is_array($vo["user"])) { echo $vo['user']['trueName'];
+                    
+                }else{ ?> <?php echo $vo["user"]; }?></span>&nbsp;<span>操作时间：{$vo.f_protime}</span>
+            </eq><br>
+
+        </volist>
+    </div>
+</body>
+
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,1219 @@
+[ 2015-11-20T09:45:51+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T09:48:22+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T09:48:29+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T09:59:02+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T09:59:12+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T10:38:02+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:38:10+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:38:20+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T10:41:03+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:41:06+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:48:28+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:48:31+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:50:39+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T10:50:47+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T10:50:50+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T10:51:52+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T10:51:55+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:52:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:52:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:58:29+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T10:58:35+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-20T10:58:35+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:21:54+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T11:21:58+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:12+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-20T11:34:18+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:25+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T11:34:28+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:33+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:33+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/InvTargetstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_business_progress` [ RunTime:0.0080s ]
+SQL: SELECT  count(*)  acthuokuannum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='remit'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0070s ]
+SQL: SELECT  count(*)  contsignednum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='contract'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0090s ]
+SQL: SELECT `f_unitfirstAmount` FROM `t_taskmtbaseinfo` WHERE ( f_taskid=60 )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0080s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and  f_dealer_strats = 3 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and f_dealer_strats = 1 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) ORDER BY f_qty LIMIT 5   [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle?companyid=63&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0080s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0080s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-20T11:34:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle?companyid=63&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T11:34:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle?companyid=63&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T11:34:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/get_business_dealer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3059 行.
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '3' LIMIT 0,20   [ RunTime:0.0530s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '3' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T11:34:36+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/get_business_dealer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3059 行.
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '1' LIMIT 0,6   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_talk` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 321 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 434 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 435 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 436 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 437 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_talk` WHERE `f_dealerid` = 438 AND `f_status` = 1 AND `f_read_web` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '1' LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T11:34:36+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/get_business_dealer
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3059 行.
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '2' LIMIT 0,20   [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` INNER JOIN t_dealerqualifyinfo  t2 on t_dealerbaseinfo.f_dealerid=t2.f_dealerid  WHERE `f_taskid` = '60' AND `f_dealer_strats` = '2' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T11:34:37+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '63' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0090s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-11-20' AND `f_companyid` = '63' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0100s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0120s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:31:10+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:31:10+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/InvTargetstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_business_progress` [ RunTime:0.0100s ]
+SQL: SELECT  count(*)  acthuokuannum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='remit'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0100s ]
+SQL: SELECT  count(*)  contsignednum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='contract'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0100s ]
+SQL: SELECT `f_unitfirstAmount` FROM `t_taskmtbaseinfo` WHERE ( f_taskid=60 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and  f_dealer_strats = 3 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and f_dealer_strats = 1 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) ORDER BY f_qty LIMIT 5   [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:31:11+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=1 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:31:12+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=339 )  [ RunTime:0.0110s ]
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3249 行.
+SQL: SHOW COLUMNS FROM `t_share` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_share` WHERE ( f_taskid =339 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T12:31:12+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0160s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:31:12+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=526 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=2 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=3 ) LIMIT 1   [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:32:11+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T12:32:11+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/InvTargetstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_business_progress` [ RunTime:0.0040s ]
+SQL: SELECT  count(*)  acthuokuannum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='remit'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0040s ]
+SQL: SELECT  count(*)  contsignednum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='contract'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SELECT `f_unitfirstAmount` FROM `t_taskmtbaseinfo` WHERE ( f_taskid=60 )  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and  f_dealer_strats = 3 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and f_dealer_strats = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) ORDER BY f_qty LIMIT 5   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:32:13+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=1 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:32:13+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=339 )  [ RunTime:0.0100s ]
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3249 行.
+SQL: SHOW COLUMNS FROM `t_share` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_share` WHERE ( f_taskid =339 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:32:13+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T12:32:13+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=526 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=2 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=3 ) LIMIT 1   [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:32:20+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0060s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0060s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-20T12:32:21+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/InvTargetstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_business_progress` [ RunTime:0.0040s ]
+SQL: SELECT  count(*)  acthuokuannum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='remit'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0040s ]
+SQL: SELECT  count(*)  contsignednum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='contract'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0050s ]
+SQL: SELECT `f_unitfirstAmount` FROM `t_taskmtbaseinfo` WHERE ( f_taskid=60 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and  f_dealer_strats = 3 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and f_dealer_strats = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) ORDER BY f_qty LIMIT 5   [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:32:21+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0080s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=1 )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0080s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:32:22+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=339 )  [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant share - assumed 'share' D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3249 行.
+SQL: SHOW COLUMNS FROM `t_share` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_share` WHERE ( f_taskid =339 ) LIMIT 1   [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:32:22+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:32:22+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/promReport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=526 )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=2 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_taskdraw` WHERE ( f_taskid =526 and  f_utask_status=3 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T12:36:46+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:36:54+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T12:36:54+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T14:51:36+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T14:51:39+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T14:54:03+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T14:54:07+08:00 ] 10.10.10.104 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T15:01:22+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:22+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/InvTargetstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_business_progress` [ RunTime:0.0300s ]
+SQL: SELECT  count(*)  acthuokuannum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='remit'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0110s ]
+SQL: SELECT  count(*)  contsignednum  FROM  (SELECT  *  FROM  t_business_progress t WHERE t.f_taskid=60 AND t.f_proname='contract'  AND t.f_prostatus=2  GROUP BY t.f_dealerid ORDER BY t.f_protime DESC ) b [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0120s ]
+SQL: SELECT `f_unitfirstAmount` FROM `t_taskmtbaseinfo` WHERE ( f_taskid=60 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid =60 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_dealerbaseinfo` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and  f_dealer_strats = 3 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_dealerbaseinfo` WHERE ( f_taskid =60 and f_dealer_strats = 1 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid =60 ) ORDER BY f_qty LIMIT 5   [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:24+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '63' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0120s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-11-20' AND `f_companyid` = '63' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0110s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '63' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0160s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:40+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T15:01:46+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:52+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-20T15:01:52+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:56+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Web/gettasktitle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0090s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT t_task.f_tid,t_task.f_title,t_tasktype.f_typeid,t_tasktype.f_typename,t_task.f_status,t_task.f_begindate,t_task.f_enddate,t_taskmtbaseinfo.f_mtbrand,t_taskmtbaseinfo.f_mtgoods FROM `t_task` LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` IN ('1','3') ORDER BY f_creatdate desc  [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:01:58+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2015-11-20' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0050s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T15:02:00+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:02:00+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:02:04+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('564ec56c0f398.jpg','20151120/','1448002924') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T15:03:04+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:03:04+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:03:07+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('564ec5abd1b81.jpg','20151120/','1448002987') [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T15:03:12+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Upfile/upF/type/2/size/102400/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('564ec5b020c6e.jpg','20151120/','1448002992') [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-20T15:08:53+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:08:53+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:39:20+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:39:22+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:42:25+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T15:42:28+08:00 ] 10.10.10.12 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-20T15:53:33+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T15:53:33+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-20T15:53:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-20T15:53:35+08:00 ] 10.10.10.21 /wisdom/Index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+

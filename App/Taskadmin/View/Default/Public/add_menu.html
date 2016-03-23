@@ -1,0 +1,11 @@
+<div class="add_menu">
+    <ul class="add_tab">
+        <volist name="tab" id="vo">
+            <if condition="$classtype eq $vo.f_typeid ">
+                <li value="{$vo.f_typeid}" class="selected">{$vo.f_typename}</li>
+            <else />
+                <li value="{$vo.f_typeid}"><a href="{:U($vo['f_note'])}">{$vo.f_typename}</a></li>
+            </if>
+        </volist>
+    </ul>
+</div>

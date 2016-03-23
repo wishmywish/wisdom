@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="image/x-icon" href="/favicon.ico" rel="icon">
+        <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+        <title>[title]</title>
+        <style>
+            /*列出所有图标*/
+            /*菜单红条*/
+            .menu_line_red{background:url(__IMG__/bg.png) repeat-x -0px -10px;}
+            /*菜单蓝条*/
+            .menu_line_blue{background:url(__IMG__/bg.png) repeat-x -0px -15px;}
+        </style>
+        <script>
+            var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+            var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+            var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+            var IMG = "__IMG__";
+            var STATIC = "__STATIC__";
+            var UPFILE = "__UPFILE__";
+            var THEME = "__THEME__";
+            var bigMenuIndex = 0; //大类LI下标
+            var smallMenuIndex = 0;//小类LI下标
+        </script>
+        <script src="__STATIC__/js/tealeaf.js"></script>
+        <js href="__STATIC__/jquery-1.11.2.min.js" />
+        <!--cookie插件-->
+        <js href="__STATIC__/cookie.js" />
+
+        <js href="__JS__/fun.js"/>
+        
+        <css href="__CSS__/home.css" />
+        
+        <!--自动补全插件-->
+        <css href="__STATIC__/css/jquery.bigautocomplete.css" />
+        <css href="__STATIC__/css/font-awesome.min.css" />
+        <css href="__STATIC__/um/themes/default/css/umeditor.css"/>
+        <css href="__STATIC__/um/themes/default/css/umeditor.min.css"/>
+        <js href="__STATIC__/layer/layer.js" />
+
+    </head>
+    <body>
+        <div class="head">
+            <div class="head_center">
+
+                <div class="logo"><img style="height: 30px;margin-top: 8px;" src="__UPFILE__/logo/logo.png" ></div>
+
+                <div class="company_name"><?PHP echo  cookie("companyName")?></div>
+                <div style="width:100px;float:left;padding-left:20px;">
+                    <if condition="$state eq 4">
+                          <span style="color:#ffffff">(待审核)</span>
+                    </if>
+
+                    <if condition="$state eq 1">
+                        <!--银-->
+                       <if  condition="$level eq 1">
+                           <img src="__IMG__/ptqy.png" style="height:45px;width:150px;"/>
+                           <!--金-->
+                           <elseif  condition="$level eq 2"/>
+                           <img src="__IMG__/gold.png" style="height:45px;width:150px;"/>
+                           <!--钻石-->
+                           <else/>
+                           <img src="__IMG__/zhushi.png" style="height:45px;width:150px;"/>
+                       </if>
+                    </if>
+                </div>
+
+                <!--<div class="search">-->
+                    <!--<div class='input_input'><input type="text" name="search_text" id="search_text"></div>-->
+                    <!--<div class="input_icon"><span class="fa fa-search fa-lg"></span></div>-->
+                <!--</div>-->
+
+                <div class="personal_info">
+                    <div  style="width:100%;">
+                        <div class="pro_img"><img style="height: 35px;" src="{$headlogo}"></div>
+                        <div style="height: 50px;">
+                            <!--<?php echo  empty(cookie("trueName"))?cookie("mobile"):cookie("trueName"); ?>-->
+                            <!--{$userInfo_arr['list']['trueName']}-->
+                            <if condition="empty($userInfo_arr['list']['trueName']) eq true">{$userInfo_arr['list']['mobile']}<else/>{$userInfo_arr['list']['trueName']}</if>
+                            <b class="caret"></b>
+                        </div>
+                    </div>
+                    <div class="personal_info_set">
+                       <ul>
+<!--                        <li>帮助</li>-->
+                       
+                        <?php if( !in_array("e1",$access_array) ){ echo "<!--"; } ?><li onclick="location.href = APP+'/Admin/Group/index'">企业设置</li>
+                                                                               <?php if( !in_array("e1",$access_array) ){ echo "-->"; } ?>
+                        <li onclick="location.href = APP+'/Home/Office/index'">返回首页</li>
+
+                        <li id="back_system">退出</li>
+                       </ul>
+                    </div>
+                 
+                </div>
+<!--                <div class="back_system"  id="back_system">退出</div>-->
+            </div>
+        </div>
+        <script>
+            $("#back_system").click(function(){
+                var loadi=layer.load(0);
+                $.get("{:U('Api/outLogin')}",function(){
+                    Cookie.eraseCookie("bigMenuIndex");
+                    Cookie.eraseCookie("smallMenuIndex");
+                    layer.close(loadi);
+                    layer.msg("成功退出系统",{icon:9})
+                    location.href=APP+"/Home/Index/index";
+                }); 
+            });
+            $(".personal_info").mouseover(function(event) {
+                $(".personal_info_set").show();
+            });
+            $(".personal_info").mouseout(function(event){
+                $(".personal_info_set").hide();
+            });
+            
+
+
+        </script>

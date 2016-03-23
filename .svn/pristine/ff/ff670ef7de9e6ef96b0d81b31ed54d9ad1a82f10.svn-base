@@ -1,0 +1,401 @@
+<include file="Public/head" title="注册用户及活跃度统计" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../../Public/Taskadmin/Default/css/css-table.css" />
+<!-- <script type="text/javascript" src="../../../Public/Taskadmin/Default/js/jquery-1.2.6.min.js"></script> -->
+<script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../../../Public/Taskadmin/Default/js/highcharts.js"></script>
+<script type="text/javascript" src="../../../Public/Taskadmin/Default/js/exporting.js"></script>
+
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 注册用户及活跃度统计</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='<eq name="classtype" value="1">selected</eq>' id="messages" style="    width: 143px;"><a href="__APP__/Taskadmin/UserReport/index" style="text-decoration:none;">注册用户及活跃度统计</a></li>
+                        <li value="2" class='<eq name="classtype" value="2">selected</eq>' id="tubiao" style="    width: 195px;"><a href="__APP__/Taskadmin/UserReport/tubiao" style="text-decoration:none;">注册用户及活跃度统计图表</a></li>
+                    </ul>
+                    <div class="action_chart">
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+                    <input type="hidden" id="date" value="{$endTime}">
+                </div>
+
+                <div class="chartlist">
+                    <div class="taskchart" style="height: 460px;">
+                        <div class="taskchart_b" style="height: 460px;    width: 100%;">
+                            <div class="taskhead"><span style="margin-left:20px;">注册用户及活跃度统计</span></div>
+                            <div class="tchart" id="travel">
+								<div id="container" style="min-width:700px;height:400px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="taskchart" style="    margin-left: 15px;">
+                	<div id="container1" style="min-width:700px;height:400px"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM',
+        min: '2015-07-01 00:00:00', //最小日期
+        max: '2015-12-31 23:59:59', //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM',
+        min: '2015-07-01 00:00:00', //最小日期
+        max: laydate.now(), //最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+
+    $("#startTime").val('2015-07');
+    $("#endTime").val($("#date").val());
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+
+        if(startTime==""||endTime==""){
+            layer.msg("请选择查询时间",{icon:8});
+           return false;
+        }
+        if(startTime>endTime){
+            layer.msg("起始时间不能超过终止时间",{icon:8});
+           return false;
+        }
+		$.post(APP + "/Api/Web/userChars", "startTime=" + startTime+"&endTime="+endTime, function (v) {
+        		var items1 = v.f_dayopenaverage;
+        		var arr1 = new Array(); 
+        		$.each(items1, function(itemNo1, item1) {
+        			arr1.push(parseFloat(item1));
+
+	            });
+
+        		var items2 = v.f_onceuserduration;
+        		var arr2 = new Array(); 
+        		$.each(items2, function(itemNo2, item2) {
+        			arr2.push(parseFloat(item2));
+
+	            });
+
+        		var items3 = v.f_onceaccesspagenumber;
+        		var arr3 = new Array(); 
+        		$.each(items3, function(itemNo3, item3) {
+        			arr3.push(parseFloat(item3));
+
+	            });
+
+        		var items4 = v.f_regcount;
+        		var arr4 = new Array(); 
+        		$.each(items4, function(itemNo4, item4) {
+        			arr4.push(parseFloat(item4));
+
+	            });
+
+        		var items5 = v.f_dayactivecount;
+        		var arr5 = new Array(); 
+        		$.each(items5, function(itemNo5, item5) {
+        			arr5.push(parseFloat(item5));
+
+	            });
+
+        		var items6 = v.f_weekactivecount;
+        		var arr6 = new Array(); 
+        		$.each(items6, function(itemNo6, item6) {
+        			arr6.push(parseFloat(item6));
+
+	            });
+
+        		var items7 = v.f_monthactivecount;
+        		var arr7 = new Array(); 
+        		$.each(items7, function(itemNo7, item7) {
+        			arr7.push(parseFloat(item7));
+
+	            });
+
+        		var items8 = v.f_monthretentionrate;
+        		var arr8 = new Array(); 
+        		$.each(items8, function(itemNo8, item8) {
+        			arr8.push(parseFloat(item8));
+
+	            });
+
+        		chart = new Highcharts.Chart({  
+                chart: {  
+                    renderTo: 'container',  
+                    plotBackgroundColor: null,  
+                    plotBorderWidth: null,  
+                    plotShadow: false  
+                },  
+				title: {
+		            text: 'APP注册用户与活跃数',
+		            x: -20 //center
+		        },
+				xAxis: {
+			        categories: v.f_month
+			    },
+			    yAxis: {
+			        title: {
+			            text: '数值'
+			        },
+			        plotLines: [{
+			            value: 0,
+			            width: 1,
+			            color: '#808080'
+			        }]
+			    },
+			    legend: {
+			        layout: 'vertical',
+			        align: 'right',
+			        verticalAlign: 'middle',
+			        borderWidth: 0
+			    },
+			    series: [{
+			        name: '注册数累计',
+			        data: arr4
+			    }, {
+			        name: 'DAU日活',
+			        data: arr5
+			    }, {
+			        name: 'WAU周活',
+			        data: arr6
+			    }, {
+			        name: 'MAU月活',
+			        data: arr7
+			    }]
+            });  
+
+ 			chart1 = new Highcharts.Chart({  
+	                chart: {  
+	                    renderTo: 'container1',  
+	                    plotBackgroundColor: null,  
+	                    plotBorderWidth: null,  
+	                    plotShadow: false  
+	                },  
+					title: {
+			            text: 'APP用户使用深度',
+			            x: -20 //center
+			        },
+					xAxis: {
+				        categories: v.f_month
+				    },
+				    yAxis: {
+				        title: {
+				            text: '数值'
+				        },
+				        plotLines: [{
+				            value: 0,
+				            width: 1,
+				            color: '#808080'
+				        }]
+				    },
+				    legend: {
+				        layout: 'vertical',
+				        align: 'right',
+				        verticalAlign: 'middle',
+				        borderWidth: 0
+				    },
+				    series: [{
+				        name: '平均每日打开次数',
+				        data: arr1
+				    }, {
+				        name: '平均每次使用时长',
+				        data: arr2
+				    }, {
+				        name: '平均每次访问页数',
+				        data: arr3
+				    }]
+
+	            });  
+        	}, 'json');
+    });
+        
+    </script>
+
+    <script>
+ 		var chart;  
+ 		var chart1;  
+        $(document).ready(function() {
+	        var  startTime=$("#startTime").val();
+	        var  endTime=$("#endTime").val();
+        	$.post(APP + "/Api/Web/userChars", "startTime=" + startTime+"&endTime="+endTime, function (v) {
+        		var items1 = v.f_dayopenaverage;
+        		var arr1 = new Array(); 
+        		$.each(items1, function(itemNo1, item1) {
+        			arr1.push(parseFloat(item1));
+
+	            });
+
+        		var items2 = v.f_onceuserduration;
+        		var arr2 = new Array(); 
+        		$.each(items2, function(itemNo2, item2) {
+        			arr2.push(parseFloat(item2));
+
+	            });
+
+        		var items3 = v.f_onceaccesspagenumber;
+        		var arr3 = new Array(); 
+        		$.each(items3, function(itemNo3, item3) {
+        			arr3.push(parseFloat(item3));
+
+	            });
+
+        		var items4 = v.f_regcount;
+        		var arr4 = new Array(); 
+        		$.each(items4, function(itemNo4, item4) {
+        			arr4.push(parseFloat(item4));
+
+	            });
+
+        		var items5 = v.f_dayactivecount;
+        		var arr5 = new Array(); 
+        		$.each(items5, function(itemNo5, item5) {
+        			arr5.push(parseFloat(item5));
+
+	            });
+
+        		var items6 = v.f_weekactivecount;
+        		var arr6 = new Array(); 
+        		$.each(items6, function(itemNo6, item6) {
+        			arr6.push(parseFloat(item6));
+
+	            });
+
+        		var items7 = v.f_monthactivecount;
+        		var arr7 = new Array(); 
+        		$.each(items7, function(itemNo7, item7) {
+        			arr7.push(parseFloat(item7));
+
+	            });
+
+        		var items8 = v.f_monthretentionrate;
+        		var arr8 = new Array(); 
+        		$.each(items8, function(itemNo8, item8) {
+        			arr8.push(parseFloat(item8));
+
+	            });
+
+        		chart = new Highcharts.Chart({  
+                chart: {  
+                    renderTo: 'container',  
+                    plotBackgroundColor: null,  
+                    plotBorderWidth: null,  
+                    plotShadow: false  
+                },  
+				title: {
+		            text: 'APP注册用户与活跃数',
+		            x: -20 //center
+		        },
+				xAxis: {
+			        categories: v.f_month
+			    },
+			    yAxis: {
+			        title: {
+			            text: '数值'
+			        },
+			        plotLines: [{
+			            value: 0,
+			            width: 1,
+			            color: '#808080'
+			        }]
+			    },
+			    legend: {
+			        layout: 'vertical',
+			        align: 'right',
+			        verticalAlign: 'middle',
+			        borderWidth: 0
+			    },
+			    series: [{
+			        name: '注册数累计',
+			        data: arr4
+			    }, {
+			        name: 'DAU日活',
+			        data: arr5
+			    }, {
+			        name: 'WAU周活',
+			        data: arr6
+			    }, {
+			        name: 'MAU月活',
+			        data: arr7
+			    }]
+            });  
+
+ 			chart1 = new Highcharts.Chart({  
+	                chart: {  
+	                    renderTo: 'container1',  
+	                    plotBackgroundColor: null,  
+	                    plotBorderWidth: null,  
+	                    plotShadow: false  
+	                },  
+					title: {
+			            text: 'APP用户使用深度',
+			            x: -20 //center
+			        },
+					xAxis: {
+				        categories: v.f_month
+				    },
+				    yAxis: {
+				        title: {
+				            text: '数值'
+				        },
+				        plotLines: [{
+				            value: 0,
+				            width: 1,
+				            color: '#808080'
+				        }]
+				    },
+				    legend: {
+				        layout: 'vertical',
+				        align: 'right',
+				        verticalAlign: 'middle',
+				        borderWidth: 0
+				    },
+				    series: [{
+				        name: '平均每日打开次数',
+				        data: arr1
+				    }, {
+				        name: '平均每次使用时长',
+				        data: arr2
+				    }, {
+				        name: '平均每次访问页数',
+				        data: arr3
+				    }]
+
+	            });  
+        	}, 'json');
+            
+
+        });  
+	</script>
+</html>

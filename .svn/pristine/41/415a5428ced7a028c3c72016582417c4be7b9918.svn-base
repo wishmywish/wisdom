@@ -1,0 +1,64 @@
+<include file="Public/head" title="招商APP管理平台::权利部署" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 权利部署</div>
+                <div class="tabli">
+                    <ul id="tabli_admin">
+                            <li value="0" class='selected'>用户管理</li>
+                            <li value="1">角色管理</li>
+                            <li value="2">权限管理</li>
+                    </ul>
+                    <ul class="action">
+                        <li id="add_admin" value="0">添加</li>
+                        <li id="modi_admin" value="0">修改</li>
+                        <li id="del_admin" value="0">删除</li>
+                        <li id="access_admin" value="0">授权</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div id="list">
+                        <ul>
+                            <li style='width:10%;'><input id="allcheck" type='checkbox' value='0'>全选</li>
+                                <li style='width:25%;'>用户名</li>
+                                <li style='width:25%;'>真实名字</li>
+                                <li style='width:20%;'>角色</li>
+                                <li style='width:20%;'>状态</li>
+                        </ul>
+                    </div>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:10%;'></li>
+                            <li style='width:25%;'>用户名</li>
+                            <li style='width:25%;'>真实名字</li>
+                            <li style='width:20%;'>角色</li>
+                            <li style='width:20%;'>状态</li>
+                        </ul>
+                        <ul>
+                            <li style='width:10%;'></li>
+                            <li style='width:25%;'>用户名</li>
+                            <li style='width:25%;'>真实名字</li>
+                            <li style='width:20%;'>角色</li>
+                            <li style='width:20%;'>状态</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+    $(function(){
+
+        //获取列表信息
+            plist_user();
+            // plist_access(1);
+        
+    });
+    
+    </script>
+</html>

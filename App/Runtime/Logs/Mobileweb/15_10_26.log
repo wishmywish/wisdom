@@ -1,0 +1,653 @@
+[ 2015-10-26T09:26:15+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:2.5771s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T09:26:26+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-26T09:27:02+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:27:05+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-26T09:27:41+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-26T09:27:42+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:27:43+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T09:27:53+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:28:05+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:28:25+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T09:28:51+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:28:51+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:28:52+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T09:28:52+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-26T09:29:00+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:30:37+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:31:43+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:33:40+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:33:55+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-26T09:35:35+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2015-10-26T09:40:07+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:41:13+08:00 ] ::1 /wisdom/Index.php/Mobileweb/taskdeatail?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Taskdeatail
+
+[ 2015-10-26T09:41:29+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Events/taskdeatail?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0f19d99a3b02e10a6a0c4139710db3ad.php 第 55 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:47:38+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:50:46+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:50:48+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:50:48+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:50:48+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T09:51:03+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Index?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SELECT `f_tid`,`f_title`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid_ban  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: f_product D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\86e6e4957aea9067483e3dd159a71d08.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

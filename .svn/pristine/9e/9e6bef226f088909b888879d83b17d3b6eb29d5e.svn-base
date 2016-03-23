@@ -1,0 +1,276 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>我的报告</li>
+            <li id="1" class="org_box"><span ></span>工作审阅</li>
+        </ul>
+    </div>
+    <div class="report_center">
+        <!--我的报告 -->
+        <div id="a0">
+            <div class="report_head">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;日志&nbsp;>&nbsp;我的报告</span>
+
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+
+                        <!-- 月时间-->
+                        <div   class="divTime">
+                            <input class="bntns" type="button" value="本月">
+                            <input class="bntns" type="button" value="<">
+                            <span>2015-09</span>
+                            <input class="bntns" type="button" value=">">
+                        </div>
+
+
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <input type="search" placeholder="所属部门">
+                        <span class="fa fa-sitemap fa-lg"></span>
+                        <input type="search" placeholder="罗青钦">
+                        <span class="fa fa-group fa-lg"></span>
+                    </div>
+                    <!-- 按钮-->
+                    <p style="float: left;height: 25px;width: 250px;margin: 12px 0 0 760px;">
+                        <input id="searchButton0" class="bntns1" type="button" value="搜索">
+                        <input id="resetButton0" class="bntns1" type="button" value="清空">
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="report_list">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0" class="TabRili">
+                    <thead>
+                    <tr>
+                        <td>星期日</td>
+                        <td>星期一</td>
+                        <td>星期二</td>
+                        <td>星期三</td>
+                        <td>星期四</td>
+                        <td>星期五</td>
+                        <td>星期六</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="calBox0" class="calBox sun"></td>
+                        <td id="calBox1" class="calBox"></td>
+                        <td id="calBox2" class="calBox">
+                            <div align="left" id="2015-09-01" calbox="calBox2" class="Num">1</div>
+                            <ul id="plan2015-09-01" class="list"></ul>
+                        </td>
+                        <td id="calBox3" class="calBox">
+                            <div align="left" id="2015-09-02" calbox="calBox3" class="Num">2</div>
+                            <ul id="plan2015-09-02" class="list"></ul>
+                        </td>
+                        <td id="calBox4" class="calBox">
+                            <div align="left" id="2015-09-03" calbox="calBox4" class="Num">3</div>
+                            <ul id="plan2015-09-03" class="list"></ul>
+                        </td>
+                        <td id="calBox5" class="calBox">
+                            <div align="left" id="2015-09-04" calbox="calBox5" class="Num">4</div>
+                            <ul id="plan2015-09-04" class="list"></ul>
+                        </td>
+                        <td id="calBox6" class="calBox sat">
+                            <div align="left" id="2015-09-05" calbox="calBox6" class="Num">5</div>
+                            <ul id="plan2015-09-05" class="list"></ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="calBox7" class="calBox sun"><div align="left" id="2015-09-06" calbox="calBox7" class="Num">6</div><ul id="plan2015-09-06" class="list"></ul></td>
+                        <td id="calBox8" class="calBox"><div align="left" id="2015-09-07" calbox="calBox8" class="Num">7</div><ul id="plan2015-09-07" class="list"></ul></td>
+                        <td id="calBox9" class="calBox"><div align="left" id="2015-09-08" calbox="calBox9" class="Num">8</div><ul id="plan2015-09-08" class="list"></ul></td>
+                        <td id="calBox10" class="calBox"><div align="left" id="2015-09-09" calbox="calBox10" class="Num">9</div><ul id="plan2015-09-09" class="list"></ul></td>
+                        <td id="calBox11" class="calBox checked"><div align="left" id="2015-09-10" calbox="calBox11" class="Num">10</div><ul id="plan2015-09-10" class="list"></ul></td>
+                        <td id="calBox12" class="calBox"><div align="left" id="2015-09-11" calbox="calBox12" class="Num Today">11</div><ul id="plan2015-09-11" class="list" style="cursor: pointer;"><li id="46090" title="2015-09-11张学武电话拜访的计划">2015-09-11张学武电话拜访的计划</li></ul></td>
+                        <td id="calBox13" class="calBox sat"><div align="left" id="2015-09-12" calbox="calBox13" class="Num">12</div><ul id="plan2015-09-12" class="list"></ul></td>
+                    </tr>
+                    <tr>
+                        <td id="calBox14" class="calBox sun"><div align="left" id="2015-09-13" calbox="calBox14" class="Num">13</div><ul id="plan2015-09-13" class="list"></ul></td>
+                        <td id="calBox15" class="calBox"><div align="left" id="2015-09-14" calbox="calBox15" class="Num">14</div><ul id="plan2015-09-14" class="list"></ul></td>
+                        <td id="calBox16" class="calBox"><div align="left" id="2015-09-15" calbox="calBox16" class="Num">15</div><ul id="plan2015-09-15" class="list"></ul></td>
+                        <td id="calBox17" class="calBox"><div align="left" id="2015-09-16" calbox="calBox17" class="Num">16</div><ul id="plan2015-09-16" class="list"></ul></td>
+                        <td id="calBox18" class="calBox"><div align="left" id="2015-09-17" calbox="calBox18" class="Num">17</div><ul id="plan2015-09-17" class="list"></ul></td>
+                        <td id="calBox19" class="calBox"><div align="left" id="2015-09-18" calbox="calBox19" class="Num">18</div><ul id="plan2015-09-18" class="list"></ul></td>
+                        <td id="calBox20" class="calBox sat"><div align="left" id="2015-09-19" calbox="calBox20" class="Num">19</div><ul id="plan2015-09-19" class="list"></ul></td>
+                    </tr>
+                    <tr>
+                        <td id="calBox21" class="calBox sun"><div align="left" id="2015-09-20" calbox="calBox21" class="Num">20</div><ul id="plan2015-09-20" class="list"></ul></td>
+                        <td id="calBox22" class="calBox"><div align="left" id="2015-09-21" calbox="calBox22" class="Num">21</div><ul id="plan2015-09-21" class="list"></ul></td>
+                        <td id="calBox23" class="calBox"><div align="left" id="2015-09-22" calbox="calBox23" class="Num">22</div><ul id="plan2015-09-22" class="list"></ul></td>
+                        <td id="calBox24" class="calBox"><div align="left" id="2015-09-23" calbox="calBox24" class="Num">23</div><ul id="plan2015-09-23" class="list"></ul></td>
+                        <td id="calBox25" class="calBox"><div align="left" id="2015-09-24" calbox="calBox25" class="Num">24</div><ul id="plan2015-09-24" class="list"></ul></td>
+                        <td id="calBox26" class="calBox"><div align="left" id="2015-09-25" calbox="calBox26" class="Num">25</div><ul id="plan2015-09-25" class="list"></ul></td>
+                        <td id="calBox27" class="calBox sat"><div align="left" id="2015-09-26" calbox="calBox27" class="Num">26</div><ul id="plan2015-09-26" class="list"></ul></td>
+                    </tr>
+                    <tr>
+                        <td id="calBox28" class="calBox sun"><div align="left" id="2015-09-27" calbox="calBox28" class="Num">27</div><ul id="plan2015-09-27" class="list"></ul></td>
+                        <td id="calBox29" class="calBox"><div align="left" id="2015-09-28" calbox="calBox29" class="Num">28</div><ul id="plan2015-09-28" class="list"></ul></td>
+                        <td id="calBox30" class="calBox"><div align="left" id="2015-09-29" calbox="calBox30" class="Num">29</div><ul id="plan2015-09-29" class="list"></ul></td>
+                        <td id="calBox31" class="calBox"><div align="left" id="2015-09-30" calbox="calBox31" class="Num">30</div><ul id="plan2015-09-30" class="list"></ul></td>
+                        <td id="calBox32" class="calBox"></td>
+                        <td id="calBox33" class="calBox"></td>
+                        <td id="calBox34" class="calBox sat"></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--工作审阅-->
+        <div id="a1" style="display: none;">
+            <div class="report_head">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;日志&nbsp;>&nbsp;报告审阅</span>
+
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <ul>
+                        <li  class="selected" >日</li>
+                        <li>周</li>
+                        <li>月</li>
+                        <li style="border-right: 1px solid #eaeaea;">区间</li>
+                    </ul>
+                    <div id="timeChoose">
+                        <!-- 日时间-->
+                        <div id="dailyTime" class="divTime">
+                            <input class="bntns" type="button" value="本日">
+                            <input class="bntns" type="button" value="<">
+                            <span>2015-9-9</span>
+                            <input class="bntns" type="button" value=">">
+                        </div>
+                        <!--周时间-->
+                        <div  id="weekTime" class="divTime" style="display: none">
+                            <input class="bntns" type="button" value="本周">
+                            <input class="bntns" type="button" value="<">
+                            <span>2015-9-9</span>
+                            -
+                            <span>2015-9-15</span>
+                            <input class="bntns" type="button" value=">">
+                        </div>
+                        <!-- 月时间-->
+                        <div  id="month_time" class="divTime" style="display: none">
+                            <input class="bntns" type="button" value="本月">
+                            <input class="bntns" type="button" value="<">
+                            <span>2015-09</span>
+                            <input class="bntns" type="button" value=">">
+                        </div>
+                        <!-- 区间时间-->
+                        <div  id="section" class="divTime"  style="display: none">
+                            <input id="startdate" class="laydate-icon" value="" placeholder="起始时间" style="width: 80px;height: 25px;">
+                            &nbsp;至&nbsp;
+                            <input id="enddate" class="laydate-icon" value="" placeholder="终止时间" style="width: 80px;height: 25px;">
+                        </div>
+                    </div>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <input type="search" placeholder="所属部门">
+                        <span class="fa fa-sitemap fa-lg"></span>
+                        <input type="search" placeholder="罗青钦">
+                        <span class="fa fa-group fa-lg"></span>
+                    </div>
+                    <!-- 按钮-->
+                    <p style="float: left;height: 25px;width: 250px;margin: 12px 0 0 760px;">
+                        <input id="searchButton1" class="bntns1" type="button" value="搜索">
+                        <input id="resetButton1" class="bntns1" type="button" value="清空">
+                        <!--<input id="exprotButton" class="bntns1" type="button" value="导出">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="report_list">
+                <div class="title">
+                    <ul>
+                        <li style="width: 10%">报告类型</li>
+                        <li style="width: 15%">报告人</li>
+                        <li style="width: 45%">内容</li>
+                        <li style="width: 15%">时间</li>
+                        <li style="width: 15%">状态</li>
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <?PHP for($i=0;$i<6;$i++){?>
+                    <ul>
+                        <li style="width: 10%">日报</li>
+                        <li style="width: 15%">罗青钦</li>
+                        <li style="width: 45%">本周工作计划内容安排，任务完成情况，需要小花进行跟进。</li>
+                        <li style="width: 15%">2015-9-12</li>
+                        <li style="width: 15%">待审阅</li>
+                    </ul>
+                    <?PHP }?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+
+
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+    var start = {
+        elem: '#startdate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#enddate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: laydate.now(+180),
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    })
+
+//    菜单轮换点击事件
+    $(".column li").click(function () {
+        var index = $(".column li").index($(this));
+        $(this).addClass("selected").siblings().removeClass("selected");
+        $divList = $("#timeChoose").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+    })
+
+    $('#bigmenu li').click(function(){
+//        $("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+
+
+</script>
+    </body>
+</html>

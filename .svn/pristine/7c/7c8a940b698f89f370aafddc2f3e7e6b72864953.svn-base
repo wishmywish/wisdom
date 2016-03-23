@@ -1,0 +1,181 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <h1>调研</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k},{$vo.f_type})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <input type="hidden" id="currentPage" value="{$k}">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$vo.f_type},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p title="{$vo.f_problemtatile}" style="font-size: 14px">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <?php if ($vo['f_type']==1||$vo['f_type']=='1') { ?>
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}"
+                                    <?php if ($ky-1==0) { ?>
+                                    <?php echo "checked"; ?>
+                                    <?php } ?>
+                                    />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <?php }else if ($vo['f_type']==2||$vo['f_type']=='2') { ?>
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}" />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <?php } ?>
+                         </volist>
+                    </div>
+                    <div class="head_con4">
+                        <button id="submit" onclick="done({$count})">提交</button>
+                    </div>
+                </div>
+            </div>
+            
+         </volist>
+         <div>
+             <input type="hidden" id="countPage" value="{$count}">
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+             <input type="hidden" id="surveyOver" onclick="window.demo.done()">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+        if($("#countPage").val()>2){
+            $(".head_con4").hide();
+        }else if($("#countPage").val()==2 && $("#currentPage").val()==1){
+            document.getElementById('submit').style.color="#fff";
+            document.getElementById('submit').style.backgroundColor="#fff";
+            document.getElementById('submit').style.borderColor="#fff";
+            document.getElementById('submit').style.height="0";
+            document.getElementById('submit').style.width="0";
+        }
+
+        // if($("#countPage").val()>1){
+        //     $(".head_con4").hide();
+        // }
+
+        // function nextProblem(k,f_type,count){
+        //     location.href=APP+"/Mobileweb/Events/surveyClass?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+        //     if (k>=count) {
+        //         setTimeout('$(".head_con4").show()', 1000 );
+        //     }
+        //     if (k>count) {
+        //         layer.msg("当前页是最后页");
+        //     }
+        // }
+        function nextProblem(k,f_type,count){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var inpschecked = $("input[name='inps"+k+"']:checked");
+            var answerInput="";
+    
+            if(inpschecked.length==1){
+                answerInput=inpschecked.val();
+            }else{
+                inpschecked.each(function(){
+                    if (answerInput ==""){
+                        answerInput += $(this).val();
+                    }else{
+                        answerInput += "," + $(this).val();
+                    }
+                });
+            }
+            
+            $.post(APP+"/Mobileweb/Events/nextSurvey",
+            "taskid="+taskid+"&answerInput="+answerInput+"&serial="+k+"&userid="+userid,
+            function(val){
+                    // console.log(val);
+            },'json');
+
+            $("input[name='inps"+k+"']").attr("onclick","return false;");
+            location.href=APP+"/Mobileweb/Events/surveyClass?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+
+           if (k>=count) {
+                setTimeout('$(".head_con4").show()', 1000 );
+            }
+            if (k>count) {
+                layer.msg("当前页是最后页");
+            }
+        }
+
+        function lastProblem(k){
+            $(".head_con4").hide();
+            location.hash="#page"+(--k);
+            if (k<1) {
+                layer.msg("当前页是第一页");
+            }
+        }
+
+        function done(count,k){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var inpschecked = $("input[name='inps"+count+"']:checked");
+            var answerInput="";
+    
+            if(inpschecked.length==1){
+                answerInput=inpschecked.val();
+            }else{
+                inpschecked.each(function(){
+                    if (answerInput ==""){
+                        answerInput += $(this).val();
+                    }else{
+                        answerInput += "," + $(this).val();
+                    }
+                });
+            }
+            
+            $.post(APP+"/Mobileweb/Events/doneSureSurvey",
+            "taskid="+taskid+"&answerInput="+answerInput+"&serial="+count+"&userid="+userid,
+            function(data){
+                // $("#surveyOver").onclick();
+               document.getElementById("surveyOver").click();
+
+               function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'finish';
+                    bridge.send(data);
+                });
+
+            },"json");
+        }
+
+
+    </script>
+</html>

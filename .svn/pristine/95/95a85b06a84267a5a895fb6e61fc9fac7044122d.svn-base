@@ -1,0 +1,58 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+<div class="content_right">
+    <div class="main_left">
+        <div class="cons_top">
+            <h4 class="cons_tab fl">
+                <!--<span class="current">全部任务</span>-->
+                <span class="current">推广赚</span>
+                <span style="background: none;">随手赚</span>
+            </h4>
+        </div>
+        <div class="generalize">
+            <!--<div class="generalize_in1 cur" >全部任务</div>-->
+            <div class="generalize_in1 cur">推广赚</div>
+            <div class="generalize_in1">随手赚</div>
+        </div>
+    </div>
+    <div class="main_right">
+        <div class="right_con">
+            <dl>
+                <span style="font-size: 14px;">任务标题</span>
+                <dt style="font-size: 14px;padding-bottom: 25px;">视频会议系统诚招代理</dt>
+                <dd>任务品牌：<span>协同通讯</span></dd>
+                <dd>任务产品：<span>视频会议系统</span></dd>
+                <dd>开始时间：<span>2015.5.1</span></dd>
+                <dd>结束时间：<span>2015.7.30</span></dd>
+            </dl>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+
+<!--漏斗插件-->
+<js href="__STATIC__/fusion/js/fusioncharts.js"/>  <!--公共图表插件-->
+<js href="__STATIC__/fusion/js/themes/fusioncharts.theme.fint.js"/>
+<script src="__STATIC__/echarts/build/dist/echarts-all.js"></script>
+<js href="__JS__/business_chart.js"/>
+<script type="text/javascript">
+    $(function(){
+        $(".cons_tab span").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".generalize .generalize_in1").eq(myindex).addClass("cur").siblings().removeClass("cur");
+        })
+
+    })
+
+</script>
+</body>
+</html>

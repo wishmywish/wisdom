@@ -1,0 +1,483 @@
+<include file="Public/head" title="活跃度报表" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 活跃度报表</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='selected' id="messages" ><a href="__APP__/Taskadmin/Salesreport/index" style="text-decoration:none;">活跃度报表</a></li>
+                    </ul>
+                    <div class="action_chart">
+
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+
+
+                </div>
+
+                <div class="chartlist">
+                    <div class="taskchart" style="height: 460px;">
+                        <div class="taskchart_b" style="height: 460px;">
+                            <div class="taskhead"><span style="margin-left:20px;">用户数</span></div>
+                            <div class="tchart" id="A1">
+                                <canvas id="myChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="taskchart_b" style="height: 460px;">
+                            <div class="taskhead"><span style="margin-left:20px;">实名认证数</span></div>
+                            <div class="tchart" id="A2">
+                                <canvas id="myCertifiedChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="taskchart_b" style="height: 460px;">
+                            <div class="taskhead"><span style="margin-left:20px;">登录数</span></div>
+                            <div class="tchart" id="A3">
+                                <canvas id="myLoginChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="taskchart">
+                        <div class="taskchart_b">
+                            <div class="taskhead"><span style="margin-left:20px;">任务数</span></div>
+                            <div class="tasktab">
+                                <ul>
+                                    <li onclick="checkTask(1);" class="tabli_li" style="width: 34%;"><div class="tasktitle tabcolor_1">推广赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkTask(2);" class="tabli_li"><div class="tasktitle tabcolor_2">随手赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkTask(3);" class="tabli_li"><div class="tasktitle tabcolor_3">招商赚</div><div class="tasktitle_second">任务个数</div></li>
+                                </ul>
+                            </div>
+                            <div class="tchart" id="A4">
+                                <canvas id="myAllTaskChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="taskchart_b">
+                            <div class="taskhead"><span style="margin-left:20px;">日任务接单数</span></div>
+                            <div class="tasktab">
+                                <ul>
+                                    <li onclick="checkReceiveTask(1);" class="tabli_li" style="width: 34%;"><div class="tasktitle tabcolor_1">推广赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkReceiveTask(2);" class="tabli_li"><div class="tasktitle tabcolor_2">随手赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkReceiveTask(3);" class="tabli_li"><div class="tasktitle tabcolor_3">招商赚</div><div class="tasktitle_second">任务个数</div></li>
+                                </ul>
+                            </div>
+                            <div class="tchart" id="A5">
+                                <canvas id="myAllTaskReceiveChart" style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="taskchart_b">
+                            <div class="taskhead"><span style="margin-left:20px;">日任务完成单数</span></div>
+                            <div class="tasktab">
+                                <ul>
+                                    <li onclick="checkEndTask(1);" class="tabli_li" style="width: 34%;"><div class="tasktitle tabcolor_1">推广赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkEndTask(2);" class="tabli_li"><div class="tasktitle tabcolor_2">随手赚</div><div class="tasktitle_second">任务个数</div></li>
+                                    <li onclick="checkEndTask(3);" class="tabli_li"><div class="tasktitle tabcolor_3">招商赚</div><div class="tasktitle_second">任务个数</div></li>
+                                </ul>
+                            </div>
+                            <div class="tchart" id="A6">
+                                <canvas id="myAllTaskEndChart" style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(), //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),//最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        var loadi = layer.load(0);
+        rn = parseInt(Math.random()*1000);
+        $("#A1").empty();
+        $("#A1").append("<canvas id='myChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A2").empty();
+        $("#A2").append("<canvas id='myCertifiedChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A3").empty();
+        $("#A3").append("<canvas id='myLoginChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A4").empty();
+        $("#A4").append("<canvas id='myAllTaskChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A5").empty();
+        $("#A5").append("<canvas id='myAllTaskReceiveChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A6").empty();
+        $("#A6").append("<canvas id='myAllTaskEndChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+
+
+        if(startTime==""||endTime==""){
+            layer.msg("请选择查询时间",{icon:8});
+           return false;
+        }
+        if(startTime>endTime){
+            layer.msg("起始时间不能超过终止时间",{icon:8});
+           return false;
+        }
+
+        var key= new Array();
+        var value= new Array();
+
+        var certifiedKey= new Array();
+        var certifiedValue= new Array();
+
+        var loginKey= new Array();
+        var loginValue= new Array();
+
+        var allTaskKey= new Array();
+        var allTaskValue= new Array();
+
+        var allTaskReceiveKey= new Array();
+        var allTaskReceiveValue= new Array();
+
+        var allTaskEndKey= new Array();
+        var allTaskEndValue= new Array();
+
+        $.post(APP+"/Api/Web/liveness",
+        "startTime="+startTime+"&endTime="+endTime,
+        function(data){
+            layer.close(loadi);
+console.log(data);
+            //True
+            // var userCount = data.userCount;
+            // var certifiedCount = data.certifiedCount;
+
+            //False
+            var userCount = data.userCount;
+            var certifiedCount = data.certifiedCount;
+
+            var loginResult = data.loginResult;
+            var allTaskResult = data.taskResult;
+            var allTaskReceiveResult = data.allTaskReceiveResult;
+            var allTaskEndResult = data.allTaskEndResult;
+
+            for (var i = 0; i < userCount.length; i++) {
+
+                key[i] = userCount[i][0]["time"];
+                value[i] = userCount[i][0]["total"];
+
+            };
+
+            var data = {
+                labels : key,
+                datasets : [
+                    {
+                        fillColor : "rgba(0,134,139,0.5)",
+                        strokeColor : "rgba(0,134,139,1)",
+                        pointColor : "rgba(0,134,139,1)",
+                        pointStrokeColor : "#fff",
+                        data : value
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myChart"+rn).getContext("2d");
+            //new Chart(ctx).clearChart();
+            new Chart(ctx).Line(data);
+            //new Chart(ctx).Line(data,"Line");
+
+            for (var j = 0; j < certifiedCount.length; j++) {
+
+                certifiedKey[j] = certifiedCount[j][0]["time"];
+                certifiedValue[j] = certifiedCount[j][0]["total"];
+
+            };
+
+            var data1 = {
+                labels : certifiedKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(127,255,212,0.5)",
+                        strokeColor : "rgba(127,255,212,1)",
+                        pointColor : "rgba(127,255,212,1)",
+                        pointStrokeColor : "#fff",
+                        data : certifiedValue
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myCertifiedChart"+rn).getContext("2d");
+            var myNewCertifiedChart = new Chart(ctx).PolarArea(data1);
+            new Chart(ctx).Line(data1,"Line");
+
+            for (var k = 0; k < loginResult.length; k++) {
+
+                loginKey[k] = loginResult[k][0]["time"];
+                loginValue[k] = loginResult[k][0]["total"];
+            };
+
+            var data2 = {
+                labels : loginKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(123,104,238,0.5)",
+                        strokeColor : "rgba(123,104,238,1)",
+                        pointColor : "rgba(123,104,238,1)",
+                        pointStrokeColor : "#fff",
+                        data : loginValue
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myLoginChart"+rn).getContext("2d");
+            var myNewLoginChart = new Chart(ctx).PolarArea(data2);
+            new Chart(ctx).Line(data2,"Line");
+
+            $("#AllTask").show();
+
+            for (var l = 0; l < allTaskResult.length; l++) {
+
+                allTaskKey[l] = allTaskResult[l][0]["time"];
+                allTaskValue[l] = allTaskResult[l][0]["total"];
+            };
+
+            var data3 = {
+                labels : allTaskKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(238,130,238,0.5)",
+                        strokeColor : "rgba(238,130,238,1)",
+                        pointColor : "rgba(238,130,238,1)",
+                        pointStrokeColor : "#fff",
+                        data : allTaskValue
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myAllTaskChart"+rn).getContext("2d");
+            var myNewLoginChart = new Chart(ctx).PolarArea(data3);
+            new Chart(ctx).Line(data3,"Line");
+
+            $("#AllTaskReceive").show();
+            for (var o = 0; o < allTaskReceiveResult.length; o++) {
+
+                allTaskReceiveKey[o] = allTaskReceiveResult[o]["time"];
+                allTaskReceiveValue[o] = allTaskReceiveResult[o]["sum"];
+            };
+
+            var data6 = {
+                labels : allTaskReceiveKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(30,144,255,0.5)",
+                        strokeColor : "rgba(30,144,255,1)",
+                        pointColor : "rgba(30,144,255,1)",
+                        pointStrokeColor : "#fff",
+                        data : allTaskReceiveValue
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myAllTaskReceiveChart"+rn).getContext("2d");
+
+            var myNewLoginChart = new Chart(ctx).PolarArea(data6);
+            new Chart(ctx).Line(data6,"Line");
+
+            $("#AllTaskEnd").show();
+            for (var q = 0; q < allTaskEndResult.length; q++) {
+
+                allTaskEndKey[q] = allTaskEndResult[q]["time"];
+                allTaskEndValue[q] = allTaskEndResult[q]["sum"];
+            };
+
+            var data6 = {
+                labels : allTaskEndKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(151,187,205,0.5)",
+                        strokeColor : "rgba(151,187,205,1)",
+                        pointColor : "rgba(151,187,205,1)",
+                        pointStrokeColor : "#fff",
+                        data : allTaskEndValue
+                    }
+                ]
+            }
+
+            //Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myAllTaskEndChart"+rn).getContext("2d");
+            var myNewLoginChart = new Chart(ctx).PolarArea(data6);
+            new Chart(ctx).Line(data6,"Line");
+
+        },"json");    
+
+    });
+
+    //任务折线图
+    function checkTask(type){
+        rn = parseInt(Math.random()*1000);
+        $("#A4").empty();
+        $("#A4").append("<canvas id='myAllTaskChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+        var sumKey= new Array();
+        var sumValue= new Array();
+
+        $.post(APP+"/Api/web/checkTask",
+            "startTime="+startTime+"&endTime="+endTime+"&type="+type,
+            function(data){
+                var totalSum = data.totalSum;
+
+                for (var m = 0; m < totalSum.length; m++) {
+
+                    sumKey[m] = totalSum[m][0]["time"];
+                    sumValue[m] = totalSum[m][0]["total"];
+                };
+
+                var data4 = {
+                    labels : sumKey,
+                    datasets : [
+                        {
+                            fillColor : "rgba(238,130,238,0.5)",
+                            strokeColor : "rgba(238,130,238,1)",
+                            pointColor : "rgba(238,130,238,1)",
+                            pointStrokeColor : "#fff",
+                            data : sumValue
+                        }
+                    ]
+                }
+
+                //Get the context of the canvas element we want to select
+                var ctx = document.getElementById("myAllTaskChart"+rn).getContext("2d");
+                var myNewLoginChart = new Chart(ctx).PolarArea(data4);
+                new Chart(ctx).Line(data4,"Line");
+        },"json");
+    }
+
+    //任务接单数折线图
+    function checkReceiveTask(type){
+        rn = parseInt(Math.random()*1000);
+        $("#A5").empty();
+        $("#A5").append("<canvas id='myAllTaskReceiveChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+        var sumReceiveKey= new Array();
+        var sumReceiveValue= new Array();
+
+        $.post(APP+"/Api/web/checkReceiveTask",
+            "startTime="+startTime+"&endTime="+endTime+"&type="+type,
+            function(data){
+                var receiveResult = data.receiveResult;
+
+                for (var m = 0; m < receiveResult.length; m++) {
+
+                    sumReceiveKey[m] = receiveResult[m]["time"];
+                    sumReceiveValue[m] = receiveResult[m]["sum"];
+                };
+
+                var data5 = {
+                    labels : sumReceiveKey,
+                    datasets : [
+                        {
+                            fillColor : "rgba(30,144,255,0.5)",
+                            strokeColor : "rgba(30,144,255,1)",
+                            pointColor : "rgba(30,144,255,1)",
+                            pointStrokeColor : "#fff",
+                            data : sumReceiveValue
+                        }
+                    ]
+                }
+
+                //Get the context of the canvas element we want to select
+                var ctx = document.getElementById("myAllTaskReceiveChart"+rn).getContext("2d");
+                var myNewLoginChart = new Chart(ctx).PolarArea(data5);
+                new Chart(ctx).Line(data5,"Line");
+
+        },"json");
+    }
+
+    //任务完成数折线图
+    function checkEndTask(type){
+        rn = parseInt(Math.random()*1000);
+        $("#A6").empty();
+        $("#A6").append("<canvas id='myAllTaskEndChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+        var sumEndKey= new Array();
+        var sumEndValue= new Array();
+
+        $.post(APP+"/Api/web/checkEndTask",
+            "startTime="+startTime+"&endTime="+endTime+"&type="+type,
+            function(data){
+                var EndResult = data.EndResult;
+
+                for (var n = 0; n < EndResult.length; n++) {
+
+                    sumEndKey[n] = EndResult[n]["time"];
+                    sumEndValue[n] = EndResult[n]["sum"];
+                };
+
+                var data7 = {
+                    labels : sumEndKey,
+                    datasets : [
+                        {
+                            fillColor : "rgba(151,187,205,0.5)",
+                            strokeColor : "rgba(151,187,205,1)",
+                            pointColor : "rgba(151,187,205,1)",
+                            pointStrokeColor : "#fff",
+                            data : sumEndValue
+                        }
+                    ]
+                }
+
+                //Get the context of the canvas element we want to select
+                var ctx = document.getElementById("myAllTaskEndChart"+rn).getContext("2d");
+                var myNewLoginChart = new Chart(ctx).PolarArea(data7);
+                new Chart(ctx).Line(data7,"Line");
+        },"json");
+    }
+
+    </script>
+</html>

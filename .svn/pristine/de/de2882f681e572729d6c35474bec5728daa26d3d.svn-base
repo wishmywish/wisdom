@@ -1,0 +1,85 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class ApiController extends Controller {
+    static public $treeList = array(); //存放无限分类结果如果一页面有多个无限分类可以使用 Tool::$treeList = array(); 清空
+    /**
+     * 无限级分类
+     * @access public 
+     * @param Array $data     //数据库里获取的结果集 
+     * @param string $idField ID字段名
+     * @param string $pidField PID字段名
+     * @param Int $pid             
+     * @param Int $count       //第几级分类
+     * @return Array $treeList
+     */
+    static public function tree(&$data,$idField='id',$pidField='pid',$pid = 0,$count = 1) {
+        foreach ($data as $key => $value){
+            if($value[$pidField]==$pid){
+                $value['Count'] = $count;
+                self::$treeList []=$value;
+                unset($data[$key]);
+                self::tree($data,$idField,$pidField,$value[$idField],$count+1);
+            }
+        }
+        //pt(self::$treeList);
+        return self::$treeList;
+    }
+    
+    /**
+     * 获取指定的一个分类集
+     */
+    function getBigColumn(){
+        $F_SYSCOLUMN_ID = I('get.F_SYSCOLUMN_ID',0);
+        $re = M('syscolumn')->where('F_SYS_COLUMN_PID='.$F_SYSCOLUMN_ID." and F_SYS_COLUMN_STATE=1")->order('F_SYS_COLUMN_SORT')->select();
+        echo json_encode($re);
+    }
+    /**
+     * 获取指定的一个分类集
+     */
+    function getBigC($F_SYSCOLUMN_ID=0){
+        //$F_SYSCOLUMN_ID = I('get.F_SYSCOLUMN_ID',0);
+        $re = M('syscolumn')->where('F_SYS_COLUMN_PID='.$F_SYSCOLUMN_ID." and F_SYS_COLUMN_STATE=1")->order('F_SYS_COLUMN_SORT')->select();
+        return $re;
+    }
+   
+    //退出系统
+   function outLogin(){
+        cookie('loginstrats',0); //  清空指定前缀的所有cookie值 
+        cookie(null,'trackearnID');
+        cookie(null,'trackmakeID');
+    }
+    
+
+	public function searchCnameBymobile() {
+		$mobile=I('post.mobile');
+//		echo $mobile."======";
+        $re = A('Api/Jhttp')->getCompanyByMobile($mobile);
+        $arr = json_decode($re,true);
+        $errorCode = $arr['resCode'];
+        if($errorCode=='000000'){
+            echo json_encode($arr['list']);
+        }else{
+            echo json_encode("");
+        }
+    }
+	
+	//用户修改密码
+	public  function  WebChangePwd(){
+		$mobile=I('post.mobile');
+		$password=I('post.password');
+		$companyId=I('post.companyId');
+//   	echo $mobile."======";
+        $re = A('Api/Jhttp')->WebChangePwd($mobile,$password,$companyId);
+        $arr = json_decode($re,true);
+        $errorCode = $arr['resCode'];
+		echo json_encode($errorCode);
+//      if($errorCode=='000000'){
+//          echo json_encode();
+//      }else{
+//          echo json_encode("");
+//      }
+	}
+	
+   
+}

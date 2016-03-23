@@ -1,0 +1,103 @@
+<include file="Public/head" />
+<style type="text/css">   
+table{ 
+    table-layout:fixed; 
+    empty-cells:show; 
+    border-collapse: collapse; 
+    margin:0 auto; 
+} 
+
+td{ 
+    height:30px; 
+} 
+
+h1,h2,h3{ 
+    font-size:12px; 
+    margin:0; 
+    padding:0; 
+} 
+
+.table{ 
+    border:1px solid #cad9ea; 
+    color:#666; 
+    width: 60%;
+    float: right;
+    margin-top: -380px;
+    margin-right: 30px;
+} 
+
+.table th { 
+    background-repeat:repeat-x; 
+    height:30px; 
+} 
+
+.table td,.table th{ 
+    border:1px solid #cad9ea; 
+    padding:0 1em 0; 
+} 
+
+.add{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.position{
+    padding-left: 150px;
+}
+</style> 
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="add">
+                <span>产家名称：</span> <input type="text" id="companyName" style="width:285px;" value="{$reModi.companyName}"/>
+                <span class="position">任务标题： <input type="text" id="taskTitle"  style="width:285px;" value="{$reModi.two.f_title}"/></span><br><br>
+
+                <span>招商时间：</span> <input type="text" id="beginDate" style="width:235px;"  value="{$reModi.two.f_begindate}"/><span>至：</span> <input type="text" id="endDate" style="width:235px;" value="{$reModi.two.f_enddate}"/>
+                <span style="padding-left:72px;">所属行业： <input type="text" id="trade" value="{$reModi.trade.f_tradename}"/></span><br><br>
+
+                <span>首批货款： <input type="text" id="firstAmount" value="{$reModi.one.f_unitfirstamount}"/></span>
+                <span style="padding-left:12px;">保证金： <input type="text" id="cashDeposit" value="{$reModi.one.f_unitcashdeposit}"/></span>
+                <span style="padding-left:12px;">加盟费： <input type="text" id="franchiseFee" value="{$reModi.one.f_unitfranchisefee}"/></span>
+                <span style="padding-left:12px;">其他： <input type="text" id="otherAmount" value="{$reModi.one.f_unitotheramount}"/></span><br><br>
+
+                <span>首批款合计：<input type="text" id="totalAmount" style="width:260px;" value="{$reModi.one.f_unittotalamount}"/></span> 
+                <span style="padding-left:165px;">任务佣金： <input type="text" id="commission" style="width:285px;" value="{$reModi.one.f_unitcommission}"/></span> <br><br>
+
+                <span>联系人：&nbsp;&nbsp;&nbsp;&nbsp;</span> <input type="text" id="linkMan" style="width:270px;" value="{$reModi.two.f_linkman}"/><br><br>
+                <span>联系电话：</span> <input type="text" id="linkPhone" style="width:270px;" value="{$reModi.two.f_linkphone}"/><br><br>
+                <span>任务品牌：</span> <input type="text" id="brand" style="width:270px;" value="{$reModi.one.f_mtbrand}"/><br><br>
+                <span>任务产品：</span> <input type="text" id="goods" style="width:270px;" value="{$reModi.one.f_mtgoods}"/><br><br>
+                <span>品牌定位：</span> <input type="text" id="brandLocation" style="width:270px;" value="{$reModi.three.f_brandlocation}"/><br><br>
+                <span >经销商要求：<textarea rows="10" cols="40">{$reModi.three.f_distributorsrequir}</textarea> </span> <br><br>
+
+                <table class="table"> 
+                    <tr> 
+                        <th>区域</th> 
+                        <th>数量</th> 
+                    </tr> 
+
+                    <volist name="reModi.four" id="vo">
+                        <tr> 
+                            <td>{$vo.f_area}</td> 
+                            <td>{$vo.f_qty}</td> 
+                        </tr> 
+                    </volist>
+                </table> 
+
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

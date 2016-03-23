@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>                                                        
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="alternate" media="handheld" href="#" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<css href="__CSS__/dealer.css" />
+<title>经销商详情完善</title>
+<!-- <link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="__CSS__/home.css"/> -->
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+ </script>
+</head>
+
+<style type="text/css">
+.thumbImage img
+{ 
+  MAX-WIDTH: 100%!important;HEIGHT: auto!important;width:expression(this.width > 250 ? "250px" : this.width)!important;
+} 
+
+.thumbImage 
+{
+  MARGIN: auto;WIDTH: 250px;
+} 
+
+*html.thumbImage img
+{ 
+  width:expression(this.width>250&&this.width>this.height?250:auto); 
+  height:expresion(this.height>250?250:auto); 
+}
+
+#login_mobile {
+   border-left: 0;
+   border-right: 0;
+   border-top: 0;
+   border-bottom: 1px solid #000000;
+   text-align: center;
+}
+</style>
+<body>
+
+
+<div class="main">
+
+  <div class="main_left fl">
+      <ul>
+          <li class="nav1">信息验证</li>
+          <li class="nav2">授权书</li>
+          <li class="nav3">合同</li>
+          <li class="nav4">协议</li>
+          <li class="nav5">托管账户信息</li>
+          <li class="nav6">上传合同</li>
+          <li class="nav7">上传打款凭证</li>
+          <li class="nav8">上传收货单</li>
+        </ul>
+  </div>
+
+  <div class="main_right fl">
+
+        <div class="main_right_top">
+          <input type="text"  placeholder="请输入授权书编号" name="authorityNum" id="authorityNum"/>
+          <input type="text"  placeholder="验证码" value="" name="login_code"/> 
+          <input type="button" value="获取验证码"  id="codeBtn" onclick="time(this)"/>
+          <input type="button" value="查询"  id="checkContent"/>   
+        </div>
+        <p class="anno">注：验证码将以短信方式发送到你的系统备案的手机<input id="login_mobile" value="" readonly></p>
+
+        <div style="display:none;" id="isShow">
+          <div class="accredit" >
+              <p style="text-align:left; color:#000;">授权书:</p>
+              <div  style="padding-left:34px;">
+                  <h2 class="acc_h2">企业区域招商授权书</h2>
+                    <h3>（企业<input  type="text" id="companyName" style="border:none; border-bottom:1px solid #000; width:300px;text-align: center;" readonly />授权号：<input  type="text" id="number" style="border:none; border-bottom:1px solid #000; text-align: center;" readonly />）</h3>
+                    <p style="text-indent:2em; margin-top:20px;">兹授权姓名:<input  type="text" id="trueName" style="border:none; border-bottom:1px solid #000; width:120px;text-align: center;" readonly />身份证号:<input  type="text" id="idCard" style="border:none; border-bottom:1px solid #000; text-align: center;" readonly />，经本企业安排指定在:<input  type="text" id="mainArea" style="border:none; border-bottom:1px solid #000; width:280px;text-align: center;" readonly />区域，协助本公司完成指定系列产品的本区域招商工作，经公司委托与意向客户:<input  type="text" id="companynameone" style="border:none; border-bottom:1px solid #000; width:300px;text-align: center;" readonly /> 进行招商洽谈与后续招商合同签定工作，本授权书仅用于经销商合作谈判使用，所有涉及公司经销政策、促销支持、市场费用等，均以公司书面确认盖章为准，所授权委托业务员一律不允许接触货款等现金或财务代办事项。</p>
+                     <p style="text-indent:2em; margin-top:20px;">
+                            本授权有效时间<input  value="30" type="text" style="border:none; border-bottom:1px solid #000; width:26px; text-align:center;" readonly />天，过期失效，特此授权。
+                     </p>
+                        <p style="text-indent:2em; margin-top:10px;">
+                            凭本授权号可以在小宝招商平台（www.51lick.com）查寻本授权书内容。
+                        </p>
+                        <p style="text-indent:2em; margin:20px 0px; text-align:right;">单位名称：<input  type="text" id="companyname" style="border:none; border-bottom:1px solid #000; width:300px; text-align:center;"  readonly />生效时间：<input  type="text" id="year" style="border:none; border-bottom:1px solid #000; width:36px; text-align:center;"  readonly />年<input  type="text" id="month" style="border:none; border-bottom:1px solid #000; width:36px; text-align:center;"  readonly />月<input  type="text" id="day" style="border:none; border-bottom:1px solid #000; width:36px; text-align:center;"  readonly />日</p>
+                         <h2 class="acc_h2">货款第三方监管交易提醒</h2>
+                        <p  style="text-indent:2em;">为保证经销商利益，保证货款安全和业务员的成果收益，在与招商企业协商一致下，小宝招商为合作双方设立银行第三方监管交易帐户，该监管账户是经销商与招商企业之间往来货款临时存储并由银行监管资金流向的专门账户，所有货款经经销商及业务员收货并验收无误确认后，方能打入招商企业帐户。未通过第三方监管帐户交易的行为，小宝招商平台对货款安全不负任何责任。</p> 
+                        <p class="p1">第三方监管账号信息如下:</p>               
+                        <p class="p1">开户行：温州银行杭州分行营业部</p>               
+                        <p class="p1">账号：903000120190023854</p>               
+                        <p class="p1">户名：杭州日思夜享数据科技有限公司</p>               
+                </div>
+          </div>
+
+          <div class="contract">
+              <p class="first">合同:</p>
+              <div  class="second"><span>厂家与经销商合同</span> <div id="linkOne"></div><!-- <a href="#" class="rg">下载</a> --></div>
+              <div class="second"><span>小宝平台与经销商合同</span> <div id="linkTwo"></div><!-- <a href="#" class="rg" >下载</a> --></div>
+          </div> 
+
+          <div class="agreement">
+              <p  class="first" style="color:#000;">协议:</p>
+              <div  class="second"><span>厂商委托小宝招商平台代收款协议</span> <div id="linkThree"></div><!-- <a href="#" class="rg">下载</a> --></div>
+              <div class="second"><span>第三方资金监管协议</span> <div id="linkFour"></div><!-- <a href="#" class="rg" >下载</a> --></div>
+          </div> 
+
+          <div class="collocation">
+              <p class="first" style="color:#000;">托管账号信息:</p>
+              <div  class="second"><span>账号资金安全由温州银行监管</span> </div>
+              <div  class="second"><span>托管银行：温州银行</span> </div>
+              <div  class="second"><span>托管账号：6228 9988 1123 8868</span> </div>
+          </div> 
+
+          <div class="upContract">
+              <p class="first" style="color:#000;">上传合同:</p>
+              <div class="upfile">
+              <button class="btn" onclick="$('#profileImg').click();">上传合同</button>
+              <button class="btn" id="btnContract" onclick="contractBtn();">请确认上传</button>
+              <!-- <span id="delContract" class="btn"></span> -->
+              <div style="display: none;">
+                    <input type="file" id="profileImg" name="upfile" accept="image/jpeg,image/gif,image/png">
+              </div>
+              <input type="hidden" id="profile1" name="profile1" value="{$reModi.one.f_fileid}">
+              </div><br>
+              <div class="show_img" id='show_proimg1'></div>
+              <div class="show_img_contract"></div>
+              <!-- <button class="btn">删除</button> -->
+          </div> 
+
+          <input type="hidden" id="dealerId" value="">
+          <input type="hidden" id="contractId" value="">
+          <input type="hidden" id="remitId" value="">
+          <input type="hidden" id="receiveId" value="">
+
+          <div class="upCoucher">
+              <p class="first" style="color:#000;">上传打款凭证:</p>
+              <div class="upfile">
+              <button class="btn" onclick="$('#upfile').click();">上传打款凭证</button>
+              <button class="btn" id="btnRemit" onclick="remitBtn();">请确认上传</button>
+              <!-- <button class="btn">删除</button> -->
+              <div style="display: none;">
+                    <input type="file" id="upfile" name="upfile" accept="image/jpeg,image/gif,image/png">
+              </div>
+                  <input type="hidden" id="fileid" name="fileid" value="{$reModi.one.f_fileid}">
+              </div><br>
+              <div class="show_img" id='show_img'></div>
+              <div class="show_img_remit"></div>
+          </div> 
+
+          <div class="upSingle">
+              <p class="first" style="color:#000;">上传收货单:</p>
+              <div class="upfile">
+              <button class="btn" onclick="$('#upfile_ban').click();">上传收货单</button>
+              <button class="btn" id="btnReceive" onclick="receiveBtn();">请确认上传</button>
+              <!-- <button class="btn">删除</button> -->
+              <div style="display: none;">
+                  <input type="file" id="upfile_ban" name="upfile" accept="image/jpeg,image/gif,image/png">
+              </div>
+                  <input type="hidden" id="fileid_ban" name="fileid_ban" value="{$reModi.one.fileid_ban}">
+              </div><br>
+              <div class="show_img" id='show_img_ban'></div>
+              <div class="show_img_receive"></div>
+          </div> 
+        </div>
+  </div>
+
+
+</body>
+<include file="Public/loadjs" />
+<script type="text/javascript">
+        $('#authorityNum').keyup(function(event){
+          var  authorityNum=$('input[name=authorityNum]').val();  
+          console.log(authorityNum);
+          $.post(APP+"/Api/Web/isTrue","authorityNum="+authorityNum,function(v){
+                console.log(v);
+                if(v.result==='000000'){
+                  $("#login_mobile").attr("value",v.detail.f_phoneone);
+                }
+            },'json');
+          });  
+
+        $("#upfile").wrap("<form id='uplogo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+        
+        $("#upfile_ban").wrap("<form id='uplogo_ban' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+
+        $(function(){
+          $(".nav1").click(function(e) {
+                $("html,body").animate({scrollTop:$(".main_right_top").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav2").click(function(e) {
+                $("html,body").animate({scrollTop:$(".accredit").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav3").click(function(e) {
+                $("html,body").animate({scrollTop:$(".contract").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav4").click(function(e) {
+                $("html,body").animate({scrollTop:$(".agreement").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav5").click(function(e) {
+                $("html,body").animate({scrollTop:$(".collocation").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav6").click(function(e) {
+                $("html,body").animate({scrollTop:$(".upContract").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav7").click(function(e) {
+                $("html,body").animate({scrollTop:$(".upCoucher").offset().top},500)});
+        })
+
+        $(function(){
+          $(".nav8").click(function(e) {
+                $("html,body").animate({scrollTop:$(".upSingle").offset().top},500)});
+        })  
+</script>
+</html>

@@ -1,0 +1,16 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+                <if condition="$taskinfo.type_label eq 'business'">
+                    <div>{$taskinfo.info.f_note}</div>
+                <elseif condition="$taskinfo.type_label eq 'widely'"/>
+                    <div>{$taskinfo.info.f_taskrequirements}</div>
+                <elseif condition="$taskinfo.type_label eq 'push'"/>
+                    <div>{$taskinfo.info.f_taskrequirements}</div>
+                </if>
+                <div style="width: 100%;height: 60px;border: 0px;background-color: #ed9c28;color:white;text-align: center;font-size: 14px;line-height: 60px;"><a href="http://wisdom.51lick.com/index.php/Api/Web/downApp/udid/sms.html" target="_blank">Down Android APK</a></div>
+            </div><!-- /content -->
+        </div>
+    </body>
+<include file="Public/foot" /> 

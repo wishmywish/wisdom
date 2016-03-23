@@ -1,0 +1,15 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+                <if condition="$taskinfo.type_label eq 'business'">
+                    <div>{$taskinfo.info.f_note}</div>
+                <elseif condition="$taskinfo.type_label eq 'widely'"/>
+                    <div>{$taskinfo.info.f_taskrequirements}</div>
+                <elseif condition="$taskinfo.type_label eq 'push'"/>
+                    <div>{$taskinfo.info.f_taskrequirements}</div>
+                </if>
+            </div><!-- /content -->
+        </div>
+    </body>
+<include file="Public/foot" /> 

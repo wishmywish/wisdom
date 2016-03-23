@@ -1,0 +1,27 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+    background: #FFF; 
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+</style>
+    <body>
+        <a href="{:U('Taskadmin/Sales/example')}">下载导入样例</a><br><br>
+
+        <form name="frm1" enctype="multipart/form-data" action="{:U('Taskadmin/Sales/import')}" method="post">
+           <input name="filename" type="file" value="上传文件" style="height:50px;"/><input name="submit" type="submit" value="导入" />
+        </form>
+
+
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+
+    </script>
+</html>

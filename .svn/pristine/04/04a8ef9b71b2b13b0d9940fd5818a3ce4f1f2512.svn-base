@@ -1,0 +1,108 @@
+<?php
+
+namespace Home\Controller;
+
+use Think\Controller;
+
+class OfficeController extends CommonController {
+	private $in_arr;
+	
+	/* 运营管理入口 */
+	public function index() {
+		set_theme ();
+		$json_data = $this->getNoticeList ();
+		$json_Array = $this->checkApiResult ( "getNoticeList", $json_data );
+		
+		$keys = array_keys ( $json_Array );
+		for($i = 0; $i < count ( $keys ); $i ++) {
+			echo 'getNoticeList_'.$keys[$i].' value:'.$json_Array[$keys[$i]].'<br>';
+			$this->assign ( 'getNoticeList_' . $keys [$i], $json_Array [$keys [$i]] );
+		}
+		$this->display ();
+	}
+	
+	/* 取得公告详细 */
+	public function noticeDetail() {
+		set_theme ();
+		$this->in_arr = array_merge($_GET,$_POST);
+		$json_data = $this->viewNotice ();
+		$json_Array = $this->checkApiResult ( "viewNotice", $json_data );
+		$keys = array_keys ( $json_Array );
+		for($i = 0; $i < count ( $keys ); $i ++) {
+			echo 'viewNotice_'.$keys[$i].' value:'.$json_Array[$keys[$i]].'<br>';
+			$this->assign ( 'viewNotice_' . $keys [$i], $json_Array [$keys [$i]] );
+		}
+		$this->display();
+	}
+	
+	/* 调用API getNoticeList */
+	private function getNoticeList() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getNoticeList",
+				"userId" => "423",
+				"companyId" => "1",
+				"messageId" => "1",
+				"queryEnd" => "6" 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API viewNotice */
+	private function viewNotice() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "viewNotice",
+				"userId" => "423",
+				"companyId" => "1",
+				"messageId" =>$this->in_arr["messageId"],
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API operateWorkReport */
+	private function operateWorkReport() {
+		$command = "operateWorkReport"; // 请求命令
+		$userId = ""; // 用户ID
+		$source = ""; // 来源
+		$reportId = ""; // 工作报告ID
+		$reportType = ""; // 工作报告类型
+		$startDate = ""; // 工作报告开始时间
+		$endDate = ""; // 工作报告结束时间
+		$subject = ""; // 工作报告标题
+		$oType = ""; // 操作类型
+		$itemCount = ""; // 日报明细条数
+		$voiceCount = ""; // 工作报告语音条数
+		$reportState = ""; // 工作报告提交审核或保存
+		$reportContent = ""; // 工作报告内容
+		
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getNoticeList",
+				"userId" => "423",
+				"companyId" => "1",
+				"queryStart" => "1",
+				"queryEnd" => "6" 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 判断API返回值，并传到前台 */
+	private function checkApiResult($apiName, $apiReturnValue) {
+		$json_Array = json_decode ( $apiReturnValue, true );
+		$ErrorValue = "";
+		if ($json_Array ['conf_auth'] == "F") {
+			$ErrorValue = "COMMAND不存在。";
+		}
+		if ($json_Array ['error_code'] != "success") {
+			$ErrorValue = $json_Array ['error_text'];
+		}
+		$this->assign ( $apiName . '_ErrorMsg', $ErrorValue );
+		return $json_Array;
+	}
+}
+
+

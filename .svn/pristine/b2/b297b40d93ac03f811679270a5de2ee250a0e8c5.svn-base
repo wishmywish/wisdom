@@ -1,0 +1,44 @@
+
+<div id="allmap" style="width: 800px;height: 500px;"></div>
+
+<include file="Public/loadjs" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CBiu8d6o1peWFBWqvzYGA7fy"></script>
+<script>
+    $(function(){
+    });
+
+    //百度地图API功能
+    var map = new BMap.Map("allmap");            // 创建Map实例
+    var point = new BMap.Point(116.404, 39.915); // 创建点坐标
+    map.centerAndZoom(point,15);  // 初始化地图，设置中心点坐标和地图级别
+
+    //单击获取点击的经纬度
+    map.addEventListener("click",function(e){
+
+        //获取地址的数据地址
+        var gc = new BMap.Geocoder();
+        var pt = e.point; //经纬度集合
+        gc.getLocation(pt, function(rs){
+            var addComp = rs.addressComponents; //获取到的结果集合
+            address = addComp.province +  addComp.city + addComp.district + addComp.street + addComp.streetNumber;  //获取地址名称
+
+
+            //给父页面传值
+            parent.x.value= pt.lng; //经度
+            parent.y.value= pt.lat; //纬度
+            parent.address.value= address; //地址
+
+            //关闭父页面
+            var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+            parent.layer.close(index);
+
+        });
+
+
+
+    });
+
+
+</script>
+</body>
+</html>

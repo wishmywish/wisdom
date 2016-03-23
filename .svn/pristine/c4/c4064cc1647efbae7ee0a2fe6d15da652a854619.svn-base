@@ -1,0 +1,135 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+
+<div class="content_right" id="right">
+    <div class="cons_top">
+        <h4 class="cons_tab fl">
+            <span class="current" style="background: none;">全部任务</span>
+        </h4>
+        <p class="p1 rg"><a href="#">首页</a>&nbsp;>&nbsp;<a href="#">任务管理</a>&nbsp;>&nbsp;<a href="#">全部任务</a></p>
+    </div>
+    <div class="cont">
+        <div class="cont_in fl">
+            <div class="task_content fl">
+                <span>筛选：排序：发布时间</span>
+
+                <select>
+                    <option  selected="selected" value="0">从高到低</option>
+                    <option  value="1">从低到高</option>
+                </select>
+                <button>+新增</button>
+            </div>
+
+        </div>
+
+        <div  class='task_list fl' style="color:#696969">
+             <div class='task_time_sort_list'>
+                  <ul  id='business_task_list1'>
+                    <li>
+                        <div style='margin:20px;height:160px;line-height:26px'>  任务编号&nbsp ：1001 20150123 1253
+                            <span  style='float:right;padding-right: 80px;'>发布时间&nbsp ：2015.05.58</span></br>
+                    任务标题&nbsp ：哇哈哈纯净水新款系列寻找全国经销商
+                            <span></span></br>
+                    任务品牌&nbsp ：哇哈哈\哇哈哈\哇哈哈
+                            <span  style='margin-left:234px;'>任务产品&nbsp：纯真年代纯净水系列\纯真年代纯净水系列\纯真年代纯净水系列</span></br>
+                    任务首批发货贷款&nbsp ：60000.00元
+                            <span  style='margin-left:49px;'>保证金&nbsp ：20000.00 元</span>
+                            <span  style='margin-left:64px;'>加盟费&nbsp ： 30000.00元</span>
+                            <span  style='margin-left:37px;'>其它&nbsp ： 40000.00元</span>
+                            <span  style='margin-left:56px;color:#12A1C9'>总首批款&nbsp ： 80000.00元</span></br>
+                                    所在行业&nbsp ：商品零售行
+                            <span  style='margin-left:101px;'>任务区域详情&nbsp ：
+                                <a href='#'  onclick='task_areaDetail'>点击查看</a>  </span>
+                                <span  style='margin-left:44px;'>任务产品详情&nbsp ：
+                                    <a href='#'  onclick='task_productDetail'>点击查看</a> </span>
+                            <span  style='margin-left:197px;'>招商数量：1000</span></br>
+                       任务截止时间&nbsp ：2015.07.12<span  style='margin-left:267px;color:#F08304'>任务状态&nbsp ：待审核</span>
+                       </div>
+                        <div class="mod">
+                            <img class="mp"  src="__IMG__/mod.png"/><a style="margin-left:827px;position: absolute;">修改</a>
+                            <img class="rp"  src="__IMG__/remo.png"/><a style="margin-left: 900px;position: absolute;">删除</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class='task_time_sort_list'>
+                <ul  id='business_task_list1'>
+                    <li>
+                        <div style='margin:20px;height:160px;line-height:26px'>  任务编号&nbsp ：1001 20150123 1253
+                            <span  style='float:right;padding-right: 80px;'>发布时间&nbsp ：2015.05.58</span></br>
+                            任务标题&nbsp ：哇哈哈纯净水新款系列寻找全国经销商
+                            <span></span></br>
+                            任务品牌&nbsp ：哇哈哈\哇哈哈\哇哈哈
+                            <span  style='margin-left:234px;'>任务产品&nbsp：纯真年代纯净水系列\纯真年代纯净水系列\纯真年代纯净水系列</span></br>
+                            任务首批发货贷款&nbsp ：60000.00元
+                            <span  style='margin-left:49px;'>保证金&nbsp ：20000.00 元</span>
+                            <span  style='margin-left:64px;'>加盟费&nbsp ： 30000.00元</span>
+                            <span  style='margin-left:37px;'>其它&nbsp ： 40000.00元</span>
+                            <span  style='margin-left:56px;color:#12A1C9'>总首批款&nbsp ： 80000.00元</span></br>
+                            所在行业&nbsp ：商品零售行
+                            <span  style='margin-left:101px;'>任务区域详情&nbsp ：
+                                <a href='#'  onclick='task_areaDetail'>点击查看</a>  </span>
+                                <span  style='margin-left:44px;'>任务产品详情&nbsp ：
+                                    <a href='#'  onclick='task_productDetail'>点击查看</a> </span>
+                            <span  style='margin-left:197px;'>招商数量：1000</span></br>
+                            任务截止时间&nbsp ：2015.07.12<span  style='margin-left:267px;color:#F08304'>任务状态&nbsp ：待审核</span>
+                        </div>
+                        <div class="mod">
+                            <img class="mp"  src="__IMG__/mod.png"/><a style="margin-left:827px;position: absolute;">修改</a>
+                            <img class="rp"  src="__IMG__/remo.png"/><a style="margin-left: 900px;position: absolute;">删除</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class='task_time_sort_list'>
+                <ul  id='business_task_list1'>
+                    <li>
+                        <div style='margin:20px;height:160px;line-height:26px'>  任务编号&nbsp ：1001 20150123 1253
+                            <span  style='float:right;padding-right: 80px;'>发布时间&nbsp ：2015.05.58</span></br>
+                            任务标题&nbsp ：哇哈哈纯净水新款系列寻找全国经销商
+                            <span></span></br>
+                            任务品牌&nbsp ：哇哈哈\哇哈哈\哇哈哈
+                            <span  style='margin-left:234px;'>任务产品&nbsp：纯真年代纯净水系列\纯真年代纯净水系列\纯真年代纯净水系列</span></br>
+                            任务首批发货贷款&nbsp ：60000.00元
+                            <span  style='margin-left:49px;'>保证金&nbsp ：20000.00 元</span>
+                            <span  style='margin-left:64px;'>加盟费&nbsp ： 30000.00元</span>
+                            <span  style='margin-left:37px;'>其它&nbsp ： 40000.00元</span>
+                            <span  style='margin-left:56px;color:#12A1C9'>总首批款&nbsp ： 80000.00元</span></br>
+                            所在行业&nbsp ：商品零售行
+                            <span  style='margin-left:101px;'>任务区域详情&nbsp ：
+                                <a href='#'  onclick='task_areaDetail'>点击查看</a>  </span>
+                                <span  style='margin-left:44px;'>任务产品详情&nbsp ：
+                                    <a href='#'  onclick='task_productDetail'>点击查看</a> </span>
+                            <span  style='margin-left:197px;'>招商数量：1000</span></br>
+                            任务截止时间&nbsp ：2015.07.12<span  style='margin-left:267px;color:#F08304'>任务状态&nbsp ：待审核</span>
+                        </div>
+                        <div class="mod">
+                            <img class="mp"  src="__IMG__/mod.png"/><a style="margin-left:827px;position: absolute;">修改</a>
+                            <img class="rp"  src="__IMG__/remo.png"/><a style="margin-left: 900px;position: absolute;">删除</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="page" style="float: right;margin-bottom: 28px; margin-right: 20px; ">
+                <button><</button>
+                <button class="cubtns">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>></button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--页面内容 end-->
+</div>
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>

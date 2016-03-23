@@ -1,0 +1,20 @@
+<include file="Public/head" />
+<style type="text/css">
+</style>
+    <body>
+        <div class="tabli">
+            <div class='userInfo' style="background-color:white;">
+                <span style="padding-left:12px;">昵称： {$reModi.nickName}</span><br>
+                <span style="padding-left:12px;">真名： {$reModi.trueName}</span><br>
+                <span style="padding-left:12px;">性别：
+                    <eq name="reModi.sex" value="0">女</eq>
+                    <eq name="reModi.sex" value="1">男</eq>
+                </span><br>
+                <span style="padding-left:12px;">手机： {$reModi.mobile}</span><br>
+                <span style="padding-left:12px;">创建时间： {$reModi.userCreatetime}</span><br>
+                <input type="hidden" id="userId" value="{$reModi.userId}">
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+</html>

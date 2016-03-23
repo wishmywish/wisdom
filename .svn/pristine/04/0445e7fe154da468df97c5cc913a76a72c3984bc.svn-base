@@ -1,0 +1,125 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+/** 智慧推广
+ * Description of PromotionController
+ * 
+ * @author Administrator
+ */
+namespace Home\Controller;
+use Think\Controller;
+
+class PromotionController extends CommonController{
+   
+   //首页   刘显珍
+    
+   function  index(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+           if($val['f_sys_column_cid']=='Promotion'){
+               $syscolumn_id = $val['f_syscolumn_id'];
+           }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+       $ret=A("Test")->getMenulist();
+       $this->assign("ret",$ret);
+        $this->display();
+   }
+
+
+
+
+   //跟踪审核  刘显珍
+    
+    function  trackAudit(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        //echo $re;
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        //推广赚任务标题
+      
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+    }
+    
+    //资质&文档管理 刘显珍
+    
+    function  qualiDocManage(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+    }
+    
+    
+    //任务管理  刘显珍
+    function  task(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display(); 
+    }
+    
+      //任务管理   全部任务添加  刘显珍
+    function  taskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+//      pt($reModi);
+//		exit;
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+	    $this->assign('mobile',cookie('mobile'));
+        $this->assign("taskid",I("get.taskid"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display(); 
+    }
+}
+

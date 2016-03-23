@@ -1,0 +1,12 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div>
+            <form method='POST' enctype="multipart/form-data" action="{:U('Api/Api/inport/command/card/type/1')}">
+                <input type="file" name="upfile">
+                <input type="submit" value='Upload'>
+            </form>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

@@ -1,0 +1,53 @@
+<include file="Public/head" title="活动与广告" />
+<style type="text/css">
+.thumbImage img{ 
+MAX-WIDTH: 100%!important;HEIGHT: auto!important;width:expression(this.width > 150 ? "150px" : this.width)!important;
+} 
+.thumbImage {MARGIN: auto;WIDTH: 150px;} 
+*html.thumbImage img{ 
+width:expression(this.width>150&&this.width>this.height?150:auto); 
+height:expresion(this.height>150?150:auto); 
+}
+</style>
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <div class="righttop"></div>
+        <div class="breadlist">首页 / 活动与广告</div>
+        <div class="tabli">
+            <ul id="tabli_Ad">
+                <li value="1" class='selected' id="messages" onclick="plist_Activity(1)">广告</li>
+                <li value="3" id="activities" onclick="plist_Activity(3)">活动</li>
+            </ul>
+            <ul class="action">
+                <li id="ad_add" value="0">添加</li>
+                <li id="ad_del" value="1">删除</li>
+                <li id="ad_modi" value="0">修改</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                <li style='width:15%;'>标题</li>
+                <li style='width:20%;'>图片</li>
+                <li style='width:20%;'>分享地址</li>
+                <li style='width:15%;'>开始时间</li>
+                <li style='width:15%;'>结束时间</li>
+                <li style='width:10%;'>首页显示</li>
+            </ul>
+            <div class='listinfo'>
+            </div>
+            <div class="page"></div>
+        </div>
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        //获取列表信息
+        plist_Activity(1);
+    });
+</script>
+</html>

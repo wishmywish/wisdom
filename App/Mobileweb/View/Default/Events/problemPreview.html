@@ -1,0 +1,85 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <h1>任务预览</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p title="{$vo.f_problemtatile}" style="font-size: 14px">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <if condition="($vo['f_type'] eq 1) OR ($vo['f_type'] eq '1')">
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}"
+                                    <if condition="$ky-1 eq 0">checked</if>
+                                    />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <elseif condition="($vo['f_type'] eq 2) OR ($vo['f_type'] eq '2')"/>
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}" />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <elseif condition="($vo['f_type'] eq 3) OR ($vo['f_type'] eq '3')"/>
+                                <div style="width: 100%;">
+                                    <textarea data-role="none" id="description{$k}" style="width:92%;margin:0 4%;height: 200px; "></textarea>
+                                </div>
+                            </if>
+                         </volist>
+                    </div>
+                </div>
+            </div>
+
+         </volist>
+         <div>
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+        function nextProblem(k,count){
+            // location.hash="#page2";
+            // location.href=APP+"/Mobileweb/Events/problemPreview?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+            if (k>count) {
+                layer.msg("当前页是最后页");
+                return false;
+            }else{
+                location.hash="#page"+(++k);
+            }
+        }
+
+        function lastProblem(k){
+            if (k<1) {
+                layer.msg("当前页是第一页");
+                return false;
+            }else{
+                location.hash="#page"+(--k);
+            }
+        }
+    </script>
+</html>

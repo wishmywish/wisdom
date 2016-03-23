@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main dl{ width: 100%;}
+        .main dl dt{width: 60px; height: 60px; border-radius: 30px; background: #ccc; }
+        .main dl dd{ line-height: 60px; margin-left: 10px;}
+        .main ul{ margin-top:20px; width: 100%;float: left}
+        .main ul li{line-height: 25px;float: left;}
+        .main ul li span{text-align: right;}
+        .fll{text-align: right; width: 100px;margin-right: 7px;}
+        .c_name{font-weight: 100;height: 20px;margin-right: 55px;text-align: center;width: 125px;}
+        .main span{color: red;}
+        /*.titname{  text-align: right;width: 60px;margin-right: 7px;float: left;}*/
+        .main input{height:25px;width:250px;}
+        .main select {height:25px;width:200px;}
+        /*.main select{float: right;height:28px;width:200px;}*/
+        .submit{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+        .reset{background-color: #eaeaea;margin: 30px 5px;border:1px;height: 25px;width: 70px;cursor: pointer;color: #000;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+    <ul>
+        <li class="fll">客户名称</li>
+        <li><input type="text" id="customer" value="{$_GET['cusName']}" cusId="{$_GET['cusId']}" disabled="true" /></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>合同标题</li>
+        <li><input type="text" id="title" value="{$contractDetail['contractSubject']}" onmousemove="this.title=this.value" style="width: 500px;text-overflow: ellipsis;white-space: nowrap;"/></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>合同编号</li>
+        <li><input type="text" id="contractCode" value="{$contractDetail['contractCode']}" onmousemove="this.title=this.value" style="text-overflow: ellipsis;white-space: nowrap;"/></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>客户签约人</li>
+        <li style="position: relative">
+            <input type="text" id="linkman" value="{$contractDetail['ASignerName']}" linkman_ids="{$contractEdtail['ASigner']}"  placeholder="从客户联系人中选择"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll">关联商机</li>
+        <li style="position: relative">
+            <input type="text" id="SJ" value="{$contractDetail['bizSubject']}" biz_id="{$contractDetail['crmBiz']}"  placeholder="从客户商机中选择"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>签约日期</li>
+        <li> <input type="text" class="laydate-icon" id="signDate" value="{$contractDetail['signDate']}" style="width: 230px;"/></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>有效期</li>
+        <li>
+            <input id="startDate" class="laydate-icon" value="{$contractDetail['startDate']}" placeholder="起始时间" style="width: 90px;height: 25px;">
+            至
+            <input id="endDate" class="laydate-icon" value="{$contractDetail['endDate']}" placeholder="终止时间" style="width: 90px;height: 25px;">
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>签约金额</li>
+        <li><input type="text" id="money" value="{$contractDetail['money']}" /></li>
+    </ul>
+    <ul>
+        <li class="fll">关键条款</li>
+        <li><textarea style="height: 100px;width: 500px;" id="content" >{$contractDetail['content']}</textarea><span>不超过500个字</span></li>
+    </ul>
+</div>
+<div style="text-align: center;"><button class="submit" id="s_submit" onclick="do_save()" >提交</button>
+    <button class="reset" onclick="reset()">取消</button>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+
+    var cusId = $("#customer").attr("cusid");  //客户id
+
+    //合同提交
+    function do_save(){
+        var customer = $("#customer").val();  //客户名称,自动带过来无需填写的
+        var cusId = $("#customer").attr("cusid"); //客户id
+        var cusClientIds = $("#linkman").attr("linkman_ids");  //选出来的联系人id字符串
+        var linkman = $("#linkman").val(); //签约人
+        var bizId = $("#SJ").attr("biz_id"); //关联商机id
+        var title = $("#title").val(); //合同标题
+        var contractCode = $("#contractCode").val(); //合同编号
+        var signDate = $("#signDate").val(); //签约日期
+        var startDate = $("#startDate").val(); //开始日期
+        var endDate = $("#endDate").val(); //结束日期
+        var content = $("#content").val(); //关键条款
+        var money = $("#money").val(); //关键条款
+
+        var linkman_obj = $("#linkman");
+        if (getValLen(linkman_obj) == 0) {
+            layer.msg("拜访对象不能为空",{icon: 8});
+            linkman_obj.focus();
+            return false;
+        }
+
+        var title_obj = $("#title");
+        if (getValLen(title_obj) == 0) {
+            layer.msg("合同标题不能为空",{icon: 8});
+            title_obj.focus();
+            return false;
+        }
+
+        var contractCode_obj = $("#contractCode");
+        if (getValLen(contractCode_obj) == 0 ) {
+            layer.msg("合同编号不能为空",{icon: 8});
+            contractCode_obj.focus();
+            return false;
+        }
+
+        var linkman_obj = $("#linkman");
+        if (getValLen(linkman_obj) == 0 ) {
+            layer.msg("客户签约人不能为空",{icon: 8});
+            linkman_obj.focus();
+            return false;
+        }
+
+        var signDate_obj = $("#signDate");
+        if (getValLen(signDate_obj) == 0 ) {
+            layer.msg("签约日期不能为空",{icon: 8});
+            signDate_obj.focus();
+            return false;
+        }
+
+
+        var startdate_obj = $("#startDate");
+        if (getValLen(startdate_obj) == 0 ) {
+            layer.msg("有效期开始时间不能为空",{icon: 8});
+            startdate_obj.focus();
+            return false;
+        }
+
+        var endDate_obj = $("#endDate");
+        if (getValLen(endDate_obj) == 0 ) {
+            layer.msg("有效期结束时间不能为空",{icon: 8});
+            endDate_obj.focus();
+            return false;
+        }
+
+
+        var money_obj = $("#money");
+        if (getValLen(money_obj) == 0) {
+            layer.msg("签约金额不能为空",{icon: 8});
+            money_obj.focus();
+            return false;
+        }
+
+        if( isNaN(money) ){
+            layer.msg("签约金额必须为数字",{icon: 8});
+            money_obj.focus();
+            return false;
+        }
+
+
+        var content_obj = $("#content");
+        if (getValLen(content_obj) > 500 ) {
+            layer.msg("关键条款不能超过500字",{icon: 8});
+            content_obj.focus();
+            return false;
+        }
+
+
+        var contractId = '{$_GET[contractId]}'; //合同记录id
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/updateContract')}", {"contractId":contractId, "enterpriseId":cusId, "cusClientIds":cusClientIds, "contractCode":contractCode, "crmBiz":bizId, "contractSubject":title, "ASigner":cusClientIds, "signDate":signDate, "startDate":startDate, "endDate":endDate, "money":money, "content":content }, function(data) {
+            if(data.error_code != 'success') {
+                layer.msg(data.error_text,{icon: 8});
+                layer.close(loadIdx);
+            } else {
+                layer.close(loadIdx);
+                layer.msg("编辑成功");
+                setTimeout("var index = parent.layer.getFrameIndex(window.name);parent.location.href='/index.php/Home/Office/customerDetails?cusId="+ cusId +"&contract';parent.layer.close(index);",2000);
+            }
+
+        }, 'json');
+    }
+
+
+    //获取值的长度
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+
+    /**
+     * 选择联系人弹窗
+     */
+    $('#linkman').click(function(){
+        var linkman_ids = $("#linkman").attr("linkman_ids");
+
+        layer.open({
+            type:2,
+            title :['联系人','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['550px', '420px'],
+            shadeClose: true, //点击遮罩关闭
+            content: APP+'/Home/Office/selectLinkman_one?clientId='+linkman_ids
+        });
+    });
+
+    /**
+     * 关联商机弹窗
+     */
+    $('#SJ').click(function(){
+        var bizId = $(this).attr("biz_id");
+        layer.open({
+            type:2,
+            title :['商机','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['388px', '420px'],
+            shadeClose: true, //点击遮罩关闭
+            content: APP+'/Home/Office/selectmore?cusId='+cusId+'&bizId='+bizId
+        });
+    });
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+    var start = {
+        elem: '#startDate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endDate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: laydate.now(+180),
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+
+    var date = {
+        elem: '#signDate',
+        format: 'YYYY-MM-DD',
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            return datas;
+        }
+    };
+    laydate(date);
+</script>
+</body>
+</html>

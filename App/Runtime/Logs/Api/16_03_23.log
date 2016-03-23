@@ -1,0 +1,1100 @@
+[ 2016-03-23T14:33:43+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.040003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f238c58a433.jpg','20160323/','1458714823') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T14:43:31+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:43:31+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715411,"retime_pre":"20160323144331","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:43:31+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-03-23T14:43:32+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:43:32+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715412,"retime_pre":"20160323144332","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:43:32+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:43:44+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23b206f47f.jpg','20160323/','1458715424') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:43:53+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23b292b882.jpg','20160323/','1458715433') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715440,"retime_pre":"20160323144400","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715440,"retime_pre":"20160323144400","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:44:00+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:44:08+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:44:08+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715448,"retime_pre":"20160323144408","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:44:08+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:44:09+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:44:09+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715449,"retime_pre":"20160323144409","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:44:09+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:44:15+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23b3fbae9e.jpg','20160323/','1458715455') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T14:45:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:45:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715551,"retime_pre":"20160323144551","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:45:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-23T14:45:52+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:45:52+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715552,"retime_pre":"20160323144552","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:45:52+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-03-23T14:45:58+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23ba6295ef.jpg','20160323/','1458715558') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715576,"retime_pre":"20160323144616","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715576,"retime_pre":"20160323144616","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:16+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715578,"retime_pre":"20160323144618","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715578,"retime_pre":"20160323144618","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:18+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715595,"retime_pre":"20160323144635","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715595,"retime_pre":"20160323144635","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:46:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T14:46:40+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23bd017e3d.jpg','20160323/','1458715600') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715679,"retime_pre":"20160323144759","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715679,"retime_pre":"20160323144759","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:47:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:48:04+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23c2458c99.jpg','20160323/','1458715684') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014000s ]
+
+[ 2016-03-23T14:48:10+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23c2a08c9d.jpg','20160323/','1458715690') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715703,"retime_pre":"20160323144823","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715703,"retime_pre":"20160323144823","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:48:28+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23c3c46cf9.jpg','20160323/','1458715708') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:48:35+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23c43341bd.jpg','20160323/','1458715715') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715723,"retime_pre":"20160323144843","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715723,"retime_pre":"20160323144843","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:43+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715725,"retime_pre":"20160323144845","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715725,"retime_pre":"20160323144845","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715734,"retime_pre":"20160323144854","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715734,"retime_pre":"20160323144854","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:48:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715746,"retime_pre":"20160323144906","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715746,"retime_pre":"20160323144906","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715759,"retime_pre":"20160323144919","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715759,"retime_pre":"20160323144919","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:19+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"login","phone":"17757128602","password":"111111","is_rem":"0"}
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715787,"retime_pre":"20160323144947","re_command":"Login_resq","error_code":"success","error_text":"","list":[{"unionId":"","companyId":"1002","companyName":"\u524d\u7aef\u4ee3\u7801\u6d4b\u8bd5\u516c\u53f8"}]}
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"userlogin","phone":"17757128602","companyid":"1002","is_rem":"0"}
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715787,"retime_pre":"20160323144947","re_command":"userlogin_resq","error_code":"success","error_text":"","ssoToken":"MTAwMjoxMDg2MjEwMDI6MTc3NTcxMjg2MDI6OTZlNzkyMTg5NjVlYjcyYzkyYTU0OWRkNWEzMzAxMTI6MTQ1ODcxNTczOTI1MQ==","list":{"company":{"companyId":"1002","companyName":"\u524d\u7aef\u4ee3\u7801\u6d4b\u8bd5\u516c\u53f8","namealias":null,"companyMobile":"100000191","phone":"17757128602","website":null,"address":null,"contactPerson":null,"contactMobile":null,"createtime":"2015-11-11","modifytime":"2016-01-05","fax":null,"size":null,"regCapital":null,"payment":null,"industryId":null,"industryName":null,"email":null,"companyLegal":null,"mainProduct":null,"mainArea":null,"turnOver":null,"ageCount":null,"employeeCount":null,"salesCount":null,"netCount":null,"qualityManagDep":null,"techDep":null,"markDep":null,"aftersaleDep":null,"state":"2","flatType":"2","facId":null,"ageId":null,"agencyId":null,"taxRegCertificate":null,"orgCodeCertificate":null,"companyLogo":null,"productionLicense":null,"foodDistribLicense":null,"hygieneLicense":null,"level":"2","credit":"40000","supervisionUser":"1"},"facIdList":null,"user":{"companyId":"1002","departId":"921","companyMobile":null,"position":null,"userName":null,"userId":"10862","nickName":"\u7a81\u7a81","trueName":"\u8d85\u7ea7\u7ba1\u7406\u5458","password":"96e79218965eb72c92a549dd5a330112","sex":"0","mobile":"17757128602","officePhone":null,"otherPhone":null,"email":null,"fax":"0","homePhone":"0","homeAddress":null,"birthday":null,"idCard":null,"userLever":"999","headLogo":null,"invitationCode":"0","mainDept":null,"seq":null,"txPassWord":null,"qq":null,"weixin":null,"weixinId":null,"qqId":null,"userCreatetime":"2015-11-11","userModifytime":"2015-11-20","userSkillLabel":null,"userPersonalLabel":null,"userJobMentality":null,"userEducation":null,"userWorkLife":null,"userExpectedSalary":null,"userJobDeclaration":null,"userIndustry":null,"userIndustryId":null,"userPosition":null,"userJobAddress":null,"userCompanyName":null,"eduExCount":0,"workExCount":0,"eduExName":null,"workExName":null,"isOmsUser":"1","inviterId":null,"higherInviterId":null,"flatType":null,"clientNumber":null,"clientPwd":null}},"is_rem":"0"}
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-03-23' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename`,`f_hometask` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_hometask desc,f_creatdate desc LIMIT 0,18   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715792,"retime_pre":"20160323144952","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715792,"retime_pre":"20160323144952","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:49:52+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:50:50+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"login","phone":"17757128602","password":"111111","is_rem":"0"}
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715850,"retime_pre":"20160323145050","re_command":"Login_resq","error_code":"success","error_text":"","list":[{"unionId":"","companyId":"1002","companyName":"\u524d\u7aef\u4ee3\u7801\u6d4b\u8bd5\u516c\u53f8"}]}
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"userlogin","phone":"17757128602","companyid":"1002","is_rem":"0"}
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715851,"retime_pre":"20160323145051","re_command":"userlogin_resq","error_code":"success","error_text":"","ssoToken":"MTAwMjoxMDg2MjEwMDI6MTc3NTcxMjg2MDI6OTZlNzkyMTg5NjVlYjcyYzkyYTU0OWRkNWEzMzAxMTI6MTQ1ODcxNTgwMzAyNg==","list":{"company":{"companyId":"1002","companyName":"\u524d\u7aef\u4ee3\u7801\u6d4b\u8bd5\u516c\u53f8","namealias":null,"companyMobile":"100000191","phone":"17757128602","website":null,"address":null,"contactPerson":null,"contactMobile":null,"createtime":"2015-11-11","modifytime":"2016-01-05","fax":null,"size":null,"regCapital":null,"payment":null,"industryId":null,"industryName":null,"email":null,"companyLegal":null,"mainProduct":null,"mainArea":null,"turnOver":null,"ageCount":null,"employeeCount":null,"salesCount":null,"netCount":null,"qualityManagDep":null,"techDep":null,"markDep":null,"aftersaleDep":null,"state":"2","flatType":"2","facId":null,"ageId":null,"agencyId":null,"taxRegCertificate":null,"orgCodeCertificate":null,"companyLogo":null,"productionLicense":null,"foodDistribLicense":null,"hygieneLicense":null,"level":"2","credit":"40000","supervisionUser":"1"},"facIdList":null,"user":{"companyId":"1002","departId":"921","companyMobile":null,"position":null,"userName":null,"userId":"10862","nickName":"\u7a81\u7a81","trueName":"\u8d85\u7ea7\u7ba1\u7406\u5458","password":"96e79218965eb72c92a549dd5a330112","sex":"0","mobile":"17757128602","officePhone":null,"otherPhone":null,"email":null,"fax":"0","homePhone":"0","homeAddress":null,"birthday":null,"idCard":null,"userLever":"999","headLogo":null,"invitationCode":"0","mainDept":null,"seq":null,"txPassWord":null,"qq":null,"weixin":null,"weixinId":null,"qqId":null,"userCreatetime":"2015-11-11","userModifytime":"2015-11-20","userSkillLabel":null,"userPersonalLabel":null,"userJobMentality":null,"userEducation":null,"userWorkLife":null,"userExpectedSalary":null,"userJobDeclaration":null,"userIndustry":null,"userIndustryId":null,"userPosition":null,"userJobAddress":null,"userCompanyName":null,"eduExCount":0,"workExCount":0,"eduExName":null,"workExName":null,"isOmsUser":"1","inviterId":null,"higherInviterId":null,"flatType":null,"clientNumber":null,"clientPwd":null}},"is_rem":"0"}
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:50:51+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-03-23' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename`,`f_hometask` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_hometask desc,f_creatdate desc LIMIT 0,18   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715854,"retime_pre":"20160323145054","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458715854,"retime_pre":"20160323145054","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:50:54+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-03-23T14:51:02+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23cd63955e.jpg','20160323/','1458715862') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T14:51:06+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f23cdacc9de.jpg','20160323/','1458715866') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716289,"retime_pre":"20160323145809","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716289,"retime_pre":"20160323145809","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:58:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716293,"retime_pre":"20160323145813","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716293,"retime_pre":"20160323145813","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T14:58:13+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716437,"retime_pre":"20160323150037","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716437,"retime_pre":"20160323150037","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:00:37+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-23T15:02:05+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T15:02:05+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716525,"retime_pre":"20160323150205","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:02:05+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T15:02:05+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T15:02:06+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716525,"retime_pre":"20160323150205","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:02:06+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716537,"retime_pre":"20160323150217","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716537,"retime_pre":"20160323150217","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:02:17+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-23T15:06:59+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f24093bd1d6.jpg','20160323/','1458716819') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-23T15:07:04+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/204900/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56f24098bd2f4.jpg','20160323/','1458716824') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: IN:::{"command":"getPro","taskid":"0"}
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716875,"retime_pre":"20160323150755","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: IN:::{"command":"getArea","taskid":"0"}
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1458716875,"retime_pre":"20160323150755","re_command":"getArea_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-23T15:07:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+

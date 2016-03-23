@@ -1,0 +1,60 @@
+<include file="Public/head" />
+<style type="text/css">
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+                <div class="page_next" id="push_one">
+
+                    <div class="power">
+                        <div class="power_input">
+                            <span>角色名：</span> <input type="text" id="username" placeholder="角色名" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>密码：</span> <input type="password" id="password" placeholder="密码" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>战略：</span> <input type="text" id="strat" placeholder="战略" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>真名：</span> <input type="text" id="realname" placeholder="真名" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>平台管理：</span> <input type="text" id="plattype" placeholder="平台管理" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>权限组：</span> <input type="text" id="accessid" placeholder="权限组" value="">
+                        </div>
+                    </div>
+                    <div class="power">
+                        <div class="power_input">
+                            <span>权限列表：</span> <input type="text" id="accesslist" placeholder="权限列表" value="">
+                        </div>
+                    </div>
+
+                    
+                    <div class="next_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_add_user" style="margin-top: 115px;">确定</a>
+                    </div>
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+
+    </script>
+</html>

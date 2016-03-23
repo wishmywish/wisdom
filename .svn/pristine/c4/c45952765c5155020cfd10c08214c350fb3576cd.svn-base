@@ -1,0 +1,35 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class LoginController extends Controller {
+	
+	public function index(){
+		$this->redirect('Login/login');
+	}
+	
+	public function login(){
+		set_theme();
+		$this->display('Login/index');
+	}
+
+	//验证码
+	public function verify(){
+		verify();
+	}
+
+	//检查验证码是否正确
+	public function check_verify() {
+		$code = I('post.code','');
+		check_verify($code);
+	}
+    
+    
+        
+}
+    
+
+    
+    
+   
+    
+ 

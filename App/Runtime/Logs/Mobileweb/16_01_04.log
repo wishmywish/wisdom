@@ -1,0 +1,990 @@
+[ 2016-01-04T09:19:06+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.205012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.067004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.067004s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-01-04T11:53:34+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T11:53:41+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T11:53:54+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T11:54:15+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: taskid D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 85 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: type_label D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 87 行.
+NOTIC: [8] Undefined index: type_label D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 91 行.
+NOTIC: [8] Undefined index: type_label D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 94 行.
+NOTIC: [8] Undefined variable: f D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 98 行.
+NOTIC: [8] Undefined variable: j D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 98 行.
+SQL: SELECT * FROM `t_task` WHERE `f_tid` = null LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: type_label D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 101 行.
+NOTIC: [8] Undefined index: type_label D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 103 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T11:54:29+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T11:54:38+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T11:57:06+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T13:35:02+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-01-04T13:36:37+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=11245&taskid=686&lat=20.000000&lng=20.000000
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=686 )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 AND `f_superAddressID` = 16 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2016-01-04T13:36:44+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=11245&taskid=686&lat=20.000000&lng=20.000000
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=686 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 AND `f_superAddressID` = 16 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T14:09:10+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=11245&taskid=686&lat=20.000000&lng=20.000000
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=686 )  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 AND `f_superAddressID` = 16 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-01-04T14:22:40+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=11245&taskid=686&netserial=1&superid=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=686 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T14:22:43+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 1 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='0',`f_ctime`='1451888563' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 1 AND `f_netserial` = 1 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T14:22:43+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=11245&taskid=686&netserial=1&superid=[object%20HTMLInputElement]
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=686 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T14:22:50+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 2 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='',`f_ctime`='1451888570' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 2 AND `f_netserial` = 1 [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T14:22:52+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='0',`f_ctime`='1451888572' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-01-04T14:22:53+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 4 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='1|2|3',`f_ctime`='1451888573' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 4 AND `f_netserial` = 1 [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-04T14:22:57+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='0',`f_ctime`='1451888577' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T14:22:57+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='0',`f_ctime`='1451888577' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 3 AND `f_netserial` = 1 [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-01-04T14:22:58+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 4 AND `f_netserial` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_surveyuserchoices` SET `f_answer`='1|2|3',`f_ctime`='1451888578' WHERE `f_taskid` = '686' AND `f_userid` = 11245 AND `f_serial` = 4 AND `f_netserial` = 1 [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-01-04T14:49:25+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-04T14:49:32+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-01-04T14:50:27+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T14:51:40+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T14:52:38+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-04T14:53:30+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T14:53:46+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T14:57:07+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T14:58:12+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T15:02:56+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T15:03:09+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T15:05:20+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T15:06:39+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T15:07:34+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-01-04T15:08:13+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T15:08:32+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-01-04T15:08:41+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 46 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 47 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T15:11:07+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T15:11:48+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-04T15:11:59+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2016-01-04T15:12:23+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T15:12:38+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\50e75f1468c7e1664ccd92b1270a2ae4.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-04T16:46:35+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=11245&taskid=686
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=686 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 AND `f_superAddressID` = 16 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-04T16:46:40+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=11245&taskid=686&netserial=1&superid=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=686 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-04T16:46:42+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=11245&taskid=686
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=686 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 686 AND `f_userid` = 11245 AND `f_superAddressID` = 16 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

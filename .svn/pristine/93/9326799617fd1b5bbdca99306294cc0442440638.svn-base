@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>[title]</title>
+        <style>
+            /*列出所有图标*/
+            /*首页*/
+            .home_ico{background:url(__IMG__/bg.png) no-repeat -10px -10px;width:35px;height:34px;}
+            /*组织架构*/
+            .organize_ico{background:url(__IMG__/bg.png) no-repeat -50px -10px;width:49px;height:34px;}
+            /*企业设置*/
+            .companyset_ico{background:url(__IMG__/bg.png) no-repeat -100px -10px;width:45px;height:34px;}
+            /*系统设置*/
+            .systemset_ico{background:url(__IMG__/bg.png) no-repeat -150px -10px;width:33px;height:34px;}
+            /*返回*/
+            .back_ico{background:url(__IMG__/bg.png) no-repeat -200px -10px;width:29px;height:34px;}
+            /*大按钮*/
+            .big_button{background:url(__IMG__/bg.png) no-repeat -10px -100px;width:122px;height:71px;}
+            /*创建部门*/
+            .new_organize_ico{background:url(__IMG__/bg.png) no-repeat -250px -10px;width:32px;height:28px;}
+            /*创建员工*/
+            .new_user_ico{background:url(__IMG__/bg.png) no-repeat -300px -10px;width:32px;height:28px;}
+            /*权限管理*/
+            .new_authority_ico{background:url(__IMG__/bg.png) no-repeat -350px -10px;width:32px;height:28px;}
+            /*企业信息设置*/
+            .new_companyset_ico{background:url(__IMG__/bg.png) no-repeat -400px -10px;width:32px;height:28px;}
+            /*系统设置*/
+            .new_systemset_ico{background:url(__IMG__/bg.png) no-repeat -450px -10px;width:32px;height:28px;}
+            /*信息删除*/
+            .new_info_ico{background:url(__IMG__/bg.png) no-repeat -500px -10px;width:32px;height:28px;}
+
+            .service_ico{background:url(__IMG__/bg.png) no-repeat -350px -100px;width:16px;height:17px;}
+            .phone_ico{background:url(__IMG__/bg.png) no-repeat -300px -100px;width:20px;height:14px;}
+
+            .black_search_ico{background:url(__IMG__/bg.png) no-repeat -150px -100px;width:10px;height:10px;}
+
+        </style>
+        <script>
+            var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+            var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+            var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+            var IMG = "__IMG__";
+            var STATIC = "__STATIC__";
+            var UPFILE = "__UPFILE__";
+            var THEME = "__THEME__";
+        </script>
+        <css href="__CSS__/admin.css" />
+        <css href="__STATIC__/css/bootstrap.min.css" />
+        <js href="__STATIC__/jquery-1.11.2.min.js" />
+        <js href="__STATIC__/layer/layer.js" />
+        <js href="__JS__/fun.js"/>
+
+    </head>
+    <body>
+    <div class="header">
+        <div style="width: 1200px;">
+            <div class="head_left">
+                杭州日思夜享数据科技有限公司
+            </div>
+            <div class="head_right">
+                <ul>
+                    <li>通知<span>|</span></li>
+                    <li>帮助<span>|</span></li>
+                    <li>登录<span>|</span></li>
+                    <li>注销<a>&nbsp;&nbsp;<i class="fa fa-power-off"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>

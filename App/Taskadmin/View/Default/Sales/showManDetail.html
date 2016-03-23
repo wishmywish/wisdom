@@ -1,0 +1,46 @@
+<include file="Public/head" />
+
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="add">
+             <br><br>
+
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;业务员姓名： <input type="text" id="trueName"  style="width:285px;" value="{$reModi.list.trueName}"/></span>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;联系电话： <input type="text" id="mobile"  style="width:285px;" value="{$reModi.list.mobile}"/></span><br><br>
+
+                <?php if ($reModi['one']) {?>
+                
+                <span style="font-size:18px;">绑定银行卡或支付宝信息</span><br><br>
+                <volist name="reModi.one" id="vo">
+                    <eq name="vo.f_accounttype" value="1">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;开户银行： <input type="text" id="bankName"  style="width:285px;" value="{$vo.f_accountname}"/></span>
+                        <span style="padding-left:12px;">银行卡号： <input type="text" id="bankNum" style="width:285px;" value="{$vo.f_bankaccount}"/></span>
+                        <span style="padding-left:12px;">绑定时间： <input type="text" id="time" value="{$vo.f_linkdatetime}"/></span><br><br>
+                    <else/>
+                        <!-- <span style="font-size:18px;">绑定支付宝信息</span><br><br> -->
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;支付宝名称： <input type="text" id="bankName"  style="width:262px;" value="{$vo.f_accountname}"/></span>
+                        <span style="padding-left:12px;">支付宝账号： <input type="text" id="bankNum" style="width:285px;" value="{$vo.f_bankaccount}"/></span>
+                        <span style="padding-left:12px;">绑定时间： <input type="text" id="time" value="{$vo.f_linkdatetime}"/></span><br><br>  
+                    </eq>
+                </volist>
+
+                <?php }?>
+
+
+
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

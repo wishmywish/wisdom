@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>[title]</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script>
+            var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+            var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+            var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+            var IMG = "__IMG__";
+            var STATIC = "__STATIC__";
+            var UPFILE = "__UPFILE__";
+            var THEME = "__THEME__";
+        </script>
+        <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+        <css href="__CSS__/style.css" />
+        
+        <js href="__STATIC__/jquery-1.11.2.min.js" />
+        <js href="__JS__/jquery.mobile-1.4.5.min.js" />
+    </head>

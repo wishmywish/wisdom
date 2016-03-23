@@ -1,0 +1,719 @@
+[ 2016-03-08T10:08:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"cPush","taskid":"805","indexid":"501","creatuserid":"0","tasktypeid":"6","fileid":"11109","fileid_ban":"0","companyId":"1002","title":"h","startdate":"2016-03-09","enddate":"2016-03-15","linkman":"h","linkphone":"17757128602","pro_taskBrand":"100","pro_taskProduct":"1","pro_saleCommission":"1","pro_totalFee":"200","taskDescription":"00","editor":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p>0...<\/p>"}
+[ 2016-03-08T10:08:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457402935,"retime_pre":"20160308100855","re_command":"cPush_resq","error_code":"success","error_text":"","taskid":"805","two_index":"501","now_indexid":"501"}
+[ 2016-03-08T10:08:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`='0',`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='6',`f_title`='h',`f_fileid`='11109',`f_fileid_ban`='0',`f_begindate`='2016-03-09',`f_enddate`='2016-03-15',`f_linkman`='h',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='00' WHERE ( f_tid=805 ) [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','805','1457402935','随手赚编辑第一步') [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+NOTIC: [8] Undefined index: tradeid D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2966 行.
+NOTIC: [8] Undefined index: payment D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2967 行.
+NOTIC: [8] Undefined index: bond D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2968 行.
+NOTIC: [8] Undefined index: franchise D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2969 行.
+NOTIC: [8] Undefined index: otherprice D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2970 行.
+NOTIC: [8] Undefined index: pricesum D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2971 行.
+NOTIC: [8] Undefined index: commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2972 行.
+NOTIC: [8] Undefined index: agents_commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2973 行.
+NOTIC: [8] Undefined index: shuiw_commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2974 行.
+NOTIC: [8] Undefined index: shangw_commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2975 行.
+NOTIC: [8] Undefined index: tuig_commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2976 行.
+NOTIC: [8] Undefined index: piny_commission D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2977 行.
+NOTIC: [8] Undefined index: whprovidetrial D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2978 行.
+NOTIC: [8] Undefined index: trialnum D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2979 行.
+NOTIC: [8] Undefined index: whpaid D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2980 行.
+NOTIC: [8] Undefined index: trialprice D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2981 行.
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','805','1457402935') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='805',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`=NULL,`f_unitfirstAmount`=NULL,`f_unitcashdeposit`=NULL,`f_unitfranchisefee`=NULL,`f_unitotheramount`=NULL,`f_unittotalamount`=NULL,`f_unitcommission`=NULL,`f_unitpreownedgold`=NULL,`f_shuiw_commission`=NULL,`f_shangw_commission`=NULL,`f_tuig_commission`=NULL,`f_piny_commission`=NULL,`f_tryout`=NULL,`f_tryoutnumber`=NULL,`f_payment`=NULL,`f_paymentmoney`=NULL WHERE ( f_indexid=501 ) [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: eachscore D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3843 行.
+NOTIC: [8] Undefined index: total_commisson D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3846 行.
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0020s ]
+SQL: UPDATE `t_tasksmallinfo` SET `f_taskid`='805',`f_totalcopies`='100',`f_eachcoin`='1',`f_eachscore`='3',`f_drawcopies`='0',`f_taskrequirements`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><p><br/></p><p>0...</p>',`f_total_commisson`=NULL WHERE ( f_indexid=501 ) [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-08T11:24:02+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.060003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060003s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0020s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020001s ]
+
+[ 2016-03-08T11:24:13+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-03-08' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0180s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename`,`f_hometask` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_hometask desc,f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 199 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 200 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 201 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 202 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 203 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-03-08T11:24:20+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: IN:::{"command":"getArea","taskid":"804"}
+[ 2016-03-08T11:24:20+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457407460,"retime_pre":"20160308112420","re_command":"getArea_resq","error_code":"success","error_text":"","list":[{"f_indexid":"642","f_taskid":"804","f_area":"\u7701\u3001\u76f4\u8f96\u5e02|\u5e02|\u533a\u57df\u3001\u53bf\u7ea7\u5e02","f_qty":"10"}],"count":"10"}
+[ 2016-03-08T11:24:20+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=804 )  [ RunTime:0.0020s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=804 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-03-08T11:24:20+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: IN:::{"command":"getPro","taskid":"804"}
+[ 2016-03-08T11:24:20+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457407460,"retime_pre":"20160308112420","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-08T11:24:21+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=804 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2016-03-08T11:24:23+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"cTask","taskid":"804","creatuserid":"0","indexid":"296","tasktypeid":"3","tradeid":"2","fileid":"0","fileid_ban":"0","companyId":"1002","title":"2","startdate":"2016-03-16","enddate":"2016-03-23","linkman":"2","taskDescription":"3","linkphone":"17757128602","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T11:24:23+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457407463,"retime_pre":"20160308112423","re_command":"cTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T11:24:23+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`='0',`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='3',`f_title`='2',`f_fileid`='0',`f_fileid_ban`='0',`f_begindate`='2016-03-16',`f_enddate`='2016-03-23',`f_linkman`='2',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='3' WHERE ( f_tid=804 ) [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','804','1457407463','招商任务编辑第一步') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457407463') [ RunTime:0.0010s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T11:24:25+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"iTask","indexid":"296","taskid":"804","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","tradeid":"2","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T11:24:25+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457407465,"retime_pre":"20160308112425","re_command":"iTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T11:24:25+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457407465') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T11:24:28+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"xTask","tindexid":"202","taskid":"804","note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4ea7\u54c1\u5c55\u793a<ul style=\"margin-left: 15px;\"><li>1.1\u4ea7\u54c1\u4fe1\u606f<\/li><li>1.2\u4ea7\u54c1\u5305\u88c5<\/li><li>1.3\u4ea7\u54c1\u5b9a\u4f4d<\/li><li>1.4\u76ee\u6807\u7528\u6237\u7fa4\u4f53<\/li><\/ul><\/li><li>2.\u4ea7\u54c1\u5356\u70b9<ul style=\"margin-left: 15px;\"><li>2.1\u4ea7\u54c1\u4f18\u52bf<\/li><\/ul><\/li><li>3.\u4ea7\u54c1\u5e7f\u544a<ul style=\"margin-left: 15px;\"><li>3.1\u4ea7\u54c1\u5ba3\u4f20\u8bed<\/li><\/ul><\/li><li>4.\u54c1\u724c\u6545\u4e8b<ul style=\"margin-left: 15px;\"><li>4.1\u516c\u53f8\u4ecb\u7ecd\/\u54c1\u724c\u4ecb\u7ecd<\/li><\/ul><\/li><\/ol>","product":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u53c2\u4e0e\u65b9\u5f0f<ul style=\"margin-left: 15px;\"><li>1.1\u901a\u8fc7\u5fae\u4fe1\u6216QQ\u5206\u4eab\u7ed96\u4e2a\u670b\u53cb\uff0c\u53ef\u4ee5\u83b7\u5f97\u66f4\u591a\u4f63\u91d1<\/li><\/ul><\/li><li>2.\u62db\u5546\u8981\u6c42<ul style=\"margin-left: 15px;\"><li>2.1\u62db\u5546\u8bf4\u660e<\/li><li>2.2\u62db\u5546\u533a\u57df\u53ca\u6570\u91cf<\/li><\/ul><\/li><li>3.\u653f\u7b56\u652f\u6301<ul style=\"margin-left: 15px;\"><li>3.1\u6e20\u9053\u653f\u7b56<\/li><li>3.2\u5e7f\u5ba3\u653f\u7b56<\/li><\/ul><\/li><li>4.\u4ea7\u54c1\u4ef7\u683c<\/li><\/ol>","company_note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4f01\u4e1a\u7b80\u4ecb<\/li><li>2.\u4f01\u4e1a\u6587\u5316<\/li><li>3.\u4f01\u4e1a\u670d\u52a1<\/li><\/ol>"}
+[ 2016-03-08T11:24:28+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457407468,"retime_pre":"20160308112428","re_command":"xTask_resq","error_code":"success","error_text":"","taskid":"804","tindexid":"202"}
+[ 2016-03-08T11:24:28+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3091 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3092 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3093 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3094 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3095 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3096 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3097 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务编辑第四步','804','1457407468') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtdetailedinfo` SET `f_taskid`='804',`f_brandlocation`=NULL,`f_slogan`=NULL,`f_sellingpoint`=NULL,`f_targetgroup`=NULL,`f_distributorsrequir`=NULL,`f_retailoutlets`=NULL,`f_channelpolicy`=NULL,`f_note`='<p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.产品展示<ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol>',`f_product`='<p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.参与方式<ul style=\"margin-left: 15px;\"><li>1.1通过微信或QQ分享给6个朋友，可以获得更多佣金</li></ul></li><li>2.招商要求<ul style=\"margin-left: 15px;\"><li>2.1招商说明</li><li>2.2招商区域及数量</li></ul></li><li>3.政策支持<ul style=\"margin-left: 15px;\"><li>3.1渠道政策</li><li>3.2广宣政策</li></ul></li><li>4.产品价格</li></ol>',`f_company_note`='<p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.企业简介</li><li>2.企业文化</li><li>3.企业服务</li></ol>' WHERE ( f_indexid=202 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T11:24:38+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56de45f63f3e8.jpg','20160308/','1457407478') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-08T14:01:10+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56de6aa655825.jpg','20160308/','1457416870') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-03-08T14:48:18+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-03-08' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename`,`f_hometask` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_hometask desc,f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 199 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 200 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 201 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 202 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 203 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-08T14:48:21+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-03-08T14:48:23+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=1 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-08T14:48:25+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-03-08T14:58:01+08:00 ] ::1 /wisdom/index.php/Api/web/getTaskList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 142 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` WHERE `f_companyid` = '1002' AND `f_status` <> 0 AND `f_tasktypeid` IN ('3') LIMIT 1   [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_status`='4' WHERE `f_enddate` < '2016-03-08' AND `f_companyid` = '1002' AND `f_tasktypeid` = 3 AND `f_status` <> 0 [ RunTime:0.0020s ]
+SQL: SELECT `f_tasktypeid`,`f_tid`,`f_surveno`,`f_title`,`f_creatdate`,`f_companyid`,`f_creatuserid`,`f_description`,`f_begindate`,`f_enddate`,`f_status`,`f_typename`,`f_linkman`,`f_linkphone`,`f_mtbrand`,`f_mtgoods`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_tradename`,`f_hometask` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid LEFT JOIN t_tasktype ON t_tasktype.f_typeid = t_task.f_tasktypeid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid  WHERE `f_tasktypeid` IN ('3') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_hometask desc,f_creatdate desc LIMIT 0,18   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 195 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 196 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 197 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 198 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 199 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 200 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 201 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 202 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 203 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: IN:::{"command":"getArea","taskid":"804"}
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457420288,"retime_pre":"20160308145808","re_command":"getArea_resq","error_code":"success","error_text":"","list":[{"f_indexid":"642","f_taskid":"804","f_area":"\u7701\u3001\u76f4\u8f96\u5e02|\u5e02|\u533a\u57df\u3001\u53bf\u7ea7\u5e02","f_qty":"10"}],"count":"10"}
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=804 )  [ RunTime:0.0010s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=804 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: IN:::{"command":"getPro","taskid":"804"}
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457420288,"retime_pre":"20160308145808","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-08T14:58:08+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=804 )  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-03-08T15:00:49+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-08T15:00:52+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-03-08T15:00:59+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2016-03-08T15:01:05+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-03-08T15:01:08+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('1','2','4','5','6','7') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T15:01:10+08:00 ] ::1 /wisdom/index.php/Api/Web/getproList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 72 行.
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT `F_TYPEID` FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '1002' AND `f_status` <> 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `f_tid`,`f_surveno`,`f_title`,`f_enddate`,`f_status`,`f_creatdate`,`f_eachcoin`,`f_totalcopies`,`f_tasktypeid` FROM `t_task` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid  WHERE `f_tasktypeid` IN ('4','5','6') AND `f_companyid` = '1002' AND `f_status` <> 0 ORDER BY f_creatdate desc LIMIT 0,10   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_shopsheet` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 805 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_shopsheet` WHERE `f_taskid` = 803 AND `f_shopingtype` = 1 AND `f_amount` <> 0 AND `f_label` = 'task' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T16:03:07+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"cTask","taskid":"804","creatuserid":"0","indexid":"296","tasktypeid":"3","tradeid":"2","fileid":"0","fileid_ban":"0","companyId":"1002","title":"2","startdate":"2016-03-16","enddate":"2016-03-23","linkman":"2","taskDescription":"3","linkphone":"17757128602","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T16:03:07+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457424187,"retime_pre":"20160308160307","re_command":"cTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T16:03:07+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`='0',`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='3',`f_title`='2',`f_fileid`='0',`f_fileid_ban`='0',`f_begindate`='2016-03-16',`f_enddate`='2016-03-23',`f_linkman`='2',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='3' WHERE ( f_tid=804 ) [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','804','1457424187','招商任务编辑第一步') [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457424187') [ RunTime:0.0010s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T16:03:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"iTask","indexid":"296","taskid":"804","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","tradeid":"2","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T16:03:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457424189,"retime_pre":"20160308160309","re_command":"iTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T16:03:09+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457424189') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-08T16:03:12+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"xTask","tindexid":"202","taskid":"804","note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4ea7\u54c1\u5c55\u793a<ul style=\"margin-left: 15px;\"><li>1.1\u4ea7\u54c1\u4fe1\u606f<\/li><li>1.2\u4ea7\u54c1\u5305\u88c5<\/li><li>1.3\u4ea7\u54c1\u5b9a\u4f4d<\/li><li>1.4\u76ee\u6807\u7528\u6237\u7fa4\u4f53<\/li><\/ul><\/li><li>2.\u4ea7\u54c1\u5356\u70b9<ul style=\"margin-left: 15px;\"><li>2.1\u4ea7\u54c1\u4f18\u52bf<\/li><\/ul><\/li><li>3.\u4ea7\u54c1\u5e7f\u544a<ul style=\"margin-left: 15px;\"><li>3.1\u4ea7\u54c1\u5ba3\u4f20\u8bed<\/li><\/ul><\/li><li>4.\u54c1\u724c\u6545\u4e8b<ul style=\"margin-left: 15px;\"><li>4.1\u516c\u53f8\u4ecb\u7ecd\/\u54c1\u724c\u4ecb\u7ecd<\/li><\/ul><\/li><\/ol>","product":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u53c2\u4e0e\u65b9\u5f0f<ul style=\"margin-left: 15px;\"><li>1.1\u901a\u8fc7\u5fae\u4fe1\u6216QQ\u5206\u4eab\u7ed96\u4e2a\u670b\u53cb\uff0c\u53ef\u4ee5\u83b7\u5f97\u66f4\u591a\u4f63\u91d1<\/li><\/ul><\/li><li>2.\u62db\u5546\u8981\u6c42<ul style=\"margin-left: 15px;\"><li>2.1\u62db\u5546\u8bf4\u660e<\/li><li>2.2\u62db\u5546\u533a\u57df\u53ca\u6570\u91cf<\/li><\/ul><\/li><li>3.\u653f\u7b56\u652f\u6301<ul style=\"margin-left: 15px;\"><li>3.1\u6e20\u9053\u653f\u7b56<\/li><li>3.2\u5e7f\u5ba3\u653f\u7b56<\/li><\/ul><\/li><li>4.\u4ea7\u54c1\u4ef7\u683c<\/li><\/ol>","company_note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4f01\u4e1a\u7b80\u4ecb<\/li><li>2.\u4f01\u4e1a\u6587\u5316<\/li><li>3.\u4f01\u4e1a\u670d\u52a1<\/li><\/ol>"}
+[ 2016-03-08T16:03:12+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457424192,"retime_pre":"20160308160312","re_command":"xTask_resq","error_code":"success","error_text":"","taskid":"804","tindexid":"202"}
+[ 2016-03-08T16:03:12+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3091 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3092 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3093 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3094 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3095 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3096 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3097 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务编辑第四步','804','1457424192') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtdetailedinfo` SET `f_taskid`='804',`f_brandlocation`=NULL,`f_slogan`=NULL,`f_sellingpoint`=NULL,`f_targetgroup`=NULL,`f_distributorsrequir`=NULL,`f_retailoutlets`=NULL,`f_channelpolicy`=NULL,`f_note`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.产品展示<ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol>',`f_product`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.参与方式<ul style=\"margin-left: 15px;\"><li>1.1通过微信或QQ分享给6个朋友，可以获得更多佣金</li></ul></li><li>2.招商要求<ul style=\"margin-left: 15px;\"><li>2.1招商说明</li><li>2.2招商区域及数量</li></ul></li><li>3.政策支持<ul style=\"margin-left: 15px;\"><li>3.1渠道政策</li><li>3.2广宣政策</li></ul></li><li>4.产品价格</li></ol>',`f_company_note`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.企业简介</li><li>2.企业文化</li><li>3.企业服务</li></ol>' WHERE ( f_indexid=202 ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-08T16:03:19+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.055003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.055003s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56de8747aa85c.jpg','20160308/','1457424199') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-08T16:18:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: IN:::{"command":"getPro","taskid":"804"}
+[ 2016-03-08T16:18:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457425115,"retime_pre":"20160308161835","re_command":"getPro_resq","error_code":"list_empty","error_text":"\u6682\u65e0\u6570\u636e","list":""}
+[ 2016-03-08T16:18:35+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getPro&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=804 )  [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.033002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.034002s ]
+
+[ 2016-03-08T16:18:36+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: IN:::{"command":"getArea","taskid":"804"}
+[ 2016-03-08T16:18:36+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457425116,"retime_pre":"20160308161836","re_command":"getArea_resq","error_code":"success","error_text":"","list":[{"f_indexid":"642","f_taskid":"804","f_area":"\u7701\u3001\u76f4\u8f96\u5e02|\u5e02|\u533a\u57df\u3001\u53bf\u7ea7\u5e02","f_qty":"10"}],"count":"10"}
+[ 2016-03-08T16:18:36+08:00 ] ::1 /wisdom/index.php/Api/Api/inport?command=getArea&taskid=804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=804 )  [ RunTime:0.0010s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=804 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.052003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.052003s ]
+
+[ 2016-03-08T16:21:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"cTask","taskid":"804","creatuserid":"0","indexid":"296","tasktypeid":"3","tradeid":"2","fileid":"11173","fileid_ban":"0","companyId":"1002","title":"2","startdate":"2016-03-16","enddate":"2016-03-23","linkman":"2","taskDescription":"3","linkphone":"17757128602","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T16:21:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457425315,"retime_pre":"20160308162155","re_command":"cTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T16:21:55+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: UPDATE `t_task` SET `f_creatuserid`='0',`f_paletid`=NULL,`f_companyid`='1002',`f_tasktypeid`='3',`f_title`='2',`f_fileid`='11173',`f_fileid_ban`='0',`f_begindate`='2016-03-16',`f_enddate`='2016-03-23',`f_linkman`='2',`f_linkphone`='17757128602',`f_harder`='0',`f_status`='6',`f_description`='3' WHERE ( f_tid=804 ) [ RunTime:0.3020s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('10862','804','1457425315','招商任务编辑第一步') [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0050s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457425315') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-03-08T16:21:57+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"iTask","indexid":"296","taskid":"804","payment":"0","bond":"0","franchise":"0","otherprice":"0","pricesum":"0","commission":"0","agents_commission":"0","tradeid":"2","shuiw_commission":"0","shangw_commission":"0","tuig_commission":"0","piny_commission":"0","whprovidetrial":"0","trialnum":"10","whpaid":"0","trialprice":"0"}
+[ 2016-03-08T16:21:57+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457425317,"retime_pre":"20160308162157","re_command":"iTask_resq","error_code":"success","error_text":"","taskid":"804","two_index":"296"}
+[ 2016-03-08T16:21:57+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mtbrand D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2964 行.
+NOTIC: [8] Undefined index: mtgoods D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 2965 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0080s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`) VALUES ('10862','804','1457425317') [ RunTime:0.0010s ]
+SQL: UPDATE `t_taskmtbaseinfo` SET `f_taskid`='804',`f_mtbrand`=NULL,`f_mtgoods`=NULL,`f_tradeid`='2',`f_unitfirstAmount`='0',`f_unitcashdeposit`='0',`f_unitfranchisefee`='0',`f_unitotheramount`='0',`f_unittotalamount`='0',`f_unitcommission`='0',`f_unitpreownedgold`='0',`f_shuiw_commission`='0',`f_shangw_commission`='0',`f_tuig_commission`='0',`f_piny_commission`='0',`f_tryout`='0',`f_tryoutnumber`='10',`f_payment`='0',`f_paymentmoney`='0' WHERE ( f_indexid=296 ) [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-03-08T16:21:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: IN:::{"command":"xTask","tindexid":"202","taskid":"804","note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4ea7\u54c1\u5c55\u793a<ul style=\"margin-left: 15px;\"><li>1.1\u4ea7\u54c1\u4fe1\u606f<\/li><li>1.2\u4ea7\u54c1\u5305\u88c5<\/li><li>1.3\u4ea7\u54c1\u5b9a\u4f4d<\/li><li>1.4\u76ee\u6807\u7528\u6237\u7fa4\u4f53<\/li><\/ul><\/li><li>2.\u4ea7\u54c1\u5356\u70b9<ul style=\"margin-left: 15px;\"><li>2.1\u4ea7\u54c1\u4f18\u52bf<\/li><\/ul><\/li><li>3.\u4ea7\u54c1\u5e7f\u544a<ul style=\"margin-left: 15px;\"><li>3.1\u4ea7\u54c1\u5ba3\u4f20\u8bed<\/li><\/ul><\/li><li>4.\u54c1\u724c\u6545\u4e8b<ul style=\"margin-left: 15px;\"><li>4.1\u516c\u53f8\u4ecb\u7ecd\/\u54c1\u724c\u4ecb\u7ecd<\/li><\/ul><\/li><\/ol>","product":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u53c2\u4e0e\u65b9\u5f0f<ul style=\"margin-left: 15px;\"><li>1.1\u901a\u8fc7\u5fae\u4fe1\u6216QQ\u5206\u4eab\u7ed96\u4e2a\u670b\u53cb\uff0c\u53ef\u4ee5\u83b7\u5f97\u66f4\u591a\u4f63\u91d1<\/li><\/ul><\/li><li>2.\u62db\u5546\u8981\u6c42<ul style=\"margin-left: 15px;\"><li>2.1\u62db\u5546\u8bf4\u660e<\/li><li>2.2\u62db\u5546\u533a\u57df\u53ca\u6570\u91cf<\/li><\/ul><\/li><li>3.\u653f\u7b56\u652f\u6301<ul style=\"margin-left: 15px;\"><li>3.1\u6e20\u9053\u653f\u7b56<\/li><li>3.2\u5e7f\u5ba3\u653f\u7b56<\/li><\/ul><\/li><li>4.\u4ea7\u54c1\u4ef7\u683c<\/li><\/ol>","company_note":"<p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><p><br\/><\/p><ol style=\"font-family: Arial, Helvetica, sans-serif, \u5fae\u8f6f\u96c5\u9ed1, \u5b8b\u4f53;font-size: 12px;color: red;line-height: 20px;;\"><li>1.\u4f01\u4e1a\u7b80\u4ecb<\/li><li>2.\u4f01\u4e1a\u6587\u5316<\/li><li>3.\u4f01\u4e1a\u670d\u52a1<\/li><\/ol>"}
+[ 2016-03-08T16:21:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+NOTICE: OUT:::{"conf_auth":"T","auth_code":"conf_success","retime":1457425319,"retime_pre":"20160308162159","re_command":"xTask_resq","error_code":"success","error_text":"","taskid":"804","tindexid":"202"}
+[ 2016-03-08T16:21:59+08:00 ] ::1 /wisdom/index.php/Api/Api/inport
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: brandlocation D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3091 行.
+NOTIC: [8] Undefined index: slogan D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3092 行.
+NOTIC: [8] Undefined index: sellingpoint D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3093 行.
+NOTIC: [8] Undefined index: targetgroup D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3094 行.
+NOTIC: [8] Undefined index: distributorsrequir D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3095 行.
+NOTIC: [8] Undefined index: retailoutlets D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3096 行.
+NOTIC: [8] Undefined index: channelpolicy D:\wamp\www\wisdom\App\Api\Controller\ApiController.class.php 第 3097 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0020s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('10862','招商任务编辑第四步','804','1457425319') [ RunTime:0.0020s ]
+SQL: UPDATE `t_taskmtdetailedinfo` SET `f_taskid`='804',`f_brandlocation`=NULL,`f_slogan`=NULL,`f_sellingpoint`=NULL,`f_targetgroup`=NULL,`f_distributorsrequir`=NULL,`f_retailoutlets`=NULL,`f_channelpolicy`=NULL,`f_note`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.产品展示<ul style=\"margin-left: 15px;\"><li>1.1产品信息</li><li>1.2产品包装</li><li>1.3产品定位</li><li>1.4目标用户群体</li></ul></li><li>2.产品卖点<ul style=\"margin-left: 15px;\"><li>2.1产品优势</li></ul></li><li>3.产品广告<ul style=\"margin-left: 15px;\"><li>3.1产品宣传语</li></ul></li><li>4.品牌故事<ul style=\"margin-left: 15px;\"><li>4.1公司介绍/品牌介绍</li></ul></li></ol>',`f_product`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.参与方式<ul style=\"margin-left: 15px;\"><li>1.1通过微信或QQ分享给6个朋友，可以获得更多佣金</li></ul></li><li>2.招商要求<ul style=\"margin-left: 15px;\"><li>2.1招商说明</li><li>2.2招商区域及数量</li></ul></li><li>3.政策支持<ul style=\"margin-left: 15px;\"><li>3.1渠道政策</li><li>3.2广宣政策</li></ul></li><li>4.产品价格</li></ol>',`f_company_note`='<p><br/></p><p><br/></p><p><br/></p><p><br/></p><ol style=\"font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体;font-size: 12px;color: red;line-height: 20px;;\"><li>1.企业简介</li><li>2.企业文化</li><li>3.企业服务</li></ol>' WHERE ( f_indexid=202 ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-08T16:22:06+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2/size/51256/exts/jpg,gif,png.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_files` (`f_oldfilename`,`f_filetype`,`f_filesize`,`f_fileext`,`f_filename`,`f_filepath`,`f_uptime`) VALUES ('ppic.jpg','image/jpeg','18778','jpg','56de8bae337cc.jpg','20160308/','1457425326') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+

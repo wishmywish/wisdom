@@ -1,0 +1,421 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+	<div class="c_head">
+       <h4>企业设置：</h4>
+    <div class="c_nav">
+ 		<ul class="nav nav-tabs nav-justified">
+		  <li role="presentation" class="active" id="one"><a href="#">基本信息</a></li>
+		  <li role="presentation"  id="two"><a href="#">上传资料</a></li>
+		</ul>
+    </div>
+	</div>
+	<div class="c_content">
+
+        <!--企业设置start-->
+		<div id="c0">
+	    <ul>
+			<li>
+				<label class="c_name">企业全称</label>
+			    <input type="text" id="fullname" value="{$cInfo['companyName']}"/>
+                <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">所处行业</label>
+                <select style="width: 180px;height:25px;" id="c_business">
+                    <foreach name="industry" item="vo">
+                        <option value="{$vo['industryId']}" <if condition="$cInfo['industryId'] eq $vo['industryId']">selected</if > >{$vo['industryName']}</option>
+                    </foreach>
+                </select>
+			<span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">企业地址</label>
+			    <input type="text" id="c_address" value="{$cInfo['address']}"/>
+                <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">电话</label>
+			    <input type="text" id="c_phone"  value="{$cInfo['phone']}" />
+                <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">传真</label>
+			    <input type="text" id="c_fix"  value="{$cInfo['fax']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">邮箱</label>
+			    <input type="text" id="c_email" value="{$cInfo['email']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">网址</label>
+			    <input type="text" id="c_websit" value="{$cInfo['website']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">法人代表</label>
+			    <input type="text" id="c_legal" value="{$cInfo['companyLegal']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">主营产品</label>
+			    <input type="text" id="c_products" value="{$cInfo['mainProduct']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">主销区域</label>
+			    <input type="text" id="c_area" value="{$cInfo['mainArea']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">年营业额</label>
+			    <input type="text" id="c_year" value="{$cInfo['turnOver']}" />
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">现有经销商数</label>
+			    <input type="text" id="c_dealer" value="{$cInfo['ageCount']}" />
+                <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">员工人数</label>
+			    <input type="text" id="c_staff" value="{$cInfo['employeeCount']}" />
+                <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">销售人员数</label>
+			    <input type="text" id="c_salesman" value="{$cInfo['salesCount']}" />
+                <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">现有网点数</label>
+			    <input type="text" id="c_webnumber" value="{$cInfo['netCount']}" />
+                <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无质量管理部门</label>
+                 <input type="radio" id="quality" name="quality"  value="1" <if condition="$cInfo['qualityManagDep'] eq 1">checked</if>  /><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="quality"  name="quality"  value="2" <if condition="$cInfo['qualityManagDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无技术研发部门</label>
+                <input type="radio" id="technology" name="technology"  value="1" <if condition="$cInfo['techDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                <input type="radio" id="technology"  name="technology"  value="2" <if condition="$cInfo['techDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无市场策划部门</label>
+		 <input type="radio" id="market" name="market"  value="1" <if condition="$cInfo['markDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="market"  name="market"  value="2" <if condition="$cInfo['markDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无售后服务部门</label>
+		 <input type="radio" id="service" name="service"  value="1"  <if condition="$cInfo['aftersaleDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="service"  name="service"  value="2" <if condition="$cInfo['aftersaleDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<div class="c_footer" style="margin-top:20px;">
+                        <ul>
+                            <li style="background-color:#15BCE0;color:#fff;" id="c_set_submit">提交</li>
+                       </ul>
+                   </div>
+		</div>
+        <!--企业设置end-->
+
+
+        <!--上传资料 start-->
+		<div id="c1" style="display:none;">
+
+
+                        <div class="line_input">
+                            <div class="upfile_pack">
+                                <div>营业执照上传资料&nbsp;&nbsp;&nbsp;&nbsp;：</div>
+                                <br/>
+                                <!--<input type="text" style="width: 180px;height:25px;" id="data_name" />-->
+                                <button id="btn_up_other" class="btn btn-default" style="float: left;" onclick="$('#business_licence_logo').click();">上传</button>
+                                <button class="btn btn-default" id="btnBusiness_licence_" style="margin-left: 30px;" onclick="business_licence_upload();">请确认上传</button>
+
+                                <div style="display: none;">
+                                    <input type="file" id="business_licence_logo" name="upfile" accept="application/zip">
+                                </div>
+                             <input type="hidden" id="fileid_other_1" name="fileid_other" value="">
+                            </div>
+                            <div id="c_pic_1" style="display: none;">
+
+                                <div id="pic_1" class="c_pic_up"  style="float: left;">
+                                    <div class="show_progress_no" id="show_progress_no_other_1">0%</div>
+                                    <div class="progress_up" id="progress_up_other_1">
+                                        <div class="bar" id="bar_other_1"></div>
+                                    </div>
+                                    <div class="show_img" id="show_img_other_1"></div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+            <br/>
+            <br/>
+
+            <div class="line_input">
+                <div class="upfile_pack">
+
+                    <div>税务登记证上传资料：</div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name_2" />-->
+                    <button id="btn_up_other2" class="btn btn-default" onclick="$('#tax_registration_logo').click();">上传</button>
+                    <button class="btn btn-default" id="btnTax_registration" style="margin-left: 30px;" onclick="tax_registration_upload();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="tax_registration_logo" name="upfile" accept="application/zip">
+                    </div>
+                    <input type="hidden" id="fileid_other_2" name="fileid_other" value="">
+                </div>
+                <div id="c_pic_2" style="display: none;">
+
+                    <div id="pic_2" class="c_pic_up"  style="float: left;">
+                    <div class="show_progress_no" id="show_progress_no_other_2">0%</div>
+                    <div class="progress_up" id="progress_up_other_2">
+                        <div class="bar" id="bar_other_2"></div>
+                    </div>
+                    <div class="show_img" id="show_img_other_2"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+                       
+		</div>
+        <!--上传资料 end-->
+	</div>
+  
+</div>
+<include file="Public/loadjs" />
+    <script type="text/javascript">
+        //tab图切换 start
+        $("#two").click(function(){
+             $("#two").addClass("active");
+             $("#c1").show();
+             $("#c0").hide();
+             $("#one").removeClass("active");
+        });
+
+        $("#one").click(function(){
+             $("#one").addClass("active");
+             $("#c0").show();
+             $("#c1").hide();
+             $("#two").removeClass("active");
+        });
+        //tab图切换 end
+
+        //营业执照上传
+        $("#business_licence_logo").wrap("<form id='upfile_up_business_licence' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+        $('#business_licence_logo').change(function () {
+            var i = 1;
+            $("#c_pic_"+i).show();
+            ajaxSub('#upfile_up_business_licence', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_1', '#fileid_other_1', 'img');
+
+        });
+
+
+        //税务登记证上传
+        $("#tax_registration_logo").wrap("<form id='upfile_up_tax_registration' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+        $('#tax_registration_logo').change(function () {
+            var i = 2;
+            $("#c_pic_"+i).show();
+            ajaxSub('#upfile_up_tax_registration', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_2', '#fileid_other_2', 'img');
+        });
+
+
+        //企业资料设置
+        $('#c_set_submit').click(function () {
+            if ($('#fullname').val() === "") {
+                layer.msg('名称不能为空', {icon: 8});
+                $('#fullname').focus();
+                return false;
+            }
+
+            if ($('#c_business').val() === "") {
+                layer.msg('所处行业不能为空', {icon: 8});
+                $('#c_business').focus();
+                return false;
+            }
+
+            if ($('#c_address').val() === "") {
+                layer.msg('企业地址不能为空', {icon: 8});
+                $('#c_address').focus();
+                return false;
+            }
+            if ($('#c_phone').val() === "") {
+                layer.msg('电话不能为空', {icon: 8});
+                $('#c_phone').focus();
+                return false;
+            }
+            var c_name = $.trim($("#fullname").val()); //企业名称
+            var c_business = $.trim($("#c_business").val()); //所处行业
+            var c_address = $.trim($("#c_address").val()); //所处行业
+            var c_phone = $.trim($('#c_phone').val()); //地址
+            var c_email = $.trim($('#c_email').val()); //邮箱
+            var c_fix = $.trim($('#c_fix').val()); //传真
+            var c_websit = $.trim($('#c_websit').val()); //网址
+            var c_legal = $.trim($('#c_legal').val()); //法人代表
+            var c_products = $.trim($('#c_products').val()); //主营产品
+            var c_area = $.trim($('#c_area').val()); //主销区域
+            var c_year = $.trim($('#c_year').val()); //年营业额
+            var c_dealer = $.trim($('#c_dealer').val()); //现有经销商数
+            var c_staff = $.trim($('#c_staff').val()); //员工人数
+            var c_salesman = $.trim($('#c_salesman').val());  //销售人员数
+            var c_webnumber = $.trim($('#c_webnumber').val()); // 现有网点数
+            var c_quality = $("#quality:checked").val(); //有无质量管理部门
+            var c_technology = $("#technology:checked").val(); //有无技术研发部门
+            var c_market = $("#market:checked").val(); //有无市场策划部门
+            var c_service = $("#service:checked").val(); //有无售后服务部门
+
+
+            if (!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(c_phone)) {
+                layer.msg('请检查电话号码是否正确', {icon: 8});
+                $('#c_phone').focus();
+                return false;
+            }
+
+            if( c_fix ){
+                if (!(/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/).test(c_fix)) {
+                    layer.msg('请检查传真格式是否正确', {icon: 8});
+                    $('#c_fix').focus();
+                    return false;
+                }
+            }
+
+            if( c_email ){
+                if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/).test(c_email)) {
+                    layer.msg('请检查邮箱格式是否正确', {icon: 8});
+                    $('#c_email').focus();
+                    return false;
+                }
+            }
+            if( c_websit ){
+                if (!(/^((https?|ftp|news):\/\/)?([a-z]([a-z0-9\-]*[\.。])+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel)|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&]*)?)?(#[a-z][a-z0-9_]*)?$/).test(c_websit)) {
+                    layer.msg('请检查网址格式是否正确', {icon: 8});
+                    $('#c_websit').focus();
+                    return false;
+                }
+            }
+            if (c_dealer != "") {
+                if (!(/^-?\d+$/).test(c_dealer)) {
+                    layer.msg('请输入数字', {icon: 8});
+                    $('#c_dealer').focus();
+                    return false;
+                }
+            }
+
+            if (c_staff != "") {
+                if (!(/^-?\d+$/).test(c_staff)) {
+                    layer.msg('请输入数字', {icon: 8});
+                    $('#c_staff').focus();
+                    return false;
+                }
+            }
+            if (c_salesman != "") {
+                if (!(/^-?\d+$/).test(c_salesman)) {
+                    layer.msg('请输入数字', {icon: 8});
+                    $('#c_salesman').focus();
+                    return false;
+                }
+            }
+            if (c_webnumber != "") {
+                if (!(/^-?\d+$/).test(c_webnumber)) {
+                    layer.msg('请输入数字', {icon: 8});
+                    $('#c_webnumber').focus();
+                    return false;
+                }
+            }
+
+            var companyId = Cookie.readCookie("LYX_companyId");
+
+            var fieldkey = "companyName|industryId|address|phone|email|fax|website|companyLegal|mainProduct|mainArea|turnOver|ageCount|employeeCount|salesCount|netCount|qualityManagDep|techDep|markDep|aftersaleDep";
+            var fieldval = c_name+"|"+c_business+"|"+c_address+"|"+c_phone+"|"+c_email+"|"+c_fix+"|"+c_websit+"|"+c_legal+"|"+c_products+"|"+c_area+"|"+c_year+"|"+c_dealer+"|"+c_staff+"|"+c_salesman+"|"+c_webnumber+"|"+c_quality+"|"+c_technology+"|"+c_market+"|"+c_service;
+
+            $.post(APP+"/Api/Info/conf","command=modiCompanyInfo&companyid="+companyId+"&fieldkey="+fieldkey+"&fieldval="+fieldval,function(data){
+                if( data.error_code == "success" ){
+                    layer.msg("企业设置成功");
+                }else{
+                    layer.msg("企业设置失败");
+                }
+            },"json");
+
+
+
+        });
+
+
+
+        //营业执照上传信息入库
+        function business_licence_upload()
+        {
+            var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+            var profile = $("#fileid_other_1").val();  //上传文件的id
+            if (profile) {
+                $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=1",function(v){
+                    if(v.result==='000000'){
+                        layer.msg('上传成功',{icon: 9});
+                    }
+                },'json');
+            }else{
+                layer.msg('请先上传图片！',{icon: 8});
+            };
+        }
+
+        //税务登记证上传信息入库
+        function tax_registration_upload()
+        {
+            var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+            var profile = $("#fileid_other_2").val();  //上传文件的id
+            if (profile) {
+                $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=2",function(v){
+                    if(v.result==='000000'){
+                        layer.msg('上传成功',{icon: 9});
+                    }
+                },'json');
+            }else{
+                layer.msg('请先上传图片！',{icon: 8});
+            };
+        }
+
+
+
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <h1>随手赚</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p>{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a  class="ui-btns a4" data-icon="arrow-l" data-role="button" onclick="lastProblem({$k},{$vo.f_type})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a  class="ui-btns a5" data-icon="arrow-r" data-role="button" onclick="nextProblem({$k},{$vo.f_type},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p>{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <p>
+                                <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" />
+                                <span class="sp6">{$voy}</span>
+                            </p>
+                         </volist>
+                    </div>
+                    <div>
+                        <input type="hidden" id="trueAnswer{$k}" value="{$vo.f_trueanswer}">
+                    </div>
+                </div>
+            </div>
+         </volist>
+    </neq>
+</body>
+ <script type="text/javascript">
+        function nextProblem(k,f_type,count){
+            // var c=1;
+            var inpschecked=$("input[name='inps"+k+"']:checked");
+            var tureanswer=$("#trueAnswer"+k+"").val();
+            var data=tureanswer.split(",");
+            for (var i = 0; i < data.length; i++) {
+                data[i]++;
+            };
+            var trueanswerall=data.join(",");
+            // if(c==1){
+                // c++;
+                if(f_type==1){
+                    if(inpschecked.length == 0){
+                        layer.msg("请勾选选项", {'icon': 8});
+                        return false;
+                    }else if (inpschecked.length > 1) {
+                        layer.msg("单选只能选择一条记录，你选择了" + inpschecked.length + "条", {'icon': 8});
+                        return false;
+                    }else{
+                        layer.msg("正确答案是第"+trueanswerall+"个选项");
+                        setTimeout("nextProblemTime("+k+","+count+")",3000);
+
+                    }
+
+                }else if(f_type==2){
+                    if(inpschecked.length < 2){
+                        layer.msg("多选的答案至少两个，你选择了" + inpschecked.length + "个", {'icon': 8});
+                         return false;
+                    }else{
+                        layer.msg("正确答案共有" + data.length + "个,第"+trueanswerall+"个选项是正确的");
+                        setTimeout("nextProblemTime("+k+","+count+")",3000);
+                    }
+                }
+            // }else{
+            //     location.hash="page"+(++k); 
+            // }
+            
+        }
+
+        function nextProblemTime(k,count){
+            $("input[name='inps"+k+"']").attr("disabled","true");
+            location.hash="page"+(++k);
+            if ((k)>count) {
+                layer.msg("当前页是最后页");
+            }
+
+        }
+
+        function lastProblem(k,f_type){
+            location.hash="page"+(--k);
+            if (k<1) {
+                layer.msg("当前页是第一页");
+            }
+        }
+
+
+
+    </script>
+</html>

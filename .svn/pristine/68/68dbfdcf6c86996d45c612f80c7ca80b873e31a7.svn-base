@@ -1,0 +1,78 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+
+<body>
+<style>
+    body{
+        background-color:#ffffff;
+    }
+  ul li{
+      padding:0px;
+      list-style:none;
+      margin:0px;
+  }
+
+  .title{
+      width:100%;
+      margin:10px auto;
+      float: left;
+  }
+  .title ul{
+      float: left;
+      width:100%;
+  }
+  .title  li{
+       float:left;
+       width:49%;
+       text-align: center;
+       min-height:20px;
+       padding-top:10px;
+       padding-bottom:5px;
+ }
+    .active{
+        color:#fe6700;
+        background-color:#cacaca;
+    }
+</style>
+<div data-role="page" style="padding-left:10px;padding-right:10px">
+    <div role="main" class="ui-content">
+        <if condition="$taskinfo.type_label eq 'business'">
+            <div><img src="{$weburl}/Public/upfile/{$taskinfo.info.f_filepath}{$taskinfo.info.f_filename}"></div>
+            <div>客服电话：0571-88195693<br>结束时间：{$taskinfo.info.f_enddate}</div>
+            <div class="title">
+                <ul>
+                    <li  onclick="show(1)"  id="1"  class="active">产品详情</li>
+                    <li  onclick="show(2)"  id="2"  style="border-left:1px #CCCCCC solid">招商政策</li>
+                </ul>
+            </div>
+            <div style="min-height:40px; overflow: visible;">
+                <div  id="pt_1" style="margin-top:40px">{$taskinfo.info.f_note}</div>
+                <div  id="pt_2" style="display:none">{$taskinfo.info.f_product}</div>
+            </div>
+            <elseif condition="$taskinfo.type_label eq 'widely'"/>
+            <div style="margin-top:20px">{$taskinfo.info.f_taskrequirements}</div>
+            <elseif condition="$taskinfo.type_label eq 'push'"/>
+            <div style="margin-top:20px">{$taskinfo.info.f_taskrequirements}</div>
+        </if>
+        <div style="padding-bottom:20px;">注册填写邀请码有惊喜：<span style='color:red;'>{$invitationCode}</span></div>
+    </div><!-- /content -->
+</div>
+<script type="text/javascript" src="__PUBLIC__/static/jquery-1.11.2.min.js"></script>
+<script   type="text/javascript">
+     function  show(status){
+          if(status==1){
+              $("#2").removeClass("active");
+              $("#"+status).addClass("active");
+              $("#pt_"+status).show();
+              $("#pt_2").hide();
+          }
+
+          if(status==2){
+              $("#1").removeClass("active");
+              $("#"+status).addClass("active");
+              $("#pt_"+status).show();
+              $("#pt_1").hide();
+          }
+     }
+</script>
+</body>
+<include file="Public/foot" />

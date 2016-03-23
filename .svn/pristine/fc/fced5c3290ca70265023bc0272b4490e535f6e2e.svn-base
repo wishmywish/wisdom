@@ -1,0 +1,20 @@
+<?php
+/**
+ * 权限控制
+ *
+ * @author
+ */
+namespace Admin\Controller;
+use Think\Controller;
+class AccessController extends Controller {
+    //put your code here
+    function index(){
+        set_theme();
+        $this->display();
+    }
+    //新建角色
+     function addrole(){
+        set_theme();
+        $this->display();
+    } 
+}

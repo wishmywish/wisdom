@@ -1,0 +1,60 @@
+<include file="Public/head" title="企业管理" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 企业管理</div>
+                <div class="tabli">
+
+                    <ul id="tabli_bid">
+                        <li value="0"  onclick="plist_AllCompany(0)">未通过</li>
+                        <li value="1" class='selected' onclick="plist_AllCompany(1)">已审核</li>
+                        <li value="2" onclick="plist_AllCompany(2)">未开通招商</li>
+                        <li value="3" onclick="plist_AllCompany(3)">已删除</li>
+                        <li value="4" id="shenhe" onclick="plist_AllCompany(4)">待审核</li>
+                    </ul>
+
+                    <ul class="action">
+                        <li id="companyBid" value="1">审核</li>
+                        <li id="companyReject" value="2">驳回</li>
+                        <li id="companyAdd" value="3">导入企业</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                            <li style='width:15%;'>公司全称</li>
+                            <li style='width:20%;'>所处行业</li>
+                            <li style='width:10%;'>年营业额(元)</li>
+                            <li style='width:10%;'>现有经销商数</li>
+                            <li style='width:10%;'>员工人数</li>
+                            <li style='width:10%;'>销售人员数</li>
+                            <li style='width:10%;'>现有网点数</li>
+                            <li style='width:10%;'>状态</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:100%;'>请先选择任务</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+    $(function(){
+        // console.log($("#shenhe"));
+
+
+        //获取列表信息
+        plist_AllCompany(1);
+    });
+
+
+    </script>
+</html>

@@ -1,0 +1,103 @@
+<include file="Public/head" title="招商APP管理平台::用户信息管理" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 用户信息管理</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" id="userIDInfo"><a href="__APP__/Taskadmin/UserInfo/index?access=1300" style="text-decoration:none;">实名认证修改</a></li>
+                        <li value="2" id="userExtractPassword"><a href="__APP__/Taskadmin/UserInfo/userExtractPassword" style="text-decoration:none;">提现密码修改</a></li>
+                        <li value="3" id="userMoneyAccount"><a href="__APP__/Taskadmin/UserInfo/userMoneyAccount" style="text-decoration:none;">收款帐号修改</a></li>
+                        <li value="4" class='selected' id="redPacketCount"><a href="__APP__/Taskadmin/UserInfo/redPacketCount" style="text-decoration:none;">红包认领</a></li>
+                    </ul>
+                    <div class="action_chart">
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+                </div>
+                <div class="list">   
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                        <li style='width:30%;'>认领数({$re})</li>
+                        <li style='width:35%;'>转发人数({$re_1})</li>
+                        <li style='width:30%;'>时间</li>
+                    </ul>
+                    <div class='listinfo'>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    function getBeforeDate(n){
+        var n = n;
+        var d = new Date();
+        var year = d.getFullYear();
+        var mon=d.getMonth()+1;
+        var day=d.getDate();
+        if(day <= n){
+                if(mon>1) {
+                   mon=mon-1;
+                }
+               else {
+                 year = year-1;
+                 mon = 12;
+                 }
+               }
+              d.setDate(d.getDate()-n);
+              year = d.getFullYear();
+              mon=d.getMonth()+1;
+              day=d.getDate();
+         s = year+"-"+(mon<10?('0'+mon):mon)+"-"+(day<10?('0'+day):day);
+         return s;
+    }
+
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(), //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),//最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+    // var loadi = layer.load(0);
+    $("#startTime").val(getBeforeDate(7));
+    $("#endTime").val(getBeforeDate(0));
+
+    plist_redPacket($("#startTime").val(),$("#endTime").val());
+
+
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        plist_redPacket($("#startTime").val(),$("#endTime").val());
+    });
+
+    </script>
+</html>

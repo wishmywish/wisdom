@@ -1,0 +1,37 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class IndexController extends Controller {
+    public function index(){
+        set_theme();
+        $this->display();
+    }
+    public function main(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//判断是否已经登录
+        
+        $this->display();
+        
+    }
+    //获取验证码
+    public function verify_c() {
+        verify();
+    }
+    //验证码检查
+    public function check_verify_c() {
+        $code = I('get.code','');
+        check_verify($code);
+    }
+    
+    public function test() {
+        set_theme();
+        echo date("Y-m-d H:i:s");
+        $this->display();
+    }
+
+    public function reg(){
+        $this->display();
+    }
+    
+    
+}

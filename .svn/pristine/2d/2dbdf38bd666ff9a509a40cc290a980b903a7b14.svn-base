@@ -1,0 +1,199 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+
+		<!--部门操作 start-->	
+        <div class="body_right_menu">
+            <div class="button_bg_80" id="add_depart"  onclick="add()">创建部门</div>
+            <div class="" style="width: 220px;padding-left: 20;">
+               
+                	<foreach name="deptListArr_tree" item="vo">
+                		<span style="width: 100px;display: inline-block;" onclick="loadDeptUser({$vo['departId']})" style="cursor: pointer;">{$vo['deptName']}</span>
+                		<!--<span style="margin-left: 50px;" onclick="editDepart({$vo['departId']},{$vo['deptName']},{$vo['parentId']})" >修改</span>-->
+                		<span style="margin-left: 50px;" onclick="editDepart({$vo['departId']},'{$vo['deptName']}',{$vo['parentId']})" >修改</span>
+                		<br/>
+            			<foreach name="vo['child']" item="v">                    				
+            				<span style="width:100px;display: inline-block;" onclick="loadDeptUser({$v['departId']})" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v['deptName']}</span>
+            				<span style="margin-left: 50px;cursor:pointer;" onclick="editDepart({$v['departId']},'{$v['deptName']}',{$v['parentId']})" >修改</span>          
+            				<span onclick="delDept({$v['departId']})">删除</span>
+            				<br />
+            			</foreach>                        		
+                	</foreach>                        	
+               
+            </div>
+            <div class="group_list">
+                
+            </div>
+        </div>
+        <!--部门操作 end-->
+        
+        
+        <!--员工操作 start-->
+        <div class="body_right_list">
+            <div class="body_right_list_button">
+                <div style="float: left;"><input type="text" name="user_search" id="user_search" value="" placeholder="员工姓名或编号" style="width:100px;height:23px;float: left;border: 1px solid #eeeeee;"><div style="cursor: pointer;float: left;width: 23px;height: 23px;border-top: 1px solid #eeeeee;border-bottom: 1px solid #eeeeee;border-right: 1px solid #eeeeee;"><div class="black_search_ico" style="margin-top: 6px;"></div></div></div>
+                <div class="button_bg_80" style="float: right;">导出员工</div>
+                <div class="button_bg_80" style="float: right;margin-right: 5px;">批量导入</div>
+                <div class="button_bg_80" style="float: right;margin-right: 5px;" onclick="addStaff()">新建员工</div>
+            </div>
+            <div class="body_right_list_tab">
+                <ul>
+                    <li>在职的员工</li>
+                    <li>停用的员工</li>
+                    <li>没分配的员工</li>
+                    <li>管理员</li>
+                </ul>
+            </div>
+            <div class="body_right_list_action">
+                <div class="select_all"><input type="checkbox" name="select_all" id="select_all" style="margin-top: 10px;margin-left: 10px;"></div>
+                <div class="body_right_list_action_button">
+                    <div class="button_bg_40" style="float: left;margin-right: 5px;">停用</div>
+                    <div class="button_bg_40" style="float: left;margin-right: 5px;">启用</div>                    
+                </div>
+                <div class="body_right_list_action_search">
+                    <select name="user_list_seq" style="float: right;margin-top: 8px;">
+                        <option value="1">按名称排列</option>
+                    </select>
+                </div>
+            </div>
+            <div class="body_right_list_user">               
+                <foreach name="first_dept_user_arr" item="vo">
+                	<!--<if condition="$vo['trueName'] neq ''">-->
+		                <ul>                  
+		                    <li style="width: 80px;">{$vo['trueName']}</li>
+		                    <li style="width: 120px;">产品研发部</li>
+		                    <!--<li style="width: 120px;">项目经理</li>-->
+		                    <li style="width: 100px;">{$vo['mobile']}</li>
+		                    <li style="width: 60px;">启用</li>
+		                    <!--<li style="width: 60px;">排序</li>-->
+		                    <li style="width: 120px;"></li>
+		                    <li style="width: 30px;" onclick="editDeptUser({$vo['userId']})">修改</li>
+                    		<li style="width: 30px;" onclick="delDeptUser({$vo['userId']},{$vo['companyId']})" id="user{$vo['userId']}">删除</li>
+		                </ul>
+	                <!--</if>-->
+                </foreach>               
+            </div>
+            <div class="page"></div>
+        </div>         
+        <!--员工操作 end-->
+        
+    </div>
+    <script>    
+    //点击载入对应部门员工信息
+    function loadDeptUser(departId){
+    	var queryStart = 0;
+    	var queryEnd = 5;
+//  	var departId = 1; 	//测试
+		var html = "";
+    	$.post(APP+"/Api/Info/conf","command=getUsersByDepart&departId="+departId+"&queryStart="+queryStart+"&queryEnd="+queryEnd,function(result){
+    		if( result.error_code == "success" ){    			
+    			for(i in result.list){
+    				if( result.list[i].trueName != ''){	//真实姓名不为空时显示
+	    				html += '<div class="body_right_list_user">';
+	    				html += 	'<ul>';
+	    				html += 		'<li style="width: 80px;">'+ result.list[i].trueName +'</li>';
+	    				html += 		'<li style="width: 120px;">产品研发部</li>';
+	    				html += 		'<li style="width: 100px;">'+ result.list[i].mobile +'</li>';
+	    				html += 		'<li style="width: 60px;">启用</li>';
+	    				html += 		'<li style="width: 120px;"></li>';
+	    				html += 		'<li style="width: 30px;" onclick="editDeptUser('+ result.list[i].userId +')">修改</li>';
+	    				html += 		'<li style="width: 30px" onclick="delDeptUser('+result.list[i].userId+','+ result.list[i].companyId+')">删除</li>';
+	    				html += 	'</ul>';
+	    				html += '</div>';    				    					
+    				}
+    			}
+    		}
+    		
+    		$(".body_right_list_user").html(html);
+    		console.log(html);
+    	},"json");    	
+    }
+    
+     //创建部门弹窗	
+       function add(){
+           layer.open({
+		        type: 2,
+		        title :['创建部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+		        area: ['480px', '330px'],
+		        shadeClose: false, //点击遮罩关闭
+		        content:APP+'/Admin/Group/addDept' 
+		    });
+       }
+       
+    
+    //编辑部门弹窗
+    function editDepart(departId,departName,parentId){    	
+    	layer.open({
+		        type: 2,
+		        title :['编辑部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+		        area: ['480px', '330px'],
+		        shadeClose: false, //点击遮罩关闭
+		        content:APP+'/Admin/Group/editDept?departId='+departId+'&departName='+departName+'&parentId='+parentId
+		    });
+    	
+    	console.log(departId);
+    }
+    
+    //删除部门
+    function delDept(departId){
+    	var r = confirm("你确定要删除吗？");
+    	if( r == true ){
+    		 $.post(APP+"/Api/Info/conf","command=delteDept&departId="+departId,function(result){			
+		        if(result.error_code=="success"){
+		            layer.msg("删除成功");		           
+		        }else{
+		            layer.msg("删除失败");		          
+		        }
+		        
+		    },"json");    	
+    	}
+    	console.log(userId);
+    } 
+    
+    
+    
+       
+    //新增员工弹窗   
+       function addStaff(){
+           layer.open({
+               type:2,
+               title :['新增员工','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+               area: ['600px', '700px'],
+               shadeClose: false, //点击遮罩关闭
+               content: APP+'/Admin/Group/addStaff'
+           });
+       }
+    
+    //编辑员工弹窗
+    function editDeptUser(userId){
+    	layer.open({
+    		type:2,
+    		title :['编辑员工','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+           	area: ['600px', '700px'],
+           	shadeClose: false, //点击遮罩关闭
+           	content: APP+'/Admin/Group/editStaff?userId='+userId
+    	});
+    	
+    	console.log(userId);
+    }
+    
+    //删除员工
+    function delDeptUser(userId,companyId){    
+    	var r = confirm("你确定要删除吗？");
+    	if( r == true ){
+    		 $.post(APP+"/Api/Info/conf","command=delUserInfo&userId="+userId+"&companyId="+companyId,function(result){			
+		        if(result.error_code=="success"){
+		            layer.msg("删除成功");	
+		            $("#user"+userId).parent().hide();
+		        }else{
+		            layer.msg("删除失败");		          
+		        }
+		        
+		    },"json");    	
+    	}
+    	console.log(userId);
+    }    
+   
+    </script>
+    </body>
+</html>

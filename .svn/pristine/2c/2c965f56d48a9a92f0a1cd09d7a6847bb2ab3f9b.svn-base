@@ -1,0 +1,7 @@
+<include file="Public/home_head" title="智慧运营平台::分销管理" />
+<include file="Public/home_menu" />
+    <div class="index" style="padding: 0px;width:1196px;height: 760px"> 
+        <iframe name="oms" id="oms" style="width: 100%;height: 760px;border: 0px;" src="http://oms.51lick.cn/oms/interface/orderindex?userId={$ssoToken}"></iframe>
+    </div>
+    </body>
+</html>

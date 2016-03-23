@@ -1,0 +1,83 @@
+<include file="Public/head" title="注册数详情" />
+<style type="text/css">
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+table.altrowstable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.altrowstable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+.oddrowcolor{
+    background-color:#d4e3e5;
+}
+.evenrowcolor{
+    background-color:#c3dde0;
+}
+</style>  
+<script type="text/javascript">
+function altRows(id){
+    if(document.getElementsByTagName){  
+        
+        var table = document.getElementById(id);  
+        var rows = table.getElementsByTagName("tr"); 
+         
+        for(i = 0; i < rows.length; i++){          
+            if(i % 2 == 0){
+                rows[i].className = "evenrowcolor";
+            }else{
+                rows[i].className = "oddrowcolor";
+            }      
+        }
+    }
+}
+
+window.onload=function(){
+    altRows('alternatecolor');
+}
+</script>
+<body>
+<div class="adminB">
+    <table class="altrowstable" id="alternatecolor" style="width:100%;height:800px;">
+        <tr>
+            <th>渠道</th><th id="total">个数</th>
+        </tr>
+        <volist name="result"  id="vo" key="k">
+            <tr>
+                <td>
+                    <eq name="k" value="1">0</eq>
+                    <eq name="k" value="2">A</eq>
+                    <eq name="k" value="3">B</eq>
+                    <eq name="k" value="4">C</eq>
+                    <eq name="k" value="5">D</eq>
+                    <eq name="k" value="6">E</eq>
+                    <eq name="k" value="7">F</eq>
+                    <eq name="k" value="8">G</eq>
+                    <eq name="k" value="9">H</eq>
+                    <eq name="k" value="10">I</eq>
+                    <eq name="k" value="11">J</eq>
+                    <eq name="k" value="12">K</eq>
+                    <eq name="k" value="13">其他</eq>
+                </td>
+                <td>
+                    {$vo}
+                </td>
+            </tr>
+        </volist>
+    </table>
+</div>
+</body>
+<include file="Public/loadjs" />
+</html>

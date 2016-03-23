@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #E83227;
+        }
+        .pic{
+            width: 100%;
+        }
+        .pic img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="pic">
+    <img src="__IMG__/16-1-6.jpg">
+</div>
+</body>
+</html>

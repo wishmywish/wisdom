@@ -1,0 +1,16 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div>
+            <form method='POST' enctype="multipart/form-data" action="{:U('Api/Info/conf/command/card/type/1')}">
+                <input type="file" name="upfile">
+                <input type="submit" value='Upload'>
+            </form>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+//        $.post("{:U('Api/Web/getTaskList')}","command=userlogin&companyid=63&phone=15868813235",function(v){
+//            console.log(v+"============================");
+//        },'json');
+    </script>
+</html>

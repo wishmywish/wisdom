@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>划屏效果展现</title>
+    <meta  name="viewport" content="width=device-width,initial-scale=1"/>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!-- Link Swiper's CSS -->
+    <script src="__JS__/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="__CSS__/swiper-3.2.7.min.css">
+    <style>
+        .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+
+        }
+        .swiper-wrapper img{
+            width: 100%;
+            margin: 0 auto;
+            min-height:400px;
+        }
+        .swiper-slide {
+            font-size: 1em;;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            -webkit-align-items:center;
+            align-items: center;
+
+        }
+
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+                <div class="swiper-slide" >
+                    <img src="__IMG__/guide-01.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="__IMG__/guide-02.jpg">
+                </div>
+                <div class="swiper-slide" >
+                    <img src="__IMG__/guide-03.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="__IMG__/guide-04.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="__IMG__/guide-05.jpg">
+                </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="__JS__/swiper-3.2.7.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',
+        autoplay :2000,
+        speed:800,
+        loop : true,
+//pagination : '#swiper-pagination1',
+    })
+</script>
+</body>
+</html>

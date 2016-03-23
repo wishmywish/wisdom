@@ -1,0 +1,59 @@
+.audit_table {
+    text-align:center;
+    width:100%;
+    border-collapse:collapse;
+    font-weight:normal;
+}
+
+.audit_table th{
+    font-weight:normal;
+    border: 1px solid grey;
+    height:35px;
+    line-height:20px;
+    background-color:#CCCCCC;
+    color:#fff;
+}
+
+.audit_table td{
+    font-weight:normal;
+    border: 1px solid grey;
+    height:35px;
+}
+
+.audit_table tbody tr td:last-child{
+    border:none;
+}
+
+.audit_table tfoot tr{
+    font-weight:normal;
+    width:95%;
+}
+
+.audit_tfoot td span{
+    text-align: center;
+    padding:20px 20px;
+}
+
+.audit_table_input{
+    border:none;
+    width:100%;
+    text-align:center;
+}
+
+.audit_table .wh-5{
+    width:5%;
+}
+
+.audit_table .wh-15{
+    width:15%;
+}
+
+.audit_table .wh-20{
+    width:20%;
+}
+
+.audit_table .wh-10{
+    width:10%;
+}
+
+

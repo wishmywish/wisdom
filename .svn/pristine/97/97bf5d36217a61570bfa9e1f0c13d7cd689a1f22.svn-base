@@ -1,0 +1,272 @@
+<include file="Public/home_head" title="智慧推广::任务管理" />
+<include file="Public/home_menu" />
+    <div class="index">
+        <div id="rev_menu_left" class="class_menu_left">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>全部任务</li>
+            <li id="1" class="org_box"><span ></span>推广赚</li>
+            <li id="2" class="org_box"><span ></span>随手赚</li>
+        </ul>
+    </div>
+    <div class="index_right_bus">
+        <!--全部任务-->
+        <div id="a0">
+            <div style='height:20px;width:160px;text-align:left;float:left'> 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务
+                <div class="task_button_left">
+<!--                    <form  id="businessTask">
+                        <span>筛选：排序 ： 发布时间  </span>&nbsp
+                        <select style="width:80px;height:25px" form="businessTask">
+                            <option  selected="selected" value="0">从高到低</option>
+                            <option  value="1">从低到高</option>      
+                        </select>
+                    </form>-->
+                </div>
+            </div>
+            <div class="task_button">                
+                <?php if(in_array("d1",$access_array)){ echo '<div class="task_button_right"> <a href='.U("Promotion/taskAdd").'  style="color:#fff"> 新增 </a> </div>'; } ?> 
+                	
+                	 <!--<?php if(in_array("d1",$access_array)){ echo "<div class='task_button_right'> <a href={:U(\'\')} style='color:#fff'> 新增 </a> </div>"; } ?>--> 
+<!--                <?php if(in_array("d1",$access_array)){ echo "<div class='task_button_right'><a href={:U(\'Promotion/taskAdd\')} style='color:#fff'>新增</a></div>"; } ?>    -->
+<!--                <div class="task_button_right">
+                    <a href="{:U(\'Promotion/taskAdd\')}" style="color:#fff">新增</a>
+                </div>-->
+            </div>
+            <div  class='promotion_task_list1'>
+                <div id='promotionAllTask'></div>
+                <div id="proallpage" class="pagebar" style="color:#696969;margin-top:30px"></div>
+            </div>
+        </div>
+        
+        <!--推广赚-->
+        
+         <div id="a1" style="display:none">
+             <span style='height:20px;width:160px;text-align:left;float:left'> 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 推广赚</span></br>
+            
+            
+             <div class="task_button_left" >
+                    <form  id="businessTask">
+                        <span>筛选：排序 ： 发布时间  </span>&nbsp
+                        <select style="width:80px;height:25px" form="businessTask">
+                            <option  selected="selected" value="0">从高到低</option>
+                            <option  value="1">从低到高</option>
+                        </select>
+                    </form>
+                </div>
+            <div  class='promotion_task_list1'>
+                <div id='promotionAllTask2'></div>
+                <div id="proallpage2"  class="pagebar" style="color:#696969;margin-top:30px"></div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        <!--随手赚-->
+        
+         <div id="a2" style="display:none">
+             <span style='height:20px;width:160px;text-align:left;float:left'> 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 随手赚</span></br>
+            
+            
+             <div class="task_button_left" >
+                    <form  id="businessTask">
+                        <span>筛选：排序 ： 发布时间  </span>&nbsp
+                        <select style="width:80px;height:25px" form="businessTask">
+                            <option  selected="selected" value="0">从高到低</option>
+                            <option  value="1">从低到高</option>   
+                        </select>
+                    </form>
+                </div>
+            <div  class='promotion_task_list1'>
+                <div id='promotionAllTask3'></div>
+                <div id="proallpage3" class="pagebar" style="color:#696969;margin-top:30px">
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+<script>           
+    //模块间的跳转           
+      $('#bigmenu li').click(function(){
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()===i){
+                console.log(i);
+                $('#a'+i).show(); 
+                //获取数据
+                promotionTask(i);
+            }
+        }
+    });
+    
+
+  //empty_list
+   var empty_list="<ul><li><div style=\'margin:20px;height:160px;line-height:26px;text-align:center;\'><div  style='padding-top:50px;color:#f47469'>暂无数据，请创建任务!!</div></div></li></ul>"
+   var loadi="";
+   var companyId=Cookie.readCookie('LYX_companyId');
+   console.log(companyId);
+ function  promotionTask(num){
+      switch(num){
+          case 0: promotionList();break;
+          case 1: pushTaskList();break;
+          case 2: widelyList();break;
+      }
+ }
+ promotionList();
+ //全部任务
+ function promotionList(){
+     prolist(APP+"/Api/Web/getproList","post","tasktypeid=0&companyid="+companyId,"json","promotionAllTask","proallpage",0);  
+      $(function(){
+            $(document).on('click','#proallpage span a',function(){  
+                 var rel = $(this).attr("rel"); 
+               //  alert(rel);
+              prolist(APP+"/Api/Web/getproList","post","tasktypeid=0&companyid="+companyId+"&page="+rel,"json","promotionAllTask","proallpage",0);
+          });
+        });
+ }
+ 
+ //推广赚
+ function  pushTaskList(){
+     prolist(APP+"/Api/Web/getproList","post","tasktypeid=1&companyid="+companyId,"json","promotionAllTask2","proallpage2",1);
+     $(function(){
+            $(document).on('click','#proallpage2 span a',function(){
+                 
+                 var rel = $(this).attr("rel"); 
+               //  alert(rel);
+              prolist(APP+"/Api/Web/getproList","post","tasktypeid=1&companyid="+companyId+"&page="+rel,"json","promotionAllTask2","proallpage2",1);
+          });
+        });
+  }
+  
+    
+//随手赚
+function widelyList(){
+    prolist(APP+"/Api/Web/getproList","post","tasktypeid=2&companyid="+companyId,"json","promotionAllTask3","proallpage3",2);
+     $(function(){
+            $(document).on('click','#proallpage3 span a',function(){
+                 
+                 var rel = $(this).attr("rel"); 
+               //  alert(rel);
+              prolist(APP+"/Api/Web/getproList","post","tasktypeid=2&companyid="+companyId+"&page="+rel,"json","promotionAllTask3","proallpage3",2);
+          });
+        });
+ }
+ function prolist(url1,type1,data1,dataType1,tasklistid,pageid,id){
+     $.ajax({
+          type:type1,
+          url:url1,
+          data:data1,
+          dataType:dataType1,
+          beforeSend:function(){
+            loadi=layer.load(0);   
+          },
+          success:function(reVal){
+             //console.log("===="+reVal.list);
+             //总记录数
+            total = reVal.total; //总记录数
+            pageSize = reVal.pageSize; //每页显示条数
+            page = parseInt(reVal.page); //当前页
+            totalPage = parseInt(reVal.totalPage); //总页数
+            
+             //console.log("总记录数"+total+","+pageSize+","+page+","+totalPage);
+             //获取展现推广赚任务列表
+            //if(id==1){
+                promotionAllList(reVal.list,total,tasklistid,pageid,id); 
+            //}
+                  
+         
+          },
+           complete:function(){
+               layer.close(loadi);
+               getPageBar1(pageid);  
+               
+               
+          }
+      }); 
+ };
+
+ 
+ 
+  function  promotionAllList(val,total1,tasklistid,pageid,id){
+      console.log(id+"--");
+        $("#"+tasklistid).empty();
+          if(total1>0){
+            var list="";
+            var reson="";
+            $.each(val,function(i,v){            	
+//          	console.log(v);
+                 //对判断任务状态
+                 var current_status="";
+                 var reson="";
+                if(v.f_status=="1"){
+                     current_status="已保存";
+                 }else if(v.f_status=="2"){
+                     current_status="待客服审核";  
+                 }else if(v.f_status=="3"){
+                     current_status="已发布";  
+                 }else if(v.f_status=="4"){
+                     current_status="已过期";
+                 }else if(v.f_status=="5"){
+                     current_status="已驳回";
+                 }else if(v.f_status=="6"){
+                     current_status="待提交";
+                 }else if(v.f_status=="7"){
+                     current_status="待财务审核";
+                 }else if(v.f_status=="8"){
+                     current_status="客服审核通过";
+                 }else if(v.f_status=="9"){
+                     current_status="财务审核通过";
+                 }else if(v.status="10"){
+                 	 current_status="审核未通过";
+                 }
+                 
+                reson="<span style='margin-left:80px;color:#f47469;cursor:pointer;'><u onclick='showreject("+v.f_tid+")'>反馈信息查看</u></span>";
+                  //创建任务时间
+                 var createDate1=createDate(v.f_creatdate);
+                 var tasktypeid=v.f_tasktypeid;
+              //   console.log(tasktypeid+'====================');
+                  list+='<ul id=\'pro_task_list_'+(i+1)+'\'><li><div style=\'margin:20px;height:100px;line-height:26px\'> 任务编号&nbsp :'+v.f_surveno+' <span  style=\'float:right\'>发布时间&nbsp :'+createDate1+'</span></br>'
+                       +'任务标题&nbsp : '+v.f_title+'</br>'
+                       +'任务总数&nbsp ：'+v.f_totalcopies+'<span  style=\'margin-left:150px;\'>单次奖励金币&nbsp ：'+v.f_eachcoin+'(1元=10金币)</span></br>'
+                       +'平台单次服务佣金&nbsp :'+v.f_eachcoin_plat+' <span  style=\'margin-left:104px;color:#12A1C9\'>总佣金&nbsp :'+v.f_plattotal+'\元</span></br>' 
+                       +'任务截止时间&nbsp ：'+v.f_enddate+'<span  style=\'margin-left:109px;color:#F08304\'>任务状态&nbsp :'+current_status+'</span>'
+                       +reson;
+                 if (v.f_status!="3") {     
+                     if(id===0){
+                         list+='<?php if( !in_array("d3",$access_array) ){ echo "<!--"; } ?><span style=\'float:right;\'><a style=\'color:#00a73d;margin-right:30px\' href=\'#\' onclick=\'pro_task_modi('+v.f_tid+','+(i+1)+','+tasktypeid+')\'>编辑</a><?php if( !in_array("d3",$access_array) ){ echo "-->"; } ?><?php if( !in_array("d2",$access_array) ){ echo "<!--"; } ?><a style=\'color:red\' href=\'#\' onclick=\'business_task_del('+v.f_tid+','+(i+1)+',"pro_task_list_" ,"promotionAllTask","proallpage",0)\'>删除</a><?php if( !in_array("d2",$access_array) ){ echo "-->"; } ?></span>'
+                           +'</div></li></ul>'; 
+                     }else if(id===1){
+                          list+='<?php if( !in_array("d3",$access_array) ){ echo "<!--"; } ?><span style=\'float:right;\'><a style=\'color:#00a73d;margin-right:30px\' href=\'#\' onclick=\'pro_task_modi('+v.f_tid+','+(i+1)+','+tasktypeid+')\'>编辑</a><?php if( !in_array("d3",$access_array) ){ echo "-->"; } ?><?php if( !in_array("d2",$access_array) ){ echo "<!--"; } ?><a style=\'color:red\' href=\'#\' onclick=\'business_task_del('+v.f_tid+','+(i+1)+',"pro_task_list_" ,"promotionAllTask2","proallpage2",1)\'>删除</a><?php if( !in_array("d2",$access_array) ){ echo "-->"; } ?></span>'
+                           +'</div></li></ul>'; 
+                     }else{
+                          list+='<?php if( !in_array("d3",$access_array) ){ echo "<!--"; } ?><span style=\'float:right;\'><a style=\'color:#00a73d;margin-right:30px\' href=\'#\' onclick=\'pro_task_modi('+v.f_tid+','+(i+1)+','+tasktypeid+')\'>编辑</a><?php if( !in_array("d3",$access_array) ){ echo "-->"; } ?><?php if( !in_array("d2",$access_array) ){ echo "<!--"; } ?><a style=\'color:red\' href=\'#\' onclick=\'business_task_del('+v.f_tid+','+(i+1)+',"pro_task_list_" ,"promotionAllTask3","proallpage3",2)\'>删除</a><?php if( !in_array("d2",$access_array) ){ echo "-->"; } ?></span>'
+                           +'</div></li></ul>'; 
+                     } 
+                 }else{
+                          list+='</div></li></ul>'; 
+                 };              
+            });
+             $('#'+tasklistid).append(list); 
+          }else{
+               $('#'+pageid).empty();
+               $("#"+tasklistid).append(empty_list);
+          }
+  }
+  
+ 
+ 
+ 
+ 
+</script>
+    </body>
+</html>

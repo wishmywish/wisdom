@@ -1,0 +1,26 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div>
+            <form method='POST' enctype="multipart/form-data" action="{:U('Api/Info/conf/command/card/type/1')}">
+                <input type="file" name="upfile">
+                <input type="submit" value='Upload'>
+            </form>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+        var aa = '[{"name":"arga","phone":"(235) 114-6262","sortKey":"A"},{"name":"erter","phone":"(234) 235-2452","sortKey":"E"},{"name":"fsga","phone":"32544562345","sortKey":"F"},{"name":"htrhe","phone":"23525464345","sortKey":"H"},{"name":"qrtrq","phone":"(234) 523-5456","sortKey":"Q"},{"name":"rgarga","phone":"1 352-587-4656","sortKey":"R"},{"name":"242352","phone":"(235) 465-6252","sortKey":"#"},{"name":"43452","phone":"(523) 525-23","sortKey":"#"}]';
+//        $.ajax({
+//            url:"{:U('Api/Info/conf?command=upContacts')}",
+//            type:'POST',
+//            contentType:'text/json',
+//            data:aa,
+//            success:function(responseText) {
+//                console.log(responseText);
+//            }
+//        });
+        $.post("{:U('Api/Info/conf?command=upContacts')}",aa,function(v){
+            console.log(v+"============================");
+        },'json');
+    </script>
+</html>

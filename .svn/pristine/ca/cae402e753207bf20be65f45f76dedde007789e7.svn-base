@@ -1,0 +1,254 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+    <css href="__STATIC__/layer/skin/layer.css"/>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+        }
+        body {
+            background-image:url(__IMG__/hg-loginbg.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+        }
+        .g_head img{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+        }
+        .content .btn01{
+            background-image:url(__IMG__/jf_btn1.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            float: right;
+            margin-right: 5%;
+            font-size: 14px;
+            padding: 2%;
+        }
+        .content .btn02{
+            background-image:url(__IMG__/jf_btn2.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            font-size: 16px;
+            color: #fff;
+            padding: 3% 10%;
+        }
+        .content .hf{
+            background-image:url(__IMG__/jf_hf.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            font-size: 24px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            margin: 8% 0;
+        }
+        .content .title{
+            width: 100%;
+            /* height: 8%; */
+            /* line-height: 50px; */
+            font-size: 20px;
+            padding: 6% 0;
+            color: #FAF8D8;
+        }
+        .title .sp{
+            margin: 0 5%;
+        }
+        .content .des1{
+            width: 85%;
+            font-size: 14px;
+            color: #C1C1C1;
+             /*text-align: center; */
+            padding-left: 10%;
+            line-height: 25px;
+
+        }
+        .content .des2{
+            width: 87%;
+            font-size: 14px;
+            color: #FAF8D8;
+            margin: 0 7%;
+            line-height: 20px;
+        }
+        .content .proList{
+            width: 100%;
+        }
+        .proList .left{
+            width: 25%;
+            float: left;
+            border: 1px dashed #fff;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 5%;
+            /*background: #fff;*/
+        }
+        .proList .prolists .right{
+            width: 64%;
+            float: right;
+        }
+        .right .pro_title{
+            font-size: 16px;
+            font-weight: bold;
+            color: #FAF8D8;
+            height: 17%;
+        }
+        .proList .pro_price{
+            font-size: 20px;
+            color: #F7EB0D;
+            width: 100%;
+            height: 24%;
+        }
+        .proList .pro_buy{
+            font-size: 14px;
+            color: #FAF8D8;
+            height: 28%;
+            width: 90%;
+            line-height: 30px;
+
+        }
+        .pro_buy input{
+            width: 20%;
+            border: 1px solid #EAEACC;
+            display: inline-block;
+            color: #F7EB0D;
+            outline: none;
+            background: #3B7463;
+            margin: 0 3%;
+        }
+        .proList .pro_btn{
+            width: 100%;
+            height: 5%;
+            margin: 5% 0;
+        }
+        .content .prolists{
+            width: 100%;
+            height: 20%;
+            margin-bottom: 10%;
+        }
+        .content .cm{
+            width: 80%;
+            margin: 10% 10% 1% 10%;
+            float: left;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            color: #FAF8D8;
+        }
+        .cm .my{
+            width: 55%;
+            /* line-height: 70px; */
+            float: left;
+            margin: 5% 0;
+        }
+        .cm .myCms{
+            width: 40%;
+            float: left;
+            /* padding: 10% 0; */
+            text-align: center;
+            margin: 5% 0;
+        }
+        .content .pro_foot{
+            width: 80%;
+            float: left;
+            margin: 3% 10%;
+        }
+        .pro_foot .logo1{
+            width: 30%;
+            float: left;
+            height: 5%;
+            margin: 0 0 0 4%;
+            border-right: 1px solid #FAF8D8;
+            padding-right: 17%;
+        }
+        .pro_foot .logo2{
+            width: 30%;
+            height: 6%;
+            float: right;
+            margin-right: 4%;
+        }
+        .box{
+            padding: 60% 0 0 0;
+        }
+        #mobile{
+            width: 60%;
+            padding-left: 2%;
+        }
+        #password{
+            width: 60%;
+            padding-left: 2%;
+        }
+
+    </style>
+    <js href="__STATIC__/jquery-1.11.2.min.js"/>
+    <js href="__STATIC__/layer/layer.js"/>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    </script>
+
+</head>
+
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content" style="padding: 0">
+        <!-- <div class="g_head"><img src="__IMG__/jf_head.png"></div> -->
+        <div class="content">
+            <div class="box" style="font-size: 1em;">
+                <div style="width: 100%;height: 50%;margin-top: 25%;">
+                    
+                    <div style="margin-left: 15%;width: 70%;height: 20px;margin-top: 10px;">
+                        <span>认证手机:</span><input type="text" id="mobile" value="" placeholder="请输入小宝账号">
+                    </div>
+                    <div style="margin-left: 15%;width: 70%;height: 20px;margin-top: 20px;">
+                        <span>登陆密码:</span><input type="password" id="password" value="" placeholder="请输入登陆密码">
+                    </div>
+                    <div style="width: 70%;height: 30px;margin-top: 20px;">
+                        <button style="float:right;  width: 50%;" id="submit">确 定</button>
+                    </div>
+                    <div>
+                        <p style="text-align: center; color: red; line-height:  25px">
+                        为保护您的红包安全<br>和兑奖有请二次验证
+                    </p>
+                        <p class="des1" >活动时间：2月7日至2月14日；</p>
+                        <p class="des1">参与方式：微信关注小宝招商（xbzs0571）公众号->点击底部菜单栏“抢红包”->开始游戏</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><!-- /content -->
+</div>
+</body>
+<script>
+    $("#submit").click(function(){
+        var mobile = $("#mobile").val();
+        var password = $("#password").val();
+        var param = "mobile="+mobile+"&password="+password;
+        $.post("{:U('zslogin')}",param,function(v){
+//            console.log(v);
+            if(v.error_code==="000000"){
+                layer.msg(v.error_text,{icon: 6,offset: 25, time: 2000},
+                        function(){
+                            location.href = "{:U('pointsMall')}?mobile="+mobile+"&userid="+ v.ulist.userId
+                        }
+                );
+            }else{
+                layer.msg(v.error_text,{icon: 5,offset: 25, time: 2000});
+            }
+        },'json');
+    });
+</script>
+</html>

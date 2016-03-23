@@ -1,0 +1,123 @@
+<include file="Public/head" title="{$webtitle}" />
+<body>
+<div data-role="page" id="pageone">
+
+
+    <div data-role="content">
+       <div class="head_top">
+           <p>吸烟有害健康</p>
+       </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">1</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#pagetwo" class="ui-btns a5" data-icon="arrow-r" data-role="button"> </a>
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>皇冠大酒店地理位置的优越性</p>
+        </div>
+        <div class="head_con2">
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="content">
+        <div class="head_top">
+            <p>吸烟有害健康</p>
+        </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#pageone" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">2</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#pagethree" class="ui-btns a5" data-icon="arrow-r" data-role="button"> </a>
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>皇冠大酒店地理位置的优越性</p>
+        </div>
+        <div class="head_con2">
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+        </div>
+
+    </div>
+</div>
+<div data-role="page" id="pagethree">
+    <div data-role="content">
+        <div class="head_top">
+            <p>吸烟有害健康</p>
+        </div>
+        <div class="head_nav">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#pagetwo" class="ui-btns a4" data-icon="arrow-l" data-role="button"> </a>
+                </div>
+                <div class="ui-block-b nav_cent">
+                    <span class="sp5">3</span>
+                    <span>/3</span>
+                </div>
+                <div class="ui-block-c">
+                    <!--<a href="#pagetwo" data-icon="arrow-r" data-role="button"> </a>-->
+                </div>
+            </div>
+        </div>
+        <div class="head_con">
+            <p>皇冠大酒店地理位置的优越性</p>
+        </div>
+        <div class="head_con2">
+            <p>
+                <input class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input  class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+            <p>
+                <input   class="inps" type="radio"/>
+                <span>优</span>
+            </p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

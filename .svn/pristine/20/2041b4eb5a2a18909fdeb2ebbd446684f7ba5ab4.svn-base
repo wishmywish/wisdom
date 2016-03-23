@@ -1,0 +1,62 @@
+<?php
+namespace Api\Controller;
+use Think\Controller;
+class UcpaasController extends Controller {
+    //云之讯API
+    private  $Ucpaas = 'https://api.ucpaas.com';
+    private  $SoftVersion = '2014-06-30';
+    private  $accountSid = '0d889f936d5b46581daf2db0fc8a7e4e';
+    private  $Accept = 'application/json';
+    private  $token = '6cea74ff0229d5a237f43be6904fe53e';
+    //protected $appId = '768ab4cb9d6a4f5a89cfff4150872b11';
+    private  $timestamp;
+
+    public function  __construct()
+    {
+        $this->timestamp = date("YmdHis");
+    }
+    
+    /**
+     * 包头验证信息,使用Base64编码（账户Id + 冒号 + 时间戳）时间戳是当前系统时间（24小时制），
+     */
+    private function Authorization(){
+        return base64_encode($this->accountSid.':'.$this->timestamp);
+    }
+    /**
+     * API 验证参数,sig= MD5（账户Id + 账户授权令牌 + 时间戳），共32位(注:转成大写) 
+     */
+    private function SigParameter(){
+        return strtoupper(md5($this->accountSid.$this->token.$this->timestamp));
+    }
+    
+    /**
+     * CURL提交数据到云之讯
+     * @param string $option 提交路径
+     * @param string $body 提交的BODY数据
+     * @return string json
+     */
+    function in_ucpaas($option,$body,$method='post'){
+
+        $url = $this->Ucpaas."/".$this->SoftVersion."/Accounts/".$this->accountSid."/".$option."/?sig=".$this->SigParameter();//发送的URL
+        //头信息    
+        $header = array(
+            'Accept:' . $this->Accept,
+            'Content-Type:' . $this->Accept . ';charset=utf-8',
+            'Authorization:' . $this->Authorization(),
+        );
+        //CURL
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        if($method == 'post'){
+            curl_setopt($ch,CURLOPT_POST,1);
+            curl_setopt($ch,CURLOPT_POSTFIELDS,$body);
+        }
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        
+        return $result;
+    }
+}

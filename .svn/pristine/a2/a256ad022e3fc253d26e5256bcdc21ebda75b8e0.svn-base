@@ -1,0 +1,118 @@
+<include file="Public/head" title="小宝商城" />
+<body>
+<div data-role="page" id="pageone">
+    <!--data-fullscreen="true"-->
+    <div data-role="header" data-position="inline">
+        <h1>小宝商城</h1>
+    </div>
+    <div data-role="content">
+        <div class="shopclass">
+            <div class="cname">全部</div>
+            <div class="cselect">选择分类</div>
+        </div>
+        <div class="shoplist">
+            <a href="#pagetwo" data-transition="slide">
+                <div class="shopframe">
+                    <div class="img"><img src="http://xyk.cebbank.com/upload/portal/201507/18050.jpg"></div>
+                    <div class="text">
+                        <div class="shopname">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopdesc">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopprice"><span style="color:red;font-size: 18px;">800</span>金币</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#pagetwo" data-transition="slide">
+                <div class="shopframe">
+                    <div class="img"><img src="http://xyk.cebbank.com/upload/portal/201507/18050.jpg"></div>
+                    <div class="text">
+                        <div class="shopname">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopdesc">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopprice"><span style="color:red;font-size: 18px;">800</span>金币</div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div><!-- /content -->
+    <!--<div data-role="footer" data-position="fixed" >-->
+        <!--<h1>行内页眉</h1>-->
+    <!--</div>-->
+</div>
+
+
+<div data-role="page" id="pagetwo">
+    <!--data-fullscreen="true"-->
+    <div data-role="header" data-position="inline">
+        <a style="top: 0;" href="#pageone" data-role="button" data-transition="slide" data-direction="reverse" data-icon="back" data-iconpos="notext">back</a>
+        <h5>商品详情</h5>
+    </div>
+    <div data-role="content">
+        <div class="shopnote">
+            <div class="shopline">
+                <div class="shopNprice"><span style="color:red;font-size: 30px;">800</span>金币</div>
+                <div class="shopNsum">剩余:20</div>
+            </div>
+            <div class="shoptitle">
+                商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情
+            </div>
+            <div class="shopN">
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+                f商品详情商品详情商品详情商品详情商品详情商品详情商品详情商品详情<br>
+            </div>
+        </div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" >
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">马上抢购</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+<include file="Public/foot" />
+<script>
+    //显示loading
+    function showLoading(){
+        $.mobile.loadingMessageTextVisible = true;
+        $.mobile.showPageLoadingMsg("a", "加载中..." );
+    }
+    //隐藏loading
+    function hideLoading(){
+        $.mobile.hidePageLoadingMsg();
+    }
+
+    function openNote(){
+        window.location.href="{:U('index')}#pagetwo";
+    }
+    function openNoteo(){
+        window.location.href="{:U('index')}#pageone";
+    }
+</script>

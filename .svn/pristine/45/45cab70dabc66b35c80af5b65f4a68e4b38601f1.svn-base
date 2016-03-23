@@ -1,0 +1,28 @@
+<include file="Public/head" title="{$webtitle}" />
+<style>
+    .bg{
+        background: #E83227;
+        float: left;
+    }
+    /*.pic{*/
+        /*position: absolute;*/
+        /*width: 100%;*/
+        /*float: left;*/
+        /*top:0px;*/
+    /*}*/
+
+
+</style>
+</head>
+<body>
+<div class="">
+    <!--<div  class="bg">-->
+        <!--<div class="pic">-->
+            <!--<img src="__IMG__/16-1-6.jpg">-->
+        <!--</div>-->
+    <!--</div>-->
+    skhgeoghoeghiowaegh skhgeoghoeghiowaegh skhgeoghoeghiowaegh skhgeoghoeghiowaegh skhgeoghoeghiowaegh skhgeoghoeghiowaegh skhgeoghoeghiowaegh
+</div>
+
+</body>
+</html>

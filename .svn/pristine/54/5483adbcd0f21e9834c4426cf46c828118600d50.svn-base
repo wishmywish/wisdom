@@ -1,0 +1,91 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class IndexController extends Controller {
+    public function index(){
+        set_theme();
+        $this->display();
+    }
+    public function main(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//判断是否已经登录
+        for ($i=0; $i <4 ; $i++) { 
+            $re_1[$i]["count"]=M('dealerbaseinfo')->where("f_dealer_strats=".$i)->count('f_dealerid');
+            $re_1[$i]["state"]=$i;
+        }
+         for ($i=0; $i <5 ; $i++) { 
+            $re = A('Api/Jhttp')->getAllCompanyInfo(0,0,$i);
+            $arr = json_decode($re,true);
+            $re_2[$i]["count"] = $arr['count'];
+            $re_2[$i]["state"]=$i;
+        }
+        // var_dump($re_2);exit();
+        $this->assign('re_1', $re_1);
+        $this->assign('re_2', $re_2);
+        $this->display();
+        
+    }
+
+    public function recommend(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//判断是否已经登录
+        
+        $this->display();
+        
+    }
+
+    //获取验证码
+    public function verify_c() {
+        verify();
+    }
+    //验证码检查
+    public function check_verify_c() {
+        $code = I('get.code','');
+        check_verify($code);
+    }
+    
+    public function test() {
+        set_theme();
+        echo date("Y-m-d H:i:s");
+        $this->display();
+    }
+
+    public function reg(){
+        set_theme();
+
+        $this->display();
+    }
+
+
+    public function getQuDao(){
+        
+        $start = I('post.start');
+        $end = I('post.end');
+        $qudao = I('post.qudao');
+        $start = str_replace("/","-",$start);
+        $end = str_replace("/","-",$end);
+
+        $sql  ='SELECT t.*, FROM_UNIXTIME(t.f_uptime,"%Y-%m-%d %H:%i:%s") FROM `t_regapp` AS t WHERE t.`f_udid`="'.$qudao.'" AND FROM_UNIXTIME(t.f_uptime,"%Y-%m-%d %H:%i:%s")>="'.$start.'" AND FROM_UNIXTIME(t.f_uptime,"%Y-%m-%d %H:%i:%s")<="'.$end.'" ';
+        $result = M('regapp')->query($sql);
+
+        if (count($result) > 0 ) {
+            $num = count($result);
+        }else{
+            $num = 0;
+        }
+
+        echo $num;
+    }
+
+    public function showUserDetail(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $userid=I('userId');
+        $reModi = A('Api/Web')->getUserDetail($userid);//公司详情
+        // var_dump($reModi);exit();
+        $this->assign('reModi', $reModi);
+        $this->display();
+    }
+
+    
+}

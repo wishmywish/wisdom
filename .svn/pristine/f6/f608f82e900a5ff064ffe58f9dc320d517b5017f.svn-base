@@ -1,0 +1,100 @@
+<div class="menu">
+    <div class="menu_big">
+        <div class="menu_big_list">
+            <ul id="menu_big_list_button">
+                <volist name="bigclass" id="vo">
+                    <li value="{$vo.f_sys_column_url}" id="{$vo.f_sys_column_cid}" contextmenu="{$vo.f_sys_column_urltype}">{$vo.f_sys_column_name}</li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+    <div class="menu_small">
+        <div class="menu_small_list">
+            <ul id="menu_small_list_button">
+                <volist name="smallclass" id="vos">
+                    <li value="{$vos.f_sys_column_url}" dir="{$vos.f_sys_column_target}" id="{$vos.f_sys_column_cid}" contextmenu="{$vos.f_sys_column_urltype}">{$vos.f_sys_column_name}</li>
+                </volist>
+            </ul>
+        </div>
+        <div class="menu_bg_line">
+            <ul id="menu_small_tab_line">
+                <volist name="smallclass" id="vos">
+                    <li></li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="width: 100%;height: 2px;clear:both;"></div>
+<script>
+    //默认加载
+    $(function(){
+        if(Cookie.readCookie('bigMenuIndex')===null){
+            Cookie.createCookie('bigMenuIndex',0,1);
+            Cookie.createCookie('smallMenuIndex',0,1);
+        }
+        //alert(Cookie.readCookie('bigMenuIndex'));
+        $('#menu_big_list_button li').eq(Cookie.readCookie('bigMenuIndex')).attr('class','selected');
+        $('#menu_small_list_button li').eq(Cookie.readCookie('smallMenuIndex')).attr('class','selected');
+        $('#menu_small_tab_line li').eq(Cookie.readCookie('smallMenuIndex')).attr('class','menu_tab_bg_line');
+    });
+    
+    $('#menu_small_list_button li').mouseover(function(){
+        var ind = parseInt($(this).index());
+       
+        if(ind!==parseInt(Cookie.readCookie('smallMenuIndex'))){
+            $('#menu_small_tab_line li').eq(ind).attr('class','menu_tab_bg_line');
+            $('#menu_small_tab_line li').eq(Cookie.readCookie('smallMenuIndex')).removeClass('menu_tab_bg_line');
+            
+            $('#menu_small_list_button li').eq(ind).attr('class','selected');
+            $('#menu_small_list_button li').eq(Cookie.readCookie('smallMenuIndex')).removeClass('selected');
+        }
+    });
+    $('#menu_small_list_button li').mouseout(function(){
+        var ind = $(this).index();
+        $('#menu_small_tab_line li').eq(ind).removeClass('menu_tab_bg_line');
+        $('#menu_small_tab_line li').eq(Cookie.readCookie('smallMenuIndex')).attr('class','menu_tab_bg_line');
+        
+        $('#menu_small_list_button li').eq(ind).removeClass('selected');
+        $('#menu_small_list_button li').eq(Cookie.readCookie('smallMenuIndex')).attr('class','selected');
+    });
+    
+    //点击大类
+    $('#menu_big_list_button').on('click','li',function(){
+        var url_0 = $(this).attr('value');
+        var key = $(this).attr('contextmenu');
+        Cookie.createCookie('bigMenuIndex',$(this).index(),1);
+        Cookie.createCookie('smallMenuIndex',0,1);
+        $('#menu_big_list_button li').removeClass('selected');
+        $(this).attr('class','selected');
+        if(key==='1'){
+            location.href = APP+"/"+url_0;
+        }else{
+            location.href = url_0;
+        }
+    });
+    
+    //点击小类
+    $('#menu_small_list_button').on('click','li',function(){
+        var url_0 = $(this).attr('value');
+        var key = $(this).attr('contextmenu');
+        var target_1 = $(this).attr('dir');
+        //alert(target_1);
+        Cookie.createCookie('smallMenuIndex',$(this).index(),1);
+        $('#menu_small_list_button li').removeClass('selected');
+        $(this).attr('class','selected');
+        if(key==='1'){
+            location.href = APP+"/"+url_0;
+        }else if(key==='2'){
+            if(target_1==="oms"){
+                //alert($('#oms').attr('src'));
+                //target_1.location.href = url_0;
+                $('#oms').attr('src',url_0);
+            }else{
+                location.href = url_0;
+            }
+        }
+    });
+
+    
+</script>

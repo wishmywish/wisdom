@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+}
+body {
+    background: #E7121D;
+}
+.c_head img{
+    width: 100%;
+}
+.content{
+    width: 100%;
+}
+.content .s_left{
+    width: 18%;
+    float: left;
+}
+.content .s_right{
+    width: 18%;
+    float: right;
+}
+.content .s_content{
+    width: 64%;
+    float: left;
+}
+.content .s_list{
+    background-image: url(/wisdom/Public/Mobileweb/Default/images/c_02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    /* margin: 0 0 0 0%; */
+    padding: 10%;
+
+}
+.content .s_list p{
+    width: 100%;
+    text-align: center;
+}
+.content .btns{
+    width: 96%;
+    /* float: left; */
+    margin: 10% 2% 0 2%;
+    text-align: center;
+    /* border: 1px solid; */
+    min-height: 16%;
+}
+.btn0{
+    background: url('/wisdom/Public/Mobileweb/Default/images/c_btns01.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 6% 15% 5% 20%;
+    letter-spacing: 6px;
+    font-weight: bold;
+    display: inline-block;
+    /* text-align: center; */
+    text-shadow: none;
+    line-height: 20px;
+    /* text-indent: 21px; */
+}
+.btn1{
+    background: url('/wisdom/Public/Mobileweb/Default/images/c_btns02.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 5% 2% 5% 10%;
+    font-weight: bold;
+    text-shadow: none;
+    border: none;
+    margin: 4% 0 0 0;
+}
+.btns1{
+    width: 76%;
+    padding: 5% 12%;
+    height: 5%;
+}
+.btns1  .btn2{
+    background: url('/wisdom/Public/Mobileweb/Default/images/c_btns03.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 3% 0% 3% 0%;
+    letter-spacing: 6px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    text-shadow: none;
+    line-height: 20px;
+    width: 47%;
+    margin: 0 1%;
+    float: left;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #b40104;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #b40104;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #b40104;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #b40104;
+}
+.content .choose_box{
+    width: 100%;
+    text-align: center;
+}
+.content  .tips{
+    width: 100%;
+    text-align: center;
+    float: left;
+    line-height: 25px;
+
+}
+.bg{
+    font-weight: bold;
+    font-size: 14px;
+}
+.sm{
+    font-size: 12px;
+
+}
+.content .foot{
+    width: 100%;
+    float: left;
+}

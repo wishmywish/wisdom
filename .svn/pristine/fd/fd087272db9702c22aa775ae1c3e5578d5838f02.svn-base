@@ -1,0 +1,215 @@
+<?php
+
+/**
+ * 给接口文件提供辅助方法
+ */
+
+namespace Api\Controller;
+use Think\Controller;
+class FunController extends Controller {
+    public $r;
+    /**
+     * 是否有下级分类
+     * @param int $tasktypeID 类型ID
+     * @return string 返回SQL中IN所使用ID字符串
+     */
+    public function getTaskTypeId($tasktypeID=1){
+        //echo $tasktypeID;
+        $tasktype = M('tasktype');//实例化任务类型表
+        $re = $tasktype->where('F_PARENTID='.$tasktypeID)->field('F_TYPEID')->select();
+        //echo $tasktype->getLastsql();
+        //pt($re);
+        if(count($re)==0){
+            return $tasktypeID;
+        }else{
+            foreach ($re as $key => $val) {
+                foreach ($val as $k => $v) {
+                    $this->r .= $v[0].",";
+                }
+            }
+            $this->r = rtrim($this->r, ",");
+            return $this->r;
+        }
+    }
+    
+    public function getTypeName($type='json') {
+        $tasktype = M('tasktype');//实例化任务类型表
+        $re = $tasktype->where('F_PARENTID=0')->select();
+        if($type=='json'){
+            echo json_encode($re);
+        }else{
+            return $re;
+        }
+    }
+    
+    //取连续签到的次数
+    public function getcheckinssum($userid) {
+        $s = strtotime(date('Y-m-d 23:59:59',strtotime("-6 day")));
+        $e = time();
+        if(date('m',$s)!=date('m',$e)){
+            $s = strtotime(date('Y-m-01 00:00:00'));
+        }
+        $map['f_strats'] = 0;
+        $map['f_userid'] = $userid;
+        $map['f_datetime'] = array(array('egt',$s),array('elt',$e));
+        $re = M('checkins')->where($map)->count();
+        //echo $re;
+        if($re>=6){
+            $map_1['f_strats']=1;
+            M('checkins')->where($map)->save($map_1);
+            //echo M('checkins')->getLastsql();
+        }
+        //echo M('checkins')->getLastsql();
+        //pt($map['f_datetime']);
+        return $re;
+    }
+    
+    //加减抽奖次数
+    public function lotterysum($userid,$sum=1,$addtype=1) {
+        $m['f_userid'] = $userid;
+        $re = M('lottery')->where($m)->count();
+        if($re==0){
+            $m['f_lottery_sum']=1;
+            $m['f_datetime']=time();
+            M('lottery')->add($m);
+        }else{
+            if($addtype==1){
+                M('lottery')->where('f_userid='.$userid)->setInc('f_lottery_sum',$sum);
+            }else{
+                M('lottery')->where('f_userid='.$userid)->setDec('f_lottery_sum',$sum);
+            }
+        }
+        //echo M('lottery')->getLastsql();
+    }
+    
+/**************************************************************
+ *
+ *  使用特定function对数组中所有元素做处理
+ *  @param  string  &$array     要处理的字符串
+ *  @param  string  $function   要执行的函数
+ *  @return boolean $apply_to_keys_also     是否也应用到key上
+ *  @access public
+ *************************************************************/
+function arrayRecursive(&$array, $function, $apply_to_keys_also = false)
+{
+    static $recursive_counter = 0;
+    if (++$recursive_counter > 1000) {
+        die('possible deep recursion attack');
+    }
+
+    foreach ($array as $key => $value) {
+        if (is_array($value)) {
+            $this->arrayRecursive($array[$key], $function, $apply_to_keys_also);
+        } else {
+            $array[$key] = $function($value);
+        }
+
+        if ($apply_to_keys_also && is_string($key)) {
+            $new_key = $function($key);
+            if ($new_key != $key) {
+                $array[$new_key] = $array[$key];
+                unset($array[$key]);
+            }
+        }
+    }
+    $recursive_counter--;
+}
+
+/**************************************************************
+ *  将数组转换为JSON字符串（兼容中文）
+ *  @param  array   $array      要转换的数组
+ *  @return string      转换得到的json字符串
+ *  @access public
+ *************************************************************/
+    public function JSON($array) {
+        $this->arrayRecursive($array, 'urlencode', true);
+        $json = json_encode($array);
+        return urldecode($json);
+    }
+    
+    
+    
+/**************************************************************
+ *  分享数据的判定
+ *  @param int  userid      用户ID
+ *  @param int  taskid      任务ID
+ *  @return string      是否
+ *************************************************************/
+    function isShare($userid,$taskid){
+        $map['f_userid'] = $userid;
+        $map['f_taskid'] = $taskid;
+        $map['f_shopingtype'] = 1;
+        $sum = M('share')->where($map)->count();
+        if($sum>=3){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
+
+    /**************************************************************
+     *  PHP判断用户权限
+     *  @param int  $classaccess      栏目权限
+     *  @param int  $actionaccess   功能权限
+     *  @return bool     是否
+     *************************************************************/
+    function isAccess($classaccess,$actionaccess='000000'){
+        //echo session('accessvalue');
+        //exit;
+        $checkaccess_key = "";
+        if(strstr(session('accessvalue'),$classaccess)){
+            //有权限
+            if($actionaccess!='000000'){//看操作的是不是栏目
+                //否：继续查找功能权限
+                $caccess = explode("{||}",session('accessvalue'));//进行第一次分组
+                //dump($caccess);
+                foreach($caccess as $key => $val){
+                    $checkaccess = explode("|",$val);//进行第二次分组
+                    $checkaccess_key = array_search($classaccess,$checkaccess);
+                }
+                if(!strstr($caccess[$checkaccess_key],$actionaccess)){
+                    $this->error('你无权使用此功能，如需使用联系管理员');
+                }
+            }
+        }else{
+            $this->error('你无权查看本栏目，如需使用联系管理员');
+        }
+
+    }
+
+    /**************************************************************
+     *  JS判断用户权限
+     *  @param int  $classaccess      栏目权限
+     *  @param int  $actionaccess   功能权限
+     *  @return bool     是否
+     *************************************************************/
+    function isJsAccess(){
+        //echo session('accessvalue');
+        //exit;
+        $classaccess = I('get.classaccess');
+        $actionaccess = I('get.actionaccess','000000');
+        $checkaccess_key = "";
+        //echo $classaccess.$actionaccess.session('accessvalue');
+        if(strstr(session('accessvalue'),$classaccess)){
+            //echo $classaccess.$actionaccess.session('accessvalue');
+            //有权限
+            if($actionaccess!='000000'){//看操作的是不是栏目
+                //否：继续查找功能权限
+                $caccess = explode("{||}",session('accessvalue'));//进行第一次分组
+                //dump($caccess);
+                foreach($caccess as $key => $val){
+                    $checkaccess = explode("|",$val);//进行第二次分组
+                    $checkaccess_key = array_search($classaccess,$checkaccess);
+                }
+                if(!strstr($caccess[$checkaccess_key],$actionaccess)){
+                    //echo 'a';
+                    echo "0";
+                }
+            }
+        }else{
+            //echo 'b';
+            echo "0";
+        }
+
+    }
+    }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        textarea{font-family: '宋体'; color: #646464; font-size: 14px;border: 1px solid #a9a9a9;}
+        textarea[disabled]{ background: #fafafa;}
+        input{border: 1px solid #a9a9a9;}
+        input[disabled]{ background: #fafafa;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden;width: 100%; }
+
+        .nav{float: left;
+            height: 25px;
+            margin: 20px 0 0 57px;
+            width: 100%;}
+        .nav ul li{display: inline-block;float: left;cursor: pointer;}
+        .nav .cur{color: red;}
+        .content{display: none;width: 100%;float: left;}
+        .content table{float: left;width: 786px;border: 1px solid #e2e0e0;border-collapse: collapse;text-align: center;margin: 20px 0 60px 0;}
+        .content table  tr  td{border: 1px solid #e2e0e0;line-height: 20px;}
+        .content table  tr  th{border: 1px solid #e2e0e0;font-weight: normal;}
+        .cur1{display: block;}
+        .list{ margin: 0 0 0 57px;}
+        .list ul{ margin-top:20px; width: 100%;}
+        .list ul input{width: 80px;margin: 0 -7px;  background: #fafafa;height: 25px;}
+        .list ul li{ float: left; margin-right: 25px;}
+        .list ul li span{width: 100px;text-align: right;display: inline-block;margin-right: 7px;}
+        .fj{float: right;}
+        .fj p{ margin: 0 0 5px;text-decoration: underline;}
+        .buts{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+   <div class="nav">
+       <ul>
+           <li class="cur">审批<span style="color: initial">&nbsp;|&nbsp;</span></li>
+           <li>流程</li>
+       </ul>
+
+   </div>
+    <div class="list">
+        <div class="content cur1">
+           <ul class="fl">
+               <li>
+                   <span>费用内容</span>
+                   <textarea style="float: right;height: 100px; width: 674px;" disabled="disabled"></textarea>
+               </li>
+           </ul>
+            <ul class="fl">
+                <li>
+                    <span>用款日期</span>
+                    <input type="text" disabled="disabled" value="2015-09-15"/>
+                </li>
+                <li>
+                    <span>费用类型</span>
+                    <input type="text" disabled="disabled" value="出差费用"/>
+                </li>
+                <li>
+                    <span>报销金额</span>
+                    <input type="text" disabled="disabled" value="1000.00"/>
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>附件</span>
+                    <div class="fj">
+                        <?PHP for($i=0;$i<5;$i++){?>
+                        <p>出差申请费.jpg</p>
+
+                        <?PHP }?>
+                    </div>
+
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批人</span>王求是
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批意见</span>
+                    <textarea style="float: right;height: 60px;width: 674px;" disabled="disabled">同意</textarea>
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>审批意见</span>
+                    <textarea style="float: right;height: 100px;width: 674px;"></textarea>
+                    <p style="margin-left: 90%;margin-top: 95px;color: red;">不超过500字</p>
+                </li>
+            </ul>
+            <div style="margin: 0 29%;float: left;">
+                <button class="buts">同意</button>
+                <button class="buts" >拒绝</button>
+                <button class="buts" >转批</button>
+                <button class="buts" >撤销</button>
+            </div>
+        </div>
+        <div class="content">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr style="height: 25px;">
+                    <th width="117" height="25">序号</th>
+                    <th width="130">审批人</th>
+                    <th width="150">操作</th>
+                    <th width="450">审批意见</th>
+                    <th width="200">审批时间</th>
+                </tr>
+                <?PHP for($i=0;$i<25;$i++){?>
+                <tr style="height: 50px;">
+                    <td><?PHP echo $i+1 ?></td>
+                    <td>刘蓉</td>
+                    <td>同意</td>
+                    <td>这个地方最多显示26个字，多出来的使用...进行缩显。这个地方最多显示26个字，多出来的使用...进行缩显，最多可换三行。</td>
+                    <td>2015-01-02 15:20:10 </td>
+                </tr>
+                <?PHP }?>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        $(".nav li").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".list .content").eq(myindex).addClass("cur1").siblings().removeClass("cur1");
+        })
+
+    })
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+</script>
+</body>
+</html>

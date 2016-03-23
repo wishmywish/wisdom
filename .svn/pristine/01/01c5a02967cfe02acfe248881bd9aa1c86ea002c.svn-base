@@ -1,0 +1,54 @@
+/**
+ * Created by Administrator on 2016/1/26.
+ */
+//点击开始按钮
+var totel = 0;
+var s = 30;
+//剩余的次数
+var times=3;
+
+function getmoney(){
+    //alert("11111111111");
+    var array = eval(cc);
+    var a = parseInt(99*Math.random());
+    totel += parseFloat(array[a]);
+    $("#money").html(fomatFloat(totel,2)+"元");
+}
+
+function  start(){
+    bb_1 = setInterval("bb()", 1000);
+    ss = setInterval("aa()", 500);
+    times=times-1;
+    $("#times").html("剩余"+times+"次");
+    $("#start").attr("onclick","");
+}
+
+function aa(){
+    if(s>=0){
+        $("#bb_time").html("倒计"+s+"秒");
+        var a = parseInt(8*Math.random());
+        var b = parseInt(8*Math.random());
+        $("#hongbao li").attr("onclick","");
+        $("#hongbao li i").attr("class","iconfont  icon-hongbao");
+        $("#hongbao li:eq("+a+") i").attr("class","active iconfont  icon-hongbao");
+        $("#hongbao li:eq("+a+")").attr("onclick","getmoney()");
+        $("#hongbao li:eq("+b+") i").attr("class","active iconfont  icon-hongbao");
+        $("#hongbao li:eq("+b+")").attr("onclick","getmoney()");
+    }else{
+        clearInterval(ss);
+        clearInterval(bb_1);
+        $("#hongbao li i").attr("class","iconfont  icon-hongbao");
+        $("#start").attr("onclick","start()");
+        s=30;
+        $("#bb_time").html("倒计"+s+"秒");
+    }
+}
+
+function bb(){
+    s-=1;
+}
+
+
+function fomatFloat(src,pos){
+    return Math.round(src*Math.pow(10, pos))/Math.pow(10, pos);
+}

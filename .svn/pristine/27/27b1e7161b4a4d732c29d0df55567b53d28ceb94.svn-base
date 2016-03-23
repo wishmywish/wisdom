@@ -1,0 +1,13 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="breadlist">登录成功，请进行下一步操作！</div>
+                <div class=""></div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+</html>

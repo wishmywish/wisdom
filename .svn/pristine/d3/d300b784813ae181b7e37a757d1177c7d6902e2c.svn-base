@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2015/8/17
+ * Time: 11:31
+ */
+
+namespace Taskadmin\Controller;
+use Think\Controller;
+
+
+class PushController extends Controller
+{
+    public function index(){
+
+    }
+}

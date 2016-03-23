@@ -1,0 +1,492 @@
+[ 2015-08-28T10:08:27+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:08:27+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:08:37+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Upfile/upF/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('55dfc2a53253f.jpg','20150828/','1440727717') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-28T10:08:41+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Upfile/upF/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0050s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('55dfc2a90e013.jpg','20150828/','1440727721') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:08:49+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'63','3','1440727729','144072772935990539','rr','2572','2573','2015-08-28','2015-09-02','r','17757128602','6','0','r') [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0110s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('523','658','1440727729','招商任务新增第一步') [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-28T10:08:54+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第二步','658','1440727734') [ RunTime:0.0090s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('658','r','r','0','33333333333','0','0','0','33333333333','4166666666.625','8333333333.25') [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:09:05+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0080s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增区域','658','1440727745') [ RunTime:0.0070s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('658','内蒙古|通辽市|库伦镇','33') [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:09:05+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=658
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=658 )  [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:09:10+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0110s ]
+SQL: INSERT INTO `t_taskmtgoodsdetail` (`f_taskid`,`f_goodsname`,`f_modle`,`f_unit`,`f_agencyprice`,`f_sellingprice`,`f_saleprice`) VALUES ('658','3','3','3','3','3','3') [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:09:10+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=658
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=658 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:09:59+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0920s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:09:59+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.1020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-28T10:10:00+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'63','3','1440727800','144072780032453216','rr','2572','2573','2015-08-28','2015-09-02','r','17757128602','6','0','r') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('523','659','1440727800','招商任务新增第一步') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:10:02+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第二步','659','1440727802') [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('659','r','r','0','33333333333','0','0','0','33333333333','4166666666.625','8333333333.25') [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-28T10:11:12+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:11:12+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:11:14+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'63','3','1440727874','144072787432619384','rr','2572','2573','2015-08-28','2015-09-02','r','17757128602','6','0','r') [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('523','660','1440727874','招商任务新增第一步') [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:11:15+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0110s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第二步','660','1440727875') [ RunTime:0.0110s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('660','r','r','0','33333333333','0','0','0','33333333333','4166666666.625','8333333333.25') [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:11:29+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_taskmtdetailedinfo` (`f_taskid`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_distributorsrequir`,`f_retailoutlets`,`f_channelpolicy`,`f_note`) VALUES ('660','r','r','r','r','r','r','r','<p><br/></p><p><strong>标题</strong></p><p><br/><strong><span style=\"font-size:12px;font-family: 宋体;color:red\"></span></strong><strong></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体\">参与说明：&nbsp;</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体\"><br/></span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商要求：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商区域及数量：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商产品：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商详情</span></strong></p><p style=\"margin-left:0\"><span style=\"font-size:12px;font-family:宋体;color:red\">经销要求：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">主销网点：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">广宣支持：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">品牌定位：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">品牌广告：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">产品卖点：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">目标消费者：</span><span style=\"font-size:12px;font-family:宋体\"></span></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">品牌介绍：</span></strong></p><p><span style=\"font-size:12px;font-family:宋体\"><br/><span></span><span></span></span></p><p><br/></p>') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第四步','660','1440727889') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:12:35+08:00 ] ::1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T10:12:35+08:00 ] ::1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:12:47+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('55dfc39f996f2.jpg','20150828/','1440727967') [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:12:52+08:00 ] ::1 /wisdom/index.php/Api/Upfile/upF/type/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('55dfc3a470bae.jpg','20150828/','1440727972') [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-08-28T10:12:59+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0150s ]
+SQL: INSERT INTO `t_task` (`f_creatuserid`,`f_paletid`,`f_companyid`,`f_tasktypeid`,`f_creatdate`,`f_surveno`,`f_title`,`f_fileid`,`f_fileid_ban`,`f_begindate`,`f_enddate`,`f_linkman`,`f_linkphone`,`f_status`,`f_harder`,`f_description`) VALUES ('0',NULL,'63','3','1440727979','144072797937672546','c','2574','2575','2015-08-28','2015-09-02','c','17757128602','6','0','c') [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0120s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_taskid`,`f_datetime`,`f_action`) VALUES ('523','661','1440727979','招商任务新增第一步') [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-28T10:13:06+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第二步','661','1440727986') [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_taskmtbaseinfo` (`f_taskid`,`f_mtbrand`,`f_mtgoods`,`f_tradeid`,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`) VALUES ('661','c','c','0','3333333333','3','0','0','3333333336','416666667','833333334') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:13:14+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0050s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增区域','661','1440727994') [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskmtareaqty` (`f_taskid`,`f_area`,`f_qty`) VALUES ('661','河北省|衡水市|枣强镇','3') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-28T10:13:14+08:00 ] ::1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=661
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=661 )  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-08-28T10:13:22+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_taskmtgoodsdetail` (`f_taskid`,`f_goodsname`,`f_modle`,`f_unit`,`f_agencyprice`,`f_sellingprice`,`f_saleprice`) VALUES ('661','3','3','3','3','3','3') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:13:22+08:00 ] ::1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=661
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=661 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-08-28T10:13:32+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_taskmtdetailedinfo` (`f_taskid`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_distributorsrequir`,`f_retailoutlets`,`f_channelpolicy`,`f_note`) VALUES ('661','3','3','3','3','3','3','3','<p><br/></p><p><strong>标题</strong></p><p><br/><strong><span style=\"font-size:12px;font-family: 宋体;color:red\"></span></strong><strong></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体\">参与说明：&nbsp;</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体\"><br/></span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商要求：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商区域及数量：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商产品：</span></strong></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">招商详情</span></strong></p><p style=\"margin-left:0\"><span style=\"font-size:12px;font-family:宋体;color:red\">经销要求：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">主销网点：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">广宣支持：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">品牌定位：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">品牌广告：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">产品卖点：</span></p><p><span style=\"font-size:12px;font-family:宋体;color:red\">目标消费者：</span><span style=\"font-size:12px;font-family:宋体\"></span></p><p><strong><span style=\"font-size:12px;font-family:宋体;color:red\">品牌介绍：</span></strong></p><p><span style=\"font-size:12px;font-family:宋体\"><br/><span></span><span></span></span></p><p><br/></p>') [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_action_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_action_log` (`f_userid`,`f_action`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增第四步','661','1440728012') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-28T10:13:36+08:00 ] ::1 /wisdom/index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_taskreject` [ RunTime:0.0070s ]
+SQL: INSERT INTO `t_taskreject` (`f_rejectuserid`,`f_reason`,`f_taskid`,`f_datetime`) VALUES ('523','招商任务新增完成','661','1440728016') [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_taskmtattach` (`f_fileid1`,`f_fileld2`,`f_fileid3`,`f_fileid4`,`f_fileid5`,`f_fileid6`,`f_taskid`) VALUES ('0','0','0','0','0','0','661') [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T14:44:18+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getPro&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=0 )  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-28T14:44:18+08:00 ] 127.0.0.1 /wisdom/index.php/Api/Info/conf?command=getArea&taskid=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=0 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

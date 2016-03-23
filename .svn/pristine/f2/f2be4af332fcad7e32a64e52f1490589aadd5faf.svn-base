@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main dl{ width: 100%;}
+        .main dl dt{width: 60px; height: 60px; border-radius: 30px; background: #ccc; }
+        .main dl dd{ line-height: 60px; margin-left: 10px;}
+        .main ul{ margin-top:20px; width: 100%;float: left}
+        .main ul li{line-height: 25px;float: left;}
+        .main ul li span{text-align: right;}
+        .fll{text-align: right; width: 100px;margin-right: 7px;}
+        .c_name{font-weight: 100;height: 20px;margin-right: 55px;text-align: center;width: 125px;}
+        .main span{color: red;}
+        /*.titname{  text-align: right;width: 60px;margin-right: 7px;float: left;}*/
+        .main input{height:25px;width:200px;}
+        .main select {height:30px;width:200px;}
+        /*.main select{float: right;height:28px;width:200px;}*/
+        .submit{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+        .reset{background-color: #eaeaea;margin: 30px 5px;border:1px;height: 25px;width: 70px;cursor: pointer;color: #000;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+    <ul>
+        <li class="fll">客户名称</li>
+        <li><input type="text" id="" style="width: 290px;" value="杭州XXX科技有限公司"/></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>拜访对象</li>
+        <li style="position: relative">
+            <input type="text" id=""  placeholder="从客户联系人中选择"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll">拜访方式</li>
+        <li>
+            <select name="source" id="">
+                <option value="0">--请选择--</option>
+                <option value="1">电话拜访</option>
+                <option value="2">上门拜访</option>
+            </select>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll">关联商机</li>
+        <li style="position: relative">
+            <input type="text" id=""  placeholder="从客户商机中选择"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>拜访主题</li>
+        <li><input type="text" id="" style="width: 500px;text-overflow: ellipsis;white-space: nowrap;color: red;"/><span>不超过50个字</span></li>
+    </ul>
+
+    <ul>
+        <li class="fll"><span>*</span>拜访日期</li>
+        <li> <input type="text" class="laydate-icon" id="visitTime" style="width: 180px;"/></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>主要参与人员</li>
+        <li style="position: relative">
+            <input type="text" id="" style="width: 290px;"  placeholder="从组织架构中选择人员"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll">拜访内容</li>
+        <li><textarea style="height: 100px;width: 500px;color: red;"></textarea><span>不超过500个字</span></li>
+    </ul>
+
+</div>
+<div style="text-align: center;"><button class="submit" id="s_submit">提交</button>
+    <button class="reset" onclick="reset()">取消</button>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+    var date = {
+        elem: '#visitTime',
+        format: 'YYYY-MM-DD',
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            return datas;
+        }
+    };
+    laydate(date);
+</script>
+</body>
+</html>

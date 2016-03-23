@@ -1,0 +1,43 @@
+<?php
+/**
+ * QQ
+ */
+namespace Home\Controller;
+use Think\Controller;
+
+class QQController extends Controller
+{
+
+
+    /**
+     * Step1：放置QQ登录按钮
+     */
+    function qq_auth(){
+        $this->display();
+    }
+
+    /**
+     * Step2：获取Authorization Code
+     */
+    function qq_back(){
+        $appid = '101263095';
+        $appkey = '5332a8f62f3137c91bffeff43cc810c5';
+        $scope='get_user_info,add_share';  //权限列表
+        $redirect_uri = 'http://intest.51lick.cn/index.php/Home/QQ/qq_back';  //回调地址，申请时填写的
+
+        $url = 'https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id='.$appid.'&redirect_uri='.$appkey.'&scope='.$scope.'&redirect_uri='.$redirect_uri;
+
+        echo "<script>location.href='".$url."'</script>";
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

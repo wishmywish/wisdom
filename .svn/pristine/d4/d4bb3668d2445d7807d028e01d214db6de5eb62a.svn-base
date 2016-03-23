@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>填写基本信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--标准mui.css-->
+    <css href="__CSS__/mui.min.css" />
+
+    <style>
+        .mui-content-padded{
+            padding-top:20px;
+        }
+        .mui-btn-primary{
+            background-color:#fe6700;
+            border:1px solid #fe6700;
+
+        }
+        .mui-content .mui-title1{
+            margin-top:10px;
+            color: #000000;
+            text-align:center;
+            font-size:20px;
+        }
+    </style>
+
+<body>
+<?php  echo  $unionid?>
+<div class="mui-content">
+    <p class="mui-title1">填写基本信息</p>
+    <div  class="mui-card">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>手机号</label>
+                <input id='phone' type="text" class="mui-input-clear mui-input"  onchange="testphone(this.value)" placeholder="请输入手机号">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input id='password' type="password" class="mui-input-clear mui-input" onchange="testpassword(this.value)" placeholder="请输入密码">
+            </div>
+            <div class="mui-input-row">
+                <label>验证码</label>
+                <input id='vercode' type="text" class="mui-input-clear mui-input"  onchange="testcode(this.value)" placeholder="请输入验证码">
+            </div>
+        </form>
+    </div>
+    <div class="mui-content-padded"  style="margin:-10px 18px 0 0;width: 100%;float: right;">
+            <button  id="getcode" style="width:30%;height:30px;padding-top:5px;font-size:13px;float: right;" class="mui-btn mui-btn-block mui-btn-primary">获取验证码</button>
+    </div>
+    <div class="mui-content-padded"  style="margin-top:50px">
+     <button  id="submit" style="width:78%;margin:auto;height:45px;padding-top:10px;"  class="mui-btn mui-btn-block mui-btn-primary">确定</button>
+    </div>
+
+    <div class="mui-content-padded">
+        <p  style="font-size:12px">1、如果你是我们的小宝用户，填写你的小宝账号和密码，以便我们验证，并与你的微信号进行绑定</p>
+        <p  style="font-size:12px">2、如果你不是我们的小宝用户，填写手机号与密码，并与你的微信号进行绑定</p>
+        <p  style="font-size:12px">3、以上操作我们保证不会泄露你的手机</p>
+        <p  style="font-size:12px">4、如有问题请联系我们客服：0571-88195693</p>
+    </div>
+    <input type="hidden"  id="unionid" value="{$unionid}">
+</div>
+
+<js href="__JS__/mui.min.js" />
+<js href="__STATIC__/jquery-1.11.2.min.js"/>
+<!--<js href="__JS__/jquery.mobile-1.4.5.min.js" />-->
+<script  type="text/javascript">
+     function testphone(phone){
+         if(phone==""){
+             alert("手机号码不能为空");
+         }else if(!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(phone)){
+             alert("手机号码格式不正确");
+         }
+     }
+
+     function  testpassword(password){
+         if(password==""){
+             alert("密码不能为空");
+         }
+     }
+
+//     function   testcode(code){
+////         var code = $("#vercode").val();
+//         var phone = $("#phone").val();
+//         if(code==""){
+//             alert("验证码不能为空");
+//             return false;
+//         }else if(phone==""){
+//             alert("手机号不能为空");
+//         }else{
+//             $.get(APP+"/Api/Info/conf","command=codeauth&code="+code+"&voicephone="+phone,function(val){
+//                 if(val.error_code=="success"){
+//                 }else{
+//                     alert("验证码验证失败");
+//                 }
+//             },"json");
+//         }
+//     }
+
+    //获取验证码
+//    $("#getcode").on("tap",function(){
+//        var phone = $("#phone").val();
+//        if(phone===""){
+//            alert("手机号不能为空");
+//            return false;
+//        }else {
+//            $.getJSON(APP + "/Api/Info/conf", "command=voicecode&voicephone=" + phone, function (val) {
+//                alert(val);
+//                if (val.error_code === "success") {
+//                    alert("验证码已发送");
+//                } else {
+//                    alert("验证码发送失败");
+//                }
+//            });
+//        }
+//    });
+
+    //绑定
+    $("#submit").on("tap",function(){
+        var code = $("#vercode").val();
+        var phone = $("#phone").val();
+        var password=$("#password").val();
+        var unionid=$("#unionid").val();
+        if(phone===""){
+            alert("手机号不能为空");
+            return false;
+        }
+        if(password==""){
+            alert("密码不能为空");
+            return false;
+        }
+//        if(code==""){
+//            alert("验证码不能为空");
+//            return false;
+//        }
+
+//        alert(phone+"=="+password+"");
+
+//        //发送绑定信息
+         $.post(APP+"/Api/Info/conf","command=addWeixin&mobile="+phone+"&password="+password+"&unionId="+unionid,function(val){
+               alert(val.error_text+"===");
+              if(val.error_code=="000000"){
+                   alert(val.error_text);
+                   location.href=APP+"/Mobileweb/Events/taskshare?userid="+val.userid;
+              }else{
+                    alert(val.error_text);
+              }
+
+        },"json");
+
+      });
+
+</script>
+</body>
+</html>

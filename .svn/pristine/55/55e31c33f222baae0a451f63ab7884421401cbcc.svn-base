@@ -1,0 +1,48 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+
+</style>
+<body>
+
+     <div class="add">
+        <div class='info' style="background-color:white;    height: 160px;">
+            <br>
+            <input type="hidden" id="taskid" name="taskid" value="{$reModi.list.f_tid}">
+
+			<div class="line">
+	            <div class="line_input">
+	                <span>任务原先开始时间：</span> 
+	                <input id="startdate" class="laydate-icon" style="width: 120px;" value="{$reModi.list.f_begindate}" readonly>
+	                <input id="time" type="hidden" value="{$reModi.list.f_begindate}" readonly>
+	                <input id="endtime" type="hidden" value="{$reModi.list.f_enddate}" readonly>
+	            </div>
+            </div><br>
+
+			<div class="line">
+	            <div class="line_input">
+	                <span>任务新开始时间：</span> &nbsp;&nbsp;&nbsp;
+	                <input id="newStartdate" class="laydate-icon" style="width: 120px;" value="{$reModi.list.f_begindate}">
+	            </div>
+            </div>
+
+            <a class="btn btn-default" href="#" role="button" id="updateBtn" style="  margin:30px 0 0px 230px;">确定</a>
+        </div>
+    </div>
+
+
+</body>
+<include file="Public/loadjs" />
+<script>
+    sublevel_out();//子窗口退出
+
+    var start = {
+        elem: '#newStartdate',
+        format: 'YYYY-MM-DD',
+        min: $("#time").val(), //设定最小日期为当前日期
+        max: $("#endtime").val(), //最大日期
+        //istime: true,
+        istoday: false,
+    };
+    laydate(start);
+
+</script>

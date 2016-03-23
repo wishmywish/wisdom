@@ -1,0 +1,149 @@
+<include file="Public/head" title="活跃度报表" />
+<style type="text/css">
+.action_search
+{
+    background-color: #fff;
+    margin:0  15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.action_search .tabwidth
+{
+    font-size: 18px;
+    width: 60px;
+    height:30px;
+    margin-left: 10px;
+    margin-top: 5px;
+    line-height:30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #3c8dbc;color:#fff;
+}
+
+</style>
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 活跃度报表</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='' id="messages"><a href="__APP__/Taskadmin/Salesreport/index" style="text-decoration:none;">活跃度报表</a></li>
+                        <li value="2" class='selected' style="width:200px;"><a href="__APP__/Taskadmin/Salesreport/shareNum" style="text-decoration:none;">推广赚日金币总数</a></li>
+                        <li value="3" class='' style="width:200px;"><a href="__APP__/Taskadmin/Salesreport/widelyShareNum" style="text-decoration:none;">随手赚日金币总数</a></li>
+                        <li value="4" class='' style="width:200px;"><a href="__APP__/Taskadmin/Salesreport/allTaskShare" style="text-decoration:none;">全部任务日分享数</a></li>
+                        <li value="5" class='' style="width:200px;"><a href="__APP__/Taskadmin/Salesreport/widelyFinish" style="text-decoration:none;">随手赚完成情况统计</a></li>
+                    </ul>
+
+                </div>
+
+            <div class="action_search">
+
+                <input type="text" id="searcharea" placeholder="请输入任务名称" style="width:140px;height: 22px;line-height: 22px;"/>
+
+                <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                至
+                <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                <span class="tabwidth" id="seach">搜索</span>
+                <span class="tabwidth" id="empty">清空</span>
+                <span class="tabwidth" id="export"><a href="__APP__/Taskadmin/Salesreport/exportPush" style="text-decoration:none;color:white;">导出</a></span>
+                <input type="hidden" id="sTime" name="sTime" value="">
+                <input type="hidden" id="eTime" name="eTime" value="">
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li style='width:35%;'>任务名称</li>
+                    <li style='width:15%;'>任务金币</li>
+                    <li style='width:20%;'>分享日期</li>
+                    <li style='width:15%;'>分享次数</li>
+                    <li style='width:15%;'>有效获得金币总数</li>
+                </ul>
+                <div class='listinfo'>
+                        <ul>
+                            <li style='width:100%;'>无相应数据</li>
+                        </ul>
+                </div>
+                <div class="page"></div>
+            </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+    function getBeforeDate(n){
+        var n = n;
+        var d = new Date();
+        var year = d.getFullYear();
+        var mon=d.getMonth()+1;
+        var day=d.getDate();
+        if(day <= n){
+                if(mon>1) {
+                   mon=mon-1;
+                }
+               else {
+                 year = year-1;
+                 mon = 12;
+                 }
+               }
+              d.setDate(d.getDate()-n);
+              year = d.getFullYear();
+              mon=d.getMonth()+1;
+              day=d.getDate();
+         s = year+"-"+(mon<10?('0'+mon):mon)+"-"+(day<10?('0'+day):day);
+         return s;
+    }
+
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(), //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),//最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+    $("#startTime").val(getBeforeDate(7));
+    $("#endTime").val(getBeforeDate(0));
+
+    plist_shareNum($("#startTime").val(),$("#endTime").val(),$("#searcharea").val());
+
+    $("#empty").click(function(){
+         $("#searcharea").val("");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+        var  taskTitle=$("#searcharea").val();
+
+
+        if(startTime==""||endTime==""){
+            layer.msg("请选择查询时间",{icon:8});
+           return false;
+        }
+        if(startTime>endTime){
+            layer.msg("起始时间不能超过终止时间",{icon:8});
+           return false;
+        }
+        plist_shareNum($("#startTime").val(),$("#endTime").val(),$("#searcharea").val());
+
+    });
+
+    </script>
+</html>

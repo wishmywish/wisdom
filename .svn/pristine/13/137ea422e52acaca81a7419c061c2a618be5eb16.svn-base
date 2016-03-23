@@ -1,0 +1,31 @@
+<?php
+/**
+ * Description of GroupController
+ *
+ * @author Administrator
+ */
+namespace Admin\Controller;
+use Think\Controller;
+class GroupController extends Controller {
+    //put your code here
+    function index(){
+        set_theme();
+        $this->display();
+    }
+    //新建员工
+     function addStaff(){
+        set_theme();
+        $this->display();
+    }
+    
+    //新建部门
+    function  addDept(){
+        set_theme();
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+}

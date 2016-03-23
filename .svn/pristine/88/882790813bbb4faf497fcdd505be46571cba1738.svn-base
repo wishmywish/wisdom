@@ -1,0 +1,220 @@
+<?php
+
+/**
+ * 给接口文件提供辅助方法
+ */
+
+namespace Api\Controller;
+use Think\Controller;
+class FunController extends Controller {
+    public $r;
+    /**
+     * 是否有下级分类
+     * @param int $tasktypeID 类型ID
+     * @return string 返回SQL中IN所使用ID字符串
+     */
+    public function getTaskTypeId($tasktypeID=1){
+        //echo $tasktypeID;
+        $tasktype = M('tasktype');//实例化任务类型表
+        $re = $tasktype->where('F_PARENTID='.$tasktypeID)->field('F_TYPEID')->select();
+        //echo $tasktype->getLastsql();
+        //pt($re);
+        if(count($re)==0){
+            return $tasktypeID;
+        }else{
+            foreach ($re as $key => $val) {
+                foreach ($val as $k => $v) {
+                    $this->r .= $v[0].",";
+                }
+            }
+            $this->r = rtrim($this->r, ",");
+            return $this->r;
+        }
+    }
+    
+    public function getTypeName($type='json') {
+        $tasktype = M('tasktype');//实例化任务类型表
+        $re = $tasktype->where('F_PARENTID=0')->select();
+        if($type=='json'){
+            echo json_encode($re);
+        }else{
+            return $re;
+        }
+    }
+    
+    //取连续签到的次数
+    public function getcheckinssum($userid) {
+        $s = strtotime(date('Y-m-d 23:59:59',strtotime("-6 day")));
+        $e = time();
+        if(date('m',$s)!=date('m',$e)){
+            $s = strtotime(date('Y-m-01 00:00:00'));
+        }
+        $map['f_strats'] = 0;
+        $map['f_userid'] = $userid;
+        $map['f_datetime'] = array(array('egt',$s),array('elt',$e));
+        $re = M('checkins')->where($map)->count();
+        //echo $re;
+        if($re>=6){
+            $map_1['f_strats']=1;
+            M('checkins')->where($map)->save($map_1);
+            //echo M('checkins')->getLastsql();
+        }
+        //echo M('checkins')->getLastsql();
+        //pt($map['f_datetime']);
+        return $re;
+    }
+    
+    //加减抽奖次数
+    public function lotterysum($userid,$sum=1,$addtype=1) {
+        $m['f_userid'] = $userid;
+        $re = M('lottery')->where($m)->count();
+        if($re==0){
+            $m['f_lottery_sum']=1;
+            $m['f_datetime']=time();
+            M('lottery')->add($m);
+        }else{
+            if($addtype==1){
+                M('lottery')->where('f_userid='.$userid)->setInc('f_lottery_sum',$sum);
+            }else{
+                M('lottery')->where('f_userid='.$userid)->setDec('f_lottery_sum',$sum);
+            }
+        }
+        //echo M('lottery')->getLastsql();
+    }
+    
+/**************************************************************
+ *
+ *  使用特定function对数组中所有元素做处理
+ *  @param  string  &$array     要处理的字符串
+ *  @param  string  $function   要执行的函数
+ *  @return boolean $apply_to_keys_also     是否也应用到key上
+ *  @access public
+ *************************************************************/
+function arrayRecursive(&$array, $function, $apply_to_keys_also = false)
+{
+    static $recursive_counter = 0;
+    if (++$recursive_counter > 1000) {
+        die('possible deep recursion attack');
+    }
+
+    foreach ($array as $key => $value) {
+        if (is_array($value)) {
+            $this->arrayRecursive($array[$key], $function, $apply_to_keys_also);
+        } else {
+            $array[$key] = $function($value);
+        }
+
+        if ($apply_to_keys_also && is_string($key)) {
+            $new_key = $function($key);
+            if ($new_key != $key) {
+                $array[$new_key] = $array[$key];
+                unset($array[$key]);
+            }
+        }
+    }
+    $recursive_counter--;
+}
+
+/**************************************************************
+ *  将数组转换为JSON字符串（兼容中文）
+ *  @param  array   $array      要转换的数组
+ *  @return string      转换得到的json字符串
+ *  @access public
+ *************************************************************/
+    public function JSON($array) {
+        $this->arrayRecursive($array, 'urlencode', true);
+        $json = json_encode($array);
+        return urldecode($json);
+    }
+    
+    
+    
+/**************************************************************
+ *  分享数据的判定
+ *  @param int  userid      用户ID
+ *  @param int  taskid      任务ID
+ *  @return string      是否
+ *************************************************************/
+    function isShare($userid,$taskid){
+        $map['f_userid'] = $userid;
+        $map['f_taskid'] = $taskid;
+        $map['f_shopingtype'] = 1;
+        $sum = M('share')->where($map)->count();
+        if($sum>=3){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
+
+    /**************************************************************
+     *  PHP判断用户权限
+     *  @param int  $classaccess      栏目权限
+     *  @param int  $actionaccess   功能权限
+     *  @return bool     是否
+     *************************************************************/
+    function isAccess($classaccess,$actionaccess='000000'){
+        //echo session('accessvalue');
+        //exit;
+        $checkaccess_key = "";
+        if(strstr(session('accessvalue'),$classaccess)){
+            //有权限
+            if($actionaccess!='000000'){//看操作的是不是栏目
+                //否：继续查找功能权限
+                $caccess = explode("{||}",session('accessvalue'));//进行第一次分组
+                //dump($caccess);
+                foreach($caccess as $key => $val){
+                    $checkaccess = explode("|",$val);//进行第二次分组
+                    $checkaccess_key = array_search($classaccess,$checkaccess);
+                }
+                if(!strstr($caccess[$checkaccess_key],$actionaccess)){
+                    $this->error('你无权使用此功能，如需使用联系管理员');
+                }
+            }
+        }else{
+            $this->error('你无权查看本栏目，如需使用联系管理员');
+        }
+
+    }
+
+    /**************************************************************
+     *  JS判断用户权限
+     *  @param int  $classaccess      栏目权限
+     *  @param int  $actionaccess   功能权限
+     *  @return bool     是否
+     *************************************************************/
+    function isJsAccess(){
+        //echo session('accessvalue');
+        //exit;
+        $classaccess = I('get.classaccess');
+        $actionaccess = I('get.actionaccess','000000');
+        $checkaccess_key = "";
+        //echo $classaccess.$actionaccess.session('accessvalue');
+        if(strstr(session('accessvalue'),$classaccess)){
+            //echo $classaccess.$actionaccess.session('accessvalue');
+            //有权限
+            if($actionaccess!='000000'){//看操作的是不是栏目
+                //否：继续查找功能权限
+                $caccess = explode("{||}",session('accessvalue'));//进行第一次分组
+                //dump($caccess);
+                foreach($caccess as $key => $val){
+                    $checkaccess = explode("|",$val);//进行第二次分组
+                    $checkaccess_key = array_search($classaccess,$checkaccess);
+                }
+                if(!strstr($caccess[$checkaccess_key],$actionaccess)){
+                    //echo 'a';
+                    echo "0";
+                }
+            }
+        }else{
+            //echo 'b';
+            echo "0";
+        }
+
+    }
+
+    function base64(){
+        $aa="WwogIHsKICAgICJuYW1lIiA6ICLpg5Hkuq4iLAogICAgInBob25lIiA6ICIxMzk1NzEzNTk5MCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnjovkuLkiLAogICAgInBob25lIiA6ICIxMzk1NzA4NjE0OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpvpnkuYvpn7UiLAogICAgInBob25lIiA6ICIxMzg2ODAwMTEyNSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLljZXnu7TmhY4iLAogICAgInBob25lIiA6ICIxMzgwNTcyMjgxMSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/mo64iLAogICAgInBob25lIiA6ICIxNTg4ODgyNjQ3OSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLkuprkupoiLAogICAgInBob25lIiA6ICIxMzY0MDQzODQ4OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLoiIXlpogiLAogICAgInBob25lIiA6ICIxMzA2NzgzNjg2OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlvKDljY7lhpsiLAogICAgInBob25lIiA6ICIxMzM5NjU5MjMyMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLolKHml6DlvLoiLAogICAgInBob25lIiA6ICIxMzg2ODAzNDMyMiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlpKfmgZLmkanlpKnpkrHlm73nuqIiLAogICAgInBob25lIiA6ICIxNTM0NTg4MjE2NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpg63ls7AiLAogICAgInBob25lIiA6ICIxMzUwNjgxNTY4MCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlkLTop4Lnu58iLAogICAgInBob25lIiA6ICIxNTEwNTc4MjY3OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLoooHmtIEiLAogICAgInBob25lIiA6ICIxODE1NzEzMTc1OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmsLjms6IiLAogICAgInBob25lIiA6ICIxMzU2NzYyNjk1MCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/lhpvogIHlqYYiLAogICAgInBob25lIiA6ICIxMzc1ODI4NjQzNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpobrkuLAiLAogICAgInBob25lIiA6ICIxMzU4ODE5NjkwMiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLogIHog5YiLAogICAgInBob25lIiA6ICIxMzU4ODc3ODMyMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlvKDnj4rlqJwiLAogICAgInBob25lIiA6ICIxMzM1NzE5ODMzOSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnm4rlubMiLAogICAgInBob25lIiA6ICIxMzg2ODAwMjc4MSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/lrociLAogICAgInBob25lIiA6ICIxMzk2ODAzNDUwNSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlvKDpk7blqJ8iLAogICAgInBob25lIiA6ICIxODk1ODE2MTg3NSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmlofmlociLAogICAgInBob25lIiA6ICIxNTg2ODg2MjcwNyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnq6DmlY/lkJsiLAogICAgInBob25lIiA6ICIxMzY1NjYzNjgzMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlo6voia8iLAogICAgInBob25lIiA6ICIxMzczNTg3MzI3OSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpqazlipvnlJ8iLAogICAgInBob25lIiA6ICIxMzU4ODIzMzk3NCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnq6XnpLzlhpsiLAogICAgInBob25lIiA6ICIxMzgyNDc3MjMzNSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLljZXotKTmhaciLAogICAgInBob25lIiA6ICIxNTkyNTYzNjA2NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnq6DpkasiLAogICAgInBob25lIiA6ICIxNTM1NTA1MTUwMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlpKflp5AiLAogICAgInBob25lIiA6ICIxMzgxOTEyNTYzNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLliJjnh5UiLAogICAgInBob25lIiA6ICIxMzU2NzYzODAxMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlupTmsrvmgZIiLAogICAgInBob25lIiA6ICIxNTg4ODgxODE0NCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpu4TlhpsiLAogICAgInBob25lIiA6ICIxNTMwNjgxNTgxMSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlsI/mtbciLAogICAgInBob25lIiA6ICIxNTA1NzEwMTQ0NCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLph5HmhafplIsiLAogICAgInBob25lIiA6ICIxMzA3MzY2Mzg2MSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7luIjlgoXlgZzovaYiLAogICAgInBob25lIiA6ICIxNTk4ODEzMTQwNyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmr5vmnZHkvJ8iLAogICAgInBob25lIiA6ICIxMzE3NTAyNjQyMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmYjpobnpmLMiLAogICAgInBob25lIiA6ICIxMzU4ODIzMjIyMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmYjnkZsiLAogICAgInBob25lIiA6ICIxMzg2ODAxMDAxMSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmpbzkuIDmnZEiLAogICAgInBob25lIiA6ICIxODYwNTcxMTYwOSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmsojkvJ8iLAogICAgInBob25lIiA6ICIxMzc1NzEwNTQzNCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLph5EiLAogICAgInBob25lIiA6ICIxMzc1MDg5NjU1MSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7mtbfkuLkiLAogICAgInBob25lIiA6ICIxODk2ODAzODkzNyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnm5vmsrvlubMiLAogICAgInBob25lIiA6ICIxNTA2ODgyNjg1NiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlj7bnpLzlqJ8iLAogICAgInBob25lIiA6ICIxMzk1NzA3NzE5MCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlm77ngbXku7votoUiLAogICAgInBob25lIiA6ICIxMzYwMDUzNzY3OSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlr4zlkJvlu7oiLAogICAgInBob25lIiA6ICIxMzU3NTM3NDMwOSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLog6HlnZoiLAogICAgInBob25lIiA6ICIxMzg1ODE0NjYxMSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlvKDlhpsiLAogICAgInBob25lIiA6ICIxMzQ1NjgzMTU1MyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlsI/oirMiLAogICAgInBob25lIiA6ICIxNTg4ODg1ODkyOCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmpbzljY7lro8iLAogICAgInBob25lIiA6ICIxMzkwNjgxNjg2OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7nvo7lvq4iLAogICAgInBob25lIiA6ICIxODk1ODE2OTExNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLkvJflipvlvKDkuLkiLAogICAgInBob25lIiA6ICIxMzc3NzM2NDcxMSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7mtpsiLAogICAgInBob25lIiA6ICIxNTk4ODE1OTI1NCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLph5HoirjpnaLppoYiLAogICAgInBob25lIiA6ICIxNTI1ODgzNDI0MSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlkajlsI/nvqQiLAogICAgInBob25lIiA6ICIxMzkwNjUzOTMyNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlu7rlnaQiLAogICAgInBob25lIiA6ICIxMzkwNjgxNjAzNyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmpbzpkp/msJEiLAogICAgInBob25lIiA6ICIxNTg2OTA0OTIyNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlpKfoiIXoiIUiLAogICAgInBob25lIiA6ICIxMzM1NzE1OTMzMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLph5Hpu5vkvbMiLAogICAgInBob25lIiA6ICIxMzM3MjUxOTI4OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnvZflrofnv5QiLAogICAgInBob25lIiA6ICIxMzU4ODEyNDIxNyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/lubMiLAogICAgInBob25lIiA6ICIxMzU4ODg1NjI4NiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7lhbUiLAogICAgInBob25lIiA6ICIxNTk2ODgzNjUyMiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpq5jombnpmL/lp6giLAogICAgInBob25lIiA6ICIxMzg2ODAwNTg3NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlkajmnpciLAogICAgInBob25lIiA6ICIxMzAxODkwMzE4OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpgrnlrpfluq0iLAogICAgInBob25lIiA6ICIxNTMwNTcxMzgzNSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnjovlh68iLAogICAgInBob25lIiA6ICIxMzYwMDUzMTgwMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmsaoiLAogICAgInBob25lIiA6ICIxODYyNjg3MDMzMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7liZHms6IiLAogICAgInBob25lIiA6ICIxMzg1NzE5MTg5MCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmnY7mrKMiLAogICAgInBob25lIiA6ICIxNTA2ODg4Njg4NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/kvbMiLAogICAgInBob25lIiA6ICIxNTk2NzE2NzcxNCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/mooEiLAogICAgInBob25lIiA6ICIxNTM5NzExMTM1MyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpvI7op4bovr7lsI/osKIiLAogICAgInBob25lIiA6ICIxNTI1ODgyOTc0MSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnvZfpm6rpo54iLAogICAgInBob25lIiA6ICIxNTg4ODg1ODgzMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpk7bmtbciLAogICAgInBob25lIiA6ICIxMzgwNjUyMTE2MiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnvZflh68iLAogICAgInBob25lIiA6ICIxODk2OTA0OTkwNSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlpI/nu4PlhpsiLAogICAgInBob25lIiA6ICIxMzg1ODE3NzAxMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnhooiLAogICAgInBob25lIiA6ICIxMzM5NTcxMzU4NSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLog6EiLAogICAgInBob25lIiA6ICIxMzk2NzE1NTUzMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlo6vmmI4iLAogICAgInBob25lIiA6ICIxODk2ODAzOTA4MyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmvZjpnZkiLAogICAgInBob25lIiA6ICIxODY1Nzc4NzMwMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLnjovkuL3lvbEiLAogICAgInBob25lIiA6ICIxODM1NzE2NzcyNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmmJPnibnmnLEiLAogICAgInBob25lIiA6ICIxODA1ODgxNjMyMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/miJAiLAogICAgInBob25lIiA6ICIxNTM3MjQzMDQ2NiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmoIfoh7Tmr5vkuL3lqJwiLAogICAgInBob25lIiA6ICIxODA2OTc5NTk2NiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLotbXkuL3kvJ8iLAogICAgInBob25lIiA6ICIxNTMyNTk3NjExNiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlhqDpgJrog6EiLAogICAgInBob25lIiA6ICIxODY1ODg5ODc2NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLotbDov5tpdCIsCiAgICAicGhvbmUiIDogIjE4NjA1NzEzNTk4IgogIH0sCiAgewogICAgIm5hbWUiIDogIuS8l+WKmyIsCiAgICAicGhvbmUiIDogIjE4MjU4MjgyMDgwIgogIH0sCiAgewogICAgIm5hbWUiIDogIuWwj+WnmiIsCiAgICAicGhvbmUiIDogIjE4OTY4MDMwNzEyIgogIH0sCiAgewogICAgIm5hbWUiIDogIue9l+i2iuS6kSIsCiAgICAicGhvbmUiIDogIjE4OTY4MDMwOTAyIgogIH0sCiAgewogICAgIm5hbWUiIDogIuWRqOaZk+WQmyIsCiAgICAicGhvbmUiIDogIjEzNjY2NTc0MjIyIgogIH0sCiAgewogICAgIm5hbWUiIDogIui1teWGmyIsCiAgICAicGhvbmUiIDogIjE1MzA2NTg5MDY2IgogIH0sCiAgewogICAgIm5hbWUiIDogIumZiOazoiIsCiAgICAicGhvbmUiIDogIjEzMzM1ODEwODMzIgogIH0sCiAgewogICAgIm5hbWUiIDogIuiTneiLsSIsCiAgICAicGhvbmUiIDogIjE1ODY3MTgwNTUyIgogIH0sCiAgewogICAgIm5hbWUiIDogIualvOWrgeWujyIsCiAgICAicGhvbmUiIDogIjEzNTA2ODE2NzY2IgogIH0sCiAgewogICAgIm5hbWUiIDogIueQhuWPkSIsCiAgICAicGhvbmUiIDogIjEzMTU3MTQxMzAwIgogIH0sCiAgewogICAgIm5hbWUiIDogIuaxquW/l+WdmiIsCiAgICAicGhvbmUiIDogIjE1NjY5OTE4MTgwIgogIH0sCiAgewogICAgIm5hbWUiIDogIuW+kOa1t+aYjiIsCiAgICAicGhvbmUiIDogIjE4NjY4MjA3NDk4IgogIH0sCiAgewogICAgIm5hbWUiIDogIumDkeS/niIsCiAgICAicGhvbmUiIDogIjE1OTY3MTI3MTc2IgogIH0sCiAgewogICAgIm5hbWUiIDogIuaZk+aYjiIsCiAgICAicGhvbmUiIDogIjEzOTY4MDI1MTE1IgogIH0sCiAgewogICAgIm5hbWUiIDogIui1teWHryIsCiAgICAicGhvbmUiIDogIjE1MTU3MTU4ODIzIgogIH0sCiAgewogICAgIm5hbWUiIDogIuiTneahpSIsCiAgICAicGhvbmUiIDogIjE4Njk2NjI2MTgxIgogIH0sCiAgewogICAgIm5hbWUiIDogIueoi+mUkCIsCiAgICAicGhvbmUiIDogIjEzNTc1MzgxMDg0IgogIH0sCiAgewogICAgIm5hbWUiIDogIueUteW3peadqOWyrSIsCiAgICAicGhvbmUiIDogIjEzNjQ2ODc5ODg0IgogIH0sCiAgewogICAgIm5hbWUiIDogIuWQtOavhSIsCiAgICAicGhvbmUiIDogIjEzNDUxNzI1NDMxIgogIH0sCiAgewogICAgIm5hbWUiIDogIuadjuaVjyIsCiAgICAicGhvbmUiIDogIjE1ODI0NDgzMTExIgogIH0sCiAgewogICAgIm5hbWUiIDogIueOi+mHkei/qiIsCiAgICAicGhvbmUiIDogIjEzNTY2NjE5MTcwIgogIH0sCiAgewogICAgIm5hbWUiIDogIuWUkOWIqemUiyIsCiAgICAicGhvbmUiIDogIjEzNzM1ODI0ODg3IgogIH0sCiAgewogICAgIm5hbWUiIDogIua9mOi/juS6miIsCiAgICAicGhvbmUiIDogIjE1OTg4MTIxNjk0IgogIH0sCiAgewogICAgIm5hbWUiIDogIuS4luWvvCDnjovmsYLmmK8iLAogICAgInBob25lIiA6ICIxMzk1NzE2MjQyMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLml6XmmIzlsI/mva0iLAogICAgInBob25lIiA6ICIxODk2ODAyMTY3MiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLph5Hpm4UiLAogICAgInBob25lIiA6ICIxMzgxOTQ2MTE2MiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmYjml60iLAogICAgInBob25lIiA6ICIxNTk5MDAwNjU1NyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLliJgg5rC055S15belIiwKICAgICJwaG9uZSIgOiAiMTg5NjgwMjAxMzYiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5b6Q6ZGrIiwKICAgICJwaG9uZSIgOiAiMTg3NTgxMzg4MDgiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5p2c6Iqz5pWPIiwKICAgICJwaG9uZSIgOiAiMTUwNjg3Mjk4OTMiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5p2O546yIiwKICAgICJwaG9uZSIgOiAiMTU2NTgwMjk5OTMiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5Yas55OcIiwKICAgICJwaG9uZSIgOiAiMTM2NjY1MDgzMDAiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5r2Y57+g57+hIiwKICAgICJwaG9uZSIgOiAiMTgzNjg4NTc1MTIiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5ZGo5Yip6ZSLIiwKICAgICJwaG9uZSIgOiAiMTg5MDU4ODkwOTAiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5a6J5p2R5bCP5aaIIiwKICAgICJwaG9uZSIgOiAiMTM4MTkxNzU2ODIiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5Y2O57yT57yTIiwKICAgICJwaG9uZSIgOiAiMTUyNTcxMzMwMDMiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5rGq5pmT6I2jIiwKICAgICJwaG9uZSIgOiAiMTM5NjgwMzYwMDkiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5p2O5belIiwKICAgICJwaG9uZSIgOiAiMTgwNjc5NTYzNjYiCiAgfSwKICB7CiAgICAibmFtZSIgOiAi5aSp55uu5bGxIOmZsyIsCiAgICAicGhvbmUiIDogIjEzODU4MTA1ODIwIgogIH0sCiAgewogICAgIm5hbWUiIDogIueskeeskSIsCiAgICAicGhvbmUiIDogIjEzNzc3NTc2NDIwIgogIH0sCiAgewogICAgIm5hbWUiIDogIuW8oOWHryIsCiAgICAicGhvbmUiIDogIjE1MTU3MTU4ODIzIgogIH0sCiAgewogICAgIm5hbWUiIDogIuW8oC3mkannmoQiLAogICAgInBob25lIiA6ICIxODM2ODAwMjcwMiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlrZnmjaLplIEiLAogICAgInBob25lIiA6ICIxODc1ODU3OTI2OCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmYjlv5fliJrlvq7kv6Hnq5kiLAogICAgInBob25lIiA6ICIxMzU4ODg2MDM0MiIKICB9LAogIHsKICAgICJuYW1lIiA6ICLpmL/ljY4iLAogICAgInBob25lIiA6ICIxMzExNjc4MzcwMyIKICB9LAogIHsKICAgICJuYW1lIiA6ICLlj7bmsLjms6IiLAogICAgInBob25lIiA6ICIxMzg4NDM4ODU1NSIKICB9LAogIHsKICAgICJuYW1lIiA6ICLmpbzmr4UiLAogICAgInBob25lIiA6ICIxNTA1NzEzMjg0NCIKICB9LAogIHsKICAgICJuYW1lIiA6ICLokovnpLzlhpsiLAogICAgInBob25lIiA6ICIxNTg2OTEwMjEzMCIKICB9LAogIHsKICAgICJuYW1lIiA6ICIxMzUyMzUiLAogICAgInBob25lIiA6ICIxMzcyMzU3NTI0NyIKICB9Cl0=";
+        pt(json_decode(base64_decode($aa),true));
+    }
+    }

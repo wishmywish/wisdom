@@ -1,0 +1,126 @@
+<include file="Public/head" title="{$webtitle}"/>
+<style>
+    .heads span{
+        float: left;
+        line-height: 49px;
+        color: #fff;
+        text-shadow: none;
+        padding-left: 15px;
+    }
+
+    .list{
+        padding: 10px;
+        line-height: 22px;
+        min-width: 87%;
+        height: 90px;
+        margin: 0 10px;
+    }
+    .btn{
+        border-radius: 5px;
+        border: 1px solid #ff6600;
+        /* padding: 4px 20px; */
+         margin-right: 2px;
+        float: right;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+    *{padding: 0; margin: 0}
+
+    .show_tips1{
+        position: absolute;
+        display: none;
+        z-index: 3000;
+        background-color: #FFF;
+        top: 25%;
+        left: 7%;
+        width: 85%;
+        height: 10%;
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding-top: 10px;
+        text-shadow: none;
+        border-radius: 10px;
+    }
+    .btns{
+        position: absolute;
+        background-color: #fff;
+        top: 85px;
+        height:30px;
+        width:100%;
+        line-height:40px;
+        text-align:center;
+        color: #36F;
+        border-top: 1px solid #ccc;
+    }
+    .btns span:first-child{
+        width: 48%;
+        border-right: 1px solid #ccc;
+        height: 40px;
+        display: block;
+        float: left;
+    }
+
+</style>
+</head>
+<include file="Public/loadjs"/>
+<body>
+
+<div data-role="page" id="page{$k}">
+    <div  class="heads">
+        <span  class="fa fa-angle-left fa-2x"></span>
+        <h1>督查网点列表</h1>
+        <!--<h1></h1>-->
+    </div>
+    <div style="width: 100%;" data-role="content">
+        <?php for($i=0;$i<10;$i++){?>
+          <ul class="list" style="border-bottom: 1px solid #ccc;">
+              <li><span>网点：杭州万达广场物美雀巢销售网点</span></li>
+              <li><span>地址：杭行路188号</span></li>
+              <li><span style="color: #ff6600;margin-right: 20px;">金币：120</span><span>距离：0.5km</span></li>
+              <li style="width: 100%;"><span>余量：3</span> <span class="btn" onclick="do_task(this)">立即参与</span></li>
+          </ul>
+        <?php }?>
+
+    </div>
+
+        <div  class="show_tips1">
+            <ul>
+                <li><b>申请成功</b></li>
+                <li>请在2小时内完成此任务。</li>
+                <li>是否立即开始工作？</li>
+            </ul>
+            <div id="embedding" class="btns">
+                <span>稍后</span>
+                <span>立即开始</span>
+            </div>
+        </div>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+
+        function do_task(obj){
+            $(".show_tips1").slideDown();
+
+            $(document).on('click','.btns span',function(){
+                if($(this).text()=='稍后'){
+                    $(".show_tips1").slideUp();
+                    $(obj).text("继续参与");
+                }else{
+                    location=APP+'/Mobileweb/Events/superviseCheck';
+                }
+            });
+        }
+
+
+
+
+</script>
+</html>

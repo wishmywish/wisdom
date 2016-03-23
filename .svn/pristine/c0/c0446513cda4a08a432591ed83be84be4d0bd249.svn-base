@@ -1,0 +1,14 @@
+<include file="Public/head" title="2015比股市还火爆的赚钱神器" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+                <div>兄弟姐妹，这里钱多速来小宝招商</div>
+                <div>每个注册会员配有唯一的 邀请码 ，每邀请一个人，并使用邀请码注册成功，邀请人可获得20金币（20金币=2元人民币），被邀请人使用邀请码成功注册，可获得50金币，同一个手机号码只能注册 一个会员账号。邀请人获得邀请奖励金币最高为500金币。</div>
+                <div>您的好友邀请码：<span style='color:red;'>{$invitationCode}</span></div>
+                <div style='font-weight: bold;'>邀请注册流程</div>
+                <img src='__ROOT__/Public/upfile/logo/invite.jpg'>
+                
+            </div>
+        </div>
+    </body>
+<include file="Public/foot" />

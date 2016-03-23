@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网点数据导入</title>
+    <style>
+        .content{
+            margin:10px 20px;
+            width:200px;
+        }
+        input[type="submit"]{
+            border:none;
+            padding:5px 20px;
+            background-color:#15BCE0;
+            color:#ffffff;
+            cursor:pointer;
+        }
+
+        input{
+            margin-bottom:10px;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="content">
+      <form method="post" action="{:U('audit_import_do')}" enctype="multipart/form-data" name="frm1">
+          <input type="file" style="font-size: 12px;" value="上传文件" name="filename">
+          <input type="hidden" value="{$taskid}" name="taskid">
+          <input type="submit" value="导入" name="submit" style="font-size: 12px;">
+      </form>
+      <h1>{$error}</h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--    <link rel="stylesheet" type="text/css"  href="css/style.css">-->
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main dl{ width: 100%;}
+        .main dl dt{width: 60px; height: 60px; border-radius: 30px; background: #ccc; }
+        .main dl dd{ line-height: 60px; margin-left: 10px;}
+        .main ul{ margin-top:20px; width: 100%;}
+        .main ul li{ float: left; margin-right: 25px;}
+        .c_name{font-weight: 100;height: 20px;margin-right: 55px;text-align: center;width: 125px;}
+        .main span{ color:red; padding-right: 5px;}
+        .main input{float: right;margin-left: 30px;height:25px;width:200px;}
+        .submit{background-color: #409ad6;border: 1px solid #409ad6; border-radius: 3px;padding: 0 20px;line-height: 28px;cursor: pointer;color: #fff; margin-left: 20px;}
+        .reset{background-color: #fff;border: 1px solid #e2e2e2; border-radius: 3px;padding: 0 20px;line-height: 28px;cursor: pointer;color: #000; margin-left: 20px;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+    </script>
+</head>
+<body>
+
+<div class="main">
+    <ul class="fl">
+        <li><span>*</span>客户名称<input type="text" id="nickname" style=""/></li>
+    </ul>
+    <ul class="fl">
+        <li><span>*</span>地&nbsp;&nbsp;址 <input type="text" id="realname" style=""/></li>
+    </ul>
+    <ul class="fl">
+        <li><span>*</span>电&nbsp;&nbsp;话 <input type="text" id="realname" style=""/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>传&nbsp;&nbsp;真 <input type="text" id="realname" style=""/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>网&nbsp;&nbsp;址<input type="text" id="phone" style=""/></li>
+    </ul>
+    <ul class="fl">
+        <li><span>*</span>行&nbsp;&nbsp;业<input type="text" id="s_email" style="height:25px;width:200px; margin-left: 38px;"/></li>
+    </ul>
+    <ul class="fl">
+        <li><span>*</span>区&nbsp;&nbsp;域 <input type="text" id="addr" style="height:25px;width:200px; margin-left: 25px;"/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>规&nbsp;&nbsp;模<input type="text" id="phone" style="height:25px;width:200px; margin-left: 30px;"/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>性&nbsp;&nbsp;质<input type="text" id="phone" style="height:25px;width:200px; margin-left: 30px;"/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>来&nbsp;&nbsp;源<input type="text" id="phone" style="height:25px;width:200px; margin-left: 30px;"/></li>
+    </ul>
+    <ul class="fl">
+        <li><span></span>备&nbsp;&nbsp;注<input type="text" id="phone" style="height:25px;width:200px; margin-left: 30px;"/></li>
+    </ul>
+</div>
+<div style="margin: 30px 0 0 190px;"><button class="submit" id="s_submit">确定</button>
+    <button class="reset" onclick="reset()">关闭</button>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+</script>
+</body>
+</html>

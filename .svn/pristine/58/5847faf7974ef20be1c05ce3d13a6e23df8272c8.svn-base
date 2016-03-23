@@ -1,0 +1,43 @@
+<include file="Public/head" />
+
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="add">
+             <span style="font-size:18px;">经销商信息</span><br><br>
+
+                 <span>&nbsp;&nbsp;&nbsp;&nbsp;经销商名称： <input type="text" id="companyNameOne"  style="width:285px;" value="{$reModi.one.f_companynameone}"/></span><br><br>
+
+                <span style="padding-left:12px;">经营区域： <input type="text" id="f_area" value="{$reModi.two.f_area}"/></span>
+                <span style="padding-left:12px;">渠道类型： <input type="text" id="f_channeltype" value="{$reModi.two.f_channeltype}"/></span>
+                <span style="padding-left:12px;">主营行业： <input type="text" id="f_mainindustry" value="{$reModi.two.f_mainindustry}"/></span>
+                <span style="padding-left:12px;">年营业额： <input type="text" id="f_yearturnover" value="{$reModi.two.f_yearturnover}"/></span><br><br>
+
+                <span style="padding-left:12px;">流动资金： <input type="text" id="f_floatingcapital" value="{$reModi.two.f_floatingcapital}"/></span>
+                <span style="padding-left:12px;">销售人数： <input type="text" id="f_salesqty" value="{$reModi.two.f_salesqty}"/></span>
+                <span style="padding-left:12px;">品牌个数： <input type="text" id="f_famousbrandqty" value="{$reModi.two.f_famousbrandqty}"/></span>
+                <span style="padding-left:12px;">网点数量： <input type="text" id="f_latticepointqty" value="{$reModi.two.f_latticepointqty}"/></span><br><br>
+
+                <span style="padding-left:12px;">物流车数： <input type="text" id="f_salesqty" value="{$reModi.two.f_salesqty}"/></span>
+                <span style="padding-left:12px;">资源优势： <input type="text" id="f_advantage" style="width:605px;" value="{$reModi.two.f_advantage}"/></span><br><br>
+
+
+                <span style="font-size:18px;">业务员信息</span><br><br>
+
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;业务员姓名： <input type="text" id="companyNameOne"  style="width:285px;" value="{$reModi.one.trueName}"/></span><br><br>
+                <span>联系电话： <input type="text" id="mobile"  style="width:285px;" value="{$reModi.one.mobile}"/></span><br><br>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

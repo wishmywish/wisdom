@@ -1,0 +1,27 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            客户详情
+        </div>
+    </div>
+    <div class="cusdetail_center">
+        <!--输入框-->
+        <div class="cusdetail_head">
+            <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;客户通讯录&nbsp;>&nbsp;客户详情</span>
+            <span style="float: right" class="bntns1">返回</span>
+        </div>
+        <!--列表-->
+        <div class="cusdetail_list">
+
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        textarea{font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden;width: 100%; }
+
+        .nav{float: left;
+            height: 25px;
+            margin: 20px 0 0 57px;
+            width: 100%;}
+        .nav ul li{display: inline-block;float: left;cursor: pointer;}
+        .nav .cur{color: red;}
+        .content{display: none;width: 100%;}
+        .cur1{display: block;}
+        .list{ margin: 0 0 0 57px;}
+        .list ul{ margin-top:20px; width: 100%;}
+        .list ul li{ float: left; margin-right: 25px;}
+        .list ul li span{width: 100px;text-align: right;display: inline-block;margin-right: 7px;}
+        .fj{float: right;}
+        .fj p{ margin: 0 0 5px;text-decoration: underline;}
+        .buts{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+   <div class="nav">
+       <ul>
+           <li class="cur">审批<span style="color: initial">&nbsp;|&nbsp;</span></li>
+           <li>流程</li>
+       </ul>
+
+   </div>
+    <div class="list">
+        <div class="content cur1">
+           <ul class="fl">
+               <li>
+                   <span>报销内容</span>
+                   <textarea style="float: right;height: 100px; width: 674px;" disabled="disabled"></textarea>
+               </li>
+           </ul>
+            <ul class="fl">
+                <li>
+                    <span>附件</span>
+                    <div class="fj">
+                        <?PHP for($i=0;$i<6;$i++){?>
+                        <p>出差报销发票.jpg</p>
+
+                        <?PHP }?>
+                    </div>
+
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批人</span>王求是
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批意见</span>
+                    <textarea style="float: right;height: 60px;width: 674px;" disabled="disabled">同意</textarea>
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>审批意见</span>
+                    <textarea style="float: right;height: 100px;width: 674px;"></textarea>
+                    <p style="margin-left: 90%;margin-top: 95px;">不超过500字</p>
+                </li>
+            </ul>
+            <div style="margin: 0 34%;float: left;">
+                <button class="buts">同意</button>
+                <button class="buts" >拒绝</button>
+                <button class="buts" >转批</button>
+            </div>
+        </div>
+        <div class="content">
+
+        </div>
+
+    </div>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        $(".nav li").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".list .content").eq(myindex).addClass("cur1").siblings().removeClass("cur1");
+        })
+
+    })
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+</script>
+</body>
+</html>

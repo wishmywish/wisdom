@@ -1,0 +1,2 @@
+body,div,ul,li,p,img,h1,h2,h3,h4,dl,dt,dd{ margin: 0; padding: 0 ;list-style: none;}
+html,body{  margin: 0 auto;  font-size: 12px;  font-family: Arial, Helvetica, sans-serif,Î¢ÈíÑÅºÚ,ËÎÌå;  background: #fafafa; padding:0;  }

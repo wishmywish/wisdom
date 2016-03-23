@@ -1,0 +1,2932 @@
+[ 2015-09-21T11:49:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T11:49:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T11:49:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T11:49:47+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-09-21T11:49:53+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 515 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 517 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 538 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 539 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 543 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 544 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 492 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 636 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:49:53+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T11:49:55+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:49:57+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0140s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:49:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T11:49:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:50:02+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:50:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Promotion/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-09-21T11:50:05+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Oms/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=4 and F_SYS_COLUMN_STATE=1 and F_SYS_COLUMN_CID='F' ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T11:50:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 515 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 517 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 538 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 539 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 543 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 544 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 492 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 636 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T11:50:33+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-09-21T11:50:41+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addClient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T11:50:41+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T11:50:50+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:13:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addBusiOpportunities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:13:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:16:45+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-09-21T14:23:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-09-21T14:24:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitPlan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T14:24:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:24:45+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-21T14:24:48+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T14:24:48+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:25:46+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T14:25:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:25:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:27:42+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T14:27:46+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:27:46+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:28:20+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T14:28:24+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-21T14:28:24+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:28:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitPlan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:28:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:29:47+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addBusiOpportunities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-21T14:29:47+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:30:30+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:30:33+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T14:30:34+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0050s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:34:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T14:34:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addBusiOpportunities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T14:34:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:46:09+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:46:16+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:46:16+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:47:44+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:47:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T14:47:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T14:49:02+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T14:49:05+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T14:49:06+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:00:47+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:00:51+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-21T15:00:51+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0010s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:01:57+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:02:02+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:02:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:02:32+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:02:32+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0150s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:05:34+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-21T15:05:44+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0196s ]
+ERR: 非法操作:addPayBack
+
+[ 2015-09-21T15:11:55+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:11:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T15:11:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0050s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:16:37+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:16:39+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addBusiOpportunities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T15:16:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:16:57+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitPlan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:16:57+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0070s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:19:34+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:19:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitPlan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:19:41+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:19:51+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:19:51+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:20:00+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:20:01+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:20:21+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:20:21+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0226s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:26:32+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0176s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 660 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:26:35+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addBusiOpportunities
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:26:44+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitPlan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0196s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:26:50+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:26:56+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:27:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2015-09-21T15:51:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:51:29+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addLinkman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:51:39+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:51:45+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addClient
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: href D:\wamp\www\wisdom\ThinkPHP\Library\Think\Template\TagLib\Cx.class.php 第 451 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:51:45+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0166s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+ERR: 非法操作:css
+
+[ 2015-09-21T15:51:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/showmsg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-21T15:52:05+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:11+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0186s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:52:16+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0196s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:24+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:29+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/customerDetails
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:39+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addPayBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:50+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addContract
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:52:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addVisitRecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:53:12+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/addLinkman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:53:42+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 509 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.016600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.016600s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 636 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.168203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.168203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-21T15:54:08+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:54:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/approval
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0176s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:54:37+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined index: selectedDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 130 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 203 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 206 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 209 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 213 行.
+NOTIC: [8] Undefined index: endDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 214 行.
+NOTIC: [8] Undefined index: currentPage D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 233 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 306 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 313 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 319 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 325 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 235 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 237 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 267 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 272 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 275 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 280 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 299 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 304 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 307 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 312 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 315 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 320 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 267 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 272 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 275 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 280 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 283 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 288 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 291 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 296 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 299 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 304 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 307 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 312 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 315 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 320 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 351 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 352 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 360 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 361 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 368 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 369 行.
+NOTIC: [8] Undefined variable: startdate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 374 行.
+NOTIC: [8] Undefined variable: enddate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 376 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 409 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 721 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:54:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined index: selectedDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 130 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 203 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 206 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 209 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 213 行.
+NOTIC: [8] Undefined index: endDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 214 行.
+NOTIC: [8] Undefined index: currentPage D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 233 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 306 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 313 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 319 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 325 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 235 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 237 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 267 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 272 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 275 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 280 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 299 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 304 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 307 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 312 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 315 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 320 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 267 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 272 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 275 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 280 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 283 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 288 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 291 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 296 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 299 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 304 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 307 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 312 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 315 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 320 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 351 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 352 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 360 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 361 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 368 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 369 行.
+NOTIC: [8] Undefined variable: startdate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 374 行.
+NOTIC: [8] Undefined variable: enddate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 376 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 409 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 721 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 745 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:54:55+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.3106s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0156s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:55:08+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 688 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: queryAllNoticeBoard_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 212 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 246 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-21T15:56:17+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2015-09-21T15:56:21+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 688 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: queryAllNoticeBoard_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 212 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 246 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-21T15:56:28+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 509 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 636 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

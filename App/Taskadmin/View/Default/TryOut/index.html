@@ -1,0 +1,50 @@
+<include file="Public/head" title="试用信息管理" />
+<style type="text/css">
+.thumbImage img{ 
+MAX-WIDTH: 100%!important;HEIGHT: auto!important;width:expression(this.width > 150 ? "150px" : this.width)!important;
+} 
+.thumbImage {MARGIN: auto;WIDTH: 150px;} 
+*html.thumbImage img{ 
+width:expression(this.width>150&&this.width>this.height?150:auto); 
+height:expresion(this.height>150?150:auto); 
+}
+</style>
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 试用信息管理</div>
+        <div class="tabli">
+            <ul class="action">
+                <li id="ad_express" value="0"  style="width: 100px;">填写快递单号</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li style='width:5%;'><input id="expressId"  type='checkbox' value='0'></li>
+                <li style='width:10%;'>申请人</li>
+                <li style='width:15%;'>任务</li>
+                <li style='width:10%;'>收货人姓名</li>
+                <li style='width:10%;'>收货人手机号码</li>
+                <li style='width:5%;'>邮编</li>
+                <li style='width:10%;'>省市</li>
+                <li style='width:10%;'>详细地址</li>
+                <li style='width:15%;'>发货快递单号</li>
+                <li style='width:10%;'>发货时间</li>
+            </ul>
+            <div class='listinfo'>
+            </div>
+            <div class="page"></div>
+        </div>
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        //获取列表信息
+        plist_Express();
+    });
+</script>
+</html>

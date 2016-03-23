@@ -1,0 +1,71 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class IndexController extends CommonController {
+    
+    /* 空操作，用于输出404页面 */
+    public function _empty(){
+        $this->redirect('Index/index');
+    }
+    
+    
+    //工作管理首页
+    public function main(){
+            set_theme();//载入主题
+            $re = A('Api')->getBigC();
+            //pt($re);
+            //exit;
+            foreach ($re as $key => $val) {
+                if($val['f_sys_column_cid']=='Index'){
+                    $syscolumn_id = $val['f_syscolumn_id'];
+                    $sre = A('Api')->getBigC($syscolumn_id);
+                }
+            }
+            
+            $this->assign('bigclass', $re);
+            $this->assign('smallclass', $sre);
+            $this->display();
+        }
+        
+    public  function  index(){
+    	if(cookie('loginstrats') != 1){ //登录不成功，没登录
+    		$this->redirect("Login/login");
+    	}else{	//登录过，cookie 值还生效
+    		$this->redirect("Business/index");
+    	}
+    	
+//     	set_theme();
+//     	$this->display();
+//         set_theme();
+//         //echo cookie('loginstrats');
+//          if(cookie('loginstrats')=="0"){
+//               $this->display();
+//          }else{
+//               $this->main(); 
+//          }
+      
+    }
+     
+    public  function  in(){
+        set_theme();
+        $this->display();
+    }
+    
+    
+     //获取验证码
+    public function verify_c() {
+        verify();
+    }
+    
+    //验证码检查
+    public function check_verify_c() {
+        $code = I('get.code','');
+        check_verify($code);
+    }
+        
+    }
+    
+    
+   
+    
+ 

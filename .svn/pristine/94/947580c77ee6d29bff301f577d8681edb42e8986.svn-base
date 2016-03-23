@@ -1,0 +1,73 @@
+<include file="Public/head" title="{$webtitle}" />
+<body>
+<div class="mains">
+    <p>让我们期待下一次红包活动</p>
+    <!--<div  class="heads_hb">-->
+        <!--<img src="__IMG__/header_bg.png">-->
+    <!--</div>-->
+    <!--<p>下载注册送<span>5元</span>，推荐好友领取再送<span>2元</span>，好友招商成交分红<span>500元</span></p>-->
+    <!--<div class="plate_first">-->
+        <!--<a><img src="__IMG__/shouji.png"></a>-->
+    <!--</div>-->
+    <!--<div class="plate_second">-->
+        <!--<div class="ui-grid-a">-->
+            <!--<div class="ui-block-a">-->
+                <!--<p class="p2">请下载小宝APP领取:</p>-->
+                <!--<a class="a1" href="#"><img src="__IMG__/hongbao.png"></a>-->
+            <!--</div>-->
+            <!--<div class="ui-block-b">-->
+                <!--<a class="a2" href="#"><img src="__IMG__/two-dimension.png"></a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="plate_thirdly">-->
+        <!--<a href="#"><img src="__IMG__/hengfu.png"></a>-->
+    <!--</div>-->
+    <!--<div class="plate_sixth">-->
+        <!--<span>活动规则</span>-->
+    <!--</div>-->
+    <!--<div class="plate_seventh">-->
+        <!--<p>1、认领得红包：小宝招商APP新用户输入手机号即可认领5元红包，下载小宝招商APP用填写的手机号注册成功后提现。</p>-->
+        <!--<p>2、推荐得红包：每成功推荐1人即送2元。多推荐多送，限25人。</p>-->
+        <!--<p>3、好友领取后注册登陆小宝招商app并转发红包即视为成功。</p>-->
+        <!--<p>4.更多赚钱任务尽在小宝招商app。</p>-->
+        <!--<p> 5.最终解释权在小宝招商。</p>-->
+    <!--</div>-->
+    <!--<div class="plate_fourthly">-->
+        <!--<div class="ui-grid-a">-->
+            <!--<div class="ui-block-a">-->
+               <!--<span>一键转发,坐等分红</span>-->
+            <!--</div>-->
+            <!--<div class="ui-block-b">-->
+                <!--<a class="a3" href="#"><img src="__IMG__/hongbao_bg.png"></a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="plate_fifth">-->
+        <!--<p>在你分享的"种豆得瓜"抢红包活动,你的朋友点击认领后,就成为你的终身创业伙伴。他只要在小宝招商获得首单高额招商悬赏佣金,<span>平台还额外奖励给你500元分红。认领10人，就有5千元分红机会,100人就有5万元分红机会</span>，分享越多,分红机会越多,推荐资深的营销人,分红的机会更大。</p>-->
+    <!--</div>-->
+    <!--<div class="plate_sixth">-->
+        <!--<span>小宝招商,营销人赚钱神器</span>-->
+    <!--</div>-->
+    <!--<div class="plate_seventh">-->
+        <!--<p>小宝招商,无成本带薪创业工场,创业、赚钱、升职、社交、培训、开启营销人全新职业模式,海量悬赏任务,汇聚全国百万营销精英,一声江湖令,十万营销军,帮助全国企业完成招商、推广、宣传、调研、推荐、答题、体验、试用等任务。赚大钱,找小宝。</p>-->
+    <!--</div>-->
+    <!--<div class="footers">-->
+        <!--<img src="__IMG__/footer.png">-->
+    <!--</div>-->
+<!--</div>-->
+<script>
+//     $(function(){
+//         $(".btns,.btns1").click(function(){
+//             $(this).css({"background-color":"#e53025","border-color":"#e53025","color":"#eecc9c","text-shadow":"none"});
+//         })
+//     })
+//     $(function(){
+//         $(".btns2").click(function(){
+//             $(this).css({"background-color":"#6b3906","border-color":"#f2d0a0","color":"#f2d0a0","text-shadow":"none"});
+//         })
+//     })
+</script>
+
+</body>
+</html>

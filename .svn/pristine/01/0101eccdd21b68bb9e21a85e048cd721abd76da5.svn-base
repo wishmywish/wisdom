@@ -1,0 +1,53 @@
+<include file="Public/head" title="{$webtitle}"/>
+<link href="__PUBLIC__/static/um/themes/default/css/umeditor.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.fl{ float: left;}
+.recommended .ui-shadow-inset{float:left; border-style:none;}
+.recommended .ui-shadow-inset  input{border: none;}
+.recommended .ui-shadow-inset{box-shadow:none;}
+</style>
+</head>
+ 
+ <body>
+    <div data-role="page" id="page">
+        <div  class="heads">
+            <h1>任务预览</h1>
+        </div>
+        <div data-role="content">
+            <div class="head_top">
+                <p title="{$re.f_title}" style="font-size: 16px">{$re.f_title}</p>
+            </div>
+            <div class="head_con">
+                <p title="任务推荐" style="font-size: 14px">任务推荐</p>
+            </div>
+            <div style="padding-left: 1.3em; padding-right: 1.3em;  border-bottom: 1px solid #ccc; overflow: hidden;">
+                 {$re.f_recommend}
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl"><span style="color: red">*</span>客户姓名: &nbsp;&nbsp;</span><input type="text" id="dealerName" readonly/>
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl"><span style="color: red">*</span>客户手机: &nbsp;&nbsp;</span><input type="text"  id="dealerPhone" readonly/>
+            </div>
+            <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl"><span style="color: red">*</span>公司名称:</span><input type="text" id="dealerCompanyName" readonly/>
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl">所属行业: &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" id="dealerIndustry" readonly/>
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl">公司地址: &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" id="dealerAddress" readonly/>
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl">公司电话: &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" id="dealerTel" readonly/>
+            </div>
+             <div class="recommended" style="height: 49px; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+               <span class="fl">公司传真: &nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" id="dealerFax" readonly/>
+            </div>
+        </div>
+    </div>
+</body>
+<include file="Public/loadjs"/>
+ <script type="text/javascript">
+</script>
+</html>

@@ -1,0 +1,298 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+
+<div class="content_right">
+    <div class="cons_top">
+        <h4 class="cons_tab fl">
+            <span class="current">手动筛选</span>
+            <span style="background: none;">已中标</span>
+        </h4>
+        <p class="p1 rg"><a href="#">首页</a>&nbsp;>&nbsp;<a href="#">任务管理</a>&nbsp;>&nbsp;<a href="#">智能管理</a></p>
+    </div>
+    <div class="cont">
+        <div class="cont_in cur">
+            <div class="screen fl">
+                <span>筛选：区域</span>
+                <select>
+                    <option>全部</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <span>省</span>
+                <select>
+                    <option>全部</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <span>市</span>
+                <select>
+                    <option>全部</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <span>县</span>
+            </div>
+            <div class="screen_con fl">
+               <div class="common">
+                <div class="screen_con1 fl" >
+                    <p>永康某贸易有限公司</p>
+                    <p>主营产品:服装、鞋子</p>
+                    <p>年营业额：￥2,598.09元</p>
+                    <p>网点数量</p>
+                    <p>经营区域:黑龙江/吉林/江干县</p>
+                    <button>发放授权书</button>
+                </div>
+                <div class="screen_con1 fl">
+                    <p>永康某贸易有限公司</p>
+                    <p>主营产品:服装、鞋子</p>
+                    <p>年营业额：￥2,598.09元</p>
+                    <p>网点数量</p>
+                    <p>经营区域:黑龙江/吉林/江干县</p>
+                    <button>发放授权书</button>
+                </div>
+               </div>
+                <div  class="common">
+                    <dl class="fl">
+                        <dt>业务员</dt>
+                        <dd>
+                            <span class="fl" style="width: 192px;">年龄：28</span>
+                            <span class="fl" >身份证号码：612301197806240679</span>
+                        </dd>
+                        <dd>
+                            <span class="fl" style="width: 192px;">职业行业:快消品行业</span>
+                            <span class="fl">任务区域：黑龙江/吉林/江干县</span>
+                        </dd>
+                        <dd>
+                            <span class="fl" style="width: 192px;">岗位:区域经理</span>
+                            <span class="fl">特长：商务谈判</span>
+                        </dd>
+                    </dl>
+                    <dl class="fl">
+                        <dt>业务员</dt>
+                        <dd>
+                            <span class="fl" style="width: 192px;">年龄：28</span>
+                            <span class="fl" >身份证号码：612301197806240679</span>
+                        </dd>
+                        <dd>
+                            <span class="fl" style="width: 192px;">职业行业:快消品行业</span>
+                            <span class="fl">任务区域：黑龙江/吉林/江干县</span>
+                        </dd>
+                        <dd>
+                            <span class="fl" style="width: 192px;">岗位:区域经理</span>
+                            <span class="fl">特长：商务谈判</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="pag" style=" ">
+                    <button><</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+        <div class="cont_in fl">
+            <div class="screen fl">
+              <span>筛选：区域</span>
+              <select>
+                  <option>全部</option>
+                  <option>湖北省</option>
+                  <option>湖北省</option>
+              </select>
+               <span>省</span>
+                <select>
+                    <option>全部</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <span>市</span>
+                <select>
+                    <option>全部</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <span>县</span>
+                <span class="sp2">分数</span>
+                <select>
+                    <option>从高到低</option>
+                    <option>湖北省</option>
+                    <option>湖北省</option>
+                </select>
+                <button>中标</button>
+            </div>
+            <div class="screen_con fl">
+                <div class="screen_con_top">
+                    <a href="#"style="margin-left: 20px"><input type="checkbox"></a>
+                    <a href="#" style="margin-left: 28px;">序列</a>
+                    <a href="#" style="margin-left: 60px;">经销商名称</a>
+                    <a href="#" style="margin-left: 68px;">主营产品</a>
+                    <a href="#" style="margin-left: 26px;">年营业额(万元)</a>
+                    <a href="#" style="margin-left: 16px;">网点销量</a>
+                    <a href="#" style="margin-left: 44px;">省/市/县</a>
+                    <a href="#" style="margin-left: 50px;">综合评分</a>
+                    <a href="#" style="margin-left: 4px;">筛选业务员</a>
+                    <a href="#" style="margin-left: 26px;">业务员</a>
+                </div>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox"></li>
+                    <li>1</li>
+                    <li class="con_li">南京三屋科技有限公司</li>
+                    <li>软件</li>
+                    <li>￥5,598.09</li>
+                    <li>5000</li>
+                    <li>浙江省/杭州市</li>
+                    <li>99</li>
+                    <li class="con_li">业务员</li>
+                    <li>李卫华</li>
+                </ul>
+                <div class="pag" style=" ">
+                    <button><</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+
+
+<script >
+   $(".screen_con ul li").click(function(){
+       layer.open({
+           type: 1,
+           title: false,
+           closeBtn: false,
+           skin: 'yourclass',
+           area: ['500px', '370px'],
+           shadeClose: true, //点击遮罩关闭
+           content: '\<\div class="tier"><div style="color:#fff; "><h3>北京世纪华丰科技发展有限公司</h3><dl class="tier_dl"><dt>详细地址:海淀区998号</dt><dd><span>主营产品:软件</span><span>代理品牌:金蝶、用友</span></dd><dd><span>年营业额:5，500.09万元</span><span>公司规模:1-100人</span></dd><dd><span>经营区域:北京海淀区</span><span>主要渠道:</span></dd><dd><span>网点数量:5000</span><span>物流车数:</span></dd><dd><span>平均流动资金:20,0000元</span><span>特别优势:实力优厚</span></dd></dl><div class="tier_con"><p>业务员:王秋实</p><p>性别:男</p><p>联系方式:123456789</p><p>地址:北京市海淀区</p><p>身份证:123456789123456</p></div></div>\<\/div>'
+       });
+   })
+
+</script>
+<script>
+    $(function(){
+        $('#lanPos').css('top',$('.hover').offset().top-150);
+        $('.menu_ul .menu_li').hover(function(){
+            $('#lanPos').css('top',$(this).offset().top-150);
+        },function(){
+            $('#lanPos').css('top',$('.hover').offset().top-150);
+        })
+
+        $('.menu_ul .menu_li').click(function(){
+            for(var i=0;i<$('.menu_ul .menu_li').size();i++){
+                if(this==$('.menu_ul .menu_li').get(i)){
+                    $('.menu_ul .menu_li').eq(i).children('a').addClass('hover');
+                }else{
+                    $('.menu_ul .menu_li').eq(i).children('a').removeClass('hover');
+                }
+            }
+        })
+
+    })
+    $(function(){
+        $(".cons_tab span").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".cont .cont_in").eq(myindex).addClass("cur").siblings().removeClass("cur");
+        })
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<?php
+/**
+ * 部门的	增删查改
+ * 员工的	增删查改
+ * @author Administrator
+ */
+namespace Admin\Controller;
+use Think\Controller;
+class GroupController extends CommonController {
+	static public $treeList = array();
+	
+    function index(){
+        //获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+
+		//把该公司的第一个部门id传入cookie,后面批量导入员工需要用到
+		cookie("first_dept",$deptListArr_tree[0]['departId']);
+//		dump($deptListArr_tree);
+
+        //分页
+        $page = I('page');
+        if( $page == '' ){
+        	$page = 0;
+        }
+        
+        $pageSize =15;
+        $page_start = $page*$pageSize;	
+        $page_end = ($page+1)*$pageSize-1;
+
+		$departId = I('departId');	//要获取信息的部门id
+
+		//公司员工,如果部门id为空，那么就是显示公司下的所有员工,否则显示对应部门id下的员工
+		if( $departId == '-1' || $departId == ""||$departId==$companyId){
+			$departId=$companyId;
+			$deptUser = A("Api/Jhttp")->getUsersInfo($companyId,$page_start,$page_end,0);	//0为全部，1为实名认证的员工
+		}else{
+			$deptUser = A("Api/Jhttp")->getUsersByDepart($departId,$page_start,$page_end);		//返回数据中count即为总数
+		}
+
+		$deptUser_arr = json_decode($deptUser,true);	//员工列表
+
+
+//		dump($deptUser_arr);exit;
+		$total = $deptUser_arr['count'];	//总记录数
+		$pageTotal =  $totalPage = ceil($total/$pageSize); //总页数	
+		
+		$prePage = $page -1;	//上一页
+		$nextPage = $page + 1;	//下一页
+		if( $prePage <= 0 ){
+			$prePage = 0;
+		}
+		
+		if( $nextPage >= $pageTotal ){
+			$nextPage = $pageTotal-1;
+		}
+
+
+
+        $this->assign("departId",$departId);
+        $this->assign("page_start",$page_start);
+        $this->assign("nextPage",$nextPage);
+        $this->assign("prePage",$prePage);
+        $this->assign("page",$page);
+        $this->assign("pageTotal",$pageTotal);
+        $this->assign("total",$total);
+        $this->assign ("pageSize", $pageSize );
+        $this->assign('first_dept_user_arr',$deptUser_arr['list']);
+        
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+   /*  function page($currentPage=0,$pageSize=10,$pageStart,$pageEnd,$totalPage,$totalNum){
+    	$pageStart = $currentPage*$pageSize;	//开始位置
+    	$pageEnd = ($currentPage+1)*$pageSize-1;	//结束位置
+    } */
+
+
+	/**
+	 * 导入页页显示
+     * index.php/Admin/Group/import_do.html
+	 */
+	function batchImport(){
+		$this->display();
+	}
+
+	//导入操作
+	function import_do(){
+		header("Content-type:text/html;charset:utf-8");
+		//全局变量
+		$error_line = [];
+		$succ_result=0;
+		$error_result=0;
+		$file=$_FILES['filename'];
+		$max_size="2000000"; //最大文件限制（单位：byte）
+		$fname=$file['name'];
+		$ftype=strtolower(substr(strrchr($fname,'.'),1));
+		$dir=dirname(__FILE__);                       //获取当前脚本的绝对路径
+		$dir=str_replace("//","/",$dir)."/";
+
+		//文件格式
+		$uploadfile=$file['tmp_name'];
+		if($_SERVER['REQUEST_METHOD']=='POST'){
+			if(is_uploaded_file($uploadfile)){
+				if($file['size']>$max_size){
+					echo "文件过大！";
+					exit;
+				}
+				if($ftype!='xls' && $ftype!='xlsx' && $ftype!='xlsm' && $ftype!='xltx' && $ftype!='xltm' && $ftype!='xlsb' && $ftype!='xlam'){
+					echo "文件格式错误！";
+					exit;
+				}
+			}else{
+				echo "文件为空！";
+				exit;
+			}
+		}
+		$filename='uploadFile.xls';
+
+		//获取部门列表,为导入部门名称做匹配
+		$deptListArr_tree = $this->getDept();
+//		dump($deptListArr_tree);exit;
+
+		$result=move_uploaded_file($uploadfile,$dir.$filename);//假如上传到当前目录下
+		if($result)  //如果上传文件成功，就执行导入excel操作
+		{
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel.php';
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel/IOFactory.php';
+//			require_once dirname(dirname(__FILE__)).'/ExcelImport/Classes/PHPExcel/Reader/Excel5.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/IOFactory.php';
+			require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/Reader/Excel5.php';
+
+
+			$objReader = \PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
+			$objPHPExcel = $objReader->load($dir.$filename);
+
+			$sheet = $objPHPExcel->getSheet(0);
+
+			$highestRow = $sheet->getHighestRow(); // 取得总行数
+			$highestColumn = $sheet->getHighestColumn(); // 取得总列数
+			$arr_result=array();
+			$strs=array();
+
+			for($j=2;$j<=$highestRow;$j++)
+			{
+				unset($arr_result);
+				unset($strs);
+				for($k='A';$k<= $highestColumn;$k++)
+				{
+					//读取单元格
+					$arr_result  .= $objPHPExcel->getActiveSheet()->getCell("$k$j")->getValue().',';
+				}
+				$strs=explode(",",$arr_result);  //单元格中数据拆分
+
+//                dump($strs);exit;
+
+				//数据
+				$companyId = cookie("companyId"); //公司id
+				$nickName = $strs[1]; //用户昵称
+				$trueName = $strs[2]; //真实姓名
+
+
+				if( $strs[3] == 1 || $strs[3] == '' ){  //性别,男为1，女为0
+					$sex = 1;
+				}elseif( $strs[3] == 0 ){
+					$sex = 0;
+				}else{
+					$sex = 1;
+				}
+
+
+				$birthday = $strs[4]; //生日
+				$departName = $strs[5];  //部门名称
+				$departId = cookie("first_dept"); //没填时默认为公司的最顶级部门，即公司的第一个部门
+				foreach( $deptListArr_tree as $key=>$vo ){
+					if( $departName == $vo['deptName'] ){
+						$departId  = $vo['departId'];
+					}
+				}
+
+				$mobile = $strs[6];  //手机号,即注册用户名
+				$email = $strs[7];  //邮箱
+				$homeAddress = $strs[8]; //家庭住址
+				$password = empty($strs[9])?'123456':$strs[9];  //没填默认为123456
+
+				$position = $strs[10];  //职位
+
+
+
+				$officePhone = 0; //办公室电话
+				$otherPhone = 0;
+				$userLevel = 1; //默认的权限,最高为999
+				$fax = 0;
+				$homePhone = 0;
+				$idCard = 0;
+				$headLogo = 0;
+				$invitationCode = 0;
+
+				if( empty($trueName) || empty($mobile)  ){  //必填项为空时跳过
+                    echo "第".$j."行必填项为空<br/>";
+					continue;
+				}
+
+//				dump($mobile);
+//				dump($password);
+//				dump($departId);
+//				continue;
+
+				$re = A('Api/Jhttp')->addDeptuser($companyId,$departId,$nickName,$trueName,$officePhone,$otherPhone,$email,$userLevel,$mobile,$sex,$password,$fax,$homePhone,$homeAddress,$birthday,$idCard,$headLogo,$invitationCode,$position);  //插入数据到库中
+				$content = json_decode($re, true);
+				if($content['resCode']=='000000' || $content['resCode']==000000){
+					$succ_result+=1;
+				}else{
+					$error_result+=1;
+					$error_line[] = $j; //第几行出错
+				}
+			}
+		}
+
+		$this->assign('error_line',$error_line);
+		$this->assign('succ_result',$succ_result);
+		$this->assign('error_result',$error_result);
+
+		unlink($dir.$filename); //删除临时生成的文件
+
+		$this->display();
+	}
+
+	//导出员工操作
+    function exportUser(){
+//		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel.php';
+//		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/IOFactory.php';
+//		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/Writer/Excel5.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/IOFactory.php';
+		require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/Writer/Excel5.php';
+
+		// 创建一个处理对象实例
+		$objExcel = new \PHPExcel();
+		$objWriter = new \PHPExcel_Writer_Excel5($objExcel);     // 用于其他版本格式
+
+//缺省情况下，PHPExcel会自动创建第一个sheet被设置SheetIndex=0
+		$objExcel->setActiveSheetIndex(0);
+		$objActSheet = $objExcel->getActiveSheet();
+
+//设置当前活动sheet的名称
+		$objActSheet->setTitle('员工列表');
+
+//设置单元格内容 由PHPExcel根据传入内容自动判断单元格内容类型
+		$companyId = cookie("companyId");
+		$deptUser = A("Api/Jhttp")->getAllUsersInfo2($companyId);	//0为全部，1为实名认证的员工
+
+		$deptUser_arr = json_decode($deptUser,true);
+
+
+		//获取部门列表,为导入部门名称做匹配
+		$deptListArr_tree = $this->getDept();
+
+		// 标题
+		$objActSheet->setCellValue("A1", '真实姓名');
+		$objActSheet->setCellValue("B1", '所属部门');
+		$objActSheet->setCellValue("C1", '手机号码');
+		$departName = cookie("nickName"); //默认部门
+
+		foreach( $deptUser_arr['list'] as $key=>$vo ){
+//			dump($vo);
+			$key += 2;
+			foreach( $deptListArr_tree as $v ){
+//				dump($v);
+				if( $vo['departId'] == $v['departId'] ){
+					$departName = $v['deptName']; //部门名称
+				}
+			}
+//			$objActSheet->setCellValue('A1', '字符串内容xxxx'); // 字符串内容
+			$objActSheet->setCellValue("A$key", $vo['trueName']); // 真实姓名
+			$objActSheet->setCellValue("B$key", $departName);  //所属部门
+			$objActSheet->setCellValue("C$key", $vo['mobile']);  //手机号码
+		}
+
+
+
+
+//设置格式为PHPExcel_Style_NumberFormat::FORMAT_NUMBER，避免某些大数字
+//被使用科学记数方式显示，配合下面的 setAutoSize 方法可以让每一行的内容
+		//都按原始内容全部显示出来。
+
+		$objStyleA5 = $objActSheet ->getStyle('A5');
+//		$objStyleA5 ->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_NUMBER);
+
+//设置字体
+//		$objFontA5 = $objStyleA5->getFont();
+//		$objFontA5->setName('Courier New');
+//		$objFontA5->setSize(10);
+//		$objFontA5->setBold(true);
+//		$objFontA5->setUnderline(PHPExcel_Style_Font::UNDERLINE_SINGLE);
+
+//		$objFontA5 ->getColor()->setARGB('FFFF0000') ;
+
+//		$objFontA5 ->getColor()->setARGB( PHPExcel_Style_Color::COLOR_WHITE);
+
+// $ objFontA5 ->getFont()->setColor(PHPExcel_Style_Color::COLOR_RED);
+
+//设置对齐方式
+//		$objAlignA5 = $objStyleA5->getAlignment();
+//		$objAlignA5->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_RIGHT);
+//		$objAlignA5->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+
+//设置边框
+//		$objBorderA5 = $objStyleA5->getBorders();
+//		$objBorderA5->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+//		$objBorderA5->getTop()->getColor()->setARGB('FFFF0000') ; // 边框color
+//		$objBorderA5->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+//		$objBorderA5->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+//		$objBorderA5->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+
+//设置CELL填充颜色
+//		$objFillA5 = $objStyleA5->getFill();
+//		$objFillA5->setFillType(PHPExcel_Style_Fill::FILL_SOLID);
+//		$objFillA5->getStartColor()->setARGB('FFEEEEEE');
+
+//从指定的单元格复制样式信息.
+//		$objActSheet->duplicateStyle($objStyleA5, 'B1:C22');
+
+//添加一个新的worksheet
+//		$objExcel->createSheet();
+//		$objExcel->getSheet(1)->setTitle('测试2');
+
+//保护单元格
+//		$objExcel->getSheet(1)->getProtection()->setSheet(true);
+//		$objExcel->getSheet(1)->protectCells('A1:C22', 'PHPExcel');
+
+		$outputFileName = "output.xls";
+//到文件
+////$objWriter->save($outputFileName);
+//or
+//到浏览器
+		header("Content-Type: application/force-download");
+		header("Content-Type: application/octet-stream");
+		header("Content-Type: application/download");
+		header('Content-Disposition:inline;filename="'.$outputFileName.'"');
+		header("Content-Transfer-Encoding: binary");
+		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+		header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+		header("Pragma: no-cache");
+		$objWriter->save('php://output');
+
+	}
+    
+    //新建员工
+     function addStaff(){
+        //获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->display();
+    }
+    
+    //编辑员工
+    function editStaff(){    	
+    	//获取员工信息
+    	$userId = I('userId');
+    	$userInfo = A('Api/Jhttp')->getUserinfo2($userId);
+    	$userInfo_arr = json_decode($userInfo,true);
+    	//获取员工头像
+    	if( $userInfo_arr['list']['headLogo'] ){
+    		$headLogo = M('files')->where('f_id='.$userInfo_arr['list']['headLogo'])->find();    		
+    	}
+    	if( $headLogo ){
+    		$userInfo_arr['list']['headLogo'] = 'upfile/'.$headLogo['f_filepath'].$headLogo['f_filename'];    		
+    	}
+    	
+    	//获取部门列表
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+
+    	$this->assign('userInfo',$userInfo_arr['list']);
+    	$this->assign('deptListArr_tree',$deptListArr_tree);
+    	$this->assign("companyId", $companyId);
+    	$this->display();
+    }
+    
+    
+    //新建部门
+    function  addDept(){        
+        //获取部门列表
+//        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();
+//		echo json_encode($deptListArr_tree,true);
+//		var_dump($deptListArr_tree);
+//		exit;
+        
+       	$this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+    
+    //编辑部门
+    function  editDept(){
+    	//获取部门信息
+    	$departInfo['departId'] = I('departId');
+    	$departInfo['departName'] = I('departName');
+    	$departInfo['parentId'] = I('parentId');
+    	  
+    	//获取部门列表
+    	$companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $deptListArr_tree = $this->getDept();   	
+    	
+    	$this->assign('deptListArr_tree',$deptListArr_tree);
+    	$this->assign("companyId", $companyId);
+    	$this->assign("companyName", $companyName);
+    	$this->assign('departInfo',$departInfo);
+    	$this->display();
+    }
+    
+    
+    //获取部门列表(公共部分，不要轻易修改)
+    function getDept(){
+        header("Content-Type:text/html;charset=utf-8");
+    	set_theme();
+    	
+    	$deptListArr = array();	//树状部门关系
+    	$companyId=cookie("companyId");
+    	$companyName=cookie("companyName");
+    	$result = A("Api/Jhttp")->getDeparts($companyId);	//公司下已有部门列表
+
+    	$deptListArr = json_decode($result,true);
+
+//        dump($deptListArr);
+//        exit;
+ 	
+    	$deptListArr_tree = $this->tree( $deptListArr['list'] );	//树状显示
+
+//        dump($deptListArr_tree);exit;  //少了个测试5555
+
+    	return $deptListArr_tree;    	
+    }    
+
+   
+    //树状显示
+    static public function tree(&$arr,$pid=0,$count=0){
+    	foreach( $arr as $key=>$vo ){    		
+    		if( $vo['parentId'] == $pid ){
+    			$vo['count'] = $count;    			
+    			self::$treeList[] = $vo;
+//    			unset($arr[$key]);
+    			self::tree($arr,$vo['departId'],$count+1);
+    		}  		
+    	}  
+    	
+    	return self::$treeList;
+    }
+    
+    //判断是否有子孙项,有子孙项的是不能删除的
+    function hasChild(){
+    	$departId = I('departId');
+    	$deptListArr_tree = $this->getDept();
+    	foreach( $deptListArr_tree as $vo){
+    		if( $vo['parentId'] == $departId ){
+    			$data = array('text'=>'success');
+    			$this->ajaxReturn($data);exit;
+    		}else{
+    			$data = array('text'=>'error');    			
+    		}
+    	}
+    	
+    	$this->ajaxReturn($data);
+    } 
+    
+    //判断是否是自己的孙子，老子不能当儿子的子类
+    function isChild(){
+    	$departId = I('departId');
+    	$parentId = I('parentId');
+    	
+    	$deptListArr_tree = $this->getDept();
+    	$result = $this->getChildren($deptListArr_tree, $departId);	//得到子孙
+    	foreach( $result as $v ){	//子孙中是否存在现在选择的所属类
+    		if( $v['departId'] == $parentId ){
+    			$data['text'] = 'success';
+    			$this->ajaxReturn($data);
+    		}
+    	}
+    	$data['text'] = 'error';
+    	$this->ajaxReturn($data);    	
+    	
+    }
+    
+    //得到子孙
+    static public $children = array();
+    function getChildren($arr,$pid){    
+    	foreach( $arr as $key=>$vo ){
+    		if( $vo['parentId'] == $pid ){    			
+    			self::$children[] = $vo;
+    			unset($arr[$key]);
+    			$this->getChildren($arr,$vo['departId']);
+    		}
+    	}
+    	
+    	return self::$children;
+    	
+    }
+      public function address(){
+            set_theme();
+            //echo "fdsafds";
+            $this->display();
+        }
+           public function company(){
+                    set_theme();
+                    //echo "fdsafds";
+                    $this->display();
+                }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

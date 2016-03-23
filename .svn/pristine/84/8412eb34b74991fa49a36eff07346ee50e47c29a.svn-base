@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>                                                        
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="alternate" media="handheld" href="#" />
+<link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<css href="__CSS__/dealer.css" />
+<title>经销商详情完善</title>
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+ </script>
+</head>
+
+<style type="text/css">
+#center { 
+text-align:center;
+margin-left:auto; 
+margin-right:auto;
+}
+.m_line{margin-top: 40px;}
+
+</style>
+<body>
+    <br>
+    <include file="Public/dealer_hear" />
+
+    <div>
+        <hr class="m_line"></hr>   
+    </div>
+
+    <div  style="min-height:400px;">
+
+        <span>经销商合同确认日期：{$deaTime}</span>
+        <button>下载</button><br><br>
+        <span style="text-align: center;height: 20px;font-weight: bold;margin: auto;">经销商合同已签订，请企业上传合同，并确认。</span>
+
+        <eq name="comContract" value="">
+            <div class="upContract">
+                  <p class="first" style="color:#000;">上传合同:</p>
+                  <div class="upfile">
+                  <button class="btn" onclick="$('#profileImg').click();">上传合同</button>
+                  <button class="btn" id="comContract" onclick="comContract();">请确认上传</button>
+                  <span id="delContract" class="btn"></span>
+                  <div style="display: none;">
+                        <input type="file" id="profileImg" name="upfile" accept="image/jpeg,image/gif,image/png">
+                  </div>
+                  <input type="hidden" id="profile1" name="profile1" value="{$reModi.one.f_fileid}">
+                  <input type="hidden" id="dealerId" name="dealerId" value="{$dealerid}">
+                  </div><br>
+                  <div class="show_img" id='show_proimg1'></div>
+                  <div class="show_img_contract"></div>
+            </div> 
+        </eq>
+
+    </div>
+</body>
+
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+
+</script>
+</html>

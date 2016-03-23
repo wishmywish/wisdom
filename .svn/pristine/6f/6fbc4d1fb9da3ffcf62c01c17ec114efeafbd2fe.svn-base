@@ -1,0 +1,54 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2015/9/7
+ * Time: 14:41
+ */
+
+namespace Taskadmin\Controller;
+use Think\Controller;
+
+class DealerController extends Controller
+{
+    function index(){
+        set_theme();
+        $this->display();
+    }
+
+    //添加电话理由
+    function addShowNote(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $id = I('get.id');
+        $selectId = I('get.selectId');
+        $this->assign('saleId',$id);
+        $this->assign('selectid',$selectId);
+
+        $this->display();
+    }
+    
+    //读取经销商数据
+    function showdealer(){
+        $area=I("get.area","");
+        if(!empty($area)){
+            $map['f_area'] = array("LIKE",$area);
+        }
+        $industrytype=I("get.industrytype","");
+        if(!empty($industrytype)){
+            $map['f_industrytype'] = $industrytype;
+        }
+        $dealername=I("get.dealername","");
+        if(!empty($dealername)){
+            $map['f_dealername'] = array("LIKE",$dealername);
+        }
+        $status=I("get.status","");
+        if(!empty($status)){
+            $map['f_status'] = $status;
+        }
+
+        $re = M("dealerlibrary")->where($map)->select();
+        echo json_encode($re);
+    }
+}

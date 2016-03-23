@@ -1,0 +1,41 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+    html, body {
+        margin: 0 auto;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+        background: #FFF;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+    }
+    a{
+        text-decoration: none;}
+</style>
+<body>
+<span>成功导入{$succ_result}条数据,失败导入{$error_result}条数据！</span>
+
+<div style="height: 10px;"></div>
+<foreach name="error_line" item="vo">
+    <div style="height: 20px;line-height: 20px;" >第{$vo}行数据出错(手机已经注册或其它)</div>
+</foreach>
+
+<div style="height: 10px;"></div>
+ <div>
+     <a class="btn btn-default" href="#" role="button" id="importBtn" style="margin-top: 15px;" onclick="closeClient()">关闭</a>
+ </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+
+<script>
+    //关闭弹窗
+    function closeClient(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+
+        parent.location.reload();
+        parent.layer.close(index);
+
+    }
+</script>
+</html>

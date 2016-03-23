@@ -1,0 +1,32 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of SalesreportController
+ *
+ * @author Administrator
+ */
+namespace Taskadmin\Controller;
+use Think\Controller;
+class SalesreportController  extends Controller{
+    //put your code here
+    function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $this->assign('classtype','1');
+        $this->display("liveness");
+    }
+
+	function contract(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $this->assign('classtype','1');
+        $this->display("contract");
+    }
+
+}

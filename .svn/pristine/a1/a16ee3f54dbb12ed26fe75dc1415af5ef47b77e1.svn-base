@@ -1,0 +1,97 @@
+<include file="Public/head" title="招商APP管理平台::提现管理" />
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 消费记录管理</div>
+        <div class="tabli">
+            <ul id="tabli_ShopRecord">
+                <li value="0" class='selected'>待确认</li>
+                <li value="1">已收货</li>
+            </ul>
+            <ul class="action">
+                <li id="pay" value="0">确认收货</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                <li style='width:25%;'>商品名称</li>
+                <li style='width:20%;'>消费人</li>
+                <li style='width:15%;'>消费金额</li>
+                <li style='width:15%;'>商品状态</li>
+                <li style='width:20%;'>时间</li>
+            </ul>
+            <div class='listinfo'>
+            </div>
+            <div class="page"></div>
+        </div>
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        //获取列表信息
+        plist_shopRecord(0);
+
+        //全选
+        $('#allcheck').click(function(){
+            //alert(this.checked);
+            if(this.checked){
+                $("input[name='withdrawid']").attr("checked", true);
+            }else{
+                $("input[name='withdrawid']").attr("checked", false);
+            }
+        });
+
+        $("#pay").click(function(){
+            var checkedlist = "";
+            // var phonelist = "";
+            var phoneidlist = "";
+
+            $("input[name='shoprecordid']:checked").each(function(){
+                if(checkedlist===""){
+                    checkedlist = $(this).val();
+                    // phonelist = "phone"+$(this).val();
+                    // phonelist = $("#"+phonelist+"").val();
+                }else{
+                    checkedlist += "|"+$(this).val();
+                    // phonelist = "phone"+$(this).val();
+                    // console.log(phonelist);
+                    // console.log($("#"+phonelist+"").val());
+                    // phonelist += "|"+$("#"+phonelist+"").val();
+                }
+            });
+
+            if(checkedlist===""){
+                layer.msg("选择要确认的记录",{"icon":8});
+                return false;
+            }else{
+                $.post(APP + "/Api/Web/getNoteConfirm", "checkedlist=" + checkedlist+"&phoneidlist="+phoneidlist, function (v) {
+                    //console.log(v.result);
+                    if (v.result === '000000') {
+
+                        var strs= new Array(); //定义一数组 
+                        strs=checkedlist.split("|"); //字符分割 
+                        for (i=0;i<strs.length ;i++ ) 
+                        { 
+                            var phonelist = "phone"+strs[i];
+                            phoneidlist = $("#"+phonelist+"").val();
+                            $.post("{:U('Api/Info/conf')}","command=voicecode&voicephone="+phoneidlist,function(v){
+                                // layer.msg('产品已确认收货，且短信发送至第'+i+'位的手机！', {'icon': 8});
+                            },'json');
+                        }
+                        location.reload();
+                    } else {
+                        layer.msg('操作失败', {'icon': 8});
+                        return false;
+                    }
+                }, 'json');
+            }
+        });
+
+    });
+</script>
+</html>

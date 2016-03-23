@@ -1,0 +1,406 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>任务列表</li>
+            <li id="1" class="org_box"><span ></span>我的任务</li>
+            <li id="2" class="org_box"><span ></span>任务执行全貌</li>
+        </ul>
+    </div>
+    <div class="approval_center">
+        <!-- 任务列表-->
+     <div id="a0">
+         <div class="approval_head" style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;">
+             <span style="display: inline-block;">任务>&nbsp;任务列表</span>
+             <div class="column">
+                 <span style="float: left;">筛选：</span>
+                 <!-- 员工部门-->
+                 <div class="personmsg">
+                     <ul>
+                         <li>
+                             <label>任务主题&nbsp;</label>
+                             <input type="text" />
+                             <!--<select id="reimbursementType" style="width:140px;">-->
+                                 <!--<option value="1"> 我发起的流程 </option>-->
+                                 <!--<option value="2"> 待我审批的流程 </option>-->
+                                 <!--<option value="3"> 我已审批的流程 </option>-->
+                             <!--</select>-->
+                         </li>
+                         <li>
+                             <label>任务状态&nbsp;</label>
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                             </select>
+                         </li>
+                         <li>
+                             <span>&nbsp;&nbsp;&nbsp;任务周期&nbsp;</span>
+                             <input id="startDate1" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                             <span>&nbsp;至&nbsp;</span>
+                             <input id="endDate1" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                         </li>
+                     </ul>
+                 </div>
+                 <input type="hidden" id="hidRType" value="1">
+                 <input type="hidden" id="hidSDate1" value="">
+                 <input type="hidden" id="hidEDate1" value="">
+                 <input type="hidden" id="hidRStatus" value="">
+                 <!-- 按钮-->
+                 <p style="height: 25px;float: right">
+                     <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(2, 1, 1);">
+                     <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearReimbursement();">
+                     <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                 </p>
+             </div>
+         </div>
+         <!--列表-->
+         <div class="approval_list">
+             <p style="height: 25px;margin: 0 0 12px;float: right;">
+                 <input id="" class="bntns1" type="button" onclick="tip()" value="下达">
+                 <input id="" class="bntns1" type="button" onclick="doCancel()" value="作废">
+                 <input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addTask()" value="新增">
+
+             </p>
+             <div class="title">
+                 <ul>
+                     <li style="width: 5%;">选择</li>
+                     <li style="width: 15%;">任务编号</li>
+                     <li style="width: 20%;">任务主题</li>
+                     <li style="width: 10%;">开始日期</li>
+                     <li style="width: 10%;">结束日期</li>
+                     <li style="width: 10%;">下达日期</li>
+                     <li style="width: 15%;">参与人员</li>
+                     <li style="width: 10%;">任务状态</li>
+                     <li style="width: 5%;">附件</li>
+                 </ul>
+             </div>
+             <div class="contentList">
+                <div id="reimbursementContentList">
+                    <?php for($i=0;$i<9;$i++){?>
+                 <ul>
+                     <li style="width: 5%;"><input type="checkbox"></li>
+                     <li style="width: 15%;">TASK01222222222</li>
+                     <li style="width: 20%;cursor: pointer;" onclick="showTaskDetail();" title="关于XXXXXX小宝招商的任务"><a>关于XXXXXX小宝招商的任务</a></li>
+                     <li style="width: 10%;">2015-9-8</li>
+                     <li style="width: 10%;">2015-9-9</li>
+                     <li style="width: 10%;">2015-6-6</li>
+                     <li style="width: 15%;">小花，小的</li>
+                     <li style="width: 10%;">起草中</li>
+                     <li style="width: 5%;cursor: pointer;"><a onclick="showFJ()">有</a></li>
+                 </ul>
+                    <?php }?>
+                </div>
+             </div>
+            <div id="pagebar1" class="pagebar" style="margin-top:20px;"></div>
+            <input type="hidden" id="page1" value="1">
+         </div>
+     </div>
+        <!-- 我的任务-->
+        <div id="a1" style="display: none;">
+            <div class="approval_head" style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;">
+                <span style="display: inline-block;">任务>&nbsp;任务列表</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>任务主题&nbsp;</label>
+                                <input type="text" />
+                            </li>
+                            <li>
+                                <label>任务状态&nbsp;</label>
+                                <select id="reimbursementStatus" style="width:110px;">
+                                    <option value=""> --请选择-- </option>
+                                    <option value="1"> 未提交 </option>
+                                    <option value="2"> 待处理 </option>
+                                    <option value="3"> 审核通过 </option>
+                                    <option value="4"> 审核不通过 </option>
+                                    <option value="5"> 已撤销 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;任务周期&nbsp;</span>
+                                <input id="startDate1" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate1" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="hidRType" value="1">
+                    <input type="hidden" id="hidSDate1" value="">
+                    <input type="hidden" id="hidEDate1" value="">
+                    <input type="hidden" id="hidRStatus" value="">
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(2, 1, 1);">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearReimbursement();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <p style="height: 25px;margin: 0 0 12px;float: right;">
+                    <input id="" class="bntns1" type="button" onclick="doTaskDetail()" value="执行">
+                    <input id="" class="bntns1" type="button" onclick="doMove()" value="转移">
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addTask()" value="新增">-->
+
+                </p>
+                <div class="title">
+                    <ul>
+                        <li style="width: 5%;">选择</li>
+                        <li style="width: 15%;">任务编号</li>
+                        <li style="width: 20%;">任务主题</li>
+                        <li style="width: 15%;">要求开始日期</li>
+                        <li style="width: 15%;">要求结束日期</li>
+                        <li style="width: 10%;">任务状态</li>
+                        <li style="width: 10%;">任务进度</li>
+                        <li style="width: 10%;">附件</li>
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div id="reimbursementContentList">
+                        <?php for($i=0;$i<9;$i++){?>
+                        <ul>
+                            <li style="width: 5%;"><input type="checkbox"></li>
+                            <li style="width: 15%;">TASK01222222222</li>
+                            <li style="width: 20%;cursor: pointer;" onclick="doTaskDetail();" title="关于XXXXXX小宝招商的任务"><a>关于XXXXXX小宝招商的任务</a></li>
+                            <li style="width: 15%;">2015-9-8</li>
+                            <li style="width: 15%;">2015-9-9</li>
+                            <li style="width: 10%;">执行中</li>
+                            <li style="width: 10%;">10%</li>
+                            <li style="width: 10%;cursor: pointer;"><a onclick="showFJ()">有</a></li>
+                        </ul>
+                        <?php }?>
+                    </div>
+                </div>
+                <div id="pagebar1" class="pagebar" style="margin-top:20px;"></div>
+                <input type="hidden" id="page1" value="1">
+            </div>
+        </div>
+        <!-- 任务执行全貌-->
+        <div id="a2" style="display: none;">
+            <div class="approval_head"> <!-- style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=========暂时隐藏，二期开发========= -->
+                <span style="display: inline-block;">任务>&nbsp;任务执行全貌</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="businessTripType" style="width:140px;">
+                                 <option value="1"> 我发起的流程 </option>
+                                 <option value="2"> 待我审批的流程 </option>
+                                 <option value="3"> 我已审批的流程 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate3" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate3" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <select id="businessTripStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                                </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <input type="hidden" id="hidBTType" value="1">
+                    <input type="hidden" id="hidSDate3" value="">
+                    <input type="hidden" id="hidEDate3" value="">
+                    <input type="hidden" id="hidBTStatus" value="">
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(4, 1, 1);">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearBusinessTrip();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addTravel()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 19%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 30%;">申请内容</li>
+                        <li style="width: 8%;">申请人</li>
+                        <li style="width: 8%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 10%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div id="businessTripContentList">
+                    <notempty name="businessTrip_list.processList">
+                    <volist name="businessTrip_list.processList" id="businessTrip">
+                     <ul>
+                         <li style="width: 19%;">{$businessTrip.processNo}</li>
+                         <li style="width: 15%;cursor: pointer;" onclick="showTravelDetail('{$businessTrip.processId}');" title="{$businessTrip.title}"><a>{$businessTrip.title}</a></li>
+                         <li style="width: 30%;" title="{$businessTrip.formContent}">{$businessTrip.formContent}&nbsp;</li>
+                         <li style="width: 8%;">{$businessTrip.applicantName}&nbsp;</li>
+                         <li style="width: 8%;">{$businessTrip.currentHandlerPerson}&nbsp;</li>
+                         <li style="width: 10%;">
+                            <?php 
+                                switch ($businessTrip['status']) {
+                                    case 1:
+                                        echo "未提交";
+                                        break;
+                                    case 2:
+                                        echo "待处理";
+                                        break;
+                                    case 3:
+                                        echo "审核通过";
+                                        break;
+                                    case 4:
+                                        echo "审核不通过";
+                                        break;
+                                    case 5:
+                                        echo "撤销";
+                                        break;
+                                    default:
+                                        echo "未提交";
+                                        break;
+                                }?>
+                         </li>
+                         <li style="width: 10%;"><?php echo date("Y-m-d", strtotime($businessTrip['createTime']));?></li>
+                     </ul>
+                    </volist>
+                    </notempty>
+                    <empty name="businessTrip_list.processList">
+                        <ul class="topnone">
+                            <li style="width: 100%;color:#f47469;">无数据!</li>
+                        </ul>
+                    </empty>
+                    </div>
+                 </div>
+                 <div id="pagebar3" class="pagebar" style="margin-top:20px;"></div>
+                 <input type="hidden" id="page3" value="1">
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script>
+    $('#bigmenu li').click(function(){
+        // $("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+
+    //新增任务
+    function addTask(){
+        layer.open({
+            type:2,
+            title :['新增任务','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '698px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addTask'
+        });
+    }
+
+    //任务详情
+    function showTaskDetail(){
+        layer.open({
+            type:2,
+            title :['任务详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['840px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/showTask'
+        });
+    }
+    //提示框
+    function tip(){
+        layer.open({
+            type:2,
+            title :['提示','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['390px', '200px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/showTip1'
+        });
+    }
+    //作废
+    function doCancel(){
+        layer.open({
+            type:2,
+            title :['作废','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['880px', '300px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/cancel'
+        });
+    }
+    //附件
+    function showFJ(){
+        layer.open({
+            type:2,
+            title :['附件列表','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['730px', '390px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/showFJ'
+        });
+    }
+    //任务执行详情
+    function doTaskDetail(){
+        layer.open({
+            type:2,
+            title :['任务执行详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '589px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/doTask'
+        });
+    }
+    //转移
+    function doMove(){
+        layer.open({
+            type:2,
+            title :['转移','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['880px', '360px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/move'
+        });
+    }
+    $(function() {
+
+
+    })
+</script>
+</body>
+</html>

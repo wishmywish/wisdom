@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据导入结果</title>
+    <style>
+        .btn{
+            border:none;
+            background-color:#15BCE0;
+            color:#ffffff;
+            padding:5px 20px;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <js href="__STATIC__/jquery-1.11.2.min.js" />
+    <js href="__STATIC__/layer/layer.js" />
+    <js href="__STATIC__/layer/skin/layer.css"/>
+</head>
+<body>
+
+    <span  style="font-size:12px;">成功导入{$succ_result}条数据,失败导入{$error_result}条数据！</span>
+    <div style="height: 10px;"></div>
+    <foreach name="error_line" item="vo">
+        <div style="height: 20px;line-height: 20px;font-size:12px;" >第{$vo}行数据出错(手机已经注册或其它)</div>
+    </foreach>
+
+    <div style="height: 10px;"></div>
+    <div>
+        <button class="btn btn-default" href="#"  style="margin-top: 15px;" onclick="closeClient()">关闭</button>
+    </div>
+    </div>
+    <input type="hidden"  value={$list}  id="newadddata"/>
+    <input type="hidden"  value="{$page}"  id="newpage"/>
+    <input type="hidden"  value="{$count}"  id="count"/>
+    </div>
+    <script>
+        //关闭弹窗
+        function closeClient(){
+            var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+            var newadddata=eval($("#newadddata").val());
+            $(window.parent.$(".audit_tbody tr:gt(0)").remove());
+            $.each(newadddata,function(i,n){
+                getlistdata(n);
+            });
+            $(window.parent.$("#audit_tbody_tr_num").text($("#count").val()));
+            $(window.parent.$("#audit_tbody_page").text($("#newpage").val()));
+            $(window.parent.$("#conven_taskBrand3").val($("#count").val()));
+            var taskProduct3=window.parent.$("#conven_taskProduct3").val();
+            var conven_totalFee3=taskProduct3*2*$("#count").val();
+            $(window.parent.$("#conven_totalFee3").val(conven_totalFee3));
+            $(window.parent.$(".audit_tbody tr:gt(5)").hide());
+            parent.layer.close(index);
+        }
+
+        function getlistdata(data){
+            var list="";
+            list+="<tr>";
+            list+="<td class='wh-5'><input type='checkbox' class='audit_table_input' name='audit_checkbox'  value='"+data.f_super_id+"'></td>";
+            list+="<td class='wh-20'><input type='text' name='network_name'  class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_network_name+"' readonly></td>";
+            list+="<td class='wh-20'><input type='text' name='network_address' class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_network_address+"' readonly></td>";
+            list+="<td class='wh-10'><input type='text' name='net_claim_num'  class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_claim_num+"' readonly></td>";
+            list+="<td class='wh-10'><input type='text' name='longitude' class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_longitude+"' disabled  style='height:40px;'></td>";
+            list+="<td class='wh-10'><input type='text' name='latitude' class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_latitude+"' disabled  style='height:40px;'></td>";
+            list+="<td class='wh-10'><input type='text' class='audit_table_input' onmouseover='this.title=this.value' value='"+data.f_range+"' readonly></td>";
+            list+="<td class='wh-5'><img src='"+IMG+"/dingwei.png'  height='30px' width='30px'  style='cursor:pointer' onclick='dingwei(this)'></td>";
+            list+="<td class='wh-5' style='border:none'></td>";
+            list+="</tr>";
+            $(window.parent.$(".audit_tbody").append(list));
+        }
+    </script>
+</body>
+</html>

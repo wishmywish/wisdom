@@ -1,0 +1,116 @@
+<include file="Public/head" title="招商APP管理平台" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="tab">
+                    <div class='selecttab'>
+                        <div class='tabwidth'>
+                        注册时间：<input id="start"  name="start"  class=" laydate-icon"   placeholder="起始时间"/>
+                                    至
+                                 <input id="end"  name="end" placeholder="终止时间"  class=" laydate-icon" />
+                        </div>
+
+                        <div class='tabwidth'>渠道:
+                            <select id="qudao">
+                                <option value="0">0渠道</option>
+                                <option value="A">A渠道</option>
+                                <option value="B">B渠道</option>
+                                <option value="C">C渠道</option>
+                                <option value="D">D渠道</option>
+                                <option value="E">E渠道</option>
+                                <option value="F">F渠道</option>
+                                <option value="G">G渠道</option>
+                                <option value="H">H渠道</option>
+                                <option value="I">I渠道</option>
+                                <option value="J">J渠道</option>
+                                <option value="K">K渠道</option>
+                                <option value="L">L渠道</option>
+                            </select>
+                            <div class="fa fa-search fa-lg" style='color:#ccc'></div>
+                        </div>
+                        <div>
+                            <div class='tabwidth' id='seach'><span>搜素</span></div>
+                            <div class='tabwidth' id='empty'><span>清空</span></div>
+                        </div>
+                    </div>  
+                </div>
+                    
+                </div>
+
+                <div class="list">
+                    <ul>    
+                        <li style='width:50%;'>渠道</li>
+                        <li style='width:50%;'>总数</li>
+                    </ul>
+                    <div class='listinfo'>
+                    </div>
+                    <div class="page"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+        var start = {
+            elem: '#start',
+            format: 'YYYY/MM/DD hh:mm:ss',
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function(datas){
+                 end.min = datas; //开始日选好后，重置结束日的最小日期
+                 end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#end',
+            format: 'YYYY/MM/DD hh:mm:ss',
+            min: laydate.now(),
+            max: '2099-06-16 23:59:59',
+            istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+        $("#empty").click(function(){
+             $("#qudao").val("");
+             $("#start").val("");
+             $("#end").val("");
+        });
+        $("#seach").click(function(){
+            $('.listinfo').empty();
+            var list = "";
+            var  start=$("#start").val();
+            var  end=$("#end").val();
+            var  qudao=$("#qudao").val();
+            if(start==""||end==""){
+                layer.msg("请选择时间",{icon:8});
+               return false;
+            }
+            if(start>end){
+                layer.msg("起始时间不能超过终止时间",{icon:8});
+               return false;
+            }
+            if(qudao==null||qudao==""){
+                layer.msg("请选择所在渠道",{icon:8});
+                return false;
+            }
+            $.post(APP+"/Taskadmin/Index/getQuDao",
+            "qudao="+qudao+"&start="+start+"&end="+end,
+            function(data){
+                list += "<ul>";
+                list += "<li style='width:50%;'>"+qudao+"渠道</li>";
+                list += "<li style='width:50%;'>"+data+"</li>";
+                list += "</ul>";
+                $('.listinfo').append(list);
+            },"json");
+            
+        });
+    </script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Taobao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--标准mui.css-->
+    <script type="text/javascript" src="http://wisdom.51lick.com//Public/static/jquery-1.11.2.min.js"></script>
+
+    <link rel="stylesheet" href="__CSS__/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__CSS__/app.css"/>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="__CSS__/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        mui.init({
+            subpages:[{
+                url:'taskdetail.html',
+                id:'taskdetail.html',
+                styles:{
+                    top:'45px',//mui标题栏默认高度为45px；
+                    bottom:'45px'//默认为0px，可不定义；
+                }
+            }]
+        });
+    </script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav" style="position:fixed;">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#FFFFFF"></a>
+    <h1 class="mui-title"  id="title" style="color:#FFFFFF">
+        <if condition="$taskinfo.type_label eq 'business'">
+            招商赚详情
+            <elseif condition="$taskinfo.type_label eq 'widely'"/>
+            随手赚详情
+            <elseif condition="$taskinfo.type_label eq 'push'"/>
+            推广赚详情
+        </if>
+    </h1>
+</header>
+<!--<div class="mui-content">-->
+    <!--<div id="segmentedControl" class="mui-segmented-control" style="border: 1px solid #C8C7CC;">-->
+        <!--<a class="mui-control-item  mui-active" href="#item2mobile" style="border-left:1px solid #C7C7CC">图文详情</a>-->
+        <!--<if condition="$taskinfo.type_label eq 'business'">-->
+            <!--<a class="mui-control-item" href="#item1mobile" style="  border-left:1px solid #C7C7CC;">产品参数</a>-->
+        <!--</if>-->
+
+    <!--</div>-->
+    <!--<div class="mui-content-padded" style="padding-top:10px;">-->
+        <!--<div id="item1mobile" class="mui-control-content" >-->
+            <!--<if condition="$taskinfo.type_label eq 'business'">-->
+                <!--<div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_product}</div>-->
+            <!--</if>-->
+        <!--</div>-->
+        <!--<div id="item2mobile" class="mui-control-content mui-active">-->
+            <!--<if condition="$taskinfo.type_label eq 'business'">-->
+                <!--<div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_note}</div>-->
+                <!--<elseif condition="$taskinfo.type_label eq 'widely'"/>-->
+                <!--<div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>-->
+                <!--<elseif condition="$taskinfo.type_label eq 'push'"/>-->
+                <!--<div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>-->
+            <!--</if>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--href="/index.php/Mobileweb/Events/erweima"-->
+<nav class="mui-bar mui-bar-tab" style="position:fixed;">
+    <a id="defaultTab" class="mui-tab-item"  href="/index.php/Mobileweb/Events/erweima">
+        <span class="mui-tab-label">立即参与</span>
+    </a>
+</nav>
+
+
+<script src="__JS__/mui.min.js"></script>
+<!--<script src="__JS__/mui.zoom.js"></script>-->
+<!--<script src="__JS__/mui.previewimage.js"></script>-->
+<script type="text/javascript">
+    document.getElementById('defaultTab').addEventListener('tap', function() {
+        location.href=APP+"/Mobileweb/Events/erweima";
+    });
+</script>
+</body>
+
+</html>
+

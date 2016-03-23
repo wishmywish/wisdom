@@ -1,0 +1,30 @@
+<include file="Public/head" title="授权书查看" />
+<style type="text/css">
+p 
+{
+    text-indent: 1cm
+}
+.wenzi
+{
+    text-decoration: underline;
+    line-height:22px;
+}
+</style>
+<body>
+
+     <div class="add">
+        <div class='info' style="background-color:white;">
+            <br>
+            <span>驳回理由：</span><br>
+            <textarea  value="" name="reason"  id="reason" style="width:550px;height:100px;"></textarea>
+            <input type="hidden" id="taskid" name="taskid" value="{$taskid}">
+            <a class="btn btn-default" href="#" role="button" id="rejectBtn" style="  margin: 25px 0 10px 475px;">确定</a>
+        </div>
+    </div>
+
+
+</body>
+<include file="Public/loadjs" />
+<script>
+    sublevel_out();//子窗口退出
+</script>

@@ -1,0 +1,46 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+        <div class="body_right_menu">
+             <div class="button_bg_80"  onclick="location.href = APP+'/Admin/Access/index'">角色管理</div>
+            <!--<div class="button_bg_80  button2" style="background-color:#eeeeee;color:#000" onclick="location.href = APP+'/Admin/Access/user_list'">用户管理</div>-->
+        </div>
+        <div class="body_right_list">
+            <div class="body_right_list_button">
+                <div class="button_bg_80" style="float: right;margin-right: 5px;" onclick="addrole()">新建角色</div>
+            </div>
+            <div class="body_right_list_tab1">
+                <ul>
+                    <li>序号</li>
+                    <li style='text-align:center;'>角色名称</li>
+                    <li style="padding-left:30px">操作</li>
+                </ul>
+            </div>
+            <div class="body_right_list_tab2" id="role_list" style="min-height:650px;height:650px;margin-bottom: 20px;">
+
+            </div> 
+            <div id="pagerolelist" class="page12"></div>
+        </div> 
+        
+    </div>
+  <include file="Public/loadjs" />
+    <script>
+       function addrole(){
+        var index=layer.open({
+        type: 2,
+        title :['新建角色','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+        area: ['500px', '450px'],
+        shadeClose: false, //点击遮罩关闭
+        content:APP+'/Admin/Access/addrole'
+        });
+       }
+       buslistData1(APP+"/Api/Web/role_list","companyid={$companyId}",'get',"json","pagerolelist");
+        $(function(){
+            $(document).on('click','#pagerolelist span a',function(){  
+               var rel = $(this).attr("rel"); 
+              prolist(APP+"/Api/Web/role_list","post","companyid={$companyId}&page="+rel,'get',"json","pagerolelist");
+          });
+        });
+    </script>
+    </body>
+</html>

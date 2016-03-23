@@ -1,0 +1,82 @@
+<include file="Public/head" />
+<style type="text/css">
+.header {
+    background-color: #fff;
+    position: relative;
+    height: auto;
+    min-height: 32px;
+    max-height: 721px;
+    z-index: 999;
+}
+
+.header li {   
+    text-align: center;   
+    float: left;   
+    width: 176px;   
+    margin: 3px;   
+    padding: 4px;   
+    list-style-type: none;   
+    cursor:pointer; 
+    color: black;
+}   
+
+.selected {
+    background-color: #CCCCCC;
+    color: #2b669a;
+}
+.info{
+    background-color: white;
+    margin-top: 20px;
+}
+</style>
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="add">
+<!-- {$reModi.userid} -->
+                <div class="header">
+                    <ul id="main-nav">
+                        <li value="0" id="sum" class="selected" onclick="taskType({$reModi['userid']});">全部<span class="sum"></span></li>
+                        <li value="1" id="approval" class='' onclick="taskType({$reModi['userid']},1);">审核<span class="approval"></span></li>
+                        <li value="2" id="progress" class='' onclick="taskType({$reModi['userid']},2);">进行<span class="progress"></span></li>
+                        <li value="3" id="complete" class='' onclick="taskType({$reModi['userid']},3);">完成<span class="complete"></span></li>
+                        <li value="4" id="lose" class='' onclick="taskType({$reModi['userid']},4);">失效<span class="lose"></span></li>
+                    </ul>
+                </div>
+
+                
+                <div class="taskInfo">
+                    <volist name="reModi" id="vo" key="k">
+                        
+        	                <?php if (isset($vo) && is_array($vo)) {?>
+        		                <!-- {$vo.f_title} -->
+                                <div class='info'>
+            						<br>
+
+            	                    <span>&nbsp;&nbsp;&nbsp;&nbsp;任务名称： {$vo.f_title}</span><br><br>
+
+            	                    <span style="padding-left:12px;">任务联系人： {$vo.f_linkman}</span><br><br>
+            	                    
+            	                    <span style="padding-left:12px;">联系电话： {$vo.f_linkphone}</span><br><br>
+
+            	                    <span style="padding-left:12px;">任务类型： {$vo.f_tasktype.f_typename}</span><br><br>
+                                </div>
+        	                <?php }?>
+                        
+                    </volist>
+                </div>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

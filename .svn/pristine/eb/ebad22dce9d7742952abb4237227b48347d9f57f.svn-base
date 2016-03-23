@@ -1,0 +1,57 @@
+<include file="Public/head" title="招商APP管理平台::用户信息管理" />
+<style type="text/css">
+.list{
+    margin-top: 40px;
+    margin-left: -200px;
+    font-size: 14px;
+}
+.listreturn{
+    margin-top: 40px;
+}
+</style>
+    <body>
+        <div class="adminB">
+            <div class="adminRight">
+                <div class="list">
+                    <input type="hidden" id="userIDMobile" value="{$re.list.mobile}"/>
+                    <input type="hidden" id="userIDuserId" value="{$re.list.userId}"/>
+                    身份证姓名：<input type="text" id="inUserIDName" placeholder="请输入身份证姓名" value="{$re.list.trueName}" style="width:150%;height: 30px;line-height: 30px;"/><br>
+                    身份证地址：<input type="text" id="inUserIDAddress" placeholder="请输入身份证地址" value="{$re.list.homeAddress}" style="width:150%;height: 30px;line-height: 30px;"/><br>
+                    身份证编号：<input type="text" id="inUserIDNumber" placeholder="请输入身份证编号" value="{$re.list.idCard}" style="width:150%;height: 30px;line-height: 30px;" readonly/><br>
+                </div>
+                <div class="listreturn">
+                    <button type="button" id="modiUserID" style="width:60px;height: 30px;line-height: 30px;border: 0px;background:#3c8dbc;color: #fff;">修改</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+        $('#modiUserID').click(function(){
+            var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+            var userIDMobile=$('#userIDMobile').val();
+            var userIDuserId=$('#userIDuserId').val();
+
+            var inUserIDName=$('#inUserIDName').val();
+            if(inUserIDName===""){
+                layer.msg('请输入身份证姓名', {icon: 8});
+                $('#inUserIDName').focus();
+                return false;
+            }
+
+             var inUserIDAddress=$('#inUserIDAddress').val();
+            if(inUserIDAddress===""){
+                layer.msg('请输入身份证地址', {icon: 8});
+                $('#inUserIDAddress').focus();
+                return false;
+            }
+
+           $.post(APP+"/Taskadmin/UserInfo/userIDInfoUpdate","userIDMobile="+userIDMobile+"&inUserIDName="+inUserIDName+"&inUserIDAddress="+inUserIDAddress+"&userIDuserId="+userIDuserId,
+                function(data){
+                    parent.location.reload();
+                    parent.layer.close(index);
+                },"json");
+    });
+
+    </script>
+</html>

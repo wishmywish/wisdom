@@ -1,0 +1,445 @@
+/**
+ * Created by Administrator on 2015/11/19.
+ */
+    //tab图切换 start
+$("#two").click(function(){
+    $("#two").addClass("active");
+    $("#c1").show();
+    $("#c0").hide();
+    $("#one").removeClass("active");
+});
+
+$("#one").click(function(){
+    $("#one").addClass("active");
+    $("#c0").show();
+    $("#c1").hide();
+    $("#two").removeClass("active");
+});
+//tab图切换 end
+var url=$("#url").val();
+//营业执照上传
+$("#business_licence_logo").wrap("<form id='upfile_up_business_licence' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#business_licence_logo').change(function () {
+    var i = 1;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_business_licence', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_1', '#fileid_other_1', 'img');
+
+});
+
+
+//税务登记证上传
+$("#tax_registration_logo").wrap("<form id='upfile_up_tax_registration' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo').change(function () {
+    var i = 2;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_2', '#fileid_other_2', 'img');
+});
+
+
+//组织机构代码证上传
+$("#tax_registration_logo3").wrap("<form id='upfile_up_tax_registration3' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo3').change(function () {
+    var i = 3;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration' + i + '', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_' + i + '', '#fileid_other_' + i + '', 'img');
+});
+
+//税务登记证上传
+$("#tax_registration_logo4").wrap("<form id='upfile_up_tax_registration4' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo4').change(function () {
+    var i = 4;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration'+ i + '', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_' + i + '', '#fileid_other_' + i + '', 'img');
+});
+
+
+//公司标志上传
+$("#tax_registration_logo5").wrap("<form id='upfile_up_tax_registration5' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo5').change(function () {
+    var i = 5;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration'+ i + '', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_' + i + '', '#fileid_other_' + i + '', 'img');
+});
+
+
+//生产许可证上传
+$("#tax_registration_logo6").wrap("<form id='upfile_up_tax_registration6' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo6').change(function () {
+    var i = 6;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration'+ i + '', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_' + i + '', '#fileid_other_' + i + '', 'img');
+});
+
+
+//食品流通许可证
+$("#tax_registration_logo7").wrap("<form id='upfile_up_tax_registration7' action='"+url+"' method='post' enctype='multipart/form-data'></form>");
+$('#tax_registration_logo7').change(function () {
+    var i = 7;
+    $("#c_pic_"+i).show();
+    ajaxSub('#upfile_up_tax_registration'+ i + '', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other_' + i + '', '#fileid_other_' + i + '', 'img');
+});
+
+
+
+//企业资料设置
+$('#c_set_submit').click(function () {
+
+    var c_name = $.trim($("#fullname").val()); //企业名称
+    var c_legal = $.trim($('#c_legal').val()); //法人代表
+    var c_link = $.trim($('#c_link').val()); //联系人
+    var c_phone = $.trim($('#c_phone').val()); //联系电话
+    var c_regCapital = $.trim($('#c_regCapital').val()); //注册资金
+    var c_tel = $.trim($('#c_tel').val()); //联系电话
+    var c_email = $.trim($('#c_email').val()); //联系邮箱
+    var c_websit = $.trim($('#c_websit').val()); //官网地址
+    var c_business = $.trim($("#c_business").val()); //所处行业
+    var c_products = $.trim($('#c_products').val()); //主销产品
+    var c_area = $.trim($('#c_area').val()); //主销区域
+    var c_year = $.trim($('#c_year').val()); //年营业额
+    var c_dealer = $.trim($('#c_dealer').val()); //现有经销商人数
+    var c_staff = $.trim($('#c_staff').val()); //现有员工总数
+    var c_salesman = $.trim($('#c_salesman').val());  //现有销售人员数
+    var c_webnumber = $.trim($('#c_webnumber').val()); // 现有网点数
+    var c_quality = $("#quality:checked").val(); //有无质量管理部门
+    var c_technology = $("#technology:checked").val(); //有无技术研发部门
+    var c_market = $("#market:checked").val(); //有无市场策划部门
+    var c_service = $("#service:checked").val(); //有无售后服务部门
+
+
+    if ($('#fullname').val() === "") {
+        layer.msg('企业名称不能为空', {icon: 8});
+        $('#fullname').focus();
+        return false;
+    }
+    if ($('#c_legal').val() === "") {
+        layer.msg('法人代表不能为空', {icon: 8});
+        $('#fullname').focus();
+        return false;
+    }
+
+
+    if ($('#c_business').val() === "") {
+        layer.msg('所处行业不能为空', {icon: 8});
+        $('#c_business').focus();
+        return false;
+    }
+
+    if ($('#c_address').val() === "") {
+        layer.msg('企业地址不能为空', {icon: 8});
+        $('#c_address').focus();
+        return false;
+    }
+    if ($('#c_phone').val() === "") {
+        layer.msg('电话不能为空', {icon: 8});
+        $('#c_phone').focus();
+        return false;
+    }
+
+
+    if ($('#c_tel').val() === "") {
+        layer.msg('联系手机不能为空', {icon: 8});
+        $('#c_tel').focus();
+        return false;
+    }
+
+   /* if ($('#c_dealer').val() === "") {
+        layer.msg('经销商人数不能为空', {icon: 8});
+        $('#c_dealer').focus();
+        return false;
+    }
+
+    if ($('#c_staff').val() === "") {
+        layer.msg('现有人工总数不能为空', {icon: 8});
+        $('#c_staff').focus();
+        return false;
+    }
+
+    if ($('#c_salesman').val() === "") {
+        layer.msg('现有销售人员数不能为空', {icon: 8});
+        $('#c_salesman').focus();
+        return false;
+    }
+
+*/
+
+
+
+
+    if (!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(c_tel)) {
+        layer.msg('请检查电话号码是否正确', {icon: 8});
+        $('#c_tel').focus();
+        return false;
+    }
+
+    //if(c_name==""){
+    //    layer.msg("企业名称不能为空");
+    //    return false;
+    //}
+    //if(c_legal==""){
+    //    layer.msg("法人代表不能为空");
+    //    return false;
+    //}
+    //
+    //if(c_phone==""){
+    //    layer.msg("固定电话不能为空");
+    //    return false;
+    //}
+    //
+    //if(c_tel==""){
+    //    layer.msg("联系手机不能为空");
+    //    return false;
+    //}
+    //
+    //
+    //if(c_business==""){
+    //    layer.msg("请选择所处行业");
+    //    return false;
+    //}
+
+
+    if(c_year==""){
+        layer.msg("年营业额不能为空");
+        return false;
+    }
+
+
+    if (c_regCapital== "") {
+        if (!(/^-?\d+$/).test(c_regCapital)) {
+            layer.msg('请输入注册资金数字', {icon: 8});
+            $('#c_regCapital').focus();
+            return false;
+        }
+    }
+
+    //if( c_fix ){
+    //    if (!(/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/).test(c_fix)) {
+    //        layer.msg('请检查传真格式是否正确', {icon: 8});
+    //        $('#c_fix').focus();
+    //        return false;
+    //    }
+    //}
+
+    //if( c_email ){
+    //    if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/).test(c_email)) {
+    //        layer.msg('请检查邮箱格式是否正确', {icon: 8});
+    //        $('#c_email').focus();
+    //        return false;
+    //    }
+    //}
+    //if( c_websit ){
+    //    if (!(/^((https?|ftp|news):\/\/)?([a-z]([a-z0-9\-]*[\.。])+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel)|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&]*)?)?(#[a-z][a-z0-9_]*)?$/).test(c_websit)) {
+    //        layer.msg('请检查官网地址格式是否正确', {icon: 8});
+    //        $('#c_websit').focus();
+    //        return false;
+    //    }
+    //}
+    //if (c_dealer != "") {
+    //    if (!(/^-?\d+$/).test(c_dealer)) {
+    //        layer.msg('请输入数字', {icon: 8});
+    //        $('#c_dealer').focus();
+    //        return false;
+    //    }
+    //}
+    //
+    //if (c_staff != "") {
+    //    if (!(/^-?\d+$/).test(c_staff)) {
+    //        layer.msg('请输入数字', {icon: 8});
+    //        $('#c_staff').focus();
+    //        return false;
+    //    }
+    //}
+    //if (c_salesman != "") {
+    //    if (!(/^-?\d+$/).test(c_salesman)) {
+    //        layer.msg('请输入数字', {icon: 8});
+    //        $('#c_salesman').focus();
+    //        return false;
+    //    }
+    //}
+    //if (c_webnumber != "") {
+    //    if (!(/^-?\d+$/).test(c_webnumber)) {
+    //        layer.msg('请输入数字', {icon: 8});
+    //        $('#c_webnumber').focus();
+    //        return false;
+    //    }
+    //}
+
+
+
+    var companyId = Cookie.readCookie("LYX_companyId");
+
+    var fieldkey = "regCapital|state|companyName|industryId|phone|contactMobile|email|website|companyLegal|mainProduct|mainArea|turnOver|ageCount|employeeCount|salesCount|netCount|qualityManagDep|techDep|markDep|aftersaleDep";
+    var fieldval = c_regCapital+"|4|"+c_name+"|"+c_business+"|"+c_phone+"|"+c_tel+"|"+c_email+"|"+c_websit+"|"+c_legal+"|"+c_products+"|"+c_area+"|"+c_year+"|"+c_dealer+"|"+c_staff+"|"+c_salesman+"|"+c_webnumber+"|"+c_quality+"|"+c_technology+"|"+c_market+"|"+c_service;
+
+    $.post(APP+"/Api/Info/conf","command=modiCompanyInfo&companyid="+companyId+"&fieldkey="+fieldkey+"&fieldval="+fieldval,function(data){
+        if( data.error_code == "success" ){
+            layer.msg("企业基础信息设置保存成功，请继续上传证照进行实名认证");
+            //切换到第二个tab
+            setTimeout('$("#two").addClass("active");$("#c1").show();$("#c0").hide();$("#one").removeClass("active");',2000);
+        }else{
+            layer.msg("企业设置失败");
+        }
+    },"json");
+
+
+
+});
+
+
+
+//营业执照上传信息入库
+function business_licence_upload()
+{
+    if($("#fileid_other_1").val()==""){
+        layer.msg("请上传营业执照,并点击请上传按钮");
+        return false;
+    }
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_1").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=1",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+//税务登记证上传信息入库
+function tax_registration_upload()
+{
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_2").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=2",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+
+//组织机构代码证
+function tax_registration_upload3()
+{
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_3").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=3",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+//公司标志
+function tax_registration_upload4()
+{
+    if($("#fileid_other_4").val()==""){
+        layer.msg("请上传公司标志,并点击请上传按钮");
+        return false;
+    }
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_4").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=4",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+//生产许可证
+function tax_registration_upload5()
+{
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_5").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=5",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+//食品流通许可证
+function tax_registration_upload6()
+{
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_6").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=6",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+
+//卫生许可证
+function tax_registration_upload7()
+{
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    var profile = $("#fileid_other_7").val();  //上传文件的id
+    if (profile) {
+        $.post(APP+"/Api/Web/companySet_upload","companyId="+companyId+"&profile="+profile+"&type=7",function(v){
+            if(v.result==='000000'){
+                layer.msg('上传成功',{icon: 9});
+            }
+        },'json');
+    }else{
+        layer.msg('请先上传图片！',{icon: 8});
+    };
+}
+
+
+//上传图片
+function submit_pic(){
+    var companyId = Cookie.readCookie("LYX_companyId");  //公司id
+    //营业执照上传信息入库
+    var profile1 = $("#fileid_other_1").val();  //上传文件的id
+    //公司标志
+    var profile4 = $("#fileid_other_4").val();  //上传文件的id
+    //生产许可证
+    var profile5 = $("#fileid_other_5").val();  //上传文件的id
+    //食品流通许可证
+    var profile6 = $("#fileid_other_6").val();  //上传文件的id
+    //卫生许可证
+    var profile7 = $("#fileid_other_7").val();  //上传文件的id
+
+    if($("#fileid_other_1").val()==""){
+        layer.msg("请上传营业执照,并点击请上传按钮");
+        return false;
+    }
+
+    if($("#fileid_other_4").val()==""){
+        layer.msg("请上传公司标志,并点击请上传按钮");
+        return false;
+    }
+
+    $.post(APP+"/Api/Web/companySet_upload_2","companyId="+companyId+"&profile1="+profile1+"&profile4"+profile4+"&profile5"+profile5+"&profile6"+profile6+"&profile7"+profile7,function(v){
+        if(v.result==='000000'){
+            layer.msg('上传成功',{icon: 9});
+        }
+    },'json');
+
+
+}
+
+

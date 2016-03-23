@@ -1,0 +1,78 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class CommonController extends Controller {
+	public function _initialize(){
+
+		if(cookie('loginstrats') != 1 && session('loginstrats') !=1){ //登录不成功
+			$this->redirect("Login/login");
+		}
+
+//		dump(cookie('loginstrats'));
+//		dump(session('loginstrats'));
+
+		//记住密码获取cookie,没记住获取session
+		$companyId = empty(cookie("companyId"))?session("companyId"):cookie("companyId");
+		$companyName = empty(cookie("companyName"))?session("companyName"):cookie("companyId");
+		$mobile = empty(cookie("mobile"))?session("mobile"):cookie("mobile");
+
+		
+		set_theme(); //载入主题
+		
+		//权限判断 start		
+		$access_string = "";	//声明变量
+
+		$user_id = empty(cookie("userId"))?session("userId"):cookie("userId");
+		$result_role_id  = M('user_role')->where("f_user_id=".$user_id)->find();	 //通过user_id查找出对应的角色id集合
+
+		$role_id = explode(",",$result_role_id['f_role_id']);	//角色id集合
+		if( $role_id[0]!= "" ){
+			foreach($role_id as $key=>$vo){	//通过roleJ_id查找对应的权限
+				$result_access = M('role')->where("f_id=".$vo)->find();
+				$access_string.= ','.$result_access['f_access']; 	//角色对应的权限合并成一个字符串
+			}
+
+			$access_array = explode(",", $access_string);
+			unset($access_array['0']);
+		}
+
+// 		cookie("access_array",$access_array);
+
+
+        //用户头像
+        $userInfo = A('Api/Jhttp')->getUserinfo2($user_id);
+        $userInfo_arr = json_decode($userInfo,true);
+
+        //先给个默认头像
+        $userInfo_logo = '/Public/Home/Default/images/user2.jpg';
+
+        //获取员工头像
+        if( $userInfo_arr['list']['headLogo'] ){
+            $headLogo = M('files')->where('f_id='.$userInfo_arr['list']['headLogo'])->find();
+        }
+        if( $headLogo ){
+            $userInfo_logo = '/Public/upfile/'.$headLogo['f_filepath'].$headLogo['f_filename'];
+        }
+
+
+        $this->assign('headlogo',$userInfo_logo);
+
+
+
+        $this->assign("companyId",$companyId);
+		$this->assign("mobile",$mobile);
+		$this->assign("user_id",$user_id);
+		$this->assign("access_array",$access_array);
+// 		dump($access_array);
+		//权限判断 end
+		
+		
+		
+		
+	}
+	
+}
+    
+   
+    
+ 

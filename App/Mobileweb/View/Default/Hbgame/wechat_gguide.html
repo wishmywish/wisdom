@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+        }
+        body {
+            background-image:url(__IMG__/wechat_gguide.png);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .click_btn{
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            top: 79.2%;
+            background: #3B7462;
+        }
+        .click_btn span{
+            position: absolute;
+            width: 70%;
+            height: 35px;
+            margin: 0 15%;
+        }
+
+        .click_btn .phoneNum{
+            width: 70%;
+            margin: 0 15% 3%;
+            position: relative;
+        }
+        .phoneNum input{
+            position: absolute;
+            top: 10%;
+            height: 60%;
+            width: 85%;
+            text-align: center;
+            font-size: 22px;
+            background: #FDE7C1;
+            border: none;
+            /*margin: 0 15%;*/
+            outline: none;
+            left: 8%;
+            display: inline-block;
+            /* border: 1px solid; */
+        }
+
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #000;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #000;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #000;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #000;
+        }
+
+    </style>
+    <js href="__STATIC__/jquery-1.11.2.min.js"/>
+    <js href="__STATIC__/layer/layer.js"/>
+    <js href="__STATIC__/js/base64.js"/>
+    <css href="__STATIC__/layer/skin/layer.css"/>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    </script>
+</head>
+
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content" style="padding: 0">
+        <form id="add" method="post" action="{:U('Games/conf')}">
+        <div class="click_btn">
+            <div class="phoneNum" >
+                <img src="__IMG__/game_btn.png" style="width: 100%">
+                <input type="text" name="f_mobile" placeholder="输入手机号码"  id="phone">
+            </div>
+            <div class="phoneNum" >
+                <img  src="__IMG__/g_03.png" style="width: 100%" id="btn_submit" >
+                <!--onclick="document.forms['add'].submit();"-->
+            </div>
+        </div>
+            <input  type="hidden" name="f_pcid" id="pcid" value="{$f_pcid}"/>
+            <!--<input  type="hidden" name="command" id="command" value="modiuser"/>-->
+        </form>
+    </div><!-- /content -->
+</div>
+
+<script>
+    $("#btn_submit").click(function(){
+        var phone= $.trim($("#phone").val());
+        var pcid= $.trim($("#pcid").val());
+        if(phone==""){
+            layer.msg("请填写你的手机号码");
+            return false;
+        }
+
+        if(!(/^(0|86|17951)?(13[0-9]{1}|15[0-9]{1}|17[0-9]{1}|18[0-9]{1}|14[0-9]{1})[0-9]{8}$/).test(phone)){
+            layer.msg("请检查你输入的手机号码");
+            return false;
+        }
+        var index = layer.load(1);
+        var param = "command=modiuser&f_mobile="+phone+"&f_pcid="+pcid;
+        $.post(APP+"/Mobileweb/Games/conf",param,function(val){
+                if(val.error_code=="000000"){
+                    layer.close(index);
+                    location.href=APP+"/Mobileweb/Hbgame/app_game?f_pcid="+pcid;
+                }
+
+        },"json");
+
+
+    });
+
+</script>
+</body>
+
+</html>

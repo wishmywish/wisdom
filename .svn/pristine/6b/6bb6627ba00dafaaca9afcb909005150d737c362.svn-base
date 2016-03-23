@@ -1,0 +1,44 @@
+<include file="Public/head" title="业务员管理" />
+
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="breadlist">首页 / 业务员管理</div>
+
+                <div class="tabli">
+                    <ul id="tabli_bid">
+                        <li value="1" class='<eq name="classtype" value="1">selected</eq>'><a href="{:U('Taskadmin/Sales/index')}" style="color:black;text-decoration: none;">全部</a></li>
+                        <li value="2" class='<eq name="classtype" value="2">selected</eq>'><a href="{:U('Taskadmin/Sales/realName')}" style="color:black;text-decoration: none;">已实名认证</a></li>
+                        <li value="3" class='<eq name="classtype" value="3">selected</eq>'><a href="{:U('Taskadmin/Sales/cardBind')}" style="color:black;text-decoration: none;">已银行卡绑定</a></li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                            <li style='width:20%;'>手机号</li>
+                            <li style='width:15%;'>姓名</li>
+                            <li style='width:15%;'>金币</li>
+                            <li style='width:15%;'>银票</li>
+                            <li style='width:10%;'>认领任务数</li>
+                            <li style='width:10%;'>评分</li>
+                            <li style='width:10%;'>状态</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:100%;'>暂无业务员数据</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+        plist_Sales(1,1);
+    </script>
+</html>

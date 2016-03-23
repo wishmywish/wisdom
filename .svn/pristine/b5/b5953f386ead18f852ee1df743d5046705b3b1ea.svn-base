@@ -1,0 +1,532 @@
+[ 2015-08-24T09:47:46+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T09:47:47+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/verify_c.html?5649
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T11:34:46+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T11:35:03+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T11:36:56+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T11:51:02+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-24T14:39:40+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T14:49:54+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-24T14:50:01+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T14:54:28+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T14:55:48+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T14:58:31+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:06:42+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:11:20+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:11:32+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T15:22:45+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getSmallTrade/tradeID/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T15:25:25+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:26:34+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getSmallTrade/tradeID/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T15:31:36+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:46:44+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:46:45+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/verify_c.html?9688
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:46:58+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/check_verify_c.html?code=4770
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-24T15:46:58+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/verify_c.html?2899
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-08-24T15:47:04+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/check_verify_c.html?code=6675
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-08-24T15:47:04+08:00 ] ::1 /wisdom/index.php/Taskadmin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:47:06+08:00 ] ::1 /wisdom/index.php/Taskadmin/Task/index?access=100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tab E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\782a28071b1ea47d710045b1ce2d13dc.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:47:09+08:00 ] ::1 /wisdom/index.php/Taskadmin/Task/add_business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 31 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 55 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 60 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 76 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 81 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 92 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 92 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 98 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 107 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 108 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 114 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 120 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 128 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 145 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 151 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 157 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 158 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 159 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 160 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 161 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 161 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 167 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 174 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 239 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 246 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 253 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 260 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 267 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 274 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 329 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 345 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 361 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 377 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 393 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\f5769bc3bc4fd22bec93eaaa5de20912.php 第 460 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T15:47:10+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/jsislogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:47:11+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-08-24T15:47:15+08:00 ] ::1 /wisdom/index.php/Taskadmin/Task/add_widely.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=0 )  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 129 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 135 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 146 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 146 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 152 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 161 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 162 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 168 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 174 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 192 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 202 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 203 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 216 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 224 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 240 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 241 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 242 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 274 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 278 行.
+NOTIC: [8] Undefined variable: reModi E:\worksoft\wampserver5.5\wamp\www\wisdom\App\Runtime\Cache\Taskadmin\33e9873eef824c70887a92ff4efdd56b.php 第 512 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:47:17+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/jsislogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T15:47:17+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getTasktype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tasktype` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tasktype` WHERE ( F_PARENTID=2 )  [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T16:00:35+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getBigTrade
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-08-24T16:05:15+08:00 ] ::1 /wisdom/index.php/Taskadmin/Fun/getSmallTrade/tradeID/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

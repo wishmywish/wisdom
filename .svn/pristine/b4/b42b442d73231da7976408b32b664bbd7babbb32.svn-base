@@ -1,0 +1,164 @@
+<include file="Public/home_head" title="智慧推广::首页" />
+<include file="Public/home_menu" />
+    <div class="index">
+        <div class="index_left">
+        <!--个人信息-->
+        <div class="index_left_pro">
+            <div class="pro_img">
+                <img style="height: 50px;" src="__IMG__/user2.jpg">
+            </div>
+            <div class="pro_info">
+                <span style="line-height: 25px; font-size: 16px; font-weight: bold;"><?php echo  empty(cookie("nickName"))?session("mobile"):cookie("nickName"); ?></span>  
+            </div>
+        </div>
+        <!--快捷导航-->
+       <div class="index_left_url_bus">
+             <div class="left_url">推广赚任务标题:</div>
+             <div class="business_left_url" id="title_protaskname">
+             </div>
+        </div>
+        <div class="index_left_other_bus">
+            <div class="left_url">任务描述:</div>
+            <div class="business_left_url" id="descepit_protaskname"></div>
+            <div class="left_url">推广目标数: <span id="protargetnum"></span></div>
+            <div class="left_url">参与数量:  <span id="projoinnum"></span></div>
+            <div class="left_url">单份任务金币:  <span id="procoinnum"></span></div>
+            <div class="left_url">总奖励金币: <span id="protoatalcoin"></span></div>
+            <div class="left_url">已发奖励金币: <span id="proissuedcoin"></span></div>
+            <div class="business_left_url" style="padding-bottom:20px"></div>
+        </div>
+        
+         <div class="index_left_url_bus">
+             <div class="left_url">随手赚任务标题:</div>
+             <div class="business_left_url" id="title_pushtaskname">
+             </div>
+        </div>
+        <div class="index_left_other_bus">
+            <div class="left_url">任务描述:</div>
+            <div class="business_left_url" id="descepit_pushtaskname"></div>
+            <div class="left_url">发布任务数量:  <span id="pushreleanum"></span></div>
+            <div class="left_url">参与任务数量:  <span id="pushjoinnum"></span></div>
+            <div class="left_url">完成任务数量:  <span id="pushcompletenum"></span></div>
+            <div class="left_url">单份任务金币:  <span id="pushonecoin"></span></div>
+            <div class="left_url">总奖励金币:      <span id="pushtoatalcoin"></span></div>
+            <div class="left_url">已发奖励金币:  <span id="pushissuedcoin"></span></div>
+        </div>
+     </div>
+    <div class="index_right_bus">
+       <div style="width:100%;min-height:30px;border-bottom:1px #fafafa solid;padding-bottom:10px"> 
+           <div  style="width:300px;float:left;min-height:30px;">
+               <span style="color:#747474;margin-left:20px">推广赚任务标题: </span>
+               <select name="protaskname" id="protaskname" style="width:150px;height:30px;"  onchange='tasknamechange("protaskname",this.value,1)'>
+                     
+               </select> 
+           </div>
+           <div style="width:300px;float:right;min-height:30px; margin-right:10px">
+               <span style="color:#747474;margin-left:20px">随手赚任务标题: </span>
+               <select name="pushtaskname" id="pushtaskname" style="width:150px;height:30px;"  onchange='tasknamechange("pushtaskname",this.value,2)'>
+                     
+              </select>
+           </div>
+           
+        </div>
+        <div class="index_right_table">
+            <div class="table_top">
+                <span class="table_top_left">本次任务成果</span>
+            </div>
+            <div  class="table1_center">
+                <div  class="table1_center_body" style="margin-top:40px;">
+                    <div class="table1_center_body_left">
+                        <div  class="body_title">推广赚</div>
+                            <div  id="pro_taskAchieve_make" style="height:350px;width:450px;"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>
+                    <div class="table1_center_body_right" style="margin-right:20px">
+                        <div class="body_title">随手赚</div>
+                                 <div  id="pro_taskAchieve_earn" style="height:350px;width:450px;"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="index_right_table">
+            <div class="table_top">
+               <div class="table_top_left">本次支出费用</div>
+            </div>
+            <div  class="table1_center">
+                <div  class="table1_center_body" style="margin-top:40px;">
+                    <div class="table1_center_body_left" >
+                        <div  class="body_title">推广赚</div>
+                            <div  id="pro_taskExpend_make" style="height:300px;"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>
+                    <div class="table1_center_body_right" style="margin-right:20px">
+                        <div class="body_title">随手赚</div>
+                                 <div  id="pro_taskExpend_earn" style="height:300px;"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div  class="index_right_table">
+            <div class="table_top">
+                <div class="table_top_left">本次区域报告</div>
+            </div>
+            <div  class="table3_center">
+                <div class="table3_center_body">
+                    <!--地图表显示-->
+                    <div class="table1_center_body_left" style="width:420px;">
+                        <div  class="body_title">推广赚</div>
+                            <div  id="pro_taskReport_make" style="height:450px;"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>
+                    <div class="table1_center_body_right" style="width:420px;margin-right:20px;" >
+                        <div class="body_title">随手赚</div>
+                                 <div  id="pro_taskReport_earn" style="height:450px"><img src='__IMG__/nonedata2.png'/></div>
+                    </div>             
+        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+   
+       
+  <include file="Public/loadjs" />   
+        <!--Echarts单文件引入-->
+  <script src="__STATIC__/echarts/build/dist/echarts-all.js"></script>
+  <js href="__JS__/promotion_chart.js"/> 
+  <script>
+      getprotaskname("protaskname",1);
+      getprotaskname("pushtaskname",2);
+      function getprotaskname(taskname,tasktype){
+          var companyid=Cookie.readCookie("LYX_companyId");
+          $.ajaxSetup({   
+            async : false
+        }); 
+          $.post(APP+"/Api/Web/gettasktitle","tasktypeid="+tasktype+"&companyid="+companyid,function(rel){
+                $("#"+taskname).empty();
+                var namelist="";
+                var length=rel.list.length;
+                console.log(length);
+                if(length!=0){
+                      $.each(rel.list,function(i,v){
+                    namelist += "<option  id='"+taskname+"_"+v.f_tid+"' rel='"+v.f_title+"|"+v.f_description+"' value="+v.f_tid+">"+v.f_title+"</option>";
+                });
+                      $("#"+taskname).append(namelist);
+                      $("#title_"+taskname).html(rel['list'][0]['f_title']);
+                      $("#descepit_"+taskname).html(rel['list'][0]['f_description']);
+                       prochart(rel['list'][0]['f_tid'],tasktype);
+                }else{
+                    $("#"+taskname).append("<option  value=''>暂无任务</option>");
+                }
+               
+          },"json");
+      }
+      function tasknamechange(taskname,val,type){  
+                prochart(val,type);
+                var arr=new Array();
+                var rel=$("#"+taskname+" #"+taskname+"_"+val).attr("rel");
+                arr=rel.split("|");
+                $("#title_"+taskname).html(arr[0]);
+                $("#descepit_"+taskname).html(arr[1]);
+      }
+  </script>
+  </body>
+</html>

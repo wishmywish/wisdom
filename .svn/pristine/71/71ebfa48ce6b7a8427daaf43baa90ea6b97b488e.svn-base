@@ -1,0 +1,69 @@
+<include file="Public/head" title="下载打开统计" />
+<style>
+    ul li{float: left;width: 50%;height: 30px;line-height: 30px;text-align: center;}
+</style>
+</head>
+<body>
+<div style="width: 50%;height: 30px;padding-left: 10px;margin-top: 50px;">
+    <select id="selectdl">
+        <option value="0">请选择代理</option>
+        <option value="A">代理A</option>
+        <option value="B">代理B</option>
+        <option value="C">代理C</option>
+        <option value="D">代理D</option>
+        <option value="E">代理E</option>
+    </select>
+</div>
+
+<div style="width: 50%;height: auto;">
+<div id="down" style="float: left;width: 40%">
+    <ul style="font-weight: bold;">
+        <li>时间</li>
+        <li>下载数</li>
+    </ul>
+    <div id="downlist" style="clear: both;">
+
+    </div>
+</div>
+<div id="open" style="float: left;width: 40%">
+    <ul style="font-weight: bold;">
+        <li>时间</li>
+        <li>打开数</li>
+    </ul>
+    <div id="openlist" style="clear: both;">
+
+    </div>
+</div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    function getsum(selectVal){
+        $.getJSON("{:U('Taskadmin/Push/pushlist')}","udid="+selectVal,function(v){
+            //console.log(v.openlist);
+            $('#downlist').empty();
+            $('#openlist').empty();
+            var downlist = "<ul>";
+            $.each(v.downlist,function(i,val){
+                downlist += "<li>"+val.downtime+"</li>";
+                downlist += "<li>"+val.downsum+"</li>";
+            });
+            downlist += "</ul>";
+            $('#downlist').append(downlist);
+
+            var openlist = "<ul>";
+            $.each(v.openlist,function(i,val_1){
+                openlist += "<li>"+val_1.opentime+"</li>";
+                openlist += "<li>"+val_1.opensum+"</li>";
+            });
+            openlist += "</ul>";
+            $('#openlist').append(openlist);
+        });
+    }
+    $("#selectdl").change(function(){
+        if($(this).val()!==0){
+            getsum($(this).val());
+        }
+    });
+</script>
+</html>

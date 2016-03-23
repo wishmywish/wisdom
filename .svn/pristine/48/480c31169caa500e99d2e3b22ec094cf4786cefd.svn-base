@@ -1,0 +1,80 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+        <div class="body_right_menu">
+            <div class="button_bg_80" id="add_depart"  onclick="add()">创建部门</div>
+            <div class="button_bg_80_menu">
+               
+            </div>
+            <div class="group_list">
+                
+            </div>
+        </div>
+        <div class="body_right_list">
+            <div class="body_right_list_button">
+                <div style="float: left;"><input type="text" name="user_search" id="user_search" value="" placeholder="员工姓名或编号" style="width:100px;height:23px;float: left;border: 1px solid #eeeeee;"><div style="cursor: pointer;float: left;width: 23px;height: 23px;border-top: 1px solid #eeeeee;border-bottom: 1px solid #eeeeee;border-right: 1px solid #eeeeee;"><div class="black_search_ico" style="margin-top: 6px;"></div></div></div>
+                <div class="button_bg_80" style="float: right;">导出员工</div>
+                <div class="button_bg_80" style="float: right;margin-right: 5px;">批量导入</div>
+                <div class="button_bg_80" style="float: right;margin-right: 5px;" onclick="addStaff()">新建员工</div>
+            </div>
+            <div class="body_right_list_tab">
+                <ul>
+                    <li>在职的员工</li>
+                    <li>停用的员工</li>
+                    <li>没分配的员工</li>
+                    <li>管理员</li>
+                </ul>
+            </div>
+            <div class="body_right_list_action">
+                <div class="select_all"><input type="checkbox" name="select_all" id="select_all" style="margin-top: 10px;margin-left: 10px;"></div>
+                <div class="body_right_list_action_button">
+                    <div class="button_bg_40" style="float: left;margin-right: 5px;">停用</div>
+                    <div class="button_bg_40" style="float: left;margin-right: 5px;">启用</div>
+                    <div class="button_bg_40" style="float: left;margin-right: 5px;">修改</div>
+                    <div class="button_bg_40" style="float: left;">删除</div>
+                </div>
+                <div class="body_right_list_action_search">
+                    <select name="user_list_seq" style="float: right;margin-top: 8px;">
+                        <option value="1">按名称排列</option>
+                    </select>
+                </div>
+            </div>
+            <div class="body_right_list_user">
+                <?PHP for($i=0;$i<20;$i++){?>
+                <ul>
+                    <li style="width: 40px;"><?PHP echo $i+1;?></li>
+                    <li style="width: 80px;">李伟</li>
+                    <li style="width: 120px;">产品研发部</li>
+                    <li style="width: 120px;">项目经理</li>
+                    <li style="width: 100px;">13800000000</li>
+                    <li style="width: 60px;">启用</li>
+                    <li style="width: 60px;">排序</li>
+                </ul>
+                <?PHP }?>
+            </div>
+            <div class="page"></div>
+        </div> 
+    </div>
+    <script>
+       function add(){
+           layer.open({
+        type: 2,
+        title :['创建部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+        area: ['480px', '330px'],
+        shadeClose: false, //点击遮罩关闭
+        content:APP+'/Admin/Group/addDept' 
+    });
+       }
+       
+       function addStaff(){
+           layer.open({
+               type:2,
+               title :['新增员工','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+               area: ['600px', '700px'],
+               shadeClose: false, //点击遮罩关闭
+               content: APP+'/Admin/Group/addStaff'
+           });
+       }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class ReviewController extends Controller {
+    
+    function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        A("Api/Fun")->isAccess($access);//判断菜单权限
+        $this->display('reviewIndex');
+    }
+
+    /**
+     * 任务详情
+     */
+    public function showDetail() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getCompanyInfo();//取公司的详细数据
+
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->display();
+    }
+
+    /**
+     * 经销商以及业务员详情
+     */
+    public function detail() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getDetail();//取经销商以及业务员的详细数据
+
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->display();
+    }
+
+}

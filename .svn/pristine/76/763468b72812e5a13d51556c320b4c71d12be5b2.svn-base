@@ -1,0 +1,34 @@
+<include file="Public/head" />
+<style type="text/css">
+.line_input1{
+    margin-top: 20px;
+}
+</style>
+    <body>
+
+            <div class="add">
+
+                <div class="line_input1">
+                    <span>快递单号：</span> <input type="text" id="title" name="title" style="width:285px" value=""  placeholder="快递单号">
+                </div>
+                
+                <input type="hidden" id="ExpressId" value="{$ExpressId}">
+                <button  class="adConfirm btn btn-default" id="adExpressConfirm" style="height:31px;width:90px;margin-left: 145px;margin-top: 8px;margin-bottom: 8px;">确定</button> 
+
+            </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+        $('#adExpressConfirm').on('click',function(){
+            $.post(APP + "/Api/Web/adExpressConfirm", "ExpressId=" + $("#ExpressId").val()+"&title="+$("#title").val(), function (f) {
+                if (f.result === '000000') {
+                    var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                    parent.location.reload();
+                } else {
+                    layer.msg('快递单号创建失败', {'icon': 8});
+                    return false;
+                }
+            }, 'json');
+        });
+    </script>
+</html>

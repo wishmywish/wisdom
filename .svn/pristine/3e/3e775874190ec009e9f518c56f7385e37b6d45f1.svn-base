@@ -1,0 +1,151 @@
+/**
+ * Created by Administrator on 2015/12/22.
+ */
+//设置全局变量
+//督查新增分页总数
+var total_audit_page=0;
+//督查新增分页每页数
+var each_audit_page=50;
+
+//督查赚任务详情下一步
+$("#task_audit_one").click(function(){
+    $('.business_taskAdd_step3 li').removeClass('business_taskAdd_audit_selected').prev('.step3_two').addClass('business_taskAdd_audit_selected');
+    $("#audit_one").hide();
+    $("#audit_two").show();
+});
+
+//督查赚督查内容下一步
+$("#task_audit_two").click(function(){
+    $('.business_taskAdd_step3 li').removeClass('business_taskAdd_audit_selected').next('.step3_three').addClass('business_taskAdd_audit_selected');
+    $("#audit_one").hide();
+    $("#audit_two").hide();
+    $("#audit_three").show();
+});
+
+//督查赚督查内容上一步
+$("#task_audit_two_to_one").click(function(){
+    $('.business_taskAdd_step3 li').removeClass('business_taskAdd_audit_selected').prev('.step3_one').addClass('business_taskAdd_audit_selected');
+    $("#audit_one").show();
+    $("#audit_two").hide();
+});
+//督查赚督查网点上一步
+$("#task_audit_three_to_two").click(function(){
+    $('.business_taskAdd_step3 li').removeClass('business_taskAdd_audit_selected').prev('.step3_two').addClass('business_taskAdd_audit_selected');
+    $("#audit_one").hide();
+    $("#audit_two").show();
+    $("#audit_three").hide();
+});
+
+//督查赚督查网点保存
+function  task_audit_three_save(){
+    alert("保存");
+}
+//督查赚督查网点提交
+function  task_audit_three_submit(){
+    alert("提交");
+}
+
+//督查赚督查网点添加
+function superNetAdd(obj){
+    console.log(obj);
+    obj.remove();
+    supertemp();
+}
+
+//督查赚督查网点删除
+function superNetDel(){
+    var checked=$('input[name="audit_checkbox"]:checked');
+    $('input[name="all_audit_checkbox"]:checked').removeAttr('checked');
+    checked.each(function(){
+         $(this).parents("tr").remove();
+    });
+    var num=$(".audit_tbody").children("tr").length;
+    if(num==0){
+        $(".audit_tbody").empty();
+        supertemp();
+    }else{
+        var img="<td class='wh-5'><img src='"+IMG+"/jiahao.png'  onclick='superNetAdd(this)'   height='30px' width='30px'  style='cursor:pointer'></td>";
+        $(".audit_tbody").lastChild().children().append(img);
+    }
+    alert(checked.length);
+}
+
+//督查赚督查网点导入
+function superNetImpt(){
+    alert("导入");
+}
+
+//督查赚督查网点删除
+
+function  superNetTemUpload(){
+    alert("模板下载");
+}
+
+function  supertemp(){
+   var list="";
+    list+="<tr>";
+    list+="<td class='wh-5'><input type='checkbox' class='audit_table_input' name='audit_checkbox'  value=''></td>";
+    list+="<td class='wh-20'><input type='text' name='network_name'  class='audit_table_input' onmouseover='this.title=this.value' value=''></td>";
+    list+="<td class='wh-20'><input type='text' name='network_address' class='audit_table_input' onmouseover='this.title=this.value' value=''></td>";
+    list+="<td class='wh-10'><input type='text' name='net_claim_num'  class='audit_table_input' onmouseover='this.title=this.value' value=''></td>";
+    list+="<td class='wh-10'><input type='text' name='longitude' class='audit_table_input' onmouseover='this.title=this.value' value='' disabled  style='height:40px;'></td>";
+    list+="<td class='wh-10'><input type='text' name='latitude' class='audit_table_input' onmouseover='this.title=this.value' value='' disabled  style='height:40px;'></td>";
+    list+="<td class='wh-10'><input type='text' class='audit_table_input' onmouseover='this.title=this.value' value=''></td>";
+    list+="<td class='wh-5'><img src='"+IMG+"/dingwei.png'  height='30px' width='30px'  style='cursor:pointer' onclick='dingwei(this)'></td>";
+    list+="<td class='wh-5'><img src='"+IMG+"/jiahao.png'  onclick='superNetAdd(this)'   height='30px' width='30px'  style='cursor:pointer'></td>";
+    list+="</tr>";
+    $(".audit_tbody").append(list);
+
+}
+
+
+function dingwei(obj){
+    $(obj).parents("tr").siblings().removeClass("dingwei");
+    $(obj).parents("tr").addClass("dingwei");
+    //网点名称
+    var network_name=$(obj).parents("tr").find("input[name=network_name]").val();
+    //网点地址
+    var network_address=$(obj).parents("tr").find("input[name=network_address]").val();
+    //经度
+    var longitude=$(obj).parents("tr").find("input[name=longitude]").val();
+    var latitude=$(obj).parents("tr").find("input[name=latitude]").val();
+    //纬度
+     console.log(network_address+","+network_name+","+longitude+","+latitude);
+    var index=layer.open({
+        type: 2,
+        title:'网点地址定位',
+        skin: 'layui-layer-rim', //加上边框
+        area: ['700px', '580px'], //宽高
+        content:APP+"/Home/Promotion/audit_dingwei?network_address="+network_address+"&network_name="+network_name+"&longitude="+longitude+"&latitude="+latitude+""
+    });
+    //可认领数
+
+    //范围
+}
+
+//上一页
+function audit_pre_page(){
+   alert("上一页");
+}
+
+//下一页
+
+function  audit_after_page(){
+    alert("下一页");
+}
+
+//到那一页
+function  audit_go_page(){
+   var page=$(".go_page").val();
+    alert(page);
+}
+
+//奖励佣金和和金币关系 督查赚
+function  calcu3(){
+    $("#conven_saleCommission3").val($("#conven_taskProduct3").val());
+}
+
+//新增分页数据
+function  audit_page(){
+
+}

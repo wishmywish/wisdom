@@ -1,0 +1,45 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of OmsController
+ *
+ * @author Administrator
+ */
+namespace Home\Controller;
+use Think\Controller;
+class OmsController extends CommonController {
+    public function index() {
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Oms'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->assign('ssoToken',cookie('ssoToken'));
+        $this->display();
+    }
+    public function boms() {
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Boms'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->assign('ssoToken',cookie('ssoToken'));
+        $this->display();
+    }
+}

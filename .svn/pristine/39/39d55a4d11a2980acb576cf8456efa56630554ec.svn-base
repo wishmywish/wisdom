@@ -1,0 +1,58 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            新增区域
+        </div>
+    </div>
+    <div class="area_center">
+        <!--输入框-->
+        <div class="area_head">
+            <span style="display: inline-block;">通讯录&nbsp;>&nbsp;区域管理&nbsp;>&nbsp;新增区域</span>
+        </div>
+        <p style="margin-bottom: 40px;"><input onclick="location.href='{:U('Office/contact')}?return=1'" type="button" value="返回" style="float:right;border: 1px; height: 25px;width: 70px;background: #14bce1;color: #fff; cursor: pointer;"></p>
+        <!--列表-->
+        <div class="area_list">
+            <div class="titleAdd">新增区域</div>
+            <div class="contentListAdd">
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>区域编号</span>
+                    <input id="" style="width: 280px;" type="text">
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>区域名称</span>
+                    <input id="" style="width: 280px;" type="text">
+                </div>
+                <div class="lineTop">
+                    <span>上级区域</span>
+                    <input id="" style="width: 280px;" type="text">
+                    <span style="position: absolute;margin-left: -65px;margin-top: 2px;color: #CCCCCC" class="fa fa-search fa-lg" onclick="selectDeptNames();"></span>
+                </div>
+                <div class="lineTop">
+                    <span>备注</span>
+                    <textarea style="width: 400px;height: 100px;" id="boardDesc"></textarea>
+                </div>
+                <div class="lineTop">
+                    <span>是否启用</span>
+                    <label style="float: left;margin-right: 20px;"><input style="vertical-align: middle;margin-top: -2px;margin-bottom: 1px;" type="radio" name="isUse" value="0"/>&nbsp;是</label>
+                    <label style="float: left;"><input style="vertical-align: middle;margin-top: -2px;margin-bottom: 1px;"  type="radio" name="isUse" value="1"/>&nbsp;否</label>
+                </div>
+
+            </div>
+            <input type="hidden" id="userIds" value="">
+            <div class="area_btn" style="float: left;margin: -40px 0 0 -100px;">
+                <button class="bntns" onclick="doSubmit();">提交</button>
+                <button class="bntns" style="background: #fafafa;color: #595758;" onclick="location.href='{:U('Office/notice')}?return=1'">取消</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+
+</script>
+</body>
+</html>

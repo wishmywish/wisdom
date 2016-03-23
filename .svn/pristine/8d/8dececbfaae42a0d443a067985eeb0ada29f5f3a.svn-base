@@ -1,0 +1,86 @@
+<include file="Public/head" title="招商APP管理平台::任务管理" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 任务管理</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <volist name="tab" id="vo">
+                            <li value="{$vo.f_typeid}">{$vo.f_typename}</li>
+                        </volist>
+                    </ul>
+                    <ul class="action">
+                        <li id="add" value="0">添加</li>
+                        <li id="del" value="0">删除</li>
+                        <li id="modi" value="0">修改</li>
+                        <li id="delayed" value="0">延时</li>
+                        <li id="update" value="0">更新</li>
+                        <li id="reject" value="0">驳回</li>
+                        <li id="cw_review" value="0">财务审核</li>
+                        <li id="review" value="0">客服审核</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'>全选</li>
+                            <li style='width:10%;'>任务单号</li>
+                            <li style='width:10%;'>任务名称</li>
+                            <li style='width:10%;'>任务类型</li>
+                            <li style='width:10%;'>开始时间</li>
+                            <li style='width:10%;'>结束时间</li>
+                            <li style='width:10%;'>联系人</li>
+                            <li style='width:10%;'>联系电话</li>
+                            <li style='width:10%;'>状态</li>
+                            <li style='width:15%;'>理由</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:5%;'></li>
+                            <li style='width:15%;'>任务单号</li>
+                            <li style='width:20%;'>任务名称</li>
+                            <li style='width:10%;'>任务类型</li>
+                            <li style='width:15%;'>开始时间</li>
+                            <li style='width:15%;'>结束时间</li>
+                            <li style='width:10%;'>联系人</li>
+                            <li style='width:10%;'>联系电话</li>
+                        </ul>
+                        <ul>
+                            <li style='width:5%;'></li>
+                            <li style='width:15%;'>任务单号</li>
+                            <li style='width:20%;'>任务名称</li>
+                            <li style='width:10%;'>任务类型</li>
+                            <li style='width:15%;'>开始时间</li>
+                            <li style='width:15%;'>结束时间</li>
+                            <li style='width:10%;'>联系人</li>
+                            <li style='width:10%;'>联系电话</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+    $(function(){
+        //parent_out();
+        //获取TAB信息
+        $('#tabli').empty();
+        $.getJSON("{:U('Api/Fun/getTypeName')}",function(v){
+            var list="<li value='0' class='selected'>全部</li>";
+            $.each(v,function(i,val){
+                list +="<li value='"+val.f_typeid+"'>"+val.f_typename+"</li>";
+            });
+            $('#tabli').append(list);
+        });
+        //获取列表信息
+        plist(0);
+    });
+    
+    
+    
+    </script>
+</html>

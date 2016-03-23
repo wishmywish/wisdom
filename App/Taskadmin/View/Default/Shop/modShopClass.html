@@ -1,0 +1,55 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+    background: #FFF; 
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+</style>
+    <body>
+
+        <span>所属分类：</span>
+
+        <select id="shopClassSelect">
+            <volist name="tree" id="vo" key="k">
+
+                <option  value="<?php if ($reModi['list']['f_id'] == $vo['f_id']) { echo $vo['f_classpid'];}else{echo $vo['f_id'];} ?>" <?php if ($reModi['list']['f_id'] == $vo['f_id']) { echo 'selected';} ?>  >
+                    <eq name="vo.lv" value="1">├─</eq>
+
+                    <eq name="vo.lv" value="2">├───</eq>
+
+                    <eq name="vo.lv" value="3">├─────</eq>
+
+                    <eq name="vo.lv" value="4">├───────</eq>
+
+                    <eq name="vo.lv" value="5">├─────────</eq>
+
+                    <eq name="vo.lv" value="6">├───────────</eq>
+
+                    <eq name="vo.lv" value="7">├─────────────</eq>
+
+                    <eq name="vo.lv" value="8">├───────────────</eq>
+
+                    <eq name="vo.lv" value="9">├─────────────────</eq>
+                    {$vo.f_classname}
+                </option>
+            </volist>
+        </select>
+        <br><br>
+
+
+        <span>分类名称：</span></span> <input type="text" id="title" name="title" placeholder="请输入分类名称" value="{$reModi.list.f_classname}"><br><br>
+
+        <input type="hidden" id="classid" name="classid" value="{$reModi.list.f_id}">
+        <a class="btn btn-default" href="#" role="button" id="modiClassBtn" style="margin:190px 0px 0px 225px;">确定</a>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+
+    </script>
+</html>

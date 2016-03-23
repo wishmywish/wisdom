@@ -1,0 +1,6 @@
+<include file="Public/head" title="{$webtitle}" />
+<body>
+<div class="mains">
+    <p>让我们期待下一次红包活动</p>
+</body>
+</html>

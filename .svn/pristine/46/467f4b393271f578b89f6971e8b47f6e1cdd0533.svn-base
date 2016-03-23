@@ -1,0 +1,175 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+<div class="content_right" id="right">
+    <div class="main_left" style="width: 1012px;">
+        <div class="cons_top">
+            <h4 class="cons_tab fl">
+                <span class="current">全部任务</span>
+                <span>推广赚</span>
+                <span style="background: none;">随手赚</span>
+            </h4>
+            <p class="p1 rg" ><a href="#">首页</a>&nbsp;>&nbsp;<a href="#">跟踪审核</a>&nbsp;>&nbsp;<a href="#">推广赚</a></p>
+        </div>
+        <div class="generalize">
+            <div class="generalize_in1 fl cur" >
+                <div  style="width: 958px; margin-right: 25px; height: 40px; overflow: hidden;">
+                    <button onclick="window.location.href='taskAdd.html'" class="rg" style="margin-top: 9px; width: 70px; height: 25px; border-radius: 5px; background: #e57f13; color: #fff;">+新增</button>
+                </div>
+                <div class="mission" style="margin-top: 3px;">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span  class="fl fankui" style="width: 150px; color: #cf522f">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+                </div>
+                <div class="mission">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span class="fl fankui" style="color: #cf522f;width:150px;">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="generalize_in1 fl">
+                <div class="mission">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span class="fl fankui" style="color: #cf522f;width:150px;">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+                </div>
+                <div class="mission">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span class="fl fankui" style="color: #cf522f;width:150px;">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="generalize_in1 fl ">
+                <div class="mission">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span class="fl fankui" style="color: #cf522f;width:150px;">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+                </div>
+                <div class="mission">
+                    <div class="mission_in">
+                        <p><span class="fl">任务编号:144040299759204040</span><span class="rg">发布时间:2015.4.16</span></p>
+                        <p><span class="fl">任务标题:测试</span></p>
+                        <p><span class="fl" style="width: 400px;">任务总数:50</span><span class="fl">单次奖励金币:50（1元=10金币）</span></p>
+                        <p><span class="fl" style="width: 400px;">平台单次服务器佣金:50</span><span class="fl" style="color:#71c6d4; ">总佣金:5000元</span></p>
+                        <p><span class="fl" style="width: 400px;">任务截止时间:215-08-06</span><span class="fl" style="color: #e47f12;width: 150px; ">任务状态:待客服审核</span><span id="fankui" class="fl fankui" style="color: #cf522f;width:150px;">反馈信息查看</span><span class="fl" style="width: 150px;">任务预览</span></p>
+                    </div>
+                    <div class="mission_in_footer rg">
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/mod.png" title="修改">
+                        <a class="fl"  href="#" style="margin-right: 10px;">修改</a>
+                        <img class="fl" src="/wisdom/Public/Home/Black/images/remo.png" title="删除">
+                        <a class="fl"  href="#">删除</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+<div class="popup1">
+    <div class="popup">
+        <div class="popup_top">
+            <h5>报告详情</h5>
+        </div>
+        <div class="popup_con"></div>
+        <span class="sp1">X</span>
+    </div>
+</div>
+</div>
+<!--漏斗插件-->
+<js href="__STATIC__/fusion/js/fusioncharts.js"/>  <!--公共图表插件-->
+<js href="__STATIC__/fusion/js/themes/fusioncharts.theme.fint.js"/>
+<script src="__STATIC__/echarts/build/dist/echarts-all.js"></script>
+<js href="__JS__/business_chart.js"/>
+<script type="text/javascript">
+    $(function(){
+        $(".cons_tab span").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".generalize .generalize_in1").eq(myindex).addClass("cur").siblings().removeClass("cur");
+        })
+
+    })
+    $(function(){
+        $(".mission .mission_in .fankui").click(function(event){
+            $(".popup").show();
+            $(".popup1").show();
+            $(".popup .sp1").show();
+            event.preventDefault();
+        })
+        $(".popup .sp1").click(function(event){
+            $(this).hide();
+            $(".popup1").hide();
+            $(".popup").hide();
+            event.preventDefault();
+
+        })
+
+    })
+</script>
+</body>
+</html>

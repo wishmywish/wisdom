@@ -1,0 +1,185 @@
+<include file="Public/home_head" title="智慧招商::首页" />
+<include file="Public/home_menu" />
+    <div class="index">
+        <div class="index_left">
+        <!--个人信息-->
+        <div class="index_left_pro">
+            <div class="pro_img">
+                <!--<img style="height: 50px;" src="__IMG__/user2.jpg">-->
+                <img style="height: 50px;width: 60px;" src="{$headlogo}">
+            </div>
+            <div class="pro_info">
+                <span style="line-height: 25px; font-size: 16px; font-weight: bold;">
+                    <!--<?php echo  empty(cookie("nickName"))?session("mobile"):cookie("nickName"); ?>-->
+                    {$userInfo_arr['list']['nickName']}
+                </span>
+            </div>
+        </div>
+        <!--快捷导航-->
+        <div class="index_left_url_bus">
+             <div class="left_url">任务标题：</div>
+             <div class="business_left_url" id="tasktitle">
+             </div>
+        </div>
+        <div class="index_left_other_bus">
+            <div class="left_url">任务品牌：</div>
+            <div class="business_left_url" id="taskping"></div>
+            <div class="left_url">任务产品：</div>
+            <div class="business_left_url" id="taskchan"></div>
+            <div class="left_url">开始时间：</div>
+            <div class="business_left_url" id="taskcreatetime"></div>
+            <div class="left_url">结束时间：</div>
+            <div class="business_left_url" id="taskendtime" style=" padding-bottom: 20px;"></div>
+        </div>
+     </div>
+    <div class="index_right_bus">
+        <div style="width:100%;height:30px;border-bottom:1px #fafafa solid;padding-bottom:20px">
+            <span style="color:#595758;margin-left:20px">任务标题</span>
+             <select name="taskname" id="taskname" style="width:300px;height:30px;margin-left:7px;color:#595758;border:1px #EAEAEA solid">
+
+             </select>
+        </div>
+        <div class="index_right_table">
+            <div class="table_top">
+                <span class="table_top_left">业绩报告</span>
+            </div>
+            <div  class="table1_center">
+                <div  class="table1_center_body">
+                    <div class="table1_center_body_left">
+                        <div  class="body_title">招商</div>
+                        <div class="body_chart">
+                            <div  id="business_gauge" style="height:200px;"><img src='__IMG__/nonedata2.png'/></div>
+                        </div>
+                        <div class="body_percent" id="Invpercent">无</div>
+                        <div class="body_foot">
+                            <ul>
+                                <li>
+                                    招商目标：<span id="Invtarget" style="display:inline-block;width:100px;">无</span>
+                                </li>
+                                <li style="margin-left:0px">
+                                    实际招商：<span id="Actinvestment">无</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="table1_center_body_right">
+                        <div class="body_title">回款</div>
+                            <div id="business_chart" style="height:220px;width:400px"><img style="margin-top:10px" src='__IMG__/nonedata2.png'/></div>
+                        <div class="body_percent"  style="margin-top:10px" id="paypect">无</div>
+                        <div class="body_foot">
+                            <ul>
+                                <li style="margin-left:75px">
+                                    回款目标：<span  id="collecttarget" style="display:inline-block;width:100px;">无</sapn>
+                                </li>
+                                <li style="margin-left:0px">
+                                    实际回款：<span  id="actualpayment">无</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index_right_table">
+            <div class="table_top">
+               <div class="table_top_left">招商漏斗</div>
+            </div>
+            <div  class="table1_center">
+                <div class="table1_center_body">
+                    <!--招商漏斗图显示-->
+                    <div class="table2_center_body_left">
+                        <div id="business_funel"   style="margin-right:50px"><img style="margin-top:-10px" src='__IMG__/nonedata.png'/></div>
+
+                    </div>
+                    <div class="table2_center_body_right">
+                        <ul>
+                            <li>
+                                <div class="table2_right_top">授权经销商数</div>
+                                <div class="table2_right_foot"  id="authdealnum">无<div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">签订合同经销商数</div>
+                                <div class="table2_right_foot" id="contsignednum">无<div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">预计回款</div>
+                                <div class="table2_right_foot"  id="expectedmoney">无<div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">实际回款</div>
+                                <div class="table2_right_foot"  id="actualtotalpay">无<div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div  class="index_right_table">
+            <div class="table_top">
+                <div class="table_top_left">经销商分布</div>
+            </div>
+            <div  class="table3_center">
+                <div class="table3_center_body">
+                    <!--地图表显示-->
+                    <div class="table3_center_body_left" >
+                        <div id="map"  style='width:560px;height:470px'><img style="margin-top:70px" src='__IMG__/nonedata.png'/></div>
+                    </div>
+                    <div class="table3_center_body_right"  id="Invquitrank">
+
+                    </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <!--漏斗插件-->
+        <js href="__STATIC__/fusion/js/fusioncharts.js"/>  <!--公共图表插件-->
+        <js href="__STATIC__/fusion/js/themes/fusioncharts.theme.fint.js"/>
+        <script src="__STATIC__/echarts/build/dist/echarts-all.js"></script>
+        <js href="__JS__/business_chart.js"/>
+        <script>
+//            Cookie.eraseCookie("bigMenuIndex");
+//            Cookie.eraseCookie("smallMenuIndex");
+//            Cookie.createCookie("bigMenuIndex",0);
+//            Cookie.createCookie("smallMenuIndex",0);
+//            var companyid=Cookie.readCookie("LYX_companyId");
+            var companyid = <?php echo $companyId; ?>;
+
+            $.post(APP+"/Api/Web/gettasktitle","tasktypeid=3&companyid="+companyid,function(rel){
+//                console.log(rel);
+                $("#taskname").empty();
+                var namelist="";
+                var length=rel.list.length;
+//                console.log(length);
+                if(length!=0){
+                   $.each(rel.list,function(i,v){
+                    namelist += "<option  id='task_"+v.f_tid+"' rel="+v.f_title+"|"+v.f_mtbrand+"|"+v.f_mtgoods+"|"+v.f_begindate+"|"+v.f_enddate+" value="+v.f_tid+">"+v.f_title+"</option>";
+                });
+                   $("#taskname").append(namelist);
+                   loadPay(rel['list'][0]['f_tid']);
+                   $("#tasktitle").html(rel['list'][0]['f_title']);
+                   $("#taskping").html(rel['list'][0]['f_mtbrand']);
+                   $("#taskchan").html(rel['list'][0]['f_mtgoods']);
+                   $("#taskcreatetime").html(rel['list'][0]['f_begindate']);
+                   $("#taskendtime").html(rel['list'][0]['f_enddate']);
+                }else{
+                   $("#taskname").append("<option  value=''>暂无任务</option>");
+                }
+
+            },"json");
+            $("#taskname").change(function(){
+                loadPay($(this).val());
+                var arr=new Array();
+                var rel=$("#taskname  #task_"+$(this).val()).attr("rel");
+                arr=rel.split("|");
+                $("#tasktitle").html(arr[0]);
+                $("#taskping").html(arr[1]);
+                $("#taskchan").html(arr[2]);
+                $("#taskcreatetime").html(arr[3]);
+                $("#taskendtime").html(arr[4]);
+            });
+        </script>
+    </body>
+</html>

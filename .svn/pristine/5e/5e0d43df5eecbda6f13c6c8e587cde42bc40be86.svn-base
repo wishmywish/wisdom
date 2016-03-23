@@ -1,0 +1,388 @@
+<?php
+namespace Api\Controller;
+use Think\Controller;
+
+// 运营用JAVA接口的Servlet常量
+define('YY_NOTICE_URL', 'NoticeServlet');                  // 公告
+define('YY_WORK_REPORT_URL', 'WorkReportServlet');         // 工作报告
+define('YY_GPS_URL', 'GpsServlet');                        // 签到
+define('YY_USER_CONTACTS_URL', 'UserContactsServlet');     // 通讯录
+define('YY_CUSTOMER_URL', 'CustomerServlet');              // 客户管理
+define('YY_CUSTOMER_CLIENT_URL', 'CustomerClientServlet'); // 客户联系人
+define('YY_DICT_URL', 'DictServlet');                      // 字典
+define('YY_COMMON_PERSONAL_URL', 'CommonPersonalServlet'); // 常用客户类型所属人维护
+define('YY_NOTICE_BOARD_URL', 'NoticeBoardServlet');       // 公告栏目管理
+define('YY_ATTACHMENT_URL', 'AttachmentServlet');          // 附件记录操作
+define('YY_SIGN_ADDRESS_URL', 'SignAddressServlet');       // 签到地址操作
+define('YY_ADDRESS_URL', 'AddressServlet');                // 地址操作
+define('YY_PROCESS_URL', 'ProcessServlet');          // 附件记录操作
+/**
+ * 智慧运营平台请求转发控制器
+ *
+ * @author zhoushuangsheng
+ * @since  1.0 2015/08/25
+ */
+class YYInfoController extends Controller {
+    private $in_arr,$in_file,$out_arr,$resp,$token;
+    //=================通过接口方法=========================================================
+    
+
+    
+    function conf() {
+        header("Content-Type: text/html;charset=utf-8");
+        $this->in_arr = array_merge($_GET,$_POST);
+        
+        //将json转化为array
+        foreach ($this->in_arr as $key => $value) {
+        	$arrayValue = json_decode($this->in_arr[$key]);
+        	if ($arrayValue != "" && !is_numeric($arrayValue)) {
+        		$this->in_arr[$key] = $this->object_array($arrayValue);
+        	}
+        }
+        
+        $this->in_file = $_FILES;
+        if (isset($this->in_arr['debugin'])) {
+            pt($this->in_arr);
+            if (!empty($this->in_file)) {
+                pt($this->in_file);
+            }
+        } else {
+            //处理COMMAND
+            switch ($this->in_arr['command']) {
+                //==============1.1新增公告接口======================
+                case 'saveNotice':
+                //==============1.2修改公告附件标识接口======================
+                case 'updateNoticeAttachFlag':
+                //==============1.3修改公告静态页面路径======================
+                case 'updateHTMLPath':
+                //==============1.4删除公告接口======================
+                case 'delNotice':
+                //==============1.5查询公告列表接口======================
+                case 'getNoticeList':
+                //==============1.6查看公告详情接口======================
+                case 'viewNotice':
+                //==============1.7获取公告访问信息列表接口======================
+                case 'getVisitList':
+                //==============1.8公告置顶操作接口======================
+                case 'topMessage':
+                //==============1.9查询公告反馈类型列表接口======================
+                case 'getNoticeCommentType':
+                //==============1.10新增公告反馈接口======================
+                case 'addNoticeComment':
+                //==============1.11查询公告反馈列表接口======================
+                case 'getNoticeComment':
+                //==============1.12统计用户未读的公告数量接口======================
+                case 'notViewNotice':
+                //==============1.13获取公告ID接口======================
+                case 'getNoticeId':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    // 1.7获取公告访问信息列表接口的返回列表名字不是默认值list
+                    $list_key = ($this->in_arr['command'] === 'getVisitList') ? 'visitList' : 'list';
+                    // 1.2修改公告附件标识接口与2.5修改工作报告附件标识接口的command重复,需要重新设定command
+                    if ($this->in_arr['command'] === 'updateNoticeAttachFlag') {
+                        $this->in_arr['command'] = 'updateAttachFlag';
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_NOTICE_URL, $list_key);
+                    break;
+                //==============2.1获取未提交日报日期接口======================
+                case 'getReportBeforeNotDate':
+                //==============2.2获取工作报告审阅人======================
+                case 'getWorkSet':
+                //==============2.3设置工作报告审阅人接口======================
+                case 'saveWorkSet':
+                //==============2.4工作报告新增与编辑接口======================
+                case 'operateWorkReport':
+                //==============2.5修改工作报告附件标识接口======================
+                case 'updateWorkReportAttachFlag':
+                //==============2.6获取查阅工作报告列表接口======================
+                case 'getCheckWorkReportList':
+                //==============2.7工作报告查阅接口======================
+                case 'checkWorkReport':
+                //==============2.8工作报告查询接口======================
+                case 'queryWorkReport':
+                //==============2.9工作报告新增评论接口======================
+                case 'saveWorkReportComment':
+                //==============2.10工作报告评论查看接口======================
+                case 'viewWorkReportComment':
+                //==============2.11查看工作报告详情======================
+                case 'viewWorkReport':
+                //==============2.12获取工作报告ID接口==============
+                case 'getWorkReportId':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    // 2.5修改工作报告附件标识接口与的1.2修改公告附件标识接口command重复,需要重新设定command
+                    if ($this->in_arr['command'] === 'updateWorkReportAttachFlag') {
+                        $this->in_arr['command'] = 'updateAttachFlag';
+                    }
+                    $list_key = 'list';
+                    switch ($this->in_arr['command']) {
+                        // 2.6获取查阅工作报告列表接口
+                        case 'getCheckWorkReportList':
+                        // 2.8工作报告查询接口
+                        case 'queryWorkReport':
+                            $list_key = 'reportList';
+                            break;
+                        // 2.10工作报告评论查看接口
+                        case 'viewWorkReportComment':
+                            $list_key = 'item';
+                            break;
+                        // 2.11查看工作报告详情
+                        case 'viewWorkReport':
+                            $list_key = 'report';
+                            break;
+                        default:
+                            break;
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_WORK_REPORT_URL, $list_key);
+                    break;
+                //==============3.1获取拜访签到列表======================
+                case 'queryGPSList':
+                //==============3.2查看签到详情======================
+                case 'viewSignDetail':
+                //==============3.3新增(拜访、上下班)签到======================
+                case 'addSign':
+                //==============3.4查询上下班签到记录======================
+                case 'getWorkSignList':
+                //==============3.5新增签到记录点评======================
+                case 'addSignComment':
+                //==============3.6获取签到点评列表======================
+                case 'getSignCommentList':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    switch ($this->in_arr['command']) {
+                        // 3.1获取拜访签到列表
+                        case 'queryGPSList':
+                            $list_key = 'checks';
+                            break;
+                        // 3.4查询上下班签到记录
+                        case 'getWorkSignList':
+                            $list_key = 'workSignList';
+                            break;
+                        // 3.6获取签到点评列表
+                        case 'getSignCommentList':
+                            $list_key = 'commentList';
+                            break;
+                        default:
+                            break;
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_GPS_URL, $list_key);
+                    break;
+                //==============4.1 获取用户列表接口======================
+                case 'getUserList':
+                //==============4.2 获取下级部门列表接口======================
+                case 'getAllDeptList':
+                //==============4.3 查看用户详情接口======================
+                case 'viewUserDetail':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    if ($this->in_arr['command'] === 'getUserList') {
+                        // 4.1 获取用户列表接口
+                        $list_key = 'userList';
+                    } else if ($this->in_arr['command'] === 'getAllDeptList') {
+                        // 4.2 获取下级部门列表接口
+                        $list_key = 'deptList';
+                    }
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_USER_CONTACTS_URL, $list_key);
+                    break;
+                //==============5.1 新增/编辑客户接口======================
+                case 'addOrEditCustomer':
+                //==============5.2 查看客户详情======================
+                case 'viewCustomer':
+                //==============5.5 删除客户======================
+                case 'delCustomer':
+                //==============5.4客户搜索======================
+                //5.5 获取客户区域树数据
+                case 'getAreaList':
+                case 'searchCustomer':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    if ($this->in_arr['command'] === 'viewCustomer') {
+                        // 5.2 查看客户详情
+                        $list_key = 'addressList';
+                    } else if ($this->in_arr['command'] === 'searchCustomer') {
+                        // 5.4客户搜索
+                        $list_key = 'cusList';
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_CUSTOMER_URL, $list_key);
+                    break;
+                //==============6.1 新增/编辑客户联系人接口======================
+                case 'addOrEditCusClient':
+                //==============6.2客户联系人搜索======================
+                case 'searchCusClient':
+                //==============6.3 查看客户联系人详情======================
+                case 'viewCusClient':
+                //==============6.4 删除客户联系人======================
+                case 'delCusClient':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    // 6.2客户联系人搜索
+                    $list_key = ($this->in_arr['command'] === 'searchCusClient') ? 'cusClientList' : 'list';
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_CUSTOMER_CLIENT_URL, $list_key);
+                    break;
+                //==============7.1 根据条件查询数据字典接口======================
+                case 'getDictByCondition':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'dicts';
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_DICT_URL, $list_key);
+                    break;
+                //==============8.1 新增常用客户类型所属人======================
+                case 'saveCommPer':
+                //==============8.2 删除常用客户类型所属人======================
+                case 'deleteCommPer':
+                //==============8.3获取常用(客户/联系人)所有人列表======================
+                case 'getCommPerList':
+                //==============8.4 获取非常用(客户/联系人)所有人列表======================
+                case 'getNotCommPerList':
+                //==============8.5 保存用户选择的常用客户类型所属人======================
+                case 'saveSelectedCommPer':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    // 8.3获取常用(客户/联系人)所有人列表
+                    // 8.4 获取非常用(客户/联系人)所有人列表
+                    if ($this->in_arr['command'] === 'getCommPerList'
+                        || $this->in_arr['command'] === 'getNotCommPerList') {
+                        $list_key = 'userList';
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_COMMON_PERSONAL_URL, $list_key);
+                    break;
+                //==============9.1 新增/编辑公告栏目接口======================
+                case 'addorEditNoticeBoard':
+                //==============9.2 查询公告栏目接口======================
+                case 'searchNoticeBoard':
+                //==============9.3查看公告栏目接口======================
+                case 'viewNoticeBoard':
+                //==============9.4删除公告栏目接口======================
+                case 'deleteNoticeBoard':
+                //==============9.5 查询企业下所有的公告栏目接口======================
+                case 'queryAllNoticeBoard':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    if ($this->in_arr['command'] === 'searchNoticeBoard'
+                        || $this->in_arr['command'] === 'queryAllNoticeBoard') {
+                        // 9.2 查询公告栏目接口
+                        // 9.5 查询企业下所有的公告栏目接口
+                        $list_key = 'noticeBoardList';
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_NOTICE_BOARD_URL, $list_key);
+                    break;
+                //==============10.1 新增附件记录接口======================
+                case 'saveAttach':
+                //==============10.2 获取附件记录列表接口======================
+                case 'getAttachList':
+                //==============10.3删除附件记录接口======================
+                case 'delAttach':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    // 10.2 获取附件记录列表接口
+                    $list_key = ($this->in_arr['command'] === 'getAttachList') ? 'attachList' : 'list';
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_ATTACHMENT_URL, $list_key);
+                    break;
+                //==============11.1 新增/编辑签到地址接口======================
+                case 'saveSignAddr':
+                //==============11.2 获取签到地址列表接口======================
+                case 'getSignAddrList':
+                //==============11.3查看签到地址接口======================
+                case 'viewSignAddr':
+                //==============11.4作废签到地址接口======================
+                case 'invalidSignAddr':
+                //==============11.5删除签到地址接口======================
+                case 'delSignAddr':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    // 11.2 获取签到地址列表接口
+                    $list_key = ($this->in_arr['command'] === 'getSignAddrList') ? 'signAddressList' : 'list';
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_SIGN_ADDRESS_URL, $list_key);
+                    break;
+                //==============12.1 获取国家列表接口======================
+                case 'getCountryList':
+                //==============12.2 获取省份列表接口======================
+                case 'getProvinceList':
+                //==============12.3 获取城市列表接口======================
+                case 'getCityList':
+                    $this->out_other();
+                    $this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+                    $list_key = 'list';
+                    if ($this->in_arr['command'] === 'getCountryList') {
+                        // 12.1 获取国家列表接口
+                        $list_key = 'countryList';
+                    } else if ($this->in_arr['command'] === 'getProvinceList') {
+                        // 12.2 获取省份列表接口
+                        $list_key = 'provinceList';
+                    } else if ($this->in_arr['command'] === 'getCityList') {
+                        // 12.3 获取城市列表接口
+                        $list_key = 'cityList';
+                    }
+                    // 请求JAVA接口,并取得数据
+                    $this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_ADDRESS_URL, $list_key);
+                    break;
+               //13.1 获取预先定义的流程节点处理人 后追加的
+               case  'getDefineProcessNodeList':
+               //==============13.1 创建流程接口======================
+               case 'createProcess':
+               //==============13.2 流程节点审批接口(同意/拒绝/转发)======================
+               case 'processNodeApproval':
+               //13.3 获取流程列表接口(我发起的流程/待我审核的流程/我已审批的流程)
+               case 'getProcessList':
+               //13.4 查看流程详情接口
+               case 'viewProcessDetail':
+	               	$this->out_other();
+	               	$this->out_arr['re_command'] = $this->in_arr['command'] . '_resq';
+	               	//// 10.2 获取附件记录列表接口
+	               	//$list_key = ($this->in_arr['command'] === 'getAttachList') ? 'attachList' : 'list';
+	               	// 请求JAVA接口,并取得数据
+	               	$this->out_arr = A('YYJhttp')->requestData($this->in_arr, $this->out_arr, YY_PROCESS_URL, $list_key);
+               	break;
+               default:
+                    $this->out_arr['conf_auth'] = 'F';
+                    $this->out_arr['auth_code'] = 'conf_error';
+                    $this->out_arr['retime'] = time();
+                    $this->out_arr['retime_pre'] = date('YmdHis');
+                    break;
+            }
+            //输入返回数据:如果有debugout，则打印返回数据，否则输出使用数据
+            if (isset($this->in_arr['debugout'])) {
+                pt($this->out_arr);
+            } else {
+                echo A('Fun')->JSON($this->out_arr);
+            }
+        }
+    }
+    
+    //转化为标准Array
+    function object_array($array){
+    	if(is_object($array)){
+    		$array = (array)$array;
+    	}
+    	if(is_array($array)){
+    		foreach($array as $key=>$value){
+    			$array[$key] = $this->object_array($value);
+    		}
+    	}
+    	return $array;
+    }
+    
+    //返回基本数据
+    private function out_other() {
+        $this->out_arr['conf_auth'] = 'T';
+        $this->out_arr['auth_code'] = 'conf_success';
+        $this->out_arr['retime'] = time();
+        $this->out_arr['retime_pre'] = date('YmdHis');
+    }
+}

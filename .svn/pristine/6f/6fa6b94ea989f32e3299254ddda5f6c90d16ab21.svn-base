@@ -1,0 +1,535 @@
+<?php
+
+namespace Home\Controller;
+
+use Think\Controller;
+
+class OfficeController extends CommonController {
+	private $in_arr; // POST,GET参数数组
+	private $userID; // userid
+	private $companyId; // companyId
+	
+	/* 运营管理入口 */
+	public function index() {
+		$this->init ();
+		// 取得公告列表
+		$json_NoticeListdata = $this->getNoticeList ("1","6");
+		$this->showHtml ( "getNoticeList", $json_NoticeListdata );
+		// 取得报告审阅人
+		$json_WorkSetdata = $this->getWorkSet ();
+		$this->showHtml ( "getWorkSet", $json_WorkSetdata );
+		$this->display ();
+	}
+	
+	/* 取得公告列表入口 公告列表画面  getNoticeList*/
+	public function  noticeList(){
+		$this->init ();
+		// 追加日报
+		$json_data = $this->getNoticeList();
+		$this->showHtml ( "getNoticeList", $json_data );
+		$this->display ();
+	}
+	
+	// 新增公告入口 新增公告画面
+	public function noticeAdd() {
+		$this->init ();
+		$this->display ();
+	}
+	
+	/* 保存公告notice  ajax*/
+	public function  saveNoticeInfo(){
+		$this->init ();
+		// 追加日报
+		$json_data = $this->saveNotice();
+		echo $json_data;
+	}
+	
+	// 回复公告入口 回复公告画面
+	public function noticeCommentAdd() {
+		$this->init ();
+		//取得回复状态
+		$json_data = $this->getNoticeCommentType ();
+		$this->showHtml ( "getNoticeCommentType", $json_data );
+		$this->display ();
+	}
+	
+	/* 取得公告详细入口  公告详细画面*/
+	public function noticeDetail() {
+		$this->init ();
+		$json_data = $this->viewNotice ();
+		$this->showHtml ( "viewNotice", $json_data );
+		$this->display ();
+	}
+	
+	/* 取得用户列表  AJAX*/
+	public function userList() {
+		$this->init ();
+		$json_data = $this->getUserList ();
+		echo $json_data;
+	}
+	
+	/* 日报审批人popup画面入口 取得部门树 */
+	public function deptList() {
+		$this->init ();
+		$json_data = $this->getAllDeptList ();
+		$this->showHtml ( "getAllDeptList", $json_data );
+		$this->display ();
+	}
+	
+	/* 新增日报  日报保存AJAX*/
+	public function saveReport() {
+		$this->init ();
+		// 追加审阅人
+		if ($this->in_arr ["recorder"] != "") {
+			$this->setWorkSet ();
+		}
+		// 追加日报
+		$json_data = $this->operateWorkReport ();
+		echo $json_data;
+	}
+
+	/* 考勤一览画面入口  考勤列表画面*/
+	public function WorkSignList() {
+		$this->init ();
+		$json_data = $this->getWorkSignList ();
+		$this->showHtml ( "getWorkSignList", $json_data );
+		$this->display ();
+	}
+	
+	// 考勤入口文件
+	public function checking() {
+		$this->init ();
+		$this->display ();
+	}
+	// 公告入口文件
+	public function notice() {
+		$this->init ();
+		$this->display ();
+	}
+	// 报告审阅入口文件
+	public function reportReview() {
+		$this->init ();
+		$this->display ();
+	}
+	// 工作审批入口文件
+	public function approval() {
+		$this->init ();
+		$this->display ();
+	}
+	
+	/* 取得全部消息 */
+	public function getInfoAll() {
+		// $json_data = $this->operateWorkReport ();
+		// $this->showHtml("operateWorkReport",$json_data);
+		// $this->display();
+	}
+	
+	/* 取得待处理消息 */
+	public function getInfoBefore() {
+		// $json_data = $this->operateWorkReport ();
+		// $this->showHtml("operateWorkReport",$json_data);
+		// $this->display();
+	}
+	
+	/* 取得处理后消息 */
+	public function getInfoAfter() {
+		// $json_data = $this->operateWorkReport ();
+		// $this->showHtml("operateWorkReport",$json_data);
+		// $this->display();
+	}
+	
+	/* 初期化 */
+	private function init() {
+		set_theme ();
+		$re = A ( 'Api' )->getBigC ();
+		// pt($re);
+		// exit;
+		foreach ( $re as $key => $val ) {
+			if ($val ['f_sys_column_cid'] == 'Office') {
+				$syscolumn_id = $val ['f_syscolumn_id'];
+				$sre = A ( 'Api' )->getBigC ( $syscolumn_id );
+			}
+		}
+		
+		$this->assign ( 'bigclass', $re );
+		$this->assign ( 'smallclass', $sre );
+		// $this->display();
+		
+		$this->in_arr = array_merge ( $_GET, $_POST );
+		$this->userID = cookie ( "userId" );
+		$this->companyId = cookie ( "companyId" );
+	}
+	
+	/* 为HTML返回数据 */
+	private function showHtml($actionName, $json_data) {
+		$json_Array = $this->checkApiResult ( $actionName, $json_data );
+		$keys = array_keys ( $json_Array );
+		for($i = 0; $i < count ( $keys ); $i ++) {
+			// echo $actionName.$keys[$i].' value:'.$json_Array[$keys[$i]].'<br>';
+			$this->assign ( $actionName . '_' . $keys [$i], $json_Array [$keys [$i]] );
+		}
+	}
+	
+	/*
+	 * 调用API saveAttach 10.1 新增附件记录接口
+	 * tblname 附件所属业务名称 公告附件:bbsMessage; 工作报告附件:workReport;
+	 * linkid 附件所属业务ID    公告ID或工作报告ID
+	 * oldName 附件名称
+	 * type 附件类型
+	 * size 附件大小
+	 * returnUrl 附件存储路径加密文本
+	 */
+	private function saveAttach($tblname,$linkid,$oldName,$type,$size,$returnUrl) {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "saveAttach",
+				"tblname" => $tblname,
+				"linkid" => $linkid,
+				"oldName" => $oldName,
+				"type" => $type,
+				"size" => $size,
+				"returnUrl" => $returnUrl 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API getAllDeptList 返回部门列表 */
+	private function getAllDeptList() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getAllDeptList",
+				"companyId" => $this->companyId 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API getUserList 取得登陆用户所属公司下的员工列表 */
+	public function getUserList() {
+		$this->init ();
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getUserList",
+				"userId" => $this->userID,
+				"queryStart" => "1",
+				"queryEnd" => "10000",
+				"deptId" => $this->in_arr ["deptId"] 
+		);
+		$json_data = postData ( $url, $data );
+		echo $json_data;
+	}
+	
+	/* 调用API getWorkSet 取得审阅人 */
+	private function getWorkSet() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getWorkSet",
+				"userId" => $this->userID 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API saveWorkSet 设置审阅人 */
+	private function setWorkSet() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "saveWorkSet",
+				"userId" => $this->userID,
+				"recorder" => $this->in_arr ["recorder"] 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API getNoticeList 取得公告列表 */
+	private function getNoticeList($queryStart_Para="",$queryEnd_Para="") {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$queryStart = "";
+		$queryEnd = "";
+		if($queryStart_Para == "") {
+			$queryStart = $this->in_arr ["queryStart"] ;
+			$queryEnd = $this->in_arr ["queryEnd"] ;
+		} else{
+			$queryStart = $queryStart_Para;
+			$queryEnd = $queryEnd_Para;
+		}
+		$data = array (
+				"command" => "getNoticeList",
+				"userId" => $this->userID,
+				"companyId" => $this->companyId,
+				"queryStart" => $queryStart,
+				"queryEnd" => $queryEnd 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API viewNotice 取得公告明细 */
+	private function viewNotice() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "viewNotice",
+				"userId" => $this->userID,
+				"companyId" => $this->companyId,
+				"messageId" => $this->in_arr ["messageId"] 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 调用API queryGPSList 3.1获取拜访签到列表 */
+	private function queryGPSList() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "queryGPSList",
+				"userId" => $this->userID,
+				"companyId" => $this->companyId,
+				"messageId" => $this->in_arr ["messageId"] 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/*取得日报ID*/
+	private function getWorkReportId() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getWorkReportId" 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	/*getNoticeCommentType 1.9查询公告反馈类型列表接口*/
+	private function getNoticeCommentType() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getNoticeCommentType",
+				"companyId" => $this->companyId
+				
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/*取得公告ID*/
+	private function getNoticeId() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "getNoticeId"
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 3.4查询上下班签到记录 getWorkSignList */
+	private function getWorkSignList() {
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$userId = $this->userID;
+		$queryStart = $this->in_arr ["queryStart"];
+		$queryEnd = $this->in_arr ["queryEnd"];
+		$source = "web";
+		$dateType = $this->in_arr ["dateType"];
+		$startDate = $this->in_arr ["startDate"];
+		$endDate = $this->in_arr ["endDate"];
+		$userIds = $this->in_arr ["userIds"];
+		$deptId = $this->in_arr ["deptId"];
+		
+		$data = array (
+				"command" => "getWorkSignList",
+				"userId" => $userId,
+				"queryStart" => $queryStart,
+				"queryEnd" => $queryEnd,
+				"source" => $source,
+				"dateType" => $dateType,
+				"startDate" => $startDate,
+				"endDate" => $endDate,
+				"userIds" => $userIds,
+				"deptId" => $deptId 
+		);
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+
+	/* 调用API saveNotice 1.1新增公告接口 */
+	private function saveNotice() {
+	
+		$json_data = $this->getNoticeId ();
+		$json_Array = json_decode ( $json_data, true );
+		$noticeId = $json_Array ["noticeId"]; // 工作报告ID
+		$subject  = $this->in_arr ["subject"];
+		$content = $this->in_arr ["content"];
+		$path = $this->in_arr ["path"];
+		$boardId = $this->in_arr ["boardId"];
+		$userIds = $this->in_arr ["userIds"];
+		$deptIds = $this->in_arr ["deptIds"];
+		$isTop = $this->in_arr ["isTop"];
+	
+		$url = C ( "OperatehttpUrl" ) . $url;
+		$data = array (
+				"command" => "saveNotice",
+				"noticeId" => $this->userID,
+				"userId" => $this->userID,
+				"subject" => $subject,
+				"content" => $content,
+				"path" => $path,
+				"boardId" => $boardId,
+				"userIds" => $userIds,
+				"deptIds" => $deptIds,
+				"isTop" => $isTop
+		);
+		$json_data = postData ( $url, $data );
+		
+		//notice 附件追加
+		if ($upfile['oldName']!="" && $upfile['oldName']!=null){
+			$json_data_saveAttach = $this->saveAttach("bbsMessage",$noticeId,$upfile['oldName'],$upfile['type'],$upfile['size'],$upfile['returnUrl']);
+		}
+		return $json_data;
+	}
+	
+	/* 调用API operateWorkReport  追加修改日报*/
+	private function operateWorkReport() {
+		$json_data = $this->getWorkReportId ();
+		$json_Array = json_decode ( $json_data, true );
+		$command = "operateWorkReport"; // 请求命令
+		$userId = $this->userID; // 用户ID
+		$source = "1"; // 来源 web:1;mobile:2
+		$reportId = $json_Array ["reportId"]; // 工作报告ID
+		$reportType = $this->in_arr ["reportType"]; // 工作报告类型 日报:1;周报:2;月报:3
+		$startDate = $this->in_arr ["startDate"]; // 工作报告开始时间 可以为空
+		$endDate = $this->in_arr ["endDate"]; // 工作报告结束时间 可以为空
+		$subject = ""; // 工作报告标题 可以为空 标题格式(日报：年-月-日 工作日报);周报格式(周报：年-月-日--年-月-日 工作周报);月报格式(月报：年-月 工作月报).
+		$oType = "1"; // 操作类型 新增:1;编辑:2.
+		$voiceCount = "0"; // 工作报告语音条数 可以为空 最多5条  web端无法使用该接口上传附件
+		$reportState = "2"; // 工作报告提交审核或保存1,保存,2 提交审核
+		$reportContent = $this->in_arr ["reportContent"]; // 工作报告内容
+		$voices = $this->in_arr ["voices"];
+		$url = C ( "OperatehttpUrl" ) . $url;
+		if ($reportType == "1") {
+			$startDate = $this->in_arr ["date"];
+			$endDate = $this->in_arr ["date"];
+			$subject = "日报：" . $startDate . "  工作日报";
+		} elseif ($reportType == "2") {
+			$subject = "周报：" . $startDate . "--" . $endDate . "  工作周报";
+		} elseif ($reportType == "3") {
+			$subject = "月报：" . date ( "Y-m", strtotime ( $this->in_arr ["date"] ) ) . "  工作月报";
+			$startDate = date ( "Y-m", strtotime ( $this->in_arr ["date"] ) ) . "-01";
+			$endDate = date ( "Y-m", strtotime ( $this->in_arr ["date"] ) ) . "-" . date ( "t", strtotime ( $this->in_arr ["date"] ) );
+		}
+		
+		$json_data = $this->getWorkReportId ();
+		$json_Array = json_decode ( $json_data, true );
+		
+		$data = array (
+				"command" => $command,
+				"userId" => $userId,
+				"source" => $source,
+				"reportId" => $reportId,
+				"reportType" => $reportType,
+				"startDate" => $startDate,
+				"endDate" => $endDate,
+				"subject" => $subject,
+				"oType" => $oType,
+				"voiceCount" => $voiceCount,
+				"reportState" => $reportState,
+				"reportContent" => $reportContent,
+		);
+		
+		//追加附件
+		if ($upfile['oldName']!="" && $upfile['oldName']!=null){
+				$json_data_saveAttach = $this->saveAttach("workReport",$reportId,$upfile['oldName'],$upfile['type'],$upfile['size'],$upfile['returnUrl']);
+		}
+
+		$json_data = postData ( $url, $data );
+		return $json_data;
+	}
+	
+	/* 判断API返回值 */
+	private function checkApiResult($apiName, $apiReturnValue) {
+		$json_Array = json_decode ( $apiReturnValue, true );
+		$ErrorValue = "";
+		if ($json_Array ['conf_auth'] == "F") {
+			$ErrorValue = "COMMAND不存在。";
+		}
+		if ($json_Array ['error_code'] != "success") {
+			$ErrorValue = $json_Array ['error_text'];
+		}
+		$this->assign ( $apiName . '_ErrorMsg', $ErrorValue );
+		return $json_Array;
+	}
+	
+	/* 初始化发送人选择画面 */
+	public function selectRecorder() {
+		$this->init();
+		$json_DeptListData = $this->getAllDeptList ();
+		$json_Array = json_decode ( $json_DeptListData, true );
+		$dept_list = array();
+		foreach ($json_Array['list'] as $k => $v) {
+			if ($v['deptLevel'] == '1') {
+				$dept_list[0]['deptId'] = $v['deptId'];
+				$dept_list[0]['text'] = $v['deptName'];
+				$dept_list[0]['href'] = 'javascript:getUserListByDeptId(' . $v['deptId'] . ')';
+				$dept_list[0]['children'] = array();
+			} else {
+				$keys = $this->findDeptKey($dept_list, $v['deptParent'], intval($v['deptLevel']));
+				$arr = array(
+					'deptId' => $v['deptId'],
+					'text' => $v['deptName'], 
+					'href' => 'javascript:getUserListByDeptId(' . $v['deptId'] . ')', 
+					'children' => array());
+				if (array_key_exists('k4', $keys)) {
+					$dept_list[$keys['k1']]['children'][$keys['k2']]['children'][$keys['k3']]['children'][$keys['k4']]['children'][] = $arr;
+				} else if (array_key_exists('k3', $keys)) {
+					$dept_list[$keys['k1']]['children'][$keys['k2']]['children'][$keys['k3']]['children'][] = $arr;
+				} else if (array_key_exists('k2', $keys)) {
+					$dept_list[$keys['k1']]['children'][$keys['k2']]['children'][] = $arr;
+				} else if (array_key_exists('k1', $keys)) {
+					$dept_list[$keys['k1']]['children'][] = $arr;
+				}
+			}
+		}
+
+		$this->assign ( "dept_list", json_encode ( $dept_list ) );
+		$this->assign ( "recorderName", I ( "get.recorderName" ) );
+		$this->assign ( "recorder", I ( "get.recorder" ) );
+		$this->display ();
+	}
+
+	private function findDeptKey($dept_list, $dept_id, $level=2) {
+		if (!$level) {
+			$level = 4;
+		}
+		$keys = array();
+		foreach ($dept_list as $k1 => $v1) {
+			$keys['k1'] = $k1;
+			if ($v1['deptId'] == $dept_id) {
+				return $keys;
+			}
+			if ($level > 1) {
+				foreach ($v1['children'] as $k2 => $v2) {
+					$keys['k2'] = $k2;
+					if ($v2['deptId'] == $dept_id) {
+						return $keys;
+					} else if ($level > 2) {
+						foreach ($v2['children'] as $k3 => $v3) {
+							$keys['k3'] = $k3;
+							if ($v3['deptId'] == $dept_id) {
+								return $keys;
+							} else if ($level > 3) {
+								foreach ($v3['children'] as $k4 => $v4) {
+									$keys['k4'] = $k4;
+									if ($v4['deptId'] == $dept_id) {
+										return $keys;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		return $keys;
+	}
+}

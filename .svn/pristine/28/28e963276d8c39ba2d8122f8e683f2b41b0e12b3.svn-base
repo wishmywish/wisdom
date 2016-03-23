@@ -1,0 +1,148 @@
+/* 
+    Created on : 2015-1-26, 14:09:34
+    Author     : luoqingqin
+*/
+/*主体设置*/
+html,body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+    background: #fafafa;
+    padding:0;
+    color:#595758;
+}
+*{margin:0 auto; padding:0;}
+ul{list-style: none;margin:0;padding:0;}
+img{border:none;}
+a{text-decoration:none;color:#0086c9;;outline:none;cursor: pointer;}
+a:link{color: #0086c9;text-decoration:none;outline:none;}
+a:visited{text-decoration:none;color: #0086c9;outline:none}
+a:active{text-decoration:none;color: #0086c9;outline:none}
+a:hover{text-decoration:none;color: #0086c9;outline:none}
+
+/*start===后台登录页===*/
+.align-center{width:100%;height:420px;position:fixed;top:50%;margin-top:-210px;}/*垂直居中*/
+.login_head{width:100%;height: 60px;}
+.login_head .login_head_title{width: 660px;height: 60px;}
+
+.login_body{width:100%;height: 310px;background-color:#376db7;}
+.login_body .login_body_title{width: 710px;height: 310px;}
+.login_body_img{width:302px;height:290px;float:left; margin-top: 20px;}
+.login_body_from{width:304px;float:left;margin-left: 80px;margin-top: 30px;}
+.login_body_from .login_top{width: 304px;height: 41px;}
+.login_body_from .login_center{width: 304px;height: 170px;}
+
+.login_body_from .login_down{width: 304px;height: 47px;}
+
+.login_foot{width:100%;height: 50px;}
+.login_foot .login_foot_title{width: 660px;height: 50px; line-height: 50px;}
+.login_foot .login_foot_title .login_company_info{width:200px;height: 50px;margin-left:400px;text-align: center;color: #D0D0D0;}
+/*end===后台登录页===*/
+
+
+/*start===后台头部===*/
+.page_top{width: 100%;height: 50px;line-height: 50px;background-color: #0086c9;line-height: 50px;color:#fff;font-size:12px}
+.page_top .page_top_title{width: 1000px;height: 50px;}
+.page_top .page_top_title .page_top_company{width: 630px;height: 50px;float: left;font-size: 20px; font-weight: bold;}
+.page_top .page_top_title .page_top_menu{width: 270px;height: 50px;float: left;}
+.page_top .page_top_title .page_top_info{width: 100px;height: 50px;float: left;}
+/*end===后台头部===*/
+
+/*start===后台左侧菜单===*/
+.menu{width: 98px;border-right: 2px #eeeeee solid;float: left;font-size:12px}
+.menu_button{width: 60px;}
+.menu li{margin-top: 36px;cursor: pointer;}
+/*end===后台左侧菜单===*/
+
+/*start===后台首页==*/
+.body_frame{width: 998px;border-right: 2px #eeeeee solid;font-size:12px;color:#595758;}
+.body_right{width: 898px; float: left;background-color: #fff;}
+.body_right_home{width: 650px;float: left; height: 500px;border-right:1px solid #eeeeee;margin-top: 30px;float: left; }
+.body_right_home p{line-height: 40px;margin-left: 30px;}
+.body_right_button_list{width: 475px;margin-top: 40px;}
+.body_right_button_list .body_right_button_jj{margin-right: 36px;margin-bottom: 17px;cursor: pointer;float: left;}
+.body_right_button_wz{width: 90px;height: 20px;line-height: 20px; text-align: center; color: #fff;}
+
+.body_right_right{width: 240px;margin-top: 30px;float: left;}
+.right_statistics{width: 200px;}
+.right_statistics .statistics_line{width: 100%;}
+.right_statistics .statistics_line .statistics_wz_1{width: 100%;height: 25px;line-height: 25px;font-weight: bold;}
+.right_statistics .statistics_line .statistics_wz_line{width: 100%;height: 15px;border: 1px #0086c9 solid;}
+.right_statistics .statistics_line .statistics_wz_2{width: 100%;height: 20px;line-height: 20px;font-size: 9px;color:#D0D0D0;}
+
+.company_info{width: 200px;background-color:#fbfbfb;margin-top: 35px;height: 200px;}
+.company_info .company_info_on{width: 170px;height: 50px;text-align: center;line-height: 50px;}
+.company_info .company_info_on_ico{width: 170px;height: 50px;text-align: center;line-height: 20px;}
+/*end===后台首页===*/
+
+/*start===后台组织架构==*/
+.button_bg_80{width:120px;height: 25px;line-height: 25px;text-align: center;background-color: #409ad6;color:#fff;cursor: pointer;}
+.button_bg_40{width:70px;height: 25px;line-height: 25px;text-align: center;background-color: #409ad6;color:#fff;cursor: pointer;}
+.body_right_menu{width: 260px; float: left;margin-top: 15px;}
+.body_right_list{width:636px;float:left;border-left: 2px solid #eeeeee;margin-top: 15px;}
+.body_right_list_button{width:580px;height: 25px;}
+
+.body_right_list_tab{width:100%;min-height:40px;margin-top:15px;border-top:1px solid #eeeeee;text-align: center;}
+.body_right_list_tab li{float: left;width:25%; min-height:40px;line-height:35px;cursor: pointer;}
+.body_right_list_tab1{width:100%;min-height:40px;margin-top:20px;border-top:1px solid #eeeeee;text-align:center;}
+.body_right_list_tab1 li{float: left;width:33.3%; min-height:40px;line-height:35px;cursor: pointer;background-color:#EEEEEE;}
+.body_right_list_tab2{width:100%;min-height:500px;margin-top:15px;text-align: center}
+.body_right_list_tab2 li{float: left;width:33.3%; min-height:35px;line-height:35px;cursor: pointer;text-align:center;}
+.body_right_list_tab2 li>span{min-height:40px;line-height:35px;cursor:pointer;background-color:#409ad6;color:#fff;margin:6px;padding:5px 10px }
+.body_right_list_tab2 li>span:hover{background-color:#eeeeee;color:#000}
+.button2{margin:10px;line-height:40px;height:40px;width:90%}
+.button2:hover{background-color:#eeeeee;color:#000}
+.body_right_list_tab li:hover{background-color:#409ad6;color:#fff}
+.body_right_list_action{width: 580px;height: 35px;}
+.select_all{width:35px;height: 35px;float: left;}
+.body_right_list_action_button{width:190px;height: 30px;float: left;padding-top: 5px;}
+.body_right_list_action_search{width: 200px;height: 35px;float: right;margin-right: 20px;}
+#pagerolelist{text-align:center;width:100%;min-height:40px;min-height:40px;border-top:1px dotted #EEEEEE;margin-bottom:20px}
+#pagerolelist span{width:70px;display:inline-block;}
+#pagerolelist span>a{cursor:pointer;}
+/*.body_right_list_user{width:580px;height:650px}*/
+.body_right_list_user{border-top: 1px dotted #eee;width: 630px;height: 650px;padding-top: 15px;}
+.body_right_list_user li{float: left;text-align: center;height:40px;line-height: 40px;}
+.page{width:560px;height: 30px;line-height: 30px;text-align: right;margin-right: 28px;float: right;background-color: #eeeeee;padding-right: 20px;}
+
+.pagespanth{width:90px;height:25px;line-height:25px;display:inline-block}
+.pagespantw{width:70px;height:25px;line-height:25px;display:inline-block;}
+.pageclick{color:#14bce1;}
+.pagenoclick{color:#595758}
+/*新增部门员工*/
+.button_bg_80_menu{   
+     background-color: #c7daeb;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: 80px;}
+.button_bg_80_menu a{color: #409ad6;}
+.gl{float: right;}
+
+/*end===后台组织架构===*/
+/*-------start--------企业设置---------*/
+.c_head{float: left;margin-top: 15px;margin-bottom: 20px;width:100%;min-height:100px}
+.c_head h4{margin-left: 15px;/* margin-top: 10px; */}
+.c_nav{margin: 1px;}
+.c_content{min-height: 600px;}
+.c_content ul{margin-left: 55px;}
+.c_name{width: 125px;font-weight: 100;margin-right: 55px;text-align: center;height: 20px;}
+.c_footer{height:60px;width:800px;margin:0 auto;}
+.c_footer li{height:30px;line-height:30px;text-align: center;float:left;margin-left:200px;width:100px;cursor:pointer;margin-top: 20px;}
+.c_spanText{color:#f47469;margin-left:10px}
+.line_input{width:400px;min-height:110px;margin-left:50px;}
+.show_progress_no{width:30px;height:30px;float: left;text-align:center;margin-top:42px;}
+.progress_up{width:200px;height:50px;float:left; margin-top:25px;margin-left:10px;}
+.progress_up .bar{width:5%;height:14px;border-radius:3px;background-color: green;margin-top: 18px;float: left;}
+.show_img{height:100px;float: left;margin-left:15px;}
+.c_pic_up{width: 800px;float: left;margin-top: 5px;}
+#c0 input[type=text]{width: 280px;height:35px;border: 1px #ccc solid;}
+/*-------end--------企业设置---------*/
+
+
+
+

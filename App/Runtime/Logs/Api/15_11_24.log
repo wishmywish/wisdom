@@ -1,0 +1,1330 @@
+[ 2015-11-24T09:04:22+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T09:04:22+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-24T12:08:07+08:00 ] ::1 /wisdom/Index.php/Api/Upfile/upF/type/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wamp\www\wisdom\ThinkPHP\Library\Think\Upload.class.php 第 171 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_files` (`f_filename`,`f_filepath`,`f_uptime`) VALUES ('5653e2a71e3d7.jpg','20151124/','1448338087') [ RunTime:0.0390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2015-11-24T15:03:21+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtXPQ4QpJ5EeWLyf20jAiX3QAAAVJtSs8nrxJBQMBsYbnniLz1XBKweiZWsGs',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348600' WHERE ( app='wisdom' ) [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2015-11-24T15:03:38+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtZ0PpoJJ5EeWkIUlv83qBxQAAAVJtSxK7pY4YFavjaMK8O_mk-lFW8xMJ0pY',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348618' WHERE ( app='wisdom' ) [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:03:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtcJUJHJJ5EeWOTn_HjCvWIgAAAVJtS0_Kr6tAtOWJ22TapwEwSi_KK2GiWuE',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348633' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:04:15+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtfRWzqJJ5EeWg6CdvTQUiewAAAVJtS6G6HksTll1yOFtd7IEiVhaHIHIwXW8',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348654' WHERE ( app='wisdom' ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:04:28+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMthPUf8JJ5EeWXnUkFREGQfwAAAVJtS9VSwJm5GeHS2mq3mbWf1aO9vvxAh5Y',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348668' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:04:37+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtio2M1pJ5EeWaovOMZrpMzAAAAVJtS_n9ItBej9S8mpC0mr2HDVE8zlRCugI',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348677' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:04:49+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtkVShqJJ5EeWP3mX1d5j6BwAAAVJtTCZo9rOZai740HYl22I2thgDV_i9L7w',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348688' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:05:06+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0220s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtm-9mKpJ5EeWdNAVRvZt6VgAAAVJtTGvoKEvAutUaNB4r9Tdl9inlb2qjsJU',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348706' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:05:18+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtossBKpJ5EeWnIV1WiuayXAAAAVJtTJjZz3FJMIEIYRaq_OxUtoMj99q0r0s',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348718' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:05:28+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtqPeg7pJ5EeWGwllCWNQ_bwAAAVJtTMFQtKpmdLCraRMu5HjPepfIsIvU3lA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448348728' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:11:06+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtcmhwypJ6EeWbo3NvFTS2-AAAAVJtUel6xwAM4TpqR-gmiRikQdDDsfenDaQ',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349066' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-11-24T15:11:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtedxKUpJ6EeWcSQdvbEWV4AAAAVJtUhpR8wE13YJFZWkrFQ7NUVdqEyvOzrY',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349078' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2015-11-24T15:11:31+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtgVAKnpJ6EeWb9wfbEwx1iAAAAVJtUksoM7vImv-uLQ7_UkPhHBlCs7MhJxg',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349091' WHERE ( app='wisdom' ) [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2015-11-24T15:11:42+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMth5EJRJJ6EeWyyvVbDAabGgAAAVJtUnQkvaIRrm7SZ5KEqASpmfOS4BP61fY',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349101' WHERE ( app='wisdom' ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2015-11-24T15:11:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtjgvtNJJ6EeWCaNGtgMtJWAAAAVJtUp6buxxHgyxmyepWJB9dQ8slzwDVfyg',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349112' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:12:17+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtnLm_CpJ6EeW3snnUUE7kxQAAAVJtUv7Pvuj7OHWZBE2s73drL7AFjLgFbYA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349137' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:12:27+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtomjp7pJ6EeWJDj2GIUiXjQAAAVJtUyQPXfYGbHCMDjAQw0k1Ed5rI8NywtA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349146' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:12:38+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtqNMBUpJ6EeWWk585SbJNngAAAVJtU04ZMQ7qqJB9zO0d7RgBDrRByy65qGA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349157' WHERE ( app='wisdom' ) [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:12:50+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtsAOFMpJ6EeWLNm__BmtUQgAAAVJtU303qfjzeiAgtSBEAUusmy1Ff0LT4so',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349169' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:12:58+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMttQEUWpJ6EeWDljf1bmuQFgAAAVJtU53sGua3fls7U0W3hddolapmeKtNSCA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349178' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:13:07+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtuk0pipJ6EeWDcn8WJ79CKAAAAVJtU8CjZ-_pNS6SqTpxUeelX0l_jrDNcb0',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349187' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:13:17+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtwF5sHJJ6EeW9EQFbZipSBAAAAVJtU-hmsdGkGV3iMcJPF4cUVZ2yRDHkT1w',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349197' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:13:34+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtyllTCJJ6EeWiWelmQhVkKwAAAVJtVCnOfO7s3tiHaGX_ma0yCR6uvffUJPU',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349213' WHERE ( app='wisdom' ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-11-24T15:13:44+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt0J9pUJJ6EeWNay3nYIVGxwAAAVJtVFLsFNqZkM3nUluH2w6L4gvU_xQSQYg',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349224' WHERE ( app='wisdom' ) [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:13:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt1oau8JJ6EeWBAFco-qjSwAAAAVJtVHmcwYsCdy2tVCyxwoYs0rTE-JnPeC8',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349234' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-11-24T15:14:06+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt3c7t0JJ6EeWpmbu7cEUy1wAAAVJtVKlVrA3ckJjnBroFXwZfuVBPl0YpIhs',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349246' WHERE ( app='wisdom' ) [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-11-24T15:14:16+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt49LbVpJ6EeWmr2OndmS6mwAAAVJtVNDCLxklE0jU4Ntwr7gGOd3qhe5SoOA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349256' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-11-24T15:14:28+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt6r1g0JJ6EeWqL_1lYPrB0AAAAVJtVP4V7Na9VRvbe8RUIztPmsTKenvpHl8',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349268' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:14:29+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt61evAJJ6EeW_yE1u5naJNgAAAVJtVQIIeLDQiErWOZlz1zks1UwC8YDBGG0',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349269' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:14:37+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt8DEEcpJ6EeWPCj9METI-3AAAAVJtVSHP9ep6g-C-uy5HllYyX64MZk31u6g',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349277' WHERE ( app='wisdom' ) [ RunTime:0.0210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:14:46+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMt9bDj9JJ6EeWpVa1QjNpZeAAAAVJtVUXaNTgGAdPsie2FMupdT1XZkVuKC0Q',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349286' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:16:34+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtNhBr6pJ7EeWT0PEpQGnqxwAAAVJtVuu6A67_XUJCFDq2ZznUJ-OTZAoltFI',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349394' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:16:44+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtO7DioJJ7EeWUWUHtiZJ7MgAAAVJtVxCaSTZgkdjjSbNk0KL-ZnjnkVDrw_o',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349404' WHERE ( app='wisdom' ) [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:16:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtQWqJ0JJ7EeWzveNRkHgMKgAAAVJtVzYggaIC1ISM-x-FBr1wpIoDjc2_Gjo',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349413' WHERE ( app='wisdom' ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:17:05+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtSIEacpJ7EeWi_z0IxlG4GAAAAVJtV2SUnPcKhgmHRu1tftCSXSweYLpwC94',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349425' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:17:17+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtT4__SpJ7EeWy8ZE9qbXVlAAAAVJtV5LVUsmMLODVjA1BHGq_bZP3REUE1O4',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349437' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:17:28+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtVdmMDpJ7EeWVwxUgnWBTWAAAAVJtV7wKxBsXI7dSUt0U34GlEghME88QvJw',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349447' WHERE ( app='wisdom' ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:17:39+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtXKCbwpJ7EeW0-5Hy2xDYhwAAAVJtV-h1szFQPHM1K-ALaUj6cx1p1EmwhmA',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349459' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-11-24T15:18:03+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtawUlopJ7EeW69BXCpfpbawAAAVJtWEbI99aFOo-5cARaSQp1JdYiCj_n4S4',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349483' WHERE ( app='wisdom' ) [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:18:15+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtcd2EFJJ7EeW98IMKpiVfQgAAAVJtWHOklKnCA0-X4SuzUvJHogkwzHZlj30',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349494' WHERE ( app='wisdom' ) [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:18:28+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.3070s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMteZ-TVJJ7EeWfp4szs-E5DwAAAVJtWKZ8lp_Y74fCweQfDNjbdR2VNlk-Vrk',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349508' WHERE ( app='wisdom' ) [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:20:05+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:20:27+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:20:38+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:20:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:21:03+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:21:22+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-11-24T15:21:40+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:21:53+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:22:10+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:22:51+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_easemob_token` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_easemob_token` WHERE ( app='wisdom' ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [2] curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument D:\wamp\www\wisdom\App\Api\Controller\EasemobController.class.php 第 145 行.
+SQL: UPDATE `t_easemob_token` SET `access_token`='YWMtFryrzJJ8EeWgIfvDiqaeFwAAAVJtXKwlXet4TN0wFUouthUbLsbh6haFsN0',`expires_in`='5184000',`application`='9ac59f80-4549-11e5-ad4f-c3bb07e6e4be',`uptime`='1448349771' WHERE ( app='wisdom' ) [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:23:18+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T15:23:45+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:24:02+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:24:13+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:24:26+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:24:45+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:35:59+08:00 ] 10.10.10.19 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:36:03+08:00 ] 10.10.10.19 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:37:21+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-11-24T15:40:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:40:46+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:41:08+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:41:23+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-11-24T15:41:42+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T15:42:07+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2015-11-24T15:42:40+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2015-11-24T15:42:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T15:43:11+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: idCard D:\wamp\www\wisdom\App\Api\Controller\InfoController.class.php 第 3329 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-24T16:00:39+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:00:39+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:20:51+08:00 ] ::1 /wisdom/Index.php/Api/Web/role_list?companyid=1002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 3365 行.
+SQL: SELECT * FROM `t_role` WHERE (  f_company_id=1002 ) LIMIT 0,11   [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:28:40+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:28:46+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:28:46+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-24T16:29:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:29:19+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:29:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:29:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:30:16+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:30:16+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:30:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:30:48+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:31:18+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:31:18+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-11-24T16:31:40+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-24T16:31:40+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:32:08+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:32:08+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:32:30+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:32:30+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:32:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:32:54+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:33:16+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:33:21+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-24T16:33:55+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:33:58+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-24T16:34:31+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-11-24T16:34:33+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-24T16:34:59+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-11-24T16:35:03+08:00 ] ::1 /wisdom/Index.php/Api/Info/conf
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

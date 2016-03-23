@@ -1,0 +1,212 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+	<div class="c_head">
+       <h4>企业设置：</h4>
+    <div class="c_nav">
+ 		<ul class="nav nav-tabs nav-justified">
+		  <li role="presentation" class="active" id="one"><a href="#">基本信息</a></li>
+		  <li role="presentation"  id="two"><a href="#">上传资料</a></li>
+		</ul>
+    </div>
+	</div>
+	<div class="c_content">
+		<div id="c0">
+	    <ul>
+			<li>
+				<label class="c_name">企业全称</label>
+			<input type="text" id="fullname"/><span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">所处行业</label>
+			<select style="width: 180px;height:25px;" id="c_business">
+					<option value="">&nbsp;</option>
+					<option value="AL">Alabama</option>
+					<option value="AK">Alaska</option>													
+			</select>
+			<span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">企业地址</label>
+			<input type="text" id="c_address"/>
+                        <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">电话</label>
+			<input type="text" id="c_phone"/>
+                        <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">传真</label>
+			<input type="text" id="c_fix"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">邮箱</label>
+			<input type="text" id="c_email"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">网址</label>
+			<input type="text" id="c_websit"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">法人代表</label>
+			<input type="text" id="c_legal"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">主营产品</label>
+			<input type="text" id="c_products"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">主销区域</label>
+			<input type="text" id="c_area"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">年营业额</label>
+			<input type="text" id="c_year"/>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">现有经销商数</label>
+			<input type="text" id="c_dealer"/>
+                        <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">员工人数</label>
+			<input type="text" id="c_staff"/>
+                        <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">销售人员数</label>
+			<input type="text" id="c_salesman"/>
+                        <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">现有网点数</label>
+			<input type="text" id="c_webnumber"/>
+                        <span class="c_spanText">*必须是数字</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无质量管理部门</label>
+                 <input type="radio" id="quality" name="quality"  value="1"  checked/><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="quality"  name="quality"  value="2" /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无技术研发部门</label>
+		 <input type="radio" id="technology" name="technology"  value="1"  checked/><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="technology"  name="technology"  value="2" /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无市场策划部门</label>
+		 <input type="radio" id="market" name="market"  value="1"  checked/><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="market"  name="market"  value="2" /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<label class="c_name">有无售后服务部门</label>
+		 <input type="radio" id="service" name="service"  value="1"  checked/><span  style="margin-right:10px">有</span>
+                 <input type="radio" id="service"  name="service"  value="2" /><span  style="margin-right:10px">无</span>
+			</li>
+		</ul>
+		<div class="c_footer" style="margin-top:20px;">
+                        <ul>
+                            <li style="background-color:#15BCE0;color:#fff;" id="c_submit">提交</li>         
+                       </ul>
+                   </div>
+		</div>
+		<div id="c1" style="display:none;">
+                        <div class="line_input">
+                            <div class="upfile_pack">
+                                
+                                <span>上传资料：</span>
+                                <input type="text" style="width: 180px;height:25px;" id="data_name" />
+<!--                                <select style="width: 180px;height:25px;" id="c_type">
+					<option value="0" selected="selected">请选择</option>
+					<option value="1">营业执照</option>
+					<option value="2">税务登记证</option>
+                                        <option value="3">机构代码证</option>													
+
+			        </select>-->
+                                <button id="btn_up_other" class="btn btn-default" onclick="$('#upfile_other').click();">上传</button>
+                                
+                                <div style="display: none;">
+                                    <input type="file" id="upfile_other" name="upfile" accept="application/zip">
+                                </div>
+                             <input type="hidden" id="fileid_other" name="fileid_other" value="">
+                            </div>
+                            <div id="c_pic">
+                                
+                                <div id="pic_0" class="c_pic_up" >
+                                    <div>iiiii</div>
+                                  <div class="show_progress_no" id="show_progress_no_other">0%</div>
+                                  <div class="progress_up" id="progress_up_other"><div class="bar" id="bar_other"></div></div>
+                                  <div class="show_img" id="show_img_other"></div>
+                                </div>
+                                <!--
+                                <div id="pic_1" class="c_pic_up">
+                                  <div class="show_progress_no" id="show_progress_no_other">0%</div>
+                                  <div class="progress_up" id="progress_up_other"><div class="bar" id="bar_other"></div></div>
+                                  <div class="show_img" id="show_img_other">546</div>
+                                </div>-->
+                            </div>
+                            
+                        </div>
+                       
+		</div>
+		
+	</div>
+  
+</div>
+<include file="Public/loadjs" />
+    <script type="text/javascript">
+        $("#two").click(function(){
+             $("#two").addClass("active");
+             $("#c1").show();
+             $("#c0").hide();
+             $("#one").removeClass("active");
+        });
+
+        $("#one").click(function(){
+             $("#one").addClass("active");
+             $("#c0").show();
+             $("#c1").hide();
+             $("#two").removeClass("active");
+        });
+        $("#upfile_other").wrap("<form id='upfile_up_other' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+      
+    </script>
+    </body>
+</html>

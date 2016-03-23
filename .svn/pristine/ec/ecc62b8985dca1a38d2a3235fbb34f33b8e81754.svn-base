@@ -1,0 +1,1065 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>报销</li>
+            <li id="1" class="org_box"><span ></span>请假</li>
+            <li id="2" class="org_box"><span ></span>出差</li>
+            <li id="3" class="org_box"><span ></span>费用</li>
+        </ul>
+    </div>
+    <div class="approval_center">
+        <!-- 报销-->
+     <div id="a0">
+         <div class="approval_head"> <!--style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"========暂时隐藏，二期做-->
+             <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;报销</span>
+             <div class="column">
+                 <span style="float: left;">筛选：</span>
+                 <!-- 员工部门-->
+                 <div class="personmsg">
+                     <ul>
+                         <li>
+                             <label>分类&nbsp;</label>
+                             <select id="reimbursementType" style="width:140px;">
+                                 <option value="1"> 我发起的流程 </option>
+                                 <option value="2"> 待我审批的流程 </option>
+                                 <option value="3"> 我已审批的流程 </option>
+                             </select>
+                         </li>
+                         <li>
+                             <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                             <input id="startDate1" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                             <span>&nbsp;至&nbsp;</span>
+                             <input id="endDate1" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                         </li>
+                         <li>
+                             <label>状态&nbsp;</label>
+<!--  
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                             </select>
+                             审批中，审批同意，审批不同意，撤销
+                             -->
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="2"> 审批中 </option>
+                                 <option value="3"> 审批同意 </option>
+                                 <option value="4"> 审批不同意 </option>
+                                 <option value="5"> 撤销 </option>
+                             </select>
+                         </li>
+                     </ul>
+                 </div>
+                 <input type="hidden" id="hidRType" value="1">
+                 <input type="hidden" id="hidSDate1" value="">
+                 <input type="hidden" id="hidEDate1" value="">
+                 <input type="hidden" id="hidRStatus" value="">
+                 <!-- 按钮-->
+                 <p style="height: 25px;float: right">
+                     <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(2, 1, 1);">
+                     <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearReimbursement();">
+                     <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                 </p>
+             </div>
+         </div>
+         <!--列表-->
+         <div class="approval_list">
+             <!-- 按钮=============暂时隐藏，二期开发===========-->
+             <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                 <!--<input id="" class="bntns1" type="button" value="导入">-->
+                 <!--<input id="" class="bntns1" type="button" value="导出">-->
+                 <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addApply()" value="新增">-->
+                 <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+             <!--</p>-->
+             <div class="title">
+                 <ul>
+                     <li style="width: 19%;">编号</li>
+                     <li style="width: 15%;">主题</li>
+                     <li style="width: 25%;">申请内容</li>
+                     <li style="width: 8%;">申请人</li>
+                     <li style="width: 8%;">下级审批人</li>
+                     <li style="width: 10%;">状态</li>
+                     <li style="width: 15%;">申请日期</li>
+                     <!--<li style="width: 10%;">置顶</li>-->
+                     <!--<li style="width: 5%;">附件</li>-->
+                     <!--<li style="width: 10%;">操作</li>-->
+                 </ul>
+             </div>
+             <div class="contentList">
+                <div id="reimbursementContentList">
+                <notempty name="reimbursement_list.processList">
+                <volist name="reimbursement_list.processList" id="reimbursement">
+                 <ul>
+                     <li style="width: 19%;">{$reimbursement.processNo}</li>
+                     <li style="width: 15%;cursor: pointer;color: #014f97" onclick="showApplyDetail('{$reimbursement.processId}');" title="{$reimbursement.title}"><a>{$reimbursement.title}</a></li>
+                     <li style="width: 25%;" title="{$reimbursement.formContent}">{$reimbursement.formContent}&nbsp;</li>
+                     <li style="width: 8%;">{$reimbursement.applicantName}&nbsp;</li>
+                     <li style="width: 8%;">{$reimbursement.currentHandlerPerson}&nbsp;</li>
+                     <li style="width: 10%;">
+                        <?php 
+                                switch ($reimbursement['status']) {
+                                    case 1:
+                                        echo "未提交";
+                                        break;
+                                    case 2:
+                                        echo "审批中";
+                                        break;
+                                    case 3:
+                                        echo "审批同意";
+                                        break;
+                                    case 4:
+                                        echo "审批不同意";
+                                        break;
+                                    case 5:
+                                        echo "撤销";
+                                        break;
+                                    default:
+                                        echo "未提交";
+                                        break;
+                            }?>
+                     </li>
+                     <li style="width: 15%;"><?php echo $reimbursement['createTime'];?></li>
+                 </ul>
+                </volist>
+                </notempty>
+                <empty name="reimbursement_list.processList">
+                    <ul class="topnone">
+                        <li style="width: 100%;color:#f47469;">无数据!</li>
+                    </ul>
+                </empty>
+                </div>
+             </div>
+            <div id="pagebar1" class="pagebar" style="margin-top:20px;"></div>
+            <input type="hidden" id="page1" value="1">
+         </div>
+     </div>
+        <!-- 请假-->
+        <div id="a1" style="display: none;">
+            <div class="approval_head"> <!--  style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=============暂时隐藏，二期开发===========-->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;请假</span>
+
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="leaveType" style="width:140px;">
+                                 <option value="1"> 我发起的流程 </option>
+                                 <option value="2"> 待我审批的流程 </option>
+                                 <option value="3"> 我已审批的流程 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate2" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate2" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                            
+                                <label>状态&nbsp;</label>
+                               <!-- 
+                                <select id="leaveStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                                </select>
+                                                             审批中，审批同意，审批不同意，撤销
+                             -->
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="2"> 审批中 </option>
+                                 <option value="3"> 审批同意 </option>
+                                 <option value="4"> 审批不同意 </option>
+                                 <option value="5"> 撤销 </option>
+                             </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <input type="hidden" id="hidLType" value="1">
+                    <input type="hidden" id="hidSDate2" value="">
+                    <input type="hidden" id="hidEDate2" value="">
+                    <input type="hidden" id="hidLStatus" value="">
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(3, 1, 1);">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearLeave();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addLeave()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 19%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 25%;">申请内容</li>
+                        <li style="width: 8%;">申请人</li>
+                        <li style="width: 8%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 15%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div id="leaveContentList">
+                    <notempty name="leave_list.processList">
+                    <volist name="leave_list.processList" id="leave">
+                     <ul>
+                     <li style="width: 19%;">{$leave.processNo}</li>
+                     <li style="width: 15%;cursor: pointer;color: #014f97;" onclick="showLeaveDetail('{$leave.processId}');" title="{$leave.title}"><a>{$leave.title}</a></li>
+                     <li style="width: 25%;" title="{$leave.formContent}">{$leave.formContent}&nbsp;</li>
+                     <li style="width: 8%;">{$leave.applicantName}&nbsp;</li>
+                     <li style="width: 8%;">{$leave.currentHandlerPerson}&nbsp;</li>
+                     <li style="width: 10%;">
+                        <?php 
+                                switch ($leave['status']) {
+                                    case 1:
+                                        echo "未提交";
+                                        break;
+                                    case 2:
+                                        echo "审批中";
+                                        break;
+                                    case 3:
+                                        echo "审批同意";
+                                        break;
+                                    case 4:
+                                        echo "审批不同意";
+                                        break;
+                                    case 5:
+                                        echo "撤销";
+                                        break;
+                                    default:
+                                        echo "未提交";
+                                        break;
+                            }?>
+                     </li>
+                     <li style="width: 15%;"><?php echo $leave['createTime'];?></li>
+                 </ul>
+                </volist>
+                </notempty>
+                <empty name="leave_list.processList">
+                    <ul class="topnone">
+                        <li style="width: 100%;color:#f47469;">无数据!</li>
+                    </ul>
+                </empty>
+                </div>
+             </div>
+             <div id="pagebar2" class="pagebar" style="margin-top:20px;"></div>
+             <input type="hidden" id="page2" value="1">
+            </div>
+        </div>
+        <!-- 出差-->
+        <div id="a2" style="display: none;">
+            <div class="approval_head"> <!-- style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=========暂时隐藏，二期开发========= -->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;出差</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="businessTripType" style="width:140px;">
+                                 <option value="1"> 我发起的流程 </option>
+                                 <option value="2"> 待我审批的流程 </option>
+                                 <option value="3"> 我已审批的流程 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate3" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate3" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <!--  
+                                <select id="businessTripStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                                </select>
+                                                                                             审批中，审批同意，审批不同意，撤销
+                             -->
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="2"> 审批中 </option>
+                                 <option value="3"> 审批同意 </option>
+                                 <option value="4"> 审批不同意 </option>
+                                 <option value="5"> 撤销 </option>
+                             </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <input type="hidden" id="hidBTType" value="1">
+                    <input type="hidden" id="hidSDate3" value="">
+                    <input type="hidden" id="hidEDate3" value="">
+                    <input type="hidden" id="hidBTStatus" value="">
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(4, 1, 1);">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearBusinessTrip();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addTravel()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 19%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 25%;">申请内容</li>
+                        <li style="width: 8%;">申请人</li>
+                        <li style="width: 8%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 15%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div id="businessTripContentList">
+                    <notempty name="businessTrip_list.processList">
+                    <volist name="businessTrip_list.processList" id="businessTrip">
+                     <ul>
+                         <li style="width: 19%;">{$businessTrip.processNo}</li>
+                         <li style="width: 15%;cursor: pointer;color: #014f97;" onclick="showTravelDetail('{$businessTrip.processId}');" title="{$businessTrip.title}"><a>{$businessTrip.title}</a></li>
+                         <li style="width: 25%;" title="{$businessTrip.formContent}">{$businessTrip.formContent}&nbsp;</li>
+                         <li style="width: 8%;">{$businessTrip.applicantName}&nbsp;</li>
+                         <li style="width: 8%;">{$businessTrip.currentHandlerPerson}&nbsp;</li>
+                         <li style="width: 10%;">
+                            <?php 
+                                switch ($businessTrip['status']) {
+                                    case 1:
+                                        echo "未提交";
+                                        break;
+                                    case 2:
+                                        echo "审批中";
+                                        break;
+                                    case 3:
+                                        echo "审批同意";
+                                        break;
+                                    case 4:
+                                        echo "审批不同意";
+                                        break;
+                                    case 5:
+                                        echo "撤销";
+                                        break;
+                                    default:
+                                        echo "未提交";
+                                        break;
+                                }?>
+                         </li>
+                         <li style="width: 15%;"><?php echo $businessTrip['createTime'];?></li>
+                     </ul>
+                    </volist>
+                    </notempty>
+                    <empty name="businessTrip_list.processList">
+                        <ul class="topnone">
+                            <li style="width: 100%;color:#f47469;">无数据!</li>
+                        </ul>
+                    </empty>
+                    </div>
+                 </div>
+                 <div id="pagebar3" class="pagebar" style="margin-top:20px;"></div>
+                 <input type="hidden" id="page3" value="1">
+            </div>
+        </div>
+        <!-- 费用-->
+        <div id="a3" style="display: none;">
+            <div class="approval_head"><!--  style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=============暂时隐藏，二期开发===========-->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;费用</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="costType" style="width:140px;">
+                                 <option value="1"> 我发起的流程 </option>
+                                 <option value="2"> 待我审批的流程 </option>
+                                 <option value="3"> 我已审批的流程 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate4" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate4" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <!--
+                                <select id="costStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="1"> 未提交 </option>
+                                 <option value="2"> 待处理 </option>
+                                 <option value="3"> 审核通过 </option>
+                                 <option value="4"> 审核不通过 </option>
+                                 <option value="5"> 已撤销 </option>
+                                </select>
+                                                                                             审批中，审批同意，审批不同意，撤销
+                             -->
+                             <select id="reimbursementStatus" style="width:110px;">
+                                 <option value=""> --请选择-- </option>
+                                 <option value="2"> 审批中 </option>
+                                 <option value="3"> 审批同意 </option>
+                                 <option value="4"> 审批不同意 </option>
+                                 <option value="5"> 撤销 </option>
+                             </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="hidden" id="hidCType" value="1">
+                    <input type="hidden" id="hidSDate4" value="">
+                    <input type="hidden" id="hidEDate4" value="">
+                    <input type="hidden" id="hidCStatus" value="">
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索" onclick="getApprovalList(1, 1, 1);">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearCost();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addFee()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 19%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 25%;">申请内容</li>
+                        <li style="width: 8%;">申请人</li>
+                        <li style="width: 8%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 15%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div id="costContentList">
+                    <notempty name="cost_list.processList">
+                    <volist name="cost_list.processList" id="cost">
+                     <ul>
+                         <li style="width: 19%;">{$cost.processNo}</li>
+                         <li style="width: 15%;cursor: pointer;color: #014f97;" onclick="showFeeDetail('{$cost.processId}');" title="{$cost.title}"><a>{$cost.title}</a></li>
+                         <li style="width: 25%;" title="{$cost.formContent}">{$cost.formContent}&nbsp;</li>
+                         <li style="width: 8%;">{$cost.applicantName}&nbsp;</li>
+                         <li style="width: 8%;">{$cost.currentHandlerPerson}&nbsp;</li>
+                         <li style="width: 10%;">
+                            <?php 
+                                switch ($cost['status']) {
+                                    case 1:
+                                        echo "未提交";
+                                        break;
+                                    case 2:
+                                        echo "审批中";
+                                        break;
+                                    case 3:
+                                        echo "审批同意";
+                                        break;
+                                    case 4:
+                                        echo "审批不同意";
+                                        break;
+                                    case 5:
+                                        echo "撤销";
+                                        break;
+                                    default:
+                                        echo "未提交";
+                                        break;
+                                }?>
+                         </li>
+                         <li style="width: 15%;"><?php echo $cost['createTime'];?></li>
+                     </ul>
+                    </volist>
+                    </notempty>
+                    <empty name="cost_list.processList">
+                        <ul class="topnone">
+                            <li style="width: 100%;color:#f47469;">无数据!</li>
+                        </ul>
+                    </empty>
+                    </div>
+                 </div>
+                 <div id="pagebar4" class="pagebar" style="margin-top:20px;"></div>
+                <input type="hidden" id="page4" value="1">
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script>
+    $('#bigmenu li').click(function(){
+        // $("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",2);
+        Cookie.createCookie("smallMenuIndex",4);
+
+        var start1 = {
+            elem: '#startDate1',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end1.min = datas; //开始日选好后，重置结束日的最小日期
+                end1.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end1 = {
+            elem: '#endDate1',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start1.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start2 = {
+            elem: '#startDate2',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end2.min = datas; //开始日选好后，重置结束日的最小日期
+                end2.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end2 = {
+            elem: '#endDate2',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start2.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start3 = {
+            elem: '#startDate3',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end3.min = datas; //开始日选好后，重置结束日的最小日期
+                end3.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end3 = {
+            elem: '#endDate3',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start3.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start4 = {
+            elem: '#startDate4',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end4.min = datas; //开始日选好后，重置结束日的最小日期
+                end4.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end4 = {
+            elem: '#endDate4',
+            format: 'YYYY-MM-DD',
+            min: '1800-01-01',
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start4.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start1);
+        laydate(end1);
+        laydate(start2);
+        laydate(end2);
+        laydate(start3);
+        laydate(end3);
+        laydate(start4);
+        laydate(end4);
+
+        // 报销
+        createPageBar1('{$reimbursement_list.total}', '{$reimbursement_list.pageSize}', '{$reimbursement_list.page}', '{$reimbursement_list.totalPage}');
+        $(document).on('click','#pagebar1 span a', function() {
+            $("#page1").val($(this).attr("rel"));
+            getApprovalList(2, $(this).attr("rel"), 0)
+        });
+
+        // 请假
+        createPageBar2('{$leave_list.total}', '{$leave_list.pageSize}', '{$leave_list.page}', '{$leave_list.totalPage}');
+        $(document).on('click','#pagebar2 span a', function() {
+            $("#page2").val($(this).attr("rel"));
+            getApprovalList(3, $(this).attr("rel"), 0)
+        });
+
+        // 出差
+        createPageBar3('{$businessTrip_list.total}', '{$businessTrip_list.pageSize}', '{$businessTrip_list.page}', '{$businessTrip_list.totalPage}');
+        $(document).on('click','#pagebar3 span a', function() {
+            $("#page3").val($(this).attr("rel"));
+            getApprovalList(4, $(this).attr("rel"), 0)
+        });
+
+        // 费用
+        createPageBar4('{$cost_list.total}', '{$cost_list.pageSize}', '{$cost_list.page}', '{$cost_list.totalPage}');
+        $(document).on('click','#pagebar4 span a', function() {
+            $("#page4").val($(this).attr("rel"));
+            getApprovalList(1, $(this).attr("rel"), 0)
+        });
+    });
+
+    //新增报销
+    function addApply(){
+        layer.open({
+            type:2,
+            title :['新增报销','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addApply'
+        });
+    }
+
+    //报销详细信息
+    function showApplyDetail(processId){
+        var page = $("#page1").val();
+        layer.open({
+            type:2,
+            title:['报销详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content:APP+'/Home/Office/showApplyDetail?processId='+processId+'&page='+page
+        });
+    }
+
+    //新增请假
+    function addLeave(){
+        layer.open({
+            type:2,
+            title :['新增请假','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addLeave'
+        });
+    }
+
+    //请假详细信息
+    function showLeaveDetail(processId){
+        var page = $("#page2").val();
+        layer.open({
+            type:2,
+            title:['请假详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content:APP+'/Home/Office/showLeaveDetail?processId='+processId+'&page='+page
+            // content: "{:U('Office/showLeaveDetail')}"
+        });
+    }
+
+    //新增出差
+    function addTravel(){
+        layer.open({
+            type:2,
+            title :['新增出差','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addTravel'
+        });
+    }
+
+    //出差详细信息
+    function showTravelDetail(processId){
+        var page = $("#page3").val();
+        layer.open({
+            type:2,
+            title:['出差详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content:APP+'/Home/Office/showTravelDetail?processId='+processId+'&page='+page
+            // content: "{:U('Office/showTravelDetail')}"
+        });
+    }
+
+    //新增费用
+    function addFee(){
+        layer.open({
+            type:2,
+            title :['新增费用','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addFee'
+        });
+    }
+
+    //费用详细信息
+    function showFeeDetail(processId){
+        var page = $("#page4").val();
+        layer.open({
+            type:2,
+            title:['费用详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content:APP+'/Home/Office/showFeeDetail?processId='+processId+'&page='+page
+            // content: "{:U('Office/showFeeDetail')}"
+        });
+    }
+
+    // 清空报销检索条件
+    function doClearReimbursement() {
+        $("#reimbursementType").val("1");
+        $("#startDate1").val("");
+        $("#endDate1").val("");
+        $("#reimbursementStatus").val("");
+    }
+
+    // 清空请假检索条件
+    function doClearLeave() {
+        $("#leaveType").val("1");
+        $("#startDate2").val("");
+        $("#endDate2").val("");
+        $("#leaveStatus").val("");
+    }
+
+    // 清空出差检索条件
+    function doClearBusinessTrip() {
+        $("#businessTripType").val("1");
+        $("#startDate3").val("");
+        $("#endDate3").val("");
+        $("#businessTripStatus").val("");
+    }
+
+    // 清空费用检索条件
+    function doClearCost() {
+        $("#costType").val("1");
+        $("#startDate4").val("");
+        $("#endDate4").val("");
+        $("#costStatus").val("");
+    }
+
+    // 创建翻页条
+    function createPageBar1(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        $("#page1").val(page);
+        getPageBar1("pagebar1");
+    }
+
+    // 创建翻页条
+    function createPageBar2(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        $("#page2").val(page);
+        getPageBar1("pagebar2");
+    }
+
+    // 创建翻页条
+    function createPageBar3(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        $("#page3").val(page);
+        getPageBar1("pagebar3");
+    }
+
+    // 创建翻页条
+    function createPageBar4(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        $("#page4").val(page);
+        getPageBar1("pagebar4");
+    }
+
+    // 获取列表数据
+    function getApprovalList(busiType, page, searchFlag) {
+        var loadIdx = layer.load(0);
+        var type = 1;
+        var startDate = "";
+        var endDate = "";
+        var status = "";
+
+        if(busiType == 2) {
+            if(searchFlag == 1) {
+                var hidRType = $("#reimbursementType").val();
+                var hidSDate1 = $("#startDate1").val();
+                var hidEDate1 = $("#endDate1").val();
+                var hidRStatus = $("#reimbursementStatus").val();
+
+                $("#hidRType").val(hidRType);
+                $("#hidSDate1").val(hidSDate1);
+                $("#hidEDate1").val(hidEDate1);
+                $("#hidRStatus").val(hidRStatus);
+            }
+            type = $("#hidRType").val();
+            startDate = $("#hidSDate1").val();
+            endDate = $("#hidEDate1").val();
+            status = $("#hidRStatus").val();
+        } else if(busiType == 3) {
+            if(searchFlag == 1) {
+                var hidLType = $("#leaveType").val();
+                var hidSDate2 = $("#startDate2").val();
+                var hidEDate2 = $("#endDate2").val();
+                var hidLStatus = $("#leaveStatus").val();
+
+                $("#hidLType").val(hidLType);
+                $("#hidSDate2").val(hidSDate2);
+                $("#hidEDate2").val(hidEDate2);
+                $("#hidLStatus").val(hidLStatus);
+            }
+            type = $("#hidLType").val();
+            startDate = $("#hidSDate2").val();
+            endDate = $("#hidEDate2").val();
+            status = $("#hidLStatus").val();
+        } else if(busiType == 4) {
+            if(searchFlag == 1) {
+                var hidBTType = $("#businessTripType").val();
+                var hidSDate3 = $("#startDate3").val();
+                var hidEDate3 = $("#endDate3").val();
+                var hidBTStatus = $("#businessTripStatus").val();
+
+                $("#hidBTType").val(hidBTType);
+                $("#hidSDate3").val(hidSDate3);
+                $("#hidEDate3").val(hidEDate3);
+                $("#hidBTStatus").val(hidBTStatus);
+            }
+            type = $("#hidBTType").val();
+            startDate = $("#hidSDate3").val();
+            endDate = $("#hidEDate3").val();
+            status = $("#hidBTStatus").val();
+        } else if(busiType == 1) {
+            if(searchFlag == 1) {
+                var hidCType = $("#costType").val();
+                var hidSDate4 = $("#startDate4").val();
+                var hidEDate4 = $("#endDate4").val();
+                var hidCStatus = $("#costStatus").val();
+
+                $("#hidCType").val(hidCType);
+                $("#hidSDate4").val(hidSDate4);
+                $("#hidEDate4").val(hidEDate4);
+                $("#hidCStatus").val(hidCStatus);
+            }
+            type = $("#hidCType").val();
+            startDate = $("#hidSDate4").val();
+            endDate = $("#hidEDate4").val();
+            status = $("#hidCStatus").val();
+        }
+        
+        switch (busiType) {
+            case 1:
+                $("#costContentList").empty();
+                break;
+            case 2:
+                $("#reimbursementContentList").empty();
+                break;
+            case 3:
+                $("#leaveContentList").empty();
+                break;
+            case 4:
+                $("#businessTripContentList").empty();
+                break;
+            default:
+                $("#reimbursementContentList").empty();
+                break;
+        }
+
+        $.post("{:U('Office/getApprovalList')}", {"busiType":busiType, "page":page, "type":type, "startDate":startDate, "endDate":endDate, "status":status}, function(data) {
+            if (!("processList" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var content = "";
+            // 设定用户列表
+            $.each(data.processList, function(k, v) {
+                content += '<ul>';
+                content += '<li style="width: 19%;">' + v.processNo + '</li>';
+
+                var detailFunction = "";
+                switch (busiType) {
+                    case 1:
+                        detailFunction = "showFeeDetail";
+                        break;
+                    case 2:
+                        detailFunction = "showApplyDetail";
+                        break;
+                    case 3:
+                        detailFunction = "showLeaveDetail";
+                        break;
+                    case 4:
+                        detailFunction = "showTravelDetail";
+                        break;
+                    default:
+                        detailFunction = "showApplyDetail";
+                        break;
+                }
+
+                content += '<li style="width: 15%;cursor: pointer;color:#014f97;" onclick="' + detailFunction + '(\'' + v.processId + '\')" title="' + v.title + '"><a>' + v.title + '</a></li>';
+                content += '<li style="width: 25%;" title="' + v.formContent + '">' + v.formContent + '&nbsp;</li>';
+                content += '<li style="width: 8%;">' + v.applicantName + '&nbsp;</li>';
+                content += '<li style="width: 8%;">' + v.currentHandlerPerson + '&nbsp;</li>';
+                content += '<li style="width: 10%;">';
+
+                switch (v.status) {
+                    case '1':
+                        content += '未提交';
+                        break;
+                    case '2':
+                        content += '审批中';
+                        break;
+                    case '3':
+                        content += '审核通过';
+                        break;
+                    case '4':
+                        content += '审核不通过';
+                        break;
+                    case '5':
+                        content += '撤销';
+                        break;
+                    default:
+                        content += '未提交';
+                        break;
+                }
+                content += '</li>';
+                content += '<li style="width: 15%;">' + v.createTime + '</li>';
+                content += '</ul>';
+            });
+            if (content == "") {
+                content = '<ul class="topnone">';
+                content += '<li style="width:98.4%;color:#f47469;">无数据!</li>';
+                content += '</ul>';
+            }
+
+            switch (busiType) {
+                case 1:
+                    $("#costContentList").append(content);
+                    createPageBar4(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 2:
+                    $("#reimbursementContentList").append(content);
+                    createPageBar1(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 3:
+                    $("#leaveContentList").append(content);
+                    createPageBar2(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 4:
+                    $("#businessTripContentList").append(content);
+                    createPageBar3(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                default:
+                    $("#reimbursementContentList").append(content);
+                    createPageBar1(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+            }
+            layer.close(loadIdx);
+        }, 'json');  
+    }
+
+    //格式化日期,
+    function formatDate(date,format){
+        var paddNum = function(num){
+          num += "";
+          return num.replace(/^(\d)$/,"0$1");
+        }
+        //指定格式字符
+        var cfg = {
+           yyyy : date.getFullYear() //年 : 4位
+          ,yy : date.getFullYear().toString().substring(2)//年 : 2位
+          ,M  : date.getMonth() + 1  //月 : 如果1位的时候不补0
+          ,MM : paddNum(date.getMonth() + 1) //月 : 如果1位的时候补0
+          ,d  : date.getDate()   //日 : 如果1位的时候不补0
+          ,dd : paddNum(date.getDate())//日 : 如果1位的时候补0
+          ,hh : date.getHours()  //时
+          ,mm : date.getMinutes() //分
+          ,ss : date.getSeconds() //秒
+        }
+        format || (format = "yyyy-MM-dd hh:mm:ss");
+        return format.replace(/([a-z])(\1)*/ig,function(m){return cfg[m];});
+    } 
+</script>
+</body>
+</html>

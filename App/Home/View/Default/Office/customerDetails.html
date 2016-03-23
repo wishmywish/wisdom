@@ -1,0 +1,1156 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            客户详情
+        </div>
+    </div>
+    <div class="cusdetail_center">
+        <!--输入框-->
+        <div class="cusdetail_head">
+            <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;客户通讯录&nbsp;>&nbsp;客户详情</span>
+            <span style="float: right;margin-right: 15px;" class="bntns1" onclick="goback();">返回</span>
+        </div>
+        <!--列表-->
+        <div class="cusdetail_list">
+            <p>客户名称：{$customerDetail.cusName}</p>
+            <p>客户地址：{$customerDetail.cusAddress}</p>
+            <p>客户电话：{$customerDetail.cusPhone}</p>
+            <div class="one">
+                <div class="head"><span>联系人</span></div>
+                <div class="buttons">
+                    <span class="bntns1 add" onclick="addLinkman({$customerDetail.cusId});">新增</span>
+                    <span class="bntns1 del" onclick="delLinkman({$customerDetail.cusId});">删除</span>
+                </div>
+                <div class="form" style="position: relative;">
+                    <table border="0" cellpadding="0" cellspacing="0" id="cusClientList">
+                        <tr style="height: 25px;">
+                            <th width="67" height="25">选择</th>
+                            <th width="155">姓名</th>
+                            <th width="48">性别</th>
+                            <th width="150">部门</th>
+                            <th width="150">职位</th>
+                            <th width="150">联系电话</th>
+                            <th width="300">电子邮箱</th>
+                        </tr>
+                        <notempty name="customerClientList.list">
+                        <volist name="customerClientList.list" id="client">
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox" name="link_checkbox" value="{$client.clientId}"></td>
+                            <td><a onclick="editLinkman({$customerDetail.cusId}, {$client.clientId});">{$client.clientName}</a></td>
+                            <td><?php if($client['clientSex'] == '0') {echo "男";} else {echo "女";} ?></td>
+                            <td>{$client.clientDeptName}</td>
+                            <td>{$client.clientStation}</td>
+                            <td>{$client.phone}</td>
+                            <td>{$client.clientEmail}</td>
+                        </tr>
+                        </volist>
+
+                            <div id="pagebar_client" class="pagebar" style="position: absolute;top: 230px;"></div>
+                            <!--<div id="pagebar1" class="pagebar" style="margin-top:20px;"></div>-->
+                        
+                        </notempty>
+
+                    </table>
+                </div>
+            </div>
+            <div class="two" style="display: block;">
+                <div class="head"><span>业务跟进</span></div>
+                <div class="choose">
+                    <ul>
+                        <li <?php if( isset($_GET['visitPlan']) || isset($_GET['visitRecord']) || isset($_GET['contract']) || isset($_GET['payBack']) ){  echo ""; }else{ echo 'class="active"'; } ?> style="border-left: 1px solid #000">商机</li>
+                        <li <?php if( isset($_GET['visitPlan'])  ){  echo 'class="active"'; } ?> >拜访计划</li>
+                        <li <?php if( isset($_GET['visitRecord'])  ){  echo 'class="active"'; } ?> >拜访记录</li>
+                        <li <?php if( isset($_GET['contract'])  ){  echo 'class="active"'; } ?> >合同</li>
+                        <li <?php if( isset($_GET['payBack'])  ){  echo 'class="active"'; } ?> >回款</li>
+                    </ul>
+                </div>
+                <div id="line" <?php if( isset($_GET['visitPlan'])  ){  echo 'style="margin-left:112px;"'; } if( isset($_GET['visitRecord'])  ){  echo 'style="margin-left:224px;"'; } if( isset($_GET['contract'])  ){  echo 'style="margin-left:336px;"'; } if( isset($_GET['payBack'])  ){  echo 'style="margin-left:448px;"'; }  ?> ></div>
+                <!--<div class="buttons">-->
+                    <!--<span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>-->
+                    <!--<span class="bntns1 del">删除</span>-->
+                <!--</div>-->
+                <div id="formList">
+                    <!-- 商机start-->
+                    <style>
+                        .selectBox{width: 67px;height: 25px;line-height: 25px;}
+
+                        #form_biz .bizSubject,.remark{width: 180px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                        #form_biz .originStr,.expectedSingDate,.expectVolume{width: 100px;padding: 0 5px;}
+                        #form_biz .cusDemand{width: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                    </style>
+                    <div id="form_biz" class="form" <?php if( isset($_GET['visitPlan']) || isset($_GET['visitRecord']) || isset($_GET['contract']) || isset($_GET['payBack']) ){  echo "style='position:relative;display:none;'"; }else{ echo 'style="position: relative;"'; } ?>   >
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addBusiOpportunities({$customerDetail.cusId},'{$customerDetail.cusName}');">新增</span>
+                            <span class="bntns1 del" onclick="delBusiOpportunities({$customerDetail.cusId});">删除</span>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" id="table_biz">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">商机主题</th>
+                                <th width="100">来源</th>
+                                <th width="150">客户需求</th>
+                                <th width="150">预计签单日期</th>
+                                <th width="150">预计成交额</th>
+                                <th width="200">备注</th>
+                            </tr>
+                            <foreach name="bizList" item="vo">
+                            <tr style="height: 50px;width: 100px;">
+                                <td><input style="width: 50px;" type="checkbox" name="biz" value="{$vo['bizId']}"></td>
+                                <td><div class="bizSubject" title="{$vo['bizSubject']}"><a href="javascript:;" onclick="editBusiOpportunities({$customerDetail.cusId},'{$customerDetail.cusName}',{$vo['bizId']})">{$vo['bizSubject']}</a></div></td>
+                                <td><div class="originStr">{$vo['originStr']}</div></td>
+                                <td><div class="cusDemand" title="{$vo['cusDemand']}">{$vo['cusDemand']}</div></td>
+                                <td><div class="expectedSingDate" >{$vo['expectedSingDate']}</div></td>
+                                <td><div class="expectVolume">{$vo['expectVolume']}</div></td>
+                                <td><div class="remark" title="{$vo['remark']}">{$vo['remark']}</div></td>
+                            </tr>
+                            </foreach>
+                        </table>
+                        <div id="pagebar_biz" class="pagebar" style="position: absolute;top: 280px;"></div>
+                    </div >
+
+                    <!-- 商机end-->
+                    <!-- 拜访计划start-->
+                    <div id="form_visitPlan" class="form" <?php if( isset($_GET['visitPlan'])  ){  echo "style='position:relative;display:block;'"; }else{ echo 'style="position: relative;display:none;"'; } ?> >
+                        <style>
+                            #form_visitPlan .visitPlanSubject,.bizSubject{width: 160px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_visitPlan .startDate,.endDate{width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_visitPlan .content{width:180px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_visitPlan .visitMethod{width: 80px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                        </style>
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addVisitPlan({$customerDetail.cusId},'{$customerDetail.cusName}');">新增</span>
+                            <span class="bntns1 del" onclick="delVisitPlan({$customerDetail.cusId});">删除</span>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" id="table_visitPlan">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">计划主题</th>
+                                <th width="150">开始日期</th>
+                                <th width="150">结束日期</th>
+                                <th width="225">对应商机</th>
+                                <th width="225">拜访内容</th>
+                                <th width="150">拜访方式</th>
+                            </tr>
+                            <foreach name="visitPlanList" item="vo">
+                                <tr style="height: 50px;">
+                                    <td><input style="width: 50px;" type="checkbox" name="visitPlan" value="{$vo['visitPlanId']}"></td>
+                                    <td><div class="visitPlanSubject" title="{$vo['visitPlanSubject']}"><a href="javascript:;" onclick="editVisitPlan({$customerDetail.cusId},'{$customerDetail.cusName}',{$vo['visitPlanId']})">{$vo['visitPlanSubject']}</a></div></td>
+                                    <td><div class="startDate" title="{$vo['startDate']}">{$vo['startDate']}</div></td>
+                                    <td><div class="endDate" title="{$vo['endDate']}">{$vo['endDate']}</div></td>
+                                    <td><div class="bizSubject" title="{$vo['bizSubject']}">{$vo['bizSubject']}</div></td>
+                                    <td><div class="content" title="{$vo['content']}">{$vo['content']}</div></td>
+                                    <td>
+                                        <div class="visitMethod">
+                                        <if condition="$vo['visitMethod'] eq 1">
+                                            电话拜访
+                                        <elseif condition="$vo['visitMethod'] eq 2" />
+                                            现场拜访
+                                        <else />
+                                            其它
+                                        </if>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </foreach>
+                        </table>
+                        <div id="pagebar_visitPlan" class="pagebar" style="position: absolute;top: 280px;"></div>
+                    </div>
+                    <!-- 拜访计划end-->
+                    <!-- 拜访记录start-->
+                    <div id="form_visitRecord" class="form"<?php if( isset($_GET['visitRecord'])  ){  echo "style='position:relative;display:block;'"; }else{ echo 'style="position: relative;display:none;"'; } ?> >
+                        <style>
+                            #form_visitRecord .visitRecordSubject{width: 160px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_visitRecord .visitRecordDate,.visitMethod{width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_visitRecord .bizSubject,.exchangesContent,.followTactics{width: 140px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                        </style>
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addVisitRecord({$customerDetail.cusId},'{$customerDetail.cusName}');">新增</span>
+                            <span class="bntns1 del" onclick="delVisitRecord({$customerDetail.cusId});">删除</span>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" id="table_visitRecord">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">记录主题</th>
+                                <th width="150">拜访日期</th>
+                                <th width="150">拜访方式</th>
+                                <th width="225">对应商机</th>
+                                <th width="225">交流内容</th>
+                                <th width="230">跟进策略</th>
+                            </tr>
+                            <foreach name="visitRecordList" item="vo">
+                            <tr style="height: 50px;">
+                                <td><input style="width: 50px;" type="checkbox" name="visitRecord" value="{$vo['visitRecordId']}" ></td>
+                                <td><div class="visitRecordSubject" title="{$vo['visitRecordSubject']}"><a href="javascript:;" onclick="editVisitRecord({$customerDetail.cusId},'{$customerDetail.cusName}',{$vo['visitRecordId']})">{$vo['visitRecordSubject']}</a></div></td>
+                                <td><div class="visitRecordDate" >{$vo['visitRecordDate']}</div></td>
+                                <td>
+                                    <div class="visitMethod" >
+                                        <if condition="$vo['visitMethod'] eq 1">
+                                            电话拜访
+                                            <elseif condition="$vo['visitMethod'] eq 2" />
+                                            现场拜访
+                                            <else />
+                                            其它
+                                        </if>
+                                    </div>
+                                </td>
+                                <td><div class="bizSubject" title="{$vo['bizSubject']}">{$vo['bizSubject']}</div></td>
+                                <td><div class="bizSubject" title="{$vo['exchangesContent']}">{$vo['exchangesContent']}</div></td>
+                                <td><div class="followTactics" title="{$vo['followTactics']}">{$vo['followTactics']}</div></td>
+                            </tr>
+                            </foreach>
+                        </table>
+                        <div id="pagebar_visitRecord" class="pagebar" style="position: absolute;top: 280px;"></div>
+                    </div>
+                    <!-- 拜访记录end-->
+                    <!-- 合同start-->
+                    <div id="form_contract" class="form" <?php if( isset($_GET['contract'])  ){  echo "style='position:relative;display:block;'"; }else{ echo 'style="position: relative;display:none;"'; } ?> >
+                        <style>
+                            #form_contract .contractSubject,.contractCode{width: 140px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_contract .money{width: 80px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_contract .signDate{width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_contract .content,.ASignerName{width: 160px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                        </style>
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addContract({$customerDetail.cusId},'{$customerDetail.cusName}');">新增</span>
+                            <span class="bntns1 del" onclick="delContract({$customerDetail.cusId});">删除</span>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" id="table_contract" >
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">合同标题</th>
+                                <th width="150">合同编号</th>
+                                <th width="150">合同金额</th>
+                                <th width="150">签订日期</th>
+                                <th width="150">关键条款</th>
+                                <th width="150">客户签约人</th>
+                            </tr>
+                            <foreach name="contractList" item="vo">
+                                <tr style="height: 50px;">
+                                    <td><input style="width: 50px;" type="checkbox" name="contract" value="{$vo['contractId']}" ></td>
+                                    <td><div class="contractSubject" title="{$vo['contractSubject']}"><a href="javascript:;" onclick="editContract({$customerDetail.cusId},'{$customerDetail.cusName}',{$vo['contractId']})">{$vo['contractSubject']}</a></div></td>
+                                    <td><div class="contractCode" title="{$vo['contractCode']}">{$vo['contractCode']}</div></td>
+                                    <td>
+                                        <div class="money" title="{$vo['money']}">{$vo['money']}</div>
+                                    </td>
+                                    <td><div class="signDate" title="{$vo['signDate']}">{$vo['signDate']}</div></td>
+                                    <td><div class="content" title="{$vo['content']}">{$vo['content']}</div></td>
+                                    <td><div class="ASignerName" title="{$vo['ASignerName']}">{$vo['ASignerName']}</div></td>
+                                </tr>
+                            </foreach>
+                        </table>
+                        <div id="pagebar_contract" class="pagebar" style="position: absolute;top: 280px;"></div>
+                    </div>
+                    <!-- 合同end-->
+                    <!-- 回款start-->
+                    <div id="form_payBack" class="form" <?php if( isset($_GET['payBack'])  ){  echo "style='position:relative;display:block;'"; }else{ echo 'style="position: relative;display:none;"'; } ?>>
+                        <style>
+                            #form_payBack .contractCode{width: 150px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_payBack .payDate,.payMoney,.payMethod,.receipt{width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                            #form_payBack .remark{width: 200px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;padding: 0 5px;}
+                        </style>
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addPayBack({$customerDetail.cusId},'{$customerDetail.cusName}')">新增</span>
+                            <span class="bntns1 del" onclick="delPayBack({$customerDetail.cusId});" >删除</span>
+                        </div>
+                        <table border="0" cellpadding="0" cellspacing="0" id="table_payBack" >
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">关联合同</th>
+                                <th width="150">回款日期</th>
+                                <th width="150">回款金额</th>
+                                <th width="150">回款方式</th>
+                                <th width="150">是否开票</th>
+                                <th width="150">备注</th>
+                            </tr>
+                            <foreach name="payBackList" item="vo">
+                                <tr style="height: 50px;">
+                                    <td><input style="width: 50px;" type="checkbox" name="payrecordId" value="{$vo['payrecordId']}" ></td>
+                                    <td><div class="contractCode" title="{$vo['contractCode']}"><a href="javascript:;" onclick="editPayBack({$customerDetail.cusId},'{$customerDetail.cusName}',{$vo['payrecordId']})">{$vo['contractCode']}</a></div></td>
+                                    <td><div class="payDate"  title="{$vo['payDate']}">{$vo['payDate']}</div></td>
+                                    <td><div class="payMoney" title="{$vo['payMoney']}">{$vo['payMoney']}</div></td>
+                                    <td>
+                                        <div class="payMethod">
+                                        <if condition="$vo['payMethod'] eq 1">
+                                            现金
+                                            <elseif condition="$vo['payMethod'] eq 2" />
+                                            转帐
+                                            <elseif condition="$vo['payMethod'] eq 3" />
+                                            电汇
+                                            <elseif condition="$vo['payMethod'] eq 4" />
+                                            支票
+                                            <else />
+
+                                        </if>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="receipt">
+                                        <if condition="$vo['receipt'] eq 1">
+                                            是
+                                            <elseif condition="$vo['receipt'] eq 2" />
+                                            否
+                                            <elseif condition="$vo['receipt'] eq 3" />
+                                            无需开票
+                                            <else />
+
+                                        </if>
+                                        </div>
+                                    </td>
+                                    <td><div class="remark" title="{$vo[remark]}">{$vo[remark]}</div></td>
+                                </tr>
+                            </foreach>
+                        </table>
+                        <div id="pagebar_payBack" class="pagebar" style="position: absolute;top: 280px;"></div>
+                    </div>
+                    <!-- 回款end-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="currentPage_client" value="{$page[currentPage_client]}" total="{$page[total_client]}" pageSize="{$page[pageSize_client]}" totalPage="{$page[totalPage_client]}" />
+<input type="hidden" id="currentPage_biz" value="{$page[currentPage_biz]}" total="{$page[total_biz]}" pageSize="{$page[pageSize_biz]}" totalPage="{$page[totalPage_biz]}" />
+<input type="hidden" id="currentPage_visitPlan" value="{$page[currentPage_visitPlan]}" total="{$page[total_visitPlan]}" pageSize="{$page[pageSize_visitPlan]}" totalPage="{$page[totalPage_visitPlan]}" />
+<input type="hidden" id="currentPage_visitRecord" value="{$page[currentPage_visitRecord]}" total="{$page[total_visitRecord]}" pageSize="{$page[pageSize_visitRecord]}" totalPage="{$page[totalPage_visitRecord]}" />
+<input type="hidden" id="currentPage_contract" value="{$page[currentPage_contract]}" total="{$page[total_contract]}" pageSize="{$page[pageSize_contract]}" totalPage="{$page[totalPage_contract]}" />
+<input type="hidden" id="currentPage_payBack" value="{$page[currentPage_payBack]}" total="{$page[total_payBack]}" pageSize="{$page[pageSize_payBack]}" totalPage="{$page[totalPage_payBack]}" />
+
+<include file="Public/loadjs" />
+<script>
+
+    cusId = '{$customerDetail.cusId}'; //客户id
+    cusName = '{$customerDetail.cusName}'; //客户名称
+
+    //创建客户联系人分页条
+    var total_client = $("#currentPage_client").attr("total");
+    var pageSize_client = $("#currentPage_client").attr("pageSize");
+    var currentPage_client = $("#currentPage_client").val();
+    var totalPage_client = $("#currentPage_client").attr("totalPage");
+//    var total_client = '{$page[total_client]}';
+//    var pageSize_client = '{$page[pageSize_client]}';
+//    var currentPage_client = '{$page[currentPage_client]}';
+//    var totalPage_client = '{$page[totalPage_client]}';
+
+    createPageBar(total_client,pageSize_client,currentPage_client,totalPage_client,"pagebar_client");  //创建分页
+    $(document).on('click','#pagebar_client span a', function() { //分页点击ajax加载
+        $("#currentPage_client").val($(this).attr("rel"));
+        getClientList();
+    });
+    //获取客户联系人列表
+    function getClientList(){
+        var currentPage_client = $("#currentPage_client").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#cusClientList").empty();
+
+        $.post("{:U('Office/searchCusClient')}", {"page":currentPage_client, "pageSize":pageSize_client, "cusId":cusId }, function(data) {
+
+            if (!("list" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th><div class="selectBox">选择</div></th>';
+                header +=      '<th width="155">姓名</th>';
+                header +=      '<th width="48">性别</th>';
+                header +=      '<th width="150">部门</th>';
+                header +=      '<th width="150">职位</th>';
+                header +=      '<th width="150">联系电话</th>';
+                header +=      '<th width="300">电子邮箱</th>';
+                header += '</tr>';
+
+            var content = '';
+
+            // 设定联系人列表
+            $.each(data.list, function(k, v) {
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="link_checkbox" value="'+ v.clientId + '"></td>';
+                content +=   '<td><div class="clientName" title="'+ v.clientName +'"><a href="javascript:;" onclick="editLinkman('+ cusId +','+ v.clientId +')">'+ v.clientName +'</a></div></td>';
+                content +=   '<td><div class="clientSex">'+ v.clientSex +'</div></td>';
+                content +=   '<td><div class="clientDeptName" title="'+ v.clientDeptName +'" >'+ v.clientDeptName +'</div></td>';
+                content +=   '<td><div class="clientStation">'+ v.clientStation +'</div></td>';
+                content +=   '<td><div class="phone">'+ v.phone +'</div></td>';
+                content +=   '<td><div class="clientEmail" title="'+ v.clientEmail +'" >'+ v.clientEmail +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#cusClientList").append(header);
+
+            total_client = $("#currentPage_client").attr("total");
+            pageSize_client = $("#currentPage_client").attr("pageSize");
+            currentPage_client = $("#currentPage_client").val();
+            totalPage_client = $("#currentPage_client").attr("totalPage");
+
+            createPageBar(total_client,pageSize_client,currentPage_client,totalPage_client,"pagebar_client");  //创建分页
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+    //创建商机分页条
+    var total_biz = '{$page[total_biz]}';
+    var pageSize_biz = '{$page[pageSize_biz]}';
+    var currentPage_biz = '{$page[currentPage_biz]}';
+    var totalPage_biz = '{$page[totalPage_biz]}';
+
+    createPageBar(total_biz,pageSize_biz,currentPage_biz,totalPage_biz,"pagebar_biz");  //创建分页
+    $(document).on('click','#pagebar_biz span a', function() { //分页点击ajax加载
+        $("#currentPage_biz").val($(this).attr("rel"));
+        getBizList();
+    });
+    //获取商机列表
+    function getBizList(){
+        var currentPage_biz = $("#currentPage_biz").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#table_biz").empty();
+
+        $.post("{:U('Office/getBizList_ajax')}", {"page":currentPage_biz, "pageSize":pageSize_biz, "cusId":cusId }, function(data) {
+
+            if (!("bizList" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th><div class="selectBox">选择</div></th>';
+                header +=      '<th width="230">商机主题</th>';
+                header +=      '<th width="100">来源</th>';
+                header +=      '<th width="150">客户需求</th>';
+                header +=      '<th width="150">预计签单日期</th>';
+                header +=      '<th width="150">预计成交额</th>';
+                header +=      '<th width="200">备注</th>';
+                header += '</tr>';
+
+            var content = '';
+
+            // 设定商机列表
+            $.each(data.bizList, function(k, v) {
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="biz" value="'+ v.bizId + '"></td>';
+                content +=   '<td><div class="bizSubject" title="'+ v.bizSubject +'"><a href="javascript:;" onclick="editBusiOpportunities('+ cusId +',\''+ cusName +'\','+ v.bizId +')">'+ v.bizSubject +'</a></div></td>';
+                content +=   '<td><div class="originStr">'+ v.originStr +'</div></td>';
+                content +=   '<td><div class="cusDemand" title="'+ v.cusDemand +'" >'+ v.cusDemand +'</div></td>';
+                content +=   '<td><div class="expectedSingDate">'+ v.expectedSingDate +'</div></td>';
+                content +=   '<td><div class="expectVolume">'+ v.expectVolume +'</div></td>';
+                content +=   '<td><div class="remark" title="'+ v.remark +'" >'+ v.remark +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#table_biz").append(header);
+
+            total_biz = $("#currentPage_biz").attr("total");
+            pageSize_biz = $("#currentPage_biz").attr("pageSize");
+            currentPage_biz = $("#currentPage_biz").val();
+            totalPage_biz = $("#currentPage_biz").attr("totalPage");
+
+            createPageBar(total_biz,pageSize_biz,currentPage_biz,totalPage_biz,"pagebar_biz");
+
+
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+
+    //创建拜访计划分页条
+    var total_visitPlan = '{$page[total_visitPlan]}';
+    var pageSize_visitPlan = '{$page[pageSize_visitPlan]}';
+    var currentPage_visitPlan = '{$page[currentPage_visitPlan]}';
+    var totalPage_visitPlan = '{$page[totalPage_visitPlan]}';
+    createPageBar(total_visitPlan,pageSize_visitPlan,currentPage_visitPlan,totalPage_visitPlan,"pagebar_visitPlan");  //创建分页
+    $(document).on('click','#pagebar_visitPlan span a', function() { //分页点击ajax加载
+        $("#currentPage_visitPlan").val($(this).attr("rel"));
+        getVisitPlanList();
+    });
+    //获取拜访计划列表
+    function getVisitPlanList(){
+        var currentPage_visitPlan = $("#currentPage_visitPlan").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#table_visitPlan").empty();
+
+        $.post("{:U('Office/getVisitPlanList_ajax')}", {"page":currentPage_visitPlan, "pageSize":pageSize_biz, "cusId":cusId }, function(data) {
+
+            if (!("visitPlanList" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th width="67" height="25"><div class="selectBox">选择</div></th>';
+                header +=      '<th width="230">计划主题</th>';
+                header +=      '<th width="150">开始日期</th>';
+                header +=      '<th width="150">结束日期</th>';
+                header +=      '<th width="225">对应商机</th>';
+                header +=      '<th width="225">拜访内容</th>';
+                header +=      '<th width="150">拜访方式</th>';
+                header += '</tr>';
+
+            var content = '';
+            var visitMethod = '其它';
+
+            // 设定商机列表
+            $.each(data.visitPlanList, function(k, v) {
+
+                if( v.visitMethod == 1 ){
+                    visitMethod = '电话拜访';
+                }else if( v.visitMethod == 2 ){
+                    visitMethod = '现场拜访';
+                }
+
+
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="visitPlan" value="'+ v.visitPlanId +'"></td>';
+                content +=   '<td><div class="visitPlanSubject" title="'+ v.visitPlanSubject +'"><a href="javascript:;" onclick="editVisitPlan('+ cusId +',\''+ cusName +'\','+ v.visitPlanId +')">'+ v.visitPlanSubject +'</a></td>';
+                content +=   '<td><div class="startDate" title="'+ v.startDate +'">'+ v.startDate +'</div></td>';
+                content +=   '<td><div class="endDate" title="'+ v.endDate +'">'+ v.endDate +'</div></td>';
+                content +=   '<td><div class="bizSubject" title="'+ v.bizSubject +'">'+ v.bizSubject +'</div></td>';
+                content +=   '<td><div class="content" title="'+ v.content +'">'+ v.content +'</div></td>';
+                content +=   '<td><div class="visitMethod" title="'+ v.visitMethod +'">'+ visitMethod +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#table_visitPlan").append(header);
+
+            total_visitPlan = $("#currentPage_visitPlan").attr("total");
+            pageSize_visitPlan = $("#currentPage_visitPlan").attr("pageSize");
+            currentPage_visitPlan = $("#currentPage_visitPlan").val();
+            totalPage_visitPlan = $("#currentPage_visitPlan").attr("totalPage");
+
+            createPageBar(total_visitPlan,pageSize_visitPlan,currentPage_visitPlan,totalPage_visitPlan,"pagebar_visitPlan");
+
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+    //创建拜访记录分页条
+    var total_visitRecord = '{$page[total_visitRecord]}';
+    var pageSize_visitRecord = '{$page[pageSize_visitRecord]}';
+    var currentPage_visitRecord = '{$page[currentPage_visitRecord]}';
+    var totalPage_visitRecord = '{$page[totalPage_visitRecord]}';
+    createPageBar(total_visitRecord,pageSize_visitRecord,currentPage_visitRecord,totalPage_visitRecord,"pagebar_visitRecord");  //创建分页
+    $(document).on('click','#pagebar_visitRecord span a', function() { //分页点击ajax加载
+        $("#currentPage_visitRecord").val($(this).attr("rel"));
+        getvisitRecordList();
+    });
+    //获取拜访记录列表
+    function getvisitRecordList(){
+        var currentPage_visitRecord = $("#currentPage_visitRecord").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#table_visitRecord").empty();
+
+        $.post("{:U('Office/getVisitRecordList_ajax')}", {"page":currentPage_visitRecord, "pageSize":pageSize_visitRecord, "cusId":cusId }, function(data) {
+
+            if (!("visitRecordList" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th><div class="selectBox">选择</div></th>';
+                header +=      '<th width="230">记录主题</th>';
+                header +=      '<th width="150">拜访日期</th>';
+                header +=      '<th width="150">拜访方式</th>';
+                header +=      '<th width="225">对应商机</th>';
+                header +=      '<th width="225">交流内容</th>';
+                header +=      '<th width="230">跟进策略</th>';
+                header += '</tr>';
+
+            var content = '';
+            var visitMethod = '其它';
+
+            // 设定拜访记录列表
+            $.each(data.visitRecordList, function(k, v) {
+
+                if( v.visitMethod == 1 ){
+                    visitMethod = '电话拜访';
+                }else if( v.visitMethod == 2 ){
+                    visitMethod = '现场拜访';
+                }
+
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="visitRecord" value="'+ v.visitRecordId +'"></td>';
+                content +=   '<td><div class="visitRecordSubject" title="'+ v.visitRecordSubject +'"><a href="javascript:;" onclick="editVisitRecord('+ cusId +',\''+ cusName +'\','+ v.visitRecordId +')">'+ v.visitRecordSubject +'</a></div></td>';
+                content +=   '<td><div class="visitRecordDate" title="'+ v.visitRecordDate +'">'+ v.visitRecordDate +'</div></td>';
+                content +=   '<td><div class="visitMethod" title="'+ visitMethod +'">'+ visitMethod +'</div></td>';
+                content +=   '<td><div class="bizSubject" title="'+ v.bizSubject +'">'+ v.bizSubject +'</div></td>';
+                content +=   '<td><div class="exchangesContent" title="'+ v.exchangesContent +'">'+ v.exchangesContent +'</div></td>';
+                content +=   '<td><div class="followTactics" title="'+ v.followTactics +'">'+ v.followTactics +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#table_visitRecord").append(header);
+
+            total_visitRecord = $("#currentPage_visitRecord").attr("total");
+            pageSize_visitRecord = $("#currentPage_visitRecord").attr("pageSize");
+            currentPage_visitRecord = $("#currentPage_visitRecord").val();
+            totalPage_visitRecord = $("#currentPage_visitRecord").attr("totalPage");
+
+            createPageBar(total_visitRecord,pageSize_visitRecord,currentPage_visitRecord,totalPage_visitRecord,"pagebar_visitRecord");
+
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+
+    //创建合同分页条
+    var total_contract = '{$page[total_contract]}';
+    var pageSize_contract = '{$page[pageSize_contract]}';
+    var currentPage_contract = '{$page[currentPage_contract]}';
+    var totalPage_contract = '{$page[totalPage_contract]}';
+    createPageBar(total_contract,pageSize_contract,currentPage_contract,totalPage_contract,"pagebar_contract");  //创建分页
+    $(document).on('click','#pagebar_contract span a', function() { //分页点击ajax加载
+        $("#currentPage_contract").val($(this).attr("rel"));
+        getcontractList();
+    });
+    //获取合同列表
+    function getcontractList(){
+        var currentPage_contract = $("#currentPage_contract").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#table_contract").empty();
+
+        $.post("{:U('Office/getContractList_ajax')}", {"page":currentPage_contract, "pageSize":pageSize_biz, "cusId":cusId }, function(data) {
+
+            if (!("list" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th><div class="selectBox">选择</div></th>';
+                header +=      '<th width="230">合同标题</th>';
+                header +=      '<th width="150">合同编号</th>';
+                header +=      '<th width="150">合同金额</th>';
+                header +=      '<th width="150">签订日期</th>';
+                header +=      '<th width="150">关键条款</th>';
+                header +=      '<th width="150">客户签约人</th>';
+                header += '</tr>';
+
+            var content = '';
+
+            // 设定合同列表
+            $.each(data.list, function(k, v) {
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="contract" value="'+ v.contractId +'"></td>';
+                content +=   '<td><div class="contractSubject" title="'+ v.contractSubject +'"><a href="javascript:;" onclick="editContract('+ cusId +',\''+ cusName +'\','+ v.contractId +')">'+ v.contractSubject +'</a></div></td>';
+                content +=   '<td><div class="contractCode" title="'+ v.contractCode +'">'+ v.contractCode +'</div></td>';
+                content +=   '<td><div class="money" title="'+ v.money +'">'+ v.money +'</div></td>';
+                content +=   '<td><div class="signDate" title="'+ v.signDate +'">'+ v.signDate +'</div></td>';
+                content +=   '<td><div class="content" title="'+ v.content +'">'+ v.content +'</div></td>';
+                content +=   '<td><div class="ASignerName" title="'+ v.ASignerName +'">'+ v.ASignerName +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#table_contract").append(header);
+
+            total_contract = $("#currentPage_contract").attr("total");
+            pageSize_contract = $("#currentPage_contract").attr("pageSize");
+            currentPage_contract = $("#currentPage_contract").val();
+            totalPage_contract = $("#currentPage_contract").attr("totalPage");
+
+            createPageBar(total_contract,pageSize_contract,currentPage_contract,totalPage_contract,"pagebar_contract");
+
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+
+    //创建回款分页条
+    var total_payBack = '{$page[total_payBack]}';
+    var pageSize_payBack = '{$page[pageSize_payBack]}';
+    var currentPage_payBack = '{$page[currentPage_payBack]}';
+    var totalPage_payBack = '{$page[totalPage_payBack]}';
+    createPageBar(total_payBack,pageSize_payBack,currentPage_payBack,totalPage_payBack,"pagebar_payBack");  //创建分页
+    $(document).on('click','#pagebar_payBack span a', function() { //分页点击ajax加载
+        $("#currentPage_payBack").val($(this).attr("rel"));
+        getpayBackList();
+    });
+    //获取回款列表
+    function getpayBackList(){
+        var currentPage_payBack = $("#currentPage_payBack").val(); //当前商机页
+        var loadIdx = layer.load(0);
+        $("#table_payBack").empty();
+
+        $.post("{:U('Office/getPayRecordList_ajax')}", {"page":currentPage_payBack, "pageSize":pageSize_biz, "cusId":cusId }, function(data) {
+
+            if (!("list" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var header  = '<tr style="height: 25px;">';
+                header +=      '<th><div class="selectBox">选择</div></th>';
+                header +=      '<th width="230">关联合同</th>';
+                header +=      '<th width="150">回款日期</th>';
+                header +=      '<th width="150">回款金额</th>';
+                header +=      '<th width="150">回款方式</th>';
+                header +=      '<th width="150">是否开票</th>';
+                header +=      '<th width="150">备注</th>';
+                header += '</tr>';
+
+            var content = '';
+            var payMethod = '';
+            var receipt = '';
+
+            // 设定商机列表
+            $.each(data.list, function(k, v) {
+                if(v.payMethod == 1 ){
+                    payMethod = '现金';
+                }else if(v.payMethod == 2 ){
+                    payMethod = '转帐';
+                }else if(v.payMethod == 3 ){
+                    payMethod = '电汇';
+                }else if(v.payMethod == 4 ) {
+                    payMethod = '支票';
+                }
+
+                if(v.receipt == 1 ){
+                    receipt = '是';
+                }else if(v.receipt == 2 ){
+                    receipt = '否';
+                }else if(v.receipt == 3 ){
+                    receipt = '无需开票';
+                }
+
+
+                content += '<tr style="height: 50px;">';
+                content +=   '<td><input type="checkbox" name="payrecordId" value="'+ v.payrecordId +'"></td>';
+                content +=   '<td><div class="contractCode" title="'+ v.contractCode +'"><a href="javascript:;" onclick="editPayBack('+ cusId +',\''+ cusName +'\','+ v.payrecordId +')">'+ v.contractCode +'</a></div></td>';
+                content +=   '<td><div class="payDate" title="'+ v.payDate +'">'+ v.payDate +'</div></td>';
+                content +=   '<td><div class="payMoney" title="'+ v.payMoney +'">'+ v.payMoney +'</div></td>';
+                content +=   '<td><div class="payMethod" title="'+ v.payMethod +'">'+ payMethod +'</div></td>';
+                content +=   '<td><div class="receipt" title="'+ v.receipt +'">'+ receipt +'</div></td>';
+                content +=   '<td><div class="remark" title="'+ v.remark +'">'+ v.remark +'</div></td>';
+                content += '</tr>';
+            });
+
+            //总的内容
+            header += content;
+
+            $("#table_payBack").append(header);
+
+            total_payBack = $("#currentPage_payBack").attr("total");
+            pageSize_payBack = $("#currentPage_payBack").attr("pageSize");
+            currentPage_payBack = $("#currentPage_payBack").val();
+            totalPage_payBack = $("#currentPage_payBack").attr("totalPage");
+
+            createPageBar(total_payBack,pageSize_payBack,currentPage_payBack,totalPage_payBack,"pagebar_payBack");
+            layer.close(loadIdx);
+        }, 'json');
+
+    }
+
+    //创建分页条
+    function createPageBar(t,ps,p,tp,id) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1(id); //id为id名
+    }
+
+    // 菜单轮换点击事件
+    $(".choose li").click(function () {
+        var index = $(".choose li").index($(this));
+        $(this).addClass("active").siblings().removeClass("active");
+        $divList = $("#formList").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+        var left=112*index;
+        $("#line").css('margin-left',left);
+    });
+
+    //新增客户弹窗
+    function addLinkman(cusId){
+        layer.open({
+            type:2,
+            title :['新增联系人','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['500px', '450px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addLinkman?cusId='+cusId
+        });
+    }
+
+    //编辑客户弹窗
+    function editLinkman(cusId, clientId){
+        layer.open({
+            type:2,
+            title :['编辑联系人','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['500px', '450px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addLinkman?cusId='+cusId+'&clientId='+clientId
+        });
+    }
+
+    //新增商机弹窗
+    function addBusiOpportunities(cusId,cusName){
+        layer.open({
+            type:2,
+            title :['新增商机','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addBusiOpportunities?cusId='+cusId+'&cusName='+cusName
+        });
+    }
+
+    /**
+     * 编辑商机弹窗
+     * @param cusId 客户id
+     * @param cusName 客户名称
+     * @param bizId 商机id
+     */
+    function editBusiOpportunities(cusId,cusName,bizId){
+        layer.open({
+            type:2,
+            title :['编辑商机','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/editBusiOpportunities?cusId='+cusId+'&cusName='+cusName+'&bizId='+bizId
+        });
+    }
+
+    //删除商机
+    function delBusiOpportunities(cusId){
+        var bizId_string = '';  //要删除的商机id
+        $("input[type=checkbox][name=biz]:checked").each(function(){
+            bizId_string += ','+ $(this).val();
+        });
+        bizId_string = bizId_string.substr(1);
+
+        if( bizId_string == '' ){
+            layer.msg("请选择要删除的商机");
+            return;
+        }
+
+        $.post("{:U('Office/deleteBiz')}", {"bizIds":bizId_string}, function(data) {
+            if(data.error_code != "success") {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+            }else{
+                layer.msg("删除成功");
+                setTimeout('window.location.reload();',2000);
+
+            }
+        },"json");
+    }
+
+    //新增拜访计划弹窗
+    function addVisitPlan(cusId,cusName){
+        layer.open({
+            type:2,
+            title :['新增拜访计划','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addVisitPlan?cusId='+cusId+'&cusName='+cusName
+        });
+    }
+
+    /**
+     * 编辑拜访计划弹窗
+     * @param cusId 客户id
+     * @param cusName 客户名称
+     * @param bizId 商机id
+     */
+    function editVisitPlan(cusId,cusName,visitPlanId){
+        layer.open({
+            type:2,
+            title :['编辑拜访计划','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/editVisitPlan?cusId='+cusId+'&cusName='+cusName+'&visitPlanId='+visitPlanId
+        });
+    }
+
+
+    //删除拜访计划
+    function delVisitPlan(cusId){
+        var vpId_string = '';  //要删除的拜访计划id
+        $("input[type=checkbox][name=visitPlan]:checked").each(function(){
+            vpId_string += ','+ $(this).val();
+        });
+        vpId_string = vpId_string.substr(1);
+
+        if( vpId_string == '' ){
+            layer.msg("请选择要删除的拜访计划");
+            return;
+        }
+
+        $.post("{:U('Office/delVisitPlan')}", {"visitPlanIds":vpId_string}, function(data) {
+            if(data.error_code != "success") {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+            }else{
+                layer.msg("删除成功");
+                setTimeout('window.location.reload();',2000);
+
+            }
+        },"json");
+    }
+
+    //新增拜访记录弹窗
+    function addVisitRecord(cusId,cusName){
+        layer.open({
+            type:2,
+            title :['新增拜访记录','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '550px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addVisitRecord?cusId='+cusId+'&cusName='+cusName
+        });
+    }
+
+    /**
+     * 编辑拜访记录弹窗
+     * @param cusId 客户id
+     * @param cusName 客户名称
+     * @param bizId 商机id
+     */
+    function editVisitRecord(cusId,cusName,visitRecordId){
+        layer.open({
+            type:2,
+            title :['编辑拜访记录','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/editVisitRecord?cusId='+cusId+'&cusName='+cusName+'&visitRecordId='+visitRecordId
+        });
+    }
+
+    //删除拜访记录
+    function delVisitRecord(cusId){
+        var vrId_string = '';  //要删除的拜访记录id
+        $("input[type=checkbox][name=visitRecord]:checked").each(function(){
+            vrId_string += ','+ $(this).val();
+        });
+        vrId_string = vrId_string.substr(1);
+
+        if( vrId_string == '' ){
+            layer.msg("请选择要删除的拜访记录");
+            return;
+        }
+
+        $.post("{:U('Office/delVisitRecord')}", {"visitRecordIds":vrId_string}, function(data) {
+            if(data.error_code != "success") {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+            }else{
+                layer.msg("删除成功");
+                setTimeout('window.location.reload();',2000);
+
+            }
+        },"json");
+    }
+
+
+    //新增合同弹窗
+    function addContract(cusId,cusName){
+        layer.open({
+            type:2,
+            title :['新增合同','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addContract?cusId='+cusId+'&cusName='+cusName
+        });
+    }
+
+
+
+    /**
+     * 编辑合同弹窗
+     * @param cusId 客户id
+     * @param cusName 客户名称
+     * @param bizId 商机id
+     */
+    function editContract(cusId,cusName,contractId){
+        layer.open({
+            type:2,
+            title :['编辑合同','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/editContract?cusId='+cusId+'&cusName='+cusName+'&contractId='+contractId
+        });
+    }
+
+    //删除合同
+    function delContract(cusId){
+        var contractId_string = '';  //要删除的合同id
+        $("input[type=checkbox][name=contract]:checked").each(function(){
+            contractId_string += ','+ $(this).val();
+        });
+        contractId_string = contractId_string.substr(1);
+
+        if( contractId_string == '' ){
+            layer.msg("请选择要删除的商机");
+            return;
+        }
+
+        $.post("{:U('Office/delContract')}", {"contractId":contractId_string}, function(data) {
+            if(data.error_code != "success") {
+                layer.msg(data.error_text,{icon: 8});
+            }else{
+                layer.msg("删除成功");
+                setTimeout('window.location.reload();',2000);
+
+            }
+        },"json");
+    }
+
+    //新增回款弹窗
+    function addPayBack(cusId,cusName){
+        layer.open({
+            type:2,
+            title :['新增回款','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addPayBack?cusId='+cusId+'&cusName='+cusName
+        });
+    }
+
+    /**
+     * 编辑回款弹窗
+     * @param cusId 客户id
+     * @param cusName 客户名称
+     * @param bizId 商机id
+     */
+    function editPayBack(cusId,cusName,payBackId){
+        layer.open({
+            type:2,
+            title :['编辑回款','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/editPayBack?cusId='+cusId+'&cusName='+cusName+'&payBackId='+payBackId
+        });
+    }
+
+    //删除回款
+    function delPayBack(cusId){
+        var bizId_string = '';  //要删除的商机id
+        $("input[type=checkbox][name=biz]:checked").each(function(){
+            bizId_string += ','+ $(this).val();
+        });
+        bizId_string = bizId_string.substr(1);
+
+        if( bizId_string == '' ){
+            layer.msg("请选择要删除的商机");
+            return;
+        }
+
+        $.post("{:U('Office/deleteBiz')}", {"bizIds":bizId_string}, function(data) {
+            if(data.error_code != "success") {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+            }else{
+                layer.msg("删除成功");
+                setTimeout('window.location.reload();',2000);
+
+            }
+        },"json");
+    }
+
+    // 删除联系人
+    function delLinkman(cusId) {
+        var checkbox = document.getElementsByName("link_checkbox");
+        var ids = "";
+
+        for (var i = 0; i < checkbox.length; i++) {
+            var e = checkbox[i];
+            if(e.checked) {
+                if(ids == "") {
+                    ids = e.value;
+                } else {
+                    ids = ids + "," + e.value;
+                }
+            }
+        }
+
+        if(ids == "") {
+            layer.msg("请选择删除的联系人",{icon: 8});
+            return false;
+        } else {
+            var loadIdx = layer.load(0);
+            $("#customerContentList").empty();
+            $.post("{:U('Office/deleteCusClient')}", {"ids":ids}, function(data) {
+                if(data.error_code != "success") {
+                    layer.close(loadIdx);
+                    layer.msg(data.error_text,{icon: 8});
+                }
+
+                $.post("{:U('Office/searchCusClient')}", {"cusId":cusId}, function(data) {
+                    if (!("list" in data)) {
+                        layer.close(loadIdx);
+                        layer.msg(data.error_text,{icon: 8});
+                        return;
+                    }
+                    var content = '<tr style="height: 25px;">';
+                    content += '<th width="67" height="25">选择</th>';
+                    content += '<th width="155">姓名</th>';
+                    content += '<th width="48">性别</th>';
+                    content += '<th width="150">部门</th>';
+                    content += '<th width="150">职位</th>';
+                    content += '<th width="150">联系电话</th>';
+                    content += '<th width="300">电子邮箱</th>';
+                    content += '</tr>';
+                    // 设定用户列表
+                    $.each(data.list, function(k, v) {
+                        content += '<tr style="height: 50px;">';
+                        content += '<td><input type="checkbox" name="link_checkbox" value="' + v.clientId + '"></td>';
+                        content += '<td><a onclick="editLinkman('+cusId+','+v.clientId+')">' + v.clientName + '</a></td>';
+                        var sex = "男";
+                        if(v.clientSex == '1') {
+                            sex = "女";
+                        }
+                        content += '<td>' + sex + '</td>';
+                        content += '<td>' + v.clientDeptName + '</td>';
+
+                        var clientStation = v.clientStation;
+                        if(!clientStation) {
+                            clientStation = "";
+                        }
+                        var phone = v.phone;
+                        if(!phone) {
+                            phone = "";
+                        }
+                        content += '<td>' + clientStation + '</td>';
+                        content += '<td>' + phone + '</td>';
+                        content += '<td>' + v.clientEmail + '</td>';
+                        content += '</tr>';
+                    });
+                    $("#cusClientList").empty();
+                    $("#cusClientList").append(content);
+                    layer.close(loadIdx);
+                }, 'json');  
+            }, 'json');
+        }
+    }
+
+
+    function goback() {
+        var url = APP+'/Home/Office/contact?return=1';
+        window.location.href = url;
+    }
+
+
+
+</script>
+
+</body>
+</html>

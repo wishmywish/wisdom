@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>微信任务分享界面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--标准mui.css-->
+    <css href="__CSS__/mui.min.css" />
+
+    <!--App自定义的css-->
+    <css href="__CSS__/app.css" />
+</head>
+
+<body>
+
+<style>
+    .mui-control-content {
+        /*background-color: white;*/
+        min-height:200px;
+    }
+    /*.mui-control-content .mui-loading {*/
+    /*margin-top: 50px;*/
+    /*}*/
+</style>
+<div class="mui-content">
+    <div  class="mui-slider">
+        <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item mui-active" href="#item1mobile"  data-id="">推广赚</a>
+            <a class="mui-control-item" href="#item2mobile" data-id="">随手赚</a>
+            <a class="mui-control-item" href="#item3mobile" data-id>招商赚</a>
+        </div>
+        <div class="mui-slider-group">
+            <!--推广模块-->
+            <div id="item1mobile" class="mui-control-content mui-active">
+            </div>
+            <!--随手模块-->
+            <div id="item2mobile" class="mui-control-content">
+
+                <div  class="mui-segmented-control mui-segmented-control-inverted" style="background-color:#fafafa">
+                    <a class="mui-control-item" href="#quanbu">全部</a>
+                    <a class="mui-control-item" href="#dati">答题类</a>
+                    <a class="mui-control-item" href="#tuijian">推荐类</a>
+                    <a class="mui-control-item" href="#diaoyan">调研类</a>
+                </div>
+
+                <div  id="quanbu" class="mui-control-content  mui-active" style="min-height: 500px;">
+
+                </div>
+                <div  id="dati" class="mui-control-content"  style="min-height: 500px;">
+
+                </div>
+
+                <div  id="tuijian" class="mui-control-content"  style="min-height: 500px;">
+
+                </div>
+
+                <div  id="diaoyan" class="mui-control-content"  style="min-height: 500px;">
+
+                </div>
+
+            </div>
+
+            <!--招商模块-->
+            <div id="item3mobile" class="mui-control-content">
+                <div  class="mui-content-padded" style="padding-top:1em">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<js href="__JS__/mui.min.js" />
+<js href="__STATIC__/jquery-1.11.2.min.js"/>
+<js href="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"/>
+<script>
+    //推广
+    gettasklist(1);
+    //随手全部
+    gettasklist(2);
+    //    招商
+    gettasklist(3);
+    //随手的调研类
+    gettasklist(4);
+    //随手的推荐类
+    gettasklist(5);
+    //随手的调研类
+    gettasklist(6);
+    //获取任务列表
+    function  gettasklist(tasktypeid){
+        console.log(tasktypeid+"==");
+        $.ajaxSetup({
+            async:false
+        });
+        $.post("{:U('Api/Info/conf')}","command=getTaskList&tasktypeid="+tasktypeid,function(val){
+            console.log(val)
+            if(val.conf_auth=="T"){
+                var listarray=val.list;
+                //推广
+                if(tasktypeid==1){
+                    gettuiguantemp(listarray);
+                }else if(tasktypeid==2||tasktypeid==4||tasktypeid==5||tasktypeid==6){
+                    //随手类全部  及其他三大类
+                    console.log(tasktypeid+'-----');
+                    getsuishoutemp(listarray,tasktypeid);
+                }else if(tasktypeid==3){
+                    getzhaoshangtemp(listarray);
+                }
+            }
+
+
+
+        },"json");
+
+    }
+
+    //推广类模板
+    function  gettuiguantemp(data) {
+        var content = "";
+        $("#item1mobile").empty();
+        var d=new Date();
+        var date= d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+        console.log(date);
+        content+="<div  class='mui-content-padded' style='padding-top:1em'>";
+        $.each(data, function (i, n) {
+            content += "<div  class='mui-content' style='padding-top:.8em;width:100%'>";
+            content += "<ul class='mui-table-view'>";
+            content += "<li class='mui-table-view-cell mui-media'>";
+            content+="<a href='{$weburl}/index.php/Mobileweb/Events/taskdeatail?taskid="+n.f_tid+"&type_label=push'>";
+            content += "<p class='mui-ellipsis' style='padding-bottom:.5em;padding-left:.2em;'>" + n.f_enddate + "</p>";
+            content += "<img class='mui-media-object mui-pull-left' src='__UPFILE__/"+n.f_filepath+ n.f_filename+"'>";
+            content += "<img class='mui-media-object mui-pull-left coin_img' src='__IMG__/coin_bg.png'>";
+            content += "<h3 class='coin_num'>+"+n.f_eachscore+ "</h3>";
+            content += "<h6 class='coin_num2'>金币</h6>";
+            content += "<div class='mui-media-body' style='right:6%;width:50%;position:absolute;margin-top:10px'>";
+            content += "<p class='mui-ellipsis'>" + n.f_title + "</p>";
+            content += "<div style='width:100%;background-color:#fafafa;height:1px;margin-top:30px'></div>";
+            content += "<p class='mui-pull-right' style='padding-top:10px;font-size:10px'>阅读量:<span style='color:#fe6700;font-size:10px'>" + n.f_taskattention + "</span></p>";
+            content += "</div>";
+            if(date>n.f_enddate){
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/finish_icon.png'/>";
+            }else{
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/hot_icon.png'/>";
+            }
+            content += "</a>";
+            content += "</li>";
+            content += "</ul>";
+            content += "</div>";
+        });
+        content+="</div>";
+        $("#item1mobile").append(content);
+
+    }
+
+    //随手赚模板
+    function getsuishoutemp(data,tasktypeid){
+        console.log(data+"==="+tasktypeid);
+        var content="";
+        if(tasktypeid==2){
+            $("#quanbu").empty();
+        }else  if(tasktypeid==6){
+            $("#dati").empty();
+        }else  if(tasktypeid==5){
+            $("#tuijian").empty();
+        }else  if(tasktypeid==4){
+            $("#diaoyan").empty();
+        }
+        var d=new Date();
+        var date= d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+        console.log(date+"==");
+        content+="<div  class='mui-content-padded' style='padding-top:1em'>";
+        $.each(data,function(i,n){
+//            console.log(i);
+//            content+=tasktypeid;
+            content+="<div  class='mui-content' style='padding-top:.8em;width:100%'>";
+            content+="<ul class='mui-table-view'>";
+            content+="<li class='mui-table-view-cell mui-media'>";
+            content+="<a href='{$weburl}/index.php/Mobileweb/Events/taskdeatail?taskid="+n.f_tid+"&type_label=widely'>";
+            content+="<div>";
+            content+="<p class='mui-ellipsis' style='padding-bottom:.5em;padding-left:.2em;'>"+n.f_enddate+"</p>";
+            content+="<img class='mui-media-object mui-pull-left' src='__UPFILE__/"+n.f_filepath+n.f_filename+"'>";
+            content+="<img class='mui-media-object mui-pull-left coin_img' src='__IMG__/coin_bg.png'>";
+            content+="<h3 class='coin_num'>+"+n.f_eachscore+"</h3>";
+            content+="<h6 class='coin_num2'>金币</h6>";
+            content+="</div>";
+            content+="<div class='mui-media-body' style='right:6%;width:50%;position: absolute;margin-top:10px'>";
+            content+="<p class='mui-ellipsis'>"+n.f_title+"</p>";
+            content+="<div style='width:80%;margin-top:15px'>";
+            content+="<div style='width:80%;background-color:#FFFFFF;border:1px solid #fafafa;border-radius:2px;height:10px;position:absolute'></div>";
+            content+="<div style='width:"+parseInt(n.f_drawcopies/n.f_totalcopies*100)+"%;background-color:#b2c400;border-radius:2px;height:10px;position:relative'></div>";
+            content+="</div>";
+            content+="<p style='float:right;margin-top:-15px;color:#b2c400'>"+parseInt(n.f_drawcopies/n.f_totalcopies*100)+"%</p>";
+            content+="<div style='width:100%;background-color:#fafafa;height:1px;margin-top:10px'></div>";
+            content+="<p class='mui-pull-right' style='padding-top:5px;font-size:10px'>分类:<span style='color:#fe6700;font-size:10px'>"+ n.f_typename+"</span></p>";
+            content+="</div>";
+            if(date>n.f_enddate){
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/finish_icon.png'/>";
+            }else{
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/hot_icon.png'/>";
+            }
+
+            content+="</a>";
+            content+="</li>";
+            content+="</ul>";
+            content+="</div>";
+
+        });
+//
+        content+="</div>";
+        if(tasktypeid==2){
+            $("#quanbu").append(content);
+        }else  if(tasktypeid==6){
+            $("#dati").append(content);
+        }else  if(tasktypeid==5){
+            $("#tuijian").append(content);
+        }else  if(tasktypeid==4){
+            $("#diaoyan").append(content);
+        }
+
+    }
+
+    //招商模板
+    function  getzhaoshangtemp(data){
+        var content = "";
+        $("#item3mobile").empty();
+        var d=new Date();
+        var date= d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+        console.log(date);
+        content+="<div  class='mui-content-padded' style='padding-top:1em'>";
+        $.each(data, function (i, n) {
+            content+="<div  class='mui-content' style='padding-top:.8em;width:100%'>";
+            content+="<ul class='mui-table-view'>";
+            content+="<li class='mui-table-view-cell mui-media'>";
+            content+="<a href='{$weburl}/index.php/Mobileweb/Events/taskdeatail?taskid="+n.f_tid+"&type_label=business'>";
+            content+="<div>";
+            content+="<p class='mui-ellipsis' style='padding-bottom:.5em;padding-left:.2em;'>"+n.f_enddate+"</p>";
+            content+="<img class='mui-media-object mui-pull-left' src='__UPFILE__/"+n.f_filepath+n.f_filename+"'>";
+            content+="</div>";
+            content+="<div class='mui-media-body' style='right:6%;width:55%;position: absolute'>";
+            content+="<p class='mui-ellipsis'>"+n.f_title+"</p>";
+            content+="<h6 style='color:#fe6700'>金币:"+n.f_unitcommission+"</h6>";
+            content+="<div style='width:100%;background-color:#fafafa;height:1px;margin-top:20px'></div>";
+            content+="<p class='mui-pull-right' style='padding-top:10px;font-size:10px'>关注人数:<span style='color:#fe6700;font-size:10px'>"+n.f_taskattention+"</span></p>";
+            content+="</div>";
+            if(date>n.f_enddate){
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/finish_icon.png'/>";
+            }else{
+                content+="<img style='position: absolute; right: 10px;top: 10px; width: 45px;height: 45px;' src='__IMG__/hot_icon.png'/>";
+            }
+            content+="</a>";
+            content+="<h6 class='mui-ellipsis' style='margin-top:10px'>招商描述:&nbsp;推荐合适经销商并协助签约，小宝奖励"+n.f_unitcommission/10+"元人民币</h6>";
+            content+="</li>";
+            content+="</ul>";
+            content+="</div>";
+        });
+        content+="</div>";
+        $("#item3mobile").append(content);
+
+    }
+
+</script>
+<!--微信网页右上菜单关闭-->
+<script type="text/javascript">
+    wx.hideOptionMenu();
+</script>
+</body>
+
+</html>

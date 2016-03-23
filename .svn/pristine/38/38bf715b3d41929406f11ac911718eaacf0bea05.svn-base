@@ -1,0 +1,295 @@
+<include file="Public/head" title="招商APP管理平台" />
+<js href="__STATIC__/js/justgage-1.1.0.js" />
+<js href="__STATIC__/js/justgage-1.1.0.min.js" />
+<js href="__STATIC__/js/raphael-2.1.4.min.js" />
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+.container {
+    float: left;
+    margin: 10px;
+}
+
+  .gauge {
+    width: 160px;
+    height:160px;
+    line-height:160px;
+    border:1px  solid  gray;
+    float: left;
+    cursor:pointer;
+}
+  .title{
+    font-size: 20px;
+    font-weight:bold;
+}
+</style>
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 招商APP管理平台</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class=''><a href="__APP__/Taskadmin/Index/main" style="text-decoration:none;">总表</a></li>
+                        <li value="2" class='selected' ><a href="__APP__/Taskadmin/Index/today" style="text-decoration:none;">今表</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" id="f_tasktypeid" value="{$f_tasktypeid}">
+                <div class="container" style="width: 680px;">
+                    <div class="title">上报经销商数据统计</div>
+                    <div id="gd1" class="gauge" onclick="location.href = APP+'/Taskadmin/Review/index?access=200'"></div>
+                    <div id="gd2" class="gauge" onclick="location.href = APP+'/Taskadmin/Review/index?access=200'"></div>
+                    <div id="gd3" class="gauge" onclick="location.href = APP+'/Taskadmin/Review/index?access=200'"></div>
+                    <div id="gd4" class="gauge" onclick="location.href = APP+'/Taskadmin/Review/index?access=200'"></div>
+                </div>
+                <div class="container" style="width: 1300px;">
+                    <div class="title">注册企业数据统计</div>
+                    <div id="gc1" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                    <div id="gc2" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                    <div id="gc3" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                    <div id="gc4" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                    <div id="gc5" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                    <div id="gc6" class="gauge" onclick="location.href = APP+'/Taskadmin/Company/index?access=400'"></div>
+                </div>
+                <div class="container" style="width:1500px;">
+                    <div class="title">任务数据分类统计</div>
+                    <div class="tabli">
+                        <ul id="tabli">
+                            <li value="0" id="push" onclick="location.href = APP+'/Taskadmin/Index/today?f_tasktypeid=1'">推广赚</li>
+                            <li value="1" id="widely" class='selected' onclick="location.href = APP+'/Taskadmin/Index/today'">随手赚</li>
+                            <li value="2" id="business" onclick="location.href = APP+'/Taskadmin/Index/today?f_tasktypeid=3'">招商赚</li>
+                            <li value="3" id="checkProfit" onclick="location.href = APP+'/Taskadmin/Index/today?f_tasktypeid=7'">督查赚</li>
+                         </ul>
+                    </div>
+                    <div id="gt1" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt2" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt3" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt4" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt5" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt6" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt7" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt8" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                    <div id="gt12" class="gauge" onclick="location.href = APP+'/Taskadmin/Task/index?access=100'"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var gd1 = new JustGage({
+              id: "gd1",
+              title: "{$dealer.0.text}",
+              value : "{$dealer.0.count}",
+              min: 0,
+              max: "{$dealer.0.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              // customSectors: [{
+              //   color : "{$dealer.0.color}",
+              // }],
+              counter: true
+            });
+            var gd2 = new JustGage({
+              id: "gd2",
+              title: "{$dealer.1.text}",
+              value : "{$dealer.1.count}",
+              min: 0,
+              max: {$dealer.1.allCount},
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gd3 = new JustGage({
+              id: "gd3",
+              title: "{$dealer.2.text}",
+              value : {$dealer.2.count},
+              min: 0,
+              max: {$dealer.2.allCount},
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gd4 = new JustGage({
+              id: "gd4",
+              title: "{$dealer.3.text}",
+              value : {$dealer.3.count},
+              min: 0,
+              max: {$dealer.3.allCount},
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gc1 = new JustGage({
+              id: "gc1",
+              title: "{$company.0.text}",
+              value : "{$company.0.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              // customSectors: [{
+              //   color : "{$dealer.0.color}",
+              // }],
+              counter: true
+            });
+            var gc2 = new JustGage({
+              id: "gc2",
+              title: "{$company.1.text}",
+              value : "{$company.1.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gc3 = new JustGage({
+              id: "gc3",
+              title: "{$company.2.text}",
+              value : "{$company.2.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gc4 = new JustGage({
+              id: "gc4",
+              title: "{$company.3.text}",
+              value : "{$company.3.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gc5 = new JustGage({
+              id: "gc5",
+              title: "{$company.4.text}",
+              value : "{$company.4.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gc6 = new JustGage({
+              id: "gc6",
+              title: "{$company.5.text}",
+              value : "{$company.5.count}",
+              min: 0,
+              max: "{$company.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt1 = new JustGage({
+              id: "gt1",
+              title: "{$task.0.text}",
+              value : "{$task.0.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt2 = new JustGage({
+              id: "gt2",
+              title: "{$task.1.text}",
+              value : "{$task.1.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt3 = new JustGage({
+              id: "gt3",
+              title: "{$task.2.text}",
+              value : "{$task.2.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt4 = new JustGage({
+              id: "gt4",
+              title: "{$task.3.text}",
+              value : "{$task.3.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt5 = new JustGage({
+              id: "gt5",
+              title: "{$task.4.text}",
+              value : "{$task.4.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt6 = new JustGage({
+              id: "gt6",
+              title: "{$task.5.text}",
+              value : "{$task.5.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt7 = new JustGage({
+              id: "gt7",
+              title: "{$task.6.text}",
+              value : "{$task.6.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt8 = new JustGage({
+              id: "gt8",
+              title: "{$task.7.text}",
+              value : "{$task.7.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+            var gt12 = new JustGage({
+              id: "gt12",
+              title: "{$task.11.text}",
+              value : "{$task.11.count}",
+              min: 0,
+              max: "{$task.allCount}",
+              decimals: 0,
+              gaugeWidthScale: 0.6,
+              counter: true
+            });
+      });
+
+       $(function(){
+            if(1==$('#f_tasktypeid').val()||"1"==$('#f_tasktypeid').val()){
+                $('#widely').removeClass('selected');
+                $('#push').attr('class','selected');
+            }else if(3==$('#f_tasktypeid').val()||"3"==$('#f_tasktypeid').val()){
+                $('#widely').removeClass('selected');
+                $('#business').attr('class','selected');
+            }else if(7==$('#f_tasktypeid').val()||"7"==$('#f_tasktypeid').val()){
+                $('#widely').removeClass('selected');
+                $('#checkProfit').attr('class','selected');
+            }
+        });
+    </script>
+</html>

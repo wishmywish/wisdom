@@ -1,0 +1,499 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+/** 智慧推广
+ * Description of PromotionController
+ * 
+ * @author Administrator
+ */
+namespace Home\Controller;
+use Think\Controller;
+
+class PromotionController extends CommonController{
+   
+   //首页   刘显珍
+    
+   function  index(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+           if($val['f_sys_column_cid']=='Promotion'){
+               $syscolumn_id = $val['f_syscolumn_id'];
+           }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+       $ret=A("Test")->getMenulist();
+       $this->assign("ret",$ret);
+        $this->display();
+   }
+
+
+
+
+   //跟踪审核  刘显珍
+    function  trackAudit(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        //echo $re;
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        //推广赚任务标题
+      
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+    }
+    
+    //资质&文档管理 刘显珍
+    
+    function  qualiDocManage(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+    }
+    
+    
+    //任务管理  刘显珍
+    function  task(){
+
+        $i = intval(cookie("clicknum_pro"));
+        $i++;
+        cookie("clicknum_pro",$i);
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display(); 
+    }
+    //任务管理   全部任务添加  刘显珍
+    function  taskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+//        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+//        if($reModi['result']=="000000"){
+//            $this->assign('reModi', $reModi);
+//
+//        }
+//        echo var_dump($reModi);
+//        exit;
+	    $this->assign('mobile',cookie('mobile'));
+//        $this->assign("taskid",I("get.taskid"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display(); 
+    }
+    //新版随手任务增加
+    function  taskAdd1(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+	    $this->assign('mobile',cookie('mobile'));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+    }
+    //调研任务新增入口
+    function  surveyTaskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+	    $this->assign('mobile',cookie('mobile'));
+        $this->assign("tasktype",I("get.tasktype"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+    //推荐任务新增入口
+    function  recomTaskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+
+	    $this->assign('mobile',cookie('mobile'));
+        $this->assign("tasktype",I("get.tasktype"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+    //答题任务新增入口
+    function  answerTaskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+	    $this->assign('mobile',cookie('mobile'));
+        $this->assign("tasktype",I("get.tasktype"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+
+    //督查赚任务新增
+    function  auditEarn(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $this->assign('mobile',cookie('mobile'));
+        $this->assign("tasktype",I("get.tasktype"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+
+    }
+
+    function  audit_edit(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $this->assign('mobile',cookie('mobile'));
+        $this->assign("tasktype",I("get.tasktype"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $ret=A("Test")->getMenulist();
+        $this->assign("ret",$ret);
+        $this->display();
+
+    }
+
+
+
+
+    //任务编辑
+    function  editprotask(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Promotion'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('companyID',  cookie("companyId"));
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+
+        }
+//        echo var_dump($reModi);
+//        exit;
+        $tasktypeid=I("get.tasktypeid");
+        $this->assign('mobile',cookie('mobile'));
+        $this->assign("taskid",I("get.taskid"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->assign('tasktype', $tasktypeid);
+        $this->assign('tasktypeid', $tasktypeid);
+
+        if($tasktypeid==1){
+            //推广
+            $this->display("pushedit");
+        }elseif($tasktypeid==4||$tasktypeid==6){
+            //随手
+            $this->display("surveyTaskAdd");
+        }elseif($tasktypeid==5){
+            $this->display("recomTaskAdd");
+        }elseif($tasktypeid==7){
+            $this->display("audit_edit");
+        }
+    }
+
+    //稽核赚网点定位
+    function  audit_dingwei(){
+        $this->assign("network_address",I("get.network_address"));
+        $this->assign("network_name",I("get.network_name"));
+        $this->assign("longitude",I("get.longitude"));
+        $this->assign("latitude",I("get.latitude"));
+        $this->display();
+    }
+
+
+    //稽核赚网点数据添加编辑
+    function  audit_data_edit(){
+        $in_arr=I("post.");
+        $map["f_super_id"]=$in_arr["aduit_id"];
+        $map["f_task_id"]=$in_arr["taskid"];
+        $map["f_network_name"]=$in_arr["network_name"];
+        $map["f_network_address"]=$in_arr["network_address"];
+        $map["f_claim_num"]=$in_arr["net_claim_num"];
+        $map["f_longitude"]=$in_arr["longitude"];
+        $map["f_latitude"]=$in_arr["latitude"];
+        $map["f_range"]=$in_arr["range"];
+        $map["f_uptime"]=time();
+
+        if($in_arr["aduit_id"]==""){
+            $re=M("tasksuperaddress")->add($map);
+            if($re>0){
+                $result["error_code"]="success";
+                $result["audit_id"]=$re;
+            }else{
+                $result["error_code"]="fail";
+            }
+
+        }else{
+            $re=M("tasksuperaddress")->where("f_super_id=".$in_arr["aduit_id"])->save($map);
+                $result["error_code"]="success";
+                $result["audit_id"]=$in_arr["aduit_id"];
+        }
+
+        echo json_encode($result);
+
+    }
+
+    //稽核赚网点数据删除
+    function  audit_data_del(){
+        $in_arr=I("post.");
+        $re=M("tasksuperaddress")->delete($in_arr["checklist"]);
+        if($re>0){
+            $result["error_code"]="success";
+            $result["delte_id"]=$in_arr["checklist"];
+        }else{
+            $result["error_code"]="fail";
+        }
+
+        echo json_encode($result);
+
+    }
+
+    function  cpush_auit(){
+        $in_arr=I("post.");
+        $map['f_totalcopies'] =$in_arr['pro_taskBrand'];
+        $map['f_eachcoin'] =$in_arr['pro_taskProduct'];
+        $map['f_eachscore'] =$in_arr['eachscore'] == "" ? 3 :$in_arr['eachscore'];
+        $map['f_drawcopies'] = 0;
+        $map['f_taskrequirements'] =html_entity_decode(stripslashes($in_arr['editor']));
+        $map['f_total_commisson']=$in_arr['total_commisson'];
+
+        $indexid = $in_arr['indexid'];
+        if ($indexid != 0) {    //编辑
+            $re = M("tasksmallinfo")->where('f_indexid=' . $indexid)->save($map);
+            $result["audit_smallid"]=$indexid;
+        } else { //新增
+            $re = M("tasksmallinfo")->add($map);
+            $result["audit_smallid"]=$re;
+        }
+          $result['error_code'] = 'success';
+          $result['error_text'] = '';
+          echo json_encode($result);
+    }
+
+
+    //网点数据的导入页面显示
+    function audit_Import_data(){
+         $this->assign("taskid",I("get.audit_taskid"));
+         $this->display();
+    }
+
+    //网点数据的导入
+    function  audit_import_do(){
+        header("Content-type:text/html;charset:utf-8");
+        //全局变量
+        $error_line = [];
+        $succ_result=0;
+        $error_result=0;
+        $taskid=I("post.taskid");
+        $file=$_FILES['filename'];
+        $max_size="2000000"; //最大文件限制（单位：byte）
+        $fname=$file['name'];
+        $ftype=strtolower(substr(strrchr($fname,'.'),1));
+        $dir=dirname(__FILE__);                       //获取当前脚本的绝对路径
+        $dir=str_replace("//","/",$dir)."/";
+        //文件格式
+        $uploadfile=$file['tmp_name'];
+        if($_SERVER['REQUEST_METHOD']=='POST'){
+            if(is_uploaded_file($uploadfile)){
+                if($file['size']>$max_size){
+                    echo "<span style='color:red;font-size:12px;'>文件过大</span>";
+                    exit;
+                }
+                if($ftype!='xls' && $ftype!='xlsx' && $ftype!='xlsm' && $ftype!='xltx' && $ftype!='xltm' && $ftype!='xlsb' && $ftype!='xlam'){
+                    echo "<span style='color:red;font-size:12px;'>文件格式错误</spa>";
+                    exit;
+                }
+            }else{
+                echo "<span style='color:red;font-size:12px;'>文件为空</spa>";
+                exit;
+            }
+        }
+        $filename='uploadFile.xls';
+
+        $result=move_uploaded_file($uploadfile,$dir.$filename);//假如上传到当前目录下
+        if($result)  //如果上传文件成功，就执行导入excel操作
+        {
+            require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel.php';
+            require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/IOFactory.php';
+            require_once dirname(dirname(dirname(__FILE__))).'/Taskadmin/ExcelImport/Classes/PHPExcel/Reader/Excel5.php';
+
+
+            $objReader = \PHPExcel_IOFactory::createReader('Excel5');//use excel2007 for 2007 format
+            $objPHPExcel = $objReader->load($dir.$filename);
+
+            $sheet = $objPHPExcel->getSheet(0);
+
+            $highestRow = $sheet->getHighestRow(); // 取得总行数
+            $highestColumn = $sheet->getHighestColumn(); // 取得总列数
+            $arr_result=array();
+            $strs=array();
+            $list=array();
+            $count=0;
+            $page=0;
+            for($j=2;$j<=$highestRow;$j++)
+            {
+                unset($arr_result);
+                unset($strs);
+                for($k='A';$k<= $highestColumn;$k++)
+                {
+                    //读取单元格
+                    $arr_result.= $objPHPExcel->getActiveSheet()->getCell("$k$j")->getValue().',';
+                }
+                $strs=explode(",",$arr_result);  //单元格中数据拆分
+                //数据
+                $map["f_network_name"]= $strs[0]; //网点名称
+                $map["f_network_address"] = $strs[1]; //网点地址
+                $map["f_claim_num"] = $strs[2]; //可认领数
+                $map["f_range"] = $strs[3];  //范围
+                $url="http://api.map.baidu.com/geocoder/v2/?address=".$strs[1]."&output=json&ak=sjYlqlip1FNoae6Q8GKLjd7k";
+                $res=file_get_contents($url);
+                $location=json_decode($res,true);
+                if($location["status"]==0){
+                    //经度
+                    $longitude=round($location["result"]["location"]["lng"],6);
+                    //纬度
+                    $latitude=round($location["result"]["location"]["lat"],6);
+                }else{
+                    echo "<span style='color:red;font-size:12px;'>第".$j."行自动获取经纬度失败!建议手动添加<br/></span>";
+                    $error_result+=1;
+                    continue;
+                }
+
+                $taskid=$taskid;
+                //必填项为空时跳过
+                if( empty($strs[0]) || empty($strs[1])|| empty($strs[2])|| empty($strs[3])){
+                    echo "<span style='color:red;font-size:12px;'>第".$j."行必填项为空<br/></span>";
+                    $error_result+=1;
+                    continue;
+                }
+                //经纬度是否为空
+                if(empty($longitude)||empty($latitude)){
+                    echo "<span style='color:red;font-size:12px;'>第".$j."行自动获取经纬度失败!建议手动添加<br/></span>";
+                    $error_result+=1;
+                    continue;
+                 }
+
+                $map["f_longitude"]=$longitude;
+                $map["f_latitude"]=$latitude;
+                $map["f_task_id"]=$taskid;
+                $map["f_uptime"]=time();
+                //根据网点地址获取经纬度
+                 $re=M("tasksuperaddress")->add($map);
+                //插入数据到库中
+                if($re>0){
+                    $succ_result+=1;
+                }else{
+                    $error_result+=1;
+                    $error_line[] = $j; //第几行出错
+                }
+            }
+        }
+
+        $list=M("tasksuperaddress")->where("f_task_id=".$taskid)->order("f_uptime")->select();
+        $count=M("tasksuperaddress")->where("f_task_id=".$taskid)->count();
+        $page=$count%5;
+        if($page==0){
+            $page=$count/5;
+        }else{
+            $page=intval($count/5)+1;
+        }
+        $this->assign('page',$page);
+        $this->assign('count',$count);
+        $this->assign('list',json_encode($list));
+        $this->assign('error_line',$error_line);
+        $this->assign('succ_result',$succ_result);
+        $this->assign('error_result',$error_result);
+        unlink($dir.$filename); //删除临时生成的文件
+        $this->display();
+    }
+
+
+}
+

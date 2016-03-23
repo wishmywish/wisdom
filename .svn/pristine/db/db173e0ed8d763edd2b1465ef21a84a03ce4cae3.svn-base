@@ -1,0 +1,100 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'><span class='org_bot_cor'></span>公司公告</div>
+    </div>
+    <div class="notice_center">
+        <!--输入框-->
+        <div class="notice_head">
+				<span style="display: inline-block;">首页&nbsp;>&nbsp;公告</span>
+
+            <div class="column">
+                <span style="float: left;">筛选：</span>
+
+                <!-- 员工部门-->
+                <div class="personmsg">
+
+                    <ul>
+
+                        <li>
+
+                            <label style="height: 25px;">公告主题&nbsp;</label>
+                            <input type="text" >
+                        </li>
+                        <li>
+                            <label>所属栏目&nbsp;</label>
+                            <select>
+                                <option value="0"> --请选择-- </option>
+                                <option value="1"> 公司公告 </option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 按钮-->
+                <p style="height: 25px;margin: 12px 0 0 620px;">
+                    <input id="searchButton" class="bntns" type="button" value="搜索">
+                    <input id="resetButton" class="bntns" type="button" value="清空">
+                    <input id="exprotButton" class="bntns bntns1" type="button" onclick="location='noticeAdd.html'" value="新增">
+                </p>
+            </div>
+        </div>
+        <!--列表-->
+        <div class="notice_list">
+              <div class="title">
+                <ul>
+                    <li style="width: 5%;">序号</li>
+                    <li style="width: 15%;">标题</li>
+                    <li style="width: 10%;">所属栏目</li>
+                    <li style="width: 5%;">浏览数</li>
+                    <li style="width: 10%;">发布人</li>
+                    <li style="width: 20%;">发布对象</li>
+                    <li style="width: 10%;">创建日期</li>
+                    <li style="width: 10%;">置顶</li>
+                    <li style="width: 5%;">附件</li>
+                    <li style="width: 10%;">操作</li>
+                </ul>
+              </div>
+              <div class="contentList">
+                  <?PHP for($i=0;$i<6;$i++){?>
+                  <ul>
+                      <li style="width: 5%;">1</li>
+                      <li style="width: 15%;">测试账号开通了</li>
+                      <li style="width: 10%;">公司公告</li>
+                      <li style="width: 5%;">50</li>
+                      <li style="width: 10%;">小花</li>
+                      <li style="width: 20%;">杭州日思夜享数据科技有限公司</li>
+                      <li style="width: 10%;">2015-9-10</li>
+                      <li style="width: 10%;">置顶</li>
+                      <li style="width: 5%;">无</li>
+                      <li id="operate" style="width: 10%;">
+                          <i style="color: #4f88b5;" class="fa fa-file-text-o"></i><!--编辑图标-->
+                          <i style="color:#de2e2f;" class="fa fa-trash"></i><!--删除图标-->
+                          <i style="color:#00a73c; display: none;" class="fa fa-reply"></i><!--撤销置顶图标-->
+                          <i style="color:#00a73c;" class="fa fa-step-forward fa-rotate-270"></i><!--置顶图标-->
+                      </li>
+                  </ul>
+                  <?PHP }?>
+              </div>
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+
+        })
+
+
+
+</script>
+    </body>
+</html>

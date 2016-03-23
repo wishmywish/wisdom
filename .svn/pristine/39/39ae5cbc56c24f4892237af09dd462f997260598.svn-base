@@ -1,0 +1,156 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/1/25
+ * Time: 16:09
+ */
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class WechatController  extends  Controller
+{
+    /**
+     * @param $scope 授权作用域，两种方式(snsapi_base和snsapi_userinfo)
+     * snsapi_base :不弹出授权页面，直接跳转，只能获取用户openid
+     * snsapi_userinfo:弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息
+     */
+    private $scope="snsapi_userinfo";
+    private $redirect_url="/index.php/Mobileweb/Wechat/get_userinfo";
+    public function  obtain_user_information(){
+        $redirect_url=C("WebUrl").$this->redirect_url;
+        //1 第一步：用户同意授权，获取code
+        $access_token=S("access_token");
+        if(!$access_token){
+            $url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=".C("appid")."&redirect_uri=".$redirect_url."&response_type=code&scope=".$this->scope."&state=STATE#wechat_redirect";
+            echo "<script>location.href='".$url."'</script>";
+        }else{
+            echo "<script>location.href='".$redirect_url."'</script>";
+        }
+
+    }
+
+    //2 第二步：通过code换取网页授权access_token
+    public function get_userinfo(){
+        //获取code
+        $code=I("code");
+//        S("access_token",null);
+//        S("openid",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础支持的access_token是不同的
+        $access_token=S("access_token");
+        if(!$access_token){
+            $access_json=file_get_contents($url);
+            $access_arr=json_decode($access_json,true);
+            if($access_arr["errcode"]=="0"){
+                $access_token=$access_arr["access_token"];
+                $openid=$access_arr["openid"];
+                S("openid",$openid);
+                S("access_token",$access_token,3600);
+            }
+        }
+        $openid=S("$openid");
+        $res=$this->get_user_info($openid,$access_token);
+        dump($res);
+        $this->display("Events/activitys");
+    }
+
+
+    /**
+     * 根据openid 和access_token获取用户的信息。
+     * @param $openid
+     * @param $access_token
+     * @return bool|string
+     * //    {
+     *        "openid":" OPENID",
+     *        " nickname": NICKNAME,
+     *        "province":"PROVINCE"
+     *        "city":"CITY",
+     *        "country":"COUNTRY",
+     *        "headimgurl":    "http://wx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/46",
+     *        "privilege":[
+     *        "PRIVILEGE1"
+     *        "PRIVILEGE2"
+     *          ],
+     *        "unionid": "o6_bmasdasdsad6_2sgVt7hMZOPfL"（只有用户将公众号绑定到微信开发平台账号后，才会出现改字段）
+     *  }
+     */
+
+    public function get_user_info($openid,$access_token){
+        $url="https://api.weixin.qq.com/sns/userinfo?access_token=".$access_token."N&openid=".$openid."lang=zh_CN";
+        $res=file_get_contents($url);
+        return $res;
+    }
+
+    //使用微信jssdk微信公众平台面向网页开发者提供的基于微信内的网页开发工具包
+
+
+    //获取数字签名
+    /**
+     * @param $url
+     * @return string 关于访问页面的url
+     */
+    public function  get_jsapi_shal($url){
+        $timstamp=time();
+//        生成签名的随机串
+        $noncestr=md5(time().mt_rand(0,1000));
+        $jsapi_ticket=$this->get_jsapi_ticket();
+        $url="jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timstamp."&url=".$url;
+        //签名
+        $signature=sha1($url);
+        $data["timestamp"]=$timstamp;
+        $data["nonceStr"]=$noncestr;
+        $data["signature"]=$signature;
+        $data_json=json_encode($data,"true");
+        return $data_json;
+    }
+
+
+    // 第一步：微信分享获取相关信息 $token
+    function  get_wei_token(){
+        S("jaccess_token",null);
+        $token=S("jaccess_token");
+        //     第三方用户唯一凭证
+        //     第三方用户唯一凭证密钥，即appsecre
+        if(!$token){
+            $res=file_get_contents("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".C("appid")."&secret=".C("secret"));
+            $res=json_decode($res,true);
+            $token=$res["access_token"];
+            S("jaccess_token",$token,3600);
+        }
+        return  $token;
+
+    }
+
+
+    //第二步：jsapi_ticket调用微信js接口的临时票据，提供access_token来获取，开发者必须在自己的服务全局缓存
+    function  get_jsapi_ticket(){
+        S("wx_ticket",null);
+        $ticket="";
+        do{
+            $ticket=S("wx_ticket");
+            if(!empty($ticket)){
+                break;
+            }
+            $token=S("jaccess_token");
+            if(empty($token)){
+                $this->get_wei_token();
+            }
+            $url2="https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$token."&type=jsapi";
+            $res=file_get_contents($url2);
+            $res=json_decode($res,true);
+            $ticket=$res["ticket"];
+            //需要缓存ticket
+            S("wx_ticket",$ticket,3600);
+
+        }while(0);
+
+        return $ticket;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,49 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+
+            <div class="content_body">
+                <div class="content_menu">
+                    <ul class="menu_ul">
+                        <li class="menu_li"><A class="hover" href="#"><i class="fa fa-folder fa-fw fa-lg"></i>&nbsp;&nbsp;&nbsp;智慧办公</A></li>
+                        <ul class="ment"><img src="__IMG__/men.png"/><li>首页</li><li>制度</li><li>通讯录</li><li>审批</li></ul>
+                        <li class="menu_li"><A href="#"><i class="fa fa-user-plus fa-fw fa-lg"></i>&nbsp;&nbsp;&nbsp;智慧招商</A></li>
+                        <ul class="ment"><img src="__IMG__/men.png"/><li>首页</li><li>制度</li><li>通讯录</li><li>审批</li></ul>
+                        <li class="menu_li"><A href="#"><i class="fa fa-group fa-fw fa-lg"></i>&nbsp;&nbsp;&nbsp;智慧推广</A></li>
+                        <ul class="ment"><img src="__IMG__/men.png"/><li>首页</li><li>制度</li><li>通讯录</li><li>审批</li></ul>
+                        <li class="menu_li"><A href="#"><i class="fa fa-sitemap fa-fw fa-lg"></i>&nbsp;&nbsp;&nbsp;智慧分销</A></li>
+                        <ul class="ment"><img src="__IMG__/men.png"/><li>首页</li><li>制度</li><li>通讯录</li><li>审批</li></ul>
+                        <div id="lanPos"></div>
+                    </ul>
+                </div>
+                <div class="content_right"></div>
+            </div>
+
+        </div>
+        <div class="k0"></div>
+        <include file="Public/footer"/>
+    </div>
+
+
+
+<script>
+    $(function(){
+        $('#lanPos').css('top',$('.hover').offset().top-150);
+        $('.menu_ul li').hover(function(){
+            $('#lanPos').css('top',$(this).offset().top-150);
+        },function(){
+            $('#lanPos').css('top',$('.hover').offset().top-150);
+        })
+
+        $('.menu_ul li').click(function(){
+            for(var i=0;i<$('.menu_ul li').size();i++){
+                if(this==$('.menu_ul li').get(i)){
+                    $('.menu_ul li').eq(i).children('a').addClass('hover');
+                }else{
+                    $('.menu_ul li').eq(i).children('a').removeClass('hover');
+                }
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

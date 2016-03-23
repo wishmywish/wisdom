@@ -1,0 +1,16 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+            <h4>合作咨询：</h4>
+            <div>电话：4008813609</div>
+            <div>EMAIL：SERVICE@51LICK.COM</div>
+            <div>QQ：2048106473</div>
+            <h4>运营机构：</h4>
+            <div>杭州日思夜享数据科技有限公司</div>
+            <div>小宝招商，业务员的赚钱神器！赚钱、升职、社交、培训，开启业务员全新的职业模式，在小宝招商APP，每天都有海量赚钱悬赏任务，汇聚全国业务员精英，兼职帮助全国企业完成招商任务获得高额佣金，轻松超过工资所得；在日常工作中顺带完成各类随手赚任务，每天都有轻松惊喜收入；一键分享转发到微信朋友圈、新浪微博、QQ空间就可完成的推广赚任务，赚钱的同时还能与朋友分享有趣的话题；小宝智慧招商，不仅颠覆中国企业传统营销模式，更是让全天下业务员开启一个职业新气场，赚大钱，找小宝。</div>
+            <h4>IOS当前版本：V1.5<br>安卓当前版本：V1.4</h4>
+            </div>
+        </div>
+    </body>
+<include file="Public/foot" />

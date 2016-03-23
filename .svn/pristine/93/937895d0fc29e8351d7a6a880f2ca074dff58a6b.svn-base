@@ -1,0 +1,180 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+                <ul class="helplist">
+                    <!--<li id="one">问：小宝招商为什么还有推广赚，随手赚？</li>-->
+                    <!--<div id="onea" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;小宝招商，是一款为各行业有资源有能力的营销人提供额外赚钱的神器！前期我们重点针对各行业营销人员提供帮助企业招商为主的APP悬赏任务，完成招商任务获得高额佣金，轻松超过工资所得；同时，为了让营销经验不是太丰富、客户资源不是太广泛的其他人员也有赚钱的机会，小宝招商平台推出了在日常工作中顺带完成的各类随手赚任务，每天都有轻松惊喜收入；人人都可以进行的、一键分享转发到微信朋友圈、新浪微博、QQ空间就可完成的推广赚任务，赚钱的同时还能与朋友分享有趣的话题；大钱小钱大家赚，让韦小宝的通吃精神发扬光大。</div>-->
+                    <li id="one">问：如何删除银行卡帐户？</li>
+                    <div id="onea" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;如果您需要删除银行卡账户，选择需要删除的银行卡帐户，长按，系统将会弹出是否删除的页面，点击是，即可完成删除操作。</div>
+                    <li id="two">问：为什么要实名认证？</li>
+                    <div id="twoa" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;根据国家相关政策，凡是涉及资金往来的账户，必须进行实名认证。</div>
+                    <li id="three">问：为什么要银行卡、支付宝绑定？</li>
+                    <div id="threea" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;小宝招商是一个赚钱的APP平台，在平台上赚到的钱如果要提现，必须绑定有银行卡或支付宝才可以完成。</div>
+                    <li id="four">问：如何申请提现？</li>
+                    <div id="foura" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;在<我的>栏目我要提现提交申请后，一般到账时间为3个工作日左右，期间可能由于不同的网络支付环境出现延迟或其他情况，请耐心等候。如有疑问，您可通过小宝招商官网上的联系方式，及时联系我们客服。</div>
+                    <li id="five">问：会员等级与金币银票规则</li>
+                    <div id="fivea" style="display: none;">&nbsp;&nbsp;&nbsp;&nbsp;个人会员有分级制度，等级按金币与银票的累积总数晋级，暂设V1-V9级，等级越高，福利越多；金币满300后可直接申请提现，银票除升级作用外，不能提现，但未来将会用作更多作用，如兑换商品、股权等。</div>
+					<li id = "six">问：如何实名认证？</li>
+					<div id = "sixa" style="display: none;">
+						<!--<p><span style="font-family:宋体">1.</span><span style="font-family:宋体">实名认证说明： 由于小宝招商涉及到支付宝帐户、银行帐户的绑定，按国家相关政策，这些绑定必须要实名制才能完成，所以实名认证是必须的。</span></p>-->
+						<p><span style="font-family:宋体">1.</span><span style="font-family:宋体">实名认证第一步：“我的”页面点击箭头进入“设置用户信息”页面；</span></p>
+						<p><span style="font-family:宋体"></span></p><p><img src="http://wisdom.51lick.com/Public/upfile/20150709/14364092279906.gif" _src="http://wisdom.51lick.com/Public/upfile/20150709/14364092279906.gif" style=""/></p>
+						<p><img src="http://wisdom.51lick.com/Public/upfile/20150709/14364092301592.gif" _src="http://wisdom.51lick.com/Public/upfile/20150709/14364092301592.gif" style=""/></p>
+						<p><span style="font-family:宋体">2.</span><span style="font-family:宋体">实名认证第二步：点击“未认证”进入“实名认证”页面；</span></p>
+						<p><img src="http://wisdom.51lick.com/Public/upfile/20150709/14364092386560.jpg" _src="http://wisdom.51lick.com/Public/upfile/20150709/14364092386560.jpg"/></p>
+						<p><span style="font-family:宋体">3.</span><span style="font-family:宋体">实名认证第三步：点击“扫描身份证”进行身份证扫描；</span></p>
+						<p><img src="http://wisdom.51lick.com/Public/upfile/20150709/14364091021978.jpg" _src="http://wisdom.51lick.com/Public/upfile/20150709/14364091021978.jpg"/></p>
+                        <p><span style="font-family:宋体">4.</span><span style="font-family:宋体">实名认证第四步：确认自己的信息正确之后点击“完成”结束认证。</span></p>
+                        <p><span style="font-family:宋体"><img src="http://wisdom.51lick.com/Public/upfile/20150709/14364091161288.jpg" _src="http://wisdom.51lick.com/Public/upfile/20150709/14364091161288.jpg"/></span></p>
+						<p><br/></p>
+                   </div>
+                   <li id = "seven">问：为什么要绑定银行帐户？</li>
+                    <div id = "sevena" style="display: none;">
+                        <p><span style="font-family:宋体">在小宝招商平台进行提现操作，需绑定实名认证的银行卡或其他账户。</span></p>
+                        <!--<p><span>1.</span><span style="font-family:宋体">提现规则说明：累积</span><span>300</span><span style="font-family:宋体">金币（</span><span>10</span><span style="font-family:宋体">金币</span><span>=1</span><span style="font-family:宋体">元人民币）。银票不能兑换成金币或人民币。</span><span>&nbsp;</span><span style="font-family:宋体">同时绑定支付宝或者银行卡是为了帮助您将金币提现。当您达到</span><span>300</span><span style="font-family:宋体">金币就可申请提现。您的申请提交后，小宝会在</span><span>3</span><span style="font-family:宋体">个工作日之内兑现。</span></p>-->
+                        <!--<p><span>2. </span><span style="font-family:宋体">绑定支付宝第一步：“我的”页面点击箭头进入“设置用户信息”页面；</span></p>-->
+                        <!--<p><span style="font-family:宋体"></span></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363452049280.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363452049280.png" style=""/></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363452143545.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363452143545.png" style=""/></p>-->
+                        <!--<p>3.<span style="font-family:宋体">绑定支付宝第二步：点击“我的收款账号“进入设置页面；</span></p>-->
+                        <!--<p><span style="font-family:宋体"><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363452359599.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363452359599.png"/></span></p>-->
+                        <!--<p><span>4.</span><span style="font-family:宋体">绑定支付宝第三步：点击“我的支付宝“；</span></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/1436345250658.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/1436345250658.png"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>-->
+                        <!--<p><span>5.</span><span style="font-family:宋体">绑定支付宝第四步：填写页面上所需信息并获取验证码，最后点击“确定“即可完成绑定；</span></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363452683596.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363452683596.png"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>-->
+                        <!--<p><span style="font-family:宋体">教你如何绑定银行卡？</span></p>-->
+                        <!--<p><span>1. </span><span style="font-family:宋体">绑定银行卡第一步：“我的”页面点击箭头进入“设置用户信息”页面；</span></p>-->
+                        <!--<p><span style="font-family:宋体"></span></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363453446256.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363453446256.png" style=""/></p>-->
+                        <!--<p><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363453471093.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363453471093.png" style=""/></p>-->
+                        <!--<p>2.<span style="font-family:宋体">绑定银行卡第二步：点击“我的收款账号“进入设置页面；</span></p>-->
+                        <!--<p><span style="font-family:宋体"><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363453748243.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363453748243.png"/></span></p>-->
+                        <!--<p><span>3.</span><span style="font-family:宋体">绑定银行卡第三步：点击”我的银行卡“添加；</span></p>-->
+                        <!--<p><span style="font-family:宋体"><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363453911315.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363453911315.png"/></span></p>-->
+                        <!--<p><span>4.</span><span style="font-family:宋体">绑定银行卡第四步：填写页面上所需信息并获取验证码，最后点击“确定“即可完成绑定；</span></p>-->
+                        <!--<p><span style="font-family:宋体"><img src="http://wisdom.51lick.com/Public/upfile/20150708/14363454079670.png" _src="http://wisdom.51lick.com/Public/upfile/20150708/14363454079670.png"/></span></p>-->
+                        <!--<p><span style="font-family:宋体"><br/></span></p>-->
+                        <p><br/></p>
+                   </div>
+                </ul>
+            </div>
+        </div>
+    </body>
+<js href="__STATIC__/jquery-1.11.2.min.js" />
+    <script>
+        //alert($("h4").length);
+        $("#one").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#onea").css('display')==='block'){
+                //alert(0);
+                $("#onea").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","block");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","none");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","none");
+				$("#sixa").css("display","none");
+                $("#sevena").css("display","none");
+            }
+        });
+        $("#two").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#twoa").css('display')==='block'){
+                //alert(0);
+                $("#twoa").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","block");
+                $("#threea").css("display","none");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","none");
+				$("#sixa").css("display","none");
+                $("#sevena").css("display","none");
+            }
+        });
+        $("#three").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#threea").css('display')==='block'){
+                //alert(0);
+                $("#threea").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","block");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","none");
+				$("#sixa").css("display","none");
+                $("#sevena").css("display","none");
+            }
+        });
+        $("#four").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#foura").css('display')==='block'){
+                //alert(0);
+                $("#foura").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","none");
+                $("#foura").css("display","block");
+                $("#fivea").css("display","none");
+				$("#sixa").css("display","none");
+                $("#sevena").css("display","none");
+            }
+        });
+        $("#five").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#fivea").css('display')==='block'){
+                //alert(0);
+                $("#fivea").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","none");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","block");
+				$("#sixa").css("display","none");
+                $("#sevena").css("display","none");
+            }
+        });
+		$("#six").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#sixa").css('display')==='block'){
+                //alert(0);
+                $("#sixa").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","none");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","none");
+				$("#sixa").css("display","block");
+                $("#sevena").css("display","none");
+            }
+		});
+        $("#seven").click(function(){
+            //alert($("#onea").is('display'));
+            if($("#sevena").css('display')==='block'){
+                //alert(0);
+                $("#sevena").css("display","none");
+            }else{
+                //alert(1);
+                $("#onea").css("display","none");
+                $("#twoa").css("display","none");
+                $("#threea").css("display","none");
+                $("#foura").css("display","none");
+                $("#fivea").css("display","none");
+                $("#sixa").css("display","none");
+                $("#sevena").css("display","block");
+            }
+        });
+    </script>
+<include file="Public/foot" />

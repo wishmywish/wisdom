@@ -1,0 +1,589 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+        <?PHP if($showDiv=="0"){?>
+			<li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>我的日志</li>
+            <li id="1" class="org_box"><span ></span>日志审阅</li>
+		<?PHP } else{ ?>
+			<li id="0" class="org_box"><span></span>我的日志</li>
+            <li id="1" class="org_box org_box_select"><span class="org_bot_cor"></span>日志审阅</li>
+		<?PHP }?>
+        </ul>
+    </div>
+    <form id="form1" action="{:U('Home/Office/reportReview')}" method="post" enctype="multipart/form-data">
+    <div class="report_center">
+    <input type="hidden" id="showDiv" name="showDiv" value="0"> 
+    <input type="hidden" id="searchType" name="searchType" value="1"> 
+    <input type="hidden" id="currentPage" name="currentPage" value="{$currentPage}" />
+    <input type="hidden" id="total" name="total" value="{$total}" />
+    <input type="hidden" id="pageSize" name="pageSize" value="{$pageSize}" />
+    <input type="hidden" id="totalPage" name="totalPage" value="{$totalPage}" />
+        <!--我的日志 -->
+        <?PHP if($showDiv=="0"){?>
+			<div id="a0" >
+		<?PHP } else{ ?>
+			<div id="a0"   style="display: none;" >
+		<?PHP }?>
+            <div class="report_head">
+                <span style="display: inline-block;">工作日志&nbsp;>&nbsp;我的日志</span>
+				<div class="column">
+					<span style="float: left;">筛选：</span>
+						<!-- 月时间-->
+						<div class="divTime">
+
+							<input type="hidden"  id="selectedDate" name="selectedDate" value={$selectedDate}>
+							<input class="bntns" type="button" value="本月" onclick="dateMoveClick(501)"> 
+							<input class="bntns" type="button" value="<" onclick="dateMoveClick(502)"> 
+							<span id="selectedDate_span" name="selectedDate_span">{$selectedDate}</span>
+							<input class="bntns" type="button" value=">" onclick="dateMoveClick(503)">
+						</div>
+					<!-- 员工部门-->
+					<div class="personmsg">
+					<!--
+						<input type="search" readonly="true" placeholder={$viewUserDetail_deptName} >
+						<span class="fa fa-sitemap fa-lg"></span> 
+						<input type="search"  readonly="true" placeholder={$viewUserDetail_name}  > 
+						<span class="fa fa-group fa-lg"></span>
+						-->
+					</div>
+					<!-- 按钮-->
+					<p
+						style="float: right;">
+						<input id="searchButton0" class="bntns1" type="button" value="搜索"  onclick="searchSubmit(1)"  style="">
+						<!--<input id="addButton0" class="bntns1" type="button" value="新增" onclick="addReport()"  style="background: #00a73c;">-->
+					</p>
+				</div>
+			</div>
+			<!--列表-->
+			<div class="report_list">
+				<table width="100%" cellspacing="0" cellpadding="0" border="0"
+					class="TabRili">
+					<thead>
+						<tr>
+							<td>星期日</td>
+							<td>星期一</td>
+							<td>星期二</td>
+							<td>星期三</td>
+							<td>星期四</td>
+							<td>星期五</td>
+							<td>星期六</td>
+						</tr>
+					</thead>
+					<tbody>
+					  <for start="0" end="6">
+						<tr>
+							<td id="calBox2" class="calBox">
+								<div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+1]['day']}</div>
+								  <ul class="list" style="cursor: pointer;" >
+									<li  title={$days[$i*7+1]["value_t"]} onclick='showDetail({$days[$i*7+1]["id"]})'>{$days[$i*7+1]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+1]["value_t"]} onclick='showDetail({$weeks[$i*7+1]["id"]})'>{$weeks[$i*7+1]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+1]["value_t"]} onclick='showDetail({$month[$i*7+1]["id"]})'>{$month[$i*7+1]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+1]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+2]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+2]["value_t"]} onclick='showDetail({$days[$i*7+2]["id"]})'>{$days[$i*7+2]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+2]["value_t"]} onclick='showDetail({$weeks[$i*7+2]["id"]})'>{$weeks[$i*7+2]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+2]["value_t"]} onclick='showDetail({$month[$i*7+2]["id"]})'>{$month[$i*7+2]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+2]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+3]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+3]["value_t"]} onclick='showDetail({$days[$i*7+3]["id"]})'>{$days[$i*7+3]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+3]["value_t"]} onclick='showDetail({$weeks[$i*7+3]["id"]})'>{$weeks[$i*7+3]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+3]["value_t"]} onclick='showDetail({$month[$i*7+3]["id"]})'>{$month[$i*7+3]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+3]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+4]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+4]["value_t"]} onclick='showDetail({$days[$i*7+4]["id"]})'>{$days[$i*7+4]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+4]["value_t"]} onclick='showDetail({$weeks[$i*7+4]["id"]})'>{$weeks[$i*7+4]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+4]["value_t"]} onclick='showDetail({$month[$i*7+4]["id"]})'>{$month[$i*7+4]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+4]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+5]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+5]["value_t"]} onclick='showDetail({$days[$i*7+5]["id"]})'>{$days[$i*7+5]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+5]["value_t"]} onclick='showDetail({$weeks[$i*7+5]["id"]})'>{$weeks[$i*7+5]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+5]["value_t"]} onclick='showDetail({$month[$i*7+5]["id"]})'>{$month[$i*7+5]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+5]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+6]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+6]["value_t"]} onclick='showDetail({$days[$i*7+6]["id"]})'>{$days[$i*7+6]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+6]["value_t"]} onclick='showDetail({$weeks[$i*7+6]["id"]})'>{$weeks[$i*7+6]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+6]["value_t"]} onclick='showDetail({$month[$i*7+6]["id"]})'>{$month[$i*7+6]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+6]["id"]}>
+							</td>
+							<td id="calBox2" class="calBox">
+								  <div align="left" id="2015-09-01" calbox="calBox2" class="Num">{$days[$i*7+7]["day"]}</div>
+								  <ul class="list"  style="cursor: pointer;" >
+									<li  title={$days[$i*7+7]["value_t"]} onclick='showDetail({$days[$i*7+7]["id"]})'>{$days[$i*7+7]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$weeks[$i*7+7]["value_t"]} onclick='showDetail({$weeks[$i*7+7]["id"]})'>{$weeks[$i*7+7]["value"]}&nbsp;</li>
+									<br>
+									<li  title={$month[$i*7+7]["value_t"]} onclick='showDetail({$month[$i*7+7]["id"]})'>{$month[$i*7+7]["value"]}&nbsp;</li>
+								 </ul>
+								 <input  type="hidden"  id="reportID" name="id0" value={$days[$i*7+7]["id"]}>
+							</td>
+						</tr>
+    				</for>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!--工作审阅-->
+		<?PHP if($showDiv=="1"){?>
+			<div id="a1" >
+		<?PHP }else{ ?>
+			<div id="a1"   style="display: none;" >
+		<?PHP }?>
+			<div class="report_head">
+				<span style="display: inline-block;">工作日志&nbsp;>&nbsp;日志审阅</span>
+				<!--<form id="form1" action="{:U('Home/Office/reportReview')}" method="post" enctype="multipart/form-data">-->
+				<div class="column">
+					<span style="float: left;">筛选：</span>
+					<input type="hidden" id="li_type" name="li_type" value="li_ri"> 
+					<ul>
+						<li class="selected" id="li_ri">日</li>
+						<li id="li_zhou">周</li>
+						<li id="li_yue">月</li>
+						<li style="border-right: 1px solid #eaeaea;" id="li_qujian">区间</li>
+					</ul>
+					<div id="timeChoose">
+						<!-- 日时间-->
+						<div id="dailyTime" class="divTime">
+							<input class="bntns" type="button" value="本日" onclick="dateMoveClick('101')"> 
+							<input class="bntns" type="button" value="<" onclick="dateMoveClick('102')"> 
+								<span id="ri_span" name="ri_span">{$ri_date}</span>
+								<input type="hidden" id="ri_date" name="ri_date" value={$ri_date}> 
+							<input class="bntns" type="button" value=">" onclick="dateMoveClick('103')">
+						</div>
+						<!--周时间-->
+						<div id="weekTime" class="divTime" style="display: none">
+							<input class="bntns" type="button" value="本周" onclick="dateMoveClick('201')"> 
+							<input class="bntns" type="button" value="<" onclick="dateMoveClick('202')"> 
+								<span id="zhouF_span" name="zhouF_span">{$zhou_dateF}</span>- <span id="zhouT_span" name="zhouT_span">{$zhou_dateT}</span>
+								<input type="hidden" id="zhou_dateF" name="zhou_dateF" value={$zhou_dateF}> 
+								<input type="hidden" id="zhou_dateT" name="zhou_dateT" value={$zhou_dateT}> 
+								 <input class="bntns" type="button" value=">" onclick="dateMoveClick('203')">
+						</div>
+						<!-- 月时间-->
+						<div id="month_time" class="divTime" style="display: none">
+							<input class="bntns" type="button" value="本月" onclick="dateMoveClick('301')"> 
+							<input class="bntns" type="button" value="<" onclick="dateMoveClick('302')"> 
+							<span id="yue_span" name="yue_span">{$yue_date}</span>
+							<input type="hidden" id="yue_date" name="yue_date" value={$yue_date}> 
+							<input class="bntns" type="button" value=">" onclick="dateMoveClick('303')">
+						</div>
+						<!-- 区间时间-->
+						<div id="section" class="divTime" style="display: none">
+							<input id="startdate"  name="startdate" class="laydate-icon"  style="width: 100px; height: 25px;" value={$startdate} >
+							&nbsp;至&nbsp; 
+							<input id="enddate"  name="enddate" class="laydate-icon"   style="width: 100px; height: 25px;" value={$enddate} >
+						</div>
+					</div>
+					<!-- 员工部门-->
+					<div class="personmsg">
+						<input type="search" id="deptNames"  name = "deptNames" style="text-overflow: ellipsis;white-space:nowrap;overflow:hidden;" placeholder="所属部门" value={$deptNames}> <span class="fa fa-sitemap fa-lg" onclick="selectDepts();"></span> 
+						<input type="hidden" id="deptIds"  name = "deptIds" value={$deptIds} >  
+						<input type="search" id="userNames"  name = "userNames" style="text-overflow: ellipsis;white-space:nowrap;overflow:hidden;"  placeholder="员工" value={$userNames}> <span class="fa fa-group fa-lg" onclick="selectUsers();"></span>
+						<input type="hidden" id="userIds"  name = "userIds" value={$userIds} >
+					</div>
+					<!-- 按钮-->
+					<p
+						style="float: left; height: 25px; width: 250px; margin: 12px 0 0 760px;">
+						<input id="searchButton1" class="bntns1" type="button" value="搜索" onclick="searchSubmit('4')">
+						<input id="resetButton1" class="bntns1" type="button" value="清空" onclick="cleanButton('4')">
+						<!--<input id="exprotButton" class="bntns1" type="button" value="导出">-->
+					</p>
+				</div>
+				<!--</form>-->
+			</div>
+			<!--列表-->
+			<div class="report_list">
+				<div class="title">
+					<ul>
+						<li style="width: 10%">日志类型</li>
+						<li style="width: 15%">日志人</li>
+						<li style="width: 45%">内容</li>
+						<li style="width: 15%">时间</li>
+						<li style="width: 15%">状态</li>
+					</ul>
+				</div>
+				<div class="contentList">
+				<volist name="getCheckWorkReportList_list" id="vo">
+				 	<ul>
+				        <li style="width: 10%">{$vo['type']}</li>
+                        <li style="width: 15%">{$vo['createPerple']}</li>
+                        <li style="width: 45%;cursor: pointer;" onclick="showReviewDetail({$vo['reportId']})"><a>{$vo['content']}</a></li>
+                        <li style="width: 15%">{$vo['title']}</li>
+                        <li style="width: 15%">{$vo['state']}</li>
+                	</ul>
+				</volist>
+				<empty name="getCheckWorkReportList_list">
+                    <ul><li style="width: 100%;color:#f47469;">无数据!</li></ul>
+                </empty>
+            </div>
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+<include file="Public/loadjs" />
+<script>
+	//新增日志
+	function addReport(){
+		layer.open({
+			type:2,
+			title :['新增日志','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+			area: ['900px', '505px'],
+			shadeClose: false, //点击遮罩关闭
+			content: APP+'/Home/Office/addReport'
+		});
+	}
+
+	//我的日志详情
+	function showDetail(reportID) {
+		if(reportID == "") {
+			return false;
+		}
+		
+		layer.open({
+			type:2,
+			title :['日志详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+			area: ['700px', '400px'],
+			shadeClose: false, //点击遮罩关闭
+			content: APP+'/Home/Office/showReport?reportID='+reportID
+		});
+	}
+
+	//日志审阅详情
+	function showReviewDetail(reportID) {
+		layer.open({
+			type:2,
+			title :['日志审阅详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+			area: ['700px', '400px'],
+			shadeClose: false, //点击遮罩关闭
+			content: APP+'/Home/Office/showReportReviewDetail?reportID='+reportID
+		});
+	}
+
+	function cleanButton(idValue){
+		document.getElementById("deptNames").value = "";
+		document.getElementById("deptIds").value = "";
+		document.getElementById("userNames").value = "";
+		document.getElementById("userIds").value = "";
+	}
+	
+	//选择用户
+    function selectUsers() {
+        var userNames = $("#userNames").val();
+        var userIds = $("#userIds").val();
+        layer.open({
+            type:2,
+            title :['选择用户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+
+	//选择部门
+    function selectDepts() {
+        var deptNames = $("#deptNames").val();
+        var deptIds = $("#deptIds").val();
+        layer.open({
+            type:2,
+            title :['选择部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['400px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectDepts')}" + "?deptNames=" + deptNames + "&deptIds=" + deptIds,
+        });
+    }
+    
+	//点击前一日按钮
+	function dateMoveClick(idValue) {
+		//本日
+		if (idValue ==101){
+			document.getElementById("ri_date").value = new Date().Format("yyyy-MM-dd")
+			document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+			//alert (document.getElementById("ri_date").value)
+		}
+		//前一日
+		if (idValue ==102){
+			var curDate =document.getElementById("ri_date").value;
+		    curDate = new Date(Date.parse(curDate.replace(/-/g, "/")));  
+		    var preDate = new Date(curDate.getTime() - 24*60*60*1000);  //前一天
+		    document.getElementById("ri_date").value = preDate.Format("yyyy-MM-dd")
+		    document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+		    //alert (document.getElementById("ri_date").value)
+		}
+		//后一日
+		if (idValue ==103){
+			var curDate =document.getElementById("ri_date").value;
+		    curDate = new Date(Date.parse(curDate.replace(/-/g, "/")));  
+		    var nextDate = new Date(curDate.getTime() + 24*60*60*1000);  //后一天
+		    document.getElementById("ri_date").value = nextDate.Format("yyyy-MM-dd")
+		    document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+		    //alert (document.getElementById("ri_date").value)
+		}
+		
+		//本周
+		if (idValue ==201){
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000);  //后一天
+			var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  //后一天
+			document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+		}
+		//前一周 zhou_dateF
+		if (idValue ==202){ 
+			var oldFromDate =document.getElementById("zhou_dateF").value;
+			var oldToDate =document.getElementById("zhou_dateT").value;
+			oldFromDate = new Date(Date.parse(oldFromDate.replace(/-/g, "/")));  
+			oldToDate = new Date(Date.parse(oldToDate.replace(/-/g, "/"))); 
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(oldFromDate.getTime() - 7*24*60*60*1000);  //后一天
+			var toDate = new Date(oldToDate.getTime() - 7*24*60*60*1000);  //后一天
+			document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+		}
+		//后一周
+		if (idValue ==203){
+			var oldFromDate =document.getElementById("zhou_dateF").value;
+			var oldToDate =document.getElementById("zhou_dateT").value;
+			oldFromDate = new Date(Date.parse(oldFromDate.replace(/-/g, "/")));  
+			oldToDate = new Date(Date.parse(oldToDate.replace(/-/g, "/"))); 
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(oldFromDate.getTime() + 7*24*60*60*1000);  //后一天
+			var toDate = new Date(oldToDate.getTime() + 7*24*60*60*1000);  //后一天
+			document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+			document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+		}
+		
+		//本月
+		if (idValue ==301){
+			document.getElementById("yue_date").value = new Date().Format("yyyy-MM")
+			document.getElementById("yue_span").innerHTML=document.getElementById("yue_date").value
+			//alert (document.getElementById("ri_date").value)
+		}
+		//前一月
+		if (idValue ==302){
+			strDate = document.getElementById("yue_date").value+"-01"
+			now = new Date(strDate.replace(/\-/g,"/"));
+			perMonth =new Date( now.setMonth(now.getMonth() - 1));
+			//alert (perMonth.Format("yyyy-MM"));
+			document.getElementById("yue_date").value = perMonth.Format("yyyy-MM");
+			document.getElementById("yue_span").innerHTML=perMonth.Format("yyyy-MM");
+		}
+		//后一月
+		if (idValue ==303){
+			strDate = document.getElementById("yue_date").value+"-01"
+			now = new Date(strDate.replace(/\-/g,"/"));
+			perMonth =new Date( now.setMonth(now.getMonth() + 1));
+			//alert (perMonth.Format("yyyy-MM"));
+			document.getElementById("yue_date").value = perMonth.Format("yyyy-MM");
+			document.getElementById("yue_span").innerHTML=perMonth.Format("yyyy-MM");
+		}
+		//区间 startdate
+		if (idValue ==401){
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000);  //后一天
+			var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  //后一天
+			document.getElementById("startdate").value=fromDate.Format("yyyy-MM-dd")
+			document.getElementById("enddate").value=toDate.Format("yyyy-MM-dd")
+		}
+		
+		//本月
+		if (idValue ==301){
+			document.getElementById("yue_date").value = new Date().Format("yyyy-MM")
+			document.getElementById("yue_span").innerHTML=document.getElementById("yue_date").value
+			//alert (document.getElementById("ri_date").value)
+		}
+		//本月    我的日志
+		if (idValue ==501){
+			document.getElementById("selectedDate").value = new Date().Format("yyyy-MM");
+			document.getElementById("selectedDate_span").innerHTML=document.getElementById("selectedDate").value;
+		}
+		//前一月  我的日志
+		if (idValue ==502){
+			strDate = document.getElementById("selectedDate").value+"-01"
+			now = new Date(strDate.replace(/\-/g,"/"));
+			perMonth =new Date( now.setMonth(now.getMonth() - 1));
+			//alert (perMonth.Format("yyyy-MM"));
+			document.getElementById("selectedDate").value = perMonth.Format("yyyy-MM");
+			document.getElementById("selectedDate_span").innerHTML=perMonth.Format("yyyy-MM");
+		}
+		//后一月  我的日志
+		if (idValue ==503){
+			strDate = document.getElementById("selectedDate").value+"-01"
+			now = new Date(strDate.replace(/\-/g,"/"));
+			perMonth =new Date( now.setMonth(now.getMonth() + 1));
+			//alert (perMonth.Format("yyyy-MM"));
+			document.getElementById("selectedDate").value = perMonth.Format("yyyy-MM");
+			document.getElementById("selectedDate_span").innerHTML=perMonth.Format("yyyy-MM");
+		}
+	}
+
+	function searchSubmit(searchTypeValue) {
+		if(searchTypeValue == '4') {
+			document.getElementById("showDiv").value = '1';
+		} else {
+			document.getElementById("showDiv").value = '0';
+		}
+		var searchType = document.getElementById('searchType');
+		searchType.value = searchTypeValue;
+		document.getElementById('form1').submit();
+	}
+
+	$(function() {
+		Cookie.eraseCookie("bigMenuIndex");
+		Cookie.eraseCookie("smallMenuIndex");
+		Cookie.createCookie("bigMenuIndex", 2);
+		Cookie.createCookie("smallMenuIndex", 3);
+
+		var start = {
+			elem : '#startdate',
+			format : 'YYYY-MM-DD',
+			min : laydate.now(-365*10), //设定最小日期为当前日期
+			max : laydate.now(), //最大日期
+			//istime: true,
+			istoday : false,
+			choose : function(datas) {
+				end.min = datas; //开始日选好后，重置结束日的最小日期
+				end.start = datas //将结束日的初始值设定为开始日
+			}
+		};
+		var end = {
+			elem : '#enddate',
+			format : 'YYYY-MM-DD',
+			min : laydate.now(-365*10),
+			max : laydate.now(+10),
+			//istime: true,
+			istoday : false,
+			choose : function(datas) {
+				start.max = datas; //结束日选好后，重置开始日的最大日期
+			}
+		};
+		laydate(start);
+		laydate(end);
+	})
+
+	//    菜单轮换点击事件
+	$(".column li").click(function() {
+		var index = $(".column li").index($(this));
+		$(this).addClass("selected").siblings().removeClass("selected");
+		$divList = $("#timeChoose").children("div");
+		$divList.hide();
+		$divList.eq(index).show();
+		if (index == 0) {
+			var li_tp = document.getElementById("li_type")
+			li_tp.value="li_ri";
+			//alert (document.getElementById("li_type").value);
+		}
+		if (index == 1) {
+			var li_tp = document.getElementById("li_type")
+			li_tp.value="li_zhou";
+			//alert (document.getElementById("li_type").value);
+		}
+		if (index == 2) {
+			var li_tp = document.getElementById("li_type")
+			li_tp.value="li_yue";
+			//alert (document.getElementById("li_type").value);
+		}
+		if (index == 3) {
+			var li_tp = document.getElementById("li_type")
+			li_tp.value="li_qujian";
+			//alert (document.getElementById("li_type").value);
+		}
+	})
+
+	$('#bigmenu li').click(function() {
+		//$("#business_success_page").empty();
+		var lilen = $('#bigmenu li').length;
+		$('#bigmenu li').removeClass('org_box org_box_select');
+		$('#bigmenu li span').removeClass('org_bot_cor');
+		$('#bigmenu li').attr('class', 'org_box');
+		//$(this).children().addClass('org_bot_cor');
+		$(this).attr('class', 'org_box  org_box_select');
+		$(this).children('span').attr('class', 'org_bot_cor');
+		for (var i = 0; i < lilen; i++) {
+			$('#a' + i).hide();
+			if ($(this).index() == i) {
+				$('#a' + i).show();
+			}
+		}
+		if ($(this).index() == 1) {
+			var showDiv = document.getElementById("showDiv")
+			showDiv.value="1";
+		}else{
+			var showDiv = document.getElementById("showDiv")
+			showDiv.value="0";
+		}
+	});
+	
+	var showDiv =  '<?php echo $showDiv;?>';
+	var li_typeValue = '<?php echo $li_type;?>';
+	var yue_date =  '<?php echo $yue_date;?>';
+	if (yue_date==""){
+		dateMoveClick(101);
+		dateMoveClick(201);
+		dateMoveClick(301);
+		dateMoveClick(401);
+	}
+	
+    function createPageBar(t,ps,p,tp) {
+		total = document.getElementById("total").value;   //总记录数
+		pageSize = document.getElementById("pageSize").value;   //每页显示条数
+		page = document.getElementById("currentPage").value;  //当前页
+		totalPage = document.getElementById("totalPage").value;  //总页数
+        getPageBar1("pagebar");
+    }
+    
+    $(document).on('click','#pagebar span a',function(){
+        var rel = $(this).attr("rel");
+        document.getElementById("currentPage").value=rel;
+		//alert(document.getElementById("currentPage").value);
+		searchSubmit(9);
+    });
+	document.getElementById(showDiv).click();
+	document.getElementById(li_typeValue).click();
+	//createPageBar('{$getNoticeList_total}', '{$getNoticeList_pageSize}', '{$getNoticeList_page}', '{$getNoticeList_totalPage}');
+	createPageBar();
+</script>
+</body>
+</html>

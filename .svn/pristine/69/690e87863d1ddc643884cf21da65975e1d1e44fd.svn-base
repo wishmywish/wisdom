@@ -1,0 +1,10 @@
+body,div,ul,li,p,img,h1,h2,h3,h4,dl,dt,dd{ margin: 0; padding: 0 ;list-style: none;}
+html,body{  margin: 0 auto;  font-size: 12px;  font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;  background: #fafafa; padding:0;  }
+
+/*头部样式*/
+.header {background: #f3f4f9 none repeat scroll 0 0;border-bottom: 1px solid #d7d8db;height: 40px;color: #717071;}
+.head_left{float: left;margin-top: 12px;}
+.head_right{float: right;margin-top: 12px;}
+.head_right ul li{float: left;list-style:none;}
+.head_right ul span{margin: 0 12px;}
+.head_right a{color: #7d7d7d;}

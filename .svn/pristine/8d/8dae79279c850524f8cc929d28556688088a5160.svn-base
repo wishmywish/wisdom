@@ -1,0 +1,30 @@
+<!--     <div id="center">
+        <i class='fa fa-flag' style='    font-size: 40px;color: #77DDFF;'></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a href="__APP__/Home/Business/proCheck?dealerid={$dealerid}" style="text-decoration:none;color:black;cursor:pointer;">中标</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:<eq name='comContract' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isContract({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">合同</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color: <eq name='comRemit' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isRemit({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">打款</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='finishDispatch' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isDispatch({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">发货</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='receive' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isReceive({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">收货</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='square' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isSettlement({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">结算</a></span>
+
+    </div> -->
+
+
+    <div id="center">
+        <i class='fa fa-flag' style='    font-size: 40px;color: #77DDFF;'></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a href="__APP__/Home/Business/proCheck?dealerid={$dealerid}" style="text-decoration:none;color:black;cursor:pointer;">中标</a><p style="    margin-left: -33px;">{$time1}</p></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 30px;padding-right: 30px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:<eq name='comContract' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isContract11({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">合同</a><neq name='deaTime1' value='1'><p style="    margin-left: -33px;"><p style="    margin-left: -33px;">{$deaTime1}</p></neq><neq name='comTime1' value='1'><p style="    margin-left: -33px;">{$comTime1}</p></neq></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 30px;padding-right: 30px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color: <eq name='comRemit' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isRemit11({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">打款</a><neq name='comRemitTime' value='1'><p style="    margin-left: -33px;"><p style="    margin-left: -33px;">{$comRemitTime}</p></neq></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 30px;padding-right: 30px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='finishDispatch' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isDispatch11({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">发货</a><neq name='dispatchTime1' value='1'><p style="    margin-left: -33px;"><p style="    margin-left: -33px;">{$dispatchTime1}</p></neq></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 30px;padding-right: 30px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='receive' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isReceive11({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">收货</a><neq name='receiveTime1' value='1'><p style="    margin-left: -33px;"><p style="    margin-left: -33px;">{$receiveTime1}</p></neq></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 30px;padding-right: 30px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='square' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isSettlement11({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">结算</a><neq name='squareTime1' value='1'><p style="    margin-left: -33px;"><p style="    margin-left: -33px;">{$squareTime1}</p></neq></span>
+
+    </div>

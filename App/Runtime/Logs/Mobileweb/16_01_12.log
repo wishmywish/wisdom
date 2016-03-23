@@ -1,0 +1,1332 @@
+[ 2016-01-12T10:09:30+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck1?userid=1&taskid=696
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 模板不存在:./App/Mobileweb/View/Default/Events/superviseCheck1.html
+
+[ 2016-01-12T10:10:01+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=696
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 696 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=696 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.096005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-01-12T10:10:06+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '696' AND `f_userid` = 1 AND `f_serial` = 1 AND `f_netserial` = 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_surveyuserchoices` (`f_taskid`,`f_userid`,`f_serial`,`f_netserial`,`f_answer`,`f_ctime`) VALUES ('696','1','1','0','0','1452564606') [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T10:10:06+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=696&netserial=&superid=&longitude=&latitude=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 696 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=696 )  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-01-12T10:10:08+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '696' AND `f_userid` = 1 AND `f_serial` = 2 AND `f_netserial` = 0 LIMIT 1   [ RunTime:0.0060s ]
+SQL: INSERT INTO `t_surveyuserchoices` (`f_taskid`,`f_userid`,`f_serial`,`f_netserial`,`f_answer`,`f_ctime`) VALUES ('696','1','2','0','','1452564608') [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T10:10:09+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseNext
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `t_surveyuserchoices` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveyuserchoices` WHERE `f_taskid` = '696' AND `f_userid` = 1 AND `f_serial` = 3 AND `f_netserial` = 0 LIMIT 1   [ RunTime:0.0040s ]
+SQL: INSERT INTO `t_surveyuserchoices` (`f_taskid`,`f_userid`,`f_serial`,`f_netserial`,`f_answer`,`f_ctime`) VALUES ('696','1','3','0','','1452564609') [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-01-12T10:11:17+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: INSERT INTO `t_taskdraw` (`f_taskid`,`f_userid`,`f_utask_status`,`f_drawdate`) VALUES ('719','1','2','1452564677') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-01-12T10:14:08+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-01-12T10:14:12+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T10:15:39+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T10:15:42+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2016-01-12T10:17:02+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-01-12T10:18:38+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id LEFT JOIN t_task ON t_task.f_tid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=719 ) ORDER BY f_distance asc  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 162 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 160 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 163 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 167 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 164 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 159 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 165 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 177 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 180 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 168 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 170 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 174 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 172 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 161 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 169 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 175 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 171 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 176 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 166 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 178 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 179 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 173 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-12T10:18:54+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id LEFT JOIN t_task ON t_task.f_tid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=719 ) ORDER BY f_distance asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 162 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 160 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 163 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 167 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 164 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 159 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 165 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 177 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 180 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 168 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 170 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 174 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 172 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 161 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 169 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 175 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 171 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 176 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 166 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 178 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 179 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 173 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T10:18:55+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/supervise?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `t_tasksuperaddress` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasksuperaddress` LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_tasksuperaddress.f_task_id LEFT JOIN t_task ON t_task.f_tid = t_tasksuperaddress.f_task_id  WHERE ( f_task_id=719 ) ORDER BY f_distance asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 162 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 160 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 163 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 167 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 164 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 159 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 165 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 177 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 180 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 168 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 170 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 174 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 172 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 161 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 169 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 175 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 171 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 176 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 166 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 178 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 179 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 AND `f_superAddressID` = 173 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\63d9c7308df54f0593662f02e9a0837f.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T10:22:24+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-12T10:22:28+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.3080s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-01-12T10:22:34+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T10:22:37+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-01-12T10:24:01+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005001s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.068004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.069004s ]
+
+[ 2016-01-12T10:24:04+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T10:24:07+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.3040s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-01-12T10:24:43+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T10:24:46+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T10:26:31+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/superviseCheck?userid=1&taskid=719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_taskdraw` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskdraw` WHERE `f_taskid` = 719 AND `f_userid` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid  WHERE ( f_taskid=719 )  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\0a7d96152cf50f6f0651097a8c9bda46.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T14:49:04+08:00 ] ::1 /wisdom/index.php/Mobileweb/Index/invite
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\50e75f1468c7e1664ccd92b1270a2ae4.php 第 3 行.
+NOTIC: [8] Undefined variable: userid D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\50e75f1468c7e1664ccd92b1270a2ae4.php 第 145 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T14:49:29+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/acitivty
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 非法操作:acitivty
+
+[ 2016-01-12T14:50:07+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 57 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T14:50:17+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T14:56:58+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T14:58:49+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T14:58:53+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:04:46+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T15:04:52+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:07:47+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T15:07:51+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-01-12T15:09:01+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-01-12T15:15:50+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T15:15:52+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T15:15:52+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-01-12T15:41:57+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activity
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 57 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 58 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 74 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\b5267e01ce5f5a22043e3d32417430a1.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-12T15:42:29+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:42:31+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-12T15:44:34+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2016-01-12T15:45:19+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013001s ]
+
+[ 2016-01-12T15:45:20+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:45:46+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.020001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013000s ]
+
+[ 2016-01-12T15:45:47+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:45:47+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2016-01-12T15:45:48+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2016-01-12T15:47:01+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:47:02+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T15:48:13+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-01-12T15:48:18+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-12T15:49:57+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-01-12T15:50:04+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-01-12T15:50:05+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-01-12T15:50:06+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-01-12T16:43:21+08:00 ] ::1 /wisdom/index.php/Mobileweb/Events/activitys
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: webtitle D:\wamp\www\wisdom\App\Runtime\Cache\Mobileweb\4d74b8d4706b643b4974e919884ffcb7.php 第 3 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

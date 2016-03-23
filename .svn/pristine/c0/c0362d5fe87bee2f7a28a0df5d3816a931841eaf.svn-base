@@ -1,0 +1,20 @@
+/* 
+    Created on : 2015-5-26, 12:02:15
+    Author     : Luoqq
+*/
+
+html,body{background-color: #f6f6f6;}
+.ui-overlay-a{background-color: #f6f6f6;}
+.ui-overlay-b{background-color: #f6f6f6;}
+ul{list-style: none;margin:0;padding:0;}
+img{border:none;width: 100%;}
+
+
+.web_title{width: 100%;height: 30px;line-height: 30px;font-weight: bold;clear: both;}
+/*li{float: left;height: 30px;line-height: 30px;overflow: hidden;white-space:nowrap;word-break:keep-all;display:block;}*/
+
+.helplist li{height: 30px;line-height: 30px;overflow: hidden;white-space:nowrap;word-break:keep-all;display:block;font-weight: bold;border-bottom: 2px #EAEAEA solid;color:#06c;}
+
+#onea,#twoa,#threea,#foura,#fivea{margin-bottom: 8px;}
+
+.even_icon{width:50%;margin: 0px auto;}

@@ -1,0 +1,282 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            新增地址
+        </div>
+    </div>
+    <div class="check_center">
+        <!--输入框-->
+        <div class="check_head1">
+            <span style="display: inline-block;">签到考勤&nbsp;>&nbsp;新增地址</span>
+        </div>
+        <p style="margin-bottom: 40px;"><input onclick="location.href='{:U('Office/checking')}?return=1'" type="button" value="返回" style="float:right;border: 1px; height: 25px;width: 70px;background: #14bce1;color: #fff; cursor: pointer;"></p>
+        <!--列表-->
+        <div class="check_list">
+            <div class="titleAdd">新增地址</div>
+            <form id="form1">
+            <div class="contentListAdd">
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>序号</span>
+                    <input id="orderNo" name="orderNo" style="width: 280px;" type="text">
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>名称</span>
+                    <input id="name" name="name" style="width: 280px;" type="text">
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>人员范围</span>
+                    <input id="userNames" name="userNames" style="width: 280px;" type="text" readonly="readonly" onclick="selectUsers();">
+                    <span style="position: absolute;margin-left: -107px;margin-top: 2px;color: #CCCCCC" class="fa fa-search fa-lg" onclick="selectUsers();"></span>
+                    <input id="userIds" name="userIds" style="width: 280px;" type="hidden">
+                </div>
+                <div class="lineTop">
+                    <span>定位信息</span>
+                    <select name="countryId" id="countryId" onchange="changeCountry(this.value);">
+                        <option value=""></option>
+                        <notEmpty name="countryList.list">
+                        <volist name="countryList.list" id="countryList">
+                            <option value="{$countryList.countryId}">{$countryList.countryName}</option>
+                        </volist>
+                        </notEmpty>
+                    </select>
+                    <select name="provinceId" id="provinceId" onchange="changeProvince(this.value);">
+                        <option value=""></option>
+                    </select>
+                    <select name="cityId" id="cityId">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>详细地址</span>
+                    <input id="address" name="address" style="width: 280px;" type="text">
+                    <span style="position: absolute;margin-left: -107px;margin-top: 2px;color: #CCCCCC" class="fa fa-search fa-lg" onclick=""></span>
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>经纬度</span>
+                    <input id="x" name="x" style="width: 136px;" type="text" onclick="showMap()">
+                    <input id="y" name="y" style="width: 136px;" type="text" onclick="showMap()">
+                </div>
+                <div id="allmap"></div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>允许偏移距离(米)</span>
+                   <input id="checkDistance" name="checkDistance" style="width: 280px;" type="text">
+                </div>
+                <div class="lineTop">
+                    <label style="margin-left: 175px;">
+                        <input id="isCheck" name="isCheck" style="vertical-align: middle;" type="checkbox" onclick="if(this.checked){value=1;}else{value=0;}"  />
+                        超出偏差距离后允许签到
+                    </label>
+                </div>
+            </div>
+            </form>
+            <div class="check_btn" style="float: left;margin: -40px 0 0 -100px;">
+                <button class="bntns" onclick="doSubmit();">提交</button>
+                <button class="bntns" style="background: #fafafa;color: #595758;" onclick="location.href='{:U('Office/checking')}?return=1'">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CBiu8d6o1peWFBWqvzYGA7fy"></script>
+<script>
+    $(function(){
+    });
+
+
+        //百度地图API功能,显示api
+        function showMap() {
+
+            //设置地图的显示的城市，如果选了城市，就是城市，没选就是省，省没选就是中国,默认是中国
+            var provinceId = $("#provinceId").val(); //省id
+            var province = $("#province"+provinceId).text();  //省
+            var cityId = $("#cityId").val();  //城市id
+            var city = $("#city"+cityId).text();  //城市
+
+            layer.open({
+                type:2,
+                title :['经纬度选择','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+                area: ['800px', '520px'],
+                shadeClose: true, //点击遮罩关闭
+                content: "{:U('Office/showMap')}"+"?province="+province+"&city="+city,
+            });
+        }
+
+
+
+        function doSubmit() {
+        var orderNoObj = $("#orderNo");
+        if (getValLen(orderNoObj) == 0) {
+            layer.msg("序号不能为空",{icon: 8});
+            orderNoObj.focus();
+            return false;
+        } else if (getValLen(orderNoObj) > 16) {
+            layer.msg("序号最多为16字",{icon: 8});
+            orderNoObj.focus();
+            return false;
+        }
+
+        var nameObj = $("#name");
+        if (getValLen(nameObj) == 0) {
+            layer.msg("名称不能为空",{icon: 8});
+            nameObj.focus();
+            return false;
+        } else if (getValLen(nameObj) > 16) {
+            layer.msg("名称最多为16字",{icon: 8});
+            nameObj.focus();
+            return false;
+        }
+
+        var userIdsObj = $("#userIds");
+        if (getValLen(userIdsObj) == 0) {
+            layer.msg("人员范围不能为空",{icon: 8});
+            userIdsObj.focus();
+            return false;
+        }
+        
+        var countryIdObj = $("#countryId");
+        if (getValLen(countryIdObj) == 0) {
+            layer.msg("国家不能为空",{icon: 8});
+            countryIdObj.focus();
+            return false;
+        } 
+        
+        var provinceIdObj = $("#provinceId");
+        if (getValLen(provinceIdObj) == 0) {
+            layer.msg("省份不能为空",{icon: 8});
+            provinceIdObj.focus();
+            return false;
+        } 
+        
+        var cityIdObj = $("#cityId");
+        if (getValLen(cityIdObj) == 0) {
+            layer.msg("城市不能为空",{icon: 8});
+            cityIdObj.focus();
+            return false;
+        } 
+        
+        var addressObj = $("#address");
+        if (getValLen(addressObj) == 0) {
+            layer.msg("详细地址不能为空",{icon: 8});
+            addressObj.focus();
+            return false;
+        } 
+        
+        var xObj = $("#x");
+        if (getValLen(xObj) == 0) {
+            layer.msg("经度不能为空",{icon: 8});
+            xObj.focus();
+            return false;
+        } else if (getValLen(xObj) > 200) {
+            layer.msg("经度最多为200字",{icon: 8});
+            xObj.focus();
+            return false;
+        } 
+        
+        var yObj = $("#y");
+        if (getValLen(yObj) == 0) {
+            layer.msg("纬度不能为空",{icon: 8});
+            yObj.focus();
+            return false;
+        } 
+
+        var checkDistanceObj = $("#checkDistance");
+        if (getValLen(checkDistanceObj) == 0) {
+            layer.msg("允许偏移距离不能为空",{icon: 8});
+            checkDistanceObj.focus();
+            return false;
+        } else if (getValLen(checkDistanceObj) > 16) {
+            layer.msg("允许偏移距离最多为16字",{icon: 8});
+            checkDistanceObj.focus();
+            return false;
+        }  
+        
+        // var isCheckObj = $("#isCheck");
+        // if (getValLen(isCheckObj) == 0) {
+        //     layer.msg("超出偏差距离后允许签到不能为空",{icon: 8});
+        //     isCheckObj.focus();
+        //     return false;
+        // } else if (getValLen(isCheckObj) > 16) {
+        //     layer.msg("超出偏差距离后允许签到最多为16字",{icon: 8});
+        //     isCheckObj.focus();
+        //     return false;
+        // }  
+        
+        var loadIdx = layer.load(0);
+        var formData = $("#form1").serializeArray();
+        $.post("{:U('Office/saveGPSTypeAdd')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("成功", {time: 2*1000});
+                location.href="{:U('Office/checking')}?return=1";
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+
+    function selectUsers() {
+        var userNames = $("#userIds").val();
+        var userIds = $("#userNames").val();
+        layer.open({
+            type:2,
+            title :['人员范围','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '400px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+
+    function changeCountry(countryID) {
+        if(countryID == "") {
+            $("#provinceId").html("<option value=''></option>");
+        } else {
+            $.post("{:U('Office/getProvinceList')}", {'countryId':countryID}, function(data) {
+                if(data.error_code == "success") {
+                    if (!("list" in data)) {
+                        $("#provinceId").html("<option value=''></option>");
+                    } else {
+                        content = "<option value=''></option>";
+                        $.each(data.list, function(k, v) {
+                            content += "<option value='"+ v.provinceId +"' id='province"+ v.provinceId+"' >"+ v.provinceName +"</option>";
+                        });
+                        $("#provinceId").html(content);
+                    }
+                } else{
+                    $("#provinceId").html("<option value=''></option>");
+                }
+            }, 'json');
+        }
+        $("#cityId").html("<option value=''></option>");
+    }
+
+    function changeProvince(provinceID) {
+        if(provinceID == "") {
+            $("#cityId").html("<option value=''></option>");
+        } else {
+            $.post("{:U('Office/getCityList')}", {'provinceId':provinceID}, function(data) {
+                if(data.error_code == "success") {
+                    if (!("list" in data)) {
+                        $("#cityId").html("<option value=''></option>");
+                    } else {
+                        content = "<option value=''></option>";
+                        $.each(data.list, function(k, v) {
+                            content += "<option value='"+ v.cityId +"' id='city"+ v.cityId +"' >"+ v.cityName +"</option>";
+                        });
+                        $("#cityId").html(content);
+                    }
+                } else{
+                    $("#cityId").html("<option value=''></option>");
+                }
+            }, 'json');
+        }
+    }
+</script>
+</body>
+</html>

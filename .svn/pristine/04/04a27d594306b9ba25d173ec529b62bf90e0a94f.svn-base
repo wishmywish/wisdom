@@ -1,0 +1,154 @@
+<?php
+namespace Api\Controller;
+use Think\Controller;
+use Think\Upload;
+class UpfileController extends Controller {
+    
+    private $maxSize = 20971520;//文件最大上传大小
+    private $savePath = '';//保存路径
+    private $exts = 'jpg,gif,png,jpeg,doc,docx,xls,xlsx,ppt,pptx,pdf,rar,zip';//上传的文件类型
+    private $autoSub = true;//自动子目录保存文件
+    private $subName = array('date', 'Ymd');
+    private $rootPath = './Public/upfile/'; //保存根路径
+    private $mimes = '';//允许上传的文件MiMe类型
+    
+    //接受自定义的参数
+    function initialize($options)
+    {
+            foreach($options as $k => $v)
+            {
+                $this->$k = $v;
+            }
+    }
+    
+    public function upfile() {
+        $type = I('get.type',2);
+        //pt($_FILES['upfile']);
+        $this->upF($type);
+    }
+    
+    //上传文件,$up_exts,$filesize
+    function upF($type=1,$size=0,$exts='gif,jpg,png,doc,docx,pdf,rarxls,xlsx,ai,cdr,jpeg,zip'){
+        header("Content-Type: text/html;charset=utf-8");
+        $config = array(
+            'maxSize'    =>    $this->maxSize,
+            'mimes'      =>    $this->mimes, 
+            'exts'       =>    $this->exts,
+            'rootPath'   =>    $this->rootPath,
+            'autoSub'    =>    $this->autoSub,
+            'savePath'   =>    $this->savePath,
+            'subName'    =>    $this->subName,
+        );
+        $map = array();//定义一个数据，存放上传信息
+        
+        //pt($_FILES);
+        
+        //$obj = M('file');
+        $upload = new Upload($config, 'Local');//实例化上传类
+        $houzhui = explode(",", $exts);//后缀名数组
+        // pt($houzhui);
+        // exit;
+        $info = $upload->upload($_FILES);//上传文件,并返回上传后的文件信息
+
+        if ($size!=0) {
+            if ($info['upfile']['size']>$size) {
+                $map['error_txt'] = '文件过大';
+                $map['error_no'] = '123456';
+                echo json_encode($map);
+                return false;
+            }
+        }
+
+        if (!in_array($info['upfile']['ext'], $houzhui)) {
+            $map['error_txt'] = '文件格式不符合要求';
+            $map['error_no'] = '654321';
+            echo json_encode($map);
+            return false;
+        }
+        // pt($houzhui);
+        // pt($info);
+        // exit;
+        if(!empty($info)){
+            //pt($info);
+            //exit;
+
+            $info['fileid'] = D('Files')->actionData($info);
+//             pt($info['fileid']);
+
+            if($type==1){//默认，合合扫描
+                //$map['error_txt'] = $upload->getError();
+                //$map['error_no'] = '';
+                $map['f_fileid'] = $info['fileid'];
+                $map['f_path'] = $info['upfile']['savepath'].$info['upfile']['savename'];
+                $map['path'] = $config['rootPath']."/".$info['upfile']['savepath'].$info['upfile']['savename'];
+                $map['size'] = $info['upfile']['size'];
+                $map['fileid'] = $info['fileid'];
+                return $map;
+            }elseif($type==3){//其他通过接口上传
+                return $info;
+            }else{//前端直接调用返回
+                echo json_encode($info);
+            }
+        }else{
+            if($type==1){
+                $map['error_txt'] = $upload->getError();
+                $map['error_no'] = '999999';
+                return $map;
+            }elseif($type==3){
+                $map['error_txt'] = $upload->getError();
+                $map['error_no'] = '999999';
+                return $map;
+            }else{
+                $map['error_txt'] = $upload->getError();
+                $map['error_no'] = '999999';
+                echo json_encode($map);
+            }
+        }
+        //$rootpath= ltrim($config['rootPath'], ".");
+        //$file['filepath'] = $rootpath . $info['savepath'] . $info['savename'];
+        
+        
+        //PT($info);
+        //exit;
+        
+//        if($info){
+//            foreach ($info as $key => $val) {
+//                $file['companyId'] = $companyId;
+//                $file['userid'] = $userid;
+//                //拼接出上传目录
+//                $rootpath= ltrim($config['rootPath'], ".");
+//                //拼接出文件相对路径
+//                $file['filepath'] = $rootpath . $val['savepath'];
+//                $file['filename'] = $val['savename'];
+//                $file['fileuptime'] = time();
+//                $file['fileoldname'] = $val['name'];
+//                //PT($file);
+//                //添加数据库
+//                $count = $obj->data($file)->add();
+//                if($count==0){
+//                    $map['error']='添加数据出错';
+//                    $map['result']='0';
+//                    $map['list'] = array();
+//                }else{
+//                    $list = $obj->field('filename,filepath,id')->where('companyId='.$companyId.' and userid='.$userid)->order('id desc')->limit(count($_FILES))->select();
+//                    //echo $obj->getLastsql();
+//                    if(empty($list)){
+//                        $map['error']='没有上传数据';
+//                        $map['result']='0';
+//                        $map['list'] = array();
+//                    }else{
+//                        $map['error']='';
+//                        $map['result']='1';
+//                        $map['list'] = $list;
+//                    }
+//                }
+//            }
+//        }else{
+//            
+//        }
+//        
+//        //PT($map);
+//        return json_encode($map);
+    }
+    
+}

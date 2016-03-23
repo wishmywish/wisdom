@@ -1,0 +1,71 @@
+<include file="Public/head" title="{$webtitle}" />
+<style>
+    li{float:left;width:50px;height:50px;background-color:red;margin-left: 2px;margin-top: 2px;}
+    li .selected{background-color:blue;}
+    .selected{background-color:blue;}
+</style>
+<body>
+    <div style="width: 210px;">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <span id="aa">0元</span>
+        <span id="bb">倒计时30秒</span>
+        <button id="start">开始</button>
+    </div>
+    <!--<audio id="myaudio" src="__UPFILE__/download/1935.mp3" controls="controls" loop="false" hidden="true"  ></audio>-->
+    <embed id="myaudio" autoplay="false" src="__UPFILE__/download/1935.mp3"  hidden="true" />
+</body>
+<include file="Public/loadjs" />
+<script>
+    var totel = 0;
+    var s = 30;
+
+    function a(){
+        var array = eval({$c});
+        var a = parseInt(99*Math.random());
+        totel += parseFloat(array[a]);
+        $("#aa").html(fomatFloat(totel,2)+"元");
+
+    }
+    function aa(){
+        if(s>=0){
+            $("#bb").html("倒计时"+s+"秒");
+            var a = parseInt(8*Math.random());
+            var b = parseInt(8*Math.random());
+            $("ul li").attr("class","");
+            $("ul li").eq(a).attr("class","selected");
+            $("ul li").eq(a).attr("onclick","a()");
+            $("ul li").eq(b).attr("class","selected");
+            $("ul li").eq(b).attr("onclick","a()");
+        }else{
+            clearInterval(ss);
+            clearInterval(bb_1);
+            $("ul li").attr("class","");
+            $("#start").attr("disabled",false);
+            s=30;
+            $("#bb").html("倒计时"+s+"秒");
+        }
+    }
+    function bb(){
+        s-=1;
+    }
+
+    $("#start").click(function(){
+        bb_1 = setInterval("bb()", 1000);
+        ss = setInterval("aa()", 500);
+        $(this).attr("disabled",true);
+    });
+
+    function fomatFloat(src,pos){
+        return Math.round(src*Math.pow(10, pos))/Math.pow(10, pos);
+    }
+</script>
+</html>

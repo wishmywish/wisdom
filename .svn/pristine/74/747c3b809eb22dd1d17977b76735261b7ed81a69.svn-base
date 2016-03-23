@@ -1,0 +1,226 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class BusinessController extends CommonController{
+    
+    //首页---刘显珍
+    public function index(){
+        $re = A('Api')->getBigC();
+        //pt($re);
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Business'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        //echo $syscolumn_id;
+        $sre = A('Api')->getBigC($syscolumn_id);
+        //pt($sre);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+    
+    
+    
+     //审核管理----王青
+      public function review(){       
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+                if($val['f_sys_column_cid']=='Business'){
+                    $syscolumn_id = $val['f_syscolumn_id'];
+                }
+            }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+    
+    //资质&文档管理--刘显珍
+    public function  qualificatdoc(){        
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+                if($val['f_sys_column_cid']=='Business'){
+                    $syscolumn_id = $val['f_syscolumn_id'];
+                }
+            }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+   
+    //任务管理----刘显珍
+    public  function  task(){        
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+                if($val['f_sys_column_cid']=='Business'){
+                    $syscolumn_id = $val['f_syscolumn_id'];
+                }
+            }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        //echo cookie("companyId");
+        $this->assign('companyID',  cookie("companyId"));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+    
+    //任务管理模块增加
+    public  function taskAdd(){
+        set_theme();
+        $re = A('Api')->getBigC();
+        foreach ($re as $key => $val) {
+            if($val['f_sys_column_cid']=='Business'){
+                $syscolumn_id = $val['f_syscolumn_id'];
+            }
+        }
+        $sre = A('Api')->getBigC($syscolumn_id);
+        $taskid = I('get.taskid');
+        $reModi = A('Api/Web')->getModiTask($taskid);//取要修改的记录数据
+        
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+//		pt($reModi);
+//      exit;
+        $this->assign('companyId',cookie('companyId'));
+        $this->assign('companyName',cookie('companyName'));
+        $this->assign('mobile',cookie('mobile'));
+        $this->assign('bigclass', $re);
+        $this->assign('smallclass', $sre);
+        $this->display();
+    }
+     /**
+     * 业务洽谈
+     */
+    public function talk() {
+        set_theme();
+        $dealerid=$_GET['dealerid'];
+        $salesmanid=$_GET['salesmanid'];
+        $companyid=$_GET['companyid'];
+        //$re=A('Api/Info')->getTalkList($dealerid);
+       // pt($re);
+        //exit;
+        $this->assign('list', $re);
+        $this->assign('dealerid',$dealerid);
+        $this->assign('salesmanid',$salesmanid);
+        $this->assign('companyid',$companyid);
+        $this->display();
+    }
+
+    public function proCheck() {
+        set_theme();
+
+        $dealerid = isset($_GET['dealerid'])? $_GET['dealerid'] : 0 ;
+        $type = isset($_GET['type'])? $_GET['type'] : '1' ;
+        $this->assign("dealerid",$dealerid);
+        $result = M('authorization')->where('f_dealerid='.$dealerid)->find();
+        $j = array("LEFT JOIN t_task ON t_task.f_tid = t_dealerbaseinfo.f_taskid");
+        $detail = M('dealerbaseinfo')->JOIN($j)->where('f_dealerid='.$dealerid)->find();
+        $userDetail = $this->getUserDetail($detail['f_userid']);
+        $companyDetail = $this->getCompanyDetail($detail['f_companyid']);
+        $time = date("Y/m/d",$result['f_datetime']);
+        $date= explode("/", $time);
+
+        $p['f_proname'] = 'contract';
+        $p['f_prostatus'] = 2;
+        $p['f_dealerid'] = $dealerid;
+        $comContract = M('business_progress')->where($p)->find();
+        $comTime = date("Y/m/d",$comContract['f_protime']);
+// var_dump($comContract);exit();
+        $c['f_proname'] = 'remit';
+        $c['f_prostatus'] = 1;
+        $c['f_dealerid'] = $dealerid;
+        $deaRemit = M('business_progress')->where($c)->find();
+
+        $o['f_proname'] = 'remit';
+        $o['f_prostatus'] = 2;
+        $o['f_dealerid'] = $dealerid;
+        $comRemit = M('business_progress')->where($o)->find();
+
+        $o['f_proname'] = 'dispatch';
+        $o['f_prostatus'] = 0;
+        $o['f_dealerid'] = $dealerid;
+        $j = array("LEFT JOIN t_files ON t_files.f_id = t_business_progress.f_fileid");
+        $dispatch = M('business_progress')->join($j)->where($o)->find();
+        $dispatchTime = date("Y/m/d",$dispatch['f_protime']);
+
+        $s['f_proname'] = 'dispatch';
+        $s['f_prostatus'] = 1;
+        $s['f_dealerid'] = $dealerid;
+        $j = array("LEFT JOIN t_files ON t_files.f_id = t_business_progress.f_fileid");
+        $finishDispatch = M('business_progress')->join($j)->where($s)->find();
+        $finishDispatchTime = date("Y/m/d",$finishDispatch['f_protime']);
+// var_dump($finishDispatch);exit();
+        $c['f_proname'] = 'receive';
+        $c['f_prostatus'] = 1;
+        $c['f_dealerid'] = $dealerid;
+        $j = array("LEFT JOIN t_files ON t_files.f_id = t_business_progress.f_fileid");
+        $receive = M('business_progress')->join($j)->where($c)->find();
+        $receiveTime = date("Y/m/d",$receive['f_protime']);
+
+        $q['f_proname'] = 'Settlement';
+        $q['f_prostatus'] = 1;
+        $q['f_dealerid'] = $dealerid;
+        $j = array("LEFT JOIN t_files ON t_files.f_id = t_business_progress.f_fileid");
+        $square = M('business_progress')->join($j)->where($q)->find();
+        $squareTime = date("Y/m/d",$square['f_protime']);
+
+        $this->assign('detail', $detail);
+        $this->assign('deaRemit', $deaRemit);
+        $this->assign('comRemit', $comRemit);
+        $this->assign('dispatch', $dispatch);
+        $this->assign('dispatchTime', $dispatchTime);
+        $this->assign('finishDispatch', $finishDispatch);
+        $this->assign('finishDispatchTime', $finishDispatchTime);
+        $this->assign('result', $result);
+        $this->assign('userDetail', $userDetail);
+        $this->assign('companyDetail', $companyDetail);
+        $this->assign('date', $date);
+        $this->assign('time', $time);
+        $this->assign('comContract', $comContract);
+        $this->assign('comTime', $comTime);
+        $this->assign('receive', $receive);
+        $this->assign('receiveTime', $receiveTime);
+
+        $this->assign('square', $square);
+        $this->assign('squareTime', $squareTime);
+// var_dump($type);
+        if ($type=='1') {
+            $this->display();
+        }elseif ($type=='2') {
+            $this->display('finishContract');
+        }elseif ($type=='3') {
+            $this->display('contract');
+        }elseif ($type=='4') {
+            $this->display('finishRemit');
+        }elseif ($type=='5') {
+            $this->display('remit');
+        }elseif ($type=='6') {
+            $this->display('finishDispatch');
+        }elseif ($type=='7') {
+            $this->display('finishReceive');
+        }elseif ($type=='8') {
+            $this->display('finishSquare');
+        }elseif ($type=='9') {
+            $this->display('dispatch');
+        }
+    }
+
+    function getUserDetail($userid){
+        $re = A("Api/Jhttp")->getUserinfo2($userid);
+        $arr = json_decode($re,true);
+        
+        return $arr["list"];
+    }
+
+    function getCompanyDetail($companyid){
+        $re = A("Api/Jhttp")->getCompanyInfo($companyid);
+        $arr = json_decode($re,true);
+
+        return $arr["list"];
+    }
+
+}

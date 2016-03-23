@@ -1,0 +1,118 @@
+<include file="Public/head" title="{$webtitle}"/>
+<link href="__PUBLIC__/static/um/themes/default/css/umeditor.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    .fl{ float: left;}
+    .recommended .ui-shadow-inset{float:left; border-style:none;}
+    .recommended .ui-shadow-inset  input{border: none;}
+    .recommended .ui-shadow-inset{box-shadow:none;}
+</style>
+</head>
+ 
+ <body>
+    <div data-role="page" id="page">
+        <div  class="heads">
+            <h1>推荐</h1>
+        </div>
+            <div data-role="content">
+                <div class="head_top">
+                    <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                </div>
+                <div class="head_con">
+                    <p title="任务推荐" style="font-size: 14px">任务推荐</p>
+                </div>
+                <div style="padding-left: 1.3em; padding-right: 1.3em;  border-bottom: 1px solid #ccc; overflow: hidden;">
+                     {$re.f_recommend}
+                </div>
+                <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;">
+                   <span class="fl" ><span style="color: red">*</span>经销商姓名: &nbsp;&nbsp;</span><textarea id="dealerName" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                 <div class="recommended" style="min-height:49px; overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl"><span style="color: red">*</span>经销商手机: &nbsp;&nbsp;</span><textarea id="dealerPhone" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl"><span style="color: red">*</span>经销商公司名:</span><textarea id="dealerCompanyName" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                 <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl">经销商行业: &nbsp;&nbsp;&nbsp;&nbsp;</span><textarea id="dealerIndustry" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                 <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl">经销商地址: &nbsp;&nbsp;&nbsp;&nbsp;</span><textarea id="dealerAddress" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                 <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl">经销商电话: &nbsp;&nbsp;&nbsp;&nbsp;</span><textarea id="dealerTel" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+                 <div class="recommended" style="min-height:49px;overflow:hidden; line-height: 49px;padding-left: 1.3em;  border-bottom: 1px solid #ccc;" >
+                   <span class="fl">经销商传真: &nbsp;&nbsp;&nbsp;&nbsp;</span><textarea id="dealerFax" style="width:258px; height:40px; margin:16px 0 0 0; padding:0; resize: none; overflow:hidden;"></textarea>
+                </div>
+            </div>
+            <div>
+                <input type="hidden" id="userid" name="userid" value="{$userid}" />
+                <input type="hidden" id="taskid" name="taskid" value="{$taskid}" />
+               
+            </div>
+            <div style="width: 90%; margin-left: 1.3em;">
+                <input type="button" id="btn_widely_four" value="提交"  onclick="submit()"/>
+                
+            </div>
+            <div>
+                <input type="hidden" id="spreadOver" onclick="window.demo.done()">    
+            </div>
+        </div>
+    </div>
+
+</body>
+<include file="Public/loadjs"/>
+ <script type="text/javascript">
+     function submit(){
+        var taskid=$("#taskid").val();
+        var userid=$("#userid").val();
+        var dealerName=$("#dealerName").val();
+        if(dealerName==""){
+            layer.msg('经销商姓名不能为空');
+            $('#dealerName').focus();
+            return false;
+        }
+        var dealerPhone=$("#dealerPhone").val();
+        if(dealerPhone==""){
+            layer.msg('经销商手机不能为空');
+            $('#dealerPhone').focus();
+            return false;
+        }
+        var dealerCompanyName=$("#dealerCompanyName").val();
+        if(dealerCompanyName==""){
+            layer.msg('经销商公司名不能为空');
+            $('#dealerCompanyName').focus();
+            return false;
+        }
+        var dealerIndustry=$("#dealerIndustry").val();
+        var dealerAddress=$("#dealerAddress").val();
+        var dealerTel=$("#dealerTel").val();
+        var dealerFax=$("#dealerFax").val();
+
+
+        $.post(APP+"/Mobileweb/Events/spreadSure",
+        "taskid="+taskid+"&userid="+userid+"&dealerName="+dealerName+"&dealerPhone="+dealerPhone+"&dealerCompanyName="+dealerCompanyName+"&dealerIndustry="+dealerIndustry+"&dealerAddress="+dealerAddress+"&dealerTel="+dealerTel+"&dealerFax="+dealerFax,
+        function(data){
+            // $("#spreadOver").onclick();
+            document.getElementById("spreadOver").click();
+            function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'finish';
+                    bridge.send(data);
+                });
+
+        },"json");
+     }
+</script>
+</html>

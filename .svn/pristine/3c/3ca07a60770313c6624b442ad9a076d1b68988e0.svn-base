@@ -1,0 +1,100 @@
+/* 
+    Created on : 2015-5-26, 12:02:15
+    Author     : Luoqq
+*/
+
+html,body{background-color: #f6f6f6;}
+.ui-overlay-a{background-color: #f6f6f6;}
+.ui-overlay-b{background-color: #f6f6f6;}
+ul{list-style: none;margin:0;padding:0;}
+img{border:none;width: 100%;}
+
+
+
+.web_title{width: 100%;height: 30px;line-height: 30px;font-weight: bold;clear: both;}
+/*li{float: left;height: 30px;line-height: 30px;overflow: hidden;white-space:nowrap;word-break:keep-all;display:block;}*/
+
+.helplist li{height: 30px;line-height: 30px;overflow: hidden;white-space:nowrap;word-break:keep-all;display:block;font-weight: bold;border-bottom: 2px #EAEAEA solid;color:#06c;}
+
+#onea,#twoa,#threea,#foura,#fivea{margin-bottom: 8px;}
+
+.even_icon{width:50%;margin: 0px auto;}
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,select,th,td{padding: 0px; margin: 0px; font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;font-weight:normal;}
+html{ font-size: 12px;}
+.fl{ float:left;}
+.rg{ float:right;}
+a{ text-decoration:none;}
+body{ min-width:320px; color:#333; font-size:12px; background: #fff;}
+input{ border:none; font-size:16px; color:#656464;}
+.header{ padding:6% 0; background:#ec6715; width:100%;}
+.header h2{ font-size:16px; text-align:center; color:#fff;}
+.header p{ font-size:14px; color:#fff; text-align:justify; text-justify:inter-ideograph; padding:0 5%; line-height:20px; padding-top:5%;}
+.nav{ background:#fafafa; height:49px; line-height:49px; font-size:16px;}
+.nav span{ padding-left:5%;}
+.main{ padding:0 5%; overflow:hidden; font-size:16px; width:90%;}
+.main dl{ height:49px; line-height:49px; border-bottom:1px solid  #d8d8d8; margin-top: 1%;}
+.main dl dt input{ width: 30%;}
+.main p{ line-height:49px; height:49px;}
+.main textarea{ height:49px; width:100%; resize:none;}
+.footer{ width:100%; background:#fafafa; padding:5% 0 10% 0; margin-top:2%;}
+.footer P{ margin-left:5%; margin-bottom:0.5%; color:#6b6a6a;}
+.footer a{ height:50px; line-height:50px; text-align:center; width:90%; display:block; color:#fff; background:#ec6715; margin:5% 0 0 5%; font-size:16px;}
+@media only screen and (max-width: 980px) {
+    .zhaoshang{ margin-right: 71%;}
+}
+
+/*商城*/
+.shopclass{width: 100%;height: 30px;line-height: 30px;border-bottom: 1px solid #f3f4f9;color:#B2B2B2;}
+.shopclass .cname{width: 60%;float: left;}
+.shopclass .cselect{width: 40%;float: right;text-align: right;}
+.shoplist{width: 100%;overflow:hidden;}
+.shoplist .shopframe{width: 100%;height: 65px;margin-top:15px;overflow:hidden;border-bottom: 1px solid #f3f4f9;}
+.shoplist .shopframe .img{width: 60px;height: 60px;float: left;}
+.shoplist .shopframe .img img{width: 60px;height: 60px;border-radius: 30px;}
+.shoplist .shopframe .text{width:100%;height: 60px;float: left;position: absolute;padding-left: 70px;}
+.shoplist .shopframe .text .shopname{width:100%;height: 20px;font-size: 14px; color:#9a9a9a;line-height: 20px;}
+.shoplist .shopframe .text .shopdesc{width:100%;height: 20px;color:#cccccc;line-height: 20px;}
+.shoplist .shopframe .text .shopprice{width:100%;height: 20px;color:#9a9a9a;line-height: 20px;}
+
+.shopnote{width:100%;color:#B2B2B2;}
+.shopnote .shopline{width:100%;height: 60px;border-bottom: 1px solid #f3f4f9;}
+.shopnote .shopline .shopNprice{width:50%;height: 60px;line-height: 60px;float: left;}
+.shopnote .shopline .shopNsum{width:50%;height: 60px;line-height: 60px;float: right;text-align: right;}
+
+.shopnote .shoptitle{width: 100%;height: 40px;font-size: 16px;line-height:20px;text-align: center;margin-top:5px;color:#9a9a9a;font-weight: bold;}
+
+.shopnote .shopN{width:100%;margin-top:10px;}
+.classstyle{width:100%;height: 40px;line-height: 40px;border-bottom: 1px #f3f4f9 solid;}
+
+/*活动activity*/
+.mains{ background: #f2ab3f; overflow: hidden;width: 100%;}
+.heads{ width: 100%;}
+.mains p{ line-height:22px;text-shadow: none;text-align:justify;  width: 90%; padding: 0 5%; font-size: 1.2rem; color: #995e1a;}
+.mains span{ font-size: 1.4rem; font-weight: bold; color: #e53025;}
+.plate_first,.plate_second,.plate_thirdly,.plate_fourthly,.plate_fifth,.plate_sixth,.plate_seventh{ width: 90%; margin-left: 5%; padding-top: 1%;}
+.plate_first_in{ width: 100%;}
+
+.current{ color: #eecc9c;background-color:#e53025; border-color: #e53025;}
+.ui-grid-a .btns{ font-weight:normal;text-shadow: none; padding: .5em 1em; margin: .4em 0em .4em 1em; color: #eecc9c;background-color:#e53025; border-color: #e53025;}
+.ui-grid-a .btns:hover{font-weight:normal;text-shadow: none; padding: .5em 1em; margin: .4em 0em .4em 1em; color: #eecc9c;background-color:#e53025; border-color: #e53025;}
+.plate_two{ text-align: center; text-shadow: none; }
+.plate_two .btns1{text-shadow: none; font-weight:normal;color:#eecc9c; ;background-color:#e53025; border-color: #e53025; }
+.plate_two .btns1:hover{text-shadow: none; font-weight:normal;color:#eecc9c; ;background-color:#e53025; border-color: #e53025;}
+.plate_two .btns2{ text-shadow: none;font-weight:normal;color:#f2d0a0; ;background-color:#6b3906; border-color: #f2d0a0;}
+.plate_two .btns2:hover{text-shadow: none;font-weight:normal;color:#f2d0a0; ;background-color:#6b3906; border-color: #f2d0a0;}
+.plate_second .p2{ font-size: 1.4rem;}
+.plate_second .a1{ width: 50%; display: inline-block; margin: 15% 0 0 15%; height: 100%;}
+.plate_second .a2{ width: 90%; display: inline-block; margin-left: 10%;height: 100%;}
+.plate_second{ margin-top: 10%;}
+.plate_thirdly{margin-top: 10%;}
+.plate_fourthly span{ margin-top: 20%; border-color:#ceaa78;color: #ceaa78; text-shadow: none; font-weight:normal; padding: 3% 8%; background-color: #6b3906; font-size:1.2rem; display: inline-block; border-radius: 5px;}
+.plate_fourthly .a3{ width: 50%; display: inline-block; margin-left: 30%; margin-top: 8%; height: 100%;}
+.plate_fifth p{ width: 100%; padding: 0;}
+.plate_sixth span{ margin-top: 4%; border-color:#ceaa78;color: #ceaa78; text-shadow: none; font-weight:normal; padding: 1.5% 6%; background-color: #6b3906; font-size: 1.2rem; display: inline-block; border-radius: 5px;}
+.plate_seventh{ margin-top: 4%; }
+.plate_seventh p{ width: 100%; padding: 0;}
+.footers{ width: 100%; height: 100%; margin-top: 15%;}
+/*head_top*/
+

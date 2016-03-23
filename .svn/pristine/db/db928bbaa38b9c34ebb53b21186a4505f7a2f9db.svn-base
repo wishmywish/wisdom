@@ -1,0 +1,471 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            客户详情
+        </div>
+    </div>
+    <div class="cusdetail_center">
+        <!--输入框-->
+        <div class="cusdetail_head">
+            <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;客户通讯录&nbsp;>&nbsp;客户详情</span>
+            <span style="float: right;margin-right: 15px;" class="bntns1" >返回</span>
+        </div>
+        <!--列表-->
+        <div class="cusdetail_list">
+            <p>XXX科技有限公司</p>
+
+            <p>浙江省杭州市余杭区文一西路</p>
+
+            <p>0571-55555</p>
+
+            <div class="one">
+                <div class="head"><span>联系人</span></div>
+                <div class="buttons">
+                    <span class="bntns1 add" onclick="addLinkman()">新增</span>
+                    <span class="bntns1 del">删除</span>
+                </div>
+                <div class="form">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr style="height: 25px;">
+                            <th width="67" height="25">选择</th>
+                            <th width="155">姓名</th>
+                            <th width="48">性别</th>
+                            <th width="150">部门</th>
+                            <th width="150">职位</th>
+                            <th width="150">联系电话</th>
+                            <th width="300">电子邮箱</th>
+                        </tr>
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox"></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox"></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox"></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox"></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr style="height: 50px;">
+                            <td><input type="checkbox"></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div class="two">
+                <div class="head"><span>业务跟进</span></div>
+                <div class="choose">
+                    <ul>
+                        <li style="border-left: 1px solid #000" class="active">商机</li>
+                        <li>拜访计划</li>
+                        <li>拜访记录</li>
+                        <li>合同</li>
+                        <li>回款</li>
+                    </ul>
+                </div>
+                <div id="line"></div>
+                <!--<div class="buttons">-->
+                    <!--<span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>-->
+                    <!--<span class="bntns1 del">删除</span>-->
+                <!--</div>-->
+                <div id="formList">
+                    <div id="form1" class="form" style="display: block">
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>
+                            <span class="bntns1 del">删除</span>
+                        </div>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">商机主题</th>
+                                <th width="100">来源</th>
+                                <th width="150">客户需求</th>
+                                <th width="150">预计签单日期</th>
+                                <th width="150">预计成交额</th>
+                                <th width="200">备注</th>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div >
+                    <div id="form2" class="form" style="display: none">
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addVisitPlan()">新增</span>
+                            <span class="bntns1 del">删除</span>
+                        </div>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">拜访主题</th>
+                                <th width="150">拜访日期</th>
+                                <th width="225">对应商机</th>
+                                <th width="225">访问内容</th>
+                                <th width="150">访问方式</th>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div id="form3" class="form" style="display: none">
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>
+                            <span class="bntns1 del">删除</span>
+                        </div>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">拜访主题</th>
+                                <th width="150">拜访日期</th>
+                                <th width="225">对应商机</th>
+                                <th width="225">访问内容</th>
+                                <th width="150">访问方式</th>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div id="form4" class="form" style="display: none">
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>
+                            <span class="bntns1 del">删除</span>
+                        </div>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">商机主题</th>
+                                <th width="150">来源</th>
+                                <th width="150">客户需求</th>
+                                <th width="150">预计签单日期</th>
+                                <th width="150">预计成交额</th>
+                                <th width="150">备注</th>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div id="form5" class="form" style="display: none">
+                        <div class="buttons">
+                            <span class="bntns1 add" onclick="addBusiOpportunities()">新增</span>
+                            <span class="bntns1 del">删除</span>
+                        </div>
+
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px;">
+                                <th width="67" height="25">选择</th>
+                                <th width="230">商机主题</th>
+                                <th width="150">来源</th>
+                                <th width="150">客户需求</th>
+                                <th width="150">预计签单日期</th>
+                                <th width="150">预计成交额</th>
+                                <th width="150">备注</th>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr style="height: 50px;">
+                                <td><input type="checkbox"></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+
+<script>
+    //    菜单轮换点击事件
+    $(".choose li").click(function () {
+            var index = $(".choose li").index($(this));
+            $(this).addClass("active").siblings().removeClass("active");
+            $divList = $("#formList").children("div");
+            $divList.hide();
+            $divList.eq(index).show();
+            var left=112*index;
+            $("#line").css('margin-left',left);
+        });
+    //新增客户弹窗
+    function addLinkman(){
+        layer.open({
+            type:2,
+            title :['新增联系人','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['600px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addLinkman'
+        });
+    }
+    //新增商机弹窗
+    function addBusiOpportunities(){
+        layer.open({
+            type:2,
+            title :['商机','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addBusiOpportunities'
+        });
+    }
+    //新增拜访计划弹窗
+    function addVisitPlan(){
+        layer.open({
+            type:2,
+            title :['拜访计划','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['900px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addVisitPlan'
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

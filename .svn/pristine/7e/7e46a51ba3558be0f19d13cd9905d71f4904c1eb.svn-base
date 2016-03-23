@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <link rel="alternate" media="handheld" href="#" />
+    <link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <css href="__CSS__/dealer.css" />
+    <title>驳回理由</title>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <style type="text/css">
+        p
+        {
+            text-indent: 1cm
+        }
+        .wenzi
+        {
+
+            line-height:22px;
+            width:540px;
+            height:250px;
+        }
+        .add{
+            margin:20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="add">
+    <div class='info' style="background-color:white;">
+        <p  style="font-size:13px;margin-left:-40px;">请填写驳回理由：</p>
+        <div>
+            <textarea  value="" name="reason" id="reason" class="wenzi" ></textarea>
+        </div>
+        <input type="hidden" id="taskid" name="taskid" value="{$tid}">
+        <input  type="hidden"  id="userid"  name="userid"  value="{$userid}">
+        <div class="btn btn-default" href="#" role="button" id="rejectBtn" style="padding:5px 20px;width:30px;margin:5px auto;background-color:#268bd2;color:#ffffff;cursor:pointer">确定</div>
+    </div>
+</div>
+
+<include file="Public/loadjs" />
+
+<script>
+//    sublevel_out();//子窗口退出
+    $('#rejectBtn').on('click',function(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        var taskid = $("#taskid").val();
+        var reason = $("#reason").val();
+　　　　 var userid=$("#userid").val();
+        if(reason==""){
+            layer.msg('请填写理由', {icon: 8});
+            return false;
+        }
+        $.post(APP+"/Api/web/trackearn_back",
+                "checklist="+userid+"&tid="+taskid+"&reason="+reason,
+                function(val){
+                    parent.location.reload();
+                    parent.layer.close(index);
+                    if(val.error_code=='true'){
+                        layer.msg('驳回成功',{icon:9});
+                    }
+                },"json");
+
+    });
+</script>
+</body>
+</html>

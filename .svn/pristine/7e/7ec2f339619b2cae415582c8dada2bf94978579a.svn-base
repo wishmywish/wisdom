@@ -1,0 +1,58 @@
+<include file="Public/head" title="授权书查看" />
+<style type="text/css">
+p 
+{
+    text-indent: 1cm
+}
+.wenzi
+{
+    text-decoration: underline;
+    line-height:22px;
+}
+</style>
+<body style="height: 100%;background-color:#e8504a;">
+<div>
+    <h2 style="text-align:center;">企业区域招商授权书</h2>
+    <h3 style="text-align:center;">（企业：<span class="wenzi"> {$companyDetail.companyName} </span>授权号：<span class="wenzi"> {$result.f_authnumber} </span>）</h3>
+
+    <p>
+        兹授权姓名:<span class="wenzi"> {$userDetail.trueName} </span> 身份证号:<span class="wenzi"> {$userDetail.idCard} </span>，经本企业安排指定在:<span class="wenzi"> {$companyDetail.mainArea} </span>区域，协助本公司完成指定系列产品的本区域招商工作，经公司委托与意向客户:<span class="wenzi"> {$detail.f_companynameone} </span> 进行招商洽谈与后续招商合同签定工作，本授权书仅用于经销商合作谈判使用，所有涉及公司经销政策、促销支持、市场费用等，均以公司书面确认盖章为准，所授权委托业务员一律不允许接触货款等现金或财务代办事项。
+    </p>
+
+    <p>
+        本授权有效时间<span class="wenzi"> 30 </span>天，过期失效，特此授权。
+    </p>
+
+    <p>
+        凭本授权号可以在小宝招商平台（www.51lick.com）查寻本授权书内容。
+    </p>
+
+    <p style="float:right;">
+        生效时间：<span class="wenzi">{$date[0]}</span>年 <span class="wenzi">{$date[1]}</span>月<span class="wenzi">{$date[2]}</span>日
+    </p>
+
+    <p style="float:right;">
+        单位名称： <span class="wenzi"> {$companyDetail.companyName} </span>                          
+    </p>
+</div><br><br><br><br><br>
+    <h2 style="text-align:center;">货款第三方监管交易提醒</h2>
+    <p>
+        为保证经销商利益，保证货款安全和业务员的成果收益，在与招商企业协商一致下，小宝招商为合作双方设立银行第三方监管交易帐户，该监管账户是经销商与招商企业之间往来货款临时存储并由银行监管资金流向的专门账户，所有货款经经销商及业务员收货并验收无误确认后，方能打入招商企业帐户。未通过第三方监管帐户交易的行为，小宝招商平台对货款安全不负任何责任。
+    </p>
+    <p>
+        第三方监管账号信息如下：
+    </p>
+    <p>
+        开户行：温州银行杭州分行营业部
+    </p>
+    <p>
+        账号：903070120190000063
+    </p>
+    <p>
+        户名：杭州日思夜享数据科技有限公司
+    </p>
+</body>
+<script>
+
+</script>
+<include file="Public/foot" />

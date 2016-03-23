@@ -1,0 +1,15 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+                <if condition="$taskinfo.type_label eq 'business'">
+                    <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_note}</div>
+                <elseif condition="$taskinfo.type_label eq 'widely'"/>
+                    <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>
+                <elseif condition="$taskinfo.type_label eq 'push'"/>
+                    <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>
+                </if>
+            </div><!-- /content -->
+        </div>
+    </body>
+<include file="Public/foot" />

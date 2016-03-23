@@ -1,0 +1,40 @@
+<include file="Public/head" title="招商APP管理平台" />
+<body>
+<div style="margin-top: 20px;"></div>
+<form>
+    <dl>
+        <dd><label><input type="text" id="word" name="word" value=""></label> </dd>
+        <!--<dd>-->
+            <!--<input type="radio" name="length" checked="checked" value="5">五言-->
+            <!--<input type="radio" name="length" value="7">七言-->
+        <!--</dd>-->
+        <dd><input type="radio" name="cang" checked="checked" value="1">藏头<input type="radio" name="cang" value="2">藏尾<input type="radio" name="cang" value="3">藏中<input type="radio" name="cang" value="4">递增<input type="radio" name="cang" value="5">递减<br></dd>
+        <!--<dd><input type="radio" name="type" checked="checked" value="1">双句一压<input type="radio" name="type" value="2">双句押韵<input type="radio" name="type" value="3">一三四押<br></dd>-->
+        <input type="hidden" id="type" name="type" value="1">
+        <input type="hidden" id="length" name="length" value="7">
+        <input type="hidden" id="id" name="id" value="{$id|default=0}">
+        <input type="hidden" id="uid" name="uid" value="{$uid|default=0}">
+        <dd><input type="button" id="submit" value="开始生成"></dd>
+    </dl>
+</form>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $("#submit").click(function(){
+        var uid = $("#uid").val();
+        if(parseInt(uid)===0){
+            layer.msg("请关闭后,重新加截",{
+                offset: 0,
+                shift: 6
+            });
+            return false;
+        }
+        var param = $("form").serialize();
+//        alert(param);
+        $.post("{:U('curl_chitousi')}",param, function(val){
+            $("#id").val(val.id);
+        },'json');
+    });
+
+</script>
+</html>

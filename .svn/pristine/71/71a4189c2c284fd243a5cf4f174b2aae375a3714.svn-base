@@ -1,0 +1,101 @@
+<include file="Public/head" title="行为分析报表" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 行为分析报表</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='selected' id="messages"><a href="__APP__/Taskadmin/BehaviorAnalysis/index" style="text-decoration:none;">详细表分析</a></li>
+                        <li value="2" class=''><a href="__APP__/Taskadmin/BehaviorAnalysis/all" style="text-decoration:none;">总表分析</a></li>
+                    </ul>
+                    <div class="action_chart">
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                        <li style='width:30%;'>注册数</li>
+                        <li style='width:35%;'>登录数</li>
+                        <li style='width:30%;'>时间</li>
+                    </ul>
+                    <div class='listinfo'>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    function getBeforeDate(n){
+        var n = n;
+        var d = new Date();
+        var year = d.getFullYear();
+        var mon=d.getMonth()+1;
+        var day=d.getDate();
+        if(day <= n){
+                if(mon>1) {
+                   mon=mon-1;
+                }
+               else {
+                 year = year-1;
+                 mon = 12;
+                 }
+               }
+              d.setDate(d.getDate()-n);
+              year = d.getFullYear();
+              mon=d.getMonth()+1;
+              day=d.getDate();
+         s = year+"-"+(mon<10?('0'+mon):mon)+"-"+(day<10?('0'+day):day);
+         return s;
+    }
+
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(), //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),//最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+    // var loadi = layer.load(0);
+    $("#startTime").val(getBeforeDate(7));
+    $("#endTime").val(getBeforeDate(0));
+    plist_Behavior($("#startTime").val(),$("#endTime").val(),0);
+
+
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        // var loadi = layer.load(0);
+    });
+
+    </script>
+</html>

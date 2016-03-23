@@ -1,0 +1,46 @@
+<html>
+<head>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+        }
+        body {
+            background-image:url(__IMG__/city.gif);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .time{
+            position: absolute;
+            width: 100%;
+            top: 57.6%;
+        }
+        .time span{
+            font-size: 38px;
+            display: block;
+            float: left;
+            /* margin: 0 20%; */
+            padding-right: 9%;
+            width: 27px;
+            height: 27px;
+            text-align: center;
+            /* background: #fff; */
+            line-height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="time">
+    <span style="margin-left: 21%;">200</span>
+    <span>20</span>
+    <span>20</span>
+</div>
+</body>
+
+</html>

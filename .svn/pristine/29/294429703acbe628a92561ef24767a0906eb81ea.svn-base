@@ -1,0 +1,99 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class UserInfoController extends Controller {
+    
+    public function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//¼ì²âÊÇ·ñµÇÂ¼
+        // $access = I('get.access','000000');
+        // A("Api/Fun")->isAccess($access);//ÅÐ¶Ï²Ëµ¥È¨ÏÞ
+       $this->display();
+
+    }
+
+    public function userExtractPassword(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//¼ì²âÊÇ·ñµÇÂ¼
+        // $access = I('get.access','000000');
+        // A("Api/Fun")->isAccess($access);//ÅÐ¶Ï²Ëµ¥È¨ÏÞ
+        $this->display();
+
+    }
+
+    public function userMoneyAccount(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//¼ì²âÊÇ·ñµÇÂ¼
+        // $access = I('get.access','000000');
+        // A("Api/Fun")->isAccess($access);//ÅÐ¶Ï²Ëµ¥È¨ÏÞ
+        $this->display();
+
+    }
+
+    public function userIDInfoSelect(){
+        set_theme();
+        $mobile=I('inUserMobile');
+        $re = A('Api/Jhttp')->getUserinfo($mobile);
+        $re = json_decode($re,true);
+        $this->assign('re',$re);
+        $this->display();
+    }
+
+     public function userIDInfoUpdate(){
+        $mobile=I('userIDMobile');
+        $userId=I('userIDuserId');
+        $trueName=I('inUserIDName');
+        $homeAddress=I('inUserIDAddress');
+        $url_1="&trueName=".$trueName."&homeAddress=".$homeAddress;
+        $re = A('Api/Jhttp')->modiUserInfo($userId,$url_1);
+        echo $re;
+
+    }
+
+     public function userExtractPasswordSelect(){
+        set_theme();
+        $mobile=I('inUserExtractPasswordMobile');
+        $re = A('Api/Jhttp')->getUserinfo($mobile);
+        $re = json_decode($re,true);
+        $this->assign('re',$re);
+        $this->display();
+
+    }
+
+     public function userExtractPasswordUpdate(){
+        $userId=I('userExtractPassworduserId');
+        $txPassWord=md5(I('inUserExtractPassword'));
+        $url_1="&txPassWord=".$txPassWord;
+        $re = A('Api/Jhttp')->modiUserInfo($userId,$url_1);
+        echo $re;
+    }
+    
+     public function userMoneyAccountSelect(){
+        set_theme();
+        $mobile=I('inUserMoneyAccountMobile');
+        $re = A('Api/Jhttp')->getUserinfo($mobile);
+        $re = json_decode($re,true);
+        $que_1="SELECT * FROM t_shopsheet WHERE f_label='withdraw' AND f_strats=0 AND f_userid=".$re['list']['userId'];
+        $re_1=M('shopsheet')->query($que_1);
+        $re_2=M('userbalance')->where("f_userid=".$re['list']['userId'])->find();
+        $re_3=M('useraccount')->where("f_userid=".$re['list']['userId'])->select();
+        $AccountCount=count($re_3);
+
+        $this->assign('re',$re);
+        $this->assign('re_1',$re_1);
+        $this->assign('re_2',$re_2);
+        $this->assign('re_3',$re_3);
+        $this->assign('AccountCount',$AccountCount);
+        $this->display();
+
+    }
+
+    public function userAccountUpdate(){
+        $m['f_indexID']=I('userAccountIndexID');
+        $map['f_accountname']=I('inUserAccountName');
+        $map['f_bankaccount']=I('inUserAccountNumber');
+        $re=M('useraccount')->where($m)->save($map);
+        echo json_encode($re);
+
+    }
+}

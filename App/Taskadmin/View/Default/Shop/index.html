@@ -1,0 +1,126 @@
+<include file="Public/head" title="产品列表管理" />
+<body>
+    <div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 产品列表管理</div>
+	    <div class="tabli">
+	        <ul id="tabli_bid">
+	            <li value="1" class='selected'><a href="__APP__/Taskadmin/Shop/index" style="text-decoration:none;">全部</a></li>
+	        </ul>
+<!-- 	        <ul class="">
+	            <li id="tabid" value="1"><input name="searchTname" id="searchTname" value="" placeholder="请输入任务名称" style="height: 30px;width: 300px;"><input type="hidden" name="searchTid" id="searchTid" value="0"></li>
+	        </ul> -->
+	        <ul class="action">
+	            <li id="addShopClass" value="1">添加分类</li>
+	            <li id="addShop" value="4">添加产品</li>
+	            <li id="modiShop" value="5">修改产品</li>
+	            <li id="delShop" value="6">产品下架</li>
+	            <li id="resetShop" value="7">产品上架</li>
+				<li id="openLottery" value="8">兑换开奖</li>
+	        </ul>
+	    </div>
+		<div class="back">
+			<div class="taocz_allsort" id="allCategoryHeader" style="margin-left:265px;">
+				<div class="taocz_allsort_out" id="allCategoryHeaderBox">
+					<b class="a_navbg" style="top: 0px; visibility: hidden;"><s></s></b>
+
+					<volist name="result" id="vo" key="k">
+						<dl flag="{$k-1}" id="{$k-1}">
+							<dt>
+								<s class="l_{$k-1}"></s>
+								<h3>
+									<a onclick="plist_shop({$vo.f_id});">{$vo.f_classname}</a>&nbsp;&nbsp;
+									<span style="display: none;" id="chaozuo{$k-1}">
+										<a onclick="modishopclass({$vo.f_id});" style="color:black;"><i class="fa fa-pencil-square-o"></i>修改</a>
+										<a onclick="delshopclass({$vo.f_id});" style="color:black;"><i class="fa fa-times"></i>删除</a>
+									</span>
+								</h3>
+								<i class="jiantou"></i>
+							</dt>
+							<dd style="display: none;" >
+								<?php if (!empty($vo['secondClass'])) { ?>
+									<div class="new_show_sort2">
+										<div class="sort2">
+												<volist name="vo.secondClass" id="sec">
+													<a onclick="plist_shop({$sec.f_id});" class="secname">{$sec.f_classname}</a>
+													<!-- <input type="hidden" id="secondclassid" name="secondclassid" value="{$sec.f_id}"> -->
+													<span style="display: none;float:right;margin-top: -20px;" class="secchaozuo" id="{$k-1}">
+														<a onclick="modishopclass({$sec.f_id});" style="color:black;cursor: pointer;"><i class="fa fa-pencil-square-o"></i>修改</a>
+														<a onclick="delshopclass({$sec.f_id});" style="color:black;cursor: pointer;"><i class="fa fa-times"></i>删除</a>
+													</span>
+												</volist>
+										</div>
+									</div>
+								<?php } ?>
+							</dd>
+						</dl>
+					</volist>
+
+					<div class="clear"></div>
+
+				    <div class="allsort_pic"></div>
+				</div>
+			</div>
+			<div class="list" style="width:75%;float: right;display: i;">
+		        <ul>
+		            <li style='width:5%;'></li>
+		            <li style='width:20%;'>商品名称</li>
+		            <li style='width:20%;'>所属分类</li>
+		            <li style='width:10%;'>产品总数</li>
+		            <li style='width:15%;'>产品单价</li>
+		            <li style='width:20%;'>参与活动</li>
+		            <li style='width:10%;'>状态</li>
+		        </ul>
+			    <div class='listinfo' style="width:100%;"></div>
+			    <div class="page"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+    <include file="Public/loadjs" />
+	<script type="text/javascript">
+	$(function(){
+		plist_shop();
+		$('#allCategoryHeaderBox dl').each(function()
+		{
+
+			$(this).hover
+			(
+				function()
+				{
+				//
+					$(this).addClass('curr');
+					$(this).find('dd').show();
+					$("#chaozuo"+$(this).attr("id")+"").show();
+					// console.log($(this).find('dd').find('span').attr("id"));
+					$(this).find('dd').find('span').show();
+					$('#allCategoryHeaderBox .a_navbg').css({'top': ($(this).attr('flag') * 57) + 'px', 'visibility': 'visible'});
+				},
+				function(){
+				//
+					$(this).removeClass('curr');
+					$(this).find('dd').hide();
+					$("#chaozuo"+$(this).attr("id")+"").hide();
+					$(this).find('dd').find('span').hide();
+					$('#allCategoryHeaderBox .a_navbg').css({'top':  '0px', 'visibility': 'hidden'});
+				}
+			);
+		});
+
+		// $(".secchaozuo").hover(
+		// 	function()
+		// 		{
+		// 			console.log($(".secchaozuo").attr("id"));
+		// 	alert($(".secchaozuo").attr("id"));
+		// 	}
+		// );
+
+	});
+	</script>
+</html>
+		
+

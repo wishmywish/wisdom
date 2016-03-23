@@ -1,0 +1,66 @@
+<include file="Public/head" title="招商APP管理平台::任务审核" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="breadlist">首页 / 任务审核</div>
+                <div class="tabli">
+                    <ul id="tabli_bid">
+                        <li value="1" class='selected'>智能选标</li>
+                        <li value="2">手动选标</li>
+                        <li value="3">已选中</li>
+                    </ul>
+                    <ul class="">
+                        <li id="tabid" value="1"><input name="searchTname" id="searchTname" value="" placeholder="请输入任务名称" style="height: 30px"><input type="hidden" name="searchTid" id="searchTid" value="0"></li>
+                    </ul>
+                    <ul class="action">
+                        <li id="bid" value="1">推荐</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                            <li style='width:15%;'>经销商名称</li>
+                            <li style='width:20%;'>主营产品</li>
+                            <li style='width:10%;'>年营业额(元)</li>
+                            <li style='width:10%;'>网点数量</li>
+                            <li style='width:10%;'>省/市/县</li>
+                            <li style='width:10%;'>综合评分</li>
+                            <li style='width:10%;'>联系人</li>
+                            <li style='width:10%;'>联系电话</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:100%;'>请先选择任务</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+    $(function(){
+        
+        
+        //获取列表信息
+        //plist(0);
+    });
+    
+    //查找任务
+    $("#searchTname").bigAutocomplete({width:300,
+        url:"{:U('Taskadmin/Fun/searchTname')}",
+        callback:function(data){
+            // console.log(data);
+            $('#searchTid').val(data.result);
+            plist_dealer(data.result);
+        }
+    });
+    
+    
+    
+    </script>
+</html>

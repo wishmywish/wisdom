@@ -1,0 +1,41 @@
+<include file="Public/head" />
+<style type="text/css">
+body{
+    background-color: #fff;
+}
+.content_btn{
+    margin-left: 50%;
+}
+
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="modi">
+            <div class="modi_access">
+                <div class="page_content" id="content_one">
+                    <div class="power">
+                        <div class="power_input">
+                            <input type="hidden" id="id" placeholder="序列" value="{$reModi.list.id}">
+                            <span>角色名：</span> <input type="text" id="accessName" placeholder="角色名" value="{$reModi.list.accessname}">
+                        </div>
+                    </div>
+
+                    <div class="power-content">
+                        <div class="power_input_content">
+                           {$relist}
+                        </div>
+                    </div>
+
+                    <div class="content_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_modi_access" style="margin-top: 115px;">确定</a>
+                    </div>
+
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

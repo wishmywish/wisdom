@@ -1,0 +1,84 @@
+<include file="Public/head" title="招商APP管理平台::提现管理" />
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 提现管理</div>
+        <div class="tabli">
+            <ul id="tabli_withdraw">
+                <li value="0" class='selected'>待确认</li>
+                <li value="1">已付款</li>
+            </ul>
+            <ul class="action">
+                <li id="pay" value="0">一键付款</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                <li style='width:15%;'>姓名</li>
+                <li style='width:15%;'>帐户类型</li>
+                <li style='width:20%;'>开户银行</li>
+                <li style='width:20%;'>帐号</li>
+                <li style='width:10%;'>提现金额</li>
+                <li style='width:5%;'>状态</li>
+                <li style='width:10%;'>申请时间</li>
+            </ul>
+            <div class='listinfo'>
+            </div>
+            <div class="page"></div>
+        </div>
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        //获取列表信息
+        plist_Withdraw('withdraw',0);
+
+        //全选
+        $('#allcheck').click(function(){
+            //alert(this.checked);
+            if(this.checked){
+                $("input[name='withdrawid']").attr("checked", true);
+            }else{
+                $("input[name='withdrawid']").attr("checked", false);
+            }
+        });
+
+        $("#pay").click(function(){
+            var checkedlist = "";
+            $("input[name='withdrawid']:checked").each(function(){
+                if(checkedlist===""){
+                    checkedlist = $(this).val();
+                }else{
+                    checkedlist += ","+$(this).val();
+                }
+            });
+            if(checkedlist===""){
+                layer.msg("选择要支付的记录",{"icon":8});
+                return false;
+            }else{
+                $.post("{:U('Api/Info/conf')}","command=payment_alipay&indexIDs="+checkedlist,function(v){
+                    //console.log(v.html_text);
+                    index = layer.open({
+                        type: 1,
+                        title: false,
+                        closeBtn: false,
+                        shadeClose: true,
+                        //skin: 'yourclass',
+                        area: ['400px', '200px'],
+                        content: v.html_text
+                    });
+                },'json');
+                setTimeout(function(){
+                    layer.close(index);
+                }, 5000);
+            }
+        });
+
+    });
+</script>
+</html>

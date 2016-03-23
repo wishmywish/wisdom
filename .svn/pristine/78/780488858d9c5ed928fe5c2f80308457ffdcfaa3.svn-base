@@ -1,0 +1,233 @@
+<include file="Public/head" title="{$webtitle}"/>
+<style>
+    .heads span{
+        float: left;
+        line-height: 64px;
+        color: #fff;
+        text-shadow: none;
+        /* padding-left: 15px; */
+        width: 15%;
+    }
+
+    .heads h1{
+        line-height: 64px;
+        display: inline-block;
+        font-size: 20px;
+    }
+    .heads a{
+        float: right;
+        /* display: inline-block; */
+        line-height: 69px;
+        font-size: 20px;
+        margin-right: 15px;
+        color: #fff;
+        }
+
+    .list{
+        padding: 10px;
+        line-height: 22px;
+        min-width: 87%;
+        height: 125px;
+        margin: 0 10px;
+    }
+    .btn{
+        border-radius: 5px;
+        border: 1px solid #ff6600;
+         /*padding: 4px 20px; */
+        color: #ff6600;
+        margin-right: 2px;
+        margin-top: 5px;
+        float: right;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor:pointer;
+        display: block;
+    }
+    *{padding: 0; margin: 0}
+
+    .show_tips1{
+        position: absolute;
+        display: none;
+        z-index: 3000;
+        background-color: #FFF;
+        top: 25%;
+        left: 7%;
+        width: 85%;
+        height: 10%;
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding-top: 10px;
+        text-shadow: none;
+        border-radius: 10px;
+    }
+    .btns{
+        position: absolute;
+        background-color: #fff;
+        top: 85px;
+        height:30px;
+        width:100%;
+        line-height:40px;
+        text-align:center;
+        color: #36F;
+        border-top: 1px solid #ccc;
+        font-size: 14px;
+    }
+    .btns span:first-child{
+        width: 48%;
+        border-right: 1px solid #ccc;
+        height: 40px;
+        display: block;
+        float: left;
+    }
+
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=sG5q8YDA4daHjAwdrmK6tSDB"></script>
+</head>
+<include file="Public/loadjs"/>
+<body>
+<div data-role="page">
+    <div  class="heads" style="height: 64px;line-height: 64px;padding-top:0;text-align: center;">
+        <span  class="fa fa-angle-left fa-2x" onclick="goBack()"></span>
+        <h1>网店列表</h1>
+        <span href="" class="fa fa-filter fa-2x" data-role="none" style="float:right;" onclick="oneKeySort()"></span>
+    </div>
+    <div class="page" style="width: 100%;" data-role="content">
+        <volist name="re" id="vo" key="k">
+          <ul class="list" style="border-bottom: 1px solid #ccc;">
+              <li><span>网点：{$vo.f_network_name}</span></li>
+              <li><span>地址：{$vo.f_network_address}</span></li>
+              <li><span style="color: #ff6600;margin-right: 20px;">金币：{$vo.f_eachcoin}</span><span>距离：<span id="distance{$k}"></span>米</span></li>
+              <li style="width: 100%;"><span style="margin-right: 20px;">余量：{$vo.f_claim_num}</span><span>在距离<span>{$vo.f_range}</span>米范围内有效</span></li>
+              <if condition="$vo.f_claim_num neq 0">
+                  <if condition="$vo.f_utask_status eq 2"><span class="btn" id="btn{$k}" onclick="do_task(this,{$k})">继续参与</span>
+                      <elseif condition="$vo.f_utask_status eq 1"/><span class="btn" id="btn{$k}" style="color:gray">等待审核</span>
+                      <elseif condition="$vo.f_utask_status eq 3"/><span class="btn" id="btn{$k}">已结束</span>
+                      <else /><span class="btn" id="btn{$k}" onclick="do_task(this,{$k})">立即参与</span>
+                  </if>
+                  <else />
+                  <if condition="$vo.f_utask_status eq 1"><span class="btn" id="btn{$k}" style="color:gray">等待审核</span>
+                      <else /><span class="btn" id="btn{$k}">已结束</span>
+                  </if>
+              </if>
+          </ul>
+          <input type="hidden" id="state{$k}" value="{$vo.f_utask_status}">
+          <input type="hidden" id="superid{$k}" value="{$vo.f_super_id}">
+          <input type="hidden" id="longitude{$k}" value="{$vo.f_longitude}">
+          <input type="hidden" id="latitude{$k}" value="{$vo.f_latitude}">
+          <input type="hidden" id="range{$k}" value="{$vo.f_range}">
+        </volist>
+    </div>
+    <div id="l-map" style="display:none;"></div>
+        <!-- <div  class="show_tips1">
+            <ul>
+                <li><b>申请成功</b></li>
+                <li>请在2小时内完成此任务。</li>
+                <li>是否立即开始工作？</li>
+            </ul>
+            <div id="embedding" class="btns">
+                <span>稍后</span>
+                <span>立即开始</span>
+            </div>
+        </div> -->
+
+
+</div>
+<input type="hidden" id="userid" value="{$userid}">
+<input type="hidden" id="taskid" value="{$taskid}">
+<input type="hidden" id="longitude" value="{$longitude}">
+<input type="hidden" id="latitude" value="{$latitude}">
+<input type="hidden" id="countre" value="{$countre}">
+<input type="hidden" id="supervise" onclick="window.demo.done()">
+
+
+</body>
+<script type="text/javascript">
+        var map = new BMap.Map("l-map");
+        // var point = new BMap.Point(120.112793,30.337803);
+        var longitude=$("#longitude").val();
+        var latitude=$("#latitude").val();
+        var point = new BMap.Point(longitude,latitude);
+        $("ul").each(function(i){
+            i+=1;
+            var pointB=new BMap.Point($("#longitude"+i).val(),$("#latitude"+i).val());
+            distance = parseInt(map.getDistance(point,pointB));
+            $("#distance"+i).text(distance);
+            range = $("#range"+i).val();
+           
+            if(distance<=range){
+                $("#btn"+i).css("display","");
+            }else{
+                $("#btn"+i).css("display","none");
+            }
+        });
+        function oneKeySort(){
+            var map = new BMap.Map("l-map");
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            // var point = new BMap.Point(120.112793,30.337803);
+            var longitude=$("#longitude").val();
+            var latitude=$("#latitude").val();
+            var point = new BMap.Point(longitude,latitude);
+            $("ul").each(function(i){
+                i+=1;
+                var superid=$("#superid"+i).val();
+                var pointB=new BMap.Point($("#longitude"+i).val(),$("#latitude"+i).val());
+                distance = parseInt(map.getDistance(point,pointB));
+                $.post(APP+"/Mobileweb/Events/superviseDistance","taskid="+taskid+"&userid="+userid+"&superid="+superid+"&distance="+distance,
+                    function(data){
+                        if (1==data||"1"==data) {
+                            if (i==$("#countre").val()) {
+                                location.href=APP+"/Mobileweb/Events/supervise?userid="+userid+"&taskid="+taskid+"&lng="+longitude+"&lat="+latitude;
+                            }
+                        }
+                    },"json");
+            });
+        }
+
+        function do_task(obj,k){
+            //点击按钮时根据状态判断，如状态为2，则不修改，如没有数据则添加数据到表taskdraw中，还有把数据序号也也加入进去
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var state=$("#state"+k).val();
+            var superid=$("#superid"+k).val();
+            if (state=="") {
+                $.post(APP+"/Mobileweb/Events/superviseDraw",
+                "taskid="+taskid+"&userid="+userid+"&superid="+superid);
+            }
+            // $(".show_tips1").slideDown();
+
+            // $(document).on('click','.btns span',function(){
+            //     if($(this).text()=='稍后'){
+            //         $(".show_tips1").slideUp();
+            //         $(obj).text("继续参与");
+            //     }else{
+                    location.href=APP+'/Mobileweb/Events/superviseCheck?userid='+$('#userid').val()+'&taskid='+$('#taskid').val()+'&netserial='+k+'&superid='+superid+'&longitude='+longitude+'&latitude='+latitude;
+            //     }
+            // });
+        }
+
+        function goBack(){
+               document.getElementById("supervise").click();
+               function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'goBack';
+                    bridge.send(data);
+                });
+            }
+
+</script>
+</html>

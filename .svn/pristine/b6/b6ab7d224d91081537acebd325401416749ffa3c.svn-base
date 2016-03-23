@@ -1,0 +1,385 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            考勤报表
+        </div>
+    </div>
+    <div class="check_center">
+        <!--输入框-->
+        <div class="check_head">
+            <span style="display: inline-block;">首页&nbsp;>&nbsp;签到&nbsp;>&nbsp;考勤报表</span>
+            <input type="hidden" id="old_li_type" value="{$li_type}" />
+            <input type="hidden" id="old_ri_date" value="{$ri_date}" />
+            <input type="hidden" id="old_zhou_dateF" value="{$zhou_dateF}" />
+            <input type="hidden" id="old_zhou_dateT" value="{$zhou_dateT}" />
+            <input type="hidden" id="old_yue_date" value="{$yue_date}" />
+            <input type="hidden" id="old_startdate" value="{$startdate}" />
+            <input type="hidden" id="old_enddate" value="{$enddate}" />
+            <input type="hidden" id="old_deptNames" value="{$deptNames}" />
+            <input type="hidden" id="old_deptIds" value="{$deptIds}" />
+            <input type="hidden" id="old_userNames" value="{$userNames}" />
+            <input type="hidden" id="old_userIds" value="{$userIds}" />
+            <form id="form1" action="{:U('Home/Office/checking')}" method="post">
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <input type="hidden" id="li_type" name="li_type" value="li_ri" />
+                    <input type="hidden" id="currentPage" name="page" value="1" />
+                    <ul>
+                        <li class="selected" id="li_ri">日</li>
+                        <li id="li_zhou">周</li>
+                        <li id="li_yue">月</li>
+                        <li style="border-right: 1px solid #eaeaea;" id="li_qujian">区间</li>
+                    </ul>
+                    <div id="timeChoose">
+                        <!-- 日时间-->
+                        <div id="dailyTime" class="divTime">
+                            <input class="bntns" type="button" value="本日" onclick="dateMoveClick('101')">
+                            <input class="bntns" type="button" value="<" onclick="dateMoveClick('102')">
+                            <span id="ri_span" name="ri_span">{$ri_date}</span>
+                            <input type="hidden" id="ri_date" name="ri_date" value="{$ri_date}">
+                            <input class="bntns" type="button" value=">" onclick="dateMoveClick('103')"></div>
+                        <!--周时间-->
+                        <div id="weekTime" class="divTime" style="display: none">
+                            <input class="bntns" type="button" value="本周" onclick="dateMoveClick('201')">
+                            <input class="bntns" type="button" value="<" onclick="dateMoveClick('202')">
+                            <span id="zhouF_span" name="zhouF_span">{$zhou_dateF}</span>
+                            -
+                            <span id="zhouT_span" name="zhouT_span">{$zhou_dateT}</span>
+                            <input type="hidden" id="zhou_dateF" name="zhou_dateF" value="{$zhou_dateF}">
+                            <input type="hidden" id="zhou_dateT" name="zhou_dateT" value="{$zhou_dateT}">
+                            <input class="bntns" type="button" value=">" onclick="dateMoveClick('203')"></div>
+                        <!-- 月时间-->
+                        <div id="month_time" class="divTime" style="display: none">
+                            <input class="bntns" type="button" value="本月" onclick="dateMoveClick('301')">
+                            <input class="bntns" type="button" value="<" onclick="dateMoveClick('302')">
+                            <span id="yue_span" name="yue_span">{$yue_date}</span>
+                            <input type="hidden" id="yue_date" name="yue_date" value="{$yue_date}">
+                            <input class="bntns" type="button" value=">" onclick="dateMoveClick('303')"></div>
+                        <!-- 区间时间-->
+                        <div id="section" class="divTime" style="display: none">
+                            <input id="startdate"  name="startdate" class="laydate-icon"  style="width: 100px; height: 25px;" value="{$startdate}" >
+                            &nbsp;至&nbsp;
+                            <input id="enddate"  name="enddate" class="laydate-icon"   style="width: 100px; height: 25px;" value="{$enddate}" ></div>
+                    </div>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <input type="search" id="deptNames" readonly="readonly" name = "deptNames" placeholder="所属部门" value="{$deptNames}">
+                        <span class="fa fa-sitemap fa-lg" onclick="selectDepts();"></span>
+                        <input type="hidden" id="deptIds"  name = "deptIds"  value="{$deptIds}">
+                        <input type="search" id="userNames" readonly="readonly" name = "userNames"  placeholder="员工" value="{$userNames}">
+                        <span class="fa fa-group fa-lg" onclick="selectUsers();"></span>
+                        <input type="hidden" id="userIds"  name = "userIds"  value="{$userIds}"></div>
+                    <!-- 按钮-->
+                    <p style="float: left;height: 25px;width: 250px;margin: 12px 0 0 677px;">
+                        <input id="searchButton1" class="bntns1" type="button" value="搜索" onclick="searchSubmit(true)" />
+                        <input id="resetButton1" class="bntns1" type="button" value="清空" onclick="cleanButton()" />
+                        <input id="exprotButton" class="bntns1" type="button" value="导出" />
+                    </p>
+                </div>
+            </form>
+        </div>
+        <!--列表-->
+        <div class="check_list">
+            <div class="title">
+                <ul>
+                    <li style="width: 15%;">员工</li>
+                    <li style="width: 25%;">所属部门</li>
+                    <li style="width: 20%;">签到地址</li>
+                    <li style="width: 20%;">签到时间</li>
+                    <li style="width: 10%;">签到类型</li>
+                    <li style="width: 10%;">操作</li>
+                </ul>
+            </div>
+            <div class="contentList">
+                <volist name="getWorkSignList_list" id="vo">
+                    <ul>
+                        <li style="width: 15%;">{$vo.userName}</li>
+                        <li style="width: 25%;" title="{$vo.deptName}">{$vo.deptName}</li>
+                        <li style="width: 20%;" title="{$vo.addressName}">{$vo.addressName}</li>
+                        <li style="width: 20%;">{$vo.checkinTime}</li>
+                        <li style="width: 10%;">
+                            <if condition="$vo.checkinType eq 4">
+                                上班
+                                <elseif condition="$vo.checkinType eq 5"/>
+                                下班
+                            </if>
+                        </li>
+                        <li style="width: 10%;">
+                            <img style="width: 18px;cursor: pointer;" src="__IMG__/response.png"></li>
+                    </ul>
+                </volist>
+                <empty name="getWorkSignList_list">
+                    <ul><li style="width: 100%;color:#f47469;">无数据!</li></ul>
+                </empty>
+            </div>
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA"></div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",0);
+        Cookie.createCookie("smallMenuIndex",5);
+        var start = {
+            elem: '#startdate',
+            format: 'YYYY-MM-DD',
+            min: '2000-01-01', //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#enddate',
+            format: 'YYYY-MM-DD',
+            min: '2000-01-01',
+            max: laydate.now(),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+
+        createPageBar('{$getWorkSignList_total}', '{$getWorkSignList_pageSize}', '{$getWorkSignList_page}', '{$getWorkSignList_totalPage}');
+
+        $(document).on('click','#pagebar span a', function(){
+            $("#currentPage").val($(this).attr("rel"));
+            $("#li_type").val($("#old_li_type").val());
+            $("#ri_date").val($("#old_ri_date").val());
+            $("#zhou_dateF").val($("#old_zhou_dateF").val());
+            $("#zhou_dateT").val($("#old_zhou_dateT").val());
+            $("#yue_date").val($("#old_yue_date").val());
+            $("#startdate").val($("#old_startdate").val());
+            $("#enddate").val($("#old_enddate").val());
+            $("#deptNames").val($("#old_deptNames").val());
+            $("#deptIds").val($("#old_deptIds").val());
+            $("#userNames").val($("#old_userNames").val());
+            $("#userIds").val($("#old_userIds").val());
+            searchSubmit(false);
+        });
+
+        if ("{$yue_date}" == "") {
+            dateMoveClick(101);
+            dateMoveClick(201);
+            dateMoveClick(301);
+            dateMoveClick(401);
+        }
+    });
+
+    // 菜单轮换点击事件
+    $(".column li").click(function () {
+        var index = $(".column li").index($(this));
+        $(this).addClass("selected").siblings().removeClass("selected");
+        $divList = $("#timeChoose").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+
+        if (index == 0) {
+            var li_tp = document.getElementById("li_type")
+            li_tp.value="li_ri";
+        }
+        if (index == 1) {
+            var li_tp = document.getElementById("li_type")
+            li_tp.value="li_zhou";
+        }
+        if (index == 2) {
+            var li_tp = document.getElementById("li_type")
+            li_tp.value="li_yue";
+        }
+        if (index == 3) {
+            var li_tp = document.getElementById("li_type")
+            li_tp.value="li_qujian";
+        }
+    });
+
+    function cleanButton(){
+        $("#deptNames").val("");
+        $("#deptIds").val("");
+        $("#userNames").val("");
+        $("#userIds").val("");
+    }
+
+    //选择用户
+    function selectUsers() {
+        var userNames = $("#userNames").val();
+        var userIds = $("#userIds").val();
+        layer.open({
+            type:2,
+            title :['选择用户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+    //选择部门
+    function selectDepts() {
+        var deptNames = $("#deptNames").val();
+        var deptIds = $("#deptIds").val();
+        layer.open({
+            type:2,
+            title :['选择部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['400px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectDepts')}" + "?deptNames=" + deptNames + "&deptIds=" + deptIds,
+        });
+    }
+
+    //点击前一日按钮
+    function dateMoveClick(idValue) {
+        //本日
+        if (idValue ==101){
+            document.getElementById("ri_date").value = new Date().Format("yyyy-MM-dd")
+            document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+        }
+        //前一日
+        if (idValue ==102){
+            var curDate =document.getElementById("ri_date").value;
+            curDate = new Date(Date.parse(curDate.replace(/-/g, "/")));  
+            var preDate = new Date(curDate.getTime() - 24*60*60*1000);  //前一天
+            document.getElementById("ri_date").value = preDate.Format("yyyy-MM-dd")
+            document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+        }
+        //后一日
+        if (idValue ==103){
+            var curDate =document.getElementById("ri_date").value;
+            curDate = new Date(Date.parse(curDate.replace(/-/g, "/")));  
+            var nextDate = new Date(curDate.getTime() + 24*60*60*1000);  //后一天
+            document.getElementById("ri_date").value = nextDate.Format("yyyy-MM-dd")
+            document.getElementById("ri_span").innerHTML=document.getElementById("ri_date").value
+        }
+        
+        //本周
+        if (idValue ==201){
+            var weekDay = new Date().getDay();
+            var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000);  //后一天
+            var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  //后一天
+            document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+        }
+        //前一周 zhou_dateF
+        if (idValue ==202){ 
+            var oldFromDate =document.getElementById("zhou_dateF").value;
+            var oldToDate =document.getElementById("zhou_dateT").value;
+            oldFromDate = new Date(Date.parse(oldFromDate.replace(/-/g, "/")));  
+            oldToDate = new Date(Date.parse(oldToDate.replace(/-/g, "/"))); 
+            var weekDay = new Date().getDay();
+            var fromDate = new Date(oldFromDate.getTime() - 7*24*60*60*1000);  //后一天
+            var toDate = new Date(oldToDate.getTime() - 7*24*60*60*1000);  //后一天
+            document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+        }
+        //后一周
+        if (idValue ==203){
+            var oldFromDate =document.getElementById("zhou_dateF").value;
+            var oldToDate =document.getElementById("zhou_dateT").value;
+            oldFromDate = new Date(Date.parse(oldFromDate.replace(/-/g, "/")));  
+            oldToDate = new Date(Date.parse(oldToDate.replace(/-/g, "/"))); 
+            var weekDay = new Date().getDay();
+            var fromDate = new Date(oldFromDate.getTime() + 7*24*60*60*1000);  //后一天
+            var toDate = new Date(oldToDate.getTime() + 7*24*60*60*1000);  //后一天
+            document.getElementById("zhou_dateF").value = fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhou_dateT").value = toDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouF_span").innerHTML=fromDate.Format("yyyy-MM-dd")
+            document.getElementById("zhouT_span").innerHTML=toDate.Format("yyyy-MM-dd")
+        }
+        
+        //本月
+        if (idValue ==301){
+            document.getElementById("yue_date").value = new Date().Format("yyyy-MM")
+            document.getElementById("yue_span").innerHTML=document.getElementById("yue_date").value
+            //alert (document.getElementById("ri_date").value)
+        }
+        //前一月
+        if (idValue ==302){
+            strDate = document.getElementById("yue_date").value+"-01"
+            now = new Date(strDate.replace(/\-/g,"/"));
+            perMonth =new Date( now.setMonth(now.getMonth() - 1));
+            //alert (perMonth.Format("yyyy-MM"));
+            document.getElementById("yue_date").value = perMonth.Format("yyyy-MM");
+            document.getElementById("yue_span").innerHTML=perMonth.Format("yyyy-MM");
+        }
+        //后一月
+        if (idValue ==303){
+            strDate = document.getElementById("yue_date").value+"-01"
+            now = new Date(strDate.replace(/\-/g,"/"));
+            perMonth =new Date( now.setMonth(now.getMonth() + 1));
+            //alert (perMonth.Format("yyyy-MM"));
+            document.getElementById("yue_date").value = perMonth.Format("yyyy-MM");
+            document.getElementById("yue_span").innerHTML=perMonth.Format("yyyy-MM");
+        }
+        //区间 startdate
+        if (idValue ==401){
+            var weekDay = new Date().getDay();
+            var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000);  //后一天
+            var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  //后一天
+            document.getElementById("startdate").value=fromDate.Format("yyyy-MM-dd")
+            document.getElementById("enddate").value=toDate.Format("yyyy-MM-dd")
+        }
+        
+        //本月
+        if (idValue ==301){
+            document.getElementById("yue_date").value = new Date().Format("yyyy-MM")
+            document.getElementById("yue_span").innerHTML=document.getElementById("yue_date").value
+            //alert (document.getElementById("ri_date").value)
+        }
+        //本月    我的报告
+        if (idValue ==501){
+            document.getElementById("selectedDate").value = new Date().Format("yyyy-MM")
+            document.getElementById("selectedDate_span").innerHTML=document.getElementById("yue_date").value
+        }
+        //前一月  我的报告
+        if (idValue ==502){
+            strDate = document.getElementById("selectedDate").value+"-01"
+            now = new Date(strDate.replace(/\-/g,"/"));
+            perMonth =new Date( now.setMonth(now.getMonth() - 1));
+            //alert (perMonth.Format("yyyy-MM"));
+            document.getElementById("selectedDate").value = perMonth.Format("yyyy-MM");
+            document.getElementById("selectedDate_span").innerHTML=perMonth.Format("yyyy-MM");
+        }
+        //后一月  我的报告
+        if (idValue ==503){
+            strDate = document.getElementById("selectedDate").value+"-01"
+            now = new Date(strDate.replace(/\-/g,"/"));
+            perMonth =new Date( now.setMonth(now.getMonth() + 1));
+            //alert (perMonth.Format("yyyy-MM"));
+            document.getElementById("selectedDate").value = perMonth.Format("yyyy-MM");
+            document.getElementById("selectedDate_span").innerHTML=perMonth.Format("yyyy-MM");
+        }
+        
+    }
+
+    function searchSubmit(searchFlag) {
+        if (searchFlag) {
+            $("#currentPage").val("1");
+        }
+        $("#form1").submit();
+    }
+
+    function createPageBar(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar");
+    }
+
+    $("#{$li_type}").click();
+</script>
+</body>
+</html>

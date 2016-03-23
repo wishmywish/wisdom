@@ -1,0 +1,334 @@
+[ 2016-03-21T16:03:38+08:00 ] ::1 /wisdom/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-21T16:03:38+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-21T16:03:39+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.020001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020001s ]
+
+[ 2016-03-21T16:03:51+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-21T16:03:51+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: imgurl D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-21T16:03:54+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:54+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getNoticeList","userId":"10862","companyId":"1002","queryStart":"1","queryEnd":"10","subject":"","boardId":""}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getWorkSet","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getDefineProcessNodeList","userId":"10862","busiType":"2"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getDefineProcessNodeList","userId":"10862","busiType":"3"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getDefineProcessNodeList","userId":"10862","busiType":"4"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getDefineProcessNodeList","userId":"10862","busiType":"1"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getDefineProcessNodeList","userId":"10862","busiType":"5"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getMessageCount","userId":"10862","companyId":"1002","deptId":"921"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getProcessList","userId":"10862","queryStart":"1","queryEnd":"10","type":"2"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"getProcessList","userId":"10862","queryStart":"1","queryEnd":"10","type":"3"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"viewUserDetail","userId":"10862"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+NOTICE: YY_IN:::{"command":"queryMessageList","userId":"10862","companyId":"1002","queryStart":"1","queryEnd":"3","type":"1","deptId":"921"}
+[ 2016-03-21T16:03:55+08:00 ] ::1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: imgurl D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1904 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1906 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1927 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1928 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1881 行.
+NOTIC: [8] Undefined index: workReportFid D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 766 行.
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 897 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8552 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 897 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8552 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 897 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8552 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 897 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8552 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 897 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8552 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2517 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1133 行.
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1485 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1485 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1091 行.
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 2063 行.
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1362 行.
+NOTIC: [8] Undefined variable: list_key D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1133 行.
+NOTIC: [8] Undefined index: attachList D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1135 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\wisdom\App\Api\Controller\YYInfoController.class.php 第 1135 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+
+[ 2016-03-21T16:04:02+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: imgurl D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-21T16:04:10+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 77 行.
+NOTIC: [8] Undefined variable: imgurl D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 61 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: two D:\wamp\www\wisdom\App\Home\Controller\BusinessController.class.php 第 137 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 337 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 350 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 355 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 356 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 364 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 375 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 387 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 392 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 396 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 396 行.
+NOTIC: [8] Use of undefined constant f_tryout - assumed 'f_tryout' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 396 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 398 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 399 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 402 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 403 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 404 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 527 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 529 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 551 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 553 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 576 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 603 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 625 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 646 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 669 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 689 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 710 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 724 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 758 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 972 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 973 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 974 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

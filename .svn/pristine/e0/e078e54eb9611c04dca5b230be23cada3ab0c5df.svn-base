@@ -1,0 +1,18 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <div style="position: fixed; top: 0;">
+            <volist name="re" id="vo" key="k">
+                <div>
+                    <p style="font-size: 14px">第{$k}题：正确答案是第{$vo.f_userchange.f_trueanswer}个，您选择的是第{$vo.f_answer}个。</p>
+                </div>
+             </volist>
+             <div>
+                <p style="font-size: 16px">正确答题{$trueCount}题，错误答题{$falseCount}题。</p>
+             </div>
+         </div>
+    </neq>
+</body>
+</html>

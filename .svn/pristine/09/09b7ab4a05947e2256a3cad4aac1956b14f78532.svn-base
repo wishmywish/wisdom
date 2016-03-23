@@ -1,0 +1,56 @@
+<?php
+namespace Api\Model;
+use Think\Model;
+class FilesModel extends Model {
+    
+    protected $tableName = 'files';
+    protected $actionType = 'add';
+
+
+    //接受自定义的参数
+    function initialize($options)
+    {
+            foreach($options as $k => $v)
+            {
+                $this->$k = $v;
+}
+    }
+
+    //数据处理
+    function actionData($info){
+        $obj = M($this->tableName);
+        switch ($this->actionType) {
+            case 'add':
+                $map['f_filename'] = $info['upfile']['savename'];
+                $map['f_filepath'] = $info['upfile']['savepath'];
+                $map['f_uptime'] = time();
+                $re = $obj->add($map);
+                break;
+            case 'del':
+
+                break;
+            default:
+                break;
+        }
+        return $re;
+    }
+    
+    
+    
+    public function getFileUrl($fileid) {
+        $t = M($this->tableName);
+        if($fileid==""){
+            return "";
+        }else{
+            $re = $t->field('f_id','f_filepath','f_filename')->where('f_id='.(int)$fileid)->find();
+            //echo $t->getLastsql();
+            return $re['f_filepath'].$re['f_filename'];
+        }
+        
+    }
+}
+
+
+//{"upfile":{"name":"22.jpg","type":"image\/jpeg","size":201660,"key":"upfile","ext":"jpg","md5":"5d11a243b52168614e8df27496f125b4"
+//,"sha1":"756edb7993914985d4d6bef75db732a9a10b5d8e","savename":"553ee1cc70cc8.jpg","savepath":"20150428
+//\/"}}

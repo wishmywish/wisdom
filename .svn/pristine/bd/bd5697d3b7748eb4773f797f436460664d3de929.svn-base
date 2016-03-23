@@ -1,0 +1,31 @@
+/**
+ * Created by wq on 2015/8/14.
+ */
+//�˵�
+$(function(){
+//  $('#lanPos').css('top',$('.hover').offset().top-150);
+//  $('.menu_ul .menu_li').hover(function(){
+//      $('#lanPos').css('top',$(this).offset().top-150);
+//  },function(){
+//      $('#lanPos').css('top',$('.hover').offset().top-150);
+//  })
+
+//  $('.menu_ul .menu_li').click(function(){
+//      for(var i=0;i<$('.menu_ul .menu_li').size();i++){
+//          if(this==$('.menu_ul .menu_li').get(i)){
+//              $('.menu_ul .menu_li').eq(i).children('a').addClass('hover');
+//          }else{
+//              $('.menu_ul .menu_li').eq(i).children('a').removeClass('hover');
+//          }
+//      }
+//      $('.ment li').parents().find(".ment li").RemoveClass('child_menu');
+//  })
+    $('.ment li').click(function(){
+        $(this).parents().find(".ment li a").removeClass('hover');
+        $(this).parent.prev(".ment li a").addClass('hover');
+        $('.ment li').parents().find(".ment li").RemoveClass('child_menu');
+        $(this).addClass('child_menu');
+
+    })
+
+})

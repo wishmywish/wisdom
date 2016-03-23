@@ -1,0 +1,24 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2015/8/26
+ * Time: 20:35
+ */
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class ShopController extends Controller
+{
+    public function index(){
+        set_theme();
+        $userid = I('get.userid',0);
+        $this->display();
+    }
+
+    //º”‘ÿ∑÷¿‡
+    function showcname(){
+
+    }
+}

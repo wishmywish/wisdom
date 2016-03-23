@@ -1,0 +1,14 @@
+<include file="Public/head" title="{$webtitle}" />
+</head>
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content">
+        <div style=" background: #F83023;" >
+            <img src="__IMG__/t_01.jpg">
+            <img  src="__IMG__/t_02.jpg">
+            <img  src="__IMG__/t_03.jpg">
+        </div>
+    </div><!-- /content -->
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <head>
+        <title>[title]</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+        <css href="__CSS__/style.css" />
+        
+        <js href="__STATIC__/jquery-1.11.2.min.js" />
+        <js href="__JS__/jquery.mobile-1.4.5.min.js" />
+    </head>

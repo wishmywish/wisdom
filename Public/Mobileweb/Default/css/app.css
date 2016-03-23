@@ -1,0 +1,76 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+.mui-android header.mui-bar{
+	display: none;
+}
+.mui-android .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+
+
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{
+	background-color:#fe6700;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color:#fe6700;
+	border-bottom: 2px solid #fe6700;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	border-bottom: 2px solid #fe6700;
+}
+.mui-segmented-control.mui-segmented-control-inverted{
+	background-color:#FFFFFF;
+}
+
+.bar-progess-bar{
+	left:0%;
+	width:33.33%;
+	height:.1em;
+	background-color:#fe6700;
+}
+
+.mui-table-view{
+	min-height:140px;
+}
+
+.mui-table-view .mui-media-object{
+	height:90px;
+	max-width:85px;
+}
+
+.coin_img{
+	position:absolute;
+	left:80px;
+	top:75px;
+	width:55px;
+	max-height:55px;
+}
+
+.coin_num{
+	position:absolute;
+	left:95px;
+	top:80px;
+	color:#FFFFFF;
+}
+.coin_num2{
+	position:absolute;
+	left:98px;
+	top:102px;
+	color:#FFFFFF;
+}
+
+.mui-bar{
+	background-color:#fe6700;
+}
+.mui-tab-label{
+	color:#FFFFFF;
+}
+
+.mui-icon-left-nav{
+	color: #FFFFFF;
+}
+

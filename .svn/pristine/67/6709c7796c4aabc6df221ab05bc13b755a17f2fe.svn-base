@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        textarea{font-family: '宋体'; color: #646464; font-size: 14px;border: 1px solid #a9a9a9;}
+        input,select{border: 1px solid #a9a9a9;color: #646464;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden;width: 100%;  background: #f9f9f9; }
+        .buts{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;margin-right: 30px;}
+        .buts1{margin-right: 30px;border:1px;height: 25px;width: 70px;background: #eeeeee;color: #999;cursor: pointer;}
+
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+</head>
+<body>
+
+<div class="main">
+    <div style="float: left;  margin: 53px 30px 0 30px;">
+        任务已经成功下达。
+    </div>
+    <div style="text-align: right;width: 100%;float: left;">
+        <button class="buts" >确定</button>
+    </div>
+</div>
+</div>
+
+<include file="Public/loadjs" />
+</body>
+</html>

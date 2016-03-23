@@ -1,0 +1,45 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+
+<div class="content_right">
+    <div class="cons_top">
+        <h4 class="cons_tab fl">
+            <span>手动筛选</span>
+            <span style="background: none;">已中标</span>
+        </h4>
+        <p class="p1 rg"><a href="#">首页</a>&nbsp;>&nbsp;<a href="#">任务管理</a>&nbsp;>&nbsp;<a href="#">智能管理</a></p>
+    </div>
+    <div class=""></div>
+</div>
+</div>
+
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+
+
+
+<script>
+    $(function(){
+        $('#lanPos').css('top',$('.hover').offset().top-150);
+        $('.menu_ul .menu_li').hover(function(){
+            $('#lanPos').css('top',$(this).offset().top-150);
+        },function(){
+            $('#lanPos').css('top',$('.hover').offset().top-150);
+        })
+
+        $('.menu_ul .menu_li').click(function(){
+            for(var i=0;i<$('.menu_ul .menu_li').size();i++){
+                if(this==$('.menu_ul .menu_li').get(i)){
+                    $('.menu_ul .menu_li').eq(i).children('a').addClass('hover');
+                }else{
+                    $('.menu_ul .menu_li').eq(i).children('a').removeClass('hover');
+                }
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

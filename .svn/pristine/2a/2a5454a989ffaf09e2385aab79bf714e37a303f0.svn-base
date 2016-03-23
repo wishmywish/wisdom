@@ -1,0 +1,215 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <script>
+    
+    function is_cookie(){
+        // removeCookie('hhh');
+        var countPage={$count};
+        if (getCookie('hhh') === '') {
+            setCookie('hhh', 1, 3600);
+        }else if(parseInt(getCookie('hhh')) === parseInt(countPage)){
+            $(".head_con4").show();
+        }
+    }
+</script>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <h1>答题</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k},{$vo.f_type})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <input type="hidden" id="currentPage" value="{$k}">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$vo.f_type},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con" >
+                        <p title="{$vo.f_problemtatile}" style="font-size: 14px">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <?php if ($vo['f_type']==1||$vo['f_type']=='1') { ?>
+                                <p style="position:relative;">
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$ky-1}" 
+                                    <?php if ($ky-1==0) { ?>
+                                    <?php echo "checked"; ?>
+                                    <?php } ?>
+                                    />
+                                    <span class="sp6" style="width: 90%;">{$voy}</span>
+                                </p>
+                            <?php }else if ($vo['f_type']==2||$vo['f_type']=='2') { ?>
+                                <p style="position:relative;">
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" />
+                                    <span class="sp6" style="width: 90%;">{$voy}</span>
+                                </p>
+                            <?php } ?>
+                         </volist>
+                    </div>
+                    <div>
+                        <input type="hidden" id="trueAnswer{$k}" value="{$vo.f_trueanswer}">
+                    </div>
+                    <div class="head_con4">
+                        <button id="submit" onclick="done({$count})">提交</button>
+                    </div>
+                </div>
+            </div>
+
+         </volist>
+         <div>
+             <input type="hidden" id="countPage" value="{$count}">
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+             <input type="hidden" id="answerOver" onclick="window.demo.done()">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+        if($("#countPage").val()>2){
+          $(".head_con4").hide();
+        }else if($("#countPage").val()==2){
+            if($("#currentPage").val()==1){
+                document.getElementById('submit').style.color="#fff";
+                document.getElementById('submit').style.backgroundColor="#fff";
+                document.getElementById('submit').style.borderColor="#fff";
+            }
+
+        }
+        function nextProblem(k,f_type,count){
+
+            // $.mobile.changePage (APP+"/Mobileweb/Events/slides?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k), 'pop', true, true);
+            var tureanswer=$("#trueAnswer"+k+"").val();
+            var trueAnswer_arr=tureanswer.split(",");
+            var input = $("input[name='inps"+k+"']");
+            for(var j =0;j < trueAnswer_arr.length;j++){
+                for(var i =0;i < input.length;i++){
+                    if (i == trueAnswer_arr[j]) {
+                        input[i].id='TrueAnswer'+k+j;
+                    }
+                }
+                $("#TrueAnswer"+k+j+"").parent().parent().append('<i class="fa fa-check" style="color:red; position: absolute; top:0; left:0;"></i>');
+            }
+
+            $("input[name='inps"+k+"']").attr("onclick","return false;");
+            location.href=APP+"/Mobileweb/Events/answerClass?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+
+            //$.mobile.changePage("#page"+(++k),{transition:"pop"});
+            // $.mobile.changePage("#page"+(++k), 'pop', true, true);
+            // location.hash="#page"+(++k);
+            // console.log("#page"+(k+1));
+            // location.href="#page"+(++k);
+           if (k>=count) {
+                $(".head_con4").show();
+            }
+            if (k>count) {
+                layer.msg("当前页是最后页");
+            }
+        }
+
+        function lastProblem(k,f_type){
+            $(".head_con4").hide();
+            location.hash="#page"+(--k);
+            if (k<1) {
+                layer.msg("当前页是第一页");
+            }
+        }
+
+        function done(count){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var serial="";
+            var answer="";
+            var allAnswer="";
+            for (var i = 1; i <= count; i++) {
+                var inpschecked=$("input[name='inps"+i+"']:checked");
+                if(inpschecked.length==1){
+                    answer=inpschecked.val();
+                    if(allAnswer==""){
+                        allAnswer=answer;
+                        serial=i;
+                    }else{
+                        allAnswer+="|"+answer;
+                        serial+="|"+i;
+                    }
+                }else{
+                    answer ="";
+                    inpschecked.each(function(){
+                        if (answer ==""){
+                            answer += $(this).val();
+                        }else{
+                            answer += "," + $(this).val();
+                        }
+                    });
+                    if(allAnswer==""){
+                        allAnswer=answer;
+                        serial=i;
+                    }else{
+                        allAnswer+="|"+answer;
+                        serial+="|"+i;
+                    }
+                }
+            }
+
+            var trueCount=0;
+            var falseCount=0;
+            console.log(allAnswer);
+            var answer_arr =allAnswer.split('|');
+            console.log(answer_arr);
+            for (var i = 0; i < answer_arr.length; i++) {
+                var tureansweraaa=$("#trueAnswer"+(i+1)+"").val();
+                console.log(tureansweraaa);
+                console.log(answer_arr[i]);
+
+                if(tureansweraaa==answer_arr[i]){
+                    trueCount++;
+                }else{
+                    falseCount++;
+                }
+            }
+            console.log(trueCount);
+            console.log(falseCount);
+
+            
+            $.post(APP+"/Mobileweb/Events/doneSure",
+            "taskid="+taskid+"&allAnswer="+allAnswer+"&serial="+serial+"&userid="+userid+"&trueCount="+trueCount+"&falseCount="+falseCount+"&count="+count,
+            function(data){
+                layer.msg("您获得"+data+"个金币！");
+               document.getElementById("answerOver").click();
+
+               function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'finish';
+                    bridge.send(data);
+                });
+            },"json");
+            
+        }
+    </script>
+</html>

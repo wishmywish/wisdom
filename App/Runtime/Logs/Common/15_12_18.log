@@ -1,0 +1,6 @@
+[ 2015-12-18T15:44:57+08:00 ] ::1 /wisdom/index.php/Mobile/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Mobile
+

@@ -1,0 +1,714 @@
+<?php
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class HbgameController  extends  Controller
+{
+
+    //新年游戏入口APP
+    function app_gguide()
+    {
+        set_theme();
+        $this->display();
+    }
+
+    //新年游戏入口微信
+    function wechat_gguide(){
+        set_theme();
+        $inarr = I("get.");
+        if(isset($inarr["f_pcid"])){
+            $re = M("playcity")->where("f_pcid=".$inarr["f_pcid"])->find();
+        }elseif(isset($inarr["code"])){
+            $re = $this->wechat($inarr["code"]);
+        }
+        if($re["f_mobile"]=="" || $re["f_mobile"]==0){
+            $this->assign("f_pcid",$re["f_pcid"]);
+            $this->display();
+        }else{
+            $url = C("WebUrl")."index.php/Mobileweb/Hbgame/app_game?f_pcid=".$re["f_pcid"];
+            header("Location:".$url);
+        }
+    }
+
+    function wechat($code){
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $re_arr=json_decode($res,true);
+        $re=$this->searchuserbyuniod($re_arr["unionid"]);
+        if($re==0){
+            $adduser["f_wechatnice"]=$this->userTextEncode($re_arr["nickname"]);
+            $adduser["f_wechatid"]=$re_arr["unionid"];
+            $re_user["f_pcid"] = M("playcity")->add($adduser);
+            $re_user["f_mobile"] = "";
+        }else{
+            $re_user["f_pcid"] = $re["f_pcid"];
+            $re_user["f_mobile"] = $re["f_mobile"];
+        }
+        return $re_user;
+    }
+
+    /**
+    转义
+     */
+    function userTextEncode($arr){
+        $text = json_encode($arr); //暴露出unicode
+        $text = preg_replace_callback("/(\\\u[ed][0-9a-f]{3})/i",function($str){
+            return addslashes($str[0]);
+        },$text);
+        $nickname = json_decode($text);
+        return $nickname;
+    }
+
+    /**
+    解码上面的转义
+     */
+    function userTextDecode($str){
+        $text = json_encode($str); //暴露出unicode
+        $text = preg_replace_callback('/\\\\\\\\/i',function($str){
+            return '\\';
+        },$text); //将两条斜杠变成一条，其他不动
+        return json_decode($text);
+    }
+
+
+    function  test(){
+        $re=$this->searchuserbyuniod('oBgZTuPTF7nzOgjnnvU2I-IsC8ZA');
+        var_dump($re);
+    }
+
+    //通过uniod判断用户是否存在，如果存在获取用户完游戏完游戏的时间
+
+    function  searchuserbyuniod($unicode){
+        $re = M("playcity")->where("f_wechatid='".$unicode."'")->find();
+        if($re){
+            return $re;
+        }else{
+            return 0;
+        }
+    }
+
+    //获取用户完红包的信息
+    function    getuseraboutlist($pcid){
+
+            $re = M("playcity")->where("f_pcid=".$pcid)->find();
+
+            $result["re"]=$re;
+            //有几个好友帮我抢的红包数
+            $result["count_friend"]=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid <> 0")->count();
+
+
+
+            //统计当天帮我抢红包的好友数,>6，显示最后一个好友离9 15 21 三点最近的红包口令 DESC  大到小  ACS 小到大
+
+            $result["pwd_list"]=$this->getpwdbylastuser($re["f_pcid"]);
+            //好友帮我抢到的红包数
+            $total_gold=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid <> 0")->sum("f_goldcoin");
+            $my_total_gold=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"])->sum("f_goldcoin");
+            if(empty($total_gold)){
+                $result["total_gold"]=0;
+            }else{
+                $result["total_gold"]=$total_gold;
+            }
+            if(empty($my_total_gold)){
+                $result["my_total_gold"]=0;
+            }else{
+                $result["my_total_gold"]=$my_total_gold;
+            }
+
+            //每天自己剩余的次数//时间戳
+            $date=strtotime(date("Y-m-d 00:00:00"));
+            $times=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid = 0 and f_date > ".$date)->count();
+            $result["times"]=1-$times<0?0:1-$times;
+
+            //自己领取的红包数和好友帮忙领取的红包数
+            $list=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"])->order("f_date")->select();
+            foreach($list  as $k=>$val){
+                //别人帮你抢的红包列表
+                if($val["f_hepcid"]!=0){
+                    $d=M("playcity")->where("f_pcid=".$val["f_hepcid"])->find();
+                    $list[$k]["helpnice"]=$this->userTextDecode($d["f_wechatnice"]);
+//                    $list[$k]["helptime"]=date('m-d H:i',$val["f_date"]);
+                }
+            }
+            $result["all_list"]=$list;
+//        pt($result);
+//        exit();
+            return  $result;
+    }
+
+
+
+    //统计当天帮我抢红包的好友数,>6，显示最后一个好友离9 15 21 三点最近的红包口令 DESC  大到小  ACS 小到大
+
+    function getpwdbylastuser($f_pcid){
+        $sdate = strtotime(date("Y-m-d 00:00:00",time()));
+        $edate = strtotime(date("Y-m-d 23:59:59",time()));
+        $times_map["f_date"] = array(array('egt',$sdate),array('elt',$edate),'AND');
+        $times_map["f_mypcid"] =$f_pcid;
+        $times_map["f_hepcid"] =array('neq',0);
+        $str=M("playcitydetail")->where($times_map);
+        $cur_count=$str->count();
+
+////      当天9点
+//        $times_9=strtotime(date("Y-m-d  09:00:00",time()));
+//        //当天9点红包口令
+//        $times_9_respwd=$this->getpwdbytime($times_9);
+////            当天15点
+//        $times_15=strtotime(date("Y-m-d 15:00:00",time()));
+//        $times_15_respwd=$this->getpwdbytime($times_15);
+////            当天21点
+//        $times_21=strtotime(date("Y-m-d 21:00:00",time()));
+//        $times_21_respwd=$this->getpwdbytime($times_21);
+
+        if($cur_count>=2){
+//            $rec=$str->order("f_date  desc")->find();
+//            //取出最后时间
+//            $res=$rec["f_date"];
+//            if($res<=$times_9){
+//                $result["time"]="9";
+//                $result["redpwd"]=$times_9_respwd;
+//            }elseif($res>$times_9 and $res <=$times_15){
+//                $result["time"]="15";
+//                $result["redpwd"]=$times_15_respwd;
+//            }elseif($res>$times_15 and $res<=$times_21){
+//                $result["time"]="21";
+//                $result["redpwd"]=$times_21_respwd;
+//            }else{
+//                $result["time"]="**";
+//                $result["redpwd"]="**";
+//            }
+            $result = 0;
+        }else{
+            $result = 1;
+        }
+//        echo $result;
+//        exit;
+        return  $result;
+
+    }
+
+    //获取红包口令
+    function  getpwdbytime($time){
+        $map["f_time"]=$time;
+        $re=M("playredpwd")->where($map)->find();
+        if($re){
+            $redpwd=$re["f_redpwd"];
+        }else{
+            $redpwd="";
+        }
+
+        return $redpwd;
+    }
+
+
+    //我帮
+
+
+    // 授权信息
+    //自己点击输入手机号，玩游戏，分享给好友，
+    //好友点进去不输入手机号直接玩游戏，钱是点击链接账号的，
+    //好友给自己抢是输入手机号
+
+    function  index(){
+        $re = M("playcity_set")->field("f_status")->where("f_id=2")->find();
+        //是否下线
+        if((int)$re['f_status']==0){
+            header("Content-Type: text/html;charset=utf-8");
+            echo "<div style='font-size: 20px;color: red;'>游戏已经下线</div>";
+        }else{
+            $status=I("get.status");
+            if($status==1){
+                $redirect_url="index.php/Mobileweb/Hbgame/wechat_gguide";
+                A("Wechat")->obtain_user_information($redirect_url);
+            }else if($status==2){
+                set_theme();
+                $f_mypcid=I("get.f_mypcid");
+                $redirect_url="index.php/Mobileweb/Hbgame/wechat_game_info?f_mypcid=".$f_mypcid;
+                A("Wechat")->obtain_user_information($redirect_url);
+            }
+        }
+    }
+
+    function  wechat_game_info(){
+        $code=I("code");
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $res_arr=json_decode($res,true);
+        //给谁抢红包的pid
+        $f_mypcid=I("get.f_mypcid");
+       //判断帮分享人的信息是否存在 存在返回列表信息,不存在加载数据到数据库
+        $re=$this->searchuserbyuniod($res_arr["unionid"]);
+        if($re==0){
+            $nickname=$this->userTextEncode($res_arr["nickname"]);
+            $b_fhelpid=$this->addhelpuser($nickname,$res_arr["unionid"]);
+        }else{
+            $b_fhelpid=$re["f_pcid"];
+        }
+        if($f_mypcid==$b_fhelpid){
+            $url = C('WebUrl')."index.php/Mobileweb/Hbgame/wechat_gguide?f_pcid=".$f_mypcid;
+        }else{
+            $url = C('WebUrl')."index.php/Mobileweb/Hbgame/wechat_game?f_mypcid=".$f_mypcid."&b_fhelpid=".$b_fhelpid;
+        }
+        header("Location:".$url);
+    }
+
+
+    function  addhelpuser($nickname,$unionid){
+        $map["f_wechatnice"]=$nickname;
+        $map["f_wechatid"]=$unionid;
+        $re=M("playcity")->add($map);
+        if(re){
+            return $re;
+        }else{
+            return 0;
+        }
+    }
+
+    //新年游戏APP
+    function app_game(){
+        set_theme();
+        //获取微信客户的基本信息
+        //获取用户相关信息
+        //判断用户信息是否存在,如果存在返回用户id，如果不存在添加数据
+        //先查看数据库信息是否玩过游戏,获取相关的信息`
+
+        $pcid=I("get.f_pcid");
+        //获取用户信息
+        $all_infomation=$this->getuseraboutlist($pcid);
+//        pt($all_infomation);
+//        exit;
+        //当前页面需要用jssdk
+        //签名url
+        $url=C('WebUrl')."index.php/Mobileweb/Hbgame/app_game?f_pcid=".$pcid;
+        //签名获取相关 "timestamp" "nonceStr"  "signature"
+        $data=A("Wechat")->get_jsapi_shal($url);
+//        pt($data);
+
+        $shop_re = $this->getshop();
+        $this->assign("shop",$shop_re);
+
+        $shareurl=C('WebUrl')."index.php/Mobileweb/Hbgame/index?status=2&f_mypcid=".$all_infomation["re"]["f_pcid"];
+        $shareimg=C('WebUrl')."Public/Mobileweb/Default/images/hb.jpg";
+        //分享地址
+        $this->assign("shareurl",$shareurl);
+        $this->assign("shareimg",$shareimg);
+        $this->assign("all_infomation",$all_infomation);
+
+        $this->assign("data",$data);
+        $this->assign("f_wechatid",$all_infomation["re"]["unionid"]);
+        $this->assign("f_wechatnice",$this->userTextDecode($all_infomation["re"]["f_wechatnice"]));
+        $this->assign("f_mypcid",$all_infomation["re"]["f_pcid"]);
+        $this->assign("cc",json_encode($this->game_rules()));
+        $this->display();
+    }
+
+
+
+    function game_rules(){
+        $re = M("playcity_set")->where("f_id=1")->find();
+        $a = explode(',',$re['f_gold']);
+//        $a = array(0,0.1,0.5,0.8,1);
+        $b = explode(',',$re['f_gl']);
+//        $b = array(90,5,3,2,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+        return $c;
+    }
+
+
+    //新年游戏微信
+    //别人帮我抢红包
+    function wechat_game(){
+        set_theme();
+//        f_mypcid=".$f_mypcid."&b_fhelp=".$b_fhelp.
+        $b_fmypcid=I("get.f_mypcid");
+        $b_fhelpid=I("get.b_fhelpid");
+         if(empty($b_fmypcid)){
+             echo "b_fmypcid失效";
+             return;
+         }
+         if(empty($b_fhelpid)){
+             echo "b_fhelp失效";
+             return;
+         }
+        //获取别人帮我请的相关信息
+        $result=$this->gethelpmelist($b_fmypcid,$b_fhelpid);
+        $usersum=$this->getpwdbylastuser($b_fmypcid);
+//        pt($result);
+//        exit();
+
+        $shop_re = $this->getshop();
+        $this->assign("shop",$shop_re);
+
+        $url=C('WebUrl')."index.php/Mobileweb/Hbgame/wechat_game?f_mypcid=".$b_fmypcid."&b_fhelpid=".$b_fhelpid;
+
+        //签名获取相关 "timestamp" "nonceStr"  "signature"
+        $data=A("Wechat")->get_jsapi_shal($url);
+//        pt($data);
+        $shareurl=C('WebUrl')."index.php/Mobileweb/Hbgame/index?status=2&f_mypcid=".$b_fmypcid;
+        $shareimg=C('WebUrl')."Public/Mobileweb/Default/images/hb.jpg";
+        //分享地址
+        $this->assign("shareurl",$shareurl);
+        $this->assign("shareimg",$shareimg);
+        $this->assign("data",$data);
+        $this->assign("result",$result);
+        $this->assign("usersum",$usersum);
+        $this->assign("b_fmypcid",$b_fmypcid);
+        $this->assign("b_fhelpid",$b_fhelpid);
+        $this->assign("cc",json_encode($this->game_rules()));
+        $this->display();
+    }
+
+
+    function  gethelpmelist($b_fmypcid,$b_fhelp){
+        $re=M("playcity")->where("f_pcid=".$b_fmypcid)->find();
+        //主叫人的昵称;
+        $result["f_mynick"]=$this->userTextDecode($re["f_wechatnice"]);
+        //帮主叫人抢的次数
+//        $sdate = strtotime(date("Y-m-d 00:00:00",time()));
+//        $edate = strtotime(date("Y-m-d 23:59:59",time()));
+//        $times_map["f_date"] = array(array('egt',$sdate),array('elt',$edate),'AND');
+        $times_map["f_mypcid"] = $b_fmypcid;
+        $times_map["f_hepcid"] = $b_fhelp;
+        $times=M("playcitydetail")->where($times_map)->count();
+        $result["times"]=$times>0?0:1;
+        //你帮主叫人抢到的红包金额
+        $num_map["f_mypcid"] = $b_fmypcid;
+        $num_map["f_hepcid"] = $b_fhelp;
+        $result["hongnum"]=M("playcitydetail")->where($num_map)->sum("f_goldcoin");
+        $result["hongnum"] = $result["hongnum"]==""?0:$result["hongnum"];
+        //展现所有帮主叫人抢到的红包列表
+        $sear_map["f_mypcid"] = $b_fmypcid;
+        $sear_map["f_hepcid"] = array('neq',0);
+//        $sear_map["f_goldcoin"] = array('neq',0.00);
+        $j = array("LEFT JOIN t_playcity as my ON my.f_pcid=t_playcitydetail.f_mypcid","LEFT JOIN t_playcity as he ON he.f_pcid=t_playcitydetail.f_hepcid");
+        $f = "my.f_wechatnice as my_nice,he.f_wechatnice as he_nice,t_playcitydetail.f_goldcoin,FROM_UNIXTIME(t_playcitydetail.f_date,'%m-%d %H:%i') as datetime";
+        $list=M("playcitydetail")->field($f)->where($sear_map)->join($j)->order("f_date")->select();
+        foreach($list as $key => $v){
+            $list[$key]["my_nice"] = $this->userTextDecode($v["my_nice"]);
+            $list[$key]["he_nice"] = $this->userTextDecode($v["he_nice"]);
+        }
+        $result["list"]=$list;
+//        pt($result);
+//        exit;
+        return $result;
+    }
+
+
+    //新年游戏规则
+    function app_grules(){
+        set_theme();
+        $v=I("get.v");
+        $this->assign("v",$v);
+        $this->display();
+    }
+    //新年游戏积分商城
+    function pointsMall(){
+        set_theme();
+        //取手机号和用户ID
+        $arr = I("get.");
+//        pt($arr);
+//        exit;
+        $re = $this->mylist($arr);
+//        $re = $this->curl($arr);
+//        pt($re);
+//        exit;
+        $this->assign("re",$re);
+        $this->assign("arr",$arr);
+        $this->display();
+    }
+    //登陆页面
+    function login(){
+        set_theme();
+        $this->display();
+    }
+    //登陆
+    function zslogin(){
+        $arr = I("post.");
+        $re = A('Api/Jhttp')->login($arr['mobile'], md5($arr['password']));
+        $arr = json_decode($re,true);
+//        pt($arr);
+//        exit;
+        if($arr["resCode"]=="000000"){
+            $out_arr['error_code'] = $arr["resCode"];
+            $out_arr['error_text'] = "成功";
+            $out_arr['ulist'] = $arr["list"];
+        }elseif($arr["resCode"]=="100001") {
+            $out_arr['error_code'] = $arr["resCode"];
+            $out_arr['error_text'] = "密码错误";
+        }else{
+                $out_arr['error_code'] = $arr["resCode"];
+                $out_arr['error_text'] = A("Api/Jhttpcode")->searchCode($arr["resCode"]);
+
+        }
+//        pt($out_arr);
+//        exit;
+        echo A('Api/Fun')->JSON($out_arr);
+    }
+
+    //兑换金币
+    function exchange(){
+        $arr = I("post.");
+        $price = (float)$arr['price']*10;
+        if((int)$price===0){
+            $out_arr['error_code'] = "200000";
+            $out_arr['error_text'] = "您的红包不足！";
+        }else {
+            $map_s["f_mobile"] = $arr['mobile'];
+            $map_v["f_totalglodcoin"] = 0;
+            $sum = M("playcity")->where($map_s)->save($map_v);
+            if ($sum <= 0) {
+                $out_arr['error_code'] = "100000";
+                $out_arr['error_text'] = "兑换失败";
+            } else {
+                D('Api/Shopsheet')->add_shopsheet('events', $arr['userid'], 1, 1, $price, 0, 1, 0, 0);
+                $out_arr['error_code'] = "000000";
+                $out_arr['error_text'] = "兑换成功";
+            }
+        }
+        echo A('Api/Fun')->JSON($out_arr);
+    }
+
+//    function curl($arr){
+//        $url = "localhost".U('Games/conf')."?command=mylist&mobile=".$arr['mobile']."&userid=".$arr['userid'];
+////        echo $url;
+//        $ch = curl_init($url);
+//        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+//        $result = curl_exec($ch);
+//        curl_close ($ch);
+//        return $result;
+//    }
+
+    private function getshop(){
+        //取产品列表
+        $shop_map["f_status"] = 1;
+        $shop_map["f_lotterystatus"] = 1;
+        $shop_j = array("LEFT JOIN t_files ON t_files.f_id = t_shoplist.f_fil eid");
+        $out_arr = M("shoplist")->where($shop_map)->join($shop_j)->select();
+        return $out_arr;
+    }
+
+    //查看我的页面
+    private function mylist($in_arr){
+        //取我的钱
+        $out_arr['own_info'] = M("playcity")->where("f_mobile='".$in_arr['mobile']."'")->find();
+        //取产品列表
+        $shop_map["f_status"] = 1;
+        $shop_map["f_lotterystatus"] = 1;
+        $shop_j = array("LEFT JOIN t_files ON t_files.f_id = t_shoplist.f_fileid");
+        $out_arr['shop_list'] = M("shoplist")->where($shop_map)->join($shop_j)->select();
+        //我的购买记录
+        $buy_map["f_userid"] = $in_arr['userid'];
+        $j = array("LEFT JOIN t_shoplist as s ON s.f_sid = t_own_award.f_shopid");
+        $f = "s.f_sid,s.f_shopname,s.f_lottery,MAX(t_own_award.f_shopid) as f_shopid";
+        $shop_re = M("own_award")->field($f)->join($j)->where($buy_map)->group('t_own_award.f_shopid')->select();
+
+
+//        echo M("own_award")->getLastSql();
+//        $this->out_arr['buy_list'] = M("own_award")->field($f)->join($j)->where($buy_map)->select();
+        foreach($shop_re as $key=>$v){
+            if($v["f_lottery"]!=0){
+                $lottery_map["f_lottery"] = $v["f_lottery"];
+                $lottery_map["f_shopid"] = $v["f_sid"];
+                $lottery_re = M("own_award")->field("f_userid")->where($lottery_map)->find();
+                if($lottery_re=="" || $lottery_re==0){
+                    //中奖号码
+                    $shop_re[$key]["mobile"] = "";
+                }else{
+                    //中奖号码
+                    $u_re = A("Api/Jhttp")->getuserinfo2($lottery_re["f_userid"]);
+                    $arr = json_decode($u_re,true);
+                    $shop_re[$key]["mobile"] = substr_replace($arr["list"]["mobile"],'****',3,4);
+                }
+            }else{
+                $shop_re[$key]["mobile"] = "";
+            }
+
+            $buy_map["f_userid"] = $in_arr['userid'];
+            $buy_map["f_shopid"] = $v['f_sid'];
+            $shop_re[$key]["award_no_list"] = M("own_award")->field("f_award_no")->where($buy_map)->select();
+        }
+        $out_arr['buy_list'] = $shop_re;
+//        $out_arr['error_code'] = '000000';
+//        $out_arr['error_text'] = "成功";
+        return $out_arr;
+    }
+
+    //测试小游戏
+    function testgame(){
+        set_theme();
+        $a = array(0,0.1,0.5,0.8,1);
+        $b = array(93,3,2,1,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+        $this->assign("c",json_encode($c));
+        $this->display();
+    }
+
+
+    //红包口令模拟时间测试
+    function  redpwd(){
+       $arr=array(
+              array(
+                  "f_redpwd"=>"小宝城会玩精彩连连",
+                  "f_time"=>strtotime(date("2016-02-01  15:00:00",time()))
+              ),
+               array(
+                   "f_redpwd"=>"小宝招商藏头诗里有红包",
+                   "f_time"=>strtotime(date("2016-02-02 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"小宝招商快乐过年",
+                   "f_time"=>strtotime(date("2016-02-04 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"分享给六个好友就能看到口令",
+                   "f_time"=>strtotime(date("2016-02-05 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"手机兼职赚钱就来小宝招商",
+                   "f_time"=>strtotime(date("2016-02-06 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"有口令就有红包就有福气",
+                   "f_time"=>strtotime(date("2016-02-07 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"小宝招商陪你过春节",
+                   "f_time"=>strtotime(date("2016-02-07 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"小宝送三十万个压岁钱红包",
+                   "f_time"=>strtotime(date("2016-02-07 21:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"正是江南好风景",
+                   "f_time"=>strtotime(date("2016-02-08 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"小宝招商招人找福气",
+                   "f_time"=>strtotime(date("2016-02-08 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"千里莺啼绿映红",
+                   "f_time"=>strtotime(date("2016-02-08 21:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"小宝招商招福气",
+                   "f_time"=>strtotime(date("2016-02-09 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"少小离家老大回大宝小宝闹春来",
+                   "f_time"=>strtotime(date("2016-02-09 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"守岁家家应未卧",
+                   "f_time"=>strtotime(date("2016-02-09 21:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"送故迎新小宝有福",
+                   "f_time"=>strtotime(date("2016-02-10 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"日思夜享赚大钱",
+                   "f_time"=>strtotime(date("2016-02-10 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"利伊享新年福气",
+                   "f_time"=>strtotime(date("2016-02-10 21:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"大圣归来送福气",
+                   "f_time"=>strtotime(date("2016-02-11 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"年年有鱼岁岁发",
+                   "f_time"=>strtotime(date("2016-02-11 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"小宝高薪招人",
+                   "f_time"=>strtotime(date("2016-02-11 21:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"天地汇创客社群",
+                   "f_time"=>strtotime(date("2016-02-12 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"小宝智慧招商",
+                   "f_time"=>strtotime(date("2016-02-12 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"亿元俱乐部单品过亿",
+                   "f_time"=>strtotime(date("2016-02-12 21:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"销售业务员赚钱神器",
+                   "f_time"=>strtotime(date("2016-02-13 9:00:00",time()))
+               ),
+
+               array(
+                   "f_redpwd"=>"全民手机网赚平台",
+                   "f_time"=>strtotime(date("2016-02-13 15:00:00",time()))
+               ),
+               array(
+                   "f_redpwd"=>"落花时节又逢君",
+                   "f_time"=>strtotime(date("2016-02-13 21:00:00",time()))
+               ),
+
+       );
+
+        $re=M("playredpwd")->addAll($arr);
+        echo $re;
+    }
+
+    function addpwd(){
+        $arr=array(
+            "f_redpwd"=>"好友帮忙能攒红包还能领口令",
+            "f_time"=>strtotime(date("2016-02-3 15:00:00",time()))
+        );
+             $re=M("playredpwd")->add($arr);
+        echo $re;
+    }
+    //时间列表
+    function getpwd(){
+        $j="f_redpwd,FROM_UNIXTIME(t_playredpwd.f_time,'%Y-%m-%d %H:%i:%s') as f_time";
+        $re=M("playredpwd")->field($j)->order("f_time")->select();
+        var_dump($re);
+    }
+
+
+
+}

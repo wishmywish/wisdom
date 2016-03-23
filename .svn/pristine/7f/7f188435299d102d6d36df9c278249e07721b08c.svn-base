@@ -1,0 +1,45 @@
+<include file="Public/head" />
+<style type="text/css">
+
+</style>
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="tabli">
+                <ul id="tabli_Ad">
+                    <li value="1"  id="messages"><a href="__APP__/Taskadmin/Company/showCompanyDetail?companyId={$reModi.list.companyId}" style="text-decoration:none;">详细信息</a></li>
+                    <li value="3" class='selected' id="photos"><a href="__APP__/Taskadmin/Company/showCompanyPhotos?companyId={$reModi.list.companyId}" style="text-decoration:none;">企业资料</a></li>
+                </ul>
+            </div>
+
+            <div class="add">
+                <div class='info' style="background-color:white;">
+    				<br>
+                    <?php if (!empty($reModi['list']['companyExtList'])) { ?>
+                       <volist name="reModi.list.companyExtList" id="vo">
+                            <neq name="vo.f_name.f_filepath" value="">
+                                <span style="padding-left:12px;font-size:20px;">{$vo.extName}： </span><img src="__UPFILE__/{$vo.f_name.f_filepath}{$vo.f_name.f_filename}" width="953" ><br><br>
+                            </neq>
+                        </volist>
+                    <?php }else{ ?>
+                        <span style="padding-left:12px;font-size:20px;">无相应的企业资料 </span>
+                    <?php } ?>
+
+ 
+
+                </div>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

@@ -1,0 +1,115 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+    background: #FFF; 
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+</style>
+    <body>
+
+        <neq name="tree" value="">
+            <span>所属分类：</span>
+            <select id="shopClassSelect">
+                <volist name="tree" id="vo" key="k">
+                    <option  value="<?php if ($reModi['list']['f_id'] == $vo['f_id']) { echo $vo['f_classpid'];}else{echo $vo['f_id'];} ?>" <?php if ($reModi['list']['f_id'] == $vo['f_id']) { echo 'selected';} ?>  >
+                        <eq name="vo.lv" value="1">├─</eq>
+
+                        <eq name="vo.lv" value="2">├───</eq>
+
+                        <eq name="vo.lv" value="3">├─────</eq>
+
+                        <eq name="vo.lv" value="4">├───────</eq>
+
+                        <eq name="vo.lv" value="5">├─────────</eq>
+
+                        <eq name="vo.lv" value="6">├───────────</eq>
+
+                        <eq name="vo.lv" value="7">├─────────────</eq>
+
+                        <eq name="vo.lv" value="8">├───────────────</eq>
+
+                        <eq name="vo.lv" value="9">├─────────────────</eq>
+                        {$vo.f_classname}
+                    </option>
+                </volist>
+            </select>
+        <else/>
+            <span>所属分类：</span>
+            <select id="shopClassSelect">
+                <option  value="0" >顶级分类</option>
+            </select>
+        </neq>
+        <br><br>
+
+        <div class="upfile">
+            <span>产品图片：</span> <button id="btn_up" class="btn btn-default" onclick="$('#upfile').click();">上传</button>
+            <div style="display: none;">
+                <input type="file" id="upfile" name="upfile" accept="image/jpeg,image/gif,image/png">
+            </div>
+            <input type="hidden" id="fileid" name="fileid" value="{$reModi.one.f_fileid}">
+        </div><br>
+        <div class="progress_up" id='progress_up'><div class="bar" id='bar'></div></div>
+        <div class="show_img" id='show_img'></div>
+
+        <?php if ($reModi['list']['f_filepath']) {?>
+        <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+        <div id="showPic">
+            <img src="__UPFILE__/{$reModi.list.f_filepath}{$reModi.list.f_filename}" width="50" height="50">
+        </div>
+        <?php }?>
+
+        <span>产品名称：</span></span> <input type="text" id="title" name="title" placeholder="请输入分类名称" value="{$reModi.list.f_shopname}"><br><br>
+
+        <span>产品简介：</span>
+        <textarea  value="" name="shopDescription"  id="shopDescription" style="width:550px;height:100px;">{$reModi.list.f_description}</textarea><br><br>
+
+        <span>产品总数：</span>
+        <input type="text" id="shopNum"  name="shopNum" value="{$reModi.list.f_shopsum}"  class="taskAdd_conventionDataInput">&nbsp; 份<br><br>
+
+        <span>产品单价：</span>
+        <input type="text" id="shopPrice"  name="shopPrice" value="{$reModi.list.f_price}"  class="taskAdd_conventionDataInput">&nbsp; 元<br><br>
+
+        <span>参与活动：</span>
+        <input type="radio" name="activity" value="0" <eq name='reModi.list.f_activename' value='0'>checked</eq><eq name='reModi.list.f_activename' value=''>checked</eq>>正常价格
+        <input type="radio" name="activity" value="1"<eq name='reModi.list.f_activename' value='1'>checked</eq>>优惠价格<br><br>
+
+        <span>产品详情描述：</span>
+        <div class="editor" style="height: 100%;width: 610px;">
+            <script type="text/plain" id="editor1" style="width:600px;height:350px;" name="editor1"></script>
+        </div>
+         <input type="hidden" id="f_sid" name="f_sid" value="{$reModi.list.f_sid}">
+        <a class="btn btn-default" href="#" role="button" id="addShopBtn" style="margin:0px 0px 0px 425px;">确定</a>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+            $("#upfile").wrap("<form id='uplogo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+    </script>
+    <script type="text/javascript">
+     //实例化编译器
+     var ue=UM.getEditor('editor1',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     //通过getContent和setContent方法可以设置和读取编译器的内容
+     //读取配置
+     // var lang=ue.getOpt('lang');默认返回：zh-cn
+     
+     //加载三级联动
+     
+//     _init_area();
+//     getArea({$reModi.one.f_tid|default=0});
+//     getPro({$reModi.one.f_tid|default=0});
+     
+     UM.getEditor('editor1').setContent('{$reModi.list.f_note}');
+  </script>
+</html>

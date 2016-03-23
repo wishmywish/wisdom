@@ -1,0 +1,14 @@
+    <div id="center">
+        <i class='fa fa-flag' style='    font-size: 40px;color: #77DDFF;'></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a href="__APP__/Home/Business/proCheck?dealerid={$dealerid}" style="text-decoration:none;color:black;cursor:pointer;">中标</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:<eq name='comContract' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isContract({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">合同</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color: <eq name='comRemit' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isRemit({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">打款</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='dispatch' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isDispatch({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">发货</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='receive' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isReceive({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">收货</a></span><i class="fa fa-arrow-right" style='    font-size: 20px;    padding-left: 10px;'></i>
+
+        <i class='fa fa-flag' style="font-size: 40px;color:  <eq name='square' value=''> gray<else/>#77DDFF</eq>;"></i><span style="    margin: 50px 0 0 -37px;position: absolute;"><a onclick="isSettlement({$dealerid});" style="text-decoration:none;color:black;cursor:pointer;">结算</a></span>
+
+    </div>

@@ -1,0 +1,184 @@
+<include file="Public/head" />
+<style type="text/css">
+#push_one{
+    position: absolute;
+    top: 10px;
+}
+#push_two{
+    position: absolute;
+    top: 430px;
+    background-color: #fff;
+}
+
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+     background: #FFF; 
+    padding: 0;
+    height: 100%;
+}
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+
+                <div class="page_next" id="push_one">
+
+                    <div class="big_line">
+                        <div  class="line_input">
+                                <span>任务图标：</span> 
+                            <?php if ($reModi['tubiao']) {?>
+                            <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                            <div id="showPic">
+                                <img src="__UPFILE__/{$reModi.tubiao.f_filepath}{$reModi.tubiao.f_filename}" width="50" height="50">
+                            </div>
+                            <?php }?>
+                        </div>
+                        
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>发布单位：</span> <input type="text" id="companyName" placeholder="录入发布单位" value="{$reModi.company.companyName}" readonly><input type="hidden" id="companyId" name="companyId" value="{$reModi.one.f_companyid}">
+                        </div>
+                        
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务标题：</span> <input type="text" id="title" name="title" placeholder="请输入任务标题" value="{$reModi.f_title}" readonly>
+                        </div>
+                       
+                    </div>
+                    
+                    
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务时间：</span> 
+                            <input id="startdate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_begindate}" disabled>
+                            <input id="enddate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_enddate}" disabled>
+                        </div>
+                       
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务联系：</span> <input type="text" id="linkman" name="linkman" placeholder="业务联系人" value="{$reModi.f_linkman}" readonly>
+                        </div>
+                       
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>联系电话：</span> <input type="text" id="linkphone" name="linkphone" placeholder="联系电话" value="{$reModi.f_linkphone}" readonly>
+                        </div>
+                    </div>
+
+
+                    <div class="line" >
+                        <div class="line_input">
+                            <span>任务详情描述：</span><br>
+                            <textarea  value="" name="pro_taskDescription"  id="pro_taskDescription" style="width:550px;height:100px;"disabled="disabled" readonly="readonly">{$reModi.f_description}</textarea>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="page_next" id="push_two">
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务品牌：</span> <input type="text" id="mtbrand" name="mtbrand" placeholder="招商品牌" value="{$reModi.f_ppconditions}" style="margin-left:60px;" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务总数：</span>
+                            <input type="text" id="pro_taskBrand"  name="pro_taskBrand" value="{$reModi.f_totalcopies}"  class="taskAdd_conventionDataInput"  readonly style="margin-left:60px;">&nbsp 份
+                        </div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>单次奖励佣金：</span>
+                            <input type="text" id="pro_taskProduct"  name="pro_taskProduct" value="{$reModi.f_eachcoin}"  class="taskAdd_conventionDataInput"  readonly style="margin-left:35px;">&nbsp 元
+                        </div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>平台单次服务佣金：</span>
+                        <input type="text" id="pro_saleCommission"  name="pro_saleCommission" value="{$reModi.f_eachcoin}"  class="taskAdd_conventionDataInput"  disabled="true" style="margin-left:10px;">&nbsp 元
+                        </div>
+                    </div>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>总佣金：</span>
+                        <input type="text" id="pro_totalFee"  name="pro_totalFee" value=""  class="taskAdd_conventionDataInput"  disabled="true" style="margin-left:70px;" >&nbsp 元
+                        </div>
+                    </div>
+
+                    <div class="line" style="height: 450px;">
+                        <div class="line_input">
+                            <span>任务需求：</span><br>
+                            <div class="editor" style="height: 100%;width: 610px;float: left;">
+                                <script type="text/plain" id="editor1" style="width:600px;height:350px;" name="editor1"></script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+        
+        $(function(){
+            
+            sublevel_out();//子窗口退出
+            
+            getTasktype();
+            
+            //公司自动补全
+            $("#companyName").bigAutocomplete({width:300,
+                url:"{:U('Taskadmin/Fun/searchCname')}",
+                callback:function(data){
+                    $('#companyId').val(data.result);
+                }
+            });
+        });
+    </script>
+
+   <script type="text/javascript">
+     //实例化编译器
+     var ue=UM.getEditor('editor1',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     
+     UM.getEditor('editor1').setContent('{$reModi.f_taskrequirements}');
+     UM.getEditor('editor1').setDisabled('fullscreen');
+
+     $(function(){
+      var totalprice1=0;     
+      var taskbrand=$('#pro_taskProduct').val()===""?0:$('#pro_taskBrand').val();
+      var taskproduct=$('#pro_taskProduct').val()===""?0:$('#pro_taskProduct').val();
+      $('#pro_saleCommission').val(taskproduct);
+      totalprice1=2*Number(taskproduct)*Number(taskbrand);
+      $('#pro_saleCommission').html(taskproduct);
+      $('#pro_totalFee').val(totalprice1);
+      console.log(taskbrand+","+taskproduct+","+totalprice1);
+     });
+
+  </script>
+</html>

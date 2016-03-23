@@ -1,0 +1,424 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>企业通讯录</li>
+            <li id="1" class="org_box"><span ></span>客户通讯录</li>
+        </ul>
+    </div>
+    <div class="contact_center">
+        <!--企业通讯录 -->
+        <div id="a0">
+            <div class="contact_head">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;企业通讯录</span>
+
+                <div class="column">
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li style="margin-left: 280px;">
+                                <label>姓名</label>
+                                <input type="search" placeholder="可模糊检索" id="searchName" />
+                            </li>
+                            <li>
+                                <label>电话</label>
+                                <input type="search" placeholder="可模糊检索" id="searchMobile" />
+                            </li>
+
+                        </ul>
+                        <input type="hidden" id="hidDeptId" value="" />
+                        <input type="hidden" id="hidSearchName" value="" />
+                        <input type="hidden" id="hidSearchMobile" value="" />
+                    </div>
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right;">
+                        <input id="searchButton0" class="bntns1" type="button" value="搜索" onclick="doSearch();" />
+                        <input id="resetButton0" class="bntns1" type="button" value="清空" onclick="doClear();" />
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="contact_list">
+                <div class="left_menu" style="overflow-y: scroll; overflow-x: hidden; width:240px;">
+                    <div id="menuTree" style="overflow: hidden;width:240px;"></div>
+                </div>
+                <div class="right_form">
+                    <ul>
+                        <li style="height: 25px;line-height: 25px;">部门</li>
+                        <li style="height: 25px;line-height: 25px;">姓名</li>
+                        <li style="height: 25px;line-height: 25px;">职位</li>
+                        <li style="border-right: 1px solid #e2e0e0;height: 25px;line-height: 25px;">联系电话</li>
+                    </ul>
+                    <div id="user_list_content">
+                    <volist name="user_list.list" id="vo">
+                    <ul class="topnone">
+                        <li style="height:50px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" title="{$vo.deptName}">{$vo.deptName}</li>
+                        <li style="height:50px;line-height:50px;cursor: pointer;" onclick="showUserDetail({$vo.id})">{$vo.name}</li>
+                        <li style="height:50px;line-height:50px;">{$vo.position}</li>
+                        <li style="height:50px;line-height:50px;border-right: 1px solid #e2e0e0">{$vo.mobile}</li>
+                    </ul>
+                    </volist>
+                    </div>
+                    <empty name="user_list">
+                        <ul class="topnone">
+                            <li style="width: 98.4%;color:#f47469;border-right: 1px solid #e2e0e0">无数据!</li>
+                        </ul>
+                    </empty>
+                    <div id="pagebar1" class="pagebar" style="margin-top:20px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--客户通讯录-->
+        <div id="a1" style="display: none;">
+            <div class="contact_head" style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;客户通讯录</span>
+                <div class="column">
+                        <span style="float: left;line-height: 25px;">筛选：</span>
+                        <ul style="float: left; width: 720px;">
+                            <li>
+                                <span>客户名称&nbsp;</span>
+                                <input style="width: 80px;height: 25px; " type="search" placeholder="可模糊查询" id="cusName" name="cusName">
+                            </li>
+                            <li style="">
+                                <span>&nbsp;&nbsp;&nbsp;区域&nbsp;</span>
+                                <input style="width: 80px;height: 25px; padding-left: 7px;" type="search" placeholder=" 请选择" class="link" id="cusArea" name="cusArea">
+                                <span class="fa fa-search fa-lg" style="position: absolute;margin-left: -18px;margin-top: 8px;color: #898989;"></span>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;行业&nbsp;</span>
+                                <input style="width: 80px;height: 25px; padding-left: 7px;"  type="search" placeholder=" 请选择" class="link" id="cusTrade" name="cusTrade">
+                                <span class="fa fa-search fa-lg" style="position: absolute;margin-left: -18px;margin-top: 8px;color: #898989;"></span>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;创建时间&nbsp;</span>
+                                <input id="startDate" class="laydate-icon" value="" placeholder="起始时间" style="width: 80px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate" class="laydate-icon" value="" placeholder="终止时间" style="width: 80px;padding-left: 8px;height: 25px;">
+                            </li>
+                        </ul>
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right;">
+                        <input id="searchButton1" class="bntns2" type="button" value="搜索" onclick="doSearchCustomer();">
+                        <input id="resetButton1" class="bntns2" type="button" value="清空" onclick="doClearCustomer();">
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="contact_list">
+                <!-- 按钮-->
+                <p style="height: 25px;margin: 0 0 12px;float: right;">
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="doAddCustomer();" value="新增">
+                    <input id="" style="background: #f47469;" class="bntns1" type="button" onclick="doDeleteCustomer();" value="删除">
+                </p>
+                <div class="title">
+                    <ul>
+                        <li style="width: 10%;"><input id="allOrNot" type="checkbox" onclick="checkAllOrNot(this);"></li>
+                        <li style="width: 35%;">客户名称</li>
+                        <li style="width: 15%;">区域</li>
+                        <li style="width: 15%;">行业</li>
+                        <li style="width: 10%;">创建人</li>
+                        <li style="width: 15%;">创建日期</li>
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <div class="customerContentList">
+                    <notempty name="customer_list.list">
+                    <volist name="customer_list.list" id="cus">
+                    <ul>
+                        <li style="width: 10%;"><input type="checkbox" name="checkbox" value="{$cus.cusId}"></li>
+                        <li style="width: 35%;cursor: pointer;" onclick="location='customerDetails'">{$cus.cusName}</li>
+                        <li style="width: 15%;">杭州</li>
+                        <li style="width: 15%;">电子行业</li>
+                        <li style="width: 10%;">{$cus.cusCreaterId}</li>
+                        <li style="width: 15%;">{$cus.addDate|date='Y-m-d',###}</li>
+                    </ul>
+                    </volist>
+                    </notempty>
+                    </div>
+                    <empty name="customer_list.list">
+                        <ul class="topnone">
+                            <li style="width: 100%;color:#f47469;">无数据!</li>
+                        </ul>
+                    </empty>
+                </div>
+                <div id="pagebar2" class="pagebar" style="margin-top:20px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<css href="__JS__/EasyTree/ui.easytree.css" />
+<js href="__JS__/EasyTree/jquery.easytree.min.js" />
+<script>
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",0);
+        Cookie.createCookie("smallMenuIndex",0);
+        
+        // 生成树形菜单
+        $('#menuTree').easytree({
+            data: {$dept_list},
+        });
+
+        createPageBar('{$user_list.total}', '{$user_list.pageSize}', '{$user_list.page}', '{$user_list.totalPage}');
+        $(document).on('click','#pagebar1 span a', function() {
+            getUserListByDeptId(0, $(this).attr("rel"))
+        });
+
+        createPageBar2('{$customer_list.total}', '{$customer_list.pageSize}', '{$customer_list.page}', '{$customer_list.totalPage}');
+        $(document).on('click','#pagebar2 span a', function() {
+            getCustomerList(0, $(this).attr("rel"))
+        });
+
+        var start = {
+            elem: '#startDate',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#endDate',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+    });
+
+    $('#bigmenu li').click(function(){
+        //$("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    //新增客户弹窗
+    function doAddCustomer(){
+        layer.open({
+            type:2,
+            title :['新增客户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['600px', '500px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addClient'
+        });
+    }
+
+    //员工信息
+    function showUserDetail(uid){
+        layer.open({
+            type:2,
+            title:['员工信息','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area:['440px', '420px'],
+            shadeClose:false,
+            content: "{:U('Office/showUserDetail')}?uid=" + uid,
+        });
+    }
+
+    /*点击左侧部门列表时，根据部门ID获取用户列表*/
+    function getUserListByDeptId(deptId, page) {
+        var loadIdx = layer.load(0);
+        if (deptId == 0) {  // 翻页
+            deptId = $("#hidDeptId").val();
+        } else if (deptId == -1) {  // 点击检索按钮
+            page = 1;
+            <?php 
+                /*
+                因为要检索全部门，所以要清空部门
+                如果想要当前部门检索，以下两行代码替换为
+                deptId = $("#hidDeptId").val();
+                 */ 
+            ?>
+            deptId = "";
+            $("#hidDeptId").val("");
+        } else {    // 点击左侧部门LINK
+            page = 1;
+            $("#hidDeptId").val(deptId);
+            $("#hidSearchName").val("");
+            $("#hidSearchMobile").val("");
+            $("#searchName").val("");
+            $("#searchMobile").val("");
+        }
+
+        var name = $("#hidSearchName").val();
+        var mobile = $("#hidSearchMobile").val(); 
+        $("#user_list_content").empty();
+        $.post("{:U('Office/getUserList')}", {"deptId":deptId, "page":page, "name":name, "mobile":mobile}, function(data) {
+            if (!("list" in data)) {
+                layer.close(loadIdx);
+                layer.msg(data.error_text,{icon: 8});
+                return;
+            }
+            var content = "";
+            // 设定用户列表
+            $.each(data.list, function(k, v) {
+                content += '<ul class="topnone">';
+                content += '<li>' + v.deptName + '</li>';
+                content += '<li style="cursor: pointer;" onclick="showUserDetail(' + v.id + ')">' + v.name + '</li>';
+                content += '<li>' + v.position + '</li>';
+                content += '<li style="border-right: 1px solid #e2e0e0">' + v.mobile + '</li>';
+                content += '</ul>';
+            });
+            if (content == "") {
+                content = '<ul class="topnone">';
+                content += '<li style="width:98.4%;color:#f47469;border-right: 1px solid #e2e0e0">无数据!</li>';
+                content += '</ul>';
+            }
+            $("#user_list_content").append(content);
+            createPageBar(data.total, data.pageSize, data.page, data.totalPage);
+            layer.close(loadIdx);
+        }, 'json');  
+    }
+
+    /*点击翻页时，获取客户列表*/
+    function getCustomerList(type, page) {
+        if(type == 0) { // 翻页
+            
+        } else { // 检索
+            page = 1;
+            $("#allOrNot:checkbox").attr("checked", false);
+        }
+    }
+
+    function createPageBar(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar1");
+    }
+
+    function createPageBar2(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar2");
+    }
+
+    function doClear() {
+        $("#searchName").val("");
+        $("#searchMobile").val("");
+    }
+
+    // 客户通讯录清空按钮
+    function doClearCustomer() {
+        $("#cusName").val("");
+        $("#cusArea").val("");
+        $("#cusTrade").val("");
+        $("#startDate").val("");
+        $("#endDate").val("");
+    }
+
+    function doSearch() {
+        $("#hidSearchName").val($("#searchName").val());
+        $("#hidSearchMobile").val($("#searchMobile").val());
+        getUserListByDeptId(-1);
+    }
+    
+    // 客户通讯录检索
+    function doSearchCustomer() {
+        getCustomerList(1);
+    }
+
+    // 客户通讯录 全选和反选
+    function checkAllOrNot(obj) {
+        var checkbox = document.getElementsByName("checkbox");
+        if(obj.checked == true) {
+            for (var i = 0; i < checkbox.length; i++) {
+                var e = checkbox[i];
+                e.checked = true;
+            }
+        } else {
+            for (var i = 0; i < checkbox.length; i++) {
+                var e = checkbox[i];
+                e.checked = false;
+            }
+        }
+    }
+
+    // 删除客户
+    function doDeleteCustomer() {
+        var checkbox = document.getElementsByName("checkbox");
+        var ids = "";
+
+        for (var i = 0; i < checkbox.length; i++) {
+            var e = checkbox[i];
+            if(e.checked) {
+                if(ids == "") {
+                    ids = e.value;
+                } else {
+                    ids = ids + "," + e.value;
+                }
+            }
+        }
+
+        if(ids == "") {
+            layer.msg("请选择删除客户",{icon: 8});
+            return false;
+        } else {
+            $("#customerContentList").empty();
+            $.post("{:U('Office/deleteCustomer')}", {"ids":ids, "page":page}, function(data) {
+                if (!("list" in data)) {
+                    layer.close(loadIdx);
+                    layer.msg(data.error_text,{icon: 8});
+                    return;
+                }
+                var content = "";
+                // 设定用户列表
+                $.each(data.list, function(k, v) {
+                    
+                    var date = new Date(v.addDate);
+
+                    content += '<ul>';
+                    content += '<li style="width: 10%;">';
+                    content += '<input type="checkbox" name="checkbox" value="' + v.cusId + '">';
+                    content += '</li>';
+                    content += '<li style="width: 35%;cursor: pointer;" onclick="location=\'customerDetails\'">';
+                    content += v.cusName + '</li>';
+                    content += '<li style="width: 15%;">杭州</li>';
+                    content += '<li style="width: 15%;">电子行业</li>';
+                    content += '<li style="width: 10%;">' + v.cusCreaterId + '</li>';
+                    content += '<li style="width: 15%;">' + date.format("yyyy-MM-dd")  + '</li>';
+                    content += '</ul>';
+                });
+                if (content == "") {
+                    content = '<ul>';
+                    content += '<li style="width:100%;color:#f47469;">无数据!</li>';
+                    content += '</ul>';
+                }
+                $("#customerContentList").append(content);
+                createPageBar(data.total, data.pageSize, data.page, data.totalPage);
+                layer.close(loadIdx);
+            }, 'json');  
+        }
+    }
+</script>
+    </body>
+</html>

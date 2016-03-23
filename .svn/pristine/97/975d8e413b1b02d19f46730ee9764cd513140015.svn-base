@@ -1,0 +1,148 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'><span class='org_bot_cor'></span>考勤报表</div>
+    </div>
+    <div class="check_center">
+        <!--输入框-->
+        <div class="check_head">
+				<span style="display: inline-block;">首页&nbsp;>&nbsp;签到&nbsp;>&nbsp;考勤报表</span>
+
+            <div class="column">
+            	<span style="float: left;">筛选：</span>
+            	<ul>
+                    <li  class="selected" >日</li>
+                    <li>周</li>
+                    <li>月</li>
+                    <li style="border-right: 1px solid #eaeaea;">区间</li>
+                </ul>
+                <div id="timeChoose">
+                <!-- 日时间-->
+                <div id="dailyTime" class="divTime">
+                    <input class="bntns" type="button" value="本日">
+                    <input class="bntns" type="button" value="<">
+                    <span>2015-9-9</span>
+                    <input class="bntns" type="button" value=">">
+                </div>
+                <!--周时间-->
+                <div  id="weekTime" class="divTime" style="display: none">
+                    <input class="bntns" type="button" value="本周">
+                    <input class="bntns" type="button" value="<">
+                    <span>2015-9-9</span>
+                    -
+                    <span>2015-9-15</span>
+                    <input class="bntns" type="button" value=">">
+                </div>
+                <!-- 月时间-->
+                <div  id="month_time" class="divTime" style="display: none">
+                    <input class="bntns" type="button" value="本月">
+                    <input class="bntns" type="button" value="<">
+                    <span>2015-09</span>
+                    <input class="bntns" type="button" value=">">
+                </div>
+                <!-- 区间时间-->
+                <div  id="section" class="divTime"  style="display: none">
+                    <input id="startdate" class="laydate-icon" value="" placeholder="起始时间" style="width: 80px;height: 25px;">
+                    &nbsp;至&nbsp;
+                    <input id="enddate" class="laydate-icon" value="" placeholder="终止时间" style="width: 80px;height: 25px;">
+                </div>
+                </div>
+                <!-- 员工部门-->
+                <div class="personmsg">
+                    <input type="search" placeholder="所属部门">
+                    <span class="fa fa-sitemap fa-lg"></span>
+                    <input type="search" placeholder="罗青钦">
+                    <span class="fa fa-group fa-lg"></span>
+                </div>
+                <!-- 按钮-->
+                <p style="float: left;height: 25px;width: 250px;margin: 12px 0 0 677px;">
+                    <input id="searchButton" class="bntns1" type="button" value="搜索">
+                    <input id="resetButton" class="bntns1" type="button" value="清空">
+                    <input id="exprotButton" class="bntns1" type="button" value="导出">
+                </p>
+            </div>
+        </div>
+        <!--列表-->
+        <div class="check_list">
+              <div class="title">
+                <ul>
+                    <li>员工</li>
+                    <li>所属部门</li>
+                    <li>签到地址</li>
+                    <li>签到时间</li>
+                    <li>签到类型</li>
+                    <li>操作</li>
+                </ul>
+              </div>
+              <div class="contentList">
+                  <?PHP for($i=0;$i<6;$i++){?>
+                  <ul>
+                      <li>李文华</li>
+                      <li>研发部</li>
+                      <li>公司</li>
+                      <li>2015-9-12 09:00</li>
+                      <li>上班</li>
+                      <li>
+                          <img style="width: 18px;margin:12px 0 0 -25px;cursor: pointer;" src="__IMG__/response.png">
+                      </li>
+                  </ul>
+                  <?PHP }?>
+              </div>
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+
+
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+    var start = {
+        elem: '#startdate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#enddate',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: laydate.now(+180),
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，重置开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    })
+
+//    菜单轮换点击事件
+    $(".column li").click(function () {
+        var index = $(".column li").index($(this));
+        $(this).addClass("selected").siblings().removeClass("selected");
+        $divList = $("#timeChoose").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+    })
+
+
+
+</script>
+    </body>
+</html>

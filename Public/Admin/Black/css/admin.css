@@ -1,0 +1,144 @@
+body,div,ul,li,p,img,h1,h2,h3,h4,dl,dt,dd,a,i,span,button{ margin: 0; padding: 0 ;list-style: none;}
+html,body{  margin: 0 auto;  font-size: 12px;  font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;  background: #fafafa; padding:0;  }
+
+/*共有*/
+.fl{ float: left;}
+.rg{ float: right;}
+a:hover{  color: #717071; font-size: 12px;text-decoration:none;}
+/*头部样式*/
+.header {background: #2a2d34 none repeat scroll 0 0;border-bottom: 1px solid #d7d8db;height: 40px;color: #717071;}
+.header_in{ width: 1200px; margin: 0 auto; overflow: hidden;}
+.header_in h2{ margin: 0; color: #fff; font-size: 12px; line-height: 40px;}
+.header_in_right{overflow: hidden;}
+.header_in_right ul li{ float: left; color: #fff; font-size: 12px; line-height: 40px; margin-right: 10px;}
+.header_in_right ul li i{ margin-right: 5px;}
+.header_in_right ul li:last-child{ margin-right: 0;}
+.navs{ width: 1200px; margin: 0 auto; overflow: hidden;}
+.navs_right span:first-child{ margin:30px 15px 0px 0px;}
+.navs_right span:nth-child(2){ margin:30px 5px 0 0;}
+.navs_right span:last-child{ width: 50px; height: 50px; border-radius: 25px; background: #ccc; margin-top: 15px;}
+/*底部*/
+.footer{color: #7d7d7d;height: 30px;font-size: 11px; margin-top: 40px;}
+.footer_left{float: left;}
+.footer_left ul li{float: left;list-style:none;}
+.footer_right{float: right;}
+.footer_right a{ color: #7d7d7d;}
+/*主体*/
+.body{ width: 1200px; overflow: hidden; margin: 0 auto;}
+.admin_left{ overflow: hidden; width: 150px; margin-right: 20px; background: #f1f3f8;min-height: 805px;}
+.admin_left ul{ margin-top: 40px;}
+.admin_left ul li{ height: 105px; cursor: pointer;}
+.admin_left ul li i{ margin-left: 40px; margin-top: 20px; }
+.admin_left ul li span{ margin-left: 44px;}
+.admin_left ul .current{ border-left: 2px solid #f08300; background: #fff; color: #f08300;}
+/*admin_right*/
+.admin_right{ width: 1030px; overflow: hidden; color: #717071;}
+.owned{ height: 286px; width: 100%; background:#f1f3f8; margin-bottom: 20px;}
+.owned:last-child{ margin-bottom: 0; height: 269px;}
+.owned:nth-child(2){ height: 210px;}
+.owned .owned_first{ margin: 40px 40px 0 20px; width: 640px; overflow: hidden;}
+.owned .owned_first li{ float: left;width: 100%; }
+
+.owned .owned_first li:nth-child(2){text-indent: 2em; line-height: 24px; margin-bottom: 20px;}
+.owned .owned_first li:first-child{ font-size: 14px; color: #616161; margin-bottom: 13px;  font-weight: bold;}
+.owned .owned_first li:nth-child(4){ margin: 18px 0;}
+.owned .owned_first .sp3{ margin: 3px 46px 0 0;  }
+.owned .owned_first .btns1{  border: none; background: #f08300; color: #fff; width: 125px; height: 25px; border-radius: 5px;}
+.owned .owned_two{ width: 243px; margin: 40px 40px 0 20px; border-left: 1px solid #d2d3d5;}
+.owned .owned_two li{ padding-top: 15px; margin-left: 20px;}
+.owned .owned_two li:first-child{ font-size: 14px;}
+.owned .owned_two li:last-child{ padding-top: 3px;}
+.owned .owned_two li p{ margin: 0; color: #f08300;}
+.owned .owned_two li:nth-child(3){ border-bottom: 1px solid #d2d3d5; padding-bottom: 17px;}
+.owned .owned_two li p a,.owned .owned_thirdly li a{color: #717071; font-size: 12px;}
+.owned .owned_two li p a:hover,.owned .owned_thirdly li a:hover{ text-decoration: none; color: #717071; }
+.owned .owned_thirdly li a{ font-size: 14px;}
+/*owned_thirdly*/
+.owned .owned_thirdly{ margin:50px 0 0 20px; }
+.owned .owned_thirdly li{ float: left; margin-right: 100px;}
+.owned .owned_thirdly li p{text-align: center; margin-top: 20px;}
+/*owned_fourthly*/
+.owned .owned_fourthly{ margin: 40px 0 0 20px;}
+.owned .owned_fourthly li{ margin-bottom: 13px;}
+.owned .owned_fourthly li:nth-child(3){ margin-bottom: 27px;}
+.owned .owned_fourthly li .sp4{ font-weight: bold; margin-right: 40px;}
+.owned .owned_fourthly li p{ position: relative; width: 240px; height: 15px; border-radius: 7.5px; background: #fff;}
+.owned .owned_fourthly li .sp5{z-index: 10; width: 60px; height: 15px; border-radius: 7.5px; background: #f08300; position: absolute; left: 0; top: 0;}
+.owned .owned_fourthly li .sp6{ margin-left: 30px; color: #f08300;}
+.owned .owned_fourthly li .sp7{ margin-left: 10px; color: #f08300;}
+/*address通讯录*/
+.address{ width: 1200px; overflow: hidden; margin: 0 auto;}
+.address_con{ width: 200px; overflow: hidden; border: 1px solid #d2d3d5; margin-right: 20px; min-height: 805px;}
+.con_top{ margin: 40px 0 0 36px; overflow: hidden;}
+.con_top button{ border: none; background: #f08300; width: 125px; height: 25px; text-align: center; color: #fff; border-radius: 5px;}
+.con_nav{ margin: 40px 0 0 34px; overflow: hidden; }
+.con_nav h3{ font-size: 14px; cursor: pointer; margin:0 0 5px 0;}
+.con_nav .fa-lg{ vertical-align:text-top; margin-right: 5px; }
+.nav_in{margin-left: 14px;display: none;}
+.nav_in h4{ font-size: 14px; margin-bottom: 4px; cursor: pointer; color: #000;}
+.nav_in  ul{line-height: 28px; margin-left: 14px; display: none;}
+.nav_in  ul li{ cursor: pointer;}
+.curr{ display: block;}
+.curr .on span{ color:#f08300;}
+.address_right{ width: 810px; overflow: hidden; border: 1px solid #d2d3d5; min-height: 805px;}
+.right_top{ height: 118px; background: #f1f3f8;}
+.right_top h5{ margin: 30px 0 20px 20px; width: 788px;}
+.right_top h5 a{ display: inline-block;  font-size: 14px;  color: #fff; width: 125px; height: 25px; background: #f08300;text-align: center; line-height: 25px; border-radius: 5px;}
+.right_top h5 a:hover{ font-size: 14px; color: #fff; text-decoration: none;}
+.right_select{ width: 788px; margin-left: 20px; }
+.right_select .right_select_left{ margin-top: 4px;}
+.right_select_button{margin-right: 20px; }
+.right_select_button a{ display: inline-block;width: 50px; height: 25px; color: #fff; background: #f08300; border-radius: 5px; text-align: center; line-height: 25px;}
+.right_select_button a:hover{ font-size: 14px; text-decoration: none;color: #fff;}
+.right_con{height: 42px; line-height: 40px; border: 1px solid #d2d3d5; border-left:none; border-right: none; background: #f1f3f8; color: #646464; }
+.right_con ul li{ float: left; margin-right: 110px;}
+.right_con ul li:first-child{ margin: 2px 130px 0 20px;}
+.right_con ul li:last-child{ margin-right: 0;}
+.right_con1{ overflow: hidden;width: 808px;}
+.right_con1 ul{height: 54px; line-height: 54px;margin-bottom: 0;}
+.right_con1 ul:hover{ border: 1px solid #f08300; border-left: none; border-right: none;}
+.right_con1 ul li{ float: left;margin-right: 100px;}
+.right_con1 ul li:nth-child(2){ margin-right: 108px;}
+.right_con1 ul li:nth-child(3){ margin-right: 79px;}
+.right_con1 ul li:nth-child(4){ margin-right: 84px;}
+.right_con1 ul li:nth-child(5){ margin-right: 84px;}
+.right_con1 ul li:last-child{ margin-right: 0;}
+.right_con1 ul li:first-child{ margin: 2px 130px 0 20px;}
+.right_con1 .right_button{ width: 50px; height: 25px; line-height: 25px; border: none; background: #f08300; color: #fff; text-align: center; border-radius: 5px;}
+.right_footer{ margin-top: 40px; margin-right: 20px;}
+.right_footer button{background: #fff; border: 1px solid #d2d3d5; width: 16px; height: 16px; text-align: center; line-height: 16px; display: inline-block; cursor: pointer;}
+/*company*/
+.company{ width: 1200px; overflow: hidden; margin: 0 auto; color: #676666; }
+.company_right{width: 1010px; margin-left: 20px; overflow: hidden;}
+.company_nav{  width: 100%; background: #f1f3f8; height: 40px;line-height: 40px;}
+.company_nav span:first-child{ margin-left: 20px;}
+.company_nav span{display: inline-block; margin-right: 210px; cursor: pointer;}
+.company_nav span:last-child{ margin-right: 20px;}
+.company_nav .currs{ border-bottom: 2px solid #f08300; color: #f08300; }
+.company_con{ height: 388px; width: 100%; background: #f1f3f8; margin-top: 20px;}
+.company_cons{height: 577px;}
+.company_con h6{ height: 40px; border-bottom: 1px solid #d2d3d5; line-height: 40px;padding-left: 20px; margin: 0; }
+.company_con .company_ul{ width:990px; margin-left: 20px; overflow: hidden; margin-top: 25px; font-size: 12px;}
+.company_ul .txts1{ resize: none; width: 332px ;height: 75px; margin-top: 10px;}
+.company_ul li{ width: 990px; overflow: hidden; }
+.company_ul li button{ width: 100px; height: 25px; border: none;line-height: 25px; text-align: center; }
+.company_ul .buts{  border-radius:5px;color: #fff;  margin:10px 10px 10px 0;  border: none; background: #f08300;  }
+.company_ul li:nth-child(5){ margin-top: 25px;}
+.company_ul li:nth-child(6){ margin: 25px 0 10px 0;}
+.company_ul .inpts{ width: 300px; height: 25px; }
+.company_ul .butt{ margin-left: 10px; width: 50px; height: 25px;  border-radius: 5px; border: none; line-height: 25px; text-align: center; background: #f08300; color: #fff;}
+.company_ul .txts{ width:400px ;height: 270px; }
+.company_ul .inps1{ background: #fff; color: #676666; float: left;  }
+.company_ul .inps2{ margin: 0 5px; background: #f08300;float: left; }
+.company_ul .inps3{border-radius: 5px;  width: 50px; height: 25px;margin-right: 10px; background: #f08300; color: #fff;}
+.company_ul .inps4{ background: #f08300; color: #fff; border-radius: 5px;}
+.company_ul .li_footer{ margin-top: 10px;}
+.company_set{height: 260px;}
+.company_set .set_ul{ width:990px; margin-left: 20px; overflow: hidden; margin-top: 25px; font-size: 12px;}
+.set_ul li{ width: 990px; overflow: hidden; margin-bottom: 10px;}
+.set_ul .sp9{ margin-right:10px; }
+.set_ul .inpt{ margin: 2px 10px 0 0;}
+.set_ul .inps_save{ margin-left: 106px; color: #fff; border-radius: 5px; width: 50px; height: 25px; line-height: 25px; background: #f08300; border: none;}
+.company_footer{ height: 108px;}
+.company_footer .footer_ul{width:990px; margin-left: 20px; overflow: hidden; margin-top: 25px; font-size: 12px;}
+.footer_ul li button{ width: 50px; height: 25px; border-radius: 5px; background: #f08300; border: none; color: #fff; margin-left: 10px;}

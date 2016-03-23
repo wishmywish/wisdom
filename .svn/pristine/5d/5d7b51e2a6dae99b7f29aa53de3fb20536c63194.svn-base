@@ -1,0 +1,41 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<include file="Public/admin_menu" />
+<div class="body_right">
+        <div class="body_right_menu">
+             <div class="button_bg_80"  onclick="location.href = APP+'/Admin/Access/index'">角色管理</div>
+            <div class="button_bg_80"  onclick="location.href = APP+'/Admin/Access/user_list'">用户管理</div>
+        </div>
+        <div class="body_right_list">
+            <div class="body_right_list_button">
+                <div class="button_bg_80" style="float: right;margin-right: 5px;" onclick="addrole()">新建角色</div>
+            </div>
+            <div class="body_right_list_tab1">
+                <ul>
+                    <li>id</li>
+                    <li>角色名称</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+            <div class="body_right_list_tab2">               
+                <ul>                  
+                    <li>xxxx</li>
+                    <li>xxxx</li>
+                    <li><span>编辑</span><span>删除</span><span>查看</span></li>                   
+                </ul>              
+            </div>
+            <div class="pagelist"></div>
+        </div> 
+    </div>
+    <script>
+       function addrole(){
+           layer.open({
+        type: 2,
+        title :['新建角色','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+        area: ['480px', '330px'],
+        shadeClose: false, //点击遮罩关闭
+        content:APP+'/Admin/Access/addrole' 
+    });
+       }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<div class="menu">
+    <ul style="margin-top: 30px;">
+<!--        <li>
+            <div class="home_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">首页</div>
+        </li>
+        <li>
+            <div class="organize_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">组织架构</div>
+        </li>-->
+        <li onclick="location.href = APP+'/Admin/Group/index'">
+            <div class="companyset_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">企业设置</div>
+        </li>
+        <li  onclick="location.href = APP+'/Admin/Access/index'">
+            <div class="systemset_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">权限设置</div>
+        </li>
+<!--        <li>
+            <div class="systemset_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">系统设置</div>
+        </li>-->
+        <!--
+        <li>
+            <div class="back_ico"></div>
+            <div style="height: 20px;line-height: 20px;width: 60px;text-align: center;">返回</div>
+        </li>-->
+    </ul>
+</div>

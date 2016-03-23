@@ -1,0 +1,110 @@
+<include file="Public/home_head" title="智慧推广::任务管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left">
+        <ul id="bigmenu">
+            <li id="1" class="org_box  org_box_select"><span class="org_bot_cor"></span>随手赚</li>
+            <!--<div id="draggle">-->
+                <!--<p>题目类型</p>-->
+                <!--<span id="singe_drag"><i class="fa fa-dot-circle-o fa-fw"></i> 单选题</span>-->
+                <!--<span id="double_drag"><i class="fa fa-check-square-o fa-fw"></i> 多选题</span>-->
+                <!--<span id="pic_drag"><i class="fa fa-file-text-o fa-fw"></i> 文本题</span>-->
+                <!--<span id="text_drag"><i class="fa fa-picture-o fa-fw"></i> 图片题</span>-->
+            <!--</div>-->
+        </ul>
+    </div>
+    <input type="hidden" id="typetaskid" value="{$reModi.one.f_tasktypeid|default=0}"/>
+    <input type="hidden" id="index_proid" value="{$reModi.pro.f_indexid|default=0}"/>
+    <input type="hidden" id="index_conid" value="{$reModi.detail.f_indexid|default=0}"/>
+    <div class="index_right_bus">
+        <!--随手赚-->
+
+        <div id="nav1">
+            <span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp新增&nbsp>&nbsp 随手赚&nbsp>&nbsp推荐</span>
+        </div>
+        <div id="a1" style="display: block">
+            <include file="Promotion/widelyTaskAdd_public"/>
+        </div>
+
+        <div id="a2" style="display: none">
+            <!--推荐模板样式-->
+            <div id="recomdtemp" style="margin:20px 0 60px 0;display:none">
+                <script type="text/plain" id="editor2" style="width:550px;min-height:450px;color:#595758;" name="editor2"></script>
+            </div>
+           <div class="next_btn">
+               <span  onclick="widely_pre()" style="margin-right: 25px;">上一步</span>
+               <span  onclick="pro_submit()">申请上线</span>
+           </div>
+        </div>
+
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+    $("#tasktypeid").empty();
+    $("#tasktypeid").append("<option value='0'>选择任务类型</option><option value='4'>调研类</option><option value='5'>推荐类</option><option value='6'>答题类</option>");
+    getTasktype();
+    // Cookie.createCookie("now_taskid",{$taskid});
+    //  console.log($reModi.detail);
+    //alert(a);
+    //实例化编译器
+    var ue=UM.getEditor('editor',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+    //通过getContent和setContent方法可以设置和读取编译器的内容
+    //读取配置
+    // var lang=ue.getOpt('lang');默认返回：zh-cn
+
+    //加载三级联动
+    //
+    //     _init_area();
+    //     getArea({$reModi.one.f_tid|default=0});
+    //     getPro({$reModi.one.f_tid|default=0});
+
+    UM.getEditor('editor').setContent('{$reModi.pro.f_taskrequirements}',true);
+</script>
+<!--推荐类详情-->
+<script type="text/javascript">
+    //实例化编译器
+    var ue=UM.getEditor('editor2',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+    UM.getEditor('editor2').setContent('{$reModi.pro.f_recommend}',true);
+</script>
+<script type="text/javascript">
+    $(function() {
+//        autosize(document.querySelectorAll('textarea'));
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png')}' method='post' enctype='multipart/form-data'></form>");
+        $("#convenfileImg").wrap("<form id='up_convenlogo' action='{:U('Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png')}' method='post' enctype='multipart/form-data'></form>");
+        var num=$(".draggle .draggle_content:last-child").index()+1;
+//        $( "#draggle").draggable();
+    });
+
+    //点击下一步
+    function  widely_next(){
+        $("#a1").hide();
+
+        $("#a2").show();
+        $("#recomdtemp").show();
+    }
+
+    function  widely_pre(){
+//        $("#draggle").hide();
+        $("#a1").show();
+        $("#a2").hide();
+    }
+
+</script>
+</body>
+</html>

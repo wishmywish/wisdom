@@ -1,0 +1,402 @@
+<include file="Public/head" />
+<style type="text/css">
+.access {
+    border: 1px #ecf0f5 solid;
+}
+.power1{
+    border: 1px #ecf0f5 solid;
+}
+.power2{
+    border: 1px #ecf0f5 solid;
+}
+
+.power3{
+    border: 1px #ecf0f5 solid;
+}
+
+.power4{
+    border: 1px #ecf0f5 solid;
+}
+
+.power5{
+    border: 1px #ecf0f5 solid;
+}
+
+.power6{
+    border: 1px #ecf0f5 solid;
+}
+.power7{
+    border: 1px #ecf0f5 solid;
+}
+.power8{
+    border: 1px #ecf0f5 solid;
+}
+.power9{
+    border: 1px #ecf0f5 solid;
+}
+.power{
+    border: 1px #ecf0f5 solid;
+}
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+                <div class="page_next" id="push_one">
+
+                    <div class="power">
+                        <div class="power_input">
+                            <span>角色名：</span> <input type="text" id="accessName" placeholder="角色名" value="{$reModi.list.accessname}">
+                        </div>
+                    </div>
+
+                    <div class="access">
+
+
+<!-- 
+                        <volist name="reModi.list.accessvalue" id="vo" key="k">
+
+                            <div class="power{$k}">
+                                <input type="checkbox" id="task{$k}" name="task{$k}"  value="{$vo[0]}" checked='checked'>
+                                <label for="task{$k}">
+                                    <eq name="vo[0]" value="100">
+                                        任务管理
+                                    </eq>
+                                    <eq name="vo[0]" value="200">
+                                        任务审核
+                                    </eq>
+                                    <eq name="vo[0]" value="300">
+                                        业务员管理
+                                    </eq>
+                                    <eq name="vo[0]" value="400">
+                                        企业管理
+                                    </eq>
+                                </label>
+
+                                <neq name="vo[1]" value="">
+                                    <div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power1{$k}" name="power1{$k}"  value="{$test}" checked='checked'>
+                                            <label for="power1{$k}">
+                                                <eq name="test" value="a">
+                                                    添加
+                                                </eq>
+                                                <eq name="test" value="b">
+                                                    修改
+                                                </eq>
+                                                <eq name="test" value="c">
+                                                    删除
+                                                </eq>
+                                                <eq name="test" value="d">
+                                                    客服审核
+                                                </eq>
+                                            </label>
+                                        </volist>
+                                    </div>
+                                </neq>
+
+                            </div>
+
+                        </volist> -->
+
+
+
+<volist name="reModi.list.accessvalue" id="vo" key="k">
+
+                        <div class="power1">
+                            <div class="power_input1">
+                                <input type="checkbox" id="task1" name="task1"  value="100" <eq name="vo" value="100">checked</eq>><label for="task1">任务管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input1_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power11" name="power11"  value="a" <eq name="test" value="a">checked</eq>><label for="power11">添加</label>
+                                            <input type="checkbox" id="power21" name="power11"  value="b" <eq name="test" value="b">checked</eq>><label for="power21">修改</label>
+                                            <input type="checkbox" id="power31" name="power11"  value="c" <eq name="test" value="c">checked</eq>><label for="power31">删除</label>
+                                            <input type="checkbox" id="power41" name="power11"  value="d" <eq name="test" value="d">checked</eq>><label for="power41">客服审核</label>
+                                            <input type="checkbox" id="power51" name="power11"  value="e" <eq name="test" value="e">checked</eq>><label for="power51">驳回</label>
+                                            <input type="checkbox" id="power61" name="power11"  value="f" <eq name="test" value="f">checked</eq>><label for="power61">延时</label>
+                                            <input type="checkbox" id="power71" name="power11"  value="g" <eq name="test" value="g">checked</eq>><label for="power71">更新</label>
+                                            <input type="checkbox" id="power81" name="power11"  value="h" <eq name="test" value="h">checked</eq>><label for="power81">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power2">
+                            <div class="power_input2">
+                                <input type="checkbox" id="task2" name="task2"  value="200" <eq name="vo" value="200">checked</eq>><label for="task2">任务审核</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input2_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power12" name="power12"  value="a" <eq name="test" value="a">checked</eq>><label for="power12">添加</label>
+                                            <input type="checkbox" id="power22" name="power12"  value="b" <eq name="test" value="b">checked</eq>><label for="power22">修改</label>
+                                            <input type="checkbox" id="power32" name="power12"  value="c" <eq name="test" value="c">checked</eq>><label for="power32">删除</label>
+                                            <input type="checkbox" id="power42" name="power12"  value="d" <eq name="test" value="d">checked</eq>><label for="power42">客服审核</label>
+                                            <input type="checkbox" id="power52" name="power12"  value="e" <eq name="test" value="e">checked</eq>><label for="power52">驳回</label>
+                                            <input type="checkbox" id="power62" name="power12"  value="f" <eq name="test" value="f">checked</eq>><label for="power62">延时</label>
+                                            <input type="checkbox" id="power72" name="power12"  value="g" <eq name="test" value="g">checked</eq>><label for="power72">更新</label>
+                                            <input type="checkbox" id="power82" name="power12"  value="h" <eq name="test" value="h">checked</eq>><label for="power82">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power3">
+                            <div class="power_input3">
+                                <input type="checkbox" id="task3" name="task3"  value="300" <eq name="vo" value="300">checked</eq>><label for="task3">业务员管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input3_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power13" name="power13"  value="a" <eq name="test" value="a">checked</eq>><label for="power13">添加</label>
+                                            <input type="checkbox" id="power23" name="power13"  value="b" <eq name="test" value="b">checked</eq>><label for="power23">修改</label>
+                                            <input type="checkbox" id="power33" name="power13"  value="c" <eq name="test" value="c">checked</eq>><label for="power33">删除</label>
+                                            <input type="checkbox" id="power43" name="power13"  value="d" <eq name="test" value="d">checked</eq>><label for="power43">客服审核</label>
+                                            <input type="checkbox" id="power53" name="power13"  value="e" <eq name="test" value="e">checked</eq>><label for="power53">驳回</label>
+                                            <input type="checkbox" id="power63" name="power13"  value="f" <eq name="test" value="f">checked</eq>><label for="power63">延时</label>
+                                            <input type="checkbox" id="power73" name="power13"  value="g" <eq name="test" value="g">checked</eq>><label for="power73">更新</label>
+                                            <input type="checkbox" id="power83" name="power13"  value="h" <eq name="test" value="h">checked</eq>><label for="power83">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power4">
+                            <div class="power_input4">
+                                <input type="checkbox" id="task4" name="task4"  value="400" <eq name="vo" value="400">checked</eq>><label for="task4">企业管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input4_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power14" name="power14"  value="a" <eq name="test" value="a">checked</eq>><label for="power14">添加</label>
+                                            <input type="checkbox" id="power24" name="power14"  value="b" <eq name="test" value="b">checked</eq>><label for="power24">修改</label>
+                                            <input type="checkbox" id="power34" name="power14"  value="c" <eq name="test" value="c">checked</eq>><label for="power34">删除</label>
+                                            <input type="checkbox" id="power44" name="power14"  value="d" <eq name="test" value="d">checked</eq>><label for="power44">客服审核</label>
+                                            <input type="checkbox" id="power54" name="power14"  value="e" <eq name="test" value="e">checked</eq>><label for="power54">驳回</label>
+                                            <input type="checkbox" id="power64" name="power14"  value="f" <eq name="test" value="f">checked</eq>><label for="power64">延时</label>
+                                            <input type="checkbox" id="power74" name="power14"  value="g" <eq name="test" value="g">checked</eq>><label for="power74">更新</label>
+                                            <input type="checkbox" id="power84" name="power14"  value="h" <eq name="test" value="h">checked</eq>><label for="power84">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power5">
+                            <div class="power_input5">
+                                <input type="checkbox" id="task5" name="task5"  value="500" <eq name="vo" value="500">checked</eq>><label for="task5">活动与广告</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input5_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power15" name="power15"  value="a" <eq name="test" value="a">checked</eq>><label for="power15">添加</label>
+                                            <input type="checkbox" id="power25" name="power15"  value="b" <eq name="test" value="b">checked</eq>><label for="power25">修改</label>
+                                            <input type="checkbox" id="power35" name="power15"  value="c" <eq name="test" value="c">checked</eq>><label for="power35">删除</label>
+                                            <input type="checkbox" id="power45" name="power15"  value="d" <eq name="test" value="d">checked</eq>><label for="power45">客服审核</label>
+                                            <input type="checkbox" id="power55" name="power15"  value="e" <eq name="test" value="e">checked</eq>><label for="power55">驳回</label>
+                                            <input type="checkbox" id="power65" name="power15"  value="f" <eq name="test" value="f">checked</eq>><label for="power65">延时</label>
+                                            <input type="checkbox" id="power75" name="power15"  value="g" <eq name="test" value="g">checked</eq>><label for="power75">更新</label>
+                                            <input type="checkbox" id="power85" name="power15"  value="h" <eq name="test" value="h">checked</eq>><label for="power85">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power6">
+                            <div class="power_input6">
+                                <input type="checkbox" id="task6" name="task6"  value="600" <eq name="vo" value="600">checked</eq>><label for="task6">提现管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input6_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power16" name="power16"  value="a" <eq name="test" value="a">checked</eq>><label for="power16">添加</label>
+                                            <input type="checkbox" id="power26" name="power16"  value="b" <eq name="test" value="b">checked</eq>><label for="power26">修改</label>
+                                            <input type="checkbox" id="power36" name="power16"  value="c" <eq name="test" value="c">checked</eq>><label for="power36">删除</label>
+                                            <input type="checkbox" id="power46" name="power16"  value="d" <eq name="test" value="d">checked</eq>><label for="power46">客服审核</label>
+                                            <input type="checkbox" id="power56" name="power16"  value="e" <eq name="test" value="e">checked</eq>><label for="power56">驳回</label>
+                                            <input type="checkbox" id="power66" name="power16"  value="f" <eq name="test" value="f">checked</eq>><label for="power66">延时</label>
+                                            <input type="checkbox" id="power76" name="power16"  value="g" <eq name="test" value="g">checked</eq>><label for="power76">更新</label>
+                                            <input type="checkbox" id="power86" name="power16"  value="h" <eq name="test" value="h">checked</eq>><label for="power86">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power7">
+                            <div class="power_input7">
+                                <input type="checkbox" id="task7" name="task7"  value="700" <eq name="vo" value="700">checked</eq>><label for="task7">报表中心</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input7_access" >
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power17" name="power17"  value="a" <eq name="test" value="a">checked</eq>><label for="power17">添加</label>
+                                            <input type="checkbox" id="power27" name="power17"  value="b" <eq name="test" value="b">checked</eq>><label for="power27">修改</label>
+                                            <input type="checkbox" id="power37" name="power17"  value="c" <eq name="test" value="c">checked</eq>><label for="power37">删除</label>
+                                            <input type="checkbox" id="power47" name="power17"  value="d" <eq name="test" value="d">checked</eq>><label for="power47">客服审核</label>
+                                            <input type="checkbox" id="power57" name="power17"  value="e" <eq name="test" value="e">checked</eq>><label for="power57">驳回</label>
+                                            <input type="checkbox" id="power67" name="power17"  value="f" <eq name="test" value="f">checked</eq>><label for="power67">延时</label>
+                                            <input type="checkbox" id="power77" name="power17"  value="g" <eq name="test" value="g">checked</eq>><label for="power77">更新</label>
+                                            <input type="checkbox" id="power87" name="power17"  value="h" <eq name="test" value="h">checked</eq>><label for="power87">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power8">
+                            <div class="power_input8">
+                                <input type="checkbox" id="task8" name="task8"  value="800" <eq name="vo" value="800">checked</eq>><label for="task8">招商进度管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input8_access">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power18" name="power18"  value="a" <eq name="test" value="a">checked</eq>><label for="power18">添加</label>
+                                            <input type="checkbox" id="power28" name="power18"  value="b" <eq name="test" value="b">checked</eq>><label for="power28">修改</label>
+                                            <input type="checkbox" id="power38" name="power18"  value="c" <eq name="test" value="c">checked</eq>><label for="power38">删除</label>
+                                            <input type="checkbox" id="power48" name="power18"  value="d" <eq name="test" value="d">checked</eq>><label for="power48">客服审核</label>
+                                            <input type="checkbox" id="power58" name="power18"  value="e" <eq name="test" value="e">checked</eq>><label for="power58">驳回</label>
+                                            <input type="checkbox" id="power68" name="power18"  value="f" <eq name="test" value="f">checked</eq>><label for="power68">延时</label>
+                                            <input type="checkbox" id="power78" name="power18"  value="g" <eq name="test" value="g">checked</eq>><label for="power78">更新</label>
+                                            <input type="checkbox" id="power88" name="power18"  value="h" <eq name="test" value="h">checked</eq>><label for="power88">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power9">
+                            <div class="power_input9">
+                                <input type="checkbox" id="task9" name="task9"  value="900" <eq name="vo" value="900">checked</eq>><label for="task9">产品列表管理</label>
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input9_access">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power19" name="power19"  value="a" <eq name="test" value="a">checked</eq>><label for="power19">添加</label>
+                                            <input type="checkbox" id="power29" name="power19"  value="b" <eq name="test" value="b">checked</eq>><label for="power29">修改</label>
+                                            <input type="checkbox" id="power39" name="power19"  value="c" <eq name="test" value="c">checked</eq>><label for="power39">删除</label>
+                                            <input type="checkbox" id="power49" name="power19"  value="d" <eq name="test" value="d">checked</eq>><label for="power49">客服审核</label>
+                                            <input type="checkbox" id="power59" name="power19"  value="e" <eq name="test" value="e">checked</eq>><label for="power59">驳回</label>
+                                            <input type="checkbox" id="power69" name="power19"  value="f" <eq name="test" value="f">checked</eq>><label for="power69">延时</label>
+                                            <input type="checkbox" id="power79" name="power19"  value="g" <eq name="test" value="g">checked</eq>><label for="power79">更新</label>
+                                            <input type="checkbox" id="power89" name="power89"  value="h" <eq name="test" value="h">checked</eq>><label for="power89">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+                            </div>
+                        </div>
+
+                        <div class="power">
+                            <div class="power_input">
+
+                                <input type="checkbox" id="task10" name="task10"  value="1000" onclick="access_show10(this);"><label for="task10">消费记录管理</label>
+                                <div class="power_input10_access">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power110" name="power10"  value="a" ><label for="power110">添加</label>
+                                    <input type="checkbox" id="power210" name="power10"  value="b" ><label for="power210">修改</label>
+                                    <input type="checkbox" id="power310" name="power10"  value="c" ><label for="power310">删除</label>
+                                    <input type="checkbox" id="power410" name="power10"  value="d" ><label for="power410">客服审核</label>
+                                    <input type="checkbox" id="power510" name="power10"  value="e" ><label for="power510">驳回</label>
+                                    <input type="checkbox" id="power610" name="power10"  value="f" ><label for="power610">延时</label>
+                                    <input type="checkbox" id="power710" name="power10"  value="g" ><label for="power710">更新</label>
+                                    <input type="checkbox" id="power810" name="power10"  value="h" ><label for="power810">财务审核</label>
+                                </div>
+
+                                <input type="checkbox" id="task10" name="task10"  value="1000" <eq name="vo[0]" value="1000">checked</eq>><label for="task10">消费记录管理</label>
+                                
+                                <neq name="vo[1]" value="">
+                                    <div class="power_input10_access">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power10" name="power10"  value="a" <eq name="test" value="a">checked</eq>><label for="power10">添加</label>
+                                            <input type="checkbox" id="power20" name="power10"  value="b" <eq name="test" value="b">checked</eq>><label for="power20">修改</label>
+                                            <input type="checkbox" id="power30" name="power10"  value="c" <eq name="test" value="c">checked</eq>><label for="power30">删除</label>
+                                            <input type="checkbox" id="power40" name="power10"  value="d" <eq name="test" value="d">checked</eq>><label for="power40">客服审核</label>
+                                            <input type="checkbox" id="power50" name="power10"  value="e" <eq name="test" value="e">checked</eq>><label for="power50">驳回</label>
+                                            <input type="checkbox" id="power60" name="power10"  value="f" <eq name="test" value="f">checked</eq>><label for="power60">延时</label>
+                                            <input type="checkbox" id="power70" name="power10"  value="g" <eq name="test" value="g">checked</eq>><label for="power70">更新</label>
+                                            <input type="checkbox" id="power80" name="power10"  value="h" <eq name="test" value="h">checked</eq>><label for="power80">财务审核</label>
+                                        </volist>
+                                    </div>
+                                </neq>
+
+                            </div>
+                        </div>
+
+
+                        <!-- <volist name="reModi.list.accessvalue" id="vo" key="k">
+
+                            <div class="power{$k}">
+                                <input type="checkbox" id="task{$k}" name="task{$k}"  value="{$vo[0]}" checked='checked'>
+                                <label for="task{$k}">
+                                    <eq name="vo[0]" value="100">
+                                        任务管理
+                                    </eq>
+                                    <eq name="vo[0]" value="200">
+                                        任务审核
+                                    </eq>
+                                    <eq name="vo[0]" value="300">
+                                        业务员管理
+                                    </eq>
+                                    <eq name="vo[0]" value="400">
+                                        企业管理
+                                    </eq>
+                                </label>
+
+                                <neq name="vo[1]" value="">
+                                    <div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <volist name="vo[1]" id="test">
+                                            <input type="checkbox" id="power1{$k}" name="power1{$k}"  value="{$test}" checked='checked'>
+                                            <label for="power1{$k}">
+                                                <eq name="test" value="a">
+                                                    添加
+                                                </eq>
+                                                <eq name="test" value="b">
+                                                    修改
+                                                </eq>
+                                                <eq name="test" value="c">
+                                                    删除
+                                                </eq>
+                                                <eq name="test" value="d">
+                                                    客服审核
+                                                </eq>
+                                            </label>
+                                        </volist>
+                                    </div>
+                                </neq>
+
+                            </div>
+
+                        </volist> -->
+
+
+
+
+
+
+</volist>
+
+
+                    </div>
+
+                    <div class="next_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_add_access" style="margin-top: 115px;">确定</a>
+                    </div>
+
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

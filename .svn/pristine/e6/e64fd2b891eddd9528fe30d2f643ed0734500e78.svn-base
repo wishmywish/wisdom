@@ -1,0 +1,58 @@
+<include file="Public/head" title="招商APP管理平台::用户信息管理" />
+<style type="text/css">
+.list{
+    margin-top: 40px;
+    margin-left: -200px;
+    font-size: 14px;
+}
+.listreturn{
+    margin-top: 40px;
+}
+</style>
+    <body>
+        <div class="adminB">
+            <div class="adminRight">
+                <div class="list">
+                    <input type="hidden" id="userExtractPasswordMobile" value="{$re.list.mobile}"/>
+                    <input type="hidden" id="userExtractPassworduserId" value="{$re.list.userId}"/>
+                    新提现密码:<input type="password" id="inUserExtractPassword" placeholder="新提现密码"  style="width:150%;height: 30px;line-height: 30px;"/><br>
+                    确认新密码:<input type="password" id="inUserExtractPasswordAgain" placeholder="确认提现密码"  style="width:150%;height: 30px;line-height: 30px;"/><br>
+                    <br><eq name="re.list.txPassWord" value=""><?php echo "<span style='color:red;'>该用户没有提现密码</span>"; ?><br></eq>
+                </div>
+                <div class="listreturn">
+                    <button type="button" id="modiUserExtractPassword" style="width:60px;height: 30px;line-height: 30px;border: 0px;background:#3c8dbc;color: #fff;">修改</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+        $('#modiUserExtractPassword').click(function(){
+            var userExtractPasswordMobile=$('#userExtractPasswordMobile').val();
+            var userExtractPassworduserId=$('#userExtractPassworduserId').val();
+
+            var inUserExtractPassword=$('#inUserExtractPassword').val();
+            if(inUserExtractPassword===""){
+                layer.msg('请输入新提现密码', {icon: 8});
+                $('#inUserExtractPassword').focus();
+                return false;
+            }
+
+            var inUserExtractPasswordAgain=$('#inUserExtractPasswordAgain').val();
+            
+            if(inUserExtractPasswordAgain!=inUserExtractPassword){
+                layer.msg('确认密码不一致', {icon: 8});
+                $('#inUserExtractPasswordAgain').focus();
+                return false;
+            }
+
+
+            $.post(APP+"/Api/Api/inport","command=withdrawal&jtype=2&type=add&userid="+userExtractPassworduserId+"&password="+hex_md5(inUserExtractPassword),
+                function(data){
+                    parent.location.reload();
+                    parent.layer.close(index);
+                },"json");
+    });
+
+    </script>
+</html>

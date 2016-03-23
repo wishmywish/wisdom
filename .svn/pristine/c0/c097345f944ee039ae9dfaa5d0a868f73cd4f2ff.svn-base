@@ -1,0 +1,339 @@
+<include file="Public/home_head" title="智慧推广::任务管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left">
+        <ul id="bigmenu">
+            <li id="1" class="org_box  org_box_select"><span class="org_bot_cor"></span>随手赚</li>
+            <!--<div id="draggle">-->
+                <!--<p>题目类型</p>-->
+                <!--<span id="singe_drag"><i class="fa fa-dot-circle-o fa-fw"></i> 单选题</span>-->
+                <!--<span id="double_drag"><i class="fa fa-check-square-o fa-fw"></i> 多选题</span>-->
+                <!--<span id="pic_drag"><i class="fa fa-file-text-o fa-fw"></i> 文本题</span>-->
+                <!--<span id="text_drag"><i class="fa fa-picture-o fa-fw"></i> 图片题</span>-->
+            <!--</div>-->
+        </ul>
+    </div>
+    <input type="hidden" id="typetaskid" value="{$reModi.one.f_tasktypeid|default=0}"/>
+    <input type="hidden" id="index_proid" value="{$reModi.pro.f_indexid|default=0}"/>
+    <input type="hidden" id="index_conid" value="{$reModi.detail.f_indexid|default=0}"/>
+    <div class="index_right_bus">
+        <!--随手赚-->
+
+        <div id="nav1">
+            <span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp新增&nbsp>&nbsp 随手赚&nbsp>&nbsp问答</span>
+        </div>
+        <div id="a1" style="display: block">
+            <include file="Promotion/widelyTaskAdd_public"/>
+        </div>
+
+        <div id="a2" style="display: none">
+            <!--调研类与答题类模板-->
+            <div  class="taskAdd_template_questionList" id="quest"  style="display:none">
+                <?php if ($reModi['detail']) { ?>
+                <volist name="reModi.detail" id="vo" key="k">
+                    <div class="taskAdd_template_questionList1" style="margin: 20px 0px auto;min-height: 500px;" id='question_list_{$k-1}'>
+                        <div class="taskAdd_template_question" id='quest_{$k-1}'>
+                            问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px" value="{$vo.f_problemtatile}"/>
+                            <eq name="k-1" value="0"><button type="button" class="taskAdd_btn" value="" onclick="addQuestion({$reModi.detailCount})">+</button></eq>
+                            <neq name="k-1" value="0">
+                                <span style="color:#14bce1;cursor:pointer;margin-left:20px;" onclick="taskAdd_template_questionList_delete({$k-1},{$vo.f_stdindex})">删除</span>
+                            </neq>
+                        </div>
+                        <div  class="taskAdd_template_answer">
+                            答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_{$k-1}"  onchange="changeoption(this.value,{$k-1})">
+                            <option  value="0" <eq name="vo.f_type" value="0"> selected </eq>>请选择</option>
+                            <option  value="1" <eq name="vo.f_type" value="1"> selected </eq>>单选</option>
+                            <option  value="2" <eq name="vo.f_type" value="2"> selected </eq>>多选</option>
+                            <option  value="3" <eq name="vo.f_type" value="3"> selected </eq>>文本</option>
+                            <option  value="4" <eq name="vo.f_type" value="4"> selected </eq>>图片</option>
+                        </select>
+                            <?php if ($vo['f_type']==1 || $vo['f_type']==2) {?>
+                            <volist name="vo.answer" id="answer" key="m">
+                                <input type="text" class="taskAdd_conventionDataInput  taskAdd_template_answerInput" value="{$answer}">
+                                <input type="checkbox" style="display:inline-block;margin-left:7px;"  name="answer" value="{$m-1}" class="answer_{$m-1}_{$k-1}"
+                                <?php  if (in_array(($m-1),explode(",",$vo['f_trueanswer']))&&$vo['f_trueanswer']!=""){echo "checked";}  ?>/>
+                                <neq name="key" value="0">
+                                    <input type="button" class="taskAdd_answer_input" onclick="delte_input({$k-1},{$m-1})" id="delte_input_{$k-1}{$m-1}" value="删除">
+                                </neq>
+                            </volist>
+                            <button type="button" class="taskAdd_btn question_btn_add" id="template_question_btn{$k-1}" value="{$k-1}" onclick="addAnswer({$k-1},{$m-1})">+</button>
+                            <?php }?>
+                        </div>
+                        <input type="hidden" id="f_stdindex{$k-1}" name="f_stdindex" value="{$vo.f_stdindex}">
+                    </div>
+                </volist>
+                <?php }else{ ?>
+                <div class="taskAdd_template_questionList1" id='question_list_0'>
+                    <div class="taskAdd_template_question" style="margin-left: -3px;">
+                        问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px"/>
+                        <button type="button" class="taskAdd_btn" id="template_question_btn" value="">+</button>
+                    </div>
+                    <div  class="taskAdd_template_answer">
+                        答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_0"  onchange="changeoption(this.value,0)">
+                        <option  value="0">请选择</option>
+                        <option  value="1">单选</option>
+                        <option  value="2">多选</option>
+                        <option  value="3">文本</option>
+                        <option  value="4">图片</option>
+                    </select>
+                    </div>
+                </div>
+                <?php }?>
+            </div>
+           <div class="next_btn">
+               <span  onclick="widely_pre()" style="margin-right: 25px;">上一步</span>
+               <span  onclick="pro_submit()">申请上线</span>
+           </div>
+        </div>
+
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+    $("#tasktypeid").empty();
+    $("#tasktypeid").append("<option value='0'>选择任务类型</option><option value='4'>调研类</option><option value='5'>推荐类</option><option value='6'>答题类</option>");
+    getTasktype();
+    // Cookie.createCookie("now_taskid",{$taskid});
+    //  console.log($reModi.detail);
+    //alert(a);
+    //实例化编译器
+    var ue=UM.getEditor('editor',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+    //通过getContent和setContent方法可以设置和读取编译器的内容
+    //读取配置
+    // var lang=ue.getOpt('lang');默认返回：zh-cn
+
+    //加载三级联动
+    //
+    //     _init_area();
+    //     getArea({$reModi.one.f_tid|default=0});
+    //     getPro({$reModi.one.f_tid|default=0});
+
+    UM.getEditor('editor').setContent('{$reModi.pro.f_taskrequirements}',true);
+</script>
+
+<script type="text/javascript">
+
+
+    //点击下一步
+    function  widely_next(){
+        $("#a1").hide();
+
+        $("#a2").show();
+        $("#quest").show();
+    }
+
+    function  widely_pre(){
+//        $("#draggle").hide();
+        $("#a1").show();
+        $("#a2").hide();
+    }
+
+</script>
+<script>
+
+    $("#pro_taskDescription").text("{$reModi.one.f_description}");
+    $("#taskDescription").text("{$reModi.one.f_description}");
+    $('#bigmenu li').click(function(){
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()===i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    $(function(){
+
+        //   getTasktype();
+        //上传图片
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png')}' method='post' enctype='multipart/form-data'></form>");
+//        $("#convenfileImg").wrap("<form id='up_convenlogo' action='{:U('Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png')}' method='post' enctype='multipart/form-data'></form>");
+        var start = {
+            elem: '#startTime',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#endTime',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+    });
+    var i=0;
+    //随手赚 任务模块问题的加载
+    $('#template_question_btn').click(function(){
+        var list="";
+        //console.log(i);
+        list+="<div class='taskAdd_template_questionList1'  id='question_list_"+(i+1)+"'>";
+        list+="<div class='taskAdd_template_question' style='margin-top:10px'>";
+        list+="问：<input type='text' name='conventionDataInput'  class='taskAdd_conventionDataInput' style='width:500px'/>";
+        list+="<span style='color:#14bce1;cursor:pointer;margin-left:20px;'  onclick='taskAdd_template_questionList_delete("+(i+1)+",0)'>删除</span>";
+        list+="</div>";
+        list+="<div  class='taskAdd_template_answer'>";
+        list+="答：<select class='template_answer_selected' name='template_answer_selected' id='template_answer_selected_"+(i+1)+"' onchange='changeoption(this.value,"+(i+1)+")'>";
+        list+="<option  value='0' selected>请选择</option>";
+        list+="<option  value='1'>单选</option>";
+        list+="<option  value='2'>多选</option>";
+        list+="<option  value='3'>文本</option>";
+        list+="<option  value='4'>图片</option>";
+        list+="</select>";
+        list+="</div>";
+        list+="</div>";
+        $('.taskAdd_template_questionList').append(list);
+        i++;
+
+    });
+
+    function changeoption(optionValue,i){
+        $('#template_answer_selected_'+i+'').nextAll('input').remove();
+        $('#template_answer_selected_'+i+'').next('button').remove();
+        var k = 0;
+//            console.log(optionValue);
+        if (optionValue == '2' || optionValue == '1') {
+            var list = "";
+            var listInput= "<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput' />";
+            var listbtn = "<button type='button' class='taskAdd_btn'  id='template_question_btn"+i+"'>+</button>";
+            var checkbox = "<input type='checkbox' class='answer_"+i+"_0'  value='0' name='answer' style='display:inline-block;margin-left:7px'/>";
+            //调研
+            if($('#tasktypeid').val()==4){
+                list=listInput+listbtn;
+                //答题
+            }else{
+                list=listInput+checkbox+listbtn;
+            }
+            $('#template_answer_selected_'+i+'').after(list);
+            $('#template_question_btn'+i+'').click(function () {
+                var list = "";
+                var btn="";
+                var input="<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput'/>";
+//
+                var check="<input type='checkbox' class='answer_"+i+"_"+(k+1)+"'  value='"+(k+1)+"'  name='answer' style='display:inline-block;margin-left:7px'/>";
+//
+                if($("#typetaskid")==0){
+                    btn="<input type='button' class='taskAdd_answer_input' onclick='delte_input("+k+","+i+")' id='delte_input_"+i+k+"' value='删除'/>";
+                }else{
+                    btn="<input type='button' class='taskAdd_answer_input' onclick='delte_input("+(k+1)+","+i+")' id='delte_input_"+(k+1)+i+"' value='删除'/>";
+                }
+
+                //调研
+                if($('#tasktypeid').val()==4) {
+                    list=input+btn;
+                }
+                //答题
+                else{
+                    list=input+check+btn;
+                }
+
+                $('#template_question_btn'+i+'').before(list);
+                k++;
+            });
+        }
+
+    }
+
+    function addAnswer(i,k){
+        k++;
+        var list="";
+        var checkboxs = "<input type='checkbox' class='answer_"+i+"_"+k+"'  value='' name='answer' style='display:inline-block;margin-left:7px'/>";
+        var inputs="<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput'/>";
+        var del="<input type='button' class='taskAdd_answer_input' onclick='delte_input("+k+","+i+")' id='delte_input_"+k+i+"' value='删除'/>";
+        //调研
+        if($('#tasktypeid').val()==4){
+            list=inputs+del;
+
+        }
+        //答题
+        else{
+            list=inputs+checkboxs+del;
+        }
+
+        $('#template_question_btn'+i+'').before(list);
+        $("#delte_input_"+k+i).next().remove();
+        $("#delte_input_"+k+i).after("<button type='button' class='taskAdd_btn question_btn_add' id='template_question_btn"+i+"' value='"+i+"' onclick='addAnswer("+i+","+k+")'>+</button>");
+    }
+
+    function addQuestion(k){
+        var a = $("#detailCount").val();
+        $("#detailCount").attr("value",(parseInt(a)+parseInt(1)));
+
+        var count = $("#detailCount").val();
+        var list="";
+        list+="<div class='taskAdd_template_questionList1'  id='question_list_"+(count-1)+"'>";
+        list+="<div class='taskAdd_template_question' style='margin-top:10px'>";
+        list+="问：<input type='text' name='conventionDataInput'  class='taskAdd_conventionDataInput' style='width:500px'/>";
+        list+="<span style='color:#14bce1;cursor:pointer;margin-left:20px;'  onclick='taskAdd_template_questionList_delete("+(count-1)+",0)'>删除</span>";
+        list+="</div>";
+        list+="<div  class='taskAdd_template_answer'>";
+        list+="答：<select class='template_answer_selected' name='template_answer_selected' id='template_answer_selected_"+(count-1)+"' onchange='changeoption(this.value,"+(count-1)+")'>";
+        list+="<option  value='0' selected>请选择</option>";
+        list+="<option  value='1'>单选</option>";
+        list+="<option  value='2'>多选</option>";
+        list+="<option  value='3'>文本</option>";
+        list+="<option  value='4'>图片</option>";
+        list+="</select>";
+        list+="</div>";
+        list+="</div>";
+        $('.taskAdd_template_questionList').append(list);
+        k++;
+    }
+
+    //推广赚中任务模块多选中iuput的删除
+    function  delte_input(k,i){
+        //答题
+            $('.answer_'+i+"_"+k).prev().remove();
+            $('.answer_'+i+"_"+k).remove();
+//                if($("#typetaskid")==0){
+            $('#delte_input_'+k+i).remove();
+//                }else{
+//                    $('#delte_input_'+k+i).remove();
+//                }
+
+
+    }
+
+    //删除推广任务模块
+
+    function  taskAdd_template_questionList_delete(i,indexid){
+        $('#question_list_'+i+'').remove();
+//           console.log(indexid+"==");
+        if(indexid!==0){
+            $.post(APP+"/Api/Web/delteanswer/","indexid="+indexid,function(rel){
+//                 console.log(rel.error_code+"====");
+            },"json");
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

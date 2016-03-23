@@ -1,0 +1,200 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>企业通讯录</li>
+            <li id="1" class="org_box"><span ></span>客户通讯录</li>
+        </ul>
+    </div>
+    <div class="contact_center">
+        <!--企业通讯录 -->
+        <div id="a0">
+            <div class="contact_head">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;企业通讯录</span>
+
+                <div class="column">
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <input type="search" placeholder="所属部门">
+                                <span class="fa fa-sitemap fa-lg"></span>
+                            </li>
+                            <li style="margin-left: 80px;">
+                                <label>姓名</label>
+                                <input type="search" placeholder="可模糊检索">
+                                <span class="fa fa-group fa-lg"></span>
+                            </li>
+                            <li>
+                                <label>电话</label>
+                                <input type="search" placeholder="可模糊检索">
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- 按钮-->
+                    <p style="height: 25px;width: 250px;margin: 12px 0 0 760px;">
+                        <input id="searchButton0" class="bntns1" type="button" value="搜索">
+                        <input id="resetButton0" class="bntns1" type="button" value="清空">
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="contact_list">
+                <div class="left_menu">
+
+                </div>
+                <div class="right_form">
+                    <ul>
+                        <li>部门</li>
+                        <li>姓名</li>
+                        <li>职位</li>
+                        <li style="border-right: 1px solid #e2e0e0">联系电话</li>
+                    </ul>
+                    <ul class="topnone">
+                        <li>总经办</li>
+                        <li>朱家成</li>
+                        <li>总经理</li>
+                        <li style="border-right: 1px solid #e2e0e0">188888888</li>
+                    </ul>
+                    <ul class="topnone">
+                        <li>总经办</li>
+                        <li>朱家成</li>
+                        <li>总经理</li>
+                        <li style="border-right: 1px solid #e2e0e0">188888888</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--客户通讯录-->
+        <div id="a1" style="display: none;">
+            <div class="contact_head" style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;">
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;通讯录&nbsp;>&nbsp;客户通讯录</span>
+
+                <div class="column">
+                        <span style="float: left;line-height: 30px;">筛选：</span>
+                        <ul>
+                            <li>
+                                <sapn>客户名称&nbsp;</sapn>
+                                <input style="width: 80px;height: 25px; padding-left: 15px;" type="search" placeholder="可模糊查询">
+                            </li>
+                            <li style="">
+                                <span>&nbsp;&nbsp;&nbsp;区域&nbsp;</span>
+                                <input style="width: 80px;height: 25px; padding-left: 15px;" type="search" placeholder=" 请选择" class="link">
+                                <span class="fa fa-search fa-lg" style="position: absolute;margin-left: -18px;margin-top: 8px;color: #898989;"></span>
+
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;行业&nbsp;</span>
+                                <input style="width: 80px;height: 25px; padding-left: 15px;"  type="search" placeholder=" 请选择" class="link">
+                                <span class="fa fa-search fa-lg" style="position: absolute;margin-left: -18px;margin-top: 8px;color: #898989;"></span>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;创建时间&nbsp;</span>
+                                <input id="startDate2" class="laydate-icon" value="" placeholder="起始时间" style="width: 60px;padding-left: 15px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate2" class="laydate-icon" value="" placeholder="终止时间" style="width: 60px;padding-left: 15px;margin-right: 32px;height: 25px;">
+                            </li>
+
+                        </ul>
+
+                    <!-- 按钮-->
+                    <p style="height: 25px;width: 250px;margin: 12px 0 0 746px;">
+                        <input id="searchButton1" class="bntns2" type="button" value="搜索">
+                        <input id="resetButton1" class="bntns2" type="button" value="清空">
+                        <!--<input id="exprotButton" class="bntns1" type="button" value="导出">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="contact_list">
+                <!-- 按钮-->
+                <p style="height: 25px;width: 400px;margin: 0 0 12px 560px;">
+                    <input id="" class="bntns1" type="button" value="导入">
+                    <input id="" class="bntns1" type="button" value="导出">
+                    <input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addClient()" value="新增">
+                    <input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">
+                </p>
+                <div class="title">
+                    <ul>
+                        <li style="width: 10%;"><input type="checkbox"></li>
+                        <li style="width: 35%;">客户名称</li>
+                        <li style="width: 15%;">区域</li>
+                        <li style="width: 15%;">行业</li>
+                        <li style="width: 10%;">创建人</li>
+                        <li style="width: 15%;">创建日期</li>
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <?PHP for($i=0;$i<6;$i++){?>
+                    <ul>
+                        <li style="width: 10%;"><input type="checkbox"></li>
+                        <li style="width: 35%;">杭州日思夜享数据科技有限公司</li>
+                        <li style="width: 15%;">杭州</li>
+                        <li style="width: 15%;">电子行业</li>
+                        <li style="width: 10%;">小花</li>
+                        <li style="width: 15%;">2015-9-10</li>
+                    </ul>
+                    <?PHP }?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+
+
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+
+    })
+
+//    菜单轮换点击事件
+    $(".column li").click(function () {
+        var index = $(".column li").index($(this));
+        $(this).addClass("selected").siblings().removeClass("selected");
+        $divList = $("#timeChoose").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+    })
+
+    $('#bigmenu li').click(function(){
+//        $("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    //新增客户弹窗
+    function addClient(){
+        layer.open({
+            type:2,
+            title :['新增客户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['600px', '800px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addClient'
+        });
+    }
+
+</script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>                                                        
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="alternate" media="handheld" href="#" />
+<link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>经销商详情</title>
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+ </script>
+</head>
+
+<style type="text/css">
+
+</style>
+<body>
+    <div  style="min-height:400px;">
+        <neq name="reModi" value="">
+            <volist  name="result" id="vo">
+                <eq name="vo.f_proname" value="reject">
+                    状态：驳回&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq>
+
+                <eq name="vo.f_proname" value="delay">
+                    状态：延时&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq>
+
+                <eq name="vo.f_proname" value="update">
+                    状态：更新&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq>
+
+                <eq name="vo.f_proname" value="noReview">
+                    状态：审核不通过&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq>
+
+                <eq name="vo.f_proname" value="cwReview">
+                    状态：财务审核&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq><br>
+
+                <eq name="vo.f_proname" value="review">
+                    状态：客服审核&nbsp;<span>操作人：{$vo.user.trueName}</span>&nbsp;<span>操作时间：{$vo.f_datetime}</span>&nbsp;<span>理由：{$vo.f_reason}</span>
+                </eq><br>
+            </volist>
+        <else/>
+            <span style="color: red;">该任务无相关理由信息！</span>
+        </neq>
+    </div>
+</body>
+
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+</script>
+</html>

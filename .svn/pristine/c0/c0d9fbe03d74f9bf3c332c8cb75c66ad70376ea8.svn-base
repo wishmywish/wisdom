@@ -1,0 +1,159 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <h1>随手赚</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p style="overflow:hidden; text-overflow:ellipsis;white-space:nowrap" title="{$vo.f_problemtatile}">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k},{$vo.f_type})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$vo.f_type},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p style="overflow:hidden; text-overflow:ellipsis;white-space:nowrap;">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <?php if ($vo['f_type']==1||$vo['f_type']=='1') { ?>
+                                <p>
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$ky-1}"
+                                    <?php if ($ky-1==0) { ?>
+                                    <?php echo "checked"; ?>
+                                    <?php } ?>
+                                    />
+                                    <span class="sp6" style="overflow:hidden; text-overflow:clip;white-space:nowrap;margin-top: .2em;">{$voy}</span>
+                                </p>
+                            <?php }else if ($vo['f_type']==2||$vo['f_type']=='2') { ?>
+                                <p>
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" />
+                                    <span class="sp6" style="overflow:hidden; text-overflow:clip;white-space:nowrap;margin-top: .2em;">{$voy}</span>
+                                </p>
+                            <?php } ?>
+                         </volist>
+                    </div>
+                    <div class="head_con4">
+                        <button onclick="done({$count})">提交</button>
+                    </div>
+                </div>
+            </div>
+
+         </volist>
+         <div>
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+             <input type="hidden" id="surveyOver" onclick="window.demo.done()">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+ 
+
+        $(".head_con4").hide();
+        function nextProblem(k,f_type,count){
+            $("input[name='inps"+k+"']").attr("onclick","return false;");
+            location.href=APP+"/Mobileweb/Events/surveyClass?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+
+            if (k==count) {
+                $(".head_con4").show();
+            }
+
+            if (k>count) {
+                $(".head_con4").show();
+                layer.msg("当前页是最后页");
+            }
+        }
+
+
+
+        function lastProblem(k){
+            $(".head_con4").hide();
+            location.hash="#page"+(--k);
+            if (k<1) {
+                layer.msg("当前页是第一页");
+            }
+        }
+
+        function done(count){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var serial="";
+            var answer="";
+            var allAnswer="";
+            for (var i = 1; i <= count; i++) {
+                var inpschecked=$("input[name='inps"+i+"']:checked");
+                if(inpschecked.length==1){
+                    answer=inpschecked.val();
+                    if(allAnswer==""){
+                        allAnswer=answer;
+                        serial=i;
+                    }else{
+                        allAnswer+="|"+answer;
+                        serial+="|"+i;
+                    }
+                }else{
+                    answer ="";
+                    inpschecked.each(function(){
+                        if (answer ==""){
+                            answer += $(this).val();
+                        }else{
+                            answer += "," + $(this).val();
+                        }
+                    });
+                    if(allAnswer==""){
+                        allAnswer=answer;
+                        serial=i;
+                    }else{
+                        allAnswer+="|"+answer;
+                        serial+="|"+i;
+                    }
+                }
+            }
+        
+
+            $.post(APP+"/Mobileweb/Events/doneSure",
+            "taskid="+taskid+"&allAnswer="+allAnswer+"&serial="+serial+"&userid="+userid,
+            function(data){
+                // $("#surveyOver").onclick();
+               document.getElementById("surveyOver").click();
+
+                   function connectWebViewJavascriptBridge(callback) {
+                if (window.WebViewJavascriptBridge) {
+                    callback(WebViewJavascriptBridge)
+                } else {
+                    document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                        callback(WebViewJavascriptBridge)
+                    }, false)
+                }
+            }
+            connectWebViewJavascriptBridge(function(bridge) {
+                bridge.init(function(message, responseCallback) {
+                });
+
+                var data = 'finish';
+                bridge.send(data);
+            });
+
+
+            },"json");
+            
+        }
+    </script>
+</html>

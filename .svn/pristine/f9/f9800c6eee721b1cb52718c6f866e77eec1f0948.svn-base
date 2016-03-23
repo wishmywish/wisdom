@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+/*清除默认样式*/
+body, h1, ul, li, p, img, div, dl, dd, dt, span, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*公共的样式*/
+a {
+    text-decoration: none;
+    color: #646464;
+    margin-left: 20px;
+}
+body {
+    font-family: '宋体';
+    color: #646464;
+    font-size: 14px;
+}
+.main {
+    overflow: hidden;
+    margin: 20px 20px;
+    height: 440px;
+}
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.subTitle {
+    background: #f7f7f7 none repeat scroll 0 0;
+    margin: 10px auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.subTitle  span {
+    line-height: 25px;
+}
+.content {
+    width: 100%;
+    height: 348px;
+    overflow: auto;
+}
+.lc {
+    text-align: center;
+}
+.reset {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 0 20px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #000;
+    margin: 20px 0;
+}
+.FJnotice{
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px dotted #e1e1e1;
+    line-height: 18px;
+    margin: 20px;
+    padding: 9px 10px;
+    text-align: left;
+    width: 91%;
+}
+.FJnotice a{font-size: 12px;text-decoration: underline;color: #de2e2f;margin-left: 5px;}
+</style>
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+    var bigMenuIndex = 0; //大类LI下标
+    var smallMenuIndex = 0;//小类LI下标
+</script>
+<css href="__STATIC__/css/font-awesome.min.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="title">{$notice['title']}</div>
+        <div class="subTitle">
+            <ul>
+                <span>发布人:{$notice['trueName']}</span>
+                <span>发布时间：{$notice['createDate']}</span>
+            </ul>
+            <ul>
+                <span>浏览人次:{$notice['reads']}</span>
+                <span>访问人数:{$notice['person']}</span>
+            </ul>
+        </div>
+        <div class="content">
+            {$notice['content']}
+        </div>
+    </div>
+    <notempty name="updFile">
+    <div class="FJnotice">
+        <span class="fa fa-paperclip">
+            <volist name="updFile" id="file">
+                <a onclick="doDownload('{$file.attach_file_url}');">{$file.attach_file_name}</a>&emsp;
+            </volist>
+        </span>
+    </div>
+    </notempty>
+    <div class="lc">
+        <button class="reset" onclick="doReset();">关闭</button>
+    </div>
+    <include file="Public/loadjs" />
+    <script>
+        /*点击关闭按钮*/
+        function doReset() {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+        
+        function doDownload(fileUrl) {
+            var url = APP+'/Home/Office/downloadAttachFile?fileUrl='+fileUrl;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?php
+namespace Api\Controller;
+use Think\Controller;
+class MoblieController extends Controller {
+    
+    public function getTaskInfo($task_id,$type) {
+        $t = M('task');
+        $f = "";
+        $j = array();
+        
+    }
+}

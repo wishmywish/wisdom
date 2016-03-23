@@ -1,0 +1,130 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/1/26
+ * Time: 18:28
+ */
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class HbgameController  extends  Controller
+{
+
+    //新年游戏入口APP
+    function app_gguide()
+    {
+        set_theme();
+        $this->display();
+    }
+
+    //新年游戏入口微信
+    function wechat_gguide()
+    {
+        set_theme();
+        $code=I("code");
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $restr=base64_encode($res);
+        $this->assign("info",$restr);
+        //微信用户的基本信息加密存储
+        $this->display();
+    }
+
+
+
+    //    授权信息
+    //自己点击输入手机号，玩游戏，分享给好友，
+    //好友点进去不输入手机号直接玩游戏，钱是点击链接账号的，
+    //好友给自己抢是输入手机号
+
+    function  index(){
+        $status=I("get.status");
+        if($status==1){
+            $redirect_url="/index.php/Mobileweb/Hbgame/wechat_gguide";
+            A("Wechat")->obtain_user_information($redirect_url);
+        }else if($status==2){
+            set_theme();
+            $redirect_url="/index.php/Mobileweb/Hbgame/wechat_game";
+            A("Wechat")->obtain_user_information($redirect_url);
+        }
+    }
+
+    //新年游戏APP
+    function app_game(){
+        set_theme();
+        //获取微信客户的基本信息
+        //获取用户相关信息
+        $phone=I("get.phone");
+        $info=I("get.info");
+        echo $phone;
+        echo base64_decode($info);
+        //先查看数据库信息是否玩过游戏,获取相关的信息
+        $a = array(0,0.1,0.5,0.8,1);
+        $b = array(93,3,2,1,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+        $this->assign("phone",$phone);
+        $this->assign("info",$info);
+        $this->assign("cc",json_encode($c));
+        $this->display();
+    }
+    //新年游戏微信
+    //别人帮我抢红包
+    function wechat_game(){
+        set_theme();
+        $code=I("code");
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $restr=base64_encode($res);
+        $this->assign("info",$restr);
+        $this->display();
+    }
+    //新年游戏规则
+    function app_grules(){
+        set_theme();
+        $status=I("get.v1");
+        if($status==1) {
+            $this->assign("phone", I("get.phone"));
+            $this->assign("info", I("get.info"));
+        }
+        $this->assign("status",$status);
+        $this->display();
+    }
+
+    //测试小游戏
+    function testgame(){
+        set_theme();
+        $a = array(0,0.1,0.5,0.8,1);
+        $b = array(93,3,2,1,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+        $this->assign("c",json_encode($c));
+        $this->display();
+    }
+
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+/*清除默认样式*/
+body, h1, ul, li, p, img, div, dl, dd, dt, span, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*公共的样式*/
+a {
+    text-decoration: none;
+    color: #646464;
+    margin-left: 20px;
+}
+body {
+    font-family: '宋体';
+    color: #646464;
+    font-size: 14px;
+}
+.main {
+    overflow: hidden;
+    margin: 20px 20px;
+    height: 450px;
+}
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.subTitle {
+    text-align: center;
+    margin: 10px auto 10px auto;
+}
+.lr {
+    text-align: right;
+}
+.lc {
+    text-align: center;
+}
+.reset {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 0 20px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #000;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">{$viewNotice_title}</div>
+        <div class="subTitle">
+            发布人:{$viewNotice_trueName}&nbsp;发布时间：{$viewNotice_createDate}
+        </div>
+        <div>
+            <iframe frameborder=0 scrolling="auto" height="348px" width="100%" src="{$viewNotice_content}"></iframe>
+        </div>
+        <div class="subTitle lr">浏览人次:{$viewNotice_reads}&nbsp;访问人数:{$viewNotice_person}</div>
+    </div>
+    <div class="lc">
+        <button class="reset" onclick="reset();">关闭</button>
+    </div>
+    <include file="Public/loadjs" />
+    <script>
+        /*点击关闭按钮*/
+        function reset() {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+    </script>
+</body>
+</html>

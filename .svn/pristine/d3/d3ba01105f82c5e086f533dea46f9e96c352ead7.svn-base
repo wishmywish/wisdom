@@ -1,0 +1,37 @@
+<include file="Public/home_head" title="智慧推广::资质文档管理" />
+<include file="Public/home_menu" />
+    <div class="index">
+       <div class="index_left">
+             <div class='org_box org_box_select'><span class='org_bot_cor'></span>资质文档管理</div>
+       </div>
+     <div class="index_right_bus">
+      <div class="quali_list1">
+           <div class="top1">
+                 <span>首页</span> >  <span>资质及文档管理</span>
+            </div>
+        <div class="quali_list"> 
+             <ul>
+               <li  class="quali_list_li" style="width:10%">序号</li>
+               <li  class="quali_list_li" style="width:30%">资质名称</li>
+               <li  class="quali_list_li" style="width:10%">状态</li>
+               <li  class="quali_list_li" style="width:29%">进度说明</li>
+               <li  class="quali_list_li" style="width:10%">到期时间</li>
+               <li  class="quali_list_li2"style="width:10%">操作</li>
+            </ul>
+            <div id="list1">
+             <ul>
+               <li  class="quali_list_li_1" style="width:10%"></li>
+               <li  class="quali_list_li_1" style="width:30%"></li>
+               <li  class="quali_list_li_1" style="width:10%"></li>
+               <li  class="quali_list_li_1" style="width:29%"></li>
+               <li  class="quali_list_li_1" style="width:10%"></li>
+               <li  class="quali_list_li2_1"style="width:10%"><img src=""></li>
+             </ul>
+           </div>
+        </div>
+      </div>
+ 
+    </div>
+    </body>
+</html>
+

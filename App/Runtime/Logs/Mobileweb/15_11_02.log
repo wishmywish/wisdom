@@ -1,0 +1,75 @@
+[ 2015-11-02T17:53:09+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Events/taskDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:taskDetail
+
+[ 2015-11-02T17:53:14+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Events/taskDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:taskDetail
+
+[ 2015-11-02T17:53:29+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Events/taskdeatail?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: invitationCode D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_tasktypeid`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,t_taskmtdetailedinfo.f_product,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate`,`f_filepath`,`f_filename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0130s ]
+NOTIC: [2] unlink(./App/Runtime/Temp/565a309c2ff09820a56d7da3457f2bb6.php): No such file or directory D:\wamp\www\wisdom\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [2] unlink(./App/Runtime/Temp/d86c828583c5c6160e8acfee88ba1590.php): No such file or directory D:\wamp\www\wisdom\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [8] Undefined index: ticket D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 652 行.
+NOTIC: [2] unlink(./App/Runtime/Temp/565a309c2ff09820a56d7da3457f2bb6.php): No such file or directory D:\wamp\www\wisdom\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 584 行.
+NOTIC: [8] Undefined index: invitationCode D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 584 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 587 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-02T17:54:14+08:00 ] ::1 /wisdom/Index.php/Mobileweb/Events/taskdeatail?taskid=60&type_label=business
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: invitationCode D:\wamp\www\wisdom\App\Mobileweb\Controller\IndexController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0110s ]
+SQL: SELECT `f_tid`,`f_title`,`f_tasktypeid`,`f_mtbrand`,`f_mtgoods`,t_taskmtbaseinfo.f_tradeid,`f_unitfirstAmount`,`f_unitcashdeposit`,`f_unitfranchisefee`,`f_unitotheramount`,`f_unittotalamount`,`f_unitcommission`,`f_unitpreownedgold`,`f_brandlocation`,`f_slogan`,`f_sellingpoint`,`f_targetgroup`,`f_pricelocation`,`f_competitor`,`f_competitiveedge`,`f_distributorsrequir`,`f_distributorsrate`,`f_retailoutlets`,`f_marketcost`,`f_logisticscost`,`f_channelpolicy`,t_taskmtdetailedinfo.f_note,t_taskmtdetailedinfo.f_product,`f_tradename`,`f_filename`,`f_filepath`,`f_enddate`,`f_filepath`,`f_filename` FROM `t_task` LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid LEFT JOIN t_tradetype ON t_tradetype.f_tradeID = t_taskmtbaseinfo.f_tradeid LEFT JOIN t_files ON t_files.f_id = t_task.f_fileid  WHERE `f_tid` = '60' LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [2] unlink(./App/Runtime/Temp/565a309c2ff09820a56d7da3457f2bb6.php): No such file or directory D:\wamp\www\wisdom\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 584 行.
+NOTIC: [8] Undefined index: invitationCode D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 584 行.
+NOTIC: [8] Undefined index: userid D:\wamp\www\wisdom\App\Mobileweb\Controller\EventsController.class.php 第 587 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

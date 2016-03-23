@@ -1,0 +1,126 @@
+<include file="Public/admin_head" title="管理后台" />
+<include file="Public/admin_menu" />
+        <div class="body_right">
+            <div class="body_right_home">
+                <p>尊敬的用户：</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好，欢迎使用招商平台，您现在登录的是管理员平台。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能已经开通，请使用以下的功能来完成平台的设置。如果您在使用中有什么问题，可以联系客服，谢谢。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、创建部门(<a onclick="add()">点击创建部门</a>)</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、创建员工帐号(<a>点击创建员工帐号</a>)</p>
+                <p style="text-align: right;">杭州利依享数据科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <div class="body_right_button_list">
+                    <div class="big_button body_right_button_jj"  onclick="add()">
+                        <div style="height: 12px;"></div>
+                        <div class="new_organize_ico"></div>
+                        <div class="body_right_button_wz" >创建部门</div>
+                    </div>
+                    <div class="big_button body_right_button_jj">
+                        <div style="height: 12px;"></div>
+                        <div class="new_user_ico"></div>
+                        <div class="body_right_button_wz">创建员工</div>
+                    </div>
+                    <div class="big_button body_right_button_jj">
+                        <div style="height: 12px;"></div>
+                        <div class="new_authority_ico"></div>
+                        <div class="body_right_button_wz">权限管理</div>
+                    </div>
+<!--                    <div class="big_button body_right_button_jj">
+                        <div style="height: 12px;"></div>
+                        <div class="new_companyset_ico"></div>
+                        <div class="body_right_button_wz">企业信息设置</div>
+                    </div>
+                    <div class="big_button body_right_button_jj">
+                        <div style="height: 12px;"></div>
+                        <div class="new_systemset_ico"></div>
+                        <div class="body_right_button_wz">系统设置</div>
+                    </div>
+                    <div class="big_button body_right_button_jj">
+                        <div style="height: 12px;"></div>
+                        <div class="new_info_ico"></div>
+                        <div class="body_right_button_wz">信息删除</div>
+                    </div>-->
+                </div>
+            </div>
+            
+            <div class="body_right_right">
+                <div class="right_statistics">
+                    <div class="statistics_line">
+                        <div class="statistics_wz_1">帐号使用<span style="font-weight:normal;margin-left: 16px;color:#D0D0D0;">购买数据20个</span></div>
+                        <div class="statistics_wz_line"></div>
+                        <div class="statistics_wz_2">已经使用2个<span style="margin-left: 16px;color:#0086c9;">剩余18个</span></div>
+                    </div>
+                    
+                    <div class="statistics_line">
+                        <div class="statistics_wz_1">存储空间<span style="font-weight:normal;margin-left: 16px;color:#D0D0D0;">购买2.00GB</span></div>
+                        <div class="statistics_wz_line"></div>
+                        <div class="statistics_wz_2">已经使用9.00MB<span style="margin-left: 16px;color:#0086c9;">剩余1.99GB</span></div>
+                    </div>
+                    
+                    <div class="statistics_line">
+                        <div class="statistics_wz_1">名片数量<span style="font-weight:normal;margin-left: 16px;color:#D0D0D0;">购买数据500张</span></div>
+                        <div class="statistics_wz_line"></div>
+                        <div class="statistics_wz_2">已经使用2张<span style="margin-left: 16px;color:#0086c9;">剩余488张</span></div>
+                    </div>
+                    <div class="statistics_line">
+                        <div class="statistics_wz_1">软件到期时间</div>
+                        <div class="statistics_wz_2">9999年12月31日<span style="margin-left: 16px;color:#0086c9;">剩余100000天</span></div>
+                    </div>
+                </div>
+                
+                <div class="company_info" style="color:#9fa0a0;">
+                    <div class="company_info_on">杭州利依享数据科技有限公司</div>
+                    <div class="company_info_on_ico">
+                        <div style="width:75px;">
+                            <div class="service_ico" style="float:left;"></div>
+                            <span>服务热线</span>
+                        </div>
+                        <div style="width:100px;clear: both;">0571-88888888</div>
+                    </div>
+                    <div class="company_info_on_ico">
+                        <div style="width:75px;">
+                            <div class="phone_ico" style="float:left;"></div>
+                            <span>在线咨询</span>
+                        </div>
+                        <div style="width:100px;clear: both;">QQ:888888888</div>
+                    </div>
+                    <div class="company_info_on_ico" style="height: 49px;border-top: 1px solid #eeeeee;">
+                        copyright 2015<br>APP下载 使用说明 安全声明
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+       function add(){
+           layer.open({
+        type: 1,
+        title :'创建部门',
+        area: ['600px', '360px'],
+        shadeClose: true, //点击遮罩关闭
+        content: '\<\div style="padding:20px;">\n\
+                        <div>\n\
+                             <ul>\n\
+                               <li>公司名称：<input type="text" name="comp_name"/><li>\n\
+                               <li>部门名称：<input type="text" name="depart_name"/><li>\n\
+                               \n\
+                               <li>所属部门：<input type="text" name="depart"/></li>\n\
+                             </ul>\n\
+                        </div>\n\
+                  \<\/div>'
+    });
+       }
+        
+        
+        
+    if(window.innerHeight<document.body.scrollHeight){
+        $('.body_right').css('height',document.body.scrollHeight-50);
+        $('.menu').css('height',document.body.scrollHeight-50);
+    }else
+    {
+        $('.body_right').css('height',window.innerHeight-50);
+        $('.menu').css('height',window.innerHeight-50);
+    }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class DealerController extends CommonController {
+
+    public function index()
+    {
+        set_theme();//载入主题
+
+        $this->display();
+    }
+  
+    public function showDetail()
+    {
+        set_theme();//载入主题
+        $reModi = A('Api/Web')->isTrue();//取要修改的记录数据
+//        var_dump($reModi);exit();
+//        exit;
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        
+        $this->display('index');
+    }
+
+
+    public  function  companyContact(){ //企业合同下载
+
+
+    }
+     
+}

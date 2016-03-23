@@ -1,0 +1,3 @@
+<div class="righttop">
+    <div class="showright"><span id="user_setting" class="fa fa-user">个人设置</span> <span id="user_out" class="fa fa-sign-out">退出登录</span></div>
+</div>

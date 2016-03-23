@@ -1,0 +1,589 @@
+<?php
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class EventsController extends Controller {
+//    微信公共平台appid和appsrect
+
+
+    function index(){
+        set_theme();
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+            $re = $this->getinfo($id);
+        }else {
+            $re["f_note"] = "";
+            $re["f_title"] = "";
+        }
+        //pt($re);
+        $this->assign("note",$re["f_note"]);
+        $this->assign("webtitle",$re["f_title"]);
+        $this->display();
+    }
+
+
+
+    function share(){
+        set_theme();
+        $this->assign("userid",$_GET['userid']);
+        $invitationCode = $this->getinvitationCode($_GET['userid']);
+        //echo $invitationCode;
+        //exit;
+        $this->assign('invitationCode', $invitationCode);
+        $this->display();
+    }
+
+    //商家报名
+    function apply(){
+        set_theme();
+        $this->display();
+    }
+
+    //活动
+    function activity(){
+        set_theme();
+        $this->assign("userid",$_GET['userid']);
+        $invitationCode = $this->getinvitationCode($_GET['userid']);
+        $this->assign('invitationCode', $invitationCode);
+        $this->display();
+    }
+
+    //活动2
+     function activitys(){
+         set_theme();
+         $this->display();
+      }
+    //调研类
+
+     function surveyClass(){
+         set_theme();
+         $userid=I('userid');
+         $taskid=I('taskid');
+         $re_1=M("taskdraw")->where('f_userid='.$userid." and f_taskid=".$taskid)->find();
+         if(empty($re_1)){
+            $p['f_utask_status']=2;
+            $p['f_taskid']=I('taskid');
+            $p['f_userid']=I('userid');
+            $p['f_drawdate']=time();
+            $re_2=M('taskdraw')->add($p);
+         }
+         $j=array("LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid");
+         $re=M('surveytaskdetail')->join($j)->where("f_taskid=".$taskid)->select();
+         // var_dump($re);exit();
+         $count=count($re);
+         for ($i=0; $i <$count ; $i++) { 
+             $re[$i]['f_options']=explode('|',$re[$i]['f_options']);
+         }
+         $this->assign('count',$count);
+         $this->assign('userid',$userid);
+         $this->assign('taskid',$taskid);
+         $this->assign('re',$re);
+         $this->display();
+      }
+
+    //答题类
+    function answerClass(){
+         set_theme();
+         $userid=I('userid');
+         $taskid=I('taskid');
+         $re_1=M("taskdraw")->where('f_userid='.$userid." and f_taskid=".$taskid)->find();
+         if(empty($re_1)){
+            $p['f_utask_status']=2;
+            $p['f_taskid']=I('taskid');
+            $p['f_userid']=I('userid');
+            $p['f_drawdate']=time();
+            $re_2=M('taskdraw')->add($p);
+         }
+
+         $j=array("LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid");
+         $re=M('surveytaskdetail')->join($j)->where("f_taskid=".$taskid)->select();
+         $count=count($re);
+         for ($i=0; $i <$count ; $i++) { 
+             $re[$i]['f_options']=explode('|',$re[$i]['f_options']);
+         }
+         // var_dump($re);exit();
+         $this->assign('count',$count);
+         $this->assign('userid',$userid);
+         $this->assign('taskid',$taskid);
+         $this->assign('re',$re);
+         $this->display();
+      }
+
+      //任务预览
+      function problemPreview(){
+         set_theme();
+         $userid=I('userid');
+         $taskid=I('taskid');
+         $j=array("LEFT JOIN t_task ON t_task.f_tid = t_surveytaskdetail.f_taskid");
+         $re=M('surveytaskdetail')->join($j)->where("f_taskid=".$taskid)->select();
+         $count=count($re);
+         for ($i=0; $i <$count ; $i++) { 
+             $re[$i]['f_options']=explode('|',$re[$i]['f_options']);
+         }
+         // var_dump($re);exit();
+         $this->assign('count',$count);
+         $this->assign('userid',$userid);
+         $this->assign('taskid',$taskid);
+         $this->assign('re',$re);
+         $this->display();
+      }
+
+    function userChoices(){
+          set_theme();
+          $serial=I('serial');
+          $answerInput =I('answerInput');
+          $taskid=I('taskid');
+          $userid=I('userid');
+
+          $m['f_taskid']=$taskid;
+          $m['f_userid']=$userid;
+          $m['f_serial']=$serial;
+
+          $re=M('surveyuserchoices')->where($m)->find();
+
+          $map['f_taskid']=$taskid;
+          $map['f_userid']=$userid;
+          $map['f_serial']=$serial;
+          $map['f_answer']=$answerInput;
+          $map['f_ctime']=time();
+          if ($re) {
+              M('surveyuserchoices')->where('f_id='.$re['f_id'])->save($map);
+              echo '0';
+          }else{
+              M('surveyuserchoices')->add($map);
+              echo '1';
+          }
+    }
+
+    function getUserChoices(){
+          set_theme();
+          $serial=I('serial');
+          $taskid=I('taskid');
+          $userid=I('userid');
+
+          $m['f_taskid']=$taskid;
+          $m['f_userid']=$userid;
+          $m['f_serial']=$serial;
+
+          $re=M('surveyuserchoices')->where($m)->find();
+
+          echo json_encode($re);
+
+    }
+
+    function doneSure(){
+          set_theme();
+          $trueCount=0;
+          $falseCount=0;
+          $taskid=I('taskid');
+          $userid=I('userid');
+          $count=I('count');
+          $re=M('surveyuserchoices')->where("f_taskid=".$taskid." and f_userid=".$userid)->select();
+          $re_1=M('surveytaskdetail')->where("f_taskid=".$taskid)->select();
+          for ($i=0; $i < count($re); $i++) { 
+            if ($re["$i"]["f_serial"]==$re_1["$i"]["f_serial"]){
+              if ($re["$i"]["f_answer"]==$re_1["$i"]["f_trueanswer"]) {
+                 $trueCount++;
+              }else{
+                 $falseCount++;
+              }
+            }
+          }
+
+          $re_3=M('tasksmallinfo')->where("f_taskid=".$taskid)->find();
+          // var_dump($re_3['f_eachcoin']*10*$trueCount/$count);exit();
+          $goldCount=$re_3['f_eachcoin']*10*$trueCount/$count;
+          $goldCount=round($goldCount*100)/100;
+          D('Api/Shopsheet')->add_shopsheet('task',$userid,1,1,$goldCount,$taskid,2,0);
+          D('Api/Shopsheet')->add_shopsheet('task',$userid,1,2,3,$taskid,2,0);
+
+          //修改认领状态
+          $p['f_utask_status']=3;
+          $re_2=M('taskdraw')->where('f_userid='.$userid." and f_taskid=".$taskid)->save($p);
+
+          echo json_encode($goldCount);
+
+      }
+
+      function answerCompare(){
+          $taskid=I('taskid');
+          $userid=I('userid');
+          $trueCount=0;
+          $falseCount=0;
+          $map['f_userid']=$userid;
+          $map['f_taskid']=$taskid;
+          $re=M('surveyuserchoices')->where($map)->select();
+          $re_1=M('surveytaskdetail')->where("f_taskid=".$taskid)->select();
+          for ($i=0; $i < count($re); $i++) { 
+               if ($re["$i"]["f_answer"]==$re_1["$i"]["f_trueanswer"]) {
+                   $trueCount++;
+                }else{
+                   $falseCount++;
+                }
+
+               $re["$i"]["f_answer"]=explode(",",$re["$i"]["f_answer"]);
+               for ($j=0; $j <count($re["$i"]["f_answer"]) ; $j++) { 
+                   $re["$i"]["f_answer"]["$j"]++;
+               }
+               $re["$i"]["f_answer"]=implode(",",$re["$i"]["f_answer"]);
+
+               $re_1["$i"]["f_trueanswer"]=explode(",",$re_1["$i"]["f_trueanswer"]);
+               for ($k=0; $k <count($re_1["$i"]["f_trueanswer"]) ; $k++) { 
+                   $re_1["$i"]["f_trueanswer"]["$k"]++;
+               }
+               $re_1["$i"]["f_trueanswer"]=implode(",",$re_1["$i"]["f_trueanswer"]);
+               $re["$i"]["f_userchange"]=$re_1["$i"];
+          }
+          $this->assign('re',$re);
+          $this->assign('trueCount',$trueCount);
+          $this->assign('falseCount',$falseCount);
+          $this->display();
+      }
+
+       function doneSureSurvey(){
+          set_theme();
+          $serial=I('serial');
+          $all_Answer =I('allAnswer');
+          $taskid=I('taskid');
+          $userid=I('userid');
+          // $re_3=M('tasksmallinfo')->where("f_taskid=".$taskid)->find();
+          // var_dump($re_3['f_eachcoin']*10*$trueCount/$count);exit();
+          // D('Api/Shopsheet')->add_shopsheet('task',$userid,1,1,$re_3['f_eachcoin']*10,$taskid,2,0);
+          // D('Api/Shopsheet')->add_shopsheet('task',$userid,1,2,3,$taskid,2,0);
+
+          $m['F_TASKID']=I('taskid');
+          $m['F_SUBMITUSERID']=I('userid');
+          $m['F_SUBMITDATE']=time();
+          $m['F_STATUS']=4;
+          $re=M('surveyanswer')->add($m);
+
+          if($re>0){
+            $serial_arr = explode('|', $serial);
+            $answer_arr = explode('|', $all_Answer);
+            for($i=0;$i<count($serial_arr);$i++){
+                $dataList[] = array('F_ANSWERID'=>$re,'F_SERIAL'=>$serial_arr[$i],'F_ANSWER'=>$answer_arr[$i]);
+            }
+            $re_1 = M('surveyanswerdetail')->addAll($dataList);
+
+             //修改认领状态
+            $p['f_utask_status']=1;
+            $re_2=M('taskdraw')->where('f_userid='.$userid." and f_taskid=".$taskid)->save($p);
+          }
+          echo json_encode($re_1);
+
+      }
+
+      //推荐类
+    function spreadClass(){
+         set_theme();
+         $userid=I('userid');
+         $taskid=I('taskid');
+         $re_1=M("taskdraw")->where('f_userid='.$userid." and f_taskid=".$taskid)->find();
+         if(empty($re_1)){
+            $p['f_utask_status']=2;
+            $p['f_taskid']=I('taskid');
+            $p['f_userid']=I('userid');
+            $p['f_drawdate']=time();
+            $re_2=M('taskdraw')->add($p);
+         }
+         $j=array("LEFT JOIN t_task ON t_task.f_tid = t_tasksmallinfo.f_taskid");
+         $re=M("tasksmallinfo")->join($j)->where("f_taskid=".$taskid)->find();
+         $this->assign('re',$re);
+         $this->assign('userid',$userid);
+         $this->assign('taskid',$taskid);
+         $this->display();
+      }
+
+       //推荐任务推荐
+    function spreadPreview(){
+         set_theme();
+         $userid=I('userid');
+         $taskid=I('taskid');
+         $j=array("LEFT JOIN t_task ON t_task.f_tid = t_tasksmallinfo.f_taskid");
+         $re=M("tasksmallinfo")->join($j)->where("f_taskid=".$taskid)->find();
+         $this->assign('re',$re);
+         $this->assign('userid',$userid);
+         $this->assign('taskid',$taskid);
+         $this->display();
+      }
+
+    function spreadSure(){
+      set_theme();
+      $userid=I('userid');
+      $taskid=I('taskid');
+      
+      // $re_3=M('tasksmallinfo')->where("f_taskid=".$taskid)->find();
+      // D('Api/Shopsheet')->add_shopsheet('task',$userid,1,1,$re_3['f_eachcoin']*10,$taskid,2,0);
+      // D('Api/Shopsheet')->add_shopsheet('task',$userid,1,2,3,$taskid,2,0);
+
+      $map['f_taskid']=I('taskid');
+      $map['f_userid']=I('userid');
+      $map['f_dealername']=I('dealerName');
+      $map['f_dealerphone']=I('dealerPhone');
+      $map['f_dealercompanyname']=I('dealerCompanyName');
+      $map['f_dealerindustry']=I('dealerIndustry');
+      $map['f_dealeraddress']=I('dealerAddress');
+      $map['f_dealertel']=I('dealerTel');
+      $map['f_dealerfax']=I('dealerFax');
+      // var_dump($map);exit();
+      $re=M('recommenddealerinfo')->add($map);
+      if($re>0){
+           //修改认领状态
+          $p['f_utask_status']=1;
+          $re_1=M('taskdraw')->where('f_userid='.$userid." and f_taskid=".$taskid)->save($p);
+        }
+      echo json_encode($re_1);
+    }
+
+     function slideFile(){
+          set_theme();
+          $this->display();
+      }
+      
+
+    function getinfo($id){
+        $re = M("ad")->where("f_id=".$id)->find();
+        return $re;
+    }
+
+    //认领红包
+    function redpacket(){
+        $reToken = I('post.token',0);
+        $retime = I('post.time',0);
+        if(A("Api/Fun")->verifytoken($reToken,$retime)){
+
+            $rCount = M('newuserclaim')->where("f_userid=".I('post.userid',0))->count();
+
+            $map['f_userid'] = I('post.userid',0);
+            $map['f_newmobile'] = I('post.newmobile',0);
+            if($rCount>25){
+                $map['f_eachcoin'] = 0;
+            }else{
+                $map['f_eachcoin'] = 2;
+            }
+            $map['f_neweachcoin'] = 5;
+            $map['f_datetime'] = time();
+            $re_j = A("Api/Jhttp")->getUserinfo($map['f_newmobile']);
+            $arr = json_decode($re_j,true);
+            //pt($arr);
+            if($arr["resCode"]=="000000"){
+                echo '-2';
+            }elseif($arr["resCode"]=="100003"){//不存在
+                $count = M('newuserclaim')->where("f_newmobile=".$map['f_newmobile'])->count();
+                if($count==0){
+                    M('newuserclaim')->add($map);
+                }else{
+                    echo '-1';
+                }
+            }else{
+                echo '-3';
+            }
+        }else{
+            echo '-4';
+        }
+    }
+
+    function getinvitationCode($userid){
+        $re = A("Api/Jhttp")->getUserinfo2($userid);
+        //pt($re);
+        $arr = json_decode($re,true);
+        return $arr["list"]["invitationCode"];
+    }
+
+    //微信任务列表分享页面
+    function  taskshare(){
+        set_theme();
+        //第三步：签名  字段noncestr随机字符串, 有效的jsapi_ticket,时间戳timestamp  url(当前页面)
+        //对所有字段拼接成字串，用sha1加密
+        //签名用的noncestr和timestamp必须与wx.config中的nonceStr和timestamp相同。
+        //签名用的url必须是调用JS接口页面的完整URL。
+
+        $timstamp=time();
+        $noncestr=md5(time().mt_rand(0,1000));
+        $jsapi_ticket=$this->get_jsapi_ticket();
+        $url="jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timstamp."&url=".C('WebUrl')."index.php/Mobileweb/Events/taskshare";
+//        echo $url;
+        $signature=sha1($url);
+//        echo $signature;
+        $this->assign("appid",C("appid"));
+        $this->assign("timstamp",$timstamp);
+        $this->assign("noncestr",$noncestr);
+        $this->assign("signature",$signature);
+        $this->display();
+    }
+
+    //微信任务详情页面
+    function  taskdeatail(){
+        set_theme();
+        $in_arr = $_GET;
+        $re =A("Mobileweb/Index")->getTaskInfo();
+        $timstamp=time();
+        $noncestr=md5(time().mt_rand(0,1000));
+        $jsapi_ticket=$this->get_jsapi_ticket();
+        $url="jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timstamp."&url=".C('WebUrl')."index.php/Mobileweb/Events/taskdeatail?taskid=".$in_arr['taskid']."&type_label=".$in_arr['type_label'];
+        //签名
+        $signature=sha1($url);
+        $this->assign("appid",C("appid"));
+        $this->assign("timstamp",$timstamp);
+        $this->assign("noncestr",$noncestr);
+        $this->assign("signature",$signature);
+        $this->assign('taskinfo', $re);
+        $this->assign('weburl',C('WebUrl'));
+        $this->display();
+    }
+
+    //微信参与二维码
+    function  erweima(){
+        set_theme();
+        $timstamp=time();
+        $noncestr=md5(time().mt_rand(0,1000));
+        $jsapi_ticket=$this->get_jsapi_ticket();
+        $url="jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timstamp."&url=".C('WebUrl')."index.php/Mobileweb/Events/erweima";
+        $signature=sha1($url);
+        $this->assign("appid",C("appid"));
+        $this->assign("timstamp",$timstamp);
+        $this->assign("noncestr",$noncestr);
+        $this->assign("signature",$signature);
+        $this->display();
+    }
+
+    // 第一步：微信分享获取相关信息 $token
+    function  get_wei_token(){
+        S("access_token",null);
+//     S()缓存函数，
+        $token=S("access_token");
+//     第三方用户唯一凭证
+//     第三方用户唯一凭证密钥，即appsecre
+        if(!$token){
+            $res=file_get_contents("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".C("appid")."&secret=".C("secret"));
+            $res=json_decode($res,true);
+//            pt($res);
+            $token=$res["access_token"];
+            S("access_token",$token,3600);
+        }
+//        echo $token;
+        return  $token;
+
+    }
+
+    //第二步：jsapi_ticket调用微信js接口的临时票据，提供access_token来获取，开发者必须在自己的服务全局缓存
+
+    function  get_jsapi_ticket(){
+       S("wx_ticket",null);
+        $ticket="";
+        do{
+            $ticket=S("wx_ticket");
+            if(!empty($ticket)){
+                break;
+            }
+            $token=S("access_token");
+            if(empty($token)){
+                $this->get_wei_token();
+            }
+            $url2="https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$token."&type=jsapi";
+            $res=file_get_contents($url2);
+            $res=json_decode($res,true);
+            $ticket=$res["ticket"];
+            //需要缓存ticket
+            S("wx_ticket",$ticket,3600);
+
+        }while(0);
+
+        return $ticket;
+      }
+
+
+
+    //使用微信服务号进行网页授权获取用户信息
+
+     function   get_wei_userinfo(){
+//         公共号的唯一标示
+         $appid=C("appid");
+//         授权后重定向的回调链接地址，请使用urlencode对链接进行处理
+         $redirect_uri=urlencode(C('WebUrl')."index.php/Mobileweb/Events/phonePageBind");
+         $url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$appid."&redirect_uri=".$redirect_uri."&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+         //跳转到扫码页
+         echo "<script>location.href='".$url."'</script>";
+     }
+
+
+    //进入手机绑紧界面
+    //绑定进入taskshare页面未绑定进入填手机号密码验证码，界面
+    function  phonePageBind(){
+        set_theme();
+        S("user_access_token",null);
+        //获取授权code
+        $code=I("code");
+        //获取网页授权access_token
+        $url_access_token="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C('appid')."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        $res=file_get_contents($url_access_token);
+        $res=json_decode($res,true);
+        //缓存存取用户网页授权的access_token
+        S($res["user_access_token"],3600);
+        $unionid=$res["unionid"];
+        //判断微信用户是否跟小宝平台绑定
+        //调用java接口判断是否绑定
+        $auth_result = A("Api/Jhttp")->weixinLogin($unionid);
+        $auth_array = json_decode($auth_result,true);
+        $resCode = $auth_array['resCode'];
+        if( $resCode == '000000' ){  //已经绑定过了
+//            echo "<br/>我已经绑定过了";
+            $userid=$auth_array["list"]["userId"];
+            echo $userid;
+            $this->redirect("Mobileweb/Events/taskshare",array('userid'=>$userid));
+        }else{  //没有绑定跳转到注册页面
+//            echo "<br/>我没有绑定过";
+//            echo $unionid;
+            $this->assign("unionid",$unionid);
+
+            $this->display();
+        }
+
+    }
+
+
+//    //填写基本信息进行绑定
+    function  regist_bind(){
+        header("Content-Type:text/html;charset=utf-8");
+        $mobile = I('mobile');
+        $password = I('password');
+        $unionid = I('unionid');
+//         echo  $mobile."=".$password;
+
+        $login_result = A("Api/Jhttp")->login($mobile,$password);
+        $login_arr = json_decode($login_result,true);
+//        dump($login_arr);
+
+        if( $login_arr['resCode'] != '000000' ){  //没有注册，先注册
+            $reg_result= A("Api/Jhttp")->zsreguser($mobile,$password);
+            if( $reg_result['resCode'] != '000000' ){  //注册没成功，返回出错
+                $out_arr['error_code'] = '100000';
+                $out_arr['error_text'] = '注册失败';
+                echo json_encode($out_arr);
+                return  false;
+            }
+        }
+        //绑定
+        $add_result = A("Api/Jhttp")->addWeixin($unionid,$mobile,$password);
+        if($add_result['resCode']!='000000'){
+            $out_arr['error_code'] = '110000';
+            $out_arr['error_text'] = 'unicode失效';
+            echo json_encode($out_arr);
+            return false;
+        }else{
+            $out_arr['error_code'] = '000000';
+            $out_arr['error_text'] = '绑定成功';
+            $out_arr['userid']=$add_result['list']['userId'];
+            echo json_encode($out_arr);
+               return false;
+        }
+
+//        dump($add_result);
+
+    }
+
+
+
+
+}

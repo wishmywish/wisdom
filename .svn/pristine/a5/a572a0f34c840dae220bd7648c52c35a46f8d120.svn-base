@@ -1,0 +1,154 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2015/8/20
+ * Time: 9:46
+ */
+
+namespace Api\Controller;
+use Think\Controller;
+
+class EasemobController extends Controller
+{
+    /**
+     * 注册环信用户(支持批量)
+     * 单个:{"username":"jliu","password":"123456"}
+     * 批量:[{"username":"u1", "password":"p1"}, {"username":"u2", "password":"p2"}]
+     * 使用开放注册
+     */
+    public function easemob_reg_user($body){
+        $url = C("EasemobUrl")."users";
+        //头信息
+        $header = array('Accept:application/json','Content-Type:application/json;charset=utf-8');
+        $header_json = json_encode($header);
+
+        //BODY
+        $body_json = json_encode($body);
+
+        $return = $this->easemob_curl($url,$body_json,$header_json);
+
+        return $return;
+    }
+
+
+    /**
+     * 重置IM用户密码
+     */
+    public function easemob_modi_password($body,$username){
+        $url = C("EasemobUrl")."users/".$username;
+        $access_token = $this->easemob_token_time();
+        //头信息
+        $header = array('Accept:application/json','Content-Type:application/json;charset=utf-8','Authorization:Bearer '.$access_token);
+        $header_json = json_encode($header);
+
+        //BODY
+        $body_json = json_encode($body);
+
+        $return = $this->easemob_curl($url,$body_json,$header_json,'PUT');
+
+        return $return;
+    }
+
+    /**
+     * 修改用户昵称
+     */
+    public function easemob_modi_nickname($body,$username){
+        $url = C("EasemobUrl")."users/".$username."/password";
+        $access_token = $this->easemob_token_time();
+        //头信息
+        $header = array('Accept:application/json','Content-Type:application/json;charset=utf-8','Authorization:Bearer '.$access_token);
+        $header_json = json_encode($header);
+
+        //BODY
+        $body_json = json_encode($body);
+
+        $return = $this->easemob_curl($url,$body_json,$header_json,'PUT');
+
+        return $return;
+    }
+
+
+    /**
+     * 使用环信TOKEN，并做过期检查
+     */
+    public function easemob_token_time(){
+        $nowtime = time();
+        $token_time = 604800;
+        $result = M("easemob_token")->where("app='wisdom'")->find();
+        $ceiltime = $nowtime-$result['uptime'];
+//        echo $ceiltime;
+//        exit;
+        if($ceiltime>=$token_time){
+            //如果超时，则重新获取TOKEN
+            return $this->easemob_token();
+        }else{
+            return $result['access_token'];
+        }
+    }
+
+    /**
+     * 获取环信TOKEN
+     * @return json 环信token
+     */
+    public function easemob_token(){
+        $url = C("EasemobUrl")."token";
+        //头信息
+        $header = array('Accept:application/json','Content-Type:application/json;charset=utf-8');
+        $header_json = json_encode($header);
+        $body = array("grant_type"=>"client_credentials","client_id"=>"YXA6msWfgEVJEeWtT8O7B-bkvg","client_secret"=>"YXA6gNlbBA-jtqWWdsa7fwp8BwuESqc");
+        $body_json = json_encode($body);
+        $return = $this->easemob_curl($url,$body_json,$header_json);
+        //获取TOKEN后，更新到数据暂存，有效期为7天，每7天更新一次
+        $arr = json_decode($return,true);
+        $arr["uptime"] = time();
+        var_dump($arr);
+        M("easemob_token")->where("app='wisdom'")->save($arr);
+        return $arr['access_token'];//返回token
+    }
+
+    /**
+     * 添加好友关系
+     * 传入city和发起人的phone
+     */
+    public function easemob_friend(){
+        $result = $this->mpublic->getList('hsh_user','',array("city"=>$this->in_arr['city']));
+        //$this->PT($result);
+        //echo $result[0]['phone'];
+        //$this->out_arr["data"] = $result;
+        for($i=0;$i<=count($result)-1;$i++){
+            $this->easemob_token_time();//判断TOKEN是否过期
+            $url = $this->easemob_url."user/".$this->in_arr['phone']."/contacts/users/".$result[$i]['phone'];
+            $header = array ();
+            $header [] = 'Content-Type:Content-Type: application/json';
+            $header [] = 'Authorization: Bearer '.$this->token;
+            //echo $url;
+            //$this->PT($header);
+            $this->easemob_curl($url,'',$header,2);
+            //echo $this->resp;
+        }
+    }
+
+    /**
+     * CURL提交数据
+     */
+    private function easemob_curl($url,$body='',$header='',$method='post'){
+        //CURL
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        if($method == 'post'){
+            curl_setopt($ch,CURLOPT_POST,1);
+            curl_setopt($ch,CURLOPT_POSTFIELDS,$body);
+        }else{
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
+            curl_setopt($ch,CURLOPT_POSTFIELDS,$body);
+        }
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return $result;
+    }
+}

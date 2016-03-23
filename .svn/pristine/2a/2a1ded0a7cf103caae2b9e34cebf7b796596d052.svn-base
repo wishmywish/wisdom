@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>扫描小宝二维码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--&lt;!&ndash;标准mui.css&ndash;&gt;-->
+    <!--<script type="text/javascript" src="http://wisdom.51lick.com//Public/static/jquery-1.11.2.min.js"></script>-->
+
+    <link rel="stylesheet" href="__CSS__/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__CSS__/app.css"/>
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <link href="__CSS__/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!--微信相关配置-->
+    <script type="text/javascript">
+        wx.config({
+            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            debug:true,
+            // 必填，公众号的唯一标识
+            appId:"{$appid}",
+            // 必填，生成签名的时间戳
+            timestamp:"{$timstamp}",
+            // 必填，生成签名的随机串
+            nonceStr:"{$noncestr}",
+            // 必填，签名，见附录1
+            signature:"{$signature}",
+            // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            jsApiList:["hideOptionMenu"]
+        });
+
+        wx.ready(function(){
+            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，
+            // config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，
+            // 则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，
+            // 则可以直接调用，不需要放在ready函数中。
+            wx.hideOptionMenu();
+        });
+
+
+        wx.error(function (res) {
+            //打印错误消息。及把 debug:false,设置为debug:ture就可以直接在网页上看到弹出的错误提示
+            alert(res.errMsg);
+        });
+    </script>
+
+
+
+    <style>
+        html,body{
+            background-color:#FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="mui-bar mui-bar-nav">
+    <a  class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#FFFFFF"></a>
+    <h1 class="mui-title"  id="title" style="color:#FFFFFF">扫描二维码</h1>
+</div>
+<div class="mui-content-padded" style="padding-top:45px">
+    <div style="margin-top: 70px;text-align: center;">
+        <h5 style="margin-bottom:20px;">请扫描二维码下载小宝APP进行参与活动。</h5>
+        <img style="width: 250px;height: 250px;" src="__IMG__/xiazai.png">
+    </div>
+
+</div>
+<script src="__JS__/mui.min.js"></script>
+</body>
+
+</html>
+

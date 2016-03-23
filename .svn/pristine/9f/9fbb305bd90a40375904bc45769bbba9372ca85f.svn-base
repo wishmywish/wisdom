@@ -1,0 +1,17 @@
+<include file="Public/head" title="招商APP管理平台" />
+<body>
+<div style="margin-top: 20px;"></div>
+<form action="{:U('curl_chitousi')}" method="post">
+    <dl>
+        <dd><label><input type="text" name="word" value=""></label> </dd>
+        <dd>
+            <input type="radio" name="length" checked="checked" value="5">五言
+            <input type="radio" name="length" value="7">七言
+        </dd>
+        <dd><input type="radio" name="cang" checked="checked" value="0">藏头诗<input type="radio" name="cang" value="1">藏尾诗<br></dd>
+        <dd><input type="radio" name="type" checked="checked" value="0">选词优先<input type="radio" name="type" value="1">押韵优先<br></dd>
+        <dd><input type="submit" value="开始生成"></dd>
+    </dl>
+</form>
+</body>
+</html>

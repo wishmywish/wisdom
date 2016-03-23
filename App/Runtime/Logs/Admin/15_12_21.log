@@ -1,0 +1,353 @@
+[ 2015-12-21T15:33:13+08:00 ] ::1 /wisdom/index.php/Admin/Companyset/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11271 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9698 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9699 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9700 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9701 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9702 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-12-21T15:33:16+08:00 ] ::1 /wisdom/index.php/Admin/Group/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11271 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant departId - assumed 'departId' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 207 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 212 行.
+NOTIC: [8] Use of undefined constant isOmsUser - assumed 'isOmsUser' D:\wamp\www\wisdom\App\Runtime\Cache\Admin\5c930ed5983955faddef17bf18733928.php 第 213 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.190011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T17:23:22+08:00 ] ::1 /wisdom/Index.php/Admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T17:23:36+08:00 ] ::1 /wisdom/Index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Login
+

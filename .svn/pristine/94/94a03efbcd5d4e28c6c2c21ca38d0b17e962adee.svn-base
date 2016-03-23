@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main ul{ margin-top:20px; width: 100%;}
+        .main ul li{ float: left; margin-right: 25px;}
+        .main span{float: left;line-height: 25px;}
+        .main input{height:25px;width:200px;margin-left: 7px;}
+        .main select{float: right;height:28px;width:200px;margin-left: 7px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+    <ul class="fl">
+        <li><span>姓名:&nbsp;{$userDetail.name}</span></li>
+    </ul>
+    <ul class="fl">
+        <li><span>性别:&nbsp;<if condition="$userDetail.sex eq 0">女<elseif condition="$userDetail.sex eq 1"/>男</if></span></li>
+    </ul>
+    <ul class="fl">
+        <li><span>部门:&nbsp;{$userDetail.deptName}</span></li>
+    </ul>
+    <ul class="fl">
+        <li><span>职位:&nbsp;{$userDetail.position}</span></li>
+    </ul>
+    <ul class="fl">
+        <li><span>电话:&nbsp;{$userDetail.mobile}</span></li>
+    </ul>
+    <ul class="fl">
+        <li><span>邮箱:&nbsp;{$userDetail.email}</span></li>
+    </ul>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+</script>
+</body>
+</html>

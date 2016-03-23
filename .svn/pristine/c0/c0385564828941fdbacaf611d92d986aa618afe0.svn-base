@@ -1,0 +1,20 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+<div class="content_right">
+    <div class="cons_top">
+        <h4 class="cons_tab fl">
+            <span class="current" style="background: none;">新增</span>
+        </h4>
+        <p class="p1 rg"><a href="#">首页</a>&nbsp;>&nbsp;<a href="#">任务管理</a>&nbsp;>&nbsp;<a href="#">智能管理</a><a href="#">&nbsp;>&nbsp;新增</a></p>
+    </div>
+    <div class="cont">
+
+    </div>
+</div>
+
+<!--页面内容 end-->
+</div>
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>

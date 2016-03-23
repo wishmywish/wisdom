@@ -1,0 +1,118 @@
+<?php
+/**
+ * Description of GroupController
+ *
+ * @author Administrator
+ */
+namespace Admin\Controller;
+use Think\Controller;
+class GroupController extends Controller {
+    //put your code here
+    function index(){
+        set_theme();
+        
+        
+        $deptListArr = array();	//树状部门关系
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $result = A("Api/Jhttp")->getDeparts($companyId);	//公司下已有部门列表
+        $deptListArr = json_decode($result,true);
+        //        	dump($deptListArr['list']);
+        
+        //获取顶级目录的部门
+        foreach( $deptListArr['list'] as $key=>$vo ){        	
+        	if( $vo['parentId'] == 0 ){
+        		$deptListArr_tree[] = $vo;	//顶级部门
+        	}
+        }       
+      
+        
+        //获取对应的子级部门
+        foreach( $deptListArr['list'] as $key=>$vo ){
+        	foreach( $deptListArr_tree as $k=>$v){
+        		if( $vo['parentId'] == $v['departId'] ){
+        			$deptListArr_tree[$k]['child'][] = $vo;
+        		}
+        	}
+        }  
+
+//         var_dump($deptListArr_tree);exit;
+        //第一个部门下的所属员工
+        $first_dept_id = empty($deptListArr_tree[0]['departId'])?0:$deptListArr_tree[0]['departId'];
+        $firt_dept_user = A("Api/jHttp")->getUsersByDepart(1,0,5);
+        $firt_dept_user_arr = json_decode($firt_dept_user,true);
+        
+	
+//         var_dump($first_dept_id);
+//         var_dump($firt_dept_user_arr['list']);exit;
+        $this->assign('first_dept_user_arr',$firt_dept_user_arr['list']);
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->display();
+    }
+    //新建员工
+     function addStaff(){
+        set_theme();
+        $deptListArr = array();	//树状部门关系
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $result = A("Api/Jhttp")->getDeparts($companyId);	//公司下已有部门列表
+        $deptListArr = json_decode($result,true);
+        //        	dump($deptListArr['list']);
+        
+        //获取顶级目录的部门
+        foreach( $deptListArr['list'] as $key=>$vo ){
+        	if( $vo['parentId'] == 0 ){
+        		$deptListArr_tree[] = $vo;	//顶级部门
+        	}
+        }
+        
+        
+        //获取对应的子级部门
+        foreach( $deptListArr['list'] as $key=>$vo ){
+        	foreach( $deptListArr_tree as $k=>$v){
+        		if( $vo['parentId'] == $v['departId'] ){
+        			$deptListArr_tree[$k]['child'][] = $vo;
+        		}
+        	}
+        }        
+
+        $this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->display();
+    }
+    
+    //新建部门
+    function  addDept(){
+        set_theme();
+        $deptListArr = array();	//树状部门关系
+        $companyId=cookie("companyId");
+        $companyName=cookie("companyName");
+        $result = A("Api/Jhttp")->getDeparts($companyId);	//公司下已有部门列表
+       	$deptListArr = json_decode($result,true);
+//        	dump($deptListArr['list']);
+
+       	//获取顶级目录的部门
+        foreach( $deptListArr['list'] as $key=>$vo ){
+        	if( $vo['parentId'] == 0 ){
+	        	$deptListArr_tree[] = $vo;	//顶级部门          		
+        	}
+        }
+        
+        //获取对应的子级部门
+        foreach( $deptListArr['list'] as $key=>$vo ){
+	        foreach( $deptListArr_tree as $k=>$v){
+	        	if( $vo['parentId'] == $v['departId'] ){
+	        		$deptListArr_tree[$k]['child'][] = $vo;	        		
+	        	}
+	        }
+        }
+        
+//         dump($deptListArr_tree);exit;
+        
+       	$this->assign('deptListArr_tree',$deptListArr_tree);
+        $this->assign("companyId", $companyId);
+        $this->assign("companyName", $companyName);
+        $this->display();
+    }
+    
+}

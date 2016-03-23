@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <css href="__CSS__/jquery.mobile-1.4.5.min.css" />
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+
+        }
+        body {
+            background-image:url(__IMG__/bg.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+        }
+        .g_head img{
+            width: 100%;
+        }
+        .content{
+            width: 85%;
+            border: 2px solid #000;
+            margin: 4% 5%;
+            min-height: 200px;
+            background: #fde7c0;
+            padding: 2%;
+        }
+        .content .box{
+            /*background-image:url(__IMG__/bb.jpg);*/
+            /*!*padding: 20px;*!*/
+            /*background-repeat: no-repeat;*/
+            width: 99%;
+            border: 2px dotted #000;
+            min-height: 85%;
+
+        }
+        .box .title{
+            text-align: center;
+            width: 100%;
+            height: 5%;
+            position: relative;
+        }
+        .title span{
+            display: block;
+            /* margin-top: -23px; */
+            width: 100%;
+            position: absolute;
+            top: 60%;
+            color: #fff;
+        }
+        .content  .box  .rules{
+            width: 90%;
+            /* border: 1px solid; */
+            font-size: 12px;
+            margin: 10% 3%;
+            line-height: 25px;
+            padding: 2%;
+        }
+        .h1{
+            font-weight: bold;
+            font-size: 14px;
+            margin: 2% 0;
+        }
+
+
+    </style>
+    <js href="__STATIC__/jquery-1.11.2.min.js"/>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    </script>
+
+</head>
+
+<body>
+<div data-role="page">
+    <div role="main" class="ui-content" style="padding: 0">
+        <!--<div class="g_head"><img src="__IMG__/g_head.jpg"></div>-->
+        <div class="content">
+            <div class="box">
+                <p class="title">
+                    <img src="__IMG__/g_rules.png" style=" width: 106%;  margin: 0 -3%;">
+                    <span>活动规则</span>
+                </p>
+                <div class="rules">
+                    <p class="h1">活动说明：</p>
+                    <p>活动时间：2月7日至2月14日；</p>
+                    <p>每天每个用户可以参与1次抢红包活动；</p>
+                    <p>每天可获得2个好友帮忙的红包金额；</p>
+                    <p>活动期间所得红包可登入小宝招商APP提现，也可以在APP平台兑换商品。</p>
+                    <p class="h1">商品兑换规则：</p>
+                    <p>登入小宝招商APP>>>进入“城会玩”>>>选择商品和数量>>>立即兑换>>>等待开奖</p>
+                    <p>每件商品参考市场价平均分成固定份数，每份对应一个专属“众筹码”</p>
+                    <p>同一件商品份数可购买多次，或一次购买多份，份数越多，获得商品机率越大。</p>
+                    <p>当某一商品所有份数全部售出后，平台计算出最终获奖的唯一“众筹码”，拥有该码者即可获得此商品。</p>
+                    <p class="h1">开奖须知：</p>
+                    <p>开奖计算方法：1.兑奖码售卖完后第二天开奖，2.按照开奖日当天的纳斯达克指数收盘点数为基数（去掉小数点），除以商品指定售卖份数后取余数，余数加1000000，即为“众筹中奖码”；PS：小宝招商将于2019年赴美国纳斯达克上市；</p>
+                    <p>例如：售卖份数7000分，开奖日当天的纳斯达克指数收盘点数为3536.91，则353691除以7000余数为3691加上1000000，则众筹中奖码为3691+1000000=1003691。</p>
+                    <p class="h1">商品领取：</p>
+                    <p>活动结束后，详细中奖结果将在APP兑换页面及小宝招商公众号（xbzs0751）公布；</p>
+                    <p>活动结束后，小宝招商客服人员会及时联系您领取奖品。</p>
+                    <p style="  margin-top: 10%;">我们欢迎每一位用户参加，我们感谢每一位热心用户的参与；</p>
+                    <p>但我们拒绝一切通过非正常手段获取活动奖励！</p>
+                    <p>在法律范围内，本活动最终解释权归小宝招商所有。</p>
+
+                    <p>
+                        <a style="float: right;" href="javascript:void(0)"  onclick="javascript:history.back(-1);">返回</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><!-- /content -->
+</div>
+</body>
+</html>

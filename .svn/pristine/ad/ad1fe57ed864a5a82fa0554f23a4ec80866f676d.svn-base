@@ -1,0 +1,137 @@
+<include file="Public/head" />
+<style type="text/css">
+.cause_note label{
+    padding-left:45px;
+}
+.cause_note span{
+    padding-left:45px;
+}
+</style>
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+            <div class="cause">
+                <div class="title">::卸载情况::</div>
+                <div class="cause_note">
+                    <label for="uninstall">是否已经卸载<span>是({$reModi.isUninstallNum})(总数:{$reModi.isUninstall})</span><span>否({$reModi.noUninstallNum})(总数:{$reModi.noUninstall})</span></label>
+                </div>
+            </div>
+            <div class="cause">
+                <div class="title">::了解渠道::</div>
+                <div class="cause_note" >
+                    <label for="ditch_1">朋友推荐({$reModi.ditchNum1})(总数:{$reModi.ditch1})</label>
+                    <label for="ditch_2">微信朋友圈({$reModi.ditchNum2})(总数:{$reModi.ditch2})</label>
+                    <label for="ditch_3">大型会议({$reModi.ditchNum3})(总数:{$reModi.ditch3})</label>
+                    <label for="ditch_4">合作商家({$reModi.ditchNum4})(总数:{$reModi.ditch4})</label>
+                    <label for="ditch_5">招聘网站({$reModi.ditchNum5})(总数:{$reModi.ditch5})</label>
+                    <label for="ditch_6">网上随便搜索({$reModi.ditchNum6})(总数:{$reModi.ditch6})</label>
+                    <label for="ditch_7">不记得({$reModi.ditchNum7})(总数:{$reModi.ditch7})</label>
+                    <label for="ditch_8">其他({$reModi.ditchNum8})(总数:{$reModi.ditch8})</label>
+                </div>
+            </div>
+            <div class="cause">
+                <div class="title">::所属行业::</div>
+                <div class="cause_note">
+                    <label >未选择({$reModi.industryNum33})(总数:{$reModi.industry33})</label>
+                    <label >食品({$reModi.industryNum1})(总数:{$reModi.industry1})</label>
+                    <label>酒业({$reModi.industryNum2})(总数:{$reModi.industry2})</label>
+                    <label>餐饮({$reModi.industryNum3})(总数:{$reModi.industry3})</label>
+                    <label>汽车用品({$reModi.industryNum4})(总数:{$reModi.industry4})</label>
+                    <label>计算机({$reModi.industryNum5})(总数:{$reModi.industry5})</label>
+                    <label>广告({$reModi.industryNum6})(总数:{$reModi.industry6})</label>
+                    <label>教育({$reModi.industryNum7})(总数:{$reModi.industry7})</label>
+                    <label>服装({$reModi.industryNum8})(总数:{$reModi.industry8})</label>
+                    <label >保险({$reModi.industryNum9})(总数:{$reModi.industry9})</label>
+                    <label>美容({$reModi.industryNum10})(总数:{$reModi.industry10})</label>
+                    <label>媒体({$reModi.industryNum11})(总数:{$reModi.industry11})</label>
+                    <label>零售({$reModi.industryNum12})(总数:{$reModi.industry12})</label>
+                    <label>农业({$reModi.industryNum13})(总数:{$reModi.industry13})</label>
+                    <label>旅游({$reModi.industryNum14})(总数:{$reModi.industry14})</label>
+                    <label>医疗服务({$reModi.industryNum15})(总数:{$reModi.industry15})</label>
+                    <label>银行({$reModi.industryNum16})(总数:{$reModi.industry16})</label>
+                    <label >金融({$reModi.industryNum17})(总数:{$reModi.industry17})</label>
+                    <label>机械制造({$reModi.industryNum18})(总数:{$reModi.industry18})</label>
+                    <label>建筑({$reModi.industryNum19})(总数:{$reModi.industry19})</label>
+                    <label>会计({$reModi.industryNum20})(总数:{$reModi.industry20})</label>
+                    <label>服务({$reModi.industryNum21})(总数:{$reModi.industry21})</label>
+                    <label>艺术({$reModi.industryNum22})(总数:{$reModi.industry22})</label>
+                    <label>设计({$reModi.industryNum23})(总数:{$reModi.industry23})</label>
+                    <label >保健({$reModi.industryNum24})(总数:{$reModi.industry24})</label>
+                    <label>能源({$reModi.industryNum25})(总数:{$reModi.industry25})</label>
+                    <label>电讯({$reModi.industryNum26})(总数:{$reModi.industry26})</label>
+                    <label>司机({$reModi.industryNum27})(总数:{$reModi.industry27})</label>
+                    <label>律师({$reModi.industryNum28})(总数:{$reModi.industry28})</label>
+                    <label>出版({$reModi.industryNum29})(总数:{$reModi.industry29})</label>
+                    <label>公益组织({$reModi.industryNum30})(总数:{$reModi.industry30})</label>
+                    <label>互联网({$reModi.industryNum31})(总数:{$reModi.industry31})</label>                    
+                    <label>其他({$reModi.industryNum32})(总数:{$reModi.industry32})</label>                    
+
+                </div>
+            </div>
+            <div class="cause">
+                <div class="title">::从事岗位::</div>
+                <div class="cause_note">
+                    <label for="job_1">企业主({$reModi.jobNum1})(总数:{$reModi.job1})</label>
+                    <label for="job_2">业务员({$reModi.jobNum2})(总数:{$reModi.job2})</label>
+                    <label for="job_3">其他({$reModi.jobNum3})(总数:{$reModi.job3})</label>
+                </div>
+            </div>
+            <div class="cause">
+                <div class="title">::参与任务::</div>
+                <div class="cause_note">
+                    <label for="task">是否参与过任务<span>是({$reModi.isTaskNum})(总数:{$reModi.isTask})</span><span>否({$reModi.noTaskNum})(总数:{$reModi.noTask})</span></label>
+                </div>
+            </div>
+            <div class="cause">
+                <div class="title">::所在区域::</div>
+                <div class="cause_note">
+                    <label >未选择({$reModi.areaNum35})(总数:{$reModi.area35})</label>
+                    <label >北京市({$reModi.areaNum1})(总数:{$reModi.area1})</label>
+                    <label>天津市({$reModi.areaNum2})(总数:{$reModi.area2})</label>
+                    <label>上海市({$reModi.areaNum3})(总数:{$reModi.area3})</label>
+                    <label>重庆市({$reModi.areaNum4})(总数:{$reModi.area4})</label>
+                    <label>河北省({$reModi.areaNum5})(总数:{$reModi.area5})</label>
+                    <label>河南省({$reModi.areaNum6})(总数:{$reModi.area6})</label>
+                    <label>云南省({$reModi.areaNum7})(总数:{$reModi.area7})</label>
+                    <label>辽宁省({$reModi.areaNum8})(总数:{$reModi.area8})</label>
+                    <label >黑龙江({$reModi.areaNum9})(总数:{$reModi.area9})</label>
+                    <label>湖南省({$reModi.areaNum10})(总数:{$reModi.area10})</label>
+                    <label>安徽省({$reModi.areaNum11})(总数:{$reModi.area11})</label>
+                    <label>山东省({$reModi.areaNum12})(总数:{$reModi.area12})</label>
+                    <label>新疆维吾尔({$reModi.areaNum13})(总数:{$reModi.area13})</label>
+                    <label>江苏省({$reModi.areaNum14})(总数:{$reModi.area14})</label>
+                    <label>浙江省({$reModi.areaNum15})(总数:{$reModi.area15})</label>
+                    <label>江西省({$reModi.areaNum16})(总数:{$reModi.area16})</label>
+                    <label >湖北省({$reModi.areaNum17})(总数:{$reModi.area17})</label>
+                    <label>广西壮族({$reModi.areaNum18})(总数:{$reModi.area18})</label>
+                    <label>甘肃省({$reModi.areaNum19})(总数:{$reModi.area19})</label>
+                    <label>山西省({$reModi.areaNum20})(总数:{$reModi.area20})</label>
+                    <label>内蒙古({$reModi.areaNum22})(总数:{$reModi.area21})</label>
+                    <label>陕西省({$reModi.areaNum22})(总数:{$reModi.area22})</label>
+                    <label>吉林省({$reModi.areaNum23})(总数:{$reModi.area23})</label>
+                    <label>福建省({$reModi.areaNum24})(总数:{$reModi.area24})</label>
+                    <label >贵州省({$reModi.areaNum25})(总数:{$reModi.area25})</label>
+                    <label>广东省({$reModi.areaNum26})(总数:{$reModi.area26})</label>
+                    <label>青海省({$reModi.areaNum27})(总数:{$reModi.area27})</label>
+                    <label>西藏({$reModi.areaNum28})(总数:{$reModi.area28})</label>
+                    <label>四川省({$reModi.areaNum29})(总数:{$reModi.area29})</label>
+                    <label>宁夏回族({$reModi.areaNum30})(总数:{$reModi.area3})</label>
+                    <label>海南省({$reModi.areaNum32})(总数:{$reModi.area31})</label>
+                    <label>台湾省({$reModi.areaNum32})(总数:{$reModi.area32})</label>                    
+                    <label>香港特别行政区({$reModi.areaNum33})(总数:{$reModi.area33})</label>  
+                    <label>澳门特别行政区({$reModi.areaNum34})(总数:{$reModi.area34})</label>  
+                </div>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

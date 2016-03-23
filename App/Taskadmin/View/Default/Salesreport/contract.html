@@ -1,0 +1,94 @@
+<include file="Public/head" title="合同报表" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+                <div class="righttop"></div>
+                <div class="breadlist">首页 / 合同报表</div>
+
+                <div class="tabli">
+                    <ul id="tabli_Ad" style="">
+                        <li value="1"  id="messages" ><a href="__APP__/Taskadmin/Salesreport/index" style="text-decoration:none;font-size:16px;">活跃度报表</a></li>
+                        <li value="3" class='selected' id="activities" ><a href="__APP__/Taskadmin/Salesreport/contract" style="text-decoration:none;font-size:16px;">合同报表</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab">
+                    <div class='selecttab'>
+
+                        <div class='tabwidth'>
+                        查询时间：<input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                                    至
+                                 <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+                        </div>
+
+                        <div class='tabwidth'>项目类型：
+<!--                             <select  name="status" id="status" style="width:200px;">
+                                <option  value="0" selected>请选择</option>
+                                <option  value="1">用户情况</option>
+                                <option  value="2">任务情况</option>
+                                <option  value="3">日任务接单数情况</option>
+                                <option  value="4">日任务完成单数情况</option>
+                            </select> -->
+                        </div>  
+
+                        <div>
+                            <div class='tabwidth' id='seach'><span>搜素</span></div>
+                            <div class='tabwidth' id='empty'><span>清空</span></div>
+                        </div>
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+    $(function(){      
+        //获取列表信息
+        //plist_AllCompany();
+    });
+       var start = {
+            elem: '#startTime',
+            format: 'YYYY-MM-DD',
+            max: '2099-06-16', //最大日期
+            choose: function(datas){
+                 end.min = datas; //开始日选好后，重置结束日的最小日期
+                 end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+       var end = {
+            elem: '#endTime',
+            format: 'YYYY-MM-DD',
+        };
+        laydate(start);
+        laydate(end);
+
+        $("#empty").click(function(){
+             $("#status").val("0");
+             $("#startTime").val("");
+             $("#endTime").val("");
+        });
+
+        $("#seach").click(function(){
+            var  startTime=$("#startTime").val();
+            var  endTime=$("#endTime").val();
+            var  status=$("#status").val();
+            if(startTime==""||endTime==""){
+                layer.msg("请选择查询时间",{icon:8});
+               return false;
+            }
+            if(startTime>endTime){
+                layer.msg("起始时间不能超过终止时间",{icon:8});
+               return false;
+            }
+            if(status==0){
+                layer.msg("请选择项目",{icon:8});
+               return false;
+            }
+
+            // $.     
+        });
+
+    </script>
+</html>

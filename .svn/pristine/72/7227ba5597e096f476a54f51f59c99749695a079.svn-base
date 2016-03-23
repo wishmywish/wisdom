@@ -1,0 +1,17 @@
+<include file="Public/head" title="活动与广告" />
+<body>
+    <ul>
+        <li>代理商</li>
+        <li>下载数</li>
+        <li>打开数</li>
+    </ul>
+    <div id="list">
+        <ul>
+            <li>代理商</li>
+            <li>下载数</li>
+            <li>打开数</li>
+        </ul>
+    </div>
+</body>
+<include file="Public/loadjs" />
+</html>

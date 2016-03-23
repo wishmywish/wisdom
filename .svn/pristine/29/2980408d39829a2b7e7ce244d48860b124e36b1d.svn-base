@@ -1,0 +1,85 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'><span class='org_bot_cor'></span>公司公告</div>
+    </div>
+    <div class="notice_center">
+        <!--输入框-->
+        <div class="notice_head">
+				<span style="display: inline-block;">首页&nbsp;>&nbsp;公告&nbsp;>&nbsp;新增公告</span>
+
+        </div>
+        <!--列表-->
+        <div class="notice_list">
+              <div class="titleAdd">
+                   公告详情
+              </div>
+              <div class="contentListAdd">
+                  <div>
+                      <span>公告主题</span>
+                      <input style="width: 180px;" type="text">
+                  </div>
+                  <div>
+                      <span>所属栏目</span>
+                      <select style="width: 180px;height: 25px;"  name="" id="">
+                          <option>--请选择--</option>
+                          <option>公司公告</option>
+                      </select>
+                  </div>
+                  <div>
+                      <span>下达范围</span>
+                      <input style="width: 180px;"  type="text">
+                  </div>
+                  <div>
+                      <span>公告内容</span><br>
+                      <textarea style="width: 600px;height: 250px;margin:-16px 0 0 70px;"></textarea>
+                  </div>
+                  <div>
+                      <span>紧急程度</span>
+                      <input style="height:auto;" type="radio" checked="checked" >
+                      普通
+                      <input style="height: auto;" type="radio">
+                      紧急
+                  </div>
+                  <div>
+                      <span>是否置顶</span>
+                      <input style="height: auto;" type="radio" checked="checked" >
+                      置顶
+                      <input style="height: auto;" type="radio">
+                      非置顶
+                  </div>
+
+                  <div>
+                      <span>附件</span>
+                      <input class="bntns" type="button" value="上传附件">
+                  </div>
+
+              </div>
+            <div class="notice_btn">
+                <input class="bntns" value="提交">
+                <input class="bntns" style="background: #fafafa;color: #595758;" value="取消">
+            </div>
+
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+
+        })
+
+
+
+</script>
+    </body>
+</html>

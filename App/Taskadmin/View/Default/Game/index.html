@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏设置</title>
+    <style>
+        ul{list-style: none;margin:0;padding:0;}
+        body{color:#7f7f80;font-size: 12px;}
+        li{line-height: 30px; height: 60px;}
+    </style>
+</head>
+<body>
+    <p style="font-size: 14px;color:red;">游戏设置</p>
+    <ul>
+        <li>
+            游戏金币：(需要出现的金币值,如：0,0.1,0.2,0.5,0.8,1)<br><input type="text" id="f_gold" value="{$re.f_gold}" style="width: 300px;">
+        </li>
+        <li>
+            游戏概率：(对应金币在100次中出现的次数,如：90,4,2,2,1,1)<br><input type="text" id="f_gl" value="{$re.f_gl}" style="width: 300px;">
+        </li>
+        <li>
+            游戏开关：(关闭游戏后，将不能玩)<br><input type="checkbox" id="f_status" <eq name="re.f_status" value="1">checked</eq>><label for="f_status">是否开启游戏</label>
+        </li>
+        <li>
+            <input type="hidden" id="f_id" value="{$re.f_id}">
+            <button id="submit" style="width: 100px;">确定</button>
+        </li>
+    </ul>
+    <p style="font-size: 14px;color:red;">统计数据</p>
+    <ul>
+        <li>
+            参于人数：<span>{$tj.p_count}</span>人 发放金币<span>{$tj.gold_sum}</span>
+        </li>
+    </ul>
+</body>
+<js href="__STATIC__/jquery-1.11.2.min.js" />
+<script>
+$("#submit").click(function(){
+    var f_gold = $("#f_gold").val();
+    var f_gl = $("#f_gl").val();
+    var f_status = 0;
+    if($("#f_status").is(':checked')){
+        f_status = 1;
+    }else{
+        f_status = 0;
+    }
+    var param = "f_gold="+f_gold+"&f_gl="+f_gl+"&f_status="+f_status;
+    $.post("{:U('Game/inpost')}",param,function(){
+        location.reload();
+    });
+});
+</script>
+</html>

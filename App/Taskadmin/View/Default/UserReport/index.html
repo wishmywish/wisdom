@@ -1,0 +1,232 @@
+<include file="Public/head" title="注册用户及活跃度统计" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../../Public/Taskadmin/Default/css/css-table.css" />
+<script type="text/javascript" src="../../../Public/Taskadmin/Default/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="../../../Public/Taskadmin/Default/js/style-table.js"></script>
+
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 / 注册用户及活跃度统计</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='<eq name="classtype" value="1">selected</eq>' id="messages" style="    width: 143px;"><a href="__APP__/Taskadmin/UserReport/index" style="text-decoration:none;">注册用户及活跃度统计</a></li>
+                        <li value="2" class='<eq name="classtype" value="2">selected</eq>' id="tubiao" style="    width: 195px;"><a href="__APP__/Taskadmin/UserReport/tubiao" style="text-decoration:none;">注册用户及活跃度统计图表</a></li>
+                    </ul>
+                    <div class="action_chart">
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+                    <input type="hidden" id="date" value="{$endTime}">
+                </div>
+
+                <div class="chartlist">
+                    <div class="taskchart" style="height: 460px;">
+                        <div class="taskchart_b" style="height: 460px;    width: 100%;">
+                            <div class="taskhead"><span style="margin-left:20px;">注册用户及活跃度统计</span></div>
+                            <div class="tchart" id="travel">
+								<table>
+								    <thead>    
+								    	<tr>
+								            <th scope="col" rowspan="2">项目</th>
+								            <th scope="col" colspan="{$count}">时间</th>
+								        </tr>
+								        
+								        <tr><!-- 时间-->
+								    		<volist name="f_month" id="vo1">
+									            <th>{$vo1}</th>
+									        </volist>
+<!-- 								            <th scope="col">7月</th>
+								            <th scope="col">8月</th>
+								            <th scope="col">9月</th>
+								            <th scope="col">10月</th>
+								            <th scope="col">11月</th>
+								            <th scope="col">12月</th> -->
+								        </tr>        
+								    </thead>
+								    
+								    <tbody>
+								    	<tr>
+								    		<th scope="row">注册数累计</th>
+								    		<volist name="f_regcount" id="vo1">
+									            <td>{$vo1}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">DAU日活</th>
+								    		<volist name="f_dayactivecount" id="vo2">
+									            <td>{$vo2}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">WAU周活</th>
+								    		<volist name="f_weekactivecount" id="vo3">
+									            <td>{$vo3}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">MAU月活</th>
+								    		<volist name="f_monthactivecount" id="vo4">
+									            <td>{$vo4}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">月存活率</th>
+								    		<volist name="f_monthretentionrate" id="vo5">
+									            <td>{$vo5}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">平均每日打开次数</th>
+								    		<volist name="f_dayopenaverage" id="vo6">
+									            <td>{$vo6}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">平均每次使用时长</th>
+								    		<volist name="f_onceuserduration" id="vo7">
+									            <td>{$vo7}</td>
+									        </volist>
+								        </tr>
+								        
+								        <tr>
+								        	<th scope="row">平均每次访问页数</th>
+								    		<volist name="f_onceaccesspagenumber" id="vo8">
+									            <td>{$vo8}</td>
+									        </volist>
+								        </tr>								        
+								    </tbody>
+
+								</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM',
+        min: '2015-07-01 00:00:00', //最小日期
+        max: '2015-12-31 23:59:59', //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM',
+        min: '2015-07-01 00:00:00', //最小日期
+        max: laydate.now(), //最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+
+    $("#startTime").val('2015-07');
+    $("#endTime").val($("#date").val());
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+
+        if(startTime==""||endTime==""){
+            layer.msg("请选择查询时间",{icon:8});
+           return false;
+        }
+        if(startTime>endTime){
+            layer.msg("起始时间不能超过终止时间",{icon:8});
+           return false;
+        }
+
+		$.post(APP + "/Api/Web/userReports", "startTime=" + startTime+"&endTime="+endTime, function (v) {
+            if (v.result === '000000') {
+                $("#travel").empty();
+    		    var list = "";
+			    $.each(v.re,function(i,v){
+                    list += "<table>";
+			        list += "<thead>";
+			        list += "<tr>";
+			        list += "<th scope='col' rowspan='2'>项目</th>";
+			        list += "<th scope='col' colspan='6'>时间</th>";
+			        list += "</tr>";
+			        list += "<tr>";
+			        list += "<th scope='col'>"+v.f_month+"</th>";
+			        list += "</tr>";
+			        list += "</thead>";
+			        list += "<tbody>";
+			        list += "<tr>";
+			        list += "<th scope='row'>注册数累计</th>";
+			        list += "<td>"+v.f_regcount+"</td>";
+			        list += "</tr>";
+			        list += "<tr>";
+			        list += "<th scope='row'>DAU日活</th>";
+			        list += "<td>"+v.f_dayactivecount+"</td>";
+					list += "</tr>";		        
+			        list += "<tr>";
+			        list += "<th scope='row'>WAU周活</th>";
+			        list += "<td>"+v.f_weekactivecount+"</td>";
+					list += "</tr>";
+			        list += "<tr>";
+			        list += "<th scope='row'>MAU月活</th>";
+			        list += "<td>"+v.f_monthactivecount+"</td>";
+					list += "</tr>";
+			        list += "<tr>";
+			        list += "<th scope='row'>月存活率</th>";
+			        list += "<td>"+v.f_monthretentionrate+"</td>";
+					list += "</tr>";								        
+			        list += "<tr>";
+			        list += "<th scope='row'>平均每日打开次数</th>";
+			        list += "<td>"+v.f_dayopenaverage+"</td>";
+					list += "</tr>";	
+			        list += "<tr>";
+			        list += "<th scope='row'>平均每次使用时长</th>";
+			        list += "<td>"+v.f_onceuserduration+"</td>";
+					list += "</tr>";
+			        list += "<tr>";
+			        list += "<th scope='row'>平均每次访问页数</th>";
+			        list += "<td>"+v.f_onceaccesspagenumber+"</td>";
+					list += "</tr>";
+                    list += " </tbody>";
+					list += " </table>";
+			    });
+			    $('#travel').append(list);
+            } else {
+                layer.msg('查询失败', {'icon': 8});
+                return false;
+            }
+        }, 'json');
+
+    });
+        
+    </script>
+</html>

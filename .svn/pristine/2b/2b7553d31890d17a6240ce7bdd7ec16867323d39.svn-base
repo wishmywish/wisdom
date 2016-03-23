@@ -1,0 +1,155 @@
+<include file="Public/head" title="招商APP管理平台::任务审核" />
+<style type="text/css">   
+.list {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+}
+
+.listinfo {   
+    padding-top:10px;
+    float: left;
+    line-height: 40px;
+    width:18%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px #888888 solid;
+}   
+
+.listinfo1 {   
+    float: right;
+    line-height: 40px;
+    width: 78%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px #888888 solid;
+    overflow: hidden;
+} 
+
+.listinfo2 {   
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+} 
+
+.checkBtn{
+    margin: 430px 0 20px -90px;
+    width: 90px;
+    height: 25px;
+}
+
+.page2{
+    margin: -45px 0 0px 75px;
+    overflow: hidden;
+    width:100%;
+}
+
+</style> 
+<script language="JavaScript">
+    function responseMouseEvent(obj,type)
+    {
+        if(type==1){
+            obj.style.backgroundColor = "#6699CC"
+        }else if(type==2){
+            obj.style.backgroundColor = "#FFFFFF"
+        } 
+    }
+
+    function responseClickEvent(obj)
+    {
+
+        if(obj.children[0].checked==true)
+            { 
+                obj.children[0].checked = false;
+                obj.style.backgroundColor = "#FFFFFF" 
+                obj.onmouseover = function(){responseMouseEvent(obj,1);};
+                obj.onmouseout = function(){responseMouseEvent(obj,2);};
+                $('.listinfo2').empty();
+        }else{
+
+                var taskid = $("input[name='pubTaskId']:checked");
+
+                if(taskid.length===0){
+                    obj.children[0].checked = true;
+                    obj.style.backgroundColor = "#DFD027";
+                    obj.onmouseover = null;
+                    obj.onmouseout = null;
+                }else{
+                    layer.msg("只能查看一条记录，请先将上条数据取消查看",{'icon':8});
+                    return false;
+                }
+
+                plist_dealer(obj.children[0].value);
+        }
+    }
+
+ </script>
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="breadlist">首页 / 任务审核</div>
+                <div class="tabli">
+                    <ul id="tabli_bid" style="margin-left:19px;">
+                        <li value="1" class='selected'>智能选标</li>
+                        <li value="2">手动选标</li>
+                        <li value="3">已选中</li>
+                    </ul>
+
+                    <ul class="action">
+                        <li id="bid" value="1">审核</li>
+                    </ul>
+                </div>
+                <div class="list" >
+
+                    <div class='listinfo1'>
+                        <ul>
+                            <li style='width:15%;'>选择</li>
+                                <li style='width:15%;'>序号</li>
+                                <li style='width:15%;'>分数</li>
+                                <li style='width:20%;'>业务员名称</li>
+                                <li style='width:35%;'>经销商名称</li>
+                        </ul>
+                        <div class='listinfo2'></div>
+                        <div class="page"></div>
+                    </div>
+
+                    <div style="overflow: hidden;">
+                        <ul style="margin-left:20px;">
+                            <li id="tabid" value="1"><input name="searchTname" id="searchTname" value="" placeholder="请输入任务名称" style="height: 40px;width: 299px;"><input type="hidden" name="searchTid" id="searchTid" value="0"></li>
+                        </ul>
+
+                        <div style="clear:both;"></div>
+                        <div class='listinfo' style="margin-left:20px;width: 299px;    ">任务列表</div>
+                        <button  id="checkBtn" class="checkBtn"  onClick="showDetail()" >查看任务详情</button>
+                    </div>
+                    <div class="page2"></div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+    $(function(){
+        
+        
+        //获取列表信息
+        plist_publish();
+    });
+    
+    //查找任务
+    $("#searchTname").bigAutocomplete({width:300,
+        url:"{:U('Taskadmin/Fun/searchTname')}",
+        callback:function(data){
+            // console.log(data);
+            $('#searchTid').val(data.result);
+            plist_dealer(data.result);
+        }
+    });
+
+    </script>
+</html>

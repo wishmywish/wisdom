@@ -1,0 +1,2723 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <!--个人信息-->
+        <div class="index_left_pro" style="height: 131px;">
+            <div class="pro_img">
+                <img style="height: 50px;width: 60px;" src="{$headlogo}">
+            </div>
+            <div class="pro_info">
+                <ul style="text-align: left;">
+                    <li style="line-height: 25px; font-size: 16px; font-weight: bold;padding-bottom: 5px;">
+                        <?php echo  empty(cookie("nickName"))?session("mobile"):cookie("nickName"); ?>
+                    </li>
+                    <li style="  margin: 20px 0 0 -65px; line-height: 25px;text-align: center;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;" title="{$viewUserDetail_deptName}">{$viewUserDetail_deptName}</li>
+                    <li style="  margin: 0px 0 0 -65px; line-height: 25px;text-align: center;">{$viewUserDetail_mobile}</li>
+                </ul>
+            </div>
+        </div>
+        <!--快捷导航-->
+        <div class="index_left_url">
+            <div class="left_url">
+                我发起的 <span id="myMessageCount"><a onclick="goLink(1);">{$messageCount_myMessageCount}</a></span>
+            </div>
+            <div class="left_url">
+                @我的 <span id="atMyMessageCount"><a onclick="goLink(2);">{$messageCount_atMyMessageCount}</a></span>
+            </div>
+            <div class="left_url">
+                待处理的 <span id="processWait"><a onclick="goLink(3);">{$processWait_count}</a></span>
+            </div>
+            <div class="left_url">
+                已处理的 <span id="processApproval"><a onclick="goLink(4);">{$processApproval_count}</a></span>
+            </div>
+        </div>
+        <!--任务记录--------二期开发-------->
+        <div class="index_left_count">
+            <div class="index_left_count_1" style="float: left;"><p style="margin-top: 10px;">超期任务</p><p style="font-size: 25px;">0</p></div>
+            <div class="index_left_count_1" style="float: right;"><p style="margin-top: 10px;">未完成任务</p><p style="font-size: 25px;">0</p></div>
+            <div class="index_left_count_2"><p style="padding-top:  10px;">待处理流程</p><p style="font-size: 25px;">0</p></div>
+        </div>
+        <!--积分榜-->
+        <div class="index_left_scoreboard" style="display: block;">
+            <div class="index_left_scoreboard_title">
+                <div class="index_left_scoreboard_title_ico"><i class="fa fa-trophy fa-fw fa-lg rg"></i></div>
+                <div class="index_left_scoreboard_title_name">积分榜</div>
+            </div>
+            <div class="index_left_scoreboard_list">
+                <?PHP for($i=0;$i<6;$i++){?>
+                <ul>
+                    <li style="width: 45px;font-size: 25px;font-weight: bold;text-align: right;padding-right: 15px;"><?PHP echo $i+1?></li>
+                    <li style="width: 85px;border-bottom: 1px solid #e6e6e6;padding-left: 15px;">罗青钦</li>
+                    <li style="width: 23px;border-bottom: 1px solid #e6e6e6;color:#f6736b;">4</li>
+                </ul>
+                <?PHP }?>
+            </div>
+        </div>
+    </div>
+    <div class="index_center">
+        <!--输入框-->
+        <div class="index_from">
+            <div class="index_from_button">
+                <ul>
+                    <li class="active">
+                        <span class="fa-stack fa-lg">
+                            <i  style="color: #fff;" class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa  fa-comments fa-2x  fa-fw fa-stack-1x "></i>
+                        </span>
+                        <span>&nbsp;消息</span>
+                    </li>
+                    <!-- 二期开发-->
+                    <!--<li>-->
+                        <!--<span class="fa-stack fa-lg">-->
+                            <!--<i  style="color: #fff;" class="fa fa-circle-o fa-stack-2x"></i>-->
+                            <!--<i class="fa fa-tasks fa-fw fa-2x fa-stack-1x"></i>-->
+                        <!--</span>-->
+                        <!--<span>&nbsp;任务</span>-->
+                    <!--</li>-->
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i  style="color: #fff;" class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-edit fa-fw fa-2x fa-stack-1x"></i>
+                        </span>
+                        <span>&nbsp;日志</span>
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i  class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-rmb fa-fw fa-2x fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span>&nbsp;报销</span>
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i  style="color: #fff;" class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-clock-o fa-fw fa-2x fa-stack-1x"></i>
+                        </span>
+                        <span>&nbsp;请假</span>
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i  style="color: #fff;" class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-plane fa-fw fa-2x fa-stack-1x"></i>
+                        </span>
+                        <span>&nbsp;出差</span>
+                    </li>
+                    <li>
+                        <span class="fa-stack fa-lg">
+                            <i  class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-usd fa-fw fa-lg fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span>&nbsp;费用</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="contentList">
+                <!-- 消息-->
+                <div id="contentList1" class="index_from_text_task" style="display: block">
+                    <form id="form1">
+                        <div class="index_from_text">
+                            <textarea id="content" name="content" placeholder="请输入消息内容"></textarea>
+                        </div>
+                        <div class="index_bottom_button"  style="margin-bottom: 8px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile8').click();"></li>
+                            </ul>
+                            <ul style="margin-bottom: 35px;">
+                                <span class="showUpFile" id="showUpFile1" ></span>
+                            </ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+                            <ul >
+                                <li style="margin-left: 17px;cursor: pointer;margin-top: -36px;" class="fa fa-at fa-fw fa-lg" onclick="selectMessageUsers();"></li>
+                            </ul>
+                            <ul style="  margin-top: -36px;">
+                                <span class="showUpFile" id="messageUserList"></span>
+                            </ul>
+                            <ul style="margin:-25px 0 0 1px;">
+                            <span style="margin-left: 324px;width: 380px;height: 25px;line-height: 25px;display: block;color: #898989">发送到：
+                            <input  style="height: 25px;margin-right: 16px;width: 230px;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;" type="text" placeholder="    请选择范围" id="deptNames" name="deptNames" onclick="selectDeptNames();">
+                            <span style="position: absolute;margin-left: -43px;margin-top: 6px;" class="fa fa-search fa-lg" onclick="selectDeptNames();"></span>
+                            <button class="submit_btn" type="button" onclick="saveMessage();">提交</button>
+                            </span>
+                            </ul>
+                        </div>
+
+
+                        <!--<div class="index_bottom_button">-->
+                            <!--<ul style="">-->
+                                <!--<li style="margin-left: 60px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile8').click();"></li>-->
+                            <!--</ul>-->
+                            <!--<ul style="margin-left: 110px;">-->
+                                <!--<span class="showUpFile1" disabled="disabled" id="showUpFile1"></span>-->
+                            <!--</ul>-->
+                            <!--<p style="color: #f47469;float: right;height: 25px;margin-right: 15px;">*只能上传jpg/png/gif格式的图片</p>-->
+                            <!--<ul style="">-->
+                                <!--<li style="margin-left: 60px;cursor: pointer;" class="fa fa-at fa-fw fa-lg" onclick="selectMessageUsers();"></li>-->
+                            <!--</ul>-->
+                            <!--<ul style="margin-left: 109px;margin-top: 47px;">-->
+                                <!--<span class="showUpFile1" disabled="disabled" id="messageUserList"></span>-->
+                            <!--</ul>-->
+                            <!--<ul>-->
+                            <!--<span style="margin-left: 324px;width: 380px;height: 25px;line-height: 25px;display: block;color: #898989">发送到：-->
+                                <!--<input  style="height: 25px;margin-right: 16px;width: 230px;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;" type="text" placeholder="    请选择范围" id="deptNames" name="deptNames" onclick="selectDeptNames();">-->
+                                <!--<span style="position: absolute;margin-left: -43px;margin-top: 6px;" class="fa fa-search fa-lg" onclick="selectDeptNames();"></span>-->
+                                <!--<button class="submit_btn" type="button" onclick="saveMessage();">提交</button>-->
+                            <!--</span>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+
+                        <input style="width: 560px;height: 100px;overflow:scroll; " type="hidden" id="messageUserIds" name="userIds" value="" />
+                        <input type="hidden" id="messageUserNames" name="userNames" value="" />
+                        <input type="hidden" id="deptIds" name="deptIds" value="" >
+                        <input type="hidden" id="messageReturnUrl" name="returnUrl" value="" />
+                    </form>
+                    <form style="display:none;" id="upfileForm1" action="{:U('Api/Upfile/upF/type/4')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile8" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+                <!--任务--><!-- 二期开发-->
+                <!--<div id="contentList2" class="index_from_text_task" style="display: none">-->
+                    <!--<div class="index_from_text">-->
+                        <!--<textarea name="" placeholder="请输入任务内容"></textarea>-->
+                    <!--</div>-->
+                    <!--<div style="margin-top: 24px;margin-bottom: 3px;">-->
+                        <!--<ul>-->
+                            <!--<span>任务执行人</span>-->
+                            <!--<input style="width: 83%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="+任务执行人">-->
+                        <!--</ul>-->
+                        <!--<ul>-->
+                            <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;起始时间</span>-->
+                            <!--<input id="startDate2" class="laydate-icon" value="" placeholder="起始时间" style="width: 155px;margin-right:28px;padding-left: 15px;height:25px;">-->
+                            <!--<span>终止时间</span>-->
+                            <!--<input id="endDate2" class="laydate-icon" value="" placeholder="终止时间" style="width: 155px;padding-left: 15px;margin-right: 32px;height: 25px;">-->
+                            <!--<input type="checkbox">-->
+                            <!--<span style="text-align: center">&nbsp;&nbsp;全天</span>-->
+                        <!--</ul>-->
+                        <!--<ul>-->
+                            <!--<span style="color: #14bce1;" id="options">&nbsp;&nbsp;&nbsp;&nbsp;高级选项&nbsp;&nbsp;<i style="cursor: pointer;" class="fa fa-sort-desc fa-fw fa-2x" onclick="unfold()"></i></span>-->
+
+                        <!--</ul>-->
+                        <!--<div id="upflod">-->
+                            <!--<ul>-->
+                                <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提醒</span>-->
+                                <!--<select style="width: 150px;height: 25px;color: #898989;padding-left: 15px;">-->
+                                    <!--<option>无</option>-->
+                                    <!--<option>有</option>-->
+                                <!--</select>-->
+                            <!--</ul>-->
+                            <!--<ul>-->
+                                <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;关联项目</span>-->
+                                <!--<input type="search" placeholder=" 请选择范围" class="link">-->
+                                <!--<span class="fa fa-search fa-lg" style="position: absolute;margin-left: -43px;margin-top: 8px;color: #898989;"></span>-->
+                                <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;关联客户</span>-->
+                                <!--<input type="search" placeholder=" 请选择范围" class="link">-->
+                                <!--<span class="fa fa-search fa-lg" style="position: absolute;margin-left: -43px;margin-top: 8px;color: #898989;"></span>-->
+                                <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;关联商机</span>-->
+                                <!--<input type="search" placeholder=" 请选择范围" class="link">-->
+                                <!--<span class="fa fa-search fa-lg" style="position: absolute;margin-left: -43px;margin-top: 8px;color: #898989;"></span>-->
+                            <!--</ul>-->
+                            <!--<ul>-->
+                                <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优先级</span>-->
+                                <!--<select style="width: 70px;height: 25px;color: #898989;padding-left: 15px;">-->
+                                    <!--<option value="">高</option>-->
+                                    <!--<option value="">中</option>-->
+                                    <!--<option value="">低</option>-->
+                                <!--</select>-->
+                                <!--<span style="margin-left: 67px;padding-right: 5px;">工期（天）</span>-->
+                                <!--<input style="height: 25px;" type="text">-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">-->
+                        <!--<ul>-->
+                            <!--<li style="margin-left: 18px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg"></li>-->
+                            <!--&lt;!&ndash;<li class="fa fa-at fa-fw fa-lg"></li>&ndash;&gt;-->
+                    <!--<span style="margin-left: 505px;width: 200px;height: 25px;line-height: 25px;display: block;color: #898989">-->
+                        <!--<input type="checkbox" style="margin-right: 5px;"><span>短信通知</span>-->
+                        <!--&lt;!&ndash;<input  style="height: 23px;margin-right: 16px;width: 230px;" type="search" placeholder="    请选择范围">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span style="position: absolute;margin-left: -43px;margin-top: 6px;" class="fa fa-search fa-lg"></span>&ndash;&gt;-->
+                        <!--<button class="submit_btn" type="button">提交</button>-->
+                    <!--</span>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--日志-->
+                <div id="contentList3" class="index_from_text_task" style="display: none">
+                    <form id="form3">
+                        <div class="index_from_text">
+                            <textarea id="reportContent" name="reportContent" placeholder="请输入日志内容"></textarea>
+                        </div>
+                        <div style="margin: 24px 0 5px;">
+                            <ul>
+                                <!--<span>任务执行人</span>-->
+                                <!--<input style="width: 83%;padding-left: 15px;line-height: 25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="+任务执行人">-->
+                                <li style="margin-top:10px" >
+                                    <input type="radio" id="dailyRecord" name="reportType" value="1" checked="checked"/><span style="margin-right:10px">日报</span>
+                                    <input type="radio" id="weeklyRecord"  name="reportType" value="2" /><span  style="margin-right:10px">周报</span>
+                                    <input type="radio" id="monthlyRecord"  name="reportType" value="3" /><span style="margin-right:10px">月报</span>
+                                </li>
+                            </ul>
+                            <ul id="dailydate">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期</span>
+                                <input id="date" name="date" class="laydate-icon" value="" placeholder="请选择日期" style="width: 155px;margin-right:28px;padding-left: 15px;height: 25px;">
+                            </ul>
+                            <ul style="display: none;" id="monthdate">
+                            	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期</span>
+				                <select style="width: 180px;height:25px;" id="monthSelecter" name="monthSelecter">
+				                </select>
+                            </ul>
+                            <ul style="display: none;" id="weekdate">
+                            	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日期</span>
+				                <select style="width: 180px;height:25px;" id="weekSelecter" name = "weekSelecter">
+				                </select>
+				            </ul>
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;发送到</span>
+                                <input id="userNames" name="recorderName" style="height: 25px;padding-left: 15px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;" type="text" placeholder="+发送到" readonly="readonly" value="{$getWorkSet_userNames}"  title="{$getWorkSet_userNames}">
+                                <span style="padding-left: 15px;color: #898989;cursor: pointer;" class="fa fa-plus-square fa-lg" onclick="selectUsers();"></span>
+                            </ul>
+                        </div>
+                        <div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile3').click();"></li>
+                            <span style="  width: 660px;  display: block;">
+                            <button class="submit_btn" type="button" onclick="saveReport();">提交</button>
+                            </span>
+                            </ul>
+                            <ul style="margin-bottom: 35px;">
+                                <span class="showUpFile" id="showUpFile3"></span>
+                            </ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+
+                        </div>
+                        <input type="hidden" id="userIds" name="recorder" value="{$getWorkSet_userIds}" />
+                        <input type="hidden" id="upfile3OldName" name="oldName" value="" />
+                        <input type="hidden" id="upfile3Type" name="type" value="" />
+                        <input type="hidden" id="upfile3Size" name="size" value="" />
+                        <input type="hidden" id="upfile3ReturnUrl" name="returnUrl" value="" />
+                    </form>
+                    <form style="display:none;" id="upfileForm3" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile3" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+                <!--报销-->
+                <div id="contentList4" class="index_from_text_task" style="display: none">
+                    <form id="form4">
+                        <div class="index_from_text">
+                            <textarea id="content" name="content" placeholder="请输入报销内容"></textarea>
+                        </div>
+                        <div style="margin: 24px 0 5px;">
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;报销类型</span>
+                                <input style="width: 27%;padding-left: 15px;line-height: 25px;height:25px;margin-right:52px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="输入类型" name="reimbursementType" id="reimbursementType">
+                                <span>报销金额</span>
+                                <input style="width:27%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="0.00" name="money" id="money">
+                            </ul>
+                            <ul style="min-height: 140px;margin-bottom: 15px;" class="userEA">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>
+                                <div id="users4" class="show_per-pic">
+                                    <notempty name="reimbursementNodeList_userList">
+                                        <volist name="reimbursementNodeList_userList" id="rUserList">
+                                            <div class="per-pic">
+                                                <img class="per-img" src="{$rUserList.headLogo}" onclick="selectUser('{$rUserList.userId}',1,'users4');">
+                                                <span id="{$rUserList.userId}" class="img-name">{$rUserList.truename}</span>
+                                                <input class="recorder" name="users4recorder[]" type="hidden" value="{$rUserList.userId}">
+                                                <a style="color: #f47469;" class="icon-pre-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                                            </div>
+
+                                        </volist>
+                                    </notempty>
+                                    <div class="pers1"  id = "add" onclick="selectUser('',1,'users4');"><img class="per-img" src="__IMG__/addpers.png"></div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile4').click();"></li>
+                            <span style="  width: 660px;  display: block;">
+                            <button class="submit_btn" type="button" onclick="saveExpenseAccount();">提交</button>
+                            </span>
+                            </ul>
+                            <ul style="margin-bottom: 35px;"><span class="showUpFile" id="showUpFile4"></span></ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+                        </div>
+                        <input type="hidden" id="upfile4ReturnUrl" name="returnUrl" value="" />
+                        <input type="hidden" id="busiType" name="busiType" value="2">
+                    </form>
+                    <form style="display:none;" id="upfileForm4" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile4" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+                <!--请假-->
+                <div id="contentList5" class="index_from_text_task" style="display: none">
+                    <form id="form5">
+                        <div class="index_from_text">
+                            <textarea id="content" name="content" placeholder="请输入请假内容"></textarea>
+                        </div>
+                        <div style="margin: 24px 0 5px;">
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;请假类型</span>
+                                <select style="width: 193px;color: #898989;padding-left: 15px;line-height: 25px;height:25px;margin-right:25px;font-size: 12px;border: 1px solid #eaeaea;" name="leaveType" id="leaveType">
+                                    <option value="0">选择类型</option>
+                                    <option value="1">事假</option>
+                                    <option value="2">病假</option>
+                                    <option value="3">年假</option>
+                                    <option value="4">调休</option>
+                                    <option value="5">婚假</option>
+                                    <option value="6">产假</option>
+                                    <option value="7">陪产假</option>
+                                    <option value="8">路途假</option>
+                                    <option value="9">其它</option>
+                                </select>
+                                <span>请假时长</span>
+                                <input style="width:12%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" name="days" id="days">
+                                <li style="margin-top: 4px;width: 120px; float: right;margin-right: 80px;" >
+                                    <input type="radio" id="leaveType" name="durationType" value="1"  checked="checked"/>天
+                                    <input type="radio" id="leaveType" name="durationType" value="2" />小时
+                                </li>
+                            </ul>
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;起始时间</span>
+                                <input id="startDate5" name="beginDate" class="laydate-icon" value="" placeholder="起始时间" style="height: 25px;width: 155px;margin-right:28px;padding-left: 15px;">
+                                <span>终止时间</span>
+                                <input id="endDate5" name="endDate" class="laydate-icon" value="" placeholder="终止时间" style="height: 25px;width: 155px;padding-left: 15px;margin-right: 32px;">
+                                <!-- <input type="checkbox"> -->
+                                <!--<span style="text-align: center">&nbsp;&nbsp;全天</span>-->
+                            </ul>
+                            <ul style="min-height: 140px;margin-bottom: 15px;" class="userLeave">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>
+                                <div id="users5" class="show_per-pic">
+                                    <notempty name="leaveNodeList_userList">
+                                        <volist name="leaveNodeList_userList" id="lUserList">
+                                            <div class="per-pic">
+                                                <img class="per-img" src="{$lUserList.headLogo}" onclick="selectUser('{$lUserList.userId}',1,'users5');">
+                                                <span id="{$lUserList.userId}" class="img-name">{$lUserList.truename}</span>
+                                                <input class="recorder" name="users5recorder[]" type="hidden" value="{$lUserList.userId}">
+                                                <a style="color: #f47469;" class="icon-pre-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                                            </div>
+
+                                        </volist>
+                                    </notempty>
+                                    <div class="pers1"  id ="add" onclick="selectUser('',1,'users5');"><img class="per-img" src="__IMG__/addpers.png"></div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile5').click();"></li>
+                            <span style="  width: 660px;  display: block;">
+                            <button class="submit_btn" type="button" onclick="saveLeave();">提交</button>
+                            </span>
+                            </ul>
+                            <ul style="margin-bottom: 35px;"><span class="showUpFile" id="showUpFile5"></span></ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+                        </div>
+                        <input type="hidden" id="upfile5ReturnUrl" name="returnUrl" value="" />
+                        <input type="hidden" id="busiType" name="busiType" value="3">
+                    </form>
+                    <form style="display:none;" id="upfileForm5" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile5" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+                <!--出差-->
+                <div id="contentList6" class="index_from_text_task" style="display: none">
+                    <form id="form6">
+                        <div class="index_from_text">
+                            <textarea id="content" name="content" placeholder="请输入出差事件内容"></textarea>
+                        </div>
+                        <div style="margin: 24px 0 5px;">
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;出差地点</span>
+                                <input style="width: 27%;padding-left: 15px;line-height: 25px;height:25px;margin-right:28px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="请输入出差地点" name="address" id="address">
+
+                                <span>出差时长</span>
+                                <input style="width:12%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" name="days" id="days">
+                                <li style="margin-top: 4px;width: 120px; float: right;margin-right: 80px;" >
+                                    <input type="radio" id="leaveType" name="durationType" value="1"  checked="checked"/>天
+                                    <input type="radio" id="leaveType" name="durationType" value="2" />小时
+                                </li>
+							</ul>
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;出发时间</span>
+                                <input id="startDate6" name="beginDate" class="laydate-icon" value="" placeholder="出发时间" style="height: 25px;width: 155px;margin-right:28px;padding-left: 15px;">
+
+                                <span>返回时间</span>
+                                <input id="endDate6" name="endDate" class="laydate-icon" value="" placeholder="返回时间" style="height: 25px;width: 155px;padding-left: 15px;margin-right: 32px;">
+                            </ul>
+                           <!--<ul>-->
+                            	<!--<span>&nbsp;&nbsp;&nbsp;出差时长</span>-->
+                                <!--<input style="width:27%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" name="days" id="days">-->
+                            	<!--<input type="radio" id="leaveType" name="durationType" value="1"  checked="checked"/>天-->
+           						<!--<input type="radio" id="leaveType" name="durationType" value="2" />小时-->
+                            <!--</ul>-->
+                            <ul style="min-height: 140px;margin-bottom: 15px;" class="userbuss">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>
+                                <div id="users6" class="show_per-pic">
+                                    <notempty name="travelNodeList_userList">
+                                        <volist name="travelNodeList_userList" id="tUserList">
+                                            <div class="per-pic"><img class="per-img" src="{$tUserList.headLogo}" onclick="selectUser('{$tUserList.userId}',1,'users6');">
+                                            <span id="{$tUserList.userId}" class="img-name">{$tUserList.truename}</span>
+                                                <input class="recorder" name="users6recorder[]" type="hidden" value="{$tUserList.userId}">
+                                                <a style="color: #f47469;" class="icon-pre-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                                            </div>
+
+                                        </volist>
+                                    </notempty>
+                                    <div class="pers1"  id = "add"  onclick="selectUser('',1,'users6');"><img class="per-img" src="__IMG__/addpers.png"></div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile6').click();"></li>
+                            <span style="  width: 660px;  display: block;">
+                            <button class="submit_btn" type="button" onclick="saveBusiness();">提交</button>
+                            </span>
+                            </ul>
+                            <ul style="margin-bottom: 35px;"><span class="showUpFile" id="showUpFile6"></span></ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+                        </div>
+                        <input type="hidden" id="upfile6ReturnUrl" name="returnUrl" value="" />
+                        <input type="hidden" id="busiType" name="busiType" value="4">
+                    </form>
+                    <form style="display:none;" id="upfileForm6" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile6" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+                <!--费用-->
+                <div id="contentList7" class="index_from_text_task" style="display: none">
+                    <form id="form7">
+                        <div class="index_from_text">
+                            <textarea id="content" name="content" placeholder="请输入费用内容"></textarea>
+                        </div>
+                        <div style="margin: 24px 0 5px;">
+                            <ul>
+                                <span>&nbsp;&nbsp;&nbsp;费用类型</span>
+                                <input style="width: 27%;padding-left: 15px;line-height: 25px;height:25px;margin-right:52px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="请输入类型" name="costType" id="costType">
+
+                                <span>申请金额</span>
+                                <input style="width:27%;padding-left: 15px;line-height: 25px;height:25px;font-size: 12px;border: 1px solid #eaeaea;" type="text" placeholder="0.00" name="money" id="money">
+                            </ul>
+                            <ul style="min-height: 140px;margin-bottom: 15px;" class="userFee">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>
+                                <div id="users7" class="show_per-pic">
+                                    <notempty name="costNodeList_userList">
+                                        <volist name="costNodeList_userList" id="cUserList">
+                                            <div class="per-pic"><img class="per-img" src="{$cUserList.headLogo}" onclick="selectUser('{$cUserList.userId}',1,'users7');">
+                                            <span id="{$cUserList.userId}" class="img-name">{$cUserList.truename}</span>
+                                                <input class="recorder" name="users7recorder[]" type="hidden" value="{$cUserList.userId}">
+                                                <a style="color: #f47469;" class="icon-pre-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a>
+                                            </div>
+
+                                        </volist>
+                                    </notempty>
+                                    <div class="pers1"  id = "add"  onclick="selectUser('',1,'users7');"><img class="per-img" src="__IMG__/addpers.png"></div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="index_bottom_button"  style=" border-top: 1px solid #eaeaea;padding-top: 12px;">
+                            <ul>
+                                <li style="margin-left: 17px;cursor: pointer;" class="fa fa-paperclip fa-fw fa-lg" onclick="$('#upfile7').click();"></li>
+                            <span style="  width: 660px;  display: block;">
+                            <button class="submit_btn" type="button" onclick="saveFee();">提交</button>
+                            </span>
+                            </ul>
+                            <ul style="margin-bottom: 35px;"><span class="showUpFile" id="showUpFile7"></span></ul>
+                            <p class="upfile_tips">*只能上传jpg/png/gif格式的图片，最多上传5个附件</p>
+                        </div>
+                        <input type="hidden" id="upfile7ReturnUrl" name="returnUrl" value="" />
+                        <input type="hidden" id="busiType" name="busiType" value="1">
+                    </form>
+                    <form style="display:none;" id="upfileForm7" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile7" name="upfile" accept="image/*" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--列表-->
+        <div class="index_list">
+            <div class="index_list_button">
+                <ul>
+                    <li style="margin-left: 28px;position: relative" class="show0" >
+                        <a class="active" onclick="getMessageList(1, 1);">全部</a>
+                        <span style="background: #f47469;  height: 20px;  width: 20px;border-radius: 50%;  display: none;text-align: center;  position: absolute;top: -11px;left: 18px;" id="showNew">
+                            <a style="color: #fff;position: absolute;left: 3px;top: 3px;" id="showNewMessage"></a>
+                        </span>
+                    </li>
+                    <li class="show1"><a onclick="getMessageList(2, 1);">我发起的</a></li>
+                    <li class="show2"><a onclick="getMessageList(3, 1);">@我的</a></li>
+                    <li class="show3"><a onclick="getApprovalList(2, 1);">待处理</a></li>
+                    <li class="show4"><a onclick="getApprovalList(3, 1);">已处理</a></li>
+                </ul>
+            </div>
+            <div class="index_list_list">
+                <div id="content_List">
+                    <!--全部-->
+                    <div class="contentList">
+                        <div id="contentListAll">
+                        <notempty name="messageListAll_messageList">
+                        <volist name="messageListAll_messageList" id="all">
+                        <ul id="message_list_{$i-1}">
+                            <img src="{$all.headLogo}" width="50" height="50" />
+                            <div class="msgList">
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$all.userName}</span>
+                                            <span>{$all.createTime}&nbsp;</span>
+                                        </div>
+                                        <div><span class="msg_content1">{$all.mesContent}</span></div>
+                                    </li>
+                                </div>
+                                <notEmpty name="all.commentList">
+                                <volist name="all.commentList" id="comment">
+                                <br/>
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$comment.userName}</span>
+                                            <span>{$comment.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content2">{$comment.commentContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$all.mesId}, {$comment.commentId}, {$comment.commentUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    <notEmpty name="comment.replyList">
+                                    <volist name="comment.replyList" id="reply">
+                                    <li style="margin-left:55px;">
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$reply.userName} <i style="color: #999;">回复</i> {$reply.replyToUserName}</span>
+                                            <span>{$reply.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content3">{$reply.replyContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$all.mesId}, {$comment.commentId}, {$reply.replyUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    </volist>
+                                    </notEmpty>
+                                </div>
+                                </volist>
+                                </notEmpty>
+                                <br/>
+                                <li>
+                                    <textarea class="comment" placeholder="我也说一句" id="commentContent1_{$all.mesId}"></textarea>
+                                    <input type="button" style="float: left;width: 70px;height: 25px;cursor: pointer;color: #fff;border: 1px none;background:#14bce1;margin: 0 12px;" value="评论" onclick="addComment({$all.mesId}, 1);">
+                                </li>
+                                <div class="showfujian">
+                                    <?php if($all['attachPaths'] != "") {
+                                        $attachPathsList = explode(",", $all['attachPaths']);
+                                        foreach($attachPathsList as $value) {
+                                            echo '<a href="javascript:void();" title="'.$value.'" onclick="javascript:doDownload(this);">'.$value.'</a>';
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </ul>
+                        </volist>
+                        </notempty>
+                        </div>
+                        <div id="pagebar1" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+                        <input type="hidden" id="page1" value="1">
+                        <input type="hidden" id="messageAllCount" value="{$messageListAll_messageCount}">
+                    </div>
+                    <!--我发起的-->
+                    <div class="contentList" style="display: none;">
+                        <div id="contentListMy">
+                        <notempty name="messageListMy_messageList">
+                        <volist name="messageListMy_messageList" id="my">
+                        <ul id="message_list_{$i-1}">
+                            <img src="{$my.headLogo}" width="50" height="50" />
+                            <div class="msgList">
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$my.userName}</span>
+                                            <span>{$my.createTime}&nbsp;</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content1">{$my.mesContent}</span>
+                                        </div>
+                                    </li>
+                                </div>
+                                <notEmpty name="my.commentList">
+                                <volist name="my.commentList" id="comment">
+                                <br/>
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$comment.userName}</span>
+                                            <span>{$comment.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content2">{$comment.commentContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$my.mesId}, {$comment.commentId}, {$comment.commentUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    <notEmpty name="comment.replyList">
+                                    <volist name="comment.replyList" id="reply">
+                                    <li style="margin-left:55px;">
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$reply.userName} <i style="color: #999;">回复</i> {$reply.replyToUserName}</span>
+                                            <span>{$reply.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content3">{$reply.replyContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$my.mesId}, {$comment.commentId}, {$reply.replyUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    </volist>
+                                    </notEmpty>
+                                </div>
+                                </volist>
+                                </notEmpty>
+                                <br/>
+                                <li>
+                                    <textarea class="comment" placeholder="我也说一句" id="commentContent2_{$my.mesId}"></textarea>
+                                    <input type="button" style="float: left;width: 70px;height: 25px;cursor: pointer;color: #fff;border: 1px none;background:#14bce1;margin: 0 12px;" value="评论" onclick="addComment({$my.mesId}, 2);">
+                                </li>
+                                <div class="showfujian">
+                                    <?php if($my['attachPaths'] != "") {
+                                        $attachPathsList = explode(",", $my['attachPaths']);
+                                        foreach($attachPathsList as $value) {
+                                            echo '<a href="javascript:void();" title="'.$value.'" onclick="javascript:doDownload(this);">'.$value.'</a>';
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </ul>
+                        </volist>
+                        </notempty>
+                        </div>
+                        <div id="pagebar2" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+                        <input type="hidden" id="page2" value="1">
+                    </div>
+                    <!--@我的-->
+                    <div class="contentList" style="display: none;">
+                        <div id="contentListAt">
+                        <notempty name="messageListAt_messageList">
+                        <volist name="messageListAt_messageList" id="at">
+                        <ul id="message_list_{$i-1}">
+                            <img src="{$at.headLogo}" width="50" height="50" />
+                            <div class="msgList">
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$at.userName}</span>
+                                            <span>{$at.createTime}&nbsp;</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content1">{$at.mesContent}</span>
+                                        </div>
+                                    </li>
+                                </div>
+                                <notEmpty name="at.commentList">
+                                <volist name="at.commentList" id="comment">
+                                <br/>
+                                <div>
+                                    <li>
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$comment.userName}</span>
+                                            <span>{$comment.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content2">{$comment.commentContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$at.mesId}, {$comment.commentId}, {$comment.commentUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    <notEmpty name="comment.replyList">
+                                    <volist name="comment.replyList" id="reply">
+                                    <li style="margin-left:55px;">
+                                        <div>
+                                            <span style="margin-right: 15px;color: #14bce1;">{$reply.userName} <i style="color: #999;">回复</i> {$reply.replyToUserName}</span>
+                                            <span>{$reply.createTime}</span>
+                                        </div>
+                                        <div>
+                                            <span class="msg_content3">{$reply.replyContent}</span>
+                                            <p><a>
+                                                <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                                    <i  class="fa fa-comment fa-stack-1x"></i>
+                                                    <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                                <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage({$at.mesId}, {$comment.commentId}, {$reply.replyUserId});">回复</span>
+                                            </a></p>
+                                        </div>
+                                    </li>
+                                    </volist>
+                                    </notEmpty>
+                                </div>
+                                </volist>
+                                </notEmpty>
+                                <br/>
+                                <li>
+                                    <textarea class="comment" placeholder="我也说一句" id="commentContent3_{$at.mesId}"></textarea>
+                                    <input type="button" style="float: left;width: 70px;height: 25px;cursor: pointer;color: #fff;border: 1px none;background:#14bce1;margin: 0 12px;" value="评论" onclick="addComment({$at.mesId}, 3);">
+                                </li>
+                                <div class="showfujian">
+                                    <?php if($at['attachPaths'] != "") {
+                                        $attachPathsList = explode(",", $at['attachPaths']);
+                                        foreach($attachPathsList as $value) {
+                                            echo '<a href="javascript:void();" title="'.$value.'" onclick="javascript:doDownload(this);">'.$value.'</a>';
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </ul>
+                        </volist>
+                        </notempty>
+                        </div>
+                        <div id="pagebar3" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+                        <input type="hidden" id="page3" value="1">
+                    </div>
+                    <!--待处理-->
+                    <div class="LCList" style="display: none;">
+                        <div class="title">
+                           <ul>
+                               <li style="width: 30%">主题</li>
+                               <li style="width: 40%">申请内容</li>
+                               <li style="width: 30%">申请日期</li>
+                           </ul>
+                        </div>
+                        <div class="details">
+                            <div id="processListWait">
+                            <notempty name="processWait_processList">
+                            <volist name="processWait_processList" id="wait">
+                            <ul>
+                                <li style="width: 30%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;" title="{$wait.title}">{$wait.title}</li>
+                                <li style="width: 40%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;"><a onclick="showProcessDetail('{$wait.processId}', {$wait.busiType}, 4);">{$wait.formContent}</a></li>
+                                <li style="width: 30%">{$wait.createTime}</li>
+                            </ul>
+                            </volist>
+                            </notempty>
+                            </div>
+                            <div id="pagebar4" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+                            <input type="hidden" id="page4" value="1">
+                        </div>
+                    </div>
+                    <!--已处理-->
+                    <div class="LCList" style="display: none;">
+                        <div class="title">
+                            <ul>
+                                <li style="width: 30%">主题</li>
+                                <li style="width: 40%">申请内容</li>
+                                <li style="width: 30%">申请日期</li>
+                            </ul>
+                        </div>
+                        <div class="details">
+                            <div id="processListApproval">
+                            <notempty name="processApproval_processList">
+                            <volist name="processApproval_processList" id="approval">
+                            <ul>
+                                <li style="width: 30%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;" title="{$approval.title}">{$approval.title}</li>
+                                <li style="width: 40%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;"><a onclick="showProcessDetail('{$approval.processId}', {$approval.busiType}, 5);">{$approval.formContent}</a></li>
+                                <li style="width: 30%">{$approval.createTime}</li>
+                            </ul>
+                            </volist>
+                            </notempty>
+                            </div>
+                            <div id="pagebar5" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+                            <input type="hidden" id="page5" value="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index_right">
+        <!--公告-->
+        <div class="index_right_scoreboard">
+            <div class="index_right_scoreboard_title">
+                <div class="index_right_scoreboard_title_ico"><i class="fa fa-bullhorn fa-fw fa-lg rg"></i></div>
+                <div class="index_right_scoreboard_title_name">公告通知</div>
+            </div>
+            <div class="index_right_scoreboard_list">
+                <volist name="getNoticeList_list" id="vo">
+                    <ul style="width: 185px;padding-left: 5px;height: 25px;" onclick="doNoticeDetail({$vo.messageId});">
+                        <!--<li style="width: 15px;font-size: 14px;font-weight: bold;text-align: right;">{$i}</li>-->
+                        <li>{$vo.title}</li>
+                    </ul>
+                </volist>
+            </div>
+        </div>
+        <!--快捷-->
+        <div class="index_right_quick" style="display:block;">
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">发起电话会议</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">体验中心</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">帮助视频</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">业务指标设置</div>
+            </div>
+            <div class="index_right_line_20"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">签到报表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">考勤报表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">任务图</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">任务统计表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">员工使用动态图</div>
+            </div>
+            <div class="index_right_line_20"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">栏目设置</div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script>
+    //评论框高度处理
+    $(document).ready(function(){
+        // 输入框获取焦点事件
+        $(".comment").focus(function() {
+            $(this).height("70px");
+        });
+        // 输入框失去焦点事件
+        $(".comment").blur(function() {
+            if(!$(this).val()){
+                $(this).height("25px");
+            }
+        });
+//        $(".index_from").mouseover(function() {
+//            $(".index_bottom_button").show();
+//        });
+//        $(".index_from").mouseout(function() {
+//            timer=setTimeout(function(){
+//                if($(".showUpFile1,showUpFile").val() == ''){
+//                    $(".index_bottom_button").hide();
+//                }
+//            },10000)
+//            });
+//        // 消息下面显示事件
+//        function reloadFocus1() {
+//            // 输入框获取焦点事件
+//            $(".index_from_text textarea").focus(function() {
+//                $(".index_bottom_button").show();
+//            });
+//            // 输入框失去焦点事件
+//            $(".index_from_text textarea").blur(function() {
+//                $(".index_bottom_button").hide();
+//            });
+//        }
+        // 定时刷新消息个数
+        
+        var id = setInterval(function(){
+            newMessageCount();
+        }, 30000);
+        
+    });
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",0);
+        Cookie.createCookie("smallMenuIndex",0);
+
+        // 全部
+        createPageBar1('{$messageListAll_total}', '{$messageListAll_pageSize}', '{$messageListAll_page}', '{$messageListAll_totalPage}');
+        $(document).on('click','#pagebar1 span a', function() {
+            $("#page1").val($(this).attr("rel"));
+            getMessageList(1, $(this).attr("rel"));
+        });
+        // 我发起的
+        createPageBar2('{$messageListMy_total}', '{$messageListMy_pageSize}', '{$messageListMy_page}', '{$messageListMy_totalPage}');
+        $(document).on('click','#pagebar2 span a', function() {
+            $("#page2").val($(this).attr("rel"));
+            getMessageList(2, $(this).attr("rel"));
+        });
+        // @我的
+        createPageBar3('{$messageListAt_total}', '{$messageListAt_pageSize}', '{$messageListAt_page}', '{$messageListAt_totalPage}');
+        $(document).on('click','#pagebar3 span a', function() {
+            $("#page3").val($(this).attr("rel"));
+            getMessageList(3, $(this).attr("rel"));
+        });
+        // 待处理
+        createPageBar4('{$processWait_total}', '{$processWait_pageSize}', '{$processWait_page}', '{$processWait_totalPage}');
+        $(document).on('click','#pagebar4 span a', function() {
+            $("#page4").val($(this).attr("rel"));
+            getApprovalList(2, $(this).attr("rel"));
+        });
+        // 已处理
+        createPageBar5('{$processApproval_total}', '{$processApproval_pageSize}', '{$processApproval_page}', '{$processApproval_totalPage}');
+        $(document).on('click','#pagebar5 span a', function() {
+            $("#page5").val($(this).attr("rel"));
+            getApprovalList(3, $(this).attr("rel"));
+        });
+
+        var start2 = {
+            elem: '#startDate2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end2.min = datas; //开始日选好后，重置结束日的最小日期
+                end2.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end2 = {
+            elem: '#endDate2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start2.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start5 = {
+        elem: '#startDate5',
+        format: 'YYYY/MM/DD hh:mm',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16 23:59:59', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+             end5.min = datas; //开始日选好后，重置结束日的最小日期
+            // end5.start = datas //将结束日的初始值设定为开始日
+        }
+        };
+        var end5 = {
+            elem: '#endDate5',
+            format: 'YYYY/MM/DD hh:mm',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16 23:59:59', //最大日期
+            istime: true,
+            istoday: false,
+            choose: function(datas){
+                start5.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start6 = {
+                elem: '#startDate6',
+                format: 'YYYY/MM/DD hh:mm',
+                min: laydate.now(), //设定最小日期为当前日期
+                max: '2099-06-16 23:59:59', //最大日期
+                istime: true,
+                istoday: false,
+                choose: function(datas){
+                     end6.min = datas; //开始日选好后，重置结束日的最小日期
+                     //end6.start = datas //将结束日的初始值设定为开始日
+                }
+        };
+        var end6 = {
+                elem: '#endDate6',
+                format: 'YYYY/MM/DD hh:mm',
+                min: laydate.now(), //设定最小日期为当前日期
+                max: '2099-06-16 23:59:59', //最大日期
+                istime: true,
+                istoday: false,
+                choose: function(datas){
+                    start6.max = datas; //结束日选好后，重置开始日的最大日期
+                }
+        };
+        var date = {
+            elem: '#date',
+            format: 'YYYY-MM-DD',
+            min: '2000-01-01', //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false
+        };
+
+        // laydate(start2);
+        // laydate(end2);
+        //laydate(start3);
+        //laydate(end3);
+        laydate(start5);
+        laydate(end5);
+        laydate(start6);
+        laydate(end6);
+        laydate(date);
+    });
+    // 评论框高度事件
+    function reloadFocus() {
+        // 输入框获取焦点事件
+        $(".comment").focus(function() {
+            $(this).height("70px");
+        });
+        // 输入框失去焦点事件
+        $(".comment").blur(function() {
+            if(!$(this).val()){
+                $(this).height("25px");
+            }
+        });
+    }
+    // 菜单轮换点击事件1
+    $(".index_from_button li").click(function () {
+        var index = $(".index_from_button li").index($(this));
+        $(this).addClass("active").siblings().removeClass("active");
+        $divList = $("#contentList").children("div");
+        $divList.hide();
+        $divList.eq(index).show();
+    });
+    // 菜单轮换点击事件2
+    $(".index_list_button li > a").click(function () {
+        var index = $(".index_list_button li > a").index($(this));
+        $(this).addClass("active").parent().siblings().find('a').removeClass("active");
+//        $(this).siblings().css('color','#000');
+//        $(this).css('color','red');
+        $divList1 = $("#content_List").children("div");
+        $divList1.hide();
+        $divList1.eq(index).show();
+    });
+    function goLink(index) {
+        $(".show0 a").removeClass("active").siblings();
+        $(".show1 a").removeClass("active").siblings();
+        $(".show2 a").removeClass("active").siblings();
+        $(".show3 a").removeClass("active").siblings();
+        $(".show4 a").removeClass("active").siblings();
+        switch(index) {
+            case 1:
+                $(".show1 a").addClass("active").siblings().removeClass("active");
+                break;
+            case 2:
+                $(".show2 a").addClass("active").siblings().removeClass("active");
+                break;
+            case 3:
+                $(".show3 a").addClass("active").siblings().removeClass("active");
+                break;
+            case 4:
+                $(".show4 a").addClass("active").siblings().removeClass("active");
+                break;
+        }
+        $divList1 = $("#content_List").children("div");
+        $divList1.hide();
+        $divList1.eq(index).show();
+    }
+    // 日志不同类型的加载显示
+    $("#dailyRecord").click(function(){
+        $("#weekdate").hide();
+        $("#dailydate").show();
+        $("#monthdate").hide();
+    });
+    $("#monthlyRecord").click(function(){
+        $("#weekdate").hide();
+        $("#dailydate").hide();
+        $("#monthdate").show();
+    });
+    $("#weeklyRecord").click(function(){
+        $("#dailydate").hide();
+        $("#weekdate").show();
+        $("#monthdate").hide();
+    });
+    //高级选项展开
+    function unfold(){
+        $("#upflod").toggle();
+    }
+    function doNoticeDetail(messageId) {
+        layer.open({
+            type:2,
+            title :['公告通知','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['700px', '600px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/noticeDetail')}?messageId=" + messageId,
+        });
+    }
+    function selectUsers() {
+        var userNames = $("#userNames").val();
+        var userIds = $("#userIds").val();
+        layer.open({
+            type:2,
+            title :['发送到','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+    function selectMessageUsers() {
+        var userNames = $("#messageUserNames").val();
+        var userIds = $("#messageUserIds").val();
+
+        layer.open({
+            type:2,
+            title :['选择用户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectMessageUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+    function selectDeptNames() {
+        var deptNames = $("#deptNames").val();
+        var deptIds = $("#deptIds").val();
+        layer.open({
+            type:2,
+            title :['选择部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['400px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectDepts')}" + "?deptNames=" + deptNames + "&deptIds=" + deptIds,
+        });
+    }
+    function selectUser(userId, no, objId) {
+        var userIdList = document.getElementsByName(objId + 'recorder[]');
+
+        var selected = "";
+        for ( var  i = 0; i < userIdList.length; i ++ ){
+            if(selected == "") {
+                selected = userIdList[i].value;
+            } else {
+                selected = selected + "," + userIdList[i].value;
+            }
+        }
+
+        if(userIdList.length < 17) {
+            layer.open({
+                type:2,
+                title :['审批人员','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+                area: ['530px', '520px'],
+                shadeClose: true, //点击遮罩关闭
+                content: "{:U('Office/selectUser')}" + "?userId=" + userId + "&no=" + no + "&objId=" + objId + "&selected=" + selected,
+            });
+        } else {
+            layer.msg("审批人员最多17人",{icon: 8});
+        }
+    }
+    function saveMessage() {
+        var messageContent = $("#form1 #content");
+        var content = $("#form1 #content").val();
+        if (getValLen(messageContent) == 0) {
+            layer.msg("消息内容不能为空",{icon: 8});
+            messageContent.focus();
+            return false;
+        } else if (getValLen(messageContent) > 500) {
+            layer.msg("消息内容最多为500字",{icon: 8});
+            messageContent.focus();
+            return false;
+        }
+
+        // 部门check
+        var deptObj = $("#form1 #deptIds");
+        var deptIds = $("#form1 #deptIds").val();
+        var deptList = deptIds.split(",");
+        if (getValLen(deptObj) == 0) {
+            layer.msg("请选择发送的部门",{icon: 8});
+            return false;
+        } else if (deptList.length > 50) {
+            layer.msg("部门最多为50个",{icon: 8});
+            return false;
+        }
+
+        // 附件check
+        var attachPaths = $("#form1 #messageReturnUrl").val();
+        var attachPathList = attachPaths.split(",");
+        if (attachPathList.length > 5) {
+            layer.msg("附件最多为5个",{icon: 8});
+            return false;
+        }
+
+        // 用户check
+        var userIds = $("#form1 #messageUserIds").val();
+        var userIdList = userIds.split(",");
+        if (userIdList.length > 200) {
+            layer.msg("用户最多为200个",{icon: 8});
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/saveMessage')}", {"content":content, "deptIds":deptIds, "attachPaths":attachPaths, "userIds":userIds}, function(data) {
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form1 #content").val("");
+                $("#form1 #deptIds").val("");
+                $("#form1 #deptNames").val("");
+                $("#form1 #messageReturnUrl").val("");
+                $("#form1 #messageUserIds").val("");
+                $("#form1 #messageUserNames").val("");
+                $("#form1 #messageUserList").html("");
+                $("#showUpFile1").html("");
+                // 重新加载统计
+                reloadCount();
+                refreshMessageList();
+            } else {
+                layer.msg(data.error_text,{icon: 8});
+            }
+            layer.close(loadIdx);
+        }, 'json');
+    }
+    function saveReport() {
+        var reportContentObj = $("#form3 #reportContent");
+        if (getValLen(reportContentObj) == 0) {
+            layer.msg("日志内容不能为空",{icon: 8});
+            reportContentObj.focus();
+            return false;
+        } else if (getValLen(reportContentObj) > 1000) {
+            layer.msg("日志内容最多为1000字",{icon: 8});
+            reportContentObj.focus();
+            return false;
+        }
+/*
+        if ($("#form3 #weeklyRecord:checked").length > 0) {
+            var startDateObj = $("#form3 #startDate3");
+            var endDateObj = $("#form3 #endDate3");
+            if (getValLen(startDateObj) == 0) {
+                layer.msg("起始时间不能为空",{icon: 8});
+                startDateObj.focus();
+                return false;
+            } else if (getValLen(endDateObj) == 0) {
+                layer.msg("终止时间不能为空",{icon: 8});
+                endDateObj.focus();
+                return false;
+            }
+        } 
+        */
+        if ($("#form3 #dailyRecord:checked").length > 0) {
+            var dateObj = $("#form3 #date");
+            if (getValLen(dateObj) == 0) {
+                layer.msg("日期不能为空",{icon: 8});
+                dateObj.focus();
+                return false;
+            }
+        }
+
+        var recorderObj = $("#form3 #userIds");
+        if (getValLen(recorderObj) == 0) {
+            layer.msg("发送到不能为空",{icon: 8});
+            $("#form3 #userNames").focus();
+            return false;
+        } else if (getValLen(recorderObj) > 500) {
+            layer.msg("发送到选择过多，最多500字符",{icon: 8});
+            $("#form3 #userNames").focus();
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form3").serializeArray();
+        $.post("{:U('Office/saveReport')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form3 #reportContent").val("");
+                //$("#form3 #startDate3").val("");
+                //$("#form3 #endDate3").val("");
+                $("#form3 #date").val("");
+                $("#showUpFile3").html("");
+                $("#upfile3OldName").val("");
+                // $("#form3 #userNames").val("");
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function saveExpenseAccount() {
+        var eaContentObj = $("#form4 #content");
+        if (getValLen(eaContentObj) == 0) {
+            layer.msg("报销内容不能为空",{icon: 8});
+            eaContentObj.focus();
+            return false;
+        } else if (getValLen(eaContentObj) > 1000) {
+            layer.msg("报销内容最多为1000字",{icon: 8});
+            eaContentObj.focus();
+            return false;
+        }
+
+        var eaTypeObj = $("#form4 #reimbursementType");
+        if (getValLen(eaTypeObj) == 0) {
+            layer.msg("报销类型不能为空",{icon: 8});
+            eaTypeObj.focus();
+            return false;
+        } else if (getValLen(eaTypeObj) > 64) {
+            layer.msg("报销类型最多为64字",{icon: 8});
+            eaTypeObj.focus();
+            return false;
+        }
+
+        var eaMoneyObj = $("#form4 #money");
+        var moneyCheck = /^[0-9]*(\.[0-9]{1,2})?$/;
+        var money = $.trim(eaMoneyObj.val());
+        if (getValLen(eaMoneyObj) == 0) {
+            layer.msg("报销金额不能为空",{icon: 8});
+            eaMoneyObj.focus();
+            return false;
+        } else if (getValLen(eaMoneyObj) > 20) {
+            layer.msg("报销金额最大长度为20",{icon: 8});
+            eaMoneyObj.focus();
+            return false;
+        } else if(!moneyCheck.test(money)) {
+            layer.msg("请输入正确的报销金额",{icon: 8});
+            eaMoneyObj.focus();
+            return false;
+        }
+
+        var userIdList = document.getElementsByName('users4recorder[]');
+        var userId = "";
+        for ( var  i = 0; i < userIdList.length; i ++ ){
+            if(userId == "") {
+                userId = userIdList[i].value;
+            } else {
+                userId = userId + "," + userIdList[i].value;
+            }
+        }
+        if(userId == "") {
+            layer.msg("审批人员不能为空",{icon: 8});
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form4").serializeArray();
+        $.post("{:U('Office/saveProcess')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form4 #content").val("");
+                $("#form4 #reimbursementType").val("");
+                $("#form4 #money").val("");
+                $("#form4 #upfile4ReturnUrl").val("");
+                $("#form4 .userEA").empty();
+                $("#showUpFile4").html("");
+
+                var content = "<span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>";
+                content += '<div id="users4" class="show_per-pic">';
+                $.each(data.nodeList, function(k, v) {
+
+                    content += '<div class="per-pic">';
+                    content += '<img class="per-img" src="' + v.headLogo + '" onclick="selectUser(\''+ v.userId +'\',1,\'users4\');">';
+                    content += '<span id ="'+v.userId+'" class="img-name">'+v.truename+'</span><input class="recorder" name="users4recorder[]" type="hidden" value="'+v.userId+'"><a style="color: #f47469;" class="icon-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a></div>';
+                });
+                content += '<div class="pers1"  id = "add" onclick="selectUser(\'\',1,\'users4\');"><img class="per-img" src="__IMG__/addpers.png"></div>';
+                content += '</div>';
+
+                $("#form4 .userEA").append(content);
+                // 重新加载统计
+                reloadCount();
+                refreshApprovalList();
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function saveLeave() {
+        var contentObj = $("#form5 #content");
+        if (getValLen(contentObj) == 0) {
+            layer.msg("请假内容不能为空",{icon: 8});
+            contentObj.focus();
+            return false;
+        } else if (getValLen(contentObj) > 1000) {
+            layer.msg("请假内容最多为1000字",{icon: 8});
+            contentObj.focus();
+            return false;
+        }
+
+        var typeObj = $("#form5 #leaveType");
+        if (getValLen(typeObj) == 0) {
+            layer.msg("请假类型不能为空",{icon: 8});
+            typeObj.focus();
+            return false;
+        } else if ($.trim(typeObj.val()) == 0) {
+            layer.msg("请假类型不能为空",{icon: 8});
+            typeObj.focus();
+            return false;
+        }
+
+        var daysObj = $("#form5 #days");
+        //var daysCheck = /^[0-9]+.?[0-9]*$/;
+        var daysCheck = /^[0-9]+(.[0-9]{1})?$/;
+        var days = $.trim(daysObj.val());
+        if (getValLen(daysObj) == 0) {
+            layer.msg("请假时长不能为空",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if (getValLen(daysObj) > 4) {
+            layer.msg("请假时长最大长度为4",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if(days == 0) {
+            layer.msg("请输入正确的请假时长",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if(!daysCheck.test(days)) {
+            layer.msg("请输入正确的请假时长",{icon: 8});
+            daysObj.focus();
+            return false;
+        }
+
+        var startDateObj = $("#form5 #startDate5");
+        var endDateObj = $("#form5 #endDate5");
+        if (getValLen(startDateObj) == 0) {
+            layer.msg("起始时间不能为空",{icon: 8});
+            startDateObj.focus();
+            return false;
+        } else if (getValLen(endDateObj) == 0) {
+            layer.msg("终止时间不能为空",{icon: 8});
+            endDateObj.focus();
+            return false;
+        }
+
+        var userIdList = document.getElementsByName('users5recorder[]');
+        var userId = "";
+        for ( var  i = 0; i < userIdList.length; i ++ ){
+            if(userId == "") {
+                userId = userIdList[i].value;
+            } else {
+                userId = userId + "," + userIdList[i].value;
+            }
+        }
+        if(userId == "") {
+            layer.msg("审批人员不能为空",{icon: 8});
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form5").serializeArray();
+        $.post("{:U('Office/saveProcess')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form5 #content").val("");
+                $("#form5 #leaveType").val("");
+                $("#form5 #days").val("");
+                $("#form5 #startDate5").val("");
+                $("#form5 #endDate5").val("");
+                $("#form5 #upfile5ReturnUrl").val("");
+                $("#form5 .userLeave").empty();
+                $("#showUpFile5").html("");
+
+                var content = "<span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>";
+                content += '<div id="users5" class="show_per-pic">';
+                $.each(data.nodeList, function(k, v) {
+
+                    content += '<div class="per-pic">';
+                    content += '<img class="per-img" src="'+v.headLogo+'" onclick="selectUser(\''+v.userId+'\', 1, \'users5\');">';
+                    content += '<span id ="'+v.userId+'"  class="img-name">'+v.truename+'</span><input class="recorder" name="users5recorder[]" type="hidden" value="'+v.userId+'"><a style="color: #f47469;" class="icon-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a></div>';
+                });
+                content += '<div class="pers1" id ="add" onclick="selectUser(\'\',1,\'users5\');"><img class="per-img" src="__IMG__/addpers.png"></div>';
+                content += '</div>';
+
+                $("#form5 .userLeave").append(content);
+                // 重新加载统计
+                reloadCount();
+                refreshApprovalList();
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function saveBusiness() {
+        var contentObj = $("#form6 #content");
+        if (getValLen(contentObj) == 0) {
+            layer.msg("出差事件内容不能为空",{icon: 8});
+            contentObj.focus();
+            return false;
+        } else if (getValLen(contentObj) > 1000) {
+            layer.msg("出差事件内容最多为1000字",{icon: 8});
+            contentObj.focus();
+            return false;
+        }
+
+        var addressObj = $("#form6 #address");
+        if (getValLen(addressObj) == 0) {
+            layer.msg("出差地点不能为空",{icon: 8});
+            addressObj.focus();
+            return false;
+        } else if (getValLen(addressObj) > 100) {
+            layer.msg("出差地点最多为100字",{icon: 8});
+            addressObj.focus();
+            return false;
+        }
+
+        var daysObj = $("#form6 #days");
+        //var daysCheck = /^[0-9]+.?[0-9]*$/;
+        var daysCheck = /^[0-9]+(.[0-9]{1})?$/;
+        var days = $.trim(daysObj.val());
+        if (getValLen(daysObj) == 0) {
+            layer.msg("出差时长不能为空",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if (getValLen(daysObj) > 4) {
+            layer.msg("出差时长最大长度为4",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if(days == 0) {
+            layer.msg("请输入正确的出差天数",{icon: 8});
+            daysObj.focus();
+            return false;
+        } else if(!daysCheck.test(days)) {
+            layer.msg("请输入正确的出差时长",{icon: 8});
+            daysObj.focus();
+            return false;
+        }
+
+        var startDateObj = $("#form6 #startDate6");
+        var endDateObj = $("#form6 #endDate6");
+        if (getValLen(startDateObj) == 0) {
+            layer.msg("出发时间不能为空",{icon: 8});
+            startDateObj.focus();
+            return false;
+        } else if (getValLen(endDateObj) == 0) {
+            layer.msg("返回时间不能为空",{icon: 8});
+            endDateObj.focus();
+            return false;
+        }
+
+        var userIdList = document.getElementsByName('users6recorder[]');
+        var userId = "";
+        for ( var  i = 0; i < userIdList.length; i ++ ){
+            if(userId == "") {
+                userId = userIdList[i].value;
+            } else {
+                userId = userId + "," + userIdList[i].value;
+            }
+        }
+        if(userId == "") {
+            layer.msg("审批人员不能为空",{icon: 8});
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form6").serializeArray();
+        $.post("{:U('Office/saveProcess')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form6 #content").val("");
+                $("#form6 #address").val("");
+                $("#form6 #days").val("");
+                $("#form6 #startDate6").val("");
+                $("#form6 #endDate6").val("");
+                $("#form6 #upfile6ReturnUrl").val("");
+                $("#form6 .userbuss").empty();
+                $("#showUpFile6").html("");
+
+                var content = "<span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>";
+                content += '<div id="users6" class="show_per-pic">';
+                $.each(data.nodeList, function(k, v) {
+
+                    content += '<div class="per-pic">';
+                    content += '<img class="per-img" src="'+v.headLogo+'" onclick="selectUser(\''+v.userId+'\', 1, \'users6\');">';
+                    content += '<span id ="'+v.userId+'" class="img-name">'+v.truename+'</span><input class="recorder" name="users6recorder[]" type="hidden" value="'+v.userId+'"><a style="color: #f47469;" class="icon-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a></div>';
+                });
+                content += '<div class="pers1" id="add" onclick="selectUser(\'\',1,\'users6\');"><img class="per-img" src="__IMG__/addpers.png"></div>';
+                content += '</div>';
+
+                $("#form6 .userbuss").append(content);
+                // 重新加载统计
+                reloadCount();
+                refreshApprovalList();
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function saveFee() {
+        var feeContentObj = $("#form7 #content");
+        if (getValLen(feeContentObj) == 0) {
+            layer.msg("费用内容不能为空",{icon: 8});
+            feeContentObj.focus();
+            return false;
+        } else if (getValLen(feeContentObj) > 1000) {
+            layer.msg("费用内容最多为1000字",{icon: 8});
+            feeContentObj.focus();
+            return false;
+        }
+
+        var feeTypeObj = $("#form7 #costType");
+        if (getValLen(feeTypeObj) == 0) {
+            layer.msg("费用类型不能为空",{icon: 8});
+            feeTypeObj.focus();
+            return false;
+        } else if (getValLen(feeTypeObj) > 64) {
+            layer.msg("费用类型最多为64字",{icon: 8});
+            feeTypeObj.focus();
+            return false;
+        }
+
+        var feeMoneyObj = $("#form7 #money");
+        var moneyCheck = /^[0-9]*(\.[0-9]{1,2})?$/;
+        var money = $.trim(feeMoneyObj.val());
+        if (getValLen(feeMoneyObj) == 0) {
+            layer.msg("申请金额不能为空",{icon: 8});
+            feeMoneyObj.focus();
+            return false;
+        } else if (getValLen(feeMoneyObj) > 20) {
+            layer.msg("申请金额最大长度为20",{icon: 8});
+            feeMoneyObj.focus();
+            return false;
+        } else if(!moneyCheck.test(money)) {
+            layer.msg("请输入正确的申请金额",{icon: 8});
+            feeMoneyObj.focus();
+            return false;
+        }
+
+        var userIdList = document.getElementsByName('users7recorder[]');
+        var userId = "";
+        for ( var  i = 0; i < userIdList.length; i ++ ){
+            if(userId == "") {
+                userId = userIdList[i].value;
+            } else {
+                userId = userId + "," + userIdList[i].value;
+            }
+        }
+        if(userId == "") {
+            layer.msg("审批人员不能为空",{icon: 8});
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form7").serializeArray();
+        $.post("{:U('Office/saveProcess')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("发送成功");
+                $("#form7 #content").val("");
+                $("#form7 #costType").val("");
+                $("#form7 #money").val("");
+                $("#form7 #upfile7ReturnUrl").val("");
+                $("#form7 .userFee").empty();
+                $("#showUpFile7").html("");
+
+                var content = "<span>&nbsp;&nbsp;&nbsp;&nbsp;审批人员</span>";
+                content += '<div id="users7" class="show_per-pic">';
+                $.each(data.nodeList, function(k, v) {
+
+                    content += '<div class="per-pic">';
+                    content += '<img class="per-img" src="'+v.headLogo+'" onclick="selectUser(\''+v.userId+'\', 1, \'users7\');">';
+                    content += '<span id ="'+v.userId+'" class="img-name">'+v.truename+'</span><input class="recorder" name="users7recorder[]" type="hidden" value="'+v.userId+'"><a style="color: #f47469;" class="icon-img-remove" onclick="deleteRecorderUsers(this);" title="删除图片"><i class="fa fa-times-circle-o fa-2x"></i></a></div>';
+                });
+                content += '<div class="pers1" id="add" onclick="selectUser(\'\',1,\'users7\');"><img class="per-img" src="__IMG__/addpers.png"></div>';
+                content += '</div>';
+
+                $("#form7 .userFee").append(content);
+                // 重新加载统计
+                reloadCount();
+                refreshApprovalList();
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function reloadCount() {
+        $.post("{:U('Office/getMessageCount')}", {}, function(data) {
+            if(data.error_code == "success") {
+                var myMessage = "<a onclick='goLink(1)'>" + data.myMessageCount + "</a>";
+                var atMyMessage = "<a onclick='goLink(2)'>" + data.atMyMessageCount + "</a>";
+                $("#myMessageCount").html(myMessage);
+                $("#atMyMessageCount").html(atMyMessage);
+            } else {
+                layer.msg(data.error_text,{icon: 8});
+            }
+        }, 'json');
+
+        $.post("{:U('Office/getProcessList')}", {"type":2}, function(data) {
+            if(data.error_code == "success") {
+                var processWait = "<a onclick='goLink(3)'>" + data.count + "</a>";
+                $("#processWait").html(processWait);
+            } else {
+                layer.msg(data.error_text,{icon: 8});
+            }
+        }, 'json');
+
+        $.post("{:U('Office/getProcessList')}", {"type":3}, function(data) {
+            if(data.error_code == "success") {
+                var processApproval = "<a onclick='goLink(3)'>" + data.count + "</a>";
+                $("#processApproval").html(processApproval);
+            } else {
+                layer.msg(data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+    $("#upfile8").change(function(){
+        var returnUrl = $("#messageReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload1();
+            // $("#upfile8").val("");
+        }
+    });
+    $("#upfile3").change(function(){
+        var returnUrl = $("#upfile3ReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload3();
+            // $("#upfile3").val("");
+        }
+    });
+    $("#upfile4").change(function(){
+        var returnUrl = $("#upfile4ReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload4();
+            // $("#upfile4").val("");
+        }
+    });
+    $("#upfile5").change(function(){
+        var returnUrl = $("#upfile5ReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload5();
+            // $("#upfile5").val("");
+        }
+    });
+    $("#upfile6").change(function(){
+        var returnUrl = $("#upfile6ReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload6();
+            // $("#upfile6").val("");
+        }
+    });
+    $("#upfile7").change(function(){
+        var returnUrl = $("#upfile7ReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload7();
+            // $("#upfile7").val("");
+        }
+    });
+    // 上传文件-消息
+    function fileUpload1() {
+        var messageReturnUrl = $("#messageReturnUrl").val();
+        var showUpFile1 = $("#showUpFile1").html();
+
+        var loadIdx = layer.load(0);
+        $("#upfileForm1").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(messageReturnUrl != "") {
+                        messageReturnUrl += ",";
+                        showUpFile1 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile1 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+                    messageReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#messageReturnUrl").val(messageReturnUrl);
+
+                    showUpFile1 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile1(this);'></i></span> ";
+                    $("#showUpFile1").html(showUpFile1);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-消息
+    function removeUpFile1(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var messageReturnUrl = $("#messageReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+                var returnUrlList = messageReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                messageReturnUrl = returnUrlList.join(",");
+                $("#messageReturnUrl").val(messageReturnUrl);
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 上传文件-日志
+    function fileUpload3() {
+        var showUpFile3 = $("#showUpFile3").html();
+        var upfile3OldName = $("#upfile3OldName").val();
+        var upfile3Type = $("#upfile3Type").val();
+        var upfile3Size = $("#upfile3Size").val();
+        var upfile3ReturnUrl = $("#upfile3ReturnUrl").val();
+        var loadIdx = layer.load(0);
+        $("#upfileForm3").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(upfile3OldName != "") {
+                        upfile3OldName += ",";
+                        upfile3Type += ",";
+                        upfile3Size += ",";
+                        upfile3ReturnUrl += ",";
+
+                        showUpFile3 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile3 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+
+                    upfile3OldName += data.upfile.name;
+                    upfile3Type += data.upfile.type;
+                    upfile3Size += data.upfile.size;
+                    upfile3ReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfile3OldName").val(upfile3OldName);
+                    $("#upfile3Type").val(upfile3Type);
+                    $("#upfile3Size").val(upfile3Size);
+                    $("#upfile3ReturnUrl").val(upfile3ReturnUrl);
+
+                    showUpFile3 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile3(this);'></i></span> ";
+                    $("#showUpFile3").html(showUpFile3);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-日志
+    function removeUpFile3(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var upfile3OldName = $("#upfile3OldName").val();
+        var upfile3Type = $("#upfile3Type").val();
+        var upfile3Size = $("#upfile3Size").val();
+        var upfile3ReturnUrl = $("#upfile3ReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+
+                var index = 0;
+                var returnUrlList = upfile3ReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        index = i;
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                upfile3ReturnUrl = returnUrlList.join(",");
+                $("#upfile3ReturnUrl").val(upfile3ReturnUrl);
+
+                var oldNameList = upfile3OldName.split(',');
+                oldNameList.splice(index, 1);
+                upfile3OldName = oldNameList.join(",");
+                $("#upfile3OldName").val(upfile3OldName);
+
+                var typeList = upfile3Type.split(',');
+                typeList.splice(index, 1);
+                upfile3Type = typeList.join(",");
+                $("#upfile3Type").val(upfile3Type);
+
+                var sizeList = upfile3Size.split(',');
+                sizeList.splice(index, 1);
+                upfile3Size = sizeList.join(",");
+                $("#upfile3Size").val(upfile3Size);
+
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 上传文件-报销
+    function fileUpload4() {
+        var upfile4ReturnUrl = $("#upfile4ReturnUrl").val();
+        var showUpFile4 = $("#showUpFile4").html();
+        var loadIdx = layer.load(0);
+        $("#upfileForm4").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(upfile4ReturnUrl != "") {
+                        upfile4ReturnUrl += ",";
+                        showUpFile4 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile4 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+                    upfile4ReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfile4ReturnUrl").val(upfile4ReturnUrl);
+
+                    showUpFile4 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile4(this);'></i></span> ";
+                    $("#showUpFile4").html(showUpFile4);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-报销
+    function removeUpFile4(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var upfile4ReturnUrl = $("#upfile4ReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+                var returnUrlList = upfile4ReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                upfile4ReturnUrl = returnUrlList.join(",");
+                $("#upfile4ReturnUrl").val(upfile4ReturnUrl);
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 上传文件-请假
+    function fileUpload5() {
+        var upfile5ReturnUrl = $("#upfile5ReturnUrl").val();
+        var showUpFile5 = $("#showUpFile5").html();
+        var loadIdx = layer.load(0);
+        $("#upfileForm5").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(upfile5ReturnUrl != "") {
+                        upfile5ReturnUrl += ",";
+                        showUpFile5 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile5 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+                    upfile5ReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfile5ReturnUrl").val(upfile5ReturnUrl);
+
+                    showUpFile5 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile5(this);'></i></span> ";
+                    $("#showUpFile5").html(showUpFile5);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-请假
+    function removeUpFile5(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var upfile5ReturnUrl = $("#upfile5ReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+                var returnUrlList = upfile5ReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                upfile5ReturnUrl = returnUrlList.join(",");
+                $("#upfile5ReturnUrl").val(upfile5ReturnUrl);
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 上传文件-出差
+    function fileUpload6() {
+        var upfile6ReturnUrl = $("#upfile6ReturnUrl").val();
+        var showUpFile6 = $("#showUpFile6").html();
+        var loadIdx = layer.load(0);
+        $("#upfileForm6").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(upfile6ReturnUrl != "") {
+                        upfile6ReturnUrl += ",";
+                        showUpFile6 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile6 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+                    upfile6ReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfile6ReturnUrl").val(upfile6ReturnUrl);
+
+                    showUpFile6 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile6(this);'></i></span> ";
+                    $("#showUpFile6").html(showUpFile6);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-出差
+    function removeUpFile6(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var upfile6ReturnUrl = $("#upfile6ReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+                var returnUrlList = upfile6ReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                upfile6ReturnUrl = returnUrlList.join(",");
+                $("#upfile6ReturnUrl").val(upfile6ReturnUrl);
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 上传文件-费用
+    function fileUpload7() {
+        var upfile7ReturnUrl = $("#upfile7ReturnUrl").val();
+        var showUpFile7 = $("#showUpFile7").html();
+        var loadIdx = layer.load(0);
+        $("#upfileForm7").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                layer.close(loadIdx);
+                if(data.error_no == "999999" || data.error_no == "123456" || data.error_no == "654321") {
+                    layer.msg("上传失败 ("+data.error_txt+")",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    var showClass = data.upfile.savepath + data.upfile.savename;
+                    var savename = data.upfile.savename;
+                    savename = savename.split('.');
+                    var showId = savename[0];
+
+                    if(upfile7ReturnUrl != "") {
+                        upfile7ReturnUrl += ",";
+                        showUpFile7 += "<span class='"+ showClass +"' id='"+ showId +"'>&emsp;";
+                    } else {
+                        showUpFile7 = "<span class='"+ showClass +"' id='"+ showId +"'>";
+                    }
+                    upfile7ReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfile7ReturnUrl").val(upfile7ReturnUrl);
+
+                    showUpFile7 += data.upfile.name + " <i style='cursor: pointer;color: #f47469;' class='fa fa-remove' onclick='removeUpFile7(this);'></i></span> ";
+                    $("#showUpFile7").html(showUpFile7);
+                }
+            },
+            error:function(xhr){
+                layer.close(loadIdx);
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+    // 删除上传文件-费用
+    function removeUpFile7(obj) {
+        var id = $(obj).parent().attr("id");
+        var showClass = $(obj).parent().attr("class");
+        var upfile7ReturnUrl = $("#upfile7ReturnUrl").val();
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/removeUpFile')}", {"fileName":showClass}, function(data) {
+            if(data.error_code == "success") {
+                layer.close(loadIdx);
+                layer.msg("删除成功");
+                var returnUrlList = upfile7ReturnUrl.split(',');
+                for(var i = 0; i < returnUrlList.length; i ++ ) {
+                    if(returnUrlList[i] == showClass) {
+                        returnUrlList.splice(i, 1);
+                    }
+                }
+                upfile7ReturnUrl = returnUrlList.join(",");
+                $("#upfile7ReturnUrl").val(upfile7ReturnUrl);
+                $('#'+id).remove();
+            } else {
+                layer.close(loadIdx);
+                var message = "删除失败";
+                if(data.error_code == "error1") {
+                    message = "文件不存在";
+                }
+                layer.msg(message, {icon: 8});
+            }
+        }, 'json');
+    }
+    // 删除审阅人
+    function deleteRecorderUsers(obj) {
+        $(obj).parent().attr("id","delete_recorder");
+        $('#delete_recorder').innerHTML = "";
+        $('#delete_recorder').remove();
+    }
+    //回复消息
+    function replyMessage(mesId, commentId, replyToUserId){
+        layer.open({
+            type:2,
+            title :['回复消息','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['660px', '290px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/replyIndexMessage?mesId='+mesId+'&commentId='+commentId+'&replyToUserId='+replyToUserId
+        });
+    }
+    //附件下载
+    function doDownload(obj) {
+        var path = $(obj).text();
+        var url = APP+'/Home/Office/downloadFile?path='+path;
+        window.open(url, '_blank');
+    }
+    //添加评论
+    function addComment(mesId, type) {
+        // 评论内容check
+        var contentObj = $("#commentContent"+type+"_"+mesId);
+        if (getValLen(contentObj) == 0) {
+            layer.msg("评论不能为空",{icon: 8});
+            contentObj.focus();
+            return false;
+        } else if (getValLen(contentObj) > 500) {
+            layer.msg("评论最多为500字",{icon: 8});
+            contentObj.focus();
+            return false;
+        }
+
+        var commentContent = $("#commentContent"+type+"_"+mesId).val();
+
+        $.post("{:U('Office/addComment')}", {"commentContent":commentContent, "mesId":mesId}, function(data) {
+            if(data.error_code == "success") {
+                var page = $("#page"+type).val();
+                refreshMessageList();
+            } else {
+                layer.msg(data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+    // 流程详细画面
+    function showProcessDetail(processId, busiType, type) {
+        var page = $("#page".type).val();
+        switch(busiType)
+        {
+            case 1: // 费用
+                layer.open({
+                    type:2,
+                    title:['费用详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+                    area:['700px', '600px'],
+                    shadeClose:false,
+                    content:APP+'/Home/Office/showIndexFeeDetail?processId='+processId+'&page='+page
+                });
+                break;
+            case 2: // 报销
+                layer.open({
+                    type:2,
+                    title:['报销详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+                area:['700px', '600px'],
+                    shadeClose:false,
+                    content:APP+'/Home/Office/showIndexApplyDetail?processId='+processId+'&page='+page
+                });
+                break;
+            case 3: // 请假
+                layer.open({
+                    type:2,
+                    title:['请假详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+                    area:['700px', '600px'],
+                    shadeClose:false,
+                    content:APP+'/Home/Office/showIndexLeaveDetail?processId='+processId+'&page='+page
+                });
+                break;
+            case 4: // 出差
+                layer.open({
+                    type:2,
+                    title:['出差详情','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+                    area:['700px', '600px'],
+                    shadeClose:false,
+                    content:APP+'/Home/Office/showIndexTravelDetail?processId='+processId+'&page='+page
+                });
+                break;
+        }
+    }
+    function createPageBar1(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar1");
+    }
+    function createPageBar2(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar2");
+    }
+    function createPageBar3(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar3");
+    }
+    function createPageBar4(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar4");
+    }
+    function createPageBar5(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar5");
+    }
+    // 最新消息个数
+    function newMessageCount() {
+        var count = $("#messageAllCount").val();
+        var diff = 0;
+
+        $.post("{:U('Office/getMessageCount')}", {}, function(data) {
+            if(data.error_code == "success") {
+                var newCount = data.allMessageCount;
+                if(newCount > count) {
+                    diff = newCount - count;
+                    if(diff > 0) {
+                        $("#showNew").show();
+                        $("#showNewMessage").html(diff);
+                    }
+                }
+            }
+        }, 'json');
+    }
+    // 查询消息列表信息
+    function getMessageList(type, page) {
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/getMessageList')}", {"page":page, "type":type}, function(data) {
+            if(type == 1) {
+                $("#showNewMessage").html(0);
+                $("#showNew").hide();
+                $("#messageAllCount").val(data.messageCount);
+            }
+            var content = "";
+            switch(type)
+            {
+                case 1: // 全部
+                    $("#contentListAll").empty();
+                    break;
+                case 2: // 我发起的
+                    $("#contentListMy").empty();
+                    break;
+                case 3: // @我的
+                    $("#contentListAt").empty();
+                    break;
+            }
+            if (!("messageList" in data)) {
+                content = '<ul class="topnone">';
+                content += '<li style="width: 100%;color:#f47469;">暂无数据，请创建消息!</li>';
+                content += '</ul>';
+
+                switch(type)
+                {
+                    case 1: // 全部
+                        $("#contentListAll").append(content);
+                        createPageBar1(data.total, data.pageSize, data.page, data.totalPage);
+                        break;
+                    case 2: // 我发起的
+                        $("#contentListMy").append(content);
+                        createPageBar2(data.total, data.pageSize, data.page, data.totalPage);
+                        break;
+                    case 3: // @我的
+                        $("#contentListAt").append(content);
+                        createPageBar3(data.total, data.pageSize, data.page, data.totalPage);
+                        break;
+                }
+                layer.close(loadIdx);
+                return;
+            }
+            // 设定用户列表
+            $.each(data.messageList, function(k, v) {
+                content += '<ul id="message_list_'+ k +'">';
+
+                var headLogo = v.headLogo;
+                var userName = v.userName;
+                if(!userName) {
+                    userName = "";
+                }
+                content += '<img src="'+ headLogo +'" width="50" height="50" />';
+                content += '<div class="msgList"><div><li><div>';
+                content += '<span style="margin-right: 15px;color: #14bec1;">'+ userName +'</span>';
+                content += '<span>'+ v.createTime +'&nbsp;';
+                content += '</span></div>';
+                content += '<div><span class="msg_content1">'+ v.mesContent +'</span></div>';
+                content += '</li></div>';
+
+                $.each(v.commentList, function(c, comment) {
+
+                    var userName = comment.userName;
+                    if(!userName) {
+                        userName = "";
+                    }
+                    content += '<br/><div><li><div>';
+                    content += '<span style="margin-right: 15px;color: #14bce1;">'+ userName +'</span>';
+                    content += '<span>'+ comment.createTime +'</span></div>';
+                    content += '<div><span class="msg_content2">'+ comment.commentContent +'</span><p><a>';
+                    content += '<span style="margin-top: -11px;" class="fa-stack fa-lg">';
+                    content += '<i  class="fa fa-comment fa-stack-1x"></i>';
+                    content += '<i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i></span>';
+                    content += '<span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage('+ v.mesId +', '+ comment.commentId +', '+ comment.commentUserId +');">回复</span>';
+                    content += '</a></p></div></li>';
+
+                    $.each(comment.replyList, function(r, reply) {
+                        var userName = reply.userName;
+                        if(!userName) {
+                            userName = "";
+                        }
+                        var replyToUserName = reply.replyToUserName;
+                        if(!replyToUserName) {
+                            replyToUserName = "";
+                        }
+                        content += '<li style="margin-left:55px;">';
+                        content += '<div>';
+                        content += '<span style="margin-right: 15px;color: #14bce1;">'+ userName +' <i style="color: #999;">回复</i> '+ replyToUserName +'</span>';
+                        content += '<span>'+ reply.createTime +'</span></div>';
+                        content += '<div><span class="msg_content3">'+ reply.replyContent +'</span><p><a>';
+                        content += '<span style="margin-top: -11px;" class="fa-stack fa-lg">';
+                        content += '<i  class="fa fa-comment fa-stack-1x"></i>';
+                        content += '<i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i></span>';
+                        content += '<span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage('+ v.mesId +', '+ comment.commentId +', '+ reply.replyUserId +');">回复</span>';
+                        content += '</a></p></div></li>';
+                    });
+                    content += '</div>';
+                });
+                content += '<br><li>';
+                content += '<textarea class="comment" placeholder="我也说一句" id="commentContent'+ type +'_'+ v.mesId +'"></textarea>';
+                content += '<input type="button" style="float: left;width: 70px;height: 25px;cursor: pointer;color: #fff;border: 1px none;background:#14bce1;margin: 0 12px;" value="评论" onclick="addComment('+ v.mesId +',' + type + ');"/>';
+                content += '</li>';
+                content += '<div class="showfujian">';
+                if(v.attachPaths) {
+                    var attachPathsList = v.attachPaths.split(",");
+                    for (var m = 0; m < attachPathsList.length; m ++) {
+                        content += '<a style="margin-left: 18px;" href="javascript:void();" title="'+ attachPathsList[m] +'" onclick="javascript:doDownload(this);">'+ attachPathsList[m] +'</a>';
+                    }
+                }
+                content += '</div></div></ul>';
+            });
+            if (content == "") {
+                content = '<ul class="topnone">';
+                content += '<li style="width: 100%;color:#f47469;">暂无数据，请创建消息!</li>';
+                content += '</ul>';
+            }
+            switch(type)
+            {
+                case 1: // 全部
+                    $("#contentListAll").append(content);
+                    createPageBar1(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 2: // 我发起的
+                    $("#contentListMy").append(content);
+                    createPageBar2(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 3: // @我的
+                    $("#contentListAt").append(content);
+                    createPageBar3(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+            }
+            layer.close(loadIdx);
+            reloadFocus();
+        }, 'json');
+    }
+    // 刷新消息列表信息
+    function refreshMessageList() {
+        var page1 = $("#page1").val();
+        var page2 = $("#page2").val();
+        var page3 = $("#page3").val();
+
+        getMessageList(1, page1);
+        getMessageList(2, page2);
+        getMessageList(3, page3);
+    }
+    // 查询流程列表信息
+    function getApprovalList(type, page) {
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/getProcessList')}", {"page":page, "type":type}, function(data) {
+            var content = "";
+            switch(type)
+            {
+                case 2: // 待处理
+                    $("#processListWait").empty();
+                    break;
+                case 3: // 已处理
+                    $("#processListApproval").empty();
+                    break;
+            }
+            if (!("processList" in data)) {
+                content = '<ul class="topnone">';
+                content += '<li style="width: 100%;color:#f47469;">暂无数据，请创建消息!</li>';
+                content += '</ul>';
+
+                switch(type)
+                {
+                    case 2: // 待处理
+                        $("#processListWait").append(content);
+                        createPageBar4(data.total, data.pageSize, data.page, data.totalPage);
+                        break;
+                    case 3: // 已处理
+                        $("#processListApproval").append(content);
+                        createPageBar5(data.total, data.pageSize, data.page, data.totalPage);
+                        break;
+                }
+                layer.close(loadIdx);
+                return;
+            }
+            // 设定用户列表
+            $.each(data.processList, function(k, v) {
+                var key = 4;
+                if(type == 3) {
+                    key = 5;
+                }
+                content += '<ul>';
+                content += '<li style="width: 30%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;" title="' + v.title + '">' + v.title + '</li>';
+                content += '<li style="width: 40%;cursor: pointer;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;"><a onclick="showProcessDetail(\'' + v.processId + '\', ' + v.busiType + ', ' + key + ');"> ' + v.formContent + '</a></li>';
+                content += '<li style="width: 30%">' + v.createTime + '</li>';
+                content += '</ul>';
+            });
+            if (content == "") {
+                content = '<ul class="topnone">';
+                content += '<li style="width: 100%;color:#f47469;">暂无数据!</li>';
+                content += '</ul>';
+            }
+            switch(type)
+            {
+                case 2: // 我发起的
+                    $("#processListWait").append(content);
+                    createPageBar4(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+                case 3: // @我的
+                    $("#processListApproval").append(content);
+                    createPageBar5(data.total, data.pageSize, data.page, data.totalPage);
+                    break;
+            }
+            layer.close(loadIdx);
+        }, 'json');
+    }
+ 
+    var myDate = new Date();
+    myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+    myDate.getMonth(); 
+    var monthSelecter=$("#monthSelecter");
+    var nowMonth = getDateMy(301,"","",0);
+    monthSelecter.append('<option value="'+getDateMy(302,nowMonth,"",-2)+'">'+getDateMy(302,nowMonth,"",-2)+'</option>');
+    monthSelecter.append('<option value="'+getDateMy(302,nowMonth,"",-1)+'">'+getDateMy(302,nowMonth,"",-1)+'</option>');     
+    monthSelecter.append('<option selected value="'+nowMonth+'">'+nowMonth+'</option>');     
+    monthSelecter.append('<option value="'+getDateMy(302,nowMonth,"",1)+'">'+getDateMy(302,nowMonth,"",1)+'</option>');     
+    monthSelecter.append('<option value="'+getDateMy(302,nowMonth,"",2)+'">'+getDateMy(302,nowMonth,"",2)+'</option>');     
+    var weekSelecter=$("#weekSelecter");
+    var weekBegin = getDateMy(201,"","",0);
+    var weekEnd = getDateMy(2011,"","",0);
+    weekSelecter.append('<option value="'+getDateMy(202,weekBegin,weekEnd,-2)+'">'+getDateMy(202,weekBegin,weekEnd,-2)+'</option>');
+    weekSelecter.append('<option value="'+getDateMy(202,weekBegin,weekEnd,-1)+'">'+getDateMy(202,weekBegin,weekEnd,-1)+'</option>');     
+    weekSelecter.append('<option selected value="'+weekBegin+"～"+weekEnd+'">'+weekBegin+"～"+weekEnd+'</option>');     
+    weekSelecter.append('<option value="'+getDateMy(202,weekBegin,weekEnd,1)+'">'+getDateMy(202,weekBegin,weekEnd,1)+'</option>');     
+    weekSelecter.append('<option value="'+getDateMy(202,weekBegin,weekEnd,2)+'">'+getDateMy(202,weekBegin,weekEnd,2)+'</option>');     
+    // 刷新流程列表信息
+    function refreshApprovalList() {
+        var page4 = $("#page4").val();
+        var page5 = $("#page5").val();
+
+        getApprovalList(2, page4);
+        getApprovalList(3, page5);
+    }
+    
+	function getDateMy(idValue,inDate,inDate2,subAdd) {
+		//本周
+		if (idValue ==201){
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000); 
+			var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  
+			return fromDate.Format("yyyy-MM-dd")
+		}
+		
+		if (idValue ==2011){
+			var weekDay = new Date().getDay();
+			var fromDate = new Date(new Date().getTime() - weekDay*24*60*60*1000); 
+			var toDate = new Date(new Date().getTime() + (6-weekDay)*24*60*60*1000);  
+			return toDate.Format("yyyy-MM-dd")
+		}
+		
+		//前一周 zhou_dateF
+		if (idValue ==202){ 
+			var oldFromDate =inDate;
+			var oldToDate =inDate2;
+			oldFromDate = new Date(Date.parse(oldFromDate.replace(/-/g, "/")));  
+			oldToDate = new Date(Date.parse(oldToDate.replace(/-/g, "/"))); 
+			var fromDate = new Date(oldFromDate.getTime() + subAdd*7*24*60*60*1000);  //后一天
+			var toDate = new Date(oldToDate.getTime() + subAdd*7*24*60*60*1000);  //后一天
+			return fromDate.Format("yyyy-MM-dd")+"～"+toDate.Format("yyyy-MM-dd")
+		}
+		
+		//本月
+		if (idValue ==301){
+			//document.getElementById("yue_date").value = new Date().Format("yyyy-MM")
+			//document.getElementById("yue_span").innerHTML=document.getElementById("yue_date").value
+			return  new Date().Format("yyyy-MM");
+		}
+		//前一月
+		if (idValue ==302){
+			strDate = inDate+"-01"
+			now = new Date(strDate.replace(/\-/g,"/"));
+			perMonth =new Date( now.setMonth(now.getMonth() + subAdd));
+			//alert (perMonth.Format("yyyy-MM"));
+			//document.getElementById("yue_date").value = perMonth.Format("yyyy-MM");
+			//document.getElementById("yue_span").innerHTML=perMonth.Format("yyyy-MM");
+			return perMonth.Format("yyyy-MM");
+		}
+	}
+</script>
+</body>
+</html>

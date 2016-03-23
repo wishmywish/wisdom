@@ -1,0 +1,441 @@
+[ 2015-10-26T23:59:09+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:14+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-10-26T23:59:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:19+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:24+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:24+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:29+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:29+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:34+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:34+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:39+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:39+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:44+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:44+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:49+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:49+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-10-26T23:59:54+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:54+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:59+08:00 ] ::1 /wisdom/Index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8153 ) LIMIT 1   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-26T23:59:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/getMessageCount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10423 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=8156 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1597 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1952 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

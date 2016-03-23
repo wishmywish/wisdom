@@ -1,0 +1,595 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left" style="margin-right: 20px;">
+        <ul id="bigmenu">
+            <li id="0" class="org_box org_box_select"><span class="org_bot_cor"></span>报销</li>
+            <li id="1" class="org_box"><span ></span>请假</li>
+            <li id="2" class="org_box"><span ></span>出差</li>
+            <li id="3" class="org_box"><span ></span>费用</li>
+        </ul>
+    </div>
+    <div class="approval_center">
+        <!-- 报销-->
+     <div id="a0">
+         <div class="approval_head"> <!--style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"========暂时隐藏，二期做-->
+             <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;报销</span>
+
+             <div class="column">
+                 <span style="float: left;">筛选：</span>
+                 <!-- 员工部门-->
+                 <div class="personmsg">
+                     <ul>
+                         <li>
+                             <label>分类&nbsp;</label>
+                             <select id="reimbursementType">
+                                 <option value="0"> --请选择-- </option>
+                                 <option value="1"> 我参与的 </option>
+                             </select>
+                         </li>
+                         <li>
+                             <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                             <input id="startDate1" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                             <span>&nbsp;至&nbsp;</span>
+                             <input id="endDate1" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                         </li>
+                         <li>
+                             <label>状态&nbsp;</label>
+                             <select id="reimbursementStatus">
+                                 <option value="0"> --请选择-- </option>
+                                 <option value="1"> 已审核 </option>
+                                 <option value="2"> 待审核 </option>
+                             </select>
+                         </li>
+
+                     </ul>
+                 </div>
+                 <!-- 按钮-->
+                 <p style="height: 25px;float: right">
+                     <input id="searchButton" class="bntns" type="button" value="搜索">
+                     <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearReimbursement();">
+                     <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                 </p>
+             </div>
+         </div>
+         <!--列表-->
+         <div class="approval_list">
+             <!-- 按钮=============暂时隐藏，二期开发===========-->
+             <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                 <!--<input id="" class="bntns1" type="button" value="导入">-->
+                 <!--<input id="" class="bntns1" type="button" value="导出">-->
+                 <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addApply()" value="新增">-->
+                 <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+             <!--</p>-->
+             <div class="title">
+                 <ul>
+                     <li style="width: 15%;">编号</li>
+                     <li style="width: 15%;">主题</li>
+                     <li style="width: 30%;">申请内容</li>
+                     <li style="width: 10%;">申请人</li>
+                     <li style="width: 10%;">下级审批人</li>
+                     <li style="width: 10%;">状态</li>
+                     <li style="width: 10%;">申请日期</li>
+                     <!--<li style="width: 10%;">置顶</li>-->
+                     <!--<li style="width: 5%;">附件</li>-->
+                     <!--<li style="width: 10%;">操作</li>-->
+                 </ul>
+             </div>
+             <div class="contentList">
+                 <?PHP for($i=0;$i<6;$i++){?>
+                 <ul>
+                     <li style="width: 15%;">10010010221455</li>
+                     <li style="width: 15%;cursor: pointer;" onclick="showApplyDetail()" title="上海出差报销流程"><a>上海出差报销流程</a></li>
+                     <li style="width: 30%;" title="上海出差住宿和车票报销1000元">上海出差住宿和车票报销1000元</li>
+                     <li style="width: 10%;">小花</li>
+                     <li style="width: 10%;">小鱼</li>
+                     <li style="width: 10%;">待审核</li>
+                     <li style="width: 10%;">2015-9-10</li>
+                 </ul>
+                 <?PHP }?>
+             </div>
+             <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+             </div>
+         </div>
+     </div>
+        <!-- 请假-->
+        <div id="a1" style="display: none;">
+            <div class="approval_head"> <!--  style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=============暂时隐藏，二期开发===========-->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;请假</span>
+
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="leaveType">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 我参与的 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate2" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate2" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <select id="leaveStatus">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 已审核 </option>
+                                    <option value="2"> 待审核 </option>
+                                </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearLeave();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addLeave()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 15%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 30%;">申请内容</li>
+                        <li style="width: 10%;">申请人</li>
+                        <li style="width: 10%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 10%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <?PHP for($i=0;$i<6;$i++){?>
+                    <ul>
+                        <li style="width: 15%;">10010010221455</li>
+                        <li style="width: 15%;cursor: pointer;" onclick="showLeaveDetail()" title="春节请假流程"><a>春节请假流程</a></li>
+                        <li style="width: 30%;" title="由于家住较远，需提前2天回家，顾请2天假。">由于家住较远，需提前2天回家，顾请2天假。</li>
+                        <li style="width: 10%;">小花</li>
+                        <li style="width: 10%;">小鱼</li>
+                        <li style="width: 10%;">待审核</li>
+                        <li style="width: 10%;">2015-9-10</li>
+                    </ul>
+                    <?PHP }?>
+                </div>
+                <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+                </div>
+            </div>
+        </div>
+        <!-- 出差-->
+        <div id="a2" style="display: none;">
+            <div class="approval_head"> <!-- style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=========暂时隐藏，二期开发========= -->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;出差</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="businessTripType">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 我参与的 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate3" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate3" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <select id="businessTripStatus">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 已审核 </option>
+                                    <option value="2"> 待审核 </option>
+                                </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearBusinessTrip();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addTravel()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 15%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 30%;">申请内容</li>
+                        <li style="width: 10%;">申请人</li>
+                        <li style="width: 10%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 10%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <?PHP for($i=0;$i<6;$i++){?>
+                    <ul>
+                        <li style="width: 15%;">10010010221455</li>
+                        <li style="width: 15%;cursor: pointer;" onclick="showTravelDetail()" title="上海出差流程"><a>上海出差流程</a></li>
+                        <li style="width: 30%;" title="因业务需要，需要在下周去上海出差15天。">因业务需要，需要在下周去上海出差15天。</li>
+                        <li style="width: 10%;">小花</li>
+                        <li style="width: 10%;">小鱼</li>
+                        <li style="width: 10%;">待审核</li>
+                        <li style="width: 10%;">2015-9-10</li>
+                    </ul>
+                    <?PHP }?>
+                </div>
+                <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+                </div>
+            </div>
+        </div>
+        <!-- 费用-->
+        <div id="a3" style="display: none;">
+            <div class="approval_head"><!--  style="border-bottom: 1px solid #eaeaea;padding-bottom: 12px;"=============暂时隐藏，二期开发===========-->
+                <span style="display: inline-block;">首页&nbsp;>&nbsp;工作审批>&nbsp;费用</span>
+                <div class="column">
+                    <span style="float: left;">筛选：</span>
+                    <!-- 员工部门-->
+                    <div class="personmsg">
+                        <ul>
+                            <li>
+                                <label>分类&nbsp;</label>
+                                <select id="costType">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 我参与的 </option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>&nbsp;&nbsp;&nbsp;申请日期&nbsp;</span>
+                                <input id="startDate4" class="laydate-icon" value="" placeholder="起始时间" style="width: 85px;padding-left: 8px;height:25px;">
+                                <span>&nbsp;至&nbsp;</span>
+                                <input id="endDate4" class="laydate-icon" value="" placeholder="终止时间" style="width: 85px;padding-left: 8px;height: 25px;">
+                            </li>
+                            <li>
+                                <label>状态&nbsp;</label>
+                                <select id="costStatus">
+                                    <option value="0"> --请选择-- </option>
+                                    <option value="1"> 已审核 </option>
+                                    <option value="2"> 待审核 </option>
+                                </select>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- 按钮-->
+                    <p style="height: 25px;float: right">
+                        <input id="searchButton" class="bntns" type="button" value="搜索">
+                        <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClearCost();">
+                        <!--<input id="exprotButton" class="bntns bntns1" type="button" onclick="location='approvalAdd.html'" value="新增">-->
+                    </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="approval_list">
+                <!-- 按钮=============暂时隐藏，二期开发===========-->
+                <!--<p style="height: 25px;margin: 0 0 12px;float: right;">-->
+                    <!--<input id="" class="bntns1" type="button" value="导入">-->
+                    <!--<input id="" class="bntns1" type="button" value="导出">-->
+                    <!--<input id="" style="background: #00a73c;margin-left: 52px;" class="bntns1" type="button" onclick="addFee()" value="新增">-->
+                    <!--<input id="" style="background: #f47469;" class="bntns1" type="button" value="删除">-->
+                <!--</p>-->
+                <div class="title">
+                    <ul>
+                        <li style="width: 15%;">编号</li>
+                        <li style="width: 15%;">主题</li>
+                        <li style="width: 30%;">申请内容</li>
+                        <li style="width: 10%;">申请人</li>
+                        <li style="width: 10%;">下级审批人</li>
+                        <li style="width: 10%;">状态</li>
+                        <li style="width: 10%;">申请日期</li>
+                        <!--<li style="width: 10%;">置顶</li>-->
+                        <!--<li style="width: 5%;">附件</li>-->
+                        <!--<li style="width: 10%;">操作</li>-->
+                    </ul>
+                </div>
+                <div class="contentList">
+                    <?PHP for($i=0;$i<6;$i++){?>
+                    <ul>
+                        <li style="width: 15%;">10010010221455</li>
+                        <li style="width: 15%;cursor: pointer;" onclick="showFeeDetail()" title="IBM OMS上海出差住宿费申请"><a>IBMOMS上海出差住宿费申请</a></li>
+                        <li style ="width: 30%;" title="需要去上海出差与IBM的相关人员进行业务需求洽谈，住宿费申请">需要去上海出差与IBM的相关人员进行业务需求洽谈，住宿费申请</li>
+                        <li style="width: 10%;">小花</li>
+                        <li style="width: 10%;">小鱼</li>
+                        <li style="width: 10%;">待审核</li>
+                        <li style="width: 10%;">2015-9-10</li>
+                    </ul>
+                    <?PHP }?>
+                </div>
+                <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $('#bigmenu li').click(function(){
+//        $("#business_success_page").empty();
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        //$(this).children().addClass('org_bot_cor');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()==i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",0);
+        Cookie.createCookie("smallMenuIndex",0);
+
+        var start1 = {
+            elem: '#startDate1',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end1.min = datas; //开始日选好后，重置结束日的最小日期
+                end1.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end1 = {
+            elem: '#endDate1',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start1.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start2 = {
+            elem: '#startDate2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end2.min = datas; //开始日选好后，重置结束日的最小日期
+                end2.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end2 = {
+            elem: '#endDate2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start2.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start3 = {
+            elem: '#startDate3',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end3.min = datas; //开始日选好后，重置结束日的最小日期
+                end3.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end3 = {
+            elem: '#endDate3',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start3.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        var start4 = {
+            elem: '#startDate4',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end4.min = datas; //开始日选好后，重置结束日的最小日期
+                end4.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end4 = {
+            elem: '#endDate4',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start4.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start1);
+        laydate(end1);
+        laydate(start2);
+        laydate(end2);
+        laydate(start3);
+        laydate(end3);
+        laydate(start4);
+        laydate(end4);
+
+    });
+
+    //新增报销
+    function addApply(){
+        layer.open({
+            type:2,
+            title :['报销','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addApply'
+        });
+    }
+
+    //报销详细信息
+    function showApplyDetail(){
+        layer.open({
+            type:2,
+            title:['报销','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content: "{:U('Office/showApplyDetail')}"
+        });
+    }
+
+    //新增请假
+    function addLeave(){
+        layer.open({
+            type:2,
+            title :['请假','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addLeave'
+        });
+    }
+
+    //请假详细信息
+    function showLeaveDetail(){
+        layer.open({
+            type:2,
+            title:['请假','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content: "{:U('Office/showLeaveDetail')}"
+        });
+    }
+
+    //新增出差
+    function addTravel(){
+        layer.open({
+            type:2,
+            title :['出差','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addTravel'
+        });
+    }
+
+    //出差详细信息
+    function showTravelDetail(){
+        layer.open({
+            type:2,
+            title:['出差','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content: "{:U('Office/showTravelDetail')}"
+        });
+    }
+
+    //新增费用
+    function addFee(){
+        layer.open({
+            type:2,
+            title :['费用','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addFee'
+        });
+    }
+
+    //费用详细信息
+    function showFeeDetail(){
+        layer.open({
+            type:2,
+            title:['费用','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area:['900px', '589px'],
+            shadeClose:false,
+            content: "{:U('Office/showFeeDetail')}"
+        });
+    }
+
+    // 清空报销检索条件
+    function doClearReimbursement() {
+        $("#reimbursementType").val("0");
+        $("#startDate1").val("");
+        $("#endDate1").val("");
+        $("#reimbursementStatus").val("0");
+    }
+
+    // 清空请假检索条件
+    function doClearLeave() {
+        $("#leaveType").val("0");
+        $("#startDate2").val("");
+        $("#endDate2").val("");
+        $("#leaveStatus").val("0");
+    }
+
+    // 清空出差检索条件
+    function doClearBusinessTrip() {
+        $("#businessTripType").val("0");
+        $("#startDate3").val("");
+        $("#endDate3").val("");
+        $("#businessTripStatus").val("0");
+    }
+
+    // 清空费用检索条件
+    function doClearCost() {
+        $("#costType").val("0");
+        $("#startDate4").val("");
+        $("#endDate4").val("");
+        $("#costStatus").val("0");
+    }
+</script>
+</body>
+</html>

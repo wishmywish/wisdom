@@ -1,0 +1,259 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class ApiController extends Controller
+{
+    static public $treeList = array(); //存放无限分类结果如果一页面有多个无限分类可以使用 Tool::$treeList = array(); 清空
+
+    /**
+     * 无限级分类
+     * @access public
+     * @param Array $data //数据库里获取的结果集
+     * @param string $idField ID字段名
+     * @param string $pidField PID字段名
+     * @param Int $pid
+     * @param Int $count //第几级分类
+     * @return Array $treeList
+     */
+    static public function tree(&$data, $idField = 'id', $pidField = 'pid', $pid = 0, $count = 1)
+    {
+        foreach ($data as $key => $value) {
+            if ($value[$pidField] == $pid) {
+                $value['Count'] = $count;
+                self::$treeList [] = $value;
+                unset($data[$key]);
+                self::tree($data, $idField, $pidField, $value[$idField], $count + 1);
+            }
+        }
+        //pt(self::$treeList);
+        return self::$treeList;
+    }
+
+    /**
+     * 获取指定的一个分类集
+     */
+    function getBigColumn()
+    {
+        $F_SYSCOLUMN_ID = I('get.F_SYSCOLUMN_ID', 0);
+        $re = M('syscolumn')->where('F_SYS_COLUMN_PID=' . $F_SYSCOLUMN_ID . ' and F_SYS_COLUMN_STATE=1')->order('F_SYS_COLUMN_SORT')->select();
+        echo json_encode($re);
+    }
+
+    /**
+     * 获取指定的一个分类集
+     */
+    function getBigC($F_SYSCOLUMN_ID = 0,$SYS_COLUMN_CID = "")
+    {
+        //echo $SYS_COLUMN_CID;
+        if($SYS_COLUMN_CID==""){
+            //echo "22222";
+            $re = M('syscolumn')->where('F_SYS_COLUMN_PID=' . $F_SYSCOLUMN_ID . ' and F_SYS_COLUMN_STATE=1')->order('F_SYS_COLUMN_SORT')->select();
+        }else{
+            //echo "=====";
+            $re = M('syscolumn')->where("F_SYS_COLUMN_PID=" . $F_SYSCOLUMN_ID . " and F_SYS_COLUMN_STATE=1 and F_SYS_COLUMN_CID='".$SYS_COLUMN_CID."'")->order('F_SYS_COLUMN_SORT')->select();
+        }
+        //echo M('syscolumn')->getLastSql();
+        return $re;
+    }
+
+    //退出系统
+    function outLogin()
+    {
+        cookie('loginstrats', 0); //  清空指定前缀的所有cookie值
+        session('loginstrats', 0); //  清空指定前缀的所有session值
+        cookie(null, 'trackearnID');
+        cookie(null, 'trackmakeID');
+    }
+
+
+    public function searchCnameBymobile()
+    {
+        $mobile = I('post.mobile');
+//		echo $mobile."======";
+        $re = A('Api/Jhttp')->getCompanyByMobile($mobile);
+        $arr = json_decode($re, true);
+        $errorCode = $arr['resCode'];
+        if ($errorCode == '000000') {
+            echo json_encode($arr['list']);
+        } else {
+            echo json_encode("");
+        }
+    }
+
+    //用户修改密码
+    public function  WebChangePwd()
+    {
+        $mobile = I('post.mobile');
+        $password = I('post.password');
+        $companyId = I('post.companyId');
+//   	echo $mobile."======";
+        $re = A('Api/Jhttp')->WebChangePwd($mobile, $password, $companyId);
+        $arr = json_decode($re, true);
+        $errorCode = $arr['resCode'];
+        echo json_encode($errorCode);
+//      if($errorCode=='000000'){
+//          echo json_encode();
+//      }else{
+//          echo json_encode("");
+//      }
+    }
+
+    function showProReject($taskid)
+    {
+        set_theme();
+        $taskid = isset($_GET['taskid']) ? $_GET['taskid'] : 0;
+        $this->assign("taskid", $taskid);
+        $map["f_taskid"] = $taskid;
+        $result = M("taskreject")->where($map)->order('f_indexid asc')->select();
+        // var_dump($taskid);
+        //var_dump($result);
+//      exit();
+        foreach ($result as $key => $value) {
+            $re1 = M("sysuser")->where("id=" . $value["f_rejectuserid"])->find();
+//            if(!$re1){
+//                $re=A("Api/Jhttp")->getUserinfo2($value["f_rejectuserid"]);
+//                $arr=json_decode($re,true);
+//                $mobile=$arr["list"]["mobile"];
+//                $nickname=$arr["list"]["trueName"];
+//                if($mobile==""){
+//                    $re1["realname"]=$nickname;
+//                }else{
+//                    $re1["realname"]=$mobile;
+//                }
+//             }
+            $result[$key]['user'] = $re1;
+            $result[$key]['f_datetime'] = date("Y/m/d H:i:s", $value['f_datetime']);
+        }
+//		var_dump($result);
+//		exit;
+        $this->assign("result", $result);
+        $this->display("Public:show_reject");
+    }
+
+    public function preview()
+    {
+        set_theme();
+        $taskid = $_GET['taskid'];
+        $content = M("task")->field("f_tasktypeid")->where("f_tid=".$taskid)->find();
+        $tasktypeid = $content["f_tasktypeid"];
+//        echo $tasktypeid;
+//        exit;
+        if ($tasktypeid == 1) { //推广
+            $j = array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtgoodsdetail ON t_taskmtgoodsdetail.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=" . $taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+            $reModi['tubiao'] = M("files")->where("f_id=" . $reModi["f_fileid"])->find();
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['f_taskrequirements'] = trim($reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\t", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\r\n", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\r", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\n", "", $reModi['f_taskrequirements']);
+            $total=2*$reModi["f_eachcoin"]*$reModi["f_totalcopies"];
+        } elseif ($tasktypeid == 2 || $tasktypeid == 4 || $tasktypeid == 5 || $tasktypeid == 6) { //随手
+            $j = array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtgoodsdetail ON t_taskmtgoodsdetail.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=" . $taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+            $reModi['tubiao'] = M("files")->where("f_id=" . $reModi["f_fileid"])->find();
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['detail'] = M('surveytaskdetail')->where('f_taskid=' . $taskid)->select();
+            foreach ($reModi['detail'] as $key => $value) {
+                $reModi['detail'][$key]['answer'] = explode('|', $value['f_options']);
+                $reModi['detail'][$key]['trueanswer']= explode(',', $value['f_trueanswer']);
+            }
+            $reModi['f_taskrequirements'] = trim($reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\t", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\r\n", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\r", "", $reModi['f_taskrequirements']);
+            $reModi['f_taskrequirements'] = ereg_replace("\n", "", $reModi['f_taskrequirements']);
+            $total=2*$reModi["f_eachcoin"]*$reModi["f_totalcopies"];
+        } elseif ($tasktypeid == 3) { //招商
+            $j = array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid", "LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=" . $taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+
+            $reModi['tubiao'] = M("files")->where("f_id=" . $reModi["f_fileid"])->find();
+            $reModi['guanggao'] = M("files")->where("f_id=" . $reModi["f_fileid_ban"])->find();
+
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['area'] = M("taskmtareaqty")->where("f_taskid=" . $reModi["f_tid"])->select();
+
+
+
+            $reModi['f_note'] = trim($reModi['f_note']);
+            $reModi['f_note'] = ereg_replace("\t", "", $reModi['f_note']);
+            $reModi['f_note'] = ereg_replace("\r\n", "", $reModi['f_note']);
+            $reModi['f_note'] = ereg_replace("\r", "", $reModi['f_note']);
+            $reModi['f_note'] = ereg_replace("\n", "", $reModi['f_note']);
+            $reModi['f_note'] = trim($reModi['f_product']);
+            $reModi['f_product'] = ereg_replace("\t", "", $reModi['f_product']);
+            $reModi['f_product'] = ereg_replace("\r\n", "", $reModi['f_product']);
+            $reModi['f_product'] = ereg_replace("\r", "", $reModi['f_product']);
+            $reModi['f_product'] = ereg_replace("\n", "", $reModi['f_product']);
+
+            $content = M("taskmtattach")->where("f_taskid=" . $taskid)->find();
+            if (isset($content)) {
+                $reModi['attachOne'] = M("files")->where("f_id=" . $content["f_fileid1"])->find();
+                $reModi['attachTwo'] = M("files")->where("f_id=" . $content["f_fileld2"])->find();
+                $reModi['attachThree'] = M("files")->where("f_id=" . $content["f_fileid3"])->find();
+                $reModi['attachFour'] = M("files")->where("f_id=" . $content["f_fileid4"])->find();
+                $reModi['attachFive'] = M("files")->where("f_id=" . $content["f_fileid5"])->find();
+                $reModi['attachSix'] = M("files")->where("f_id=" . $content["f_fileid6"])->find();
+                $reModi['attachSeven'] = M("files")->where("f_id=" . $content["f_fileid7"])->find();
+                $reModi['linkOne'] =__ROOT__.'/Public/upfile/' . $reModi['attachOne']['f_filepath'] . $reModi['attachOne']['f_filename'];
+                $reModi['linkTwo'] =__ROOT__.'/Public/upfile/' . $reModi['attachTwo']['f_filepath'] . $reModi['attachTwo']['f_filename'];
+                $reModi['linkThree'] =__ROOT__.'/Public/upfile/' . $reModi['attachThree']['f_filepath'] . $reModi['attachThree']['f_filename'];
+                $reModi['linkFour'] =__ROOT__.'/Public/upfile/' . $reModi['attachFour']['f_filepath'] . $reModi['attachFour']['f_filename'];
+                $reModi['linkFive'] =__ROOT__. '/Public/upfile/' . $reModi['attachFive']['f_filepath'] . $reModi['attachFive']['f_filename'];
+                $reModi['linkSix'] =__ROOT__. '/Public/upfile/' . $reModi['attachSix']['f_filepath'] . $reModi['attachSix']['f_filename'];
+                $reModi['linkSeven'] =__ROOT__. '/Public/upfile/' . $reModi['attachSix']['f_filepath'] . $reModi['attachSix']['f_filename'];
+            }
+        }
+//        var_dump($reModi);
+//        exit();
+
+        $this->assign('taskid', $taskid);
+        $this->assign('reModi', $reModi);
+        $this->assign('tasktypeid', $tasktypeid);
+
+        if ($tasktypeid == 3) {//招商
+            $this->display("Business:businessPreview");
+        } elseif ($tasktypeid == 2 || $tasktypeid == 4 || $tasktypeid == 5 || $tasktypeid == 6) {
+            $this->assign("total",$total);
+            $this->display("Promotion:widelyPreview");
+        } elseif ($tasktypeid == 1) {//推广
+            $this->assign("total",$total);
+            $this->display("Promotion:pushPreview");
+        }
+
+
+    }
+
+
+    //招商任务新增保存诚信金
+    function  credit(){
+        $this->in_arr=$_POST;
+        //是否监管
+        $jianguan=$this->in_arr['jianguan'];
+        //诚意保证金
+        $bao_money = $this->in_arr['bao_money'];
+        $companyId = $this->in_arr['companyId'];
+        $url = "&credit=".$bao_money."&supervisonUser".$jianguan;
+        $re=A("Api/Jhttp")->companyUpdate($companyId,$url);
+        echo $re;
+
+    }
+
+
+    function getCompanyDetail($companyid){
+        $re = A("Api/Jhttp")->getCompanyInfo($companyid);
+        $arr = json_decode($re,true);
+
+        return $arr["list"];
+    }
+
+//tree(&$data,$idField='f_tradeID',$pidField='f_parentID',$pid = 0,$count = 1)
+    function test(){
+    $re = M("syscolumn")->select();
+    $relist = $this->tree($re,"f_syscolumn_id","f_sys_column_pid");
+    pt($relist);
+    echo json_encode($relist);
+    }
+}

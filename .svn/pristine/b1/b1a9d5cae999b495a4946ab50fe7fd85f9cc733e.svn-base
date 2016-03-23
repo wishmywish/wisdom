@@ -1,0 +1,261 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            新增公告
+        </div>
+    </div>
+    <div class="notice_center">
+        <!--输入框-->
+        <div class="notice_head">
+            <span style="display: inline-block;">公告&nbsp;>&nbsp;新增公告</span>
+        </div>
+        <!--列表-->
+        <div class="notice_list">
+            <div class="titleAdd">公告详情</div>
+            <div class="contentListAdd">
+                <form id="form">
+                <div class="lineTop">
+                    <span>公告主题</span>
+                    <input id="subject" name="subject" style="width: 280px;" type="text"></div>
+                <div class="lineTop">
+                    <span>所属栏目</span>
+                    <select id="boardId" name="boardId" style="width: 280px;height: 25px;">
+                        <option value="">--请选择--</option>
+                        <volist name="queryAllNoticeBoard_list" id="vo">
+                            <option value="{$vo.boardId}">{$vo.boardName}</option>
+                        </volist>
+                    </select>
+                </div>
+                <div class="lineTop">
+                    <span>下达范围</span>
+                    <select id="rangeId" name="rangeId" style="width: 280px;height: 25px;">
+                        <option value="1" selected="selected">下达用户</option>
+                        <option value="2">下达部门</option>
+                    </select>
+                </div>
+                <div id="to_users" class="lineTop" style="display: block;">
+                    <span style="float: left;">下达用户</span>
+                    <textarea style="width: 580px;height: 80px;padding: 5px;"id="userNames" readonly="readonly"></textarea><div style="padding-left: 15px;color: #898989;cursor: pointer;" class="fa fa-plus-square fa-lg" onclick="selectUsers();"></div></div>
+                <div id="to_depts" class="lineTop" style="display:none; ">
+                    <span style="float: left;">下达部门</span>
+                    <textarea  style="width: 580px;height: 60px;padding: 5px;" type="text" id="deptNames" readonly="readonly"></textarea><div style="padding-left: 15px;color: #898989;cursor: pointer;" class="fa fa-plus-square fa-lg" onclick="selectDepts();"></div></div>
+                <div class="lineTop">
+                    <span>公告内容</span>
+                    <br>
+                    <div class="editor" style="min-height:400px;margin-left:16px;margin-top: -13px;">
+                        <script type="text/plain" id="editor" style="width:800px;min-height:400px;" name="content"></script>
+                    </div>
+                </div>
+                <div class="lineTop">
+                    <span>是否置顶</span>
+                    <input id="top_1" name="isTop" style="height: auto;" type="radio" checked="checked" value="1" />
+                    置顶
+                    <input id="top_0" name="isTop" style="height: auto;" type="radio" value="0" />非置顶</div>
+                    <input type="hidden" id="userIds" name="userIds" value="" />
+                    <input type="hidden" id="deptIds" name="deptIds" value="" />
+                    <input type="hidden" id="upfileOldName" name="upfileOldName" value="" />
+                    <input type="hidden" id="upfileType" name="upfileType" value="" />
+                    <input type="hidden" id="upfileSize" name="upfileSize" value="" />
+                    <input type="hidden" id="upfileReturnUrl" name="upfileReturnUrl" value="" />
+                </form>
+                <div class="lineTop">
+                    <span>附件</span>
+                    <button class="bntns" onclick="$('#upfile').click();">上传附件</button>
+                    <form style="display:none;" id="upfileForm" action="{:U('Api/Upfile/upF/type/5')}" method="post" enctype="multipart/form-data">
+                        <input type="file" id="upfile" name="upfile" />
+                    </form>
+                </div>
+                <div id="showUpFile"></div>
+            </div>
+            <div class="notice_btn">
+                <button class="bntns" onclick="doSubmit();">提交</button>
+                <button class="bntns" style="background: #fafafa;color: #595758;" onclick="location.href='{:U('Office/notice')}'">取消</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<include file="Public/loadjs" />
+<script type="text/javascript">
+    //实例化编译器
+    var ue=UM.getEditor('editor',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+    //通过getContent和setContent方法可以设置和读取编译器的内容
+    //读取配置
+    // var lang=ue.getOpt('lang');默认返回：zh-cn
+
+    //加载三级联动
+    //
+    //     _init_area();
+    //     getArea({$reModi.one.f_tid|default=0});
+    //     getPro({$reModi.one.f_tid|default=0});
+
+    UM.getEditor('editor').setContent('{$reModi.pro.f_taskrequirements}',true);
+</script>
+<script>
+    $(function(){
+    });
+    // 下达范围不同的加载显示
+    $("#rangeId").bind("change",function(){
+        if($(this).val()==1){
+            $("#to_depts").hide();
+            $("#to_users").show();
+        }
+        else{
+            $("#to_users").hide();
+            $("#to_depts").show();
+        }
+    });
+
+    function doSubmit() {
+        var subjectObj = $("#subject");
+        if (getValLen(subjectObj) == 0) {
+            layer.msg("公告主题不能为空",{icon: 8});
+            subjectObj.focus();
+            return false;
+        } else if (getValLen(subjectObj) > 64) {
+            layer.msg("公告主题最多为64字",{icon: 8});
+            subjectObj.focus();
+            return false;
+        }
+
+        var boardIdObj = $("#boardId");
+        if (getValLen(boardIdObj) == 0) {
+            layer.msg("请选择所属栏目",{icon: 8});
+            boardIdObj.focus();
+            return false;
+        }
+        var rangeIdObj = $("#rangeId");
+        if (getValLen(rangeIdObj) == 0) {
+            layer.msg("请选择下达范围",{icon: 8});
+            rangeIdObj.focus();
+            return false;
+        }
+        var userIdsObj = $("#userIds");
+        if (getValLen(userIdsObj) > 500) {
+            layer.msg("下达用户选择过多，最多500字符",{icon: 8});
+            userIdsObj.focus();
+            return false;
+        }
+
+        var deptIdsObj = $("#deptIdsObj");
+        if (getValLen(deptIdsObj) > 500) {
+            layer.msg("下达部门选择过多，最多500字符",{icon: 8});
+            deptIdsObj.focus();
+            return false;
+        }
+
+        var contentObj = $("#umeditor_textarea_content");
+        if (getValLen(contentObj) == 0) {
+            layer.msg("公告内容不能为空",{icon: 8});
+            contentObj.focus();
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form").serializeArray();
+        $.post("{:U('Office/noticeAdd')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("成功", {time: 2*1000});
+                location.href="{:U('Office/notice')}";
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+
+    function selectUsers() {
+        var userNames = $("#userNames").val();
+        var userIds = $("#userIds").val();
+        layer.open({
+            type:2,
+            title :['发送到用户','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['800px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectUsers')}" + "?userNames=" + userNames + "&userIds=" + userIds,
+        });
+    }
+
+    function selectDepts() {
+        var deptNames = $("#deptNames").val();
+        var deptIds = $("#deptIds").val();
+        layer.open({
+            type:2,
+            title :['发送到部门','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['400px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectDepts')}" + "?deptNames=" + deptNames + "&deptIds=" + deptIds,
+        });
+    }
+
+    $("#upfile").change(function(){
+        var returnUrl = $("#upfileReturnUrl").val();
+        var list = returnUrl.split(",");
+
+        if(list.length >= 5) {
+            layer.msg("最多上传5个附件",{icon: 8});
+            return false;
+        } else {
+            fileUpload();
+            $("#upfile").val("");
+        }
+    });
+
+    function fileUpload() {
+        var showUpFile = $("#showUpFile").html();
+        var upfileOldName = $("#upfileOldName").val();
+        var upfileType = $("#upfileType").val();
+        var upfileSize = $("#upfileSize").val();
+        var upfileReturnUrl = $("#upfileReturnUrl").val();
+        $("#upfileForm").ajaxSubmit({
+            dataType:  "json", //数据格式为json 
+            success: function(data) { //成功
+                if(data.error_no == "999999") {
+                    layer.msg("上传失败",{icon: 8});
+                } else {
+                    layer.msg("上传成功");
+                    if(upfileOldName != "") {
+                        upfileOldName += ",";
+                        upfileType += ",";
+                        upfileSize += ",";
+                        upfileReturnUrl += ",";
+                    }
+                    upfileOldName += data.upfile.name;
+                    upfileType += data.upfile.type;
+                    upfileSize += data.upfile.size;
+                    upfileReturnUrl += data.upfile.savepath + data.upfile.savename;
+                    $("#upfileOldName").val(upfileOldName);
+                    $("#upfileType").val(upfileType);
+                    $("#upfileSize").val(upfileSize);
+                    $("#upfileReturnUrl").val(upfileReturnUrl);
+
+                    if(showUpFile != "") {
+                        showUpFile += ", ";
+                    }
+                    showUpFile += data.upfile.name;
+
+                    $("#showUpFile").html(showUpFile);
+                }
+            }, 
+            error:function(xhr){
+                layer.msg("上传失败",{icon: 8});
+            }
+        });
+    }
+</script>
+</body>
+</html>

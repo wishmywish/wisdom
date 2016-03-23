@@ -1,0 +1,278 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class TaskController extends Controller {
+    
+    public function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $access = I('get.access','000000');
+        A("Api/Fun")->isAccess($access);//判断菜单权限
+        $this->assign('access',$access);//传入HTML，功能权限使用
+
+        $this->display();
+    }
+    
+    /**
+     * 随手赚
+     */
+    public function add_widely() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        // var_dump($reModi);exit();
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','2');
+        $this->assign("tab", $tab);
+        $this->display();
+    }
+    /**
+     * 推广赚
+     */
+    public function add_push() {
+        set_theme();
+        
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','1');
+        $this->assign("tab", $tab);
+        
+        
+        $this->display();
+        
+    }
+    /**
+     * 招商赚
+     */
+    public function add_business() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->getModiTask();//取要修改的记录数据
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+        $taskid=I('taskid')?I('taskid'):0;
+        if ($taskid != 0) {
+            $re=M('task')->where("f_tid=".$taskid)->find();
+            $userDetails = A('Api/Jhttp')->getCompanyInfo($re['f_companyid']);
+            
+            $arr=json_decode($userDetails,true);
+            if (!empty($arr['list']['companyExtList'])) {
+                foreach ($arr['list']['companyExtList'] as $key => $value) {
+                    if (isset($value['extValue'])) {
+                        $arr['list']['companyExtList'][$key]['f_name'] = M("files")->where("f_id=".$value['extValue'])->find();
+                    }
+                }
+            }
+            // var_dump($arr);exit();
+            if($arr['resCode']=="000000"){
+                $this->assign('arr', $arr);
+            }
+        }
+
+        $tab = A('Api/Fun')->getTypeName('array');
+        $this->assign('classtype','3');
+        $this->assign("tab", $tab);
+        $this->display();
+    }
+
+    /**
+     * 驳回任务
+     */
+    public function reject() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 客服审核
+     */
+    public function review() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 财务审核
+     */
+    public function cwReview() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 任务延时
+     */
+    public function taskDelay() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $reModi = A('Api/Web')->getDelayTask();//取要修改的记录数据
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 下架
+     */
+    public function underCarriage() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid=$_GET['taskid'];
+
+        $this->assign('taskid',$taskid);
+        $this->display();
+    }
+
+    /**
+     * 预览任务
+     */
+    public function preview() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $taskid=$_GET['taskid'];
+        $content = M("task")->field("f_tasktypeid")->where("f_tid=".$taskid)->find();
+        $tasktypeid= $content["f_tasktypeid"];
+
+        if($tasktypeid==1){
+            $j=array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtgoodsdetail ON t_taskmtgoodsdetail.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=".$taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+            $reModi['tubiao'] = M("files")->where("f_id=".$reModi["f_fileid"])->find();
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['f_taskrequirements'] = trim($reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\t","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\r\n","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\r","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\n","",$reModi['f_taskrequirements']);
+        }elseif($tasktypeid==2 || $tasktypeid==4 || $tasktypeid==5 || $tasktypeid==6){
+            $j=array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtgoodsdetail ON t_taskmtgoodsdetail.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=".$taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+            $reModi['tubiao'] = M("files")->where("f_id=".$reModi["f_fileid"])->find();
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['detail'] = M('surveytaskdetail')->where('f_taskid='.$taskid)->select();
+            foreach ( $reModi['detail'] as $key => $value) {
+                $reModi['detail'][$key]['answer']= explode('|', $value['f_options']);
+            }
+            $reModi['f_taskrequirements'] = trim($reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\t","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\r\n","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\r","",$reModi['f_taskrequirements']);  
+            $reModi['f_taskrequirements'] = ereg_replace("\n","",$reModi['f_taskrequirements']);
+        }elseif($tasktypeid==3){
+            $j=array("LEFT JOIN t_tasksmallinfo ON t_tasksmallinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtbaseinfo ON t_taskmtbaseinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtdetailedinfo ON t_taskmtdetailedinfo.f_taskid = t_task.f_tid","LEFT JOIN t_taskmtattach ON t_taskmtattach.f_taskid = t_task.f_tid");
+            $reModi = M('task')->where("t_task.f_tid=".$taskid)->join($j)->order('t_task.f_creatdate desc')->find();
+
+            $reModi['tubiao'] = M("files")->where("f_id=".$reModi["f_fileid"])->find();
+            $reModi['guanggao'] = M("files")->where("f_id=".$reModi["f_fileid_ban"])->find();
+
+            $reModi['company'] = $this->getCompanyDetail($reModi["f_companyid"]);
+            $reModi['area'] = M("taskmtareaqty")->where("f_taskid=".$reModi["f_tid"])->select();
+
+            $content = M("taskmtattach")->where("f_taskid=".$taskid)->find();
+            if (isset($content)) {
+                $reModi['attachOne'] = M("files")->where("f_id=".$reModi["f_fileid1"])->find();
+                $reModi['attachTwo'] = M("files")->where("f_id=".$reModi["f_fileld2"])->find();
+                $reModi['attachThree'] = M("files")->where("f_id=".$reModi["f_fileid3"])->find();
+                $reModi['attachFour'] = M("files")->where("f_id=".$reModi["f_fileid4"])->find();
+                $reModi['attachFive'] = M("files")->where("f_id=".$reModi["f_fileid5"])->find();
+                $reModi['attachSix'] = M("files")->where("f_id=".$reModi["f_fileid6"])->find();
+                $reModi['attachSeven'] = M("files")->where("f_id=".$reModi["f_fileid7"])->find();
+                $reModi['linkOne'] = C("WebUrl").'/Public/upfile/'.$reModi['attachOne']['f_filepath'].$reModi['attachOne']['f_filename'];
+                $reModi['linkTwo'] = C("WebUrl").'/Public/upfile/'.$reModi['attachTwo']['f_filepath'].$reModi['attachTwo']['f_filename'];
+                $reModi['linkThree'] = C("WebUrl").'/Public/upfile/'.$reModi['attachThree']['f_filepath'].$reModi['attachThree']['f_filename'];
+                $reModi['linkFour'] = C("WebUrl").'/Public/upfile/'.$reModi['attachFour']['f_filepath'].$reModi['attachFour']['f_filename'];
+                $reModi['linkFive'] = C("WebUrl").'/Public/upfile/'.$reModi['attachFive']['f_filepath'].$reModi['attachFive']['f_filename'];
+                $reModi['linkSix'] = C("WebUrl").'/Public/upfile/'.$reModi['attachSix']['f_filepath'].$reModi['attachSix']['f_filename'];
+                $reModi['linkSeven'] = C("WebUrl").'/Public/upfile/'.$reModi['attachSeven']['f_filepath'].$reModi['attachSeven']['f_filename'];
+            }
+            
+            $reModi['f_note'] = trim($reModi['f_note']);  
+            $reModi['f_note'] = ereg_replace("\t","",$reModi['f_note']);  
+            $reModi['f_note'] = ereg_replace("\r\n","",$reModi['f_note']);  
+            $reModi['f_note'] = ereg_replace("\r","",$reModi['f_note']);  
+            $reModi['f_note'] = ereg_replace("\n","",$reModi['f_note']);
+        }
+
+        // var_dump($reModi);
+        // exit();
+        $this->assign('taskid',$taskid);
+        $this->assign('reModi',$reModi);
+        $this->assign('tasktypeid',$tasktypeid);
+
+        if ($tasktypeid==3) {
+            $this->display("businessPreview");
+        }elseif ($tasktypeid==2 || $tasktypeid==4 || $tasktypeid==5 || $tasktypeid==6) {
+            $this->display("widelyPreview");
+        }elseif ($tasktypeid==1) {
+            $this->display("pushPreview");
+        }
+    }
+
+    function getUserDetail($userid){
+        $re = A("Api/Jhttp")->getUserinfo2($userid);
+        $arr = json_decode($re,true);
+        return $arr["list"];
+    }
+
+    function getCompanyDetail($companyid){
+        $re = A("Api/Jhttp")->getCompanyInfo($companyid);
+        $arr = json_decode($re,true);
+
+        return $arr["list"];
+    }
+
+    function showProReject($taskid){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $taskid = isset($_GET['taskid'])? $_GET['taskid'] : 0 ;
+        $this->assign("taskid",$taskid);
+
+
+
+        $map["f_taskid"]=$taskid;
+        $result = M("taskreject")->where($map)->order('f_indexid asc')->select();
+        if (!empty($result)) {
+            foreach ($result as $key => $value) {
+                $result[$key]['user'] = M("sysuser")->where("id=".$value["f_rejectuserid"])->find();
+                $result[$key]['f_datetime'] = date("Y/m/d H:i:s",$value['f_datetime']);
+            }
+            $this->assign("reModi","000000");
+        }
+
+        $this->assign("result",$result);
+
+
+        $this->display();
+    }
+
+}

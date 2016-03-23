@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>咨询信息</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+             var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        </script>
+        <style>
+            html,body{margin:auto;padding:0px;font-size:12px;}
+            ul li{
+                list-style:  none;
+            }
+            .comments { 
+    min-height: 108px;
+    overflow: auto;
+    padding: 0;
+    width: 100%;
+    word-break: break-all;
+    resize:none;
+    
+/*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时， 
+当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/ 
+} 
+.mydiv {
+border:1px #ccc solid;margin: 15px;height: 300px;overflow-y: auto;
+}
+.ques{
+    border:1px #ccc solid;border-radius:25px;line-height:20px;width:400px; margin-left: -20px; margin-top:20px;background: #14bec1 none repeat scroll 0 0;color: #fff;float:left;padding:10px
+}
+.ans{
+    border:1px #ccc solid;border-radius:25px;line-height:20px;width:400px;margin: 20px;background: #f47469 none repeat scroll 0 0;color: #fff;float: right;padding:10px
+}
+
+       </style>
+    </head>
+    <body>
+        <div>
+<!--            <form>
+                <label for="ques">贵公司在推广上有什么优惠政策吗？</label>
+                <button>回复</button>
+            </form>-->
+<div class="mydiv">
+    <ul>
+    </ul>
+</div>
+
+<div style="margin: 15px;">
+  <textarea class="comments" rows=1 name=s1 cols=27 onpropertychange= "this.style.posHeight=this.scrollHeight "></textarea>
+</div>
+<!--  <div style="margin-left: 200px; margin-top: -20px;">回复</div>-->
+<div class="chat-view-window-bottom" style="width:100%;background:#f9f9f9;border-radius:0px 0px 0px 5px;-moz-border-radius:0px 0px 0px 5px;-webkit-border-radius:0px 0px 0px 5px">
+    <div class="chat-view-submit" style=" margin: 6px; float: right;border: 1px solid rgb(204, 204, 204);width: auto; height: 26px; line-height: 26px; text-align: center; padding: 0px 25px; cursor: pointer;">发送</div>
+    <div style="clear:both;"></div>    
+</div>
+        </div>
+<include file="Public/loadjs" />
+        <script>
+            $('.mydiv').scrollTop( $('.mydiv')[0].scrollHeight);
+
+            //发送即时信息
+            $(".chat-view-submit").click(function(){
+                var ans= $(".comments").val().replace(/\n/g,"<br/>"); //js替换回车处理
+
+                var time=new Date();
+                year=time.getFullYear();
+                month=time.getMonth()+1;
+                date=time.getDate();
+                hour=time.getHours();
+                min=time.getMinutes();
+                second=time.getSeconds();
+                
+//                var mytime=year+"/"+month+"/"+date+"/"+hour+":"+min+":"+second;
+                var mytime=year+"-"+month+"-"+date+"&nbsp;&nbsp;"+hour+":"+min+":"+second;
+
+        
+                if(ans===""){
+                    layer.msg("消息不能为空",{icon:8});
+                    return false;
+                    $(".comments").focus();
+                }else if($(".mydiv ul li>span").html()=="暂无消息"){
+                     $(".mydiv ul").empty();
+                     $(".mydiv ul").append("<li class='ans'><span>"+ans+"</span><br><span style='float:right;color: #fff;'>"+mytime+"</span></li>");
+                     $(".comments").val("");
+                     $(".comments").focus();
+                } else{
+                    $(".mydiv ul").append("<li class='ans'><span>"+ans+"</span><br><span style='float:right;color: #fff;'>"+mytime+"</span></li>");
+                    $(".comments").val("");
+                    $.post(APP+"/Api/Info/conf","command=addTalk&dealerid="+{$dealerid}+"&companyid="+{$companyid}+"&content="+ans,function(rel){
+                          if(rel.error_code=="success"){
+//                              layer.msg("成功");
+                          }
+                          
+                    },"json");
+         
+                }
+                  $('.mydiv').scrollTop( $('.mydiv')[0].scrollHeight);
+          });
+
+
+            //获取聊天内容
+          $.post(APP+"/Api/Info/conf","command=getTalkList&dealerid={$dealerid}",function(rel){
+                 if(rel.error_code=="success"){
+                      $(".mydiv ul").empty();
+                      $.each(rel.list,function(i,v){
+                          if(v.f_userid==0){
+                              $(".mydiv ul").append("<li class='ans'><span>"+v.f_content+"</span><br><span style='float:right;color: #fff;'>"+createDate2(v.f_datetime)+"</span></li>");
+                          }else{
+                              $(".mydiv ul").append("<li class='ques'><span>"+v.f_content+"</span><br><span style='float:right;color: #fff;'>"+createDate2(v.f_datetime)+"</span></li>");
+                          }
+                      });
+                  }
+
+                  if(rel.error_code=="list_empty"){
+                      $(".mydiv ul").empty();
+                      $(".mydiv ul").append("<li class='ques'><span>暂无消息</span></li>");
+                  }
+
+          },"json");
+        </script>
+    </body>
+</html>

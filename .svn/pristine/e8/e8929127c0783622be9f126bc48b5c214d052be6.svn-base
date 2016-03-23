@@ -1,0 +1,292 @@
+<include file="Public/head" />
+<style type="text/css">
+.access,.power1,.power2,.power3,.power4,.power5,.power6,.power7,.power8,.power9,.powe10{
+    border: 1px #ecf0f5 solid;
+}
+
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+                <div class="page_next" id="push_one">
+
+                    <div class="power">
+                        <div class="power_input">
+                            <span>角色名：</span> <input type="text" id="accessName" placeholder="角色名" value="">
+                        </div>
+                    </div>
+                    <div class="access">
+                        <div class="power1">
+                            <div class="power_input1">
+                                <input type="checkbox" id="task1" name="task1"  value="100" onclick="access_show1(this);"><label for="task1">任务管理</label>
+                                <div class="power_input1_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power11" name="power11"  value="a" ><label for="power11">添加</label>
+                                    <input type="checkbox" id="power21" name="power11"  value="b" ><label for="power21">修改</label>
+                                    <input type="checkbox" id="power31" name="power11"  value="c" ><label for="power31">删除</label>
+                                    <input type="checkbox" id="power41" name="power11"  value="d" ><label for="power41">客服审核</label>
+                                    <input type="checkbox" id="power51" name="power11"  value="e" ><label for="power51">驳回</label>
+                                    <input type="checkbox" id="power61" name="power11"  value="f" ><label for="power61">延时</label>
+                                    <input type="checkbox" id="power71" name="power11"  value="g" ><label for="power71">更新</label>
+                                    <input type="checkbox" id="power81" name="power11"  value="h" ><label for="power81">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power2">
+                            <div class="power_input2">
+                                <input type="checkbox" id="task2" name="task2"  value="200" onclick="access_show2(this);"><label for="task2">任务审核</label>
+                                <div class="power_input2_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power12" name="power12"  value="a" ><label for="power12">添加</label>
+                                    <input type="checkbox" id="power22" name="power12"  value="b" ><label for="power22">修改</label>
+                                    <input type="checkbox" id="power32" name="power12"  value="c" ><label for="power32">删除</label>
+                                    <input type="checkbox" id="power42" name="power12"  value="d" ><label for="power42">客服审核</label>
+                                    <input type="checkbox" id="power52" name="power12"  value="e" ><label for="power52">驳回</label>
+                                    <input type="checkbox" id="power62" name="power12"  value="f" ><label for="power62">延时</label>
+                                    <input type="checkbox" id="power72" name="power12"  value="g" ><label for="power72">更新</label>
+                                    <input type="checkbox" id="power82" name="power12"  value="h" ><label for="power82">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power3">
+                            <div class="power_input3">
+                                <input type="checkbox" id="task3" name="task3"  value="300" onclick="access_show3(this);"><label for="task3">业务员管理</label>
+                                <div class="power_input3_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power13" name="power13"  value="a" ><label for="power13">添加</label>
+                                    <input type="checkbox" id="power23" name="power13"  value="b" ><label for="power23">修改</label>
+                                    <input type="checkbox" id="power33" name="power13"  value="c" ><label for="power33">删除</label>
+                                    <input type="checkbox" id="power43" name="power13"  value="d" ><label for="power43">客服审核</label>
+                                    <input type="checkbox" id="power53" name="power13"  value="e" ><label for="power53">驳回</label>
+                                    <input type="checkbox" id="power63" name="power13"  value="f" ><label for="power63">延时</label>
+                                    <input type="checkbox" id="power73" name="power13"  value="g" ><label for="power73">更新</label>
+                                    <input type="checkbox" id="power83" name="power13"  value="h" ><label for="power83">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power4">
+                            <div class="power_input4">
+                                <input type="checkbox" id="task4" name="task4"  value="400" onclick="access_show4(this);"><label for="task4">企业管理</label>
+                                <div class="power_input4_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power14" name="power14"  value="a" ><label for="power14">添加</label>
+                                    <input type="checkbox" id="power24" name="power14"  value="b" ><label for="power24">修改</label>
+                                    <input type="checkbox" id="power34" name="power14"  value="c" ><label for="power34">删除</label>
+                                    <input type="checkbox" id="power44" name="power14"  value="d" ><label for="power44">客服审核</label>
+                                    <input type="checkbox" id="power54" name="power14"  value="e" ><label for="power54">驳回</label>
+                                    <input type="checkbox" id="power64" name="power14"  value="f" ><label for="power64">延时</label>
+                                    <input type="checkbox" id="power74" name="power14"  value="g" ><label for="power74">更新</label>
+                                    <input type="checkbox" id="power84" name="power14"  value="h" ><label for="power84">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power5">
+                            <div class="power_input5">
+                                <input type="checkbox" id="task5" name="task5"  value="500" onclick="access_show5(this);"><label for="task5">活动与广告</label>
+                                <div class="power_input5_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power15" name="power15"  value="a" ><label for="power15">添加</label>
+                                    <input type="checkbox" id="power25" name="power15"  value="b" ><label for="power25">修改</label>
+                                    <input type="checkbox" id="power35" name="power15"  value="c" ><label for="power35">删除</label>
+                                    <input type="checkbox" id="power45" name="power15"  value="d" ><label for="power45">客服审核</label>
+                                    <input type="checkbox" id="power55" name="power15"  value="e" ><label for="power55">驳回</label>
+                                    <input type="checkbox" id="power65" name="power15"  value="f" ><label for="power65">延时</label>
+                                    <input type="checkbox" id="power75" name="power15"  value="g" ><label for="power75">更新</label>
+                                    <input type="checkbox" id="power85" name="power15"  value="h" ><label for="power85">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power6">
+                            <div class="power_input6">
+                                <input type="checkbox" id="task6" name="task6"  value="600" onclick="access_show6(this);"><label for="task6">提现管理</label>
+                                <div class="power_input6_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power16" name="power16"  value="a" ><label for="power16">添加</label>
+                                    <input type="checkbox" id="power26" name="power16"  value="b" ><label for="power26">修改</label>
+                                    <input type="checkbox" id="power36" name="power16"  value="c" ><label for="power36">删除</label>
+                                    <input type="checkbox" id="power46" name="power16"  value="d" ><label for="power46">客服审核</label>
+                                    <input type="checkbox" id="power56" name="power16"  value="e" ><label for="power56">驳回</label>
+                                    <input type="checkbox" id="power66" name="power16"  value="f" ><label for="power66">延时</label>
+                                    <input type="checkbox" id="power76" name="power16"  value="g" ><label for="power76">更新</label>
+                                    <input type="checkbox" id="power86" name="power16"  value="h" ><label for="power86">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power7">
+                            <div class="power_input7">
+                                <input type="checkbox" id="task7" name="task7"  value="700" onclick="access_show7(this);"><label for="task7">报表中心</label>
+                                <div class="power_input7_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power17" name="power17"  value="a" ><label for="power17">添加</label>
+                                    <input type="checkbox" id="power27" name="power17"  value="b" ><label for="power27">修改</label>
+                                    <input type="checkbox" id="power37" name="power17"  value="c" ><label for="power37">删除</label>
+                                    <input type="checkbox" id="power47" name="power17"  value="d" ><label for="power47">客服审核</label>
+                                    <input type="checkbox" id="power57" name="power17"  value="e" ><label for="power57">驳回</label>
+                                    <input type="checkbox" id="power67" name="power17"  value="f" ><label for="power67">延时</label>
+                                    <input type="checkbox" id="power77" name="power17"  value="g" ><label for="power77">更新</label>
+                                    <input type="checkbox" id="power87" name="power17"  value="h" ><label for="power87">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power8">
+                            <div class="power_input8">
+                                <input type="checkbox" id="task8" name="task8"  value="800" onclick="access_show8(this);"><label for="task8">招商进度管理</label>
+                                <div class="power_input8_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power18" name="power18"  value="a" ><label for="power18">添加</label>
+                                    <input type="checkbox" id="power28" name="power18"  value="b" ><label for="power28">修改</label>
+                                    <input type="checkbox" id="power38" name="power18"  value="c" ><label for="power38">删除</label>
+                                    <input type="checkbox" id="power48" name="power18"  value="d" ><label for="power48">客服审核</label>
+                                    <input type="checkbox" id="power58" name="power18"  value="e" ><label for="power58">驳回</label>
+                                    <input type="checkbox" id="power68" name="power18"  value="f" ><label for="power68">延时</label>
+                                    <input type="checkbox" id="power78" name="power18"  value="g" ><label for="power78">更新</label>
+                                    <input type="checkbox" id="power88" name="power18"  value="h" ><label for="power88">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power9">
+                            <div class="power_input9">
+                                <input type="checkbox" id="task9" name="task9"  value="900" onclick="access_show9(this);"><label for="task9">产品列表管理</label>
+                                <div class="power_input9_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power19" name="power19"  value="a" ><label for="power19">添加</label>
+                                    <input type="checkbox" id="power29" name="power19"  value="b" ><label for="power29">修改</label>
+                                    <input type="checkbox" id="power39" name="power19"  value="c" ><label for="power39">删除</label>
+                                    <input type="checkbox" id="power49" name="power19"  value="d" ><label for="power49">客服审核</label>
+                                    <input type="checkbox" id="power59" name="power19"  value="e" ><label for="power59">驳回</label>
+                                    <input type="checkbox" id="power69" name="power19"  value="f" ><label for="power69">延时</label>
+                                    <input type="checkbox" id="power79" name="power19"  value="g" ><label for="power79">更新</label>
+                                    <input type="checkbox" id="power89" name="power89"  value="h" ><label for="power89">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="power10">
+                            <div class="power_input">
+                                <input type="checkbox" id="task10" name="task10"  value="1000" onclick="access_show10(this);"><label for="task10">消费记录管理</label>
+                                <div class="power_input10_access" style="display: none;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="power110" name="power10"  value="a" ><label for="power110">添加</label>
+                                    <input type="checkbox" id="power210" name="power10"  value="b" ><label for="power210">修改</label>
+                                    <input type="checkbox" id="power310" name="power10"  value="c" ><label for="power310">删除</label>
+                                    <input type="checkbox" id="power410" name="power10"  value="d" ><label for="power410">客服审核</label>
+                                    <input type="checkbox" id="power510" name="power10"  value="e" ><label for="power510">驳回</label>
+                                    <input type="checkbox" id="power610" name="power10"  value="f" ><label for="power610">延时</label>
+                                    <input type="checkbox" id="power710" name="power10"  value="g" ><label for="power710">更新</label>
+                                    <input type="checkbox" id="power810" name="power10"  value="h" ><label for="power810">财务审核</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="next_btn" style="margin-bottom: 115px;">
+                        <a class="btn btn-default" href="#" role="button" id="btn_add_access" style="margin-top: 115px;">确定</a>
+                    </div>
+                    <div class="line_one"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+    // console.log($("#task1").attr("checked"));
+    //         if($("#task1").attr("checked")==true){
+    //             $(".power_input1_access").show();
+    //         }
+            // if($("input:[name='task1']:checked").val()==100){
+            //      $(".power_input1_access").show();
+            // }
+    function access_show1(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input1_access").show();
+        }else{
+            //未选中状态
+          $(".power_input1_access").hide();
+        }
+    }
+    function access_show2(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input2_access").show();
+        }else{
+            //未选中状态
+          $(".power_input2_access").hide();
+        }
+    }
+    function access_show3(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input3_access").show();
+        }else{
+            //未选中状态
+          $(".power_input3_access").hide();
+        }
+    }
+    function access_show4(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input4_access").show();
+        }else{
+            //未选中状态
+          $(".power_input4_access").hide();
+        }
+    }
+    function access_show5(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input5_access").show();
+        }else{
+            //未选中状态
+          $(".power_input5_access").hide();
+        }
+    }
+    function access_show6(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input6_access").show();
+        }else{
+            //未选中状态
+          $(".power_input6_access").hide();
+        }
+    }
+    function access_show7(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input7_access").show();
+        }else{
+            //未选中状态
+          $(".power_input7_access").hide();
+        }
+    }
+    function access_show8(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input8_access").show();
+        }else{
+            //未选中状态
+          $(".power_input8_access").hide();
+        }
+    }
+    function access_show9(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input9_access").show();
+        }else{
+            //未选中状态
+          $(".power_input9_access").hide();
+        }
+    }
+    function access_show10(obj){
+        if(obj.checked){
+            //选中状态
+          $(".power_input10_access").show();
+        }else{
+            //未选中状态
+          $(".power_input10_access").hide();
+        }
+    }
+    </script>
+</html>

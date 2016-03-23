@@ -1,0 +1,45 @@
+<include file="Public/head" title="业务员管理" />
+
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <div class="righttop"></div>
+                <div class="breadlist">首页 / 业务员管理</div>
+
+                <div class="tabli">
+                    <ul id="tabli_bid">
+                        <li value="1" class='<eq name="classtype" value="1">selected</eq>' id="messages" ><a href="__APP__/Taskadmin/Report/index" style="text-decoration:none;color:black;">统计报表</a></li>
+                        <li value="2" class='<eq name="classtype" value="2">selected</eq>'><a href="{:U('Taskadmin/Sales/index1')}" style="color:black;text-decoration: none;">全部业务员</a><span id="all"></span></li>
+                        <li value="3" class='<eq name="classtype" value="3">selected</eq>'><a href="{:U('Taskadmin/Sales/realName1')}" style="color:black;text-decoration: none;">已实名认证</a><span id="name"></span></li>
+                        <li value="4" class='<eq name="classtype" value="4">selected</eq>'><a href="{:U('Taskadmin/Sales/cardBind')}" style="color:black;text-decoration: none;">已银行卡绑定</a><span id="card"></span></li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                            <li style='width:20%;'>手机号</li>
+                            <li style='width:15%;'>姓名</li>
+                            <li style='width:15%;'>金币</li>
+                            <li style='width:15%;'>银票</li>
+                            <li style='width:10%;'>认领任务数</li>
+                            <li style='width:10%;'>注册时间</li>
+                            <li style='width:10%;'>状态</li>
+                    </ul>
+                    <div class='listinfo'>
+                        <ul>
+                            <li style='width:100%;'>暂无业务员数据</li>
+                        </ul>
+                    </div>
+                    <div class="page"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+        plist_Sales(1,1);
+    </script>
+</html>

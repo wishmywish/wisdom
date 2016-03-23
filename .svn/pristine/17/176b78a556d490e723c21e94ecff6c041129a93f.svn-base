@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        textarea{font-family: '宋体'; color: #646464; font-size: 14px;border: 1px solid #a9a9a9;}
+        textarea[disabled]{ background: #fafafa;}
+        input{border: 1px solid #a9a9a9;}
+        input[disabled]{ background: #fafafa;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden;width: 100%; }
+
+        .nav{float: left;
+            height: 25px;
+            margin: 20px 0 0 57px;
+            width: 100%;}
+        .nav ul li{display: inline-block;float: left;cursor: pointer;}
+        .nav .cur{color: red;}
+        .content{display: none;width: 100%;float: left;}
+        .content table{float: left;width: 786px;border: 1px solid #e2e0e0;border-collapse: collapse;text-align: center;margin: 20px 0 60px 0;}
+        .content table  tr  td{border: 1px solid #e2e0e0;line-height: 20px;}
+        .content table  tr  th{border: 1px solid #e2e0e0;font-weight: normal;}
+        .cur1{display: block;}
+        .list{ margin: 0 0 0 57px;}
+        .list ul{ margin-top:20px; width: 100%;}
+        .list ul input{width: 80px;margin: 0 -7px;  background: #fafafa;height: 25px;}
+        .list ul li{ float: left; margin-right: 25px;}
+        .list ul li span{width: 100px;text-align: right;display: inline-block;margin-right: 7px;}
+        .fj{float: right;}
+        .fj p{ margin: 0 0 5px;text-decoration: underline;}
+        .buts{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+</head>
+<body>
+<div class="main">
+   <div class="nav">
+       <ul>
+           <li class="cur">审批<span style="color: initial">&nbsp;|&nbsp;</span></li>
+           <li>流程</li>
+       </ul>
+   </div>
+    <div class="list">
+        <div class="content cur1">
+           <ul class="fl">
+               <li>
+                   <span>费用内容</span>
+                   <textarea style="float: right;height: 100px; width: 674px;" disabled="disabled">{$fee_detail.formInfo.content}</textarea>
+               </li>
+           </ul>
+            <ul class="fl">
+                <!-- <li>
+                    <span>用款日期</span>
+                    <input type="text" disabled="disabled" value="2015-09-15"/>
+                </li> -->
+                <li>
+                    <span>费用类型</span>
+                    <input type="text" disabled="disabled" value="{$fee_detail.formInfo.costType}"/>
+                </li>
+                <li>
+                    <span>报销金额</span>
+                    <input type="text" disabled="disabled" value="{$fee_detail.formInfo.money}"/>
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>附件</span>
+                    <div class="fj">
+                    <?php 
+                        if($fee_detail['attachPath']) {
+                            $path_list = explode(',', $fee_detail['attachPath']);
+                            foreach($path_list as $value) {
+                                echo '<p><a href="javascript:void();" onclick="javascript:doDownload(this);">'.$value.'</a></p><br>';
+                            }
+                        }
+                    ?>
+                    </div>
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批人</span>{$fee_detail.previousProcessNode.handlerUserName}
+                </li>
+            </ul>
+            <ul class="fl">
+                <li>
+                    <span>上一级审批意见</span>
+                    <textarea style="float: right;height: 60px;width: 674px;" disabled="disabled">{$fee_detail.previousProcessNode.comment}</textarea>
+                </li>
+            </ul>
+            <?php if($fee_detail['curHandlerUId'] == $userId) {?>
+            <ul class="fl">
+                <li>
+                    <span>审批意见</span>
+                    <textarea style="float: right;height: 100px;width: 674px;" id="comment"></textarea>
+                    <p style="margin-left: 90%;margin-top: 95px;color: red;">不超过500字</p>
+                </li>
+            </ul>
+            <input type="hidden" id="processId" value="<?php echo $fee_detail['processId'];?>">
+            <div style="margin: 0 29%;float: left;">
+                <button class="buts" onclick="doSubmit(1);">同意</button>
+                <button class="buts" onclick="doSubmit(2);">拒绝</button>
+                <button class="buts" onclick="doSelectUser();">转批</button>
+                <button class="buts" onclick="doSubmit(4);">撤销</button>
+            </div>
+            <?php }?>
+        </div>
+        <div class="content">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr style="height: 25px;">
+                    <th width="117" height="25">序号</th>
+                    <th width="130">审批人</th>
+                    <th width="150">操作</th>
+                    <th width="450">审批意见</th>
+                    <th width="200">审批时间</th>
+                </tr>
+                <notempty name="fee_detail.processNodeList">
+                <volist name="fee_detail.processNodeList" id="nodeList">
+                <?php if($nodeList['processNodeStatus'] == '2') {?>
+                <input type="hidden" id="processNodeId" value="<?php echo $nodeList['processNodeId'];?>">
+                <?php }?>
+                <tr style="height: 50px;">
+                    <td>{$i}</td>
+                    <td>{$nodeList.handlerUserName}</td>
+                    <td><?php 
+                    switch ($nodeList['processNodeStatus']) {
+                        case '1':
+                            echo "待流转";
+                            break;
+                        case '2':
+                            echo "待审核";
+                            break;
+                        case '3':
+                            echo "审核通过";
+                            break;
+                        case '4':
+                            echo "审核不通过";
+                            break;
+                        case '5':
+                            echo "已转发";
+                            break;
+                        default:
+                            echo "待流转";
+                            break;
+                    }
+                    ?></td>
+                    <td><font title="{$nodeList.comment}"><?php echo mb_substr($nodeList['comment'],0, 26,'utf-8');?></font></td>
+                    <td>{$nodeList.createTime}</td>
+                </tr>
+                </volist>
+                </notempty>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        $(".nav li").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".list .content").eq(myindex).addClass("cur1").siblings().removeClass("cur1");
+        })
+
+    })
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+    // 同意、拒绝、撤销
+    function doSubmit(operateType) {
+        var commentObj = $("#comment");
+        var length = $.trim(commentObj.val()).length;
+
+        if(operateType != 4) {
+            if (length == 0) {
+                layer.msg("审批意见不能为空",{icon: 8});
+                return false;
+            } 
+        }
+        if (length > 500) {
+            layer.msg("审批意见最多为500字",{icon: 8});
+            return false;
+        }
+
+        processNodeApproval(operateType);
+    }
+
+    // 转批选择用户
+    function doSelectUser() {
+
+        var processId = $("#processId").val();
+        var processNodeId = $("#processNodeId").val();
+        var comment = $("#comment").val();
+        var page = "{$page}";
+
+        var commentObj = $("#comment");
+        var length = $.trim(commentObj.val()).length;
+
+        if (length == 0) {
+            layer.msg("审批意见不能为空",{icon: 8});
+            return false;
+        } else if (length > 600) {
+            layer.msg("审批意见最多为600字",{icon: 8});
+            return false;
+        }
+
+        layer.open({
+            type:2,
+            title :['转批人员','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['530px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectFeeUser')}" + "?processId=" + processId + "&processNodeId=" + processNodeId + "&comment=" + comment + "&operateType=3&page=" + page + "&busiType=1",
+        });
+    }
+
+    // 流程节点审批
+    function processNodeApproval(operateType) {
+        var loadIdx = layer.load(0);
+        var comment = $("#comment").val();
+        var processId = $("#processId").val();
+        var processNodeId = $("#processNodeId").val();
+
+        $.post("{:U('Office/processNodeApproval')}", {"operateType":operateType, "processId":processId, "processNodeId":processNodeId, "comment":comment}, function(data) {
+
+            if(data.error_code != 'success') {
+                layer.msg(data.error_text,{icon: 8});
+                layer.close(loadIdx);
+            } else {
+                var busiType = 1;
+                var page = "{$page}";
+                var type = parent.$("#hidCType").val();
+                var startDate = parent.$("#hidSDate4").val();
+                var endDate = parent.$("#hidEDate4").val();
+                var status = parent.$("#hidCStatus").val();
+
+                parent.$("#costContentList").empty();
+
+                $.post("{:U('Office/getApprovalList')}", {"busiType":busiType, "page":page, "type":type, "startDate":startDate, "endDate":endDate, "status":status}, function(data) {
+
+                    var content = "";
+                    // 设定用户列表
+                    $.each(data.processList, function(k, v) {
+                        content += '<ul>';
+                        content += '<li style="width: 19%;">' + v.processNo + '</li>';
+
+                        content += '<li style="width: 15%;cursor: pointer;" onclick="showFeeDetail(\'' + v.processId + '\')" title="' + v.title + '"><a>' + v.title + '</a></li>';
+                        content += '<li style="width: 30%;" title="' + v.formContent + '">' + v.formContent + '&nbsp;</li>';
+                        content += '<li style="width: 8%;">' + v.applicantName + '&nbsp;</li>';
+                        content += '<li style="width: 8%;">' + v.currentHandlerPerson + '&nbsp;</li>';
+                        content += '<li style="width: 10%;">';
+
+                        switch (v.status) {
+                            case '1':
+                                content += '未提交';
+                                break;
+                            case '2':
+                                content += '待处理';
+                                break;
+                            case '3':
+                                content += '审核通过';
+                                break;
+                            case '4':
+                                content += '审核不通过';
+                                break;
+                            case '5':
+                                content += '撤销';
+                                break;
+                            default:
+                                content += '未提交';
+                                break;
+                        }
+                        content += '</li>';
+
+                        var date = new Date(v.createTime);
+                        var createTime = formatDate(date ,"yyyy-MM-dd");
+                        content += '<li style="width: 10%;">' + createTime + '</li>';
+                        content += '</ul>';
+                    });
+                    if (content == "") {
+                        content = '<ul class="topnone">';
+                        content += '<li style="width:98.4%;color:#f47469;">无数据!</li>';
+                        content += '</ul>';
+                    }
+
+                    parent.$("#costContentList").append(content);
+                    layer.close(loadIdx);
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                }, 'json');
+            }
+        }, 'json');
+    }
+
+    function doClose() {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    }
+
+    //格式化日期,
+    function formatDate(date,format){
+        var paddNum = function(num){
+          num += "";
+          return num.replace(/^(\d)$/,"0$1");
+        }
+        //指定格式字符
+        var cfg = {
+           yyyy : date.getFullYear() //年 : 4位
+          ,yy : date.getFullYear().toString().substring(2)//年 : 2位
+          ,M  : date.getMonth() + 1  //月 : 如果1位的时候不补0
+          ,MM : paddNum(date.getMonth() + 1) //月 : 如果1位的时候补0
+          ,d  : date.getDate()   //日 : 如果1位的时候不补0
+          ,dd : paddNum(date.getDate())//日 : 如果1位的时候补0
+          ,hh : date.getHours()  //时
+          ,mm : date.getMinutes() //分
+          ,ss : date.getSeconds() //秒
+        }
+        format || (format = "yyyy-MM-dd hh:mm:ss");
+        return format.replace(/([a-z])(\1)*/ig,function(m){return cfg[m];});
+    } 
+    
+    function doDownload(obj) {
+        var path = $(obj).text();
+        var url = APP+'/Home/Office/downloadFile?path='+path;
+        window.open(url, '_blank');
+    }
+</script>
+</body>
+</html>

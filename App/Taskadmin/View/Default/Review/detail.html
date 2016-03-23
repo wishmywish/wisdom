@@ -1,0 +1,87 @@
+<include file="Public/head" />
+<style type="text/css">
+span{
+    padding-left:12px;
+}
+</style>
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="add">
+             <span style="font-size:18px;">经销商信息</span><br><br>
+
+                <span>个人姓名：<input type="text" id="f_contactsname" value="{$reModi.one.f_contactsname}" title="{$reModi.one.f_contactsname}"/></span>
+                <span>公司职位：<input type="text" id="f_titleone" value="{$reModi.one.f_titleone}" title="{$reModi.one.f_titleone}"/></span>
+                <span>联系电话：<input type="text" id="f_phoneone" value="{$reModi.one.f_phoneone}" title="{$reModi.one.f_phoneone}"/></span>
+                <span>企业名称：<input type="text" id="f_companynameone" value="{$reModi.one.f_companynameone}" title="{$reModi.one.f_companynameone}"/></span><br><br>
+
+                <span>企业传真：<input type="text" id="f_faxone" value="{$reModi.one.f_faxone}" title="{$reModi.one.f_faxone}"/></span>
+                <span>企业邮箱：<input type="text" id="f_emailone" value="{$reModi.one.f_emailone}" title="{$reModi.one.f_emailone}"/></span>
+                <span>企业地址：<input type="text" id="f_address1" value="{$reModi.one.f_address1}" title="{$reModi.one.f_address1}"/></span>
+                <span>企业网址：<input type="text" id="f_website1" value="{$reModi.one.f_website1}" title="{$reModi.one.f_website1}"/></span><br><br>
+
+                <span>经营区域：<input type="text" id="f_area" value="{$reModi.two.f_area}" title="{$reModi.two.f_area}"/></span>
+                <span>渠道类型：<input type="text" id="f_channeltype" value="{$reModi.two.f_channeltype}" title="{$reModi.two.f_channeltype}"/></span>
+                <span>主营行业：<input type="text" id="f_mainindustry" value="{$reModi.two.f_mainindustry}" title="{$reModi.two.f_mainindustry}"/></span>
+                <span>年营业额：<input type="text" id="f_yearturnover" value="{$reModi.two.f_yearturnover}" title="{$reModi.two.f_yearturnover}"/></span><br><br>
+
+                <span>流动资金：<input type="text" id="f_floatingcapital" value="{$reModi.two.f_floatingcapital}" title="{$reModi.two.f_floatingcapital}"/></span>
+                <span>销售人数：<input type="text" id="f_salesqty" value="{$reModi.two.f_salesqty}" title="{$reModi.two.f_salesqty}"/></span>
+                <span>品牌个数：<input type="text" id="f_famousbrandqty" value="{$reModi.two.f_famousbrandqty}" title="{$reModi.two.f_famousbrandqty}"/></span>
+                <span>代理品牌：<input type="text" id="f_famousbrandname" value="{$reModi.two.f_famousbrandname}" title="{$reModi.two.f_famousbrandname}"/></span><br><br>
+
+                <span>网点数量：<input type="text" id="f_latticepointqty" value="{$reModi.two.f_latticepointqty}" title="{$reModi.two.f_latticepointqty}"/></span>
+                <span>物流车数：<input type="text" id="f_carsqty" value="{$reModi.two.f_carsqty}" title="{$reModi.two.f_carsqty}"/></span>
+                <span>资源优势：<input type="text" id="f_advantage" style="width:375px;" value="{$reModi.two.f_advantage}" title="{$reModi.two.f_advantage}"/></span><br><br>
+
+
+                <span style="font-size:18px;">业务员信息</span><br><br>
+
+                <span>个人姓名：<input type="text" id="trueName" value="{$reModi.three.trueName}" title="{$reModi.three.trueName}"/></span>
+                <span>个人昵称：<input type="text" id="nickName" value="{$reModi.three.nickName}" title="{$reModi.three.nickName}"/></span>
+                <span>个人性别：<input type="text" id="sex"  value="
+                    <eq name="reModi.three.sex" value="1"> 男 </eq>
+                    <eq name="reModi.three.sex" value="0"> 女 </eq>"/></span>
+                <span>联系电话：<input type="text" id="mobile"  value="{$reModi.three.mobile}" title="{$reModi.three.mobile}"/></span><br><br>
+
+                <span>个人邮箱：<input type="text" id="trueName" value="{$reModi.three.trueName}" title="{$reModi.three.trueName}"/></span>
+                <span>公司电话：<input type="text" id="officePhone" value="{$reModi.three.officePhone}" title="{$reModi.three.officePhone}"/></span>
+                <span>家庭电话：<input type="text" id="homePhone" value="{$reModi.three.homePhone}" title="{$reModi.three.homePhone}"/></span>
+                <span>家庭地址：<input type="text" id="homeAddress"  value="{$reModi.three.homeAddress}" title="{$reModi.three.homeAddress}"/></span><br><br>
+
+                <span>出生日期：<input type="text" id="birthday" value="{$reModi.three.birthday}" title="{$reModi.three.birthday}"/></span>
+                <span>身份证号：<input type="text" id="idCard" value="{$reModi.three.idCard}" title="{$reModi.three.idCard}"/></span>
+                <span>邀请号码：<input type="text" id="invitationCode" value="{$reModi.three.invitationCode}" title="{$reModi.three.invitationCode}"/></span>
+                <span>个人QQ：<input type="text" id="qq"  value="{$reModi.three.qq}" title="{$reModi.three.qq}"/></span><br><br>
+
+                <span>个人微信：<input type="text" id="weixin" value="{$reModi.three.weixin}" title="{$reModi.three.weixin}"/></span>
+                <span>创建时间：<input type="text" id="userCreatetime" value="{$reModi.three.userCreatetime}" title="{$reModi.three.userCreatetime}"/></span>
+                <span>技能标签：<input type="text" id="userSkillLabel" value="{$reModi.three.userSkillLabel}" title="{$reModi.three.userSkillLabel}"/></span>
+                <span>个人标签：<input type="text" id="userPersonalLabel"  value="{$reModi.three.userPersonalLabel}" title="{$reModi.three.userPersonalLabel}"/></span><br><br>
+
+                <span>工作经历：<input type="text" id="userJobMentality" value="{$reModi.three.userJobMentality}" title="{$reModi.three.userJobMentality}"/></span>
+                <span>个人学历：<input type="text" id="userEducation" value="{$reModi.three.userEducation}" title="{$reModi.three.userEducation}"/></span>
+                <span>工作年限：<input type="text" id="userWorkLife" value="{$reModi.three.userWorkLife}" title="{$reModi.three.userWorkLife}"/></span>
+                <span>期望薪资：<input type="text" id="userExpectedSalary"  value="{$reModi.three.userExpectedSalary}" title="{$reModi.three.userExpectedSalary}"/></span><br><br>
+
+                <span>个人行业：<input type="text" id="userIndustry" value="{$reModi.three.userIndustry}" title="{$reModi.three.userIndustry}"/></span>
+                <span>个人职位：<input type="text" id="userPosition" value="{$reModi.three.userPosition}" title="{$reModi.three.userPosition}"/></span>
+                <span>工作地点：<input type="text" id="userJobAddress"  value="{$reModi.three.userJobAddress}" title="{$reModi.three.userJobAddress}"/></span>
+                <span>公司名称：<input type="text" id="userCompanyName"  value="{$reModi.three.userCompanyName}" title="{$reModi.three.userCompanyName}"/></span><br><br>
+
+                <span>求职宣言：<input type="text" id="userJobDeclaration" style="width:825px;" value="{$reModi.three.userJobDeclaration}" title="{$reModi.three.userJobDeclaration}"/></span>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

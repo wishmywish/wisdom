@@ -1,0 +1,71 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class CommonController extends Controller {
+	public function _initialize(){
+
+		if(cookie('loginstrats') != 1 && session('loginstrats') !=1){ //登录不成功
+			$this->redirect("Login/login");
+		}
+
+		//记住密码获取cookie,没记住获取session
+		$companyId = empty(cookie("companyId"))?session("companyId"):cookie("companyId");
+		$companyName = empty(cookie("companyName"))?session("companyName"):cookie("companyId");
+		$mobile = empty(cookie("mobile"))?session("mobile"):cookie("mobile");
+
+		set_theme(); //载入主题
+		
+		//权限判断 start		
+		$access_string = "";	//声明变量
+
+		$user_id = empty(cookie("userId"))?session("userId"):cookie("userId");
+		$result_role_id  = M('user_role')->where("f_user_id=".$user_id)->find();	 //通过user_id查找出对应的角色id集合
+
+		$role_id = explode(",",$result_role_id['f_role_id']);	//角色id集合
+		if( $role_id[0]!= "" ){
+			foreach($role_id as $key=>$vo){	//通过roleJ_id查找对应的权限
+				$result_access = M('role')->where("f_id=".$vo)->find();
+				$access_string.= ','.$result_access['f_access']; 	//角色对应的权限合并成一个字符串
+			}
+
+			$access_array = explode(",", $access_string);
+			unset($access_array['0']);
+		}
+
+//        dump($access_array);
+
+        //用户头像
+        $userInfo = A('Api/Jhttp')->getUserinfo2($user_id);
+        $userInfo_arr = json_decode($userInfo,true);
+        $userInfo_logo = $this->getHeadLogo($userInfo_arr['list']['headLogo']);
+
+//        dump($userInfo_arr);
+
+        $this->assign('userInfo_arr',$userInfo_arr);
+        $this->assign('headlogo',$userInfo_logo);
+        $this->assign("companyId",$companyId);
+		$this->assign("mobile",$mobile);
+		$this->assign("user_id",$user_id);
+		$this->assign("access_array",$access_array);
+	}
+
+    //获取员工头像
+	public function getHeadLogo($headLogoId) {
+		//先给个默认头像
+        $userInfo_logo = __ROOT__.'/Public/Home/Default/images/user2.jpg';
+
+        //获取员工头像
+        if( $headLogoId ){
+            $headLogo = M('files')->where('f_id='.$headLogoId)->find();
+        }
+        if( $headLogo ){
+            $userInfo_logo = __ROOT__.'/Public/upfile/'.$headLogo['f_filepath'].$headLogo['f_filename'];
+        }
+
+        return $userInfo_logo;
+	}
+}
+    
+   
+    
+ 

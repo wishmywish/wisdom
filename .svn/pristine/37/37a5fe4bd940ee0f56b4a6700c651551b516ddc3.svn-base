@@ -1,0 +1,605 @@
+<include file="Public/home_head" title="智慧推广平台::任务管理"/>
+<include file="Public/home_menu" />
+<style>
+
+</style>
+<div class="content_right" id="right">
+    <div class="cons_top">
+        <h4 class="cons_tab fl">
+            <!--<span class="current">全部任务</span>-->
+            <span class="current">推广赚</span>
+            <span style="background: none;">随手赚</span>
+        </h4>
+        <span style="color: #717071;margin-left: 240px;width: 100%;" >首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 新增&nbsp>&nbsp 推广赚</span>
+    </div>
+    <div class="generalize">
+        <!--<div class="generalize_in1 cur" >全部任务</div>-->
+        <div class="generalize_in1 cur fl">
+            <div  class='taskAdd_conter' style="margin-top:20px">
+                <form  action='' method="post"  id='taskAddForm_make'>
+                    <div class="taskAdd_conventionData">
+                        <div class="taskAdd_title">
+                            <span class="taskAdd_title_name">任务详情</span>
+                        </div>
+                        <div class="taskAdd_conventDataList" style="min-height:500px;margin-top: 20px;">
+                            <ul class="taskAdd_conventionDataUl">
+                                <li style=" margin-left: -21px;">发布任务的图标</li>
+                                <li style=" margin: 32px 0px 0;">
+                                    <input  id="openImgBtn1"  name="openImgBtn1"  type="button"   value="上传图片"  class="pass-portrait-fileBtn" onclick="$('#profileImg').click()"/><span class="business_taskAdd_spanText">*3:1比例，大小50K以内</span>
+                                <li style="display: none;"><input  id="profileImg" class="pass-portrait-file"  type="file"  name="upfile"   accept="image/jpeg,image/gif,image/png"/></li>
+                                <input type="hidden" id="profile1" name="profile1" value="{$reModi.one.f_fileid}"/>
+                                </li>
+                                <li>
+                                    <div class="line_input_pro"  id="line_input_pro" <if condition="$reModi['one']['f_name'] neq '' ">style="display:block;"</if>>
+                                    <div class="show_img" id='show_proimg1'>
+                                        <?php if ($reModi['one']['f_name']) {?>
+                                        <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                                        <div id="showPi1">
+
+                                            <img src="__UPFILE__/<?php  echo  $reModi[one][f_name][f_filepath],$reModi[one][f_name][f_filename];?>" width="100" height="100">
+                                        </div>
+                                        <?php }?>
+                                    </div>
+                                    <div class="show_progress_no" id='show_progress_no_pro'></div>
+                                    <div class="progress_up" id='progress_up_pro'><div class="bar" id='pro_bar'></div>
+                        </div>
+                        </li>
+
+                        </ul>
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务标题</li>
+                            <li><input type="text" id="taskTitle"  name="taskTitle"  value="{$reModi.one.f_title}" class="taskAdd_conventionDataInput" placeholder="请输入任务标题"></li>
+                        </ul>
+
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务时间</li>
+                            <li><input id="startTime"  name="startTime"  value="{$reModi.one.f_begindate}" class="taskAdd_conventionDataInput laydate-icon"  style="width:140px;" placeholder="起始时间"/>
+                                至
+                                <input id="endTime"  name="endTime" placeholder="终止时间"  value="{$reModi.one.f_enddate}" class="taskAdd_conventionDataInput  laydate-icon" style="width:140px;"/> <span  class="business_taskAdd_spanText">*最多不超过180天</span></li>
+                        </ul>
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务联系</li>
+                            <li><input type="text" id="pro_linkman"  name="pro_linkman"  value="{$reModi.one.f_linkman}" class="taskAdd_conventionDataInput"   placeholder="业务联系人" ></li>
+                        </ul>
+
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">联系电话</li>
+                            <li><input type="text" id="pro_linkphone"  name="pro_linkphone"  value="{$reModi.one.f_linkphone||default=$mobile}" class="taskAdd_conventionDataInput"   placeholder="企业联系人电话" ></li>
+                        </ul>
+
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务总数</li>
+                            <li><input type="text" id="pro_taskBrand"  name="pro_taskBrand" value="{$reModi.pro.f_totalcopies}"  class="taskAdd_conventionDataInput" oninput="calcu();">&nbsp 份</li>
+                        </ul>
+
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:-10px">单次奖励佣金</li>
+                            <li><input type="text" id="pro_taskProduct"  name="pro_taskProduct" value="{$reModi.pro.f_eachcoin}"  class="taskAdd_conventionDataInput" oninput="calcu();">&nbsp 元<span  class="business_taskAdd_spanText">(1元=10金币)&nbsp&nbsp 系统自动配奖励3个银票</span></li>
+                        </ul>
+                        <ul class="taskAdd_conventionDataUl" style="margin-left:28px">
+                            <li class="taskAdd_conventionDataLi">平台单次服务佣金</li>
+                            <li><input type="text" id="pro_saleCommission"  name="pro_saleCommission" value="{$reModi.pro.f_eachcoin}"  class="taskAdd_conventionDataInput"  disabled="true">&nbsp 元<span  class="business_taskAdd_spanText">*自动计算</span></li>
+                        </ul>
+
+                        <ul class="taskAdd_conventionDataUl" style="margin-left:88px">
+                            <li class="taskAdd_conventionDataLi">总佣金</li>
+                            <li><input type="text" id="pro_totalFee"  name="pro_totalFee" value=""  class="taskAdd_conventionDataInput"  disabled="true" >&nbsp 元<span  class="business_taskAdd_spanText">*自动算出，四舍五入</span></li>
+                        </ul>
+
+                        <!--<ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:15px">热门标签</li>
+                            <li><input type="text" id="pro_industry"  name="pro_industry"  value="" class="taskAdd_conventionDataInput"><span  class="business_taskAdd_spanText">*多个标签可用“，”隔开</span></li>
+                        </ul>-->
+                        <ul class="taskAdd_conventionDataUl">
+                            <li class="taskAdd_conventionDataLi" style="margin-left:13px">任务描述</li>
+                            <li>
+                                <textarea  value="" name="pro_taskDescription"  id="pro_taskDescription" style=" height: 152px;margin:-16px 0 10px 82px;width: 550px;"></textarea>
+                            </li>
+                        </ul>
+                        <ul class="taskAdd_conventionDataUl">
+                            <li style="margin-left:15px" >任务需求</li>
+                            <li>
+                                <div class="editor" style="min-height:400px;width:100%;float:left;margin-top:-2px">
+                                    <script type="text/plain" id="editor" style="width:550px;min-height:400px;" name="editor"></script>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <input type="hidden" id="companyID" value="{$companyID}">
+                    <input type="hidden" id="taskid" value="{$reModi.one.f_tid|default=0}">
+                    <button  class="pro_taskAdd_button"  id="pro_finish">完成</button>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="generalize_in1 fl">
+            <div  class='taskAdd_conter' style="margin-top:20px">
+                <div class="taskAdd_conventionData">
+                    <div  class="pro_taskAdd_step" >
+                        <ul>
+                            <li  class="step_one  pro_taskAdd_step_selected">创建任务</li>
+                            <li  class="step_two" >任务模板</li>
+                        </ul>
+                    </div>
+
+
+
+                    <div id="taskAdd_conventionData_step1"   class="taskAdd_conventDataList" style="display:block;max-height:600px;margin-top: 20px;margin-bottom: 300px;">
+
+                        <ul>
+                            <li style="margin-left:41px">发布任务的图标</li>
+                            <li style="margin: 32px 0px 0;">
+                                <input  id="openImgBtn2"  name="openImgBtn2"  type="button"   value="上传图片"  class="pass-portrait-fileBtn" onclick="$('#convenfileImg').click()"/><span class="business_taskAdd_spanText">*3:1比例，大小50K以内</span>
+                            <li style="display: none;"><input  id="convenfileImg" class="pass-portrait-file"  type="file"  name="upfile"   accept="image/jpeg,image/gif,image/png"/></li>
+                            <input type="hidden" id="convenfile1" name="convenfile1" value="{$reModi.one.f_fileid}"/>
+                            </li>
+                            <li>
+                                <div class="line_input_pro"  id="line_input_conven" <if condition="$reModi['one']['f_name'] neq '' ">style="display:block;"</if> >
+                                <div class="show_img" id='show_convenimg1'>
+                                    <?php if ($reModi['one']['f_name']) {?>
+                                    <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                                    <div id="showPic2">
+                                        <img src="__UPFILE__/<?php  echo  $reModi[one][f_name][f_filepath],$reModi[one][f_name][f_filename];?>" width="100" height="100">
+                                    </div>
+                                    <?php }?>
+                                </div>
+                                <div class="show_progress_no" id='show_progress_no_conven'></div>
+                                <div class="progress_up" id='progress_up_conven'><div class="bar" id='conven_bar'></div>
+                    </div>
+                    </li>
+
+                    </ul>
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务标题</li>
+                        <li><input type="text" id="taskTitle2"  name="taskTitle"  value="{$reModi.one.f_title}" class="taskAdd_conventionDataInput"></li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务时间</li>
+                        <li><input type="text" id="startTime2"  name="startTime2"  value="{$reModi.one.f_begindate}" class="taskAdd_conventionDataInput  laydate-icon"style="width:144px;" placeholder="起始时间"/>至
+                            <input type="text" id="endTime2"  name="endTime2" placeholder="终止时间" value="{$reModi.one.f_enddate}" class="taskAdd_conventionDataInput  laydate-icon" style="width:144px;"/> <span  class="business_taskAdd_spanText">*最多不超过180天</span></li>
+                    </ul>
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务联系</li>
+                        <li><input type="text" id="conven_linkman"  name="conven_linkman"  value="{$reModi.one.f_linkman}" class="taskAdd_conventionDataInput"   placeholder="业务联系人" ></li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">联系电话</li>
+                        <li><input type="text" id="conven_linkphone"  name="conven_linkphone"  value="{$reModi.one.f_linkphone||default=$mobile}" class="taskAdd_conventionDataInput"   placeholder="企业联系人电话" ></li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">所属类别</li>
+                        <li class="taskAdd_conventionDataLi">
+                            <select id="tasktypeid">
+                                <option value="0">请选择任务类型</option>
+                            </select>
+                        </li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:15px">任务总数</li>
+                        <li><input type="text" id="conven_taskBrand"  name="conven_taskBrand"  value="{$reModi.pro.f_totalcopies|default=0}" class="taskAdd_conventionDataInput" oninput="calcu2();">&nbsp 份</li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:-10px">单次奖励金币</li>
+                        <li><input type="text" id="conven_taskProduct"  name="conven_taskProduct"  value="{$reModi.pro.f_eachcoin}" class="taskAdd_conventionDataInput" oninput="calcu2();">&nbsp 元(1元=10金币)&nbsp&nbsp 系统自动配奖励积分3积分</li>
+                    </ul>
+
+
+                    <ul class="taskAdd_conventionDataUl" style="margin-left:28px">
+                        <li class="taskAdd_conventionDataLi">平台单次服务佣金</li>
+                        <li><input type="text" id="conven_saleCommission"  name="conven_saleCommission"  value="{$reModi.pro.f_eachcoin}" class="taskAdd_conventionDataInput" placeholder="自动计算" disabled="true">&nbsp 元</li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl" style="margin-left:88px">
+                        <li class="taskAdd_conventionDataLi">总佣金</li>
+                        <li><input type="text" id="conven_totalFee"  name="conven_totalFee"  value="" class="taskAdd_conventionDataInput" placeholder="自动算出，四舍五入" disabled="true">&nbsp 元</li>
+                    </ul>
+
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li class="taskAdd_conventionDataLi" style="margin-left:-10px"><label  for="taskDegree" >任务难易程度</label></li>
+                        <li style="margin-top:10px" >
+                            <input type="radio" id="radio" name="taskDegree"  value="1"  /><span  style="margin-right:10px">简单</span>
+                            <input type="radio" id="radio"  name="taskDegree"  value="2" /><span  style="margin-right:10px">中等</span>
+                            <input type="radio" id="radio"  name="taskDegree"   value="3" /><span style="margin-right:10px">挑战</span>
+                        </li>
+                    </ul>
+
+                    <ul class="taskAdd_conventionDataUl">
+                        <li style="margin-left:15px" >任务描述</li>
+                        <li>
+                            <textarea  value="" name="taskDescription"  id="taskDescription" style="width:550px;height:100px;"></textarea>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li style="margin-left:76px" >任务需求</li>
+                        <li>
+                            <div class="editor" style="min-height:200px;width:100%;float:left;">
+                                <script type="text/plain" id="editor1" style="width:550px;min-height:400px;" name="editor1"></script>
+                            </div>
+                        </li>
+                    </ul>
+                    <input type="hidden" id="companyID1" value="{$companyID}">
+                    <input type="hidden" id="taskid" value="{$reModi.one.f_tid|default=0}">
+                        <button  class="pro_taskAdd_button" style="float: left;" id="task_one_conven">下一步</button>
+                </div>
+
+
+                <input type="hidden" id="btn_widely_two_count" value="">
+                <div id="taskAdd_conventionData_step2"  style="display:none; ">
+                    <input type="hidden" id="taskId" name="taskId" value="{$reModi.one.f_tid}">
+                    <input type="hidden" id="indexid" name="indexid" value="{$reModi.pro.f_indexid}">
+                    <input type="hidden" id="detailCount" value="{$reModi.detailCount}" />
+                    <div  style="margin-left: 65px;">
+                        <span style="float: left;">任务类型：</span>
+                        <ul  style="float:left;margin-left:30px;">
+
+                            <li  id="conven_bar_radio"><input type="radio"  name="taskTemplate"  value="6"  id="taskTemplate1" /><span  style="margin-right:10px">巡检</span>
+                                <input type="radio"  name="taskTemplate"   value="5"  id="taskTemplate2" /><span  style="margin-right:10px">体验</span>
+                                <input type="radio" name="taskTemplate"  value="4"  id="taskTemplate3" /><span style="margin-right:10px">调研</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div  class="taskAdd_template_questionList" id="quest" >
+
+                        <?php if ($reModi['detail']) { ?>
+                        <volist name="reModi.detail" id="vo" key="k">
+                            <div class="taskAdd_template_questionList1" id='question_list_{$k-1}'>
+                                <div class="taskAdd_template_question" id='quest_{$k-1}'>
+                                    问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px;margin-left: 31px;" value="{$vo.f_problemtatile}"/>
+                                    <eq name="k-1" value="0"><button type="button" class="taskAdd_btn" value="" onclick="addQuestion({$reModi.detailCount})">+</button></eq>
+                                    <neq name="k-1" value="0">
+                                        <span style="color:#14bce1;cursor:pointer;margin-left:20px;" onclick="taskAdd_template_questionList_delete({$k-1},{$vo.f_stdindex})">删除</span>
+                                    </neq>
+                                </div>
+                                <div  class="taskAdd_template_answer">
+                                    答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_{$k-1}"  onchange="changeoption(this.value,{$k-1})">
+                                    <option  value="0" <eq name="vo.f_type" value="0"> selected </eq>>请选择</option>
+                                    <option  value="1" <eq name="vo.f_type" value="1"> selected </eq>>单选</option>
+                                    <option  value="2" <eq name="vo.f_type" value="2"> selected </eq>>多选</option>
+                                    <option  value="3" <eq name="vo.f_type" value="3"> selected </eq>>文本</option>
+                                    <option  value="4" <eq name="vo.f_type" value="4"> selected </eq>>图片</option>
+                                </select>
+                                    <?php if ($vo['f_type']==1 || $vo['f_type']==2) {?>
+                                    <volist name="vo.answer" id="answer" >
+                                        <input type="text" class="taskAdd_conventionDataInput  taskAdd_template_answerInput" value="{$answer}">
+                                        <neq name="key" value="0">
+                                            <input type="button" class="taskAdd_answer_input" onclick="delte_input(0,{$k-1})" id="delte_input_{$k-1}0" value="删除">
+                                        </neq>
+                                    </volist>
+                                    <button type="button" class="taskAdd_btn question_btn_add" id="template_question_btn{$k-1}" value="{$k-1}" onclick="addAnswer({$k-1})">+</button>
+                                    <?php }?>
+                                </div>
+                                <input type="hidden" id="f_stdindex{$k-1}" name="f_stdindex" value="{$vo.f_stdindex}">
+                            </div>
+                        </volist>
+                        <?php }else{ ?>
+                        <div class="taskAdd_template_questionList1" id='question_list_0'>
+                            <div class="taskAdd_template_question" style="margin-left: 72px;">
+                                问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px;margin-left: 31px;"/>
+                                <button type="button" class="taskAdd_btn" id="template_question_btn" value="">+</button>
+                            </div>
+                            <div  class="taskAdd_template_answer">
+                                答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_0"  onchange="changeoption(this.value,0)">
+                                <option  value="0">请选择</option>
+                                <option  value="1">单选</option>
+                                <option  value="2">多选</option>
+                                <option  value="3">文本</option>
+                                <option  value="4">图片</option>
+                            </select>
+                            </div>
+                        </div>
+                        <?php }?>
+                    </div>
+                    <!--                     <input type="hidden" id="taskid2" value="{$taskid|default=0}">-->
+                    <div class="taskAdd_footer" style="margin-top:20px;">
+                        <ul>
+                            <li id="task_two_to_one2">上一步</li>
+                            <li id="task_two_conven">提交</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--页面内容 end-->
+</div>
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+<include file="Public/loadjs" />
+<script type="text/javascript">
+
+
+    $(function(){
+        $(".cons_tab span").click(function(){
+            var myindex=$(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".generalize .generalize_in1").eq(myindex).addClass("cur").siblings().removeClass("cur");
+        })
+//新增步骤样式更换
+$("#task_one_conven").click(function(){
+            $(".pro_taskAdd_step ul li:eq(0)").removeClass("pro_taskAdd_step_selected");
+            $(".pro_taskAdd_step ul li:eq(1)").addClass("pro_taskAdd_step_selected");
+        })
+        $("#task_two_to_one2").click(function(){
+            $(".pro_taskAdd_step ul li:eq(1)").removeClass("pro_taskAdd_step_selected");
+            $(".pro_taskAdd_step ul li:eq(0)").addClass("pro_taskAdd_step_selected");
+        })
+    })
+
+</script>
+<script type="text/javascript">
+    //实例化编译器
+    var ue=UM.getEditor('editor',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+
+    UM.getEditor('editor').setContent('{$reModi.pro.f_taskrequirements}',true);
+</script>
+<script type="text/javascript">
+    //实例化编译器
+    var ue=UM.getEditor('editor1',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+    UM.getEditor('editor1').setContent('{$reModi.pro.f_taskrequirements}',true);
+</script>
+<script>
+
+    $("#pro_taskDescription").text("{$reModi.one.f_description}");
+    $("#taskDescription").text("{$reModi.one.f_description}");
+    $('#bigmenu li').click(function(){
+        var lilen = $('#bigmenu li').length;
+        $('#bigmenu li').removeClass('org_box org_box_select');
+        $('#bigmenu li span').removeClass('org_bot_cor');
+        $('#bigmenu li').attr('class','org_box');
+        $(this).attr('class','org_box  org_box_select');
+        $(this).children('span').attr('class','org_bot_cor');
+        for(var i=0;i<lilen;i++){
+            $('#a'+i).hide();
+            if($(this).index()===i){
+                $('#a'+i).show();
+            }
+        }
+    });
+
+    $(function(){
+
+        //   getTasktype();
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+        $("#convenfileImg").wrap("<form id='up_convenlogo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+        var start = {
+            elem: '#startTime',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#endTime',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+
+        var start2 = {
+            elem: '#startTime2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end2 = {
+            elem: '#endTime2',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        laydate(start);
+        laydate(end);
+        laydate(start2);
+        laydate(end2);
+    });
+    var i=0;
+    //推广赚 任务模块问题的加载
+    $('#template_question_btn').click(function(){
+        var list="";
+        //console.log(i);
+        list+="<div class='taskAdd_template_questionList1'  id='question_list_"+(i+1)+"'>";
+        list+="<div class='taskAdd_template_question' style='margin-top:10px'>";
+        list+="问：<input type='text' name='conventionDataInput'  class='taskAdd_conventionDataInput' style='width:500px'/>";
+        list+="<span style='color:red;cursor:pointer;margin-left:20px;'  onclick='taskAdd_template_questionList_delete("+(i+1)+",0)'><i class='fa fa-trash-o fa-fw fa-lg'></i></span>";
+        list+="</div>";
+        list+="<div  class='taskAdd_template_answer'>";
+        list+="答：<select class='template_answer_selected' name='template_answer_selected' id='template_answer_selected_"+(i+1)+"' onchange='changeoption(this.value,"+(i+1)+")'>";
+        list+="<option  value='0' selected>请选择</option>";
+        list+="<option  value='1'>单选</option>";
+        list+="<option  value='2'>多选</option>";
+        list+="<option  value='3'>文本</option>";
+        list+="<option  value='4'>图片</option>";
+        list+="</select>";
+        list+="</div>";
+        list+="</div>";
+        $('.taskAdd_template_questionList').append(list);
+        i++;
+
+    });
+
+    function changeoption(optionValue,i){
+        $('#template_answer_selected_'+i+'').nextAll('input').remove();
+        $('#template_answer_selected_'+i+'').next('button').remove();
+        if(optionValue==='2'||optionValue==='1'){
+            var list="";
+            list+="<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput' />";
+            list+="<button type='button' class='taskAdd_btn'  id='template_question_btn"+i+"'>+</button> ";
+            $('#template_answer_selected_'+i+'').after(list);
+            $('#template_question_btn'+i+'').click(function(){
+                var k=0;
+                var list="";
+                list+="<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput'/><span class='fa fa-trash-o fa-fw fa-lg' style='cursor: pointer;color: red;' onclick='delte_input("+k+","+i+")' id='delte_input_"+i+k+"'></span>";
+                $('#template_question_btn'+i+'').before(list);
+                k++;
+            });
+        }
+    }
+
+    function addAnswer(i){
+        var k=0;
+        var list="";
+        list+="<input type='text'  class='taskAdd_conventionDataInput  taskAdd_template_answerInput'/><input  type='button' class='taskAdd_answer_input' onclick='delte_input("+k+","+i+")' id='delte_input_"+i+k+"' value='删除'/>";
+
+        $('#template_question_btn'+i+'').before(list);
+    }
+
+    function addQuestion(k){
+        var a = $("#detailCount").val();
+        $("#detailCount").attr("value",(parseInt(a)+parseInt(1)));
+
+        var count = $("#detailCount").val();
+        var list="";
+        list+="<div class='taskAdd_template_questionList1'  id='question_list_"+(count-1)+"'>";
+        list+="<div class='taskAdd_template_question' style='margin-top:10px'>";
+        list+="问：<input type='text' name='conventionDataInput'  class='taskAdd_conventionDataInput' style='width:500px'/>";
+        list+="<span style='color:#14bce1;cursor:pointer;margin-left:20px;'  onclick='taskAdd_template_questionList_delete("+(count-1)+",0)'>删除</span>";
+        list+="</div>";
+        list+="<div  class='taskAdd_template_answer'>";
+        list+="答：<select class='template_answer_selected' name='template_answer_selected' id='template_answer_selected_"+(count-1)+"' onchange='changeoption(this.value,"+(count-1)+")'>";
+        list+="<option  value='0' selected>请选择</option>";
+        list+="<option  value='1'>单选</option>";
+        list+="<option  value='2'>多选</option>";
+        list+="<option  value='3'>文本</option>";
+        list+="<option  value='4'>图片</option>";
+        list+="</select>";
+        list+="</div>";
+        list+="</div>";
+        $('.taskAdd_template_questionList').append(list);
+        k++;
+    }
+
+    //推广赚中任务模块多选中iuput的删除
+    function  delte_input(k,i){
+        $('#delte_input_'+i+k+'').prev().remove();
+        $('#delte_input_'+i+k+'').remove();
+
+    }
+
+    //删除推广任务模块
+
+    function  taskAdd_template_questionList_delete(i,indexid){
+        $('#question_list_'+i+'').remove();
+        console.log(indexid+"==");
+        if(indexid!==0){
+            $.post(APP+"/Api/Web/delteanswer/","indexid="+indexid,function(rel){
+                console.log(rel.error_code+"====");
+            },"json");
+        }
+    }
+
+    $(function(){
+        $("#tasktypeid").empty();
+        $("#tasktypeid").append("<option value='0'>选择任务类型</option><option value='4'>调研类</option><option value='5'>体验类</option><option value='6'>巡检类</option>");
+//           getTasktype();
+        var typeid=$("#typetaskid").val();
+        console.log(typeid+"====");
+        if(typeid==1){
+            // getTasktype();
+            var aa = $("#pro_taskProduct").val()*2*$("#pro_taskBrand").val();
+            $("#pro_totalFee").val(aa);
+            $('#nav').empty();
+            $('#nav').append("<span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 编辑&nbsp>&nbsp 推广赚</span>");
+            $("#1").hide();
+            $("#a1").attr("disabled");
+
+        }else if(typeid==2||typeid==4||typeid==5||typeid==6){
+            //getTasktype();
+            var aa = $("#conven_taskProduct").val()*2*$("#conven_taskBrand").val();
+            $("#conven_totalFee").val(aa);
+            $('#nav1').empty();
+            $('#nav1').append("<span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 编辑&nbsp>&nbsp 随手赚</span>");
+            $("#0").removeClass("org_box_select");
+            $("#1").addClass("org_box_select");
+            $("#0  span").removeClass("org_bot_cor");
+            $("#1  span").addClass("org_bot_cor");
+            $("#a0").hide();
+            $("#a1").show();
+            $("#0").hide();
+            $("#a0").attr("disabled");
+            $("#a1").removeAttr("disabled");
+            $("#tasktypeid").find($("#tasktypeid"));
+            //单选框
+            var radio=document.getElementsByName('taskDegree');
+            var str1={$reModi.one.f_harder||default=0};
+        for(var i=0;i<radio.length;i++){
+            //alert(radio[i].value);
+            if(radio[i].value==str1){
+                radio[i].checked="true";
+            }
+        }
+        //下拉框
+        var sel=document.getElementById('tasktypeid');
+        var str={$reModi.one.f_tasktypeid||default=0};
+    // alert(str);
+    console.log(sel.options.length);
+    for(var i=0;i<sel.options.length;i++){
+        if(sel.options[i].value==str){
+            sel.options[i].selected="true";
+        }
+    }
+    $("#quest_0").css("margin-left","-160px");
+
+    }else{
+        $('#nav').empty();
+        $('#nav').append("<span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 新增&nbsp>&nbsp 推广赚</span>");
+        $('#nav1').empty();
+        $('#nav1').append("<span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 新增&nbsp>&nbsp 随手赚</span>");
+        $("#1").removeClass("org_box_select");
+        $("#0").addClass("org_box_select");
+        $("#1  span").removeClass("org_bot_cor");
+        $("#0  span").addClass("org_bot_cor");
+        $("#a1").hide();
+        $("#a0").show();
+        getTasktype();
+    }
+    });
+
+</script>

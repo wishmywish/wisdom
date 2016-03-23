@@ -1,0 +1,37 @@
+<include file="Public/head" title="" />
+<style type="text/css">
+p 
+{
+    text-indent: 1cm
+}
+.wenzi
+{
+    text-decoration: underline;
+    line-height:22px;
+}
+</style>
+<body>
+
+     <div class="add">
+        <div class='info' style="background-color:white;">
+            <br>
+            <div >
+                <span>理由：</span><br>
+                <textarea  value="" name="reason" cols="90" rows="10" id="reason" ></textarea>
+            </div>
+            <input type="hidden" id="taskid" name="taskid" value="{$taskid}">
+            <div style="  margin: 0 0 10px 200px;">
+                <a class="btn btn-default" href="#" role="button" id="cwReviewBtn">通过</a>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div style="  margin: -44px 0 10px 282px;">
+                <a class="btn btn-default" href="#" role="button" id="noCwReviewBtn">不通过</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<include file="Public/loadjs" />
+<script>
+    sublevel_out();//子窗口退出
+</script>

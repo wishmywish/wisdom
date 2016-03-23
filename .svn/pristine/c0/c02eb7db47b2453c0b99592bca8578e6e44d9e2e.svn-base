@@ -1,0 +1,134 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+<div class="content_right">
+    <div class="main_left">
+        <div class="main_nav">
+            <ul><li>任务一 <a onclick=""><i class="fa fa-caret-down fa-lg"></i></a></li></ul>
+            <span class="left_url">任务标题:</span>
+
+            <span id="tasktitle" >视频会议系统诚招代理</span>
+
+        </div>
+        <div class="index_right_table">
+            <div class="table_top">
+                <span class="table_top_left">业绩报告</span>
+            </div>
+            <div  class="table1_center">
+                <div  class="table1_center_body">
+                    <div class="table1_center_body_left">
+                        <div  class="body_title">招商</div>
+                        <div class="body_chart">
+                            <div  id="business_gauge" style="height:200px;"><img src='__IMG__/nonedata2.png'/></div>
+                        </div>
+                        <div class="body_percent" id="Invpercent">无</div>
+                        <div class="body_foot">
+                            <ul>
+                                <li>
+                                    招商目标：<span id="Invtarget">无</span>
+                                </li>
+                                <li>
+                                    实际招商：<span id="Actinvestment">无</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="table1_center_body_right">
+                        <div class="body_title">回款</div>
+                        <div id="business_chart" style="height:220px;width:300px"><img src='__IMG__/nonedata2.png'/></div>
+                        <div class="body_percent"  style="margin-top:10px" id="paypect">无</div>
+                        <div class="body_foot">
+                            <ul>
+                                <li>
+                                    回款目标：<span  id="collecttarget">无</span>
+                                </li>
+                                <li>
+                                    实际回款：<span  id="actualpayment">无</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index_right_table">
+            <div class="table_top">
+                <div class="table_top_left">招商漏斗</div>
+            </div>
+            <div  class="table1_center">
+                <div class="table1_center_body">
+                    <!--招商漏斗图显示-->
+                    <div class="table2_center_body_left">
+                        <div id="business_funel"  style="margin-right:50px"><img src='__IMG__/nonedata.png'/></div>
+
+                    </div>
+                    <div class="table2_center_body_right" style="color:#747474">
+                        <ul>
+                            <li>
+                                <div class="table2_right_top">授权经销商数</div>
+                                <div class="table2_right_foot"  id="authdealnum">无</div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">签订合同经销商数</div>
+                                <div class="table2_right_foot" id="contsignednum">无</div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">预计回款</div>
+                                <div class="table2_right_foot"  id="expectedmoney">无</div>
+                            </li>
+                            <li>
+                                <div class="table2_right_top">实际回款</div>
+                                <div class="table2_right_foot"  id="actualtotalpay">无</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="index_right_table">
+            <div class="table_top">
+                <div class="table_top_left">经销商分布</div>
+            </div>
+            <div  class="table3_center">
+                <div class="table3_center_body">
+                    <!--地图表显示-->
+                    <div class="table3_center_body_left" >
+                        <div id="map"  style='width:560px;height:470px'><img src='__IMG__/nonedata.png'/></div>
+                    </div>
+                    <div class="table3_center_body_right"  id="Invquitrank">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_right">
+        <div class="right_con">
+            <dl>
+                <span style="font-size: 14px;">任务标题</span>
+                <dt style="font-size: 14px;padding-bottom: 25px;">视频会议系统诚招代理</dt>
+                <dd>任务品牌：<span>协同通讯</span></dd>
+                <dd>任务产品：<span>视频会议系统</span></dd>
+                <dd>开始时间：<span>2015.5.1</span></dd>
+                <dd>结束时间：<span>2015.7.30</span></dd>
+            </dl>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>
+
+<!--漏斗插件-->
+<js href="__STATIC__/fusion/js/fusioncharts.js"/>  <!--公共图表插件-->
+<js href="__STATIC__/fusion/js/themes/fusioncharts.theme.fint.js"/>
+<script src="__STATIC__/echarts/build/dist/echarts-all.js"></script>
+<js href="__JS__/business_chart.js"/>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+
+<body>
+<style>
+    body{
+        background-color:#ffffff;
+    }
+  ul li{
+      padding:0px;
+      list-style:none;
+      margin:0px;
+  }
+
+  .title{
+      width:100%;
+      margin:10px auto;
+      float: left;
+  }
+  .title ul{
+      float: left;
+      width:100%;
+  }
+  .title  li{
+       float:left;
+       width:49%;
+       text-align: center;
+       min-height:20px;
+       padding-top:10px;
+       padding-bottom:5px;
+ }
+    .active{
+        color:#fe6700;
+        background-color:#cacaca;
+    }
+    /*.download{*/
+        /*width: 100%;*/
+        /*height: 30px;*/
+        /*line-height: 25px;*/
+        /*background: #000;*/
+        /*opacity: .6;*/
+        /*position: fixed;*/
+    /*}*/
+    .btn{
+        background: #EE7C00;
+        border: none;
+    }
+    .banner-index-bottom{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 5000;
+        background: rgba(0,0,0,.7);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% 100%;
+        color: #fff;
+    }
+    .banner-index-bottom .close{
+        height: 40px;
+        width: 20px;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        background: url(__IMG__/iconfont-close.png) no-repeat center center;
+        background-size: 14px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .banner-index-bottom .logo {
+        height: 30px;
+        width: 30px;
+        left: 15px;
+        background: url(__IMG__/baologo.png) no-repeat;
+        overflow: hidden;
+        background-size: 30px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .banner-index-bottom .banner-label {
+        left: 50px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .banner-index-bottom .banner-label p {
+        color: #fff;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .banner-index-bottom .open {
+        right: 40px;
+        background: #FF6D42;
+        display: inline-block;
+        width: 60px;
+        font-size: 13px;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 6px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+</style>
+<div class="banner-index-bottom" id="pageletBottomBanner" style="display: block;">
+    <a href="javascript:void(0)" class="close" onclick="hide_download()"></a>
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.example.wisdomoperating" target="_self" class="download" rel="nofollow">
+        <div class="logo"></div>
+        <div class="banner-label">
+            <p class="tb">小宝招商·销售众包</p>
+            <p>8000万销售创客的选择</p>
+        </div>
+        <div class="open">立即打开</div>
+    </a>
+</div>
+<div data-role="page" style="padding-left:10px;padding-right:10px">
+    <div role="main" class="ui-content">
+        <if condition="$taskinfo.type_label eq 'business'">
+            <div><img src="{$weburl}/Public/upfile/{$taskinfo.info.f_filepath}{$taskinfo.info.f_filename}"></div>
+            <div>客服电话：0571-88195693<br>结束时间：{$taskinfo.info.f_enddate}</div>
+            <div class="title">
+                <ul>
+                    <li  onclick="show(1)"  id="1"  class="active">产品详情</li>
+                    <li  onclick="show(2)"  id="2"  style="border-left:1px #CCCCCC solid">招商政策</li>
+                </ul>
+            </div>
+            <div style="min-height:40px; overflow: visible;">
+                <div  id="pt_1" style="margin-top:40px">{$taskinfo.info.f_note}</div>
+                <div  id="pt_2" style="display:none">{$taskinfo.info.f_product}</div>
+            </div>
+            <elseif condition="$taskinfo.type_label eq 'widely'"/>
+            <div style="margin-top:20px">{$taskinfo.info.f_taskrequirements}</div>
+            <elseif condition="$taskinfo.type_label eq 'push'"/>
+            <div style="margin-top:20px">{$taskinfo.info.f_taskrequirements}</div>
+        </if>
+        <div style="padding-bottom:20px;">注册填写邀请码有惊喜：<span style='color:red;'>{$invitationCode}</span></div>
+    </div><!-- /content -->
+</div>
+<script type="text/javascript" src="__PUBLIC__/static/jquery-1.11.2.min.js"></script>
+<script   type="text/javascript">
+    function hide_download(){
+        $("#pageletBottomBanner").hide();
+    }
+     function  show(status){
+          if(status==1){
+              $("#2").removeClass("active");
+              $("#"+status).addClass("active");
+              $("#pt_"+status).show();
+              $("#pt_2").hide();
+          }
+
+          if(status==2){
+              $("#1").removeClass("active");
+              $("#"+status).addClass("active");
+              $("#pt_"+status).show();
+              $("#pt_1").hide();
+          }
+     }
+</script>
+</body>
+<include file="Public/foot" />

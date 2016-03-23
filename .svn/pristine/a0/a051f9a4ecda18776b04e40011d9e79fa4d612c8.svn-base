@@ -1,0 +1,56 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class SalesController extends Controller {
+    //put your code here
+    function index(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $this->assign('classtype','1');
+        $this->display();
+    }
+
+    //已实名认证
+    function realName(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $this->assign('classtype','2');
+        $this->display();
+    }
+
+    //已银行卡绑定
+    function cardBind(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $this->assign('classtype','3');
+        $this->display();
+    }
+
+    //业务员详情
+    function showManDetail(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->showManDetail();//取业务员详情
+
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->display();
+    }
+
+    //任务认领详情
+    function showdtask() {
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+        $reModi = A('Api/Web')->showdtask();//取认领的任务
+        // var_dump($reModi);exit();
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+        }
+
+        $this->display();
+    }
+
+}

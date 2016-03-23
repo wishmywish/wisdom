@@ -1,0 +1,256 @@
+<include file="Public/head" title="统计报表" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight" >
+
+                <include file="Public/action" />
+                <div class="breadlist">首页 /  统计报表</div>
+                <div class="tabli">
+                    <ul id="tabli">
+                        <li value="1" class='<eq name="classtype" value="1">selected</eq>' id="messages" ><a href="__APP__/Taskadmin/Report/index" style="text-decoration:none;color:black;">统计报表</a></li>
+                        <li value="2" class='<eq name="classtype" value="2">selected</eq>'><a href="{:U('Taskadmin/Sales/index1')}" style="color:black;text-decoration: none;">全部业务员</a><span id="all"></span></li>
+                        <li value="3" class='<eq name="classtype" value="3">selected</eq>'><a href="{:U('Taskadmin/Sales/realName1')}" style="color:black;text-decoration: none;">已实名认证</a><span id="name"></span></li>
+                        <li value="4" class='<eq name="classtype" value="4">selected</eq>'><a href="{:U('Taskadmin/Sales/cardBind')}" style="color:black;text-decoration: none;">已银行卡绑定</a><span id="card"></span></li>
+                    </ul>
+                    <div class="action_chart">
+
+                        <input id="startTime"  name="startTime"  class=" laydate-icon"   placeholder="起始时间"/>
+                        至
+                        <input id="endTime"  name="endTime" placeholder="终止时间"  class=" laydate-icon" />
+
+                        <div class="tabwidth" id="empty">清空</div>
+                        <div class="tabwidth" id="seach">搜索</div>
+                        <input type="hidden" id="sTime" name="sTime" value="">
+                        <input type="hidden" id="eTime" name="eTime" value="">
+                    </div>
+
+
+                </div>
+
+                <div class="chartlist">
+                    <div class="taskchart" style="height: 920px;">
+                        <div class="taskchart_b" style="width: 100%;height: 460px;">
+                            <div class="taskhead"><span style="margin-left:20px;">用户数</span></div>
+                            <div class="tchart" id="A1">
+                                <canvas id="myChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="taskchart_b" style="width: 100%;height: 460px;">
+                            <div class="taskhead"><span style="margin-left:20px;">实名认证数</span></div>
+                            <div class="tchart" id="A2">
+                                <canvas id="myCertifiedChart"  style="width: 100%;height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <js href="__STATIC__/chartJs/Chart.js" />
+    <script>
+    function getBeforeDate(n){
+        var n = n;
+        var d = new Date();
+        var year = d.getFullYear();
+        var mon=d.getMonth()+1;
+        var day=d.getDate();
+        if(day <= n){
+                if(mon>1) {
+                   mon=mon-1;
+                }
+               else {
+                 year = year-1;
+                 mon = 12;
+                 }
+               }
+              d.setDate(d.getDate()-n);
+              year = d.getFullYear();
+              mon=d.getMonth()+1;
+              day=d.getDate();
+         s = year+"-"+(mon<10?('0'+mon):mon)+"-"+(day<10?('0'+day):day);
+         return s;
+    }
+
+    var rn;
+    var start = {
+        elem: '#startTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(), //最大日期
+        choose: function(datas){
+             end.min = datas; //开始日选好后，重置结束日的最小日期
+             end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#endTime',
+        format: 'YYYY-MM-DD',
+        max: laydate.now(),//最大日期
+    };
+    laydate(start);
+    laydate(end);
+
+    var loadi = layer.load(0);
+    $("#startTime").val(getBeforeDate(7));
+    $("#endTime").val(getBeforeDate(0));
+    var key1= new Array();
+    var value1= new Array();
+
+    var key2= new Array();
+    var value2= new Array();
+    $.post(APP+"/Api/Web/reportDetail",
+            "startTime="+$("#startTime").val()+"&endTime="+$("#endTime").val(),
+            function(data){
+                layer.close(loadi);
+                var userCount = data.userCount;
+                var certifiedCount = data.certifiedCount;
+
+                for (var i = 0; i < userCount.length; i++) {
+
+                    key1[i] = userCount[i]["regTime"];
+                    value1[i] = userCount[i]["allCount"];
+
+                };
+
+                var data = {
+                    labels : key1,
+                    datasets : [
+                        {
+                            fillColor : "rgba(0,134,139,0.5)",
+                            strokeColor : "rgba(0,134,139,1)",
+                            pointColor : "rgba(0,134,139,1)",
+                            pointStrokeColor : "#fff",
+                            data : value1
+                        }
+                    ]
+                }
+
+                var ctx = document.getElementById("myChart").getContext("2d");
+                new Chart(ctx).Line(data);
+
+                for (var j = 0; j < certifiedCount.length; j++) {
+
+                    key2[j] = certifiedCount[j]["regTime"];
+                    value2[j] = certifiedCount[j]["allCount"];
+
+                };
+
+                var data1 = {
+                    labels : key2,
+                    datasets : [
+                        {
+                            fillColor : "rgba(127,255,212,0.5)",
+                            strokeColor : "rgba(127,255,212,1)",
+                            pointColor : "rgba(127,255,212,1)",
+                            pointStrokeColor : "#fff",
+                            data : value2
+                        }
+                    ]
+                }
+
+                var ctx = document.getElementById("myCertifiedChart").getContext("2d");
+                var myNewCertifiedChart = new Chart(ctx).PolarArea(data1);
+                new Chart(ctx).Line(data1,"Line");
+
+    },"json"); 
+
+
+    $("#empty").click(function(){
+         $("#status").val("0");
+         $("#startTime").val("");
+         $("#endTime").val("");
+    });
+
+    $("#seach").click(function(){
+        var loadi = layer.load(0);
+        rn = parseInt(Math.random()*1000);
+        $("#A1").empty();
+        $("#A1").append("<canvas id='myChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        $("#A2").empty();
+        $("#A2").append("<canvas id='myCertifiedChart"+rn+"' style='width: 100%;height: 400px;'></canvas>");
+
+        var  startTime=$("#startTime").val();
+        var  endTime=$("#endTime").val();
+
+
+        if(startTime==""||endTime==""){
+            layer.msg("请选择查询时间",{icon:8});
+           return false;
+        }
+        if(startTime>endTime){
+            layer.msg("起始时间不能超过终止时间",{icon:8});
+           return false;
+        }
+
+        var key= new Array();
+        var value= new Array();
+
+        var certifiedKey= new Array();
+        var certifiedValue= new Array();
+
+        $.post(APP+"/Api/Web/reportDetail",
+        "startTime="+startTime+"&endTime="+endTime,
+        function(data){
+            layer.close(loadi);
+            var userCount = data.userCount;
+            var certifiedCount = data.certifiedCount;
+
+            for (var i = 0; i < userCount.length; i++) {
+
+                key[i] = userCount[i]["regTime"];
+                value[i] = userCount[i]["allCount"];
+
+            };
+
+            var data = {
+                labels : key,
+                datasets : [
+                    {
+                        fillColor : "rgba(0,134,139,0.5)",
+                        strokeColor : "rgba(0,134,139,1)",
+                        pointColor : "rgba(0,134,139,1)",
+                        pointStrokeColor : "#fff",
+                        data : value
+                    }
+                ]
+            }
+
+            var ctx = document.getElementById("myChart"+rn).getContext("2d");
+            new Chart(ctx).Line(data);
+
+            for (var j = 0; j < certifiedCount.length; j++) {
+
+                certifiedKey[j] = certifiedCount[j]["regTime"];
+                certifiedValue[j] = certifiedCount[j]["allCount"];
+
+            };
+
+            var data1 = {
+                labels : certifiedKey,
+                datasets : [
+                    {
+                        fillColor : "rgba(127,255,212,0.5)",
+                        strokeColor : "rgba(127,255,212,1)",
+                        pointColor : "rgba(127,255,212,1)",
+                        pointStrokeColor : "#fff",
+                        data : certifiedValue
+                    }
+                ]
+            }
+
+            var ctx = document.getElementById("myCertifiedChart"+rn).getContext("2d");
+            var myNewCertifiedChart = new Chart(ctx).PolarArea(data1);
+            new Chart(ctx).Line(data1,"Line");
+
+        },"json");    
+
+    });
+
+
+    </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>                                                        
+<meta http-equiv="Cache-Control" content="no-transform" />
+<link rel="alternate" media="handheld" href="#" />
+<link href="__STATIC__/css/font-awesome.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<css href="__CSS__/dealer.css" />
+<title>经销商详情完善</title>
+<script>
+    var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+    var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+    var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+    var IMG = "__IMG__";
+    var STATIC = "__STATIC__";
+    var UPFILE = "__UPFILE__";
+    var THEME = "__THEME__";
+ </script>
+</head>
+
+<style type="text/css">
+#center { 
+text-align:center;
+margin-left:auto; 
+margin-right:auto;
+}
+.m_line{margin-top: 80px;}
+.thumbImage img
+{
+    MAX-WIDTH: 100%!important;HEIGHT: auto!important;width:expression(this.width > 250 ? "250px" : this.width)!important;
+}
+</style>
+<body>
+    <br>
+    <include file="Public/dealer_hear" />
+
+    <div>
+        <hr class="m_line"></hr>   
+    </div>
+
+    <div  style="min-height:400px; margin:20px 20px;">
+
+                <span>双方合同都已签订</span><br><br>
+                <span>经销商合同确认日期：{$deaTime}</span><br/>
+                <img src="__UPFILE__/<?php echo $dealerfilesid[f_filepath],$dealerfilesid[f_filename]?>" class="thumbImage" style="width:200px;height: 200px;">
+                <input type="hidden"  value="{$dealerfilesid['f_id']}"/>
+                <a  href="__APP__/Home/Business/dealerContact?dealerfilesid={$dealerfilesid['f_id']}" >下载</a><br/>
+                <span>企业合同确认日期：{$comTime}</span><br/>
+                <img src="__UPFILE__/<?php echo $comfilesid[f_filepath],$comfilesid[f_filename]?>" class="thumbImage" style="width:200px;height: 200px;>
+                <input type="hidden"  value="{$comfilesid['f_id']}"/>
+                <a href="__APP__/Home/Business/dealerContact?dealerfilesid={$comfilesid['f_id']}">下载</a>
+
+    </div>
+</body>
+
+<include file="Public/loadjs" />
+
+</html>

@@ -1,0 +1,56 @@
+<include file="Public/admin_head" title="杭州利伊享" />
+<div class="company">
+    <div class="admin_left fl">
+        <ul>
+            <li>
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl">首页</span>
+            </li>
+            <li >
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 38px;">通讯录</span>
+            </li>
+            <li  class="current">
+                <i class="fa fa-home fa-3x fl"></i>
+                <span class="fl" style="margin-left: 34px;">企业设置</span>
+            </li>
+            <li>
+                <i class="fa fa-gear  fa-3x fl"></i>
+                <span class="fl" style="margin-left: 32px;">权限设置</span>
+            </li>
+        </ul>
+    </div>
+    <div class="company_right fl">
+        <div class="company_nav">
+            <span class="currs">企业设置</span>
+            <span>登录页面设置</span>
+            <span>客户管理设置</span>
+            <span>信息发送设置</span>
+        </div>
+        <div class="company_con">
+            <h6>企业设置</h6>
+            <ul class="company_ul">
+                <li>企业LOGO</li>
+                <li><textarea class="txts1"></textarea></li>
+                <li><button class="buts">上传LOGO</button><button class="buts">恢复默认</button></li>
+                <li>企业logo的大小为332px,格式为png,jpg,gif</li>
+                <li><input type="text" class="inpts"><button class="butt">保存</button></li>
+                <li>全公司默认字符串</li>
+                <li><input type="text" class="inpts"><button class="butt">保存</button></li>
+            </ul>
+        </div>
+        <div class="company_con company_cons">
+            <h6>登录页设置</h6>
+            <ul class="company_ul">
+                <li>企业主图</li>
+                <li><textarea class="txts1 txts "></textarea></li>
+                <li><button class="buts">上传LOGO</button><button class="buts">恢复默认</button></li>
+                <li>企业登录页面主图大小为480*270px,格式为png,jpg,gif</li>
+                <li>登录页背景色</li>
+                <li>全公司默认字符串</li>
+                <li><input type="text" class="inpts"><button class="butt">保存</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" title="杭州利伊享" />

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>任务详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        html,body{
+            background-color:#FFFFFF;
+        }
+
+        .mui-content{
+            background-color:#FFFFFF;
+        }
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__PUBLIC__/static";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+    </script>
+    <!--标准mui.css-->
+    <script type="text/javascript" src="http://wisdom.51lick.com//Public/static/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!--微信相关配置-->
+    <script type="text/javascript">
+        wx.config({
+            // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            debug:true,
+            // 必填，公众号的唯一标识
+            appId:"{$appid}",
+            // 必填，生成签名的时间戳
+            timestamp:"{$timstamp}",
+            // 必填，生成签名的随机串
+            nonceStr:"{$noncestr}",
+            // 必填，签名，见附录1
+            signature:"{$signature}",
+            // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            jsApiList:["onMenuShareAppMessage"]
+        });
+
+       //监听获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage({
+            title: '我的分享', // 分享标题
+            desc: '测试', // 分享描述
+            link: 'http://bbs.weiwangvip.com/', // 分享链接
+            imgUrl: '', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+               alert("成功");
+            },
+            cancel: function () {
+                alert("取消");
+            }
+        });
+
+    </script>
+
+
+
+
+    <link rel="stylesheet" href="__CSS__/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="__CSS__/app.css"/>
+    <link href="__CSS__/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color:#FFFFFF"></a>
+    <h1 class="mui-title"  id="title" style="color:#FFFFFF">
+        <if condition="$taskinfo.type_label eq 'business'">
+            招商赚详情
+            <elseif condition="$taskinfo.type_label eq 'widely'"/>
+            随手赚详情
+            <elseif condition="$taskinfo.type_label eq 'push'"/>
+            推广赚详情
+        </if>
+    </h1>
+</div>
+<div class="mui-content" style="padding-bottom:45px;padding-top:45px;">
+    <div id="segmentedControl" class="mui-segmented-control" style="border-bottom:1px solid #C7C7CC;border-top:none;border-left:none;border-right:none;border-radius:0px;">
+        <a class="mui-control-item  mui-active" href="#item2mobile" style="border-left:1px solid #C7C7CC">图文详情</a>
+        <if condition="$taskinfo.type_label eq 'business'">
+            <a class="mui-control-item" href="#item1mobile" style="border-left:1px solid #C7C7CC;">产品参数</a>
+        </if>
+    </div>
+
+    <div class="mui-content-padded" style="padding-top:10px;">
+        <div id="item1mobile" class="mui-control-content" >
+            <if condition="$taskinfo.type_label eq 'business'">
+                <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_product}</div>
+            </if>
+        </div>
+        <div id="item2mobile" class="mui-control-content mui-active">
+            <if condition="$taskinfo.type_label eq 'business'">
+                <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_note}</div>
+                <elseif condition="$taskinfo.type_label eq 'widely'"/>
+                <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>
+                <elseif condition="$taskinfo.type_label eq 'push'"/>
+                <div style="margin-left: 0px;margin-right:0px;">{$taskinfo.info.f_taskrequirements}</div>
+            </if>
+        </div>
+    </div>
+</div>
+
+<!--href="/index.php/Mobileweb/Events/erweima"-->
+<nav class="mui-bar mui-bar-tab">
+    <a id="defaultTab" class="mui-tab-item"  href="/index.php/Mobileweb/Events/erweima">
+        <span class="mui-tab-label">立即参与</span>
+    </a>
+</nav>
+
+
+<script src="__JS__/mui.min.js"></script>
+<!--<script src="__JS__/mui.zoom.js"></script>-->
+<!--<script src="__JS__/mui.previewimage.js"></script>-->
+<script type="text/javascript">
+    document.getElementById('defaultTab').addEventListener('tap', function() {
+        location.href=APP+"/Mobileweb/Events/erweima";
+    });
+</script>
+</body>
+
+</html>
+

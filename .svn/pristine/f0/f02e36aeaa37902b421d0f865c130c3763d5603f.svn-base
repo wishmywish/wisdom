@@ -1,0 +1,371 @@
+<include file="Public/home_head" title="智慧推广::任务管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div id="rev_menu_left" class="class_menu_left">
+        <ul id="bigmenu">
+            <li id="1" class="org_box  org_box_select"><span class="org_bot_cor"></span>随手赚(<if condition="$tasktype eq 4">调研类<elseif condition="$tasktype eq 6"/>答题类<else/>推荐类</if>)</li>
+            <if condition="($tasktype eq 4) OR ($tasktype eq 6) ">
+                <div id="draggle">
+                    <p>题目类型</p>
+                    <span id="singe_drag"><i class="fa fa-dot-circle-o fa-fw"></i> 单选题</span>
+                    <span id="double_drag"><i class="fa fa-check-square-o fa-fw"></i> 多选题</span>
+                    <span id="text_drag"><i class="fa fa-file-text-o fa-fw"></i> 文本题</span>
+                    <span id="pic_drag"><i class="fa fa-picture-o fa-fw"></i> 图片题</span>
+                </div>
+            </if>
+        </ul>
+    </div>
+    <input type="hidden" id="typetaskid" value="{$reModi.one.f_tasktypeid|default=$tasktype}"/>
+    <input type="hidden" id="index_proid" value="{$reModi.pro.f_indexid|default=0}"/>
+    <input type="hidden" id="index_conid" value="{$reModi.detail.f_indexid|default=0}"/>
+    <div class="index_right_bus">
+        <!--随手赚-->
+
+        <div id="nav1">
+            <span > 首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 随手赚&nbsp>&nbsp<if condition="$tasktype eq 4">调研类<elseif condition="$tasktype eq 6"/>答题类<else/>推荐类</if></span>
+        </div>
+        <div id="a1" style="display: block">
+            <include file="Promotion/widelyTaskAdd_public"/>
+        </div>
+
+        <div id="a2" style="display: none">
+            <if condition="($tasktype eq 4) OR ($tasktype eq 6) ">
+                <div class="tips-draggle">
+                    <p>温馨提示:</p>
+                    <p>1）拖拽左边的题目到右侧。</p>
+                    <p>2）右侧模板中的内容可以拖拽进行排序。</p>
+                    <p>3）在离开本页面之前，请注意保存设计，以避免设计数据丢失。</p>
+                    <if condition="$tasktype eq 6">
+                        <p>4）答题类在标准答案上打勾。</p>
+                    </if>
+                </div>
+                <div class="draggle">
+                    <?php if ($reModi['detail']) { ?>
+                     <volist  name="reModi.detail"  id="vo"  key="k">
+                      <if  condition="$vo.f_type eq 1">
+                          <div  class='draggle_content'  data-type='{$vo.f_type}' data-index='{$vo.f_stdindex}'>
+                              <div class='title'>
+                                  <span class='num'>Q{$k}:(单选题)</span>
+                                  <textarea   class='title_textare' placeholder='单选题'>{$vo.f_problemtatile}</textarea>
+                                  <span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>
+                              </div>
+                              <div class='content'>
+                                  <volist  name="vo.answer" id="val" key="m">
+                                      <div  class='content_temp'>
+                                          <if condition="$tasktype eq 6">
+                                          <input type='radio'  name='quest_radio_singe_{$k}'  style='width:15px;height:15px;margin-right: -4px;' <?php  if (in_array(($m-1),explode(",",$vo['f_trueanswer']))&&$vo['f_trueanswer']!=""){echo "checked";}  ?>/>
+                                          </if>
+                                          <textarea class='content_temp_ques' name='quest_text_singe_{$m}'>{$val}</textarea>
+                                          <span class='content_add_img' style='color: #45A85D' onclick='add(this,1,{$k})'><i class='fa fa-plus fa-1x'></i></span>
+                                          <span class='content_del_img' style='color: #F47469' onclick='del(this)'><i class='fa fa-trash-o fa-1x'></i></span>
+                                      </div>
+                                  </volist>
+                              </div>
+                          </div>
+                      <elseif condition="$vo.f_type eq 2"/>
+                          <div  class='draggle_content'  data-type='{$vo.f_type}' data-index='{$vo.f_stdindex}'>
+                               <div class='title'>
+                                   <span class='num'>Q{$k}:(多选题)</span>
+                                   <textarea   class='title_textare' placeholder='多选题'>{$vo.f_problemtatile}</textarea>
+                                   <span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>
+                               </div>
+                               <div class='content'>
+                                   <volist  name="vo.answer" id="val" key="m">
+                                       <div  class='content_temp'>
+                                           <if condition="$tasktype eq 6">
+                                           <input type='checkbox'  name='quest_checkbox_double' style='width:15px;height:15px;' <?php  if (in_array(($m-1),explode(",",$vo['f_trueanswer']))&&$vo['f_trueanswer']!=""){echo "checked";}  ?>/>
+                                           </if>
+                                           <textarea class='content_temp_ques' name='quest_text_double_{$m}'>{$val}</textarea>
+                                           <span class='content_add_img' style='color: #45A85D' onclick='add(this,2,{$k})'><i class='fa fa-plus fa-1x'></i></span>
+                                           <span class='content_del_img' style='color: #F47469' onclick='del(this)'><i class='fa fa-trash-o fa-1x'></i></span>
+                                       </div>
+                                   </volist>
+                               </div>
+                          </div>
+
+                      <elseif condition="$vo.f_type eq 3"/>
+                          <div  class='draggle_content'  data-type='{$vo.f_type}' style='min-height:0px' data-index='{$vo.f_stdindex}'>
+                              <div class='title' style='border-radius:5px;'>
+                                  <span class='num'>Q{$k}:(文本题)</span>
+                                  <textarea   class='title_textare' placeholder='文本'>{$vo.f_problemtatile}</textarea>
+                                  <span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>
+                              </div>
+                          </div>
+
+                      <elseif condition="$vo.f_type eq 4"/>
+                          <div  class='draggle_content'  data-type='{$vo.f_type}' style='min-height:0px' data-index='{$vo.f_stdindex}'>
+                              <div class='title' style='border-radius:5px;'>
+                                  <span class='num'>Q{$k}:(图片题)</span>
+                                  <textarea   class='title_textare' placeholder='图片'>{$vo.f_problemtatile}</textarea>
+                                  <span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>
+                              </div>
+                          </div>
+                      </if>
+                   </volist>
+                    <?php }?>
+                </div>
+                <else/>
+                <p style="margin: 20px;">推荐详情描述:</p>
+                <div id="recomdtemp" style="margin:20px 0 60px 0;">
+                    <script type="text/plain" id="editor2" style="width:550px;min-height:450px;color:#595758;" name="editor2"></script>
+                </div>
+            </if>
+            <div class="next_btn">
+                <span  onclick="widely_pre()" style="margin-right: 25px;">上一步</span>
+                <span  onclick="widely_submit()">申请上线</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+
+    //实例化编译器
+    var ue=UM.getEditor('editor2',{
+        toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+        UMEDITOR_HOME_URL:"__STATIC__/um/",
+        autoClearinitialContent: true,
+        elementPathEnabled: false,
+        autoFloatEnabled: false,
+        // textarea: 'content'
+    });
+
+    UM.getEditor('editor2').setContent('{$reModi.pro.f_recommend}',true);
+
+</script>
+<script type="text/javascript">
+    $(function() {
+        autosize(document.querySelectorAll('textarea'));
+
+        $("#profileImg").wrap("<form id='up_prologo' action='{:U('Api/Upfile/upF/type/2/size/51200/exts/jpg,gif,png')}' method='post' enctype='multipart/form-data'></form>");
+        var num=$(".draggle .draggle_content:last-child").index()+1;
+//        $( "#draggle").draggable();
+
+        $("#draggle span").each(function(i){
+            var span_id=$("#draggle span").eq(i).attr("id");
+            var span_text=$("#draggle span").eq(i).text();
+            $("#"+span_id).draggable({
+                cursor: "move",
+                containment: "document",
+                helper:function (){
+                    var doc="<span id='doc' style='color: #7A8B73'>"+span_text+"</span>";
+                    return  doc;
+                },
+            });
+        });
+
+
+        $( ".draggle" ).sortable({
+            update: function (event, ui) {
+                changenum_big();
+            }
+        });
+
+//            $( ".draggle" ).disableSelection();
+
+        //鼠标拖拽掉时的动作
+        $(".draggle").droppable({
+            accept:"#draggle span",
+            drop:function(event,ui){
+                num++;
+                showdrag(ui.draggable.context.id,num);
+            }
+        });
+
+
+
+
+        function  showdrag(draggabelid,num){
+            eval(""+draggabelid+"("+num+")");
+        }
+
+    });
+
+
+
+    function  changenum_big(){
+        $(".draggle .draggle_content").each(function(i){
+            var obj=$(".draggle .draggle_content").eq(i);
+            var data_type=$(obj).attr("data-type");
+            var text="";
+            if(data_type==1){
+                text="单选题";
+            }else if(data_type==2){
+                text="多选题";
+            }else if(data_type==3){
+                text="文本题";
+            }else if(data_type==4){
+                text="图片题";
+            }
+            obj.find(".num").text("Q"+(i+1)+":("+text+")");
+            obj.find("input").attr("name","quest_radio_singe_"+(i+1));
+        });
+
+        show_del_btn();
+    }
+
+    show_del_btn();
+    //鼠标滑动显示模块的删除按钮
+    function  show_del_btn(){
+        $(".draggle .draggle_content").hover(
+                function () {
+                    $(this).find(".title_img").show();
+                },
+                function () {
+                    $(this).find(".title_img").hide();
+                }
+        );
+    }
+
+
+
+
+    var tasktype=$('#tasktype').val();
+
+    //添加单选模板
+    function   singe_drag(num){
+
+        var tmp="";
+        tmp+="<div  class='draggle_content'  data-type='1' data-index=''>";
+        tmp+="<div class='title'>";
+        tmp+="<span class='num'>Q"+num+":(单选题)</span>";
+        tmp+=" <textarea   class='title_textare' placeholder='单选题'></textarea>";
+        tmp+="<span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>";
+        tmp+=" </div>";
+        tmp+="  <div class='content'>";
+        tmp+="<div  class='content_temp'>";
+            if(tasktype==6){
+                tmp+="<input type='radio'  name='quest_radio_singe_"+num+"' style='width:15px;height:15px;'/>";
+            }
+        tmp+="<textarea class='content_temp_ques' name='quest_text_singe_1' placeholder='选项1'></textarea>";
+        tmp+="<span class='content_add_img' style='color: #45A85D' onclick='add(this,1,"+num+")'><i class='fa fa-plus fa-1x'></i></span>"
+        tmp+="<span class='content_del_img' style='color: #F47469' onclick='del(this)'><i class='fa fa-trash-o fa-1x'></i></span>"
+        tmp+="</div>";
+        tmp+="</div>";
+        tmp+="</div>";
+        $(".draggle").append(tmp);
+        changenum_big();
+    }
+
+    //添加多选题模板
+    function   double_drag(num){
+        var tmp="";
+        tmp+="<div  class='draggle_content'  data-type='2' data-index=''>";
+        tmp+="<div class='title'>";
+        tmp+="<span class='num'>Q"+num+":(多选题)</span>";
+        tmp+=" <textarea   class='title_textare' placeholder='多选题'></textarea>";
+        tmp+="<span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>";
+        tmp+=" </div>";
+        tmp+="  <div class='content'>";
+        tmp+="<div  class='content_temp'>";
+        if(tasktype==6){
+            tmp+="<input type='checkbox'  name='quest_checkbox_double' style='width:15px;height:15px;'/>";
+        }
+        tmp+="<textarea class='content_temp_ques' name='quest_text_double_1' placeholder='选项1'></textarea>";
+        tmp+="<span class='content_add_img' style='color: #45A85D' onclick='add(this,2,"+num+")'><i class='fa fa-plus fa-1x'></i></span>"
+        tmp+="<span class='content_del_img' style='color: #F47469' onclick='del(this)'><i class='fa fa-trash-o fa-1x'></i></span>"
+        tmp+="</div>";
+        tmp+="</div>";
+        tmp+="</div>";
+        $(".draggle").append(tmp);
+        changenum_big();
+
+    }
+
+    //添加图片模板
+    function   pic_drag(num){
+        var tmp="";
+        tmp+="<div  class='draggle_content'  data-type='4' style='min-height:0px' data-index=''>";
+        tmp+="<div class='title' style='border-radius:5px;'>";
+        tmp+="<span class='num'>Q"+num+":(图片题)</span>";
+        tmp+="<textarea   class='title_textare' placeholder='图片'></textarea>";
+        tmp+="<span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>";
+        tmp+"</div>";
+        tmp+="</div>";
+        $(".draggle").append(tmp);
+        changenum_big();
+    }
+
+    //添加文本模板
+    function   text_drag(num){
+        var tmp="";
+        tmp+="<div  class='draggle_content'  data-type='3' style='min-height:0px' data-index=''>";
+        tmp+="<div class='title' style='border-radius:5px;'>";
+        tmp+="<span class='num'>Q"+num+":(文本题)</span>";
+        tmp+="<textarea   class='title_textare' placeholder='文本'></textarea>";
+        tmp+="<span class='title_img' onclick='drag_del(this)'><i class='fa fa-times-circle-o fa-2x'></i></span>";
+        tmp+"</div>";
+        tmp+="</div>";
+        $(".draggle").append(tmp);
+        changenum_big();
+    }
+
+
+    //添加选择项模板
+    function  add(obj,num,lg){
+        var obj_small_tmp=$(obj).parent(".content_temp");
+        var length=$(obj).parents(".content").children(".content_temp").length;
+        add_small_tmp(obj_small_tmp,length,num,lg);
+
+    }
+
+    //添加子选择项模板
+    function add_small_tmp(obj,length,num,lg){
+        var quest_text="";
+        var length=length+1;
+        if(num==1){
+            quest_text="quest_text_singe_"+length;
+        }else if(num==2){
+            quest_text="quest_text_double_"+length;
+        }
+        template(obj,quest_text,length,num,lg);
+
+    }
+    //模板
+    function template(obj,quest_text,length,num,lg){
+        var tmp="";
+        tmp+="<div  class='content_temp'>";
+         if(tasktype==6){
+             if(num==1){
+                 tmp+="<input type='radio' style='width:15px;height:15px;' name='quest_radio_singe_"+lg+"' />";
+             }else{
+                 tmp+="<input type='checkbox' style='width:15px;height:15px;'  name='quest_checkbox_double'/>";
+             }
+         }
+        tmp+="<textarea class='content_temp_ques' name='"+quest_text+"' placeholder='选项"+length+"'></textarea>";
+        tmp+="<span class='content_add_img' style='color: #45A85D' onclick='add(this,"+num+","+lg+")'><i class='fa fa-plus fa-1x'></i></span>"
+        tmp+="<span class='content_del_img' style='color: #F47469' onclick='del(this)'><i class='fa fa-trash-o fa-1x'></i></span>"
+        tmp+="</div>";
+        $(obj).after(tmp);
+    };
+
+
+    //删除选择项模板
+    function  del(obj){
+        var length=$(obj).parents(".content").children(".content_temp").length;
+        if((length-1)==0){
+            $(obj).siblings("textarea").attr("placeholder","选择1");
+            $(obj).siblings("input").attr("checked",false);
+        }else{
+            $(obj).parent(".content_temp").remove();
+        }
+    }
+
+    //问题模板的删除
+    function  drag_del(obj){
+        $(obj).parents(".draggle_content").remove();
+        var data_index= $(obj).parents(".draggle_content").attr("data-index");
+        if(data_index!=""){
+            $.post(APP+"/Api/Web/delteanswer/","indexid="+data_index,function(rel){
+            },"json");
+        }
+        changenum_big();
+        }
+
+
+
+</script>
+</body>
+</html>

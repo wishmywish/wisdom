@@ -1,0 +1,364 @@
+    <include file="Public/head" />
+    <style type="text/css">
+    .table{ 
+    border:1px solid #cad9ea; 
+    color:#666; 
+    width: 60%;
+    margin-right: 455px;
+    } 
+
+    .table th { 
+        background-repeat:repeat-x; 
+        height:30px; 
+    } 
+
+    .table td,.table th{ 
+        border:1px solid #cad9ea; 
+        padding:0 1em 0; 
+    } 
+
+    .addBusiness {
+    background-color: #fff;
+    width: 100%;
+    color: #000;
+    height: 100%;
+    }
+    </style>
+    <body>
+        <div class="add">
+            <div class="addBusiness" >
+
+                <div class="page_next" id="one" style="margin-bottom:20px;">
+                    
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>发布单位：</span> <input type="text" id="companyName" placeholder="录入发布单位" value="{$reModi.company.companyName}" readonly style="    width: 245px;"><input type="hidden" id="companyId" name="companyId" value="{$reModi.one.f_companyid}">
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务标题：</span> <input type="text" id="title" name="title" value="{$reModi.f_title}" placeholder="请输入任务标题" readonly style="    width: 245px;">
+                        </div>
+                    </div><br>               
+                    
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务时间：</span> 
+                            <input id="startdate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_begindate}" disabled>
+                            <input id="enddate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_enddate}" disabled>
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务联系：</span> <input type="text" id="linkman" name="linkman" placeholder="业务联系人" value="{$reModi.f_linkman}" readonly style="    width: 245px;">
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>联系电话：</span> <input type="text" id="linkphone" name="linkphone" placeholder="联系电话" value="{$reModi.f_linkphone}" readonly style="    width: 245px;">
+                        </div>
+                    </div><br>
+
+                    <div class="line" >
+                        <div class="line_input">
+                            <span>任务详情描述：</span><br>
+                            <textarea  value="" name="pro_taskDescription"  id="pro_taskDescription" style="width:550px;height:100px;" disabled="disabled" readonly="readonly">{$reModi.f_description}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!--下一步-->
+                <div class="page_next" id="two" style=" background-color: #fff;height:100%;">
+                    <div class="line">
+                        <div class="line_input" style="width:100%;">
+                            <span>是否提供试用：</span> 
+                            <input type="radio" id="tryoutno" name="tryout" value="0" style="width:3%;height:15px;" <eq name="reModi.f_tryout" value="0">checked</eq>/><label for="tryoutno">否</label>
+                            <input type="radio" id="tryoutyes" name="tryout" value="1" style="width:3%;height:15px;" <eq name="reModi.f_tryout" value="1">checked</eq>/><label for="tryoutyes">是</label>
+                            <span>试用样品份数：</span> <input type="text" id="tryoutNumber" name="tryoutNumber" placeholder="试用样品份数" value="{$reModi.f_tryoutnumber}">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input" style="width:100%;">
+                            <span>试用是否付费：</span> 
+                            <input type="radio" id="paymentno" name="testPayment" value="0" style="width:3%;height:15px;" <eq name="reModi.f_payment" value="0">checked</eq>/><label for="paymentno">否</label>
+                            <input type="radio" id="paymentyes" name="testPayment" value="1" style="width:3%;height:15px;" <eq name="reModi.f_payment" value="1">checked</eq>/><label for="paymentyes">是</label>
+                            <span>试用样品单价(金币)：</span> <input type="text" id="paymentMoney" name="paymentMoney" placeholder="试用样品单价" value="{$reModi.f_paymentmoney}">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>招商情况：</span>
+                            <table class="table"> 
+                                <tr> 
+                                    <th>区域</th> 
+                                    <th>数量</th> 
+                                </tr> 
+
+                                <volist name="reModi.area" id="vo">
+                                    <tr> 
+                                        <td>{$vo.f_area}</td> 
+                                        <td>{$vo.f_qty}</td> 
+                                    </tr> 
+                                </volist>
+                            </table> 
+                        </div>
+                    </div>
+
+                    <!-- <div class="line">
+                        <div class="line_input">
+                            <span>任务品牌：</span> <input type="text" id="mtbrand" placeholder="招商品牌" value="{$reModi.f_mtbrand}" readonly style="    width: 245px;">
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务产品：</span> <input type="text" id="mtgoods" placeholder="招商产品，多个用英文逗号分开" value="{$reModi.f_mtgoods}" readonly style="    width: 245px;">
+                        </div>
+                    </div><br> -->
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>总首批款：</span> <input type="text" id="payment" placeholder="首批发货款" value="{$reModi.f_unitfirstamount}" style="width: 70px;" oninput="psum();" readonly>
+                            <input type="text" id="bond" placeholder="保证金" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitcashdeposit}" readonly>
+                            <input type="text" id="franchise" placeholder="加盟费" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitfranchisefee}" readonly>
+                            <input type="text" id="otherprice" placeholder="其他费用" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitotheramount}" readonly>
+                            <span>合计：<span id="pricesum_txt" style="color:red;">{$reModi.f_unittotalamount}</span>元<input type="hidden" id="pricesum" value="{$reModi.two.f_unittotalamount}"></span>
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input" style="width:100%">
+                            <span>每单总首批款</span>=<span>首批发货款</span><input type="text" id="payment" placeholder="首批发货款" value="{$reModi.f_unitfirstamount}" style="width: 70px;" oninput="psum();">+
+                            <span>保证金</span><input type="text" id="bond" placeholder="保证金" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitcashdeposit}">+
+                            <span>加盟费</span><input type="text" id="franchise" placeholder="加盟费" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitfranchisefee}">+
+                            <span>其他费用</span><input type="text" id="otherprice" placeholder="其他费用" style="width: 60px;" oninput="psum();" value="{$reModi.f_unitotheramount}">
+                            <span>合计：<span id="pricesum_txt" style="color:red;">{$reModi.f_unittotalamount}</span>元</span>
+                        </div>
+                    </div><br>
+                    <div class="line">
+                        <div class="line_input" style="width:100%">
+                            <span>每单任务总佣金</span>=<span>业务员佣金</span><input type="text" id="agents_commission" placeholder="业务员佣金" style="width: 70px;" oninput="a_comm();" value="{$reModi.f_unitcommission}">+
+                            <span>税务处理</span><input type="text" id="shuiw_commission" placeholder="税务处理" style="width: 70px;" oninput="a_comm();" value="{$reModi.f_shuiw_commission}">+
+                            <span>商务人员佣金</span><input type="text" id="shangw_commission" placeholder="商务人员佣金" style="width: 70px;" oninput="a_comm();" value="{$reModi.f_shangw_commission}">+
+                            <span>推广人员佣金</span><input type="text" id="tuig_commission" placeholder="推广人员佣金" style="width: 70px;" oninput="a_comm();" value="{$reModi.f_tuig_commission}">+
+                            <span>平台运营费用</span><input type="text" id="piny_commission" placeholder="平台运营费用" style="width: 70px;" oninput="a_comm();" value="{$reModi.f_piny_commission}">
+                            <span>合计：<span id="pins_commission" style="color:red;">{$reModi.f_unitpreownedgold}</span>元</span>
+                        </div>
+                    </div><br>
+                    <div class="line">
+                        <div class="line_input" style="width:100%">
+                            <span>您单个招商成功后的佣金是：<span id="commission_txt" style="color:red;">{$reModi.f_unitpreownedgold}</span>元，计划招商(<span id="count"></span>)家，总目标佣金：<span id="totalcommission" style="color:red;">{$reModi.f_totalcommission}</span>元</span><br>
+                        </div>
+                        <div class="line_note"></div>
+                    </div><br>
+                </div>
+                <!--下一步display:none-->
+                <div class="page_next" id="four" style=" background-color: #fff;height:100%;">
+                    <div class="line" style="height: 450px;">
+                        <div class="line_input">
+                            <span>招商图文详情描述：</span><br>
+                            <div class="editor" style="height: 100%;width: 610px;float: left;">
+                                <script type="text/plain" id="editor" style="width:600px;height:350px;"></script>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="line" style="height: 450px;">
+                        <div class="line_input">
+                            <span>招商产品参数详情描述：</span><br>
+                            <div class="editor" style="height: 100%;width: 610px;float: left;">
+                                <script type="text/plain" id="editor2" style="width:600px;height:350px;"></script>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="tindexid" name="tindexid" value="{$reModi.f_indexid|default=0}">
+                    <div class="line_one"></div>
+                    <div class="line" style="height: 450px;">
+                        <div class="line_input">
+                            <span>公司简介描述：</span><br>
+                            <div class="editor" style="height: 100%;width: 610px;float: left;">
+                                <script type="text/plain" id="editor3" style="width:600px;height:350px;"></script>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="tindexid" name="tindexid" value="{$reModi.f_indexid|default=0}">
+                    <div class="line_one"></div>
+                </div>
+                
+                <!--下一步-->
+                <div class="page_next" id="five" style=" background-color: #fff;height:100%;">
+                    <div class="big_line">
+                        <div  class="line_input">
+                            <span>任务图标：</span>
+                            <?php if ($reModi['tubiao']) {?>
+                            <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                            <div id="showPic">
+                                <img src="__UPFILE__/{$reModi.tubiao.f_filepath}{$reModi.tubiao.f_filename}" width="50" height="50">
+                            </div>
+                            <?php }?>
+                        </div>
+                    </div>
+
+                    <div class="big_line">
+                        <div  class="line_input">
+                            <span>任务广告：</span>
+                            <?php if ($reModi['guanggao']) {?>
+                            <!-- {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                            <div id="showBan">
+                                <img src="__UPFILE__/{$reModi.guanggao.f_filepath}{$reModi.guanggao.f_filename}" width="50" height="50">
+                            </div>
+                            <?php }?>
+                        </div>
+                    </div>
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>商标注册证或授权使用证书：</span><neq name="reModi.attachOne" value=""> <a href="{$reModi.linkOne}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                    
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>经销商合同：</span><neq name="reModi.attachTwo" value=""> <a href="{$reModi.linkTwo}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                    
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>产品和宣传资料图片：</span><neq name="reModi.attachThree" value=""> <a href="{$reModi.linkThree}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                    
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>产品价格表：</span><neq name="reModi.attachFour" value=""> <a href="{$reModi.linkFour}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                    
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>销售市场支持政策：</span><neq name="reModi.attachFive" value=""> <a href="{$reModi.linkFive}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                    
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>标志LOGO设计图：</span> <neq name="reModi.attachSix" value=""><a href="{$reModi.linkSix}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+                                       
+                    <div class="big_line">
+                        <div class="line_input">
+                                <span>卫生许可证图片：</span> <neq name="reModi.attachSeven" value=""><a href="{$reModi.linkSeven}" target="_blank">链接</a></neq>
+                        </div>
+                    </div><br>
+
+                    <input type="hidden" id="findexid" name="findexid" value="{$reModi.five.f_indexid|default=0}">
+                    <div class="line_one"></div>
+                </div>
+                <div>
+                    <span style="text-indent:2em">是否使用保证金、贷款进入监管账户</span>
+                    <input type="radio" id="supervisionUser" name="supervisionUser"  value="1" <if condition="$reModi['company']['supervisionUser'] eq 1">checked</if>  /><span  style="margin-right:10px">有</span>
+                    <input type="radio" id="supervisionUser"  name="supervisionUser"  value="0" <if condition="$reModi['company']['supervisionUser'] eq 0">checked</if> /><span  style="margin-right:10px">无</span><br><br>
+                    <span>您需要交纳的总诚信金为：</span><input type="text" name="faithMoney" id="faithMoney" value="{$reModi.company.credit}"><span>元
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <include file="Public/loadjs" />
+    
+    <script>
+        sublevel_out();//子窗口退出
+        
+        //加截UM
+       var um = UM.getEditor('editor',{
+          toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink']
+          ,UMEDITOR_HOME_URL:"__STATIC__/um/"
+            ,autoClearinitialContent: true
+            //,wordCount: false
+            ,elementPathEnabled: false
+            ,autoFloatEnabled: false
+            ,textarea: 'content'
+            //,imageUrl: "{:U('Api/Upfile/upfile')}"
+            //,imagePath: "__UPFILE__"
+        });
+        //alert($('#four').is(":hidden"));
+
+        //if($('#four').css('display')!="none"){
+            //alert(1);
+        //UM.addListener("ready", function () {
+            // editor准备好之后才可以使用
+           
+        UM.getEditor('editor').setContent('{$reModi.f_note}');
+        UM.getEditor('editor').setDisabled('fullscreen');
+        //});
+
+        //}
+        //加截UM
+       var um = UM.getEditor('editor2',{
+          toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink']
+          ,UMEDITOR_HOME_URL:"__STATIC__/um/"
+            ,autoClearinitialContent: true
+            //,wordCount: false
+            ,elementPathEnabled: false
+            ,autoFloatEnabled: false
+            ,textarea: 'content'
+            //,imageUrl: "{:U('Api/Upfile/upfile')}"
+            //,imagePath: "__UPFILE__"
+        });
+        //alert($('#four').is(":hidden"));
+
+        //if($('#four').css('display')!="none"){
+            //alert(1);
+        //UM.addListener("ready", function () {
+            // editor准备好之后才可以使用
+           
+        UM.getEditor('editor2').setContent('{$reModi.f_product}');
+        UM.getEditor('editor2').setDisabled('fullscreen');
+        //});
+
+        //}
+
+         //加截UM
+       var um = UM.getEditor('editor3',{
+          toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink']
+          ,UMEDITOR_HOME_URL:"__STATIC__/um/"
+            ,autoClearinitialContent: true
+            //,wordCount: false
+            ,elementPathEnabled: false
+            ,autoFloatEnabled: false
+            ,textarea: 'content'
+            //,imageUrl: "{:U('Api/Upfile/upfile')}"
+            //,imagePath: "__UPFILE__"
+        });
+        //alert($('#four').is(":hidden"));
+
+        //if($('#four').css('display')!="none"){
+            //alert(1);
+        //UM.addListener("ready", function () {
+            // editor准备好之后才可以使用
+           
+        UM.getEditor('editor3').setContent('{$reModi.f_company_note}');
+        UM.getEditor('editor3').setDisabled('fullscreen');
+        //});
+
+        //}
+
+        $(function(){
+            getBigTrade();
+            
+            //公司自动补全
+            $("#companyName").bigAutocomplete({width:300,
+                url:"{:U('Taskadmin/Fun/searchCname')}",
+                callback:function(data){
+                    $('#companyId').val(data.result);
+                }
+            });
+        });
+    </script>
+</html>

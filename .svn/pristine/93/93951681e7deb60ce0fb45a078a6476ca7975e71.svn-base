@@ -1,0 +1,26 @@
+<include file="Public/head" title="2015比股市还火爆的赚钱神器" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content" style="overflow-x:visible; padding:10px;">
+                <div style="color: red;text-align: center;font-weight: bold;height: 30px;line-height: 30px;font-size: 14px;">好兄弟，讲义气，帮我领个红包</div>
+                <div style="height: 100%;line-height: 30px;">小宝招商——赚钱、创业、升职、社交、培训，开启营销人全新的职业模式。</div>
+                <div style="height: 100%;line-height: 30px;">每个注册会员配有唯一的邀请码，每邀请一个人，并使用邀请码注册成功，邀请人可获得20金币（20金币=2元人民币），被邀请人使用邀请码成功注册，可获得50金币，同一个手机号码只能注册一个会员账号。邀请人获得邀请奖励金币最高为500金币。</div>
+                <div style="height: 30px;line-height: 30px;">您的好友邀请码：<span style='color:red;'>{$invitationCode}</span></div>
+                <div style='font-weight: bold;height: 30px;line-height: 30px;'>注册流程：</div>
+                <div style="height: 100%;line-height: 30px;">
+                    <span>1、扫描二维码，下载小宝招商APP</span>
+                    <img src='__ROOT__/Public/upfile/logo/invite.png'>
+                </div>
+                <div style="height: 100%;line-height: 30px;">
+                    <span>2、注册小宝账号（被邀请人记得填写邀请码，否则邀请人无法得到奖励）</span>
+                    <img src='__ROOT__/Public/upfile/logo/invite1.png'>
+                </div>
+                <div style="height:100%;line-height: 30px;">
+                    <span>3、登入小宝招商APP</span>
+                    <img src='__ROOT__/Public/upfile/logo/invite2.png'>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+<include file="Public/foot" />

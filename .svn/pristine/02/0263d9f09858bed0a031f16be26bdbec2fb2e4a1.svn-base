@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[title]</title>
+    <style>
+        /*列出所有图标*/
+        /*菜单红条*/
+        .menu_line_red{background:url(__IMG__/bg.png) repeat-x -0px -10px;}
+        /*菜单蓝条*/
+        .menu_line_blue{background:url(__IMG__/bg.png) repeat-x -0px -15px;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+    </script>
+
+    <js href="__STATIC__/jquery-1.11.2.min.js" />
+    <js href="__JS__/fun.js"/>
+    <!--自动补全插件-->
+    <css href="__STATIC__/css/jquery.bigautocomplete.css" />
+    <css href="__STATIC__/css/font-awesome.min.css" />
+    <css href="__STATIC__/um/themes/default/css/umeditor.css"/>
+    <css href="__STATIC__/um/themes/default/css/umeditor.min.css"/>
+    <js href="__STATIC__/layer/layer.js" />
+
+    <css href="__CSS__/home.css" />
+    <!--<css href="__CSS__/basic.css" />-->
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="head_left">
+        杭州日思夜享数据科技有限公司
+    </div>
+    <div class="head_right">
+        <ul>
+            <li>通知<span>|</span></li>
+            <li>帮助<span>|</span></li>
+            <li>登录<span>|</span></li>
+            <li>注销<a>&nbsp;&nbsp;<i class="fa fa-power-off"></i></a></li>
+        </ul>
+
+    </div>
+</div>
+<div class="body">
+    <div class="k0"></div>
+    <div class="content">
+        <div class="content_top">
+            <div class="logo_p"><img src="__IMG__/logo.png"/></div>
+            <div class="menu_nav">
+                <div class="menu_nav_right">
+                    <div style="width: 527px;" class="menu_nav_box">
+                        <span>首页</span>
+                    </div>
+                    <div style="width: 75px;" class="menu_nav_box">
+                        <span><a><i class="fa fa-gear  fa-lg fa-fw"></i></a></span>
+                    </div>
+                    <div style="width: 75px;" class="menu_nav_box">
+                        <span><a><i class="fa fa-envelope-o fa-lg"></i></a></span>
+                    </div>
+                    <div style="width: 75px;" class="menu_nav_box">
+                        <span><a><i class="fa fa-user fa-lg"></i></a></span>
+                    </div>
+                    <div style="width: 201px;float: left;cursor: pointer;">
+                        <span style="margin: 31px 0 31px 35px;display: inline-block;float: left;">tom</span>
+                        <span style="margin: 8px 18px 0 0;float:right;display: inline-block; width: 60px; height: 60px; border-radius: 30px; background: #ccc;" ></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<script>
+    $("#back_system").click(function(){
+        var loadi=layer.load(0);
+        $.get("{:U('Api/outLogin')}",function(){
+            Cookie.eraseCookie("bigMenuIndex");
+            Cookie.eraseCookie("smallMenuIndex");
+            layer.close(loadi);
+            layer.msg("成功退出系统",{icon:9})
+            location.href=APP+"/Home/Index/index";
+        });
+    });
+    $(".personal_info").mouseover(function(event) {
+        $(".personal_info_set").show();
+    });
+    $(".personal_info").mouseout(function(event){
+        $(".personal_info_set").hide();
+    });
+
+
+
+</script>

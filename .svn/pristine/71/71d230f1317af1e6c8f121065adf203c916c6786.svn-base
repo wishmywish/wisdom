@@ -1,0 +1,64 @@
+<include file="Public/head" />
+<style type="text/css">
+
+</style>
+    <body>
+        <neq name="reModi.result" value="000000">
+
+            <div class='listinfo'>
+                <ul>
+                    <li style='width:100%; text-align:center; line-height:500px;'>没有符合要求的信息</li>
+                </ul>
+            </div>
+
+        <else/>
+
+            <div class="tabli">
+                <ul id="tabli_Ad">
+                    <li value="1" class='selected' id="messages"><a href="__APP__/Taskadmin/Company/showCompanyDetail?companyId={$reModi.list.companyId}" style="text-decoration:none;">详细信息</a></li>
+                    <li value="3" id="photos"><a href="__APP__/Taskadmin/Company/showCompanyPhotos?companyId={$reModi.list.companyId}" style="text-decoration:none;">证明照片</a></li>
+                </ul>
+            </div>
+
+            <div class="add">
+                <div class='info' style="background-color:white;">
+    				<br>
+
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;公司全称： {$reModi.list.companyName}</span><br><br>
+                    <span style="padding-left:12px;">所处行业： {$reModi.list.industryName}</span><br><br>
+                    <span style="padding-left:12px;">企业地址： {$reModi.list.address}</span><br><br>
+                    <span style="padding-left:12px;">电话： {$reModi.list.phone}</span><br><br>
+                    <span style="padding-left:12px;">传真： {$reModi.list.phone}</span><br><br>
+                    <span style="padding-left:12px;">邮箱： {$reModi.list.f_typename}</span><br><br>
+                    <span style="padding-left:12px;">网址： {$reModi.list.email}</span><br><br>
+                    <span style="padding-left:12px;">法人代表： {$reModi.list.companyLegal}</span><br><br>
+                    <span style="padding-left:12px;">主营产品： {$reModi.list.mainProduct}</span><br><br>
+                    <span style="padding-left:12px;">主销区域： {$reModi.list.mainArea}</span><br><br>
+
+                    <div style="float:right;  margin: -340px 250px;">
+                        <span style="padding-left:12px;">年营业额： {$reModi.list.turnOver}</span><br><br>
+                        <span style="padding-left:12px;">现有经销商数： {$reModi.list.ageCount}</span><br><br>
+                        <span style="padding-left:12px;">员工人数： {$reModi.list.employeeCount}</span><br><br>
+                        <span style="padding-left:12px;">销售人员数： {$reModi.list.salesCount}</span><br><br>
+                        <span style="padding-left:12px;">现有网点数： {$reModi.list.netCount}</span><br><br>
+                        <span style="padding-left:12px;">有无质量管理部门： <eq name="reModi.list.qualityManagDep" value="0">无<else/>有</eq></span><br><br>
+                        <span style="padding-left:12px;">有无技术研发部门： <eq name="reModi.list.techDep" value="0">无<else/>有</eq></span><br><br>
+                        <span style="padding-left:12px;">有无市场策划部门： <eq name="reModi.list.markDep" value="0">无<else/>有</eq></span><br><br>
+                        <span style="padding-left:12px;">有无售后服务部门： <eq name="reModi.list.aftersaleDep" value="0">无<else/>有</eq></span><br><br>
+                        <span style="padding-left:12px;">状态： 
+                            <eq name="reModi.list.state" value="0">未通过</eq>
+                            <eq name="reModi.list.state" value="1">已审核</eq>
+                            <eq name="reModi.list.state" value="2">未开通招商</eq>
+                            <eq name="reModi.list.state" value="3">已删除</eq>
+                            <eq name="reModi.list.state" value="4">待审核</eq>
+                        </span><br><br>
+                    </div>
+
+                </div>
+            </div>
+
+        </neq>
+    </body>
+    <include file="Public/loadjs" />
+
+</html>

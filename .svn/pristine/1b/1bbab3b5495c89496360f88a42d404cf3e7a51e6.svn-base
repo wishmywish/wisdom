@@ -1,0 +1,403 @@
+<include file="Public/head" title="{$webtitle}"/>
+<style>
+    .heads span{
+        float: left;
+        line-height: 49px;
+        color: #fff;
+        text-shadow: none;
+        padding-left: 15px;
+    }
+
+    .page{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+
+    }
+    .page li{
+        float: left;
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .title{
+          width: 100%;
+          padding: 10px;
+    }
+    *{padding: 0; margin: 0}
+    .show_pic{
+        margin: 5px 2%;
+        position: relative;
+        width: 16%;
+        float: left;
+    }
+    .pics{
+        width: 100%;
+        margin-bottom: 45px;
+    }
+    .show_pic a{
+        position: absolute;
+        top: -4%;
+        left: 85%;
+    }
+    .camera a{
+        color: #000;
+    }
+    .foot{
+        background: rgba(239, 238, 238, 0.8);
+        width: 100%;
+        height: 40px;
+        bottom: 0;
+        text-align: center;
+        position: fixed;
+        z-index: 100;
+    }
+    .foot a{
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 34px 34px 0 0;
+        margin-top: -15px;
+        background: rgb(245, 241, 241);
+        padding: 10px 5px;
+        color: #F29800;
+    }
+
+    .checkBox{
+        margin-left: 5%;
+        width: 5%;
+        height: 20px;
+        float: left;
+        margin-top: 1.8%;
+    }
+    label{
+        height: 35px;
+        line-height: 35px;
+    }
+    label input[type=checkbox]:checked ~ span{
+        color: #FF6600;
+        text-shadow: none;
+    }
+
+    label input[type=checkbox] ~ span{
+        color: #000;
+        text-shadow: none;
+    }
+
+    label span {
+        margin-left: 3%;
+        margin-left: 3%;
+        font-size: 12px;
+        float: left;
+        display: inline-block;
+        width: 80%;
+    }
+    textarea{
+        width: 90%;
+        height: 270px;
+        margin: 0px 3%;
+        border: 1px solid rgb(51, 51, 51);
+        resize: none;
+        padding: 2%;
+    }
+    .btn{
+        line-height: 40px;
+        border-radius: 10px;
+        border: 1px solid #F60;
+        background: #FFF;
+        bottom: 3%;
+        width: 92%;
+        margin: 0 4%;
+        color: #F60;
+    }
+    .btn span{
+        letter-spacing: 8px;
+        text-shadow: none;
+    }
+</style>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <span  class="fa fa-angle-left fa-2x" onclick="goToBack()"></span>
+                    <h1>督查</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <input type="hidden" id="currentPage" value="{$k}">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p title="{$vo.f_problemtatile}" style="font-size: 14px">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <if condition="($vo['f_type'] eq 1) OR ($vo['f_type'] eq '1')">
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}"
+                                    <if condition="$ky-1 eq 0">checked</if>
+                                    />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <elseif condition="($vo['f_type'] eq 2) OR ($vo['f_type'] eq '2')"/>
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$k}{$ky-1}" />
+                                    <div  style="margin-left: 0.5em; margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <elseif condition="($vo['f_type'] eq 3) OR ($vo['f_type'] eq '3')"/>
+                                <p class="title">请对您看到的终端形象及问题进行描述</p>
+                                <div style="width: 100%;">
+                                    <textarea data-role="none" id="description{$k}"></textarea>
+                                </div>
+                            <elseif condition="($vo['f_type'] eq 4) OR ($vo['f_type'] eq '4')"/>
+                                <p class="title">请拍摄门头照片（要求照片清晰可辨）；</p>
+                                <img id="pictureShow" src="" style="width: 94%;margin: 0 3%;">
+
+                                <div class="pics">
+                                </div>
+                                <div class="foot">
+                                    <span class="fa fa-camera fa-2x fa-fw" onclick="iphoneCamera()"></span>
+                                </div>
+                            </if>
+                         </volist>
+                    </div>
+                    <div class="head_con4">
+                        <input type="hidden" id="type{$k}" value="{$vo['f_type']}">
+                        <button id="submit" onclick="done({$count})">提交</button>
+                    </div>
+                </div>
+            </div>
+            
+         </volist>
+         <div>
+             <input type="hidden" id="countPage" value="{$count}">
+             <input type="hidden" id="netserial" value="{$netserial}">
+             <input type="hidden" id="superid" value="{$superid}">
+             <input type="hidden" id="mobilesystem" value="{$mobilesystem}">
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+             <input type="hidden" id="surveyOver" onclick="window.demo.done()">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+        if($("#countPage").val()>2){
+            $(".head_con4").hide();
+        }else if($("#countPage").val()==2 && $("#currentPage").val()==1){
+            document.getElementById('submit').style.color="#fff";
+            document.getElementById('submit').style.backgroundColor="#fff";
+            document.getElementById('submit').style.borderColor="#fff";
+            document.getElementById('submit').style.height="0";
+            document.getElementById('submit').style.width="0";
+        }
+
+        function goToBack(){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            location.href=APP+"/Mobileweb/Events/supervise?userid="+userid+"&taskid="+taskid;
+        }
+
+        function nextProblem(k,count){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var type=$("#type"+k).val();
+            var netserial=$("#netserial").val();
+            // console.log(type);
+
+            if ((k+1)>count) {
+                layer.msg("当前页是最后页");
+                return false;
+            }else{
+                if ((k+1)==count) {
+                    setTimeout('$(".head_con4").show()', 1000 );
+                }
+                if (1==type||'1'==type||2==type||'2'==type) {
+                    var inpschecked = $("input[name='inps"+k+"']:checked");
+                    var answerInput="";
+                    if(inpschecked.length==1){
+                        answerInput=inpschecked.val();
+                    }else{
+                        inpschecked.each(function(){
+                            if (answerInput ==""){
+                                answerInput += $(this).val();
+                            }else{
+                                answerInput += "," + $(this).val();
+                            }
+                        });
+                    }
+                    $.post(APP+"/Mobileweb/Events/superviseNext",
+                    "taskid="+taskid+"&answerInput="+answerInput+"&serial="+k+"&userid="+userid+"&netserial="+netserial,
+                    function(re){
+                        if(1==re||"1"==re){
+                           location.href=APP+"/Mobileweb/Events/superviseCheck?userid="+userid+"&taskid="+taskid+"&netserial="+netserial+"&superid="+superid+"#page"+(++k);
+                        }
+                    },'json');
+                }else if(3==type||'3'==type) {
+                    var description=$(("#description"+k)).val();
+                     $.post(APP+"/Mobileweb/Events/superviseNext",
+                    "taskid="+taskid+"&answerInput="+description+"&serial="+k+"&userid="+userid+"&netserial="+netserial,
+                    function(re){
+                        if(1==re||"1"==re){
+                           location.href=APP+"/Mobileweb/Events/superviseCheck?userid="+userid+"&taskid="+taskid+"&netserial="+netserial+"&superid="+superid+"#page"+(++k);
+                        }
+                    },'json');
+                }else if(4==type||'4'==type) {
+                    //图片利用手机端的照相机照相并且上传，在答案一栏写入id|id
+                    var photoIDs="1|2|3";
+                     $.post(APP+"/Mobileweb/Events/superviseNext",
+                    "taskid="+taskid+"&answerInput="+photoIDs+"&serial="+k+"&userid="+userid+"&netserial="+netserial,
+                    function(re){
+                        if(1==re||"1"==re){
+                           location.href=APP+"/Mobileweb/Events/superviseCheck?userid="+userid+"&taskid="+taskid+"&netserial="+netserial+"&superid="+superid+"#page"+(++k);
+                        }
+                    },'json');
+                }
+            }
+        }
+
+        function lastProblem(k){
+            if ((k-1)<1) {
+                layer.msg("当前页是第一页");
+                return false;
+            }else{
+                $(".head_con4").hide();
+                location.hash="#page"+(--k);
+            }
+        }
+
+        function done(count){
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var type=$("#type"+count).val();
+            var netserial=$("#netserial").val();
+
+             if (1==type||'1'==type||2==type||'2'==type) {
+                var inpschecked = $("input[name='inps"+count+"']:checked");
+                var answerInput="";
+                if(inpschecked.length==1){
+                    answerInput=inpschecked.val();
+                }else{
+                    inpschecked.each(function(){
+                        if (answerInput ==""){
+                            answerInput += $(this).val();
+                        }else{
+                            answerInput += "," + $(this).val();
+                        }
+                    });
+                }
+                $.post(APP+"/Mobileweb/Events/superviseNext",
+                "taskid="+taskid+"&answerInput="+answerInput+"&serial="+count+"&userid="+userid+"&netserial="+netserial+"&superid="+superid+"&submit=submit",
+                function(re){
+                    if(1==re||"1"==re){
+                        superviseOver();
+                    }
+                },'json');
+            }else if(3==type||'3'==type) {
+                var description=$(("#description"+count)).val();
+                 $.post(APP+"/Mobileweb/Events/superviseNext",
+                "taskid="+taskid+"&answerInput="+description+"&serial="+count+"&userid="+userid+"&netserial="+netserial+"&superid="+superid+"&submit=submit",
+                function(re){
+                    if(1==re||"1"==re){
+                        superviseOver();
+                    }
+                },'json');
+            }else if(4==type||'4'==type) {
+                //图片利用手机端的照相机照相并且上传，在答案一栏写入id|id
+                var photoIDs="1|2|3";
+                 $.post(APP+"/Mobileweb/Events/superviseNext",
+                "taskid="+taskid+"&answerInput="+photoIDs+"&serial="+count+"&userid="+userid+"&netserial="+netserial+"&superid="+superid+"&submit=submit",
+                function(re){
+                    if(1==re||"1"==re){
+                        superviseOver();
+                    }
+                },'json');
+            }
+            
+            function superviseOver(){
+               document.getElementById("surveyOver").click();
+               function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'finish';
+                    bridge.send(data);
+                });
+            }
+        }
+         function iphoneCamera(){
+                function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'iphoneCamera';
+                    bridge.send(data);
+
+                    bridge.registerHandler('acceptIphoneCamera', function(data) {
+                        var obj=eval(data);
+                        obj=transform(obj);
+                        var list="";
+                        list += "<div class='show_pic'>";
+                        list += "<img src=__UPFILE__/"+obj[0]+" id=photo value="+obj[1]+">";
+                        list += "<a class='fa fa-minus-circle'></a>";
+                        list += "</div>";
+                        alert(list);
+                        $('.pics').append(list);
+                        $("#pictureShow").attr("src","__UPFILE__/"+obj[0]);
+                        // var responseData = { 'Javascript Says':'Right back atcha!' };
+                        // console.log('JS responding with', responseData);
+                        // responseCallback(responseData);
+                    });
+                });
+
+               
+            }
+
+        function transform(obj){
+            var arr = [];
+            for(var item in obj){
+                arr.push(obj[item]);
+            }
+            return arr;
+        }
+    </script>
+</html>

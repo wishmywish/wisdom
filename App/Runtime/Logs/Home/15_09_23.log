@@ -1,0 +1,2286 @@
+[ 2015-09-23T09:45:20+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/review.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:45:20+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:45:21+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:46:10+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:46:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:46:19+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-09-23T09:46:21+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Oms/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=4 and F_SYS_COLUMN_STATE=1 and F_SYS_COLUMN_CID='F' ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:46:33+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 509 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 636 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T09:46:55+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-23T09:47:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 560 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 688 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: queryAllNoticeBoard_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 212 行.
+NOTIC: [8] Undefined variable: getNoticeList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\df8a267ada95d1bebcb9103fe6620657.php 第 246 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T09:47:11+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/noticeAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 688 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: queryAllNoticeBoard_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\4dc43eef63800155d4b727cb9f46885a.php 第 210 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\4dc43eef63800155d4b727cb9f46885a.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-09-23T09:48:14+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/selectUsers.html?userNames=&userIds=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 483 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:48:23+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/selectDepts.html?deptNames=&deptIds=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0196s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.2440s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 483 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:52:34+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined index: selectedDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 130 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 203 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 206 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 209 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 213 行.
+NOTIC: [8] Undefined index: endDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 214 行.
+NOTIC: [8] Undefined index: currentPage D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 233 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 300 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 306 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 313 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 319 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 325 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 234 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 236 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 350 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 351 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 358 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 358 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 360 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 367 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 368 行.
+NOTIC: [8] Undefined variable: startdate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 373 行.
+NOTIC: [8] Undefined variable: enddate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 375 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 408 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 720 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:53:10+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 234 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 236 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 408 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:53:18+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 234 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 236 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 408 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:53:30+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0166s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 159 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: viewUserDetail_deptName D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 234 行.
+NOTIC: [8] Undefined variable: viewUserDetail_name D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 236 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: getCheckWorkReportList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 408 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:53:56+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/selectDepts.html?deptNames=&deptIds=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015600s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 483 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T09:54:03+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/selectUsers.html?userNames=&userIds=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0186s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.2360s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 483 行.
+NOTIC: [8] Undefined index: list D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 884 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:45:02+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 640 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 602 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 3 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 4 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 5 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 6 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:45:08+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T10:45:11+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 532 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 534 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 555 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 556 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 561 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 509 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:46:00+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 677 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T10:47:57+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/contact
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:48:01+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 522 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 524 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 545 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 546 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 499 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:48:29+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 701 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 710 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 728 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 729 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 742 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 748 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 330 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 331 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 332 行.
+NOTIC: [8] Undefined index: zhou_dateT D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 334 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 335 行.
+NOTIC: [8] Undefined index: enddate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 336 行.
+NOTIC: [8] Undefined index: deptNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 337 行.
+NOTIC: [8] Undefined index: deptIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 338 行.
+NOTIC: [8] Undefined index: userNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 339 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 340 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: getWorkSignList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\75be32a0a3f27161a7192ad550191808.php 第 280 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:48:45+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/reportReview
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined index: selectedDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 130 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 630 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 188 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 191 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 194 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 198 行.
+NOTIC: [8] Undefined index: endDate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 199 行.
+NOTIC: [8] Undefined index: currentPage D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 218 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 592 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 283 行.
+NOTIC: [8] Undefined index: showDiv D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 283 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 289 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 296 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 302 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 308 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 316 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 1 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 2 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined index: value_t D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 33 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 34 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 35 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 266 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 268 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 269 行.
+NOTIC: [8] Undefined offset: 36 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 271 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 274 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 276 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 277 行.
+NOTIC: [8] Undefined offset: 37 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 279 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 282 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 284 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 285 行.
+NOTIC: [8] Undefined offset: 38 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 287 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 290 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 292 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 293 行.
+NOTIC: [8] Undefined offset: 39 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 295 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 298 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 300 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 301 行.
+NOTIC: [8] Undefined offset: 40 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 303 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 306 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 308 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 309 行.
+NOTIC: [8] Undefined offset: 41 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 311 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 314 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 316 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined variable: weeks D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 317 行.
+NOTIC: [8] Undefined offset: 42 D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 319 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 350 行.
+NOTIC: [8] Undefined variable: ri_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 351 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 358 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 358 行.
+NOTIC: [8] Undefined variable: zhou_dateF D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 359 行.
+NOTIC: [8] Undefined variable: zhou_dateT D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 360 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 367 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 368 行.
+NOTIC: [8] Undefined variable: startdate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 373 行.
+NOTIC: [8] Undefined variable: enddate D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 375 行.
+NOTIC: [8] Undefined variable: yue_date D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 720 行.
+NOTIC: [8] Undefined variable: getNoticeList_total D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_pageSize D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_page D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+NOTIC: [8] Undefined variable: getNoticeList_totalPage D:\wamp\www\wisdom\App\Runtime\Cache\Home\cd691c37894a4e3287c16c503605eb46.php 第 744 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:48:52+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 522 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 524 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 545 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 546 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 678 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:48:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 522 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 524 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 545 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 546 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 499 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: getWorkSet_userNames D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 404 行.
+NOTIC: [8] Undefined variable: getWorkSet_userIds D:\wamp\www\wisdom\App\Runtime\Cache\Home\0b01e5905be889cb10a466b2c620d50c.php 第 416 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:49:15+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=7062 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 701 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 710 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 728 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 729 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 742 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 748 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 330 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 331 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 332 行.
+NOTIC: [8] Undefined index: zhou_dateT D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 334 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 335 行.
+NOTIC: [8] Undefined index: enddate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 336 行.
+NOTIC: [8] Undefined index: deptNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 337 行.
+NOTIC: [8] Undefined index: deptIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 338 行.
+NOTIC: [8] Undefined index: userNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 339 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 340 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSignList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\75be32a0a3f27161a7192ad550191808.php 第 280 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T10:51:35+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:51:36+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:51:36+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T10:51:36+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:08+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:08+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:16+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:22+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 522 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 524 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 545 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 546 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 499 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:27+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/noticeDetail.html?messageId=46
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 566 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 1011 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:33+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 701 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 710 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 728 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 729 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 742 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 748 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 330 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 331 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 332 行.
+NOTIC: [8] Undefined index: zhou_dateT D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 334 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 335 行.
+NOTIC: [8] Undefined index: enddate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 336 行.
+NOTIC: [8] Undefined index: deptNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 337 行.
+NOTIC: [8] Undefined index: deptIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 338 行.
+NOTIC: [8] Undefined index: userNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 339 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 340 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSignList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\75be32a0a3f27161a7192ad550191808.php 第 280 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:52:48+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:53:38+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 522 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 524 行.
+NOTIC: [8] Undefined index: subject D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 545 行.
+NOTIC: [8] Undefined index: boardId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 546 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 678 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:53:53+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:54:00+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:54:02+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T10:54:06+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:54:40+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0206s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0246s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0206s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:54:43+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/setTopMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0166s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0186s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 460 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T10:55:05+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: page D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 701 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 710 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 728 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 729 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 742 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+NOTIC: [8] Undefined property: stdClass::$count D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 748 行.
+NOTIC: [8] Undefined index: li_type D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 330 行.
+NOTIC: [8] Undefined index: ri_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 331 行.
+NOTIC: [8] Undefined index: zhou_dateF D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 332 行.
+NOTIC: [8] Undefined index: zhou_dateT D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 333 行.
+NOTIC: [8] Undefined index: yue_date D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 334 行.
+NOTIC: [8] Undefined index: startdate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 335 行.
+NOTIC: [8] Undefined index: enddate D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 336 行.
+NOTIC: [8] Undefined index: deptNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 337 行.
+NOTIC: [8] Undefined index: deptIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 338 行.
+NOTIC: [8] Undefined index: userNames D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 339 行.
+NOTIC: [8] Undefined index: userIds D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 340 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: getWorkSignList_list D:\wamp\www\wisdom\App\Runtime\Cache\Home\75be32a0a3f27161a7192ad550191808.php 第 280 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T10:55:13+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Office/checking.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=1 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 667 行.
+NOTIC: [8] Undefined variable: url D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 700 行.
+NOTIC: [8] Undefined index: deptId D:\wamp\www\wisdom\App\Home\Controller\OfficeController.class.php 第 743 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T13:57:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/review.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T13:57:58+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T13:57:59+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T13:58:35+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T13:58:35+08:00 ] 127.0.0.1 /wisdom/index.php/Home/Business/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=9642 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=71 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=72 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=75 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=76 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

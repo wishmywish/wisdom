@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+        a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*禁止对文本框进行拉伸操作*/
+        textarea {
+            resize: none;
+        }
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main dl{ width: 100%;}
+        .main dl dt{width: 60px; height: 60px; border-radius: 30px; background: #ccc; }
+        .main dl dd{ line-height: 60px; margin-left: 10px;}
+        .main ul{ margin-top:20px; width: 100%;float: left}
+        .main ul li{line-height: 25px;float: left;}
+        .main ul li span{text-align: right;}
+        .fll{text-align: right; width: 100px;margin-right: 7px;}
+        .c_name{font-weight: 100;height: 20px;margin-right: 55px;text-align: center;width: 125px;}
+        .main span{color: red;}
+        /*.titname{  text-align: right;width: 60px;margin-right: 7px;float: left;}*/
+        .main input {height:25px;width:200px;}
+        .main select {height:30px;width:208px;}
+        /*.main select{float: right;height:28px;width:200px;}*/
+        .submit{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+        .reset{background-color: #eaeaea;margin: 30px 5px;border:1px;height: 25px;width: 70px;cursor: pointer;color: #000;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+
+        .common_ellipsis{
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;}
+    </style>
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+
+    </script>
+    <css href="__STATIC__/css/font-awesome.min.css" />
+
+</head>
+<body>
+
+<div class="main">
+    <ul>
+        <li class="fll">客户名称</li>
+        <li><input type="text" id="customer" style="text-overflow: ellipsis;white-space: nowrap;width: 400px;" value="{$_GET['cusName']}" cusId="{$_GET['cusId']}" disabled="true" />
+            <input type="hidden" id="cusid" value="{$_GET['cusId']}">
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>联系人</li>
+        <li style="position: relative">
+            <input type="text" id="linkman" style="padding-right: 30px;" linkman_ids=""  placeholder="从客户联系人中选择" class="common_ellipsis"/>
+            <span class="fa fa-search fa-lg" style="position: absolute;right: 10px;top: 10px;color: #ccc;"></span>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll">来源</li>
+        <li>
+            <select name="source" id="origin">
+                <option value="0">--请选择--</option>
+                <foreach name="bizOrigin['list']" item="vo">
+                    <option value="{$vo[dictId]}">{$vo['dictName']}</option>
+                </foreach>
+            </select>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>商机主题</li>
+        <li><input type="text" id="title" onmousemove="this.title=this.value"  style="width: 400px;text-overflow: ellipsis;white-space: nowrap;"/><span>不超过50个字</span></li>
+    </ul>
+    <ul>
+        <li class="fll">客户需求</li>
+        <li><textarea style="height: 100px;width: 400px;" id="require"></textarea><span>不超过500个字</span></li>
+    </ul>
+    <ul>
+        <li class="fll">商机状态</li>
+        <li>
+            <select name="busiState" id="bus_state">
+                <option value="0">--请选择--</option>
+                <foreach name="bizState['list']" item="vo">
+                    <option value="{$vo[dictId]}">{$vo['dictName']}</option>
+                </foreach>
+            </select>
+        </li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>预计签单日期</li>
+        <li> <input type="text" class="laydate-icon" id="signDate" style="width: 185px;" readonly /></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>报价</li>
+        <li><input type="text" id="price" /></li>
+    </ul>
+    <ul>
+        <li class="fll"><span>*</span>预计成交价</li>
+        <li> <input type="text" id="maybe_price"/></li>
+    </ul>
+    <ul>
+        <li class="fll">备注</li>
+        <li><textarea style="height: 100px;width: 400px;" id="memo" ></textarea><span>不超过500个字</span></li>
+    </ul>
+
+</div>
+<div style="text-align: center;"><button class="submit" id="s_submit" onclick="do_save()">提交</button>
+    <button class="reset" onclick="reset()">取消</button>
+</div>
+<input type="hidden" name="cusId" value="{$_GET['cusName']}">
+<input type="hidden" name="cusName" value="{$_GET['cusId']}">
+
+<include file="Public/loadjs" />
+<script>
+    var cusId = $("#cusid").val(); //客户id
+    var cusName = $("input[name=cusName]").val(); //客户名称
+
+    //联系人列表弹窗
+    $('#linkman').click(function(){
+        var linkman_ids = $("#linkman").attr("linkman_ids");
+        var linkman_names = $("#linkman").val();
+
+        layer.open({
+            type:2,
+            title :['联系人','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['550px', '420px'],
+            shadeClose: true, //点击遮罩关闭
+            content: APP+'/Home/Office/selectLinkman?linkman_ids='+linkman_ids+'&linkman_names='+linkman_names+"&cusId="+cusId+"&cusName="+cusName
+        });
+    });
+
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+    var date = {
+        elem: '#signDate',
+        format: 'YYYY-MM-DD',
+        min: '1900-01-01 00:00:00', //最小日期
+        max: '2099-06-16', //最大日期
+        //istime: true,
+        istoday: false,
+        choose: function(datas){
+            return datas;
+        }
+    };
+    laydate(date);
+
+
+    //商机提交
+    function do_save() {
+        var customer = $("#customer").val();  //客户名称,自动带过来无需填写的
+        var cusId = $("#customer").attr("cusid"); //客户id
+        var linkman = $("#linkman").val(); //联系人
+        var cusClientIds = $("#linkman").attr("linkman_ids");  //选出来的联系人id字符串,无UI，暂时测试
+        var origin = $("#origin").val(); //来源
+        var title = $("#title").val(); //主题
+        var require = $("#require").val(); //客户需求
+        var bus_state = $("#bus_state").val(); //商机状态
+        var signDate = $("#signDate").val(); //预计签单日期
+        var price = $("#price").val(); //报价
+        var maybe_price = $("#maybe_price").val(); //预计成交价
+        var memo = $("#memo").val(); //备注
+
+        var linkman_obj = $("#linkman");
+        if (getValLen(linkman_obj) == 0) {
+            layer.msg("联系人不能为空",{icon: 8});
+            linkman_obj.focus();
+            return false;
+        }
+
+        var title_obj = $("#title");
+        if (getValLen(title_obj) == 0) {
+            layer.msg("商机主题不能为空",{icon: 8});
+            title_obj.focus();
+            return false;
+        }else if (getValLen(title_obj) > 50) {
+            layer.msg("商机主题最多为50字",{icon: 8});
+            title_obj.focus();
+            return false;
+        }
+
+        var require_obj = $("#require");
+        if (getValLen(require_obj) > 500) {
+            layer.msg("客户需求最多为64字",{icon: 8});
+            require_obj.focus();
+            return false;
+        }
+
+        var signDate_obj = $("#signDate");
+        if (getValLen(signDate_obj) == 0) {
+            layer.msg("预计签单日期不能为空",{icon: 8});
+            signDate_obj.focus();
+            return false;
+        }
+
+        var price_obj = $("#price");
+        if (getValLen(price_obj) == 0) {
+            layer.msg("报价不能为空",{icon: 8});
+            price_obj.focus();
+            return false;
+        }
+
+        if( isNaN(price) ){
+            layer.msg("报价必须为数字",{icon: 8});
+            price_obj.focus();
+            return;
+        }
+
+        var maybe_price_obj = $("#maybe_price");
+        if (getValLen(maybe_price_obj) == 0) {
+            layer.msg("预计报价不能为空",{icon: 8});
+            maybe_price_obj.focus();
+            return false;
+        }
+
+        if( isNaN(maybe_price) ){
+            layer.msg("预计报价必须为数字",{icon: 8});
+            maybe_price_obj.focus();
+            return;
+        }
+
+        var memo_obj = $("#memo");
+        if (getValLen(memo_obj) > 500) {
+            layer.msg("备注最多为500字",{icon: 8});
+            memo_obj.focus();
+            return false;
+        }
+
+//        price = parseFloat(price).toFixed(2);
+//        maybe_price = parseFloat(maybe_price).toFixed(2);
+
+
+
+        var loadIdx = layer.load(0);
+        $.post("{:U('Office/saveBiz')}", {"cusId":cusId, "cusClientIds":cusClientIds, "bizOrigin":origin, "bizSubject":title, "cusDemand":require, "bizPhase":bus_state, "expectSignDate":signDate, "bizPrice":price, "expectVolume":maybe_price, "remark":memo}, function(data) {
+
+            if(data.error_code != 'success') {
+                layer.msg(data.error_text,{icon: 8});
+                layer.close(loadIdx);
+            } else {
+                $.post("{:U('Office/getBizList_ajax')}", {"page": 1,"pageSize": 5,"cusId": cusId}, function (data) {
+
+                    var total = parseInt(data.count);
+                    var pageSize = 5;
+                    var currentPage = 1;
+                    var totalPage = Math.ceil(total/pageSize);
+
+                    if (!("bizList" in data)) {
+                        layer.close(loadIdx);
+                        layer.msg(data.error_text, {icon: 8});
+                        return;
+                    }
+                    var header = '<tr style="height: 25px;">';
+                    header += '<th><div class="selectBox">选择</div></th>';
+                    header += '<th width="230">商机主题</th>';
+                    header += '<th width="100">来源</th>';
+                    header += '<th width="150">客户需求</th>';
+                    header += '<th width="150">预计签单日期</th>';
+                    header += '<th width="150">预计成交额</th>';
+                    header += '<th width="200">备注</th>';
+                    header += '</tr>';
+
+                    var content = '';
+
+                    // 设定商机列表
+                    $.each(data.bizList, function (k, v) {
+                        content += '<tr style="height: 50px;">';
+                        content += '<td><input type="checkbox" name="biz" value="' + v.bizId + '"></td>';
+                        content += '<td><div class="bizSubject" title="' + v.bizSubject + '"><a href="javascript:;" onclick="editBusiOpportunities(' + cusId + ',\'' + cusName + '\',' + v.bizId + ')">' + v.bizSubject + '</a></div></td>';
+                        content += '<td><div class="originStr">' + v.originStr + '</div></td>';
+                        content += '<td><div class="cusDemand" title="' + v.cusDemand + '" >' + v.cusDemand + '</div></td>';
+                        content += '<td><div class="expectedSingDate">' + v.expectedSingDate + '</div></td>';
+                        content += '<td><div class="expectVolume">' + v.expectVolume + '</div></td>';
+                        content += '<td><div class="remark" title="' + v.remark + '" >' + v.remark + '</div></td>';
+                        content += '</tr>';
+                    });
+
+                    //总的内容
+                    header += content;
+
+                    parent.$("#table_biz").empty();
+                    parent.$("#table_biz").append(header);
+                    parent.$("#currentPage_biz").attr("total", total);
+                    parent.$("#currentPage_biz").attr("totalPage", totalPage);
+
+                    parent.$("#pageBar_biz").empty();
+                    createPageBar_parent(total, pageSize, currentPage, totalPage, "pagebar_biz");  //创建分页;
+
+                    layer.close(loadIdx);
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+
+                }, 'json');
+
+//                setTimeout("var index = parent.layer.getFrameIndex(window.name);parent.location.href='/index.php/Home/Office/customerDetails?cusId="+ cusId +"';parent.layer.close(index);",2000);
+            }
+
+        }, 'json');
+    }
+
+
+
+
+    //获取值的长度
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+
+
+    //为父页面创建分页条
+    function createPageBar_parent(t,ps,p,tp,id) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar_parent(id); //id为id名
+    }
+
+
+    //为父页面分页bar的添加
+    //为父页面获取分页条
+    function getPageBar_parent(id){
+        page = parseInt(page);
+        totalPage = parseInt(totalPage);
+
+        console.log(totalPage);
+        console.log(total);
+
+        //页码大于最大页数
+        if(page>totalPage){page=totalPage};
+        //页码小于1
+        if(page<1) page=1;
+        //  console.log(page+"=======");
+        pageStr = "<span class='pagespanth pagenoclick'>共"+total+"条</span> <span class='pagespanth  pagenoclick'>每页"+pageSize+"条</span> <span class='pagespantw pagenoclick'>"+page+"/"+totalPage+"</span> ";
+
+        //如果是第一页
+        if(page==1){
+            pageStr += " <span class='pagespantw' style='color:#cccccc'><i class='fa fa-fast-backward fa-lg'></i></span> <span class='pagespanth ' style='padding-top:10px;font-size:15px;color:#cccccc'><i class='fa fa-caret-left fa-lg'></i></span>";
+        }else{
+            pageStr += " <span class='pagespantw '><a href='javascript:void(0)'  rel='1'><i  class='fa fa-fast-backward fa-lg'></i></a></span> <span class='pagespanth ' style='padding-top:10px;font-size:15px'><a href='javascript:void(0)'  rel='"+(page-1)+"'><i  class='fa fa-caret-left fa-lg'></i></a></span>";
+        }
+
+        //如果是最后页
+        if(page>=totalPage){
+            pageStr += " <span  class='pagespanth' style='padding-top:10px;font-size:15px;color:#cccccc'><i class='fa fa-caret-right fa-lg'></i></span> <span  class='pagespantw ' style='color:#cccccc' ><i class='fa fa-fast-forward fa-lg'></i></span>";
+        }else{
+            pageStr += " <span class='pagespanth ' style='padding-top:10px;font-size:15px'><a  href='javascript:void(0)'  rel='"+(parseInt(page)+1)+"'><i class='fa fa-caret-right fa-lg '></i></a></span> <span  class='pagespanth'><a href='javascript:void(0)'    rel='"+totalPage+"'><i class='fa fa-fast-forward fa-lg'></i></a></span>";
+        }
+        parent.$("#"+id).html(pageStr); //给父页面加载,底部
+
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

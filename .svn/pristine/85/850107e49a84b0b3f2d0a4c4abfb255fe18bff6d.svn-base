@@ -1,0 +1,120 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/2/2
+ * Time: 10:03
+ */
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class CangtouController  extends  Controller
+{
+
+    //藏头诗
+    function cangts(){
+        set_theme();
+        $this->display();
+    }
+    //藏头诗分享页面
+    function cangts_share(){
+        set_theme();
+        $this->display();
+    }
+
+
+    //藏头诗游戏
+
+    function  cangTouOpoem(){
+        $redirect_url="index.php/Mobileweb/Cangtou/cangTouUserInfo";
+        A("Wechat")->obtain_user_information($redirect_url);
+    }
+
+    //获取藏头诗用户信息
+    function cangTouUserInfo(){
+        $inarr = I("get.");
+        if(isset($inarr["code"])){
+            $re = $this->cangTou($inarr["code"]);
+        }
+        $url = C("WebUrl")."index.php/Mobileweb/Hbgame/app_game?f_pcid=".$re["f_pcid"];
+        header("Location:".$url);
+
+    }
+
+    function  cangTou($code){
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $re_arr=json_decode($res,true);
+        $re=$this->getUserByCang($re_arr["unionid"],$re_arr["nickname"]);
+        if($re){
+            //获取当钱用户的藏头诗
+            $map["f_uid"]=$re;
+            $rc=M("shici")->where($map)->find();
+            if($rc){
+
+            }
+        }
+
+    }
+
+    //获取用户信息
+    function  getUserByCang($unicode,$nickname){
+        $re = M("shici_user")->where("f_wechatid='".$unicode."'")->find();
+        if($re){
+            //如果存在返回id 不存在添加数据并返回id
+            return $re;
+        }else{
+            $map["f_wechatid"]=$unicode;
+            $map["f_wechatnick"]=$this->userTextEncode($nickname);
+            $re=M("shici_user")->add($map);
+            return $re;
+        }
+    }
+
+
+    public function curl_chitousi(){
+        header("Content-Type: text/html;charset=utf-8");
+        $body = I("post.");
+        $word = iconv( "UTF-8", "gb2312//IGNORE" , $body['word']);
+        $url = "http://cts.388g.com/fasong.php?w=".$word."&num=".$body['length']."&type=".$body['cang']."&yayuntype=".$body['type'];//发送的URL
+        $ch = curl_init($url);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+        $result = curl_exec($ch);
+        curl_close ($ch);
+        $result = iconv( "gb2312", "UTF-8//IGNORE" , $result);
+        $search = '/<li>(.*?)<\/li>/is';
+        preg_match_all($search,$result,$r,PREG_SET_ORDER );
+        $tags = strip_tags($r[0][1]);
+        $re = str_replace('，','<br>',$tags);
+        $re = str_replace('。','<br>',$re);
+        //存数据库
+        $add_map["f_word"] = $body['word'];
+        $add_map["f_shi"] = $re;
+        $add_map["f_uptime"] = time();
+        $add_map["f_uid"] = $body['uid'];
+        if((int)$body['id']==0){
+            $re_back["id"] = M("shici")->add($add_map);
+        }else{
+            M("shici")->where("f_id=".$body['id'])->save($add_map);
+            $re_back["id"] = $body['id'];
+        }
+        $re_back["shi"] = $re;
+        echo json_encode($re_back);
+//        exit;
+//        $matches = array();
+//        $preg = '/<div class="form">([\w\W]*?)<\/div>/';
+//        preg_match_all($preg, $result, $matches);
+////        var_dump($matches);
+//        echo $matches[1][0];
+    }
+
+
+}

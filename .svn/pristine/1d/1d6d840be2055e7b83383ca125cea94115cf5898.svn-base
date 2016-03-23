@@ -1,0 +1,246 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/1/26
+ * Time: 18:28
+ */
+
+namespace Mobileweb\Controller;
+use Think\Controller;
+
+class HbgameController  extends  Controller
+{
+
+    //新年游戏入口APP
+    function app_gguide()
+    {
+        set_theme();
+        $this->display();
+    }
+
+    //新年游戏入口微信
+    function wechat_gguide()
+    {
+        set_theme();
+        $code=I("code");
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $re_arr=json_decode($res,true);
+        $re=$this->searchuserbyuniod($re_arr["unionid"]);
+        //昵称
+        $text = json_encode($re_arr["nickname"]); //暴露出unicode
+        $text = preg_replace_callback("/(\\\u[ed][0-9a-f]{3})/i",function($str){
+            return addslashes($str[0]);
+        },$text);
+        $nickname = json_decode($text);
+        session("nickname",$nickname);
+        //unionid
+        session("unionid",$re_arr["unionid"]);
+        $unionid=$re_arr["unionid"];
+        //判断用户是否存在
+        if($re["error_code"]=="000000"){
+            echo "<script>location.href='".C('WebUrl')."index.php/Mobileweb/Hbgame/app_game'</script>";
+        }else{
+            $this->assign("nickname",$nickname);
+            $this->assign("unionid",$unionid);
+            //微信用户的基本信息加密存储
+            $this->display();
+        }
+    }
+
+    /**
+    解码上面的转义
+     */
+    function userTextDecode($str){
+        $text = json_encode($str); //暴露出unicode
+        $text = preg_replace_callback('/\\\\\\\\/i',function($str){
+            return '\\';
+        },$text); //将两条斜杠变成一条，其他不动
+        return json_decode($text);
+    }
+
+
+    function  test(){
+
+        $re=$this->searchuserbyuniod('oBgZTuPTF7nzOgjnnvU2I-IsC8ZA');
+        var_dump($re);
+    }
+
+    //通过uniod判断用户是否存在，如果存在获取用户完游戏完游戏的时间
+
+    function  searchuserbyuniod($unicode){
+        $re = M("playcity")->where("f_wechatid='".$unicode."'")->find();
+        if($re){
+            $result['error_code'] = '000000';
+            $result['error_text'] = "成功";
+        }else{
+            $result['error_code'] = '100002';
+            $result['error_text'] = "用户不存在";
+        }
+        return  $result;
+    }
+
+    //获取用户完红包的信息
+    function  getuseraboutlist($unicode){
+            $re = M("playcity")->where("f_wechatid='".$unicode."'")->find();
+            //有几个好友帮我抢的红包数
+            $result["count_friend"]=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid <> 0")->count();
+            //好友帮我抢到的红包数
+            $total_gold=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid <> 0")->sum("f_goldcoin");
+            if(empty($total_gold)){
+                $result["total_gold"]=0;
+            }else{
+                $result["total_gold"]=$total_gold;
+            }
+
+            //每天自己剩余的次数//时间戳
+            $date=strtotime(date("Y-m-d 00:00:00"));
+            $times=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"]." and  f_hepcid = 0 and f_date > ".$date)->count();
+            $result["times"]=3-$times;
+
+            //自己领取的红包数和好友帮忙领取的红包数
+            $list=M("playcitydetail")->where("f_mypcid=".$re["f_pcid"])->order("f_date")->select();
+            foreach($list  as $k=>$val){
+                //别人帮你抢的红包列表
+                if($val["f_hepcid"]!=0){
+                    $d=M("playcity")->where("f_pcid=".$val["f_hepcid"])->find();
+                    $list[$k]["helpnice"]=$this->userTextDecode($d["f_wechatnice"]);
+                    $list[$k]["helptime"]=date('Y-m-d H:i:s',$val["f_date"]);
+                }
+            }
+            $result["all_list"]=$list;
+            return  $result;
+    }
+
+
+    //我帮
+
+
+    // 授权信息
+    //自己点击输入手机号，玩游戏，分享给好友，
+    //好友点进去不输入手机号直接玩游戏，钱是点击链接账号的，
+    //好友给自己抢是输入手机号
+
+    function  index(){
+        $status=I("get.status");
+        if($status==1){
+            $redirect_url="/index.php/Mobileweb/Hbgame/wechat_gguide";
+            A("Wechat")->obtain_user_information($redirect_url);
+        }else if($status==2){
+            set_theme();
+            $f_mypcid=I("get.f_mypcid");
+            $redirect_url="/index.php/Mobileweb/Hbgame/wechat_game_info?f_mypcid=".$f_mypcid;
+            A("Wechat")->obtain_user_information($redirect_url);
+        }
+    }
+
+    function  wechat_game_info(){
+        $code=I("code");
+        S("access_token",null);
+        $url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=".C("appid")."&secret=".C('secret')."&code=".$code."&grant_type=authorization_code";
+        //获取access_token 与基础
+        $access_json=file_get_contents($url);
+        $access_arr=json_decode($access_json,true);
+        $access_token=$access_arr["access_token"];
+        $openid=$access_arr["openid"];
+        S("access_token",$access_token,3600);
+        $res=A("Wechat")->get_user_info($openid,$access_token);
+        $restr=base64_encode($res);
+
+        //给谁抢红包的pid
+        $f_mypcid=I("get.f_mypcid");
+        $b_fmypcid=session("b_fmypcid",$f_mypcid);
+
+
+
+
+        //获取别人的微信基本信息
+        $this->assign("info",$restr);
+        //微信用户的基本信息加密存储
+        $this->display("wechat_game");
+    }
+
+    //新年游戏APP
+    function app_game(){
+        set_theme();
+        //获取微信客户的基本信息
+        //获取用户相关信息
+        //判断用户信息是否存在,如果存在返回用户id，如果不存在添加数据
+        //先查看数据库信息是否玩过游戏,获取相关的信息
+
+
+        $unionid=session("unionid");
+        //获取用户信息
+        $all_infomation=$this->getuseraboutlist($unionid);
+
+        //当前页面需要用jssdk
+        //签名url
+        $url=C('WebUrl')."index.php/Mobileweb/Hbgame/app_game";
+        //签名获取相关 "timestamp" "nonceStr"  "signature"
+        $data=A("Wechat")->get_jsapi_shal($url);
+
+        $a = array(0,0.1,0.5,0.8,1);
+        $b = array(93,3,2,1,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+
+        $this->assign("all_infomation",$all_infomation);
+        $this->assign("data",$data);
+        $this->assign("f_wechatid",session("unionid"));
+        $this->assign("f_wechatnice",session("nickname"));
+        $this->assign("f_mypcid",session("f_pcid"));
+        $this->assign("cc",json_encode($c));
+        $this->display();
+    }
+
+
+    //新年游戏微信
+    //别人帮我抢红包
+    function wechat_game(){
+        set_theme();
+
+        $this->display();
+    }
+    //新年游戏规则
+    function app_grules(){
+        set_theme();
+        $status=I("get.v1");
+        if($status==1) {
+            $this->assign("phone", I("get.phone"));
+            $this->assign("info", I("get.info"));
+        }else{
+            $this->assign("info", I("get.info"));
+        }
+        $this->assign("status",$status);
+        $this->display();
+    }
+
+    //测试小游戏
+    function testgame(){
+        set_theme();
+        $a = array(0,0.1,0.5,0.8,1);
+        $b = array(93,3,2,1,1);
+        $c = array();
+        foreach($b as $key => $v){
+            for($i=0;$i<$v;$i++){
+                $c[] = $a[$key];
+            }
+        }
+        $this->assign("c",json_encode($c));
+        $this->display();
+    }
+
+
+}

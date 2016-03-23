@@ -1,0 +1,18 @@
+<include file="Public/head" title="{$taskinfo.info.f_title}" />
+    <body>
+        <div data-role="page">
+            <div role="main" class="ui-content">
+            
+            <div style="margin: 0 auto;width:100px;height: 100px;"><img src="__UPFILE__/logo/logo.png"></div>
+            <p>
+            <div>小宝招商—兼职赚大钱,业务员的赚钱神器,月赚10万不是梦,悬赏招商,职场人脉社交,分享转发赚钱, 手机网赚零用,兼职创业,最赚钱的APP。</div>
+            <p>
+            <div><a href="http://www.pgyer.com/uGH1" data-role="button">安卓下载请点击</a></div>
+
+            <p>
+            <div><a href="https://appsto.re/cn/7G077.i" data-role="button">苹果下载请点击</a></div>
+
+            </div>
+        </div>
+    </body>
+<include file="Public/foot" />

@@ -1,0 +1,54 @@
+<include file="Public/head"/>
+<style type="text/css">
+p 
+{
+    text-indent: 1cm
+}
+.wenzi
+{
+    text-decoration: underline;
+    line-height:22px;
+}
+</style>
+<body>
+
+     <div class="add">
+        <div class='info' style="background-color:white;">
+            <br>
+            <div>
+                <span>说明：</span><br>
+                <textarea  value="" name="reason" cols="90" rows="10" id="reason" ></textarea>
+            </div>
+            <input type="hidden" id="saleId" name="saleId" value="{$saleId}">
+            <input type="hidden" id="selectid" name="selectid" value="{$selectid}">
+            <a class="btn btn-default" href="#" role="button" id="noteBtn" style="  margin: 0 0 10px 250px;">确定</a>
+        </div>
+    </div>
+
+
+</body>
+<include file="Public/loadjs" />
+<script>
+    sublevel_out();//子窗口退出
+
+
+    $("#noteBtn").click(function(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        var saleId = $("#saleId").val();
+        var selectid = $("#selectid").val();
+        var reason = $("#reason").val();
+
+        if(reason==""){
+            layer.msg('请填写理由', {icon: 8});
+            return false;
+        }
+
+        $.post(APP+"/Api/web/addSaleNote",
+        "saleId="+saleId+"&reason="+reason+"&selectid="+selectid,
+        function(data){
+            parent.location.reload();
+            parent.layer.close(index);
+        },"json");
+    });
+
+</script>

@@ -1,0 +1,408 @@
+<include file="Public/head" />
+<style type="text/css">
+.taskAdd_template_questionList {
+  width: 100%;
+  min-height: 200px;
+}
+.taskAdd_template_questionList1 {
+  margin: 0 0 0 20px;
+  min-height: 100px;
+}
+.taskAdd_template_question {
+  width: 80%;
+  min-height: 40px;
+  line-height: 40px;
+  float: left;
+}
+.taskAdd_conventionDataInput {
+  width: 300px;
+  min-height: 30px;
+  border: 1px #CACACA solid;
+}
+.taskAdd_btn {
+  width: 30px;
+  height: 30px;
+  background-color: #14bce1;
+  color: #fff;
+  margin-left: 15px;
+  border: 1px #14bce1 solid;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.taskAdd_template_answer {
+  width: 100%;
+  min-height: 100px;
+  float: left;
+  margin-left: -3px;
+  margin-top: 20px;
+}
+.taskAdd_template_answerInput {
+  width: 160px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.taskAdd_template_answer select {
+  width: 60px;
+  height: 33px;
+}
+.taskAdd_answer_input {
+  border: none;
+  color: red;
+  font-size: 12px;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-top: 10px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.taskAdd_conventDataList ul {
+  float: left;
+  margin-top: 10px;
+  min-height: 30px;
+}
+.taskAdd_conventDataList li {
+  margin-right: 20px;
+  float: left;
+}
+#taskOption{
+  display: inline-block;
+  max-width: 100%;
+  float: left;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif,微软雅黑,宋体;
+     background: #FFF; 
+    padding: 0;
+    height: 100%;
+}
+#widely_one{
+
+    position: absolute;
+    top: 10px;
+    background-color: #fff;
+    margin-left: 10px;
+}
+#widely_two{
+    position: absolute;
+    top: 870px;
+    background-color: #fff;
+    margin-left: -10px;
+}
+#widely_three{
+    position: absolute;
+    top: 1490px;
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+</style>
+    <body>
+        <include file="Public/add_menu" />
+        <div class="add">
+            <div class="add_business">
+                <div class="page_next" id="widely_one">
+                    <div class="big_line">
+                        <div  class="line_input">
+                            <span>任务图标：</span> 
+                            <?php if ($reModi['tubiao']) {?>
+                            <!--  {$reModi['one']['f_name']['f_filepath']}{$reModi.one.f_name.f_filename} -->
+                            <div id="showPic">
+                                <img src="__UPFILE__/{$reModi.tubiao.f_filepath}{$reModi.tubiao.f_filename}" width="50" height="50">
+                            </div>
+                            <?php }?>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务标题：</span> <input type="text" id="title" name="title" placeholder="请输入任务标题" value="{$reModi.f_title}" readonly>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>发布单位：</span> <input type="text" id="companyName" placeholder="录入发布单位" value="{$reModi.company.companyName}" readonly><input type="hidden" id="companyId" name="companyId" value="{$reModi.one.f_companyid}">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务时间：</span> 
+                            <input id="startdate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_begindate}" disabled>
+                            <input id="enddate" class="laydate-icon" style="width: 120px;" value="{$reModi.f_enddate}" disabled>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务联系：</span> <input type="text" id="linkman" name="linkman" placeholder="业务联系人" value="{$reModi.f_linkman}" readonly>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="line_input">
+                            <span>联系电话：</span> <input type="text" id="linkphone" name="linkphone" placeholder="联系电话" value="{$reModi.f_linkphone}" readonly>
+                        </div>
+                    </div>
+                    <div class="line" >
+                        <div class="line_input">
+                            <span>任务详情描述：</span><br>
+                            <textarea  value="" name="pro_taskDescription"  id="pro_taskDescription" style="width:550px;height:80px;" disabled="disabled" readonly="readonly">{$reModi.f_description}</textarea>
+                        </div>
+                    </div>
+                    <div class="line" style="height: 450px;margin-top: 105px;">
+                        <div class="line_input">
+                            <span>任务需求：</span><br>
+                            <div class="editor" style="height: 100%;width: 580px;float: left;">
+                                <script type="text/plain" id="editor2" style="width:580px;height:350px;" name="editor2"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page_next" id="widely_two" >
+                    <input type="hidden" id="detailCount" value="{$reModi.detailCount}" />
+                    <div id="modi_quest">
+                    <div  class="taskAdd_template_questionList" id="quest">
+
+                        <?php if ($reModi['detail']) { ?>
+                          <volist name="reModi.detail" id="vo" key="k">
+                            <div class="taskAdd_template_questionList1" id='question_list_{$k-1}'>
+                                <div class="taskAdd_template_question">
+                                    问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px" value="{$vo.f_problemtatile}" readonly/>
+                                </div>
+                                <div  class="taskAdd_template_answer">
+                                    答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_{$k-1}" disabled>
+                                          <option  value="0" <eq name="vo.f_type" value="0"> selected </eq>>请选择</option>
+                                          <option  value="1" <eq name="vo.f_type" value="1"> selected </eq>>单选</option>
+                                          <option  value="2" <eq name="vo.f_type" value="2"> selected </eq>>多选</option>
+                                          <option  value="3" <eq name="vo.f_type" value="3"> selected </eq>>文本</option>
+                                          <option  value="4" <eq name="vo.f_type" value="4"> selected </eq>>图片</option>
+                                        </select>
+                                        <?php if ($vo['f_type']==1 || $vo['f_type']==2) {?>
+                                          <volist name="vo.answer" id="answer" key="ky">
+                                            <input type="text" class="taskAdd_conventionDataInput  taskAdd_template_answerInput" value="{$answer}" readonly>
+                                            <input type="checkbox" class='trueAnswer{$k-1}' value="{$ky-1}"
+                                            <?php if (in_array(($ky-1),explode(",",$vo['f_trueanswer']))&&$vo['f_trueanswer']!="") { ?>
+                                              <?php echo "checked"; ?>
+                                              <?php } ?>
+                                            >
+                                          </volist><br>
+                                          <div class="line_note">*勾选的是正确答案，,如无，则该问题无答案</div>
+                                        <?php }?>
+                                 </div> 
+                                 <input type="hidden" id="f_stdindex{$k-1}" name="f_stdindex" value="{$vo.f_stdindex}">
+                            </div>
+                          </volist>
+                        <?php }else{ ?>
+                          <div class="taskAdd_template_questionList1" id='question_list_0'>
+                              <div class="taskAdd_template_question">
+                                  问：<input type="text" name='conventionDataInput'  class="taskAdd_conventionDataInput" style="width:500px" readonly/>
+                              </div>
+                              <div  class="taskAdd_template_answer">
+                                  答：<select class="template_answer_selected" name="template_answer" id="template_answer_selected_0" disabled>
+                                        <option  value="0">请选择</option>
+                                        <option  value="1">单选</option>
+                                        <option  value="2">多选</option>
+                                        <option  value="3">文本</option>
+                                        <option  value="4">图片</option>
+                                      </select>
+                               </div>
+                          </div>
+                        <?php }?>
+                    </div>
+                    </div>
+                 </div>
+                </div>
+                
+                <div class="page_next" id="widely_three" >
+                    <div class="line">
+                        <div class="line_input">
+                            <span>任务总数：</span>
+                            <input type="text" id="conven_taskBrand"  name="conven_taskBrand"  value="{$reModi.f_totalcopies|default=0}" class="taskAdd_conventionDataInput" oninput="calcu2();" style="margin-left:59px;" disabled="true">&nbsp 份
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                            <span>单次奖励金币：</span>
+                            <input type="text" id="conven_taskProduct"  name="conven_taskProduct"  value="{$reModi.f_eachcoin}" class="taskAdd_conventionDataInput" oninput="calcu2();" style="margin-left:35px;" disabled="true">&nbsp 元
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                        <span>平台单次服务佣金：</span>
+                        <input type="text" id="conven_saleCommission"  name="conven_saleCommission"  value="{$reModi.f_eachcoin}" class="taskAdd_conventionDataInput" placeholder="自动计算" disabled="true" style="margin-left:11px;">&nbsp 元
+                        </div>
+                    </div><br>
+
+                    <div class="line">
+                        <div class="line_input">
+                        <span>总佣金：</span>
+                        <input type="text" id="conven_totalFee"  name="conven_totalFee"  value="" class="taskAdd_conventionDataInput" placeholder="自动算出，四舍五入" disabled="true" style="margin-left:71px;">&nbsp 元
+                        </div>
+                    </div><br>
+                    <hr style="width:1000px">
+                    <div  style="width:100%;margin-bottom:20px;float:left;line-height:25px;">
+                        <p>说明:</p>
+                        <p>1、网点地址请输入详细地址，方便系统自动获取到相对精确的定位信息；</p>
+                        <p>2、如果没有显示经度、纬度数据，请点击“定位”图标进行手动定位；</p>
+                        <p>3、可认领数量是任务发布后，可以认领的数量，最终每个门店的有效任务只能有一个。该数量请合理填写，并非越大越好；</p>
+                    </div>
+
+                   <div style="min-height:50px;float:right;">
+                         <span  style="width:150px;padding:10px 20px;background-color:#15BCE0;color:#fff;cursor:pointer;"  onclick="superNetDel()">删除</span>
+                         <span  style="width:150px;padding:10px 10px;background-color:#15BCE0;color:#fff;cursor:pointer;margin-left:15px;"  onclick="superNetImpt()">EXCEL导入</span>
+                         <a href="__PUBLIC__/upfile/download/auditlist.xls"><span  style="width:150px;padding:10px 10px;background-color:#15BCE0;color:#fff;cursor:pointer;margin-left:15px;">模板下载</span></a>
+                    </div>
+                    <div style="min-height:100px;clear:both;">
+                        <table class="audit_table">
+                            <thead>
+                               <tr>
+                                   <th class="wh-5"><input type="checkbox" class="audit_table_input" name="all_audit_checkbox"  onclick="all_checkLine(this,'audit_checkbox')"></th>
+                                   <th class="wh-20">网点名称</th>
+                                   <th class="wh-20">网点地址</th>
+                                   <th class="wh-10">可认领数</th>
+                                   <th class="wh-10">经度</th>
+                                   <th class="wh-10">纬度</th>
+                                   <th class="wh-15">范围(米)</th>
+                                   <th class="wh-5">定位</th>
+                               </tr>
+                            </thead>
+                            <tbody class="audit_tbody">
+                               <tr>
+                                   <td class="wh-5"><input type="checkbox" class="audit_table_input" name="audit_checkbox" value=""></td>
+                                   <td class="wh-20"><input type="text" class="audit_table_input" name="network_name" onmouseover="this.title=this.value" value=""></td>
+                                   <td class="wh-20"><input type="text" class="audit_table_input" name="network_address" onmouseover="this.title=this.value" value=""  onblur="getlngandlat(this)"></td>
+                                   <td class="wh-10"><input type="text" class="audit_table_input" name="net_claim_num" onmouseover="this.title=this.value" value="" ></td>
+                                   <td class="wh-10"><input type="text" class="audit_table_input" name="longitude" onmouseover="this.title=this.value" value=""  disabled style="height:40px;"></td>
+                                   <td class="wh-10"><input type="text" class="audit_table_input" name="latitude" onmouseover="this.title=this.value" value=""  disabled style="height:40px;"></td>
+                                   <td class="wh-10"><input type="text" class="audit_table_input" name="range" onmouseover="this.title=this.value" value="200"></td>
+                                   <td class="wh-5"><img src="__IMG__/dingwei.png" alt="点击地位" onclick="dingwei(this)" height="30px" width="30px"  style="cursor:pointer"></td>
+                                   <td class="wh-5"><img src="__IMG__/jiahao.png"  onclick="superNetAdd(this)" alt="点击添加" height="30px" width="30px"  style="cursor:pointer"></td>
+                               </tr>
+                               <volist  name="reModi.aduit_list" id="vo">
+                                   <tr>
+                                       <td class="wh-5"><input type="checkbox" class="audit_table_input" name="audit_checkbox" value="{$vo.f_super_id}"></td>
+                                       <td class="wh-20"><input type="text" class="audit_table_input" name="network_name" onmouseover="this.title=this.value" value="{$vo.f_network_name}" readonly></td>
+                                       <td class="wh-20"><input type="text" class="audit_table_input" name="network_address" onmouseover="this.title=this.value" value="{$vo.f_network_address}" readonly></td>
+                                       <td class="wh-10"><input type="text" class="audit_table_input" name="net_claim_num" onmouseover="this.title=this.value" value="{$vo.f_claim_num}" readonly></td>
+                                       <td class="wh-10"><input type="text" class="audit_table_input" name="longitude" onmouseover="this.title=this.value" value="{$vo.f_longitude}"  disabled style="height:40px;"></td>
+                                       <td class="wh-10"><input type="text" class="audit_table_input" name="latitude" onmouseover="this.title=this.value" value="{$vo.f_latitude}"  disabled style="height:40px;"></td>
+                                       <td class="wh-10"><input type="text" class="audit_table_input" name="range" onmouseover="this.title=this.value" value="{$vo.f_range}" readonly></td>
+                                       <td class="wh-5" style="border:1px solid grey"><img src="__IMG__/dingwei.png" alt="点击地位" onclick="dingwei(this)" height="30px" width="30px"  style="cursor:pointer;"></td>
+                                       <td class="wh-5" style="border:none"></td>
+                                   </tr>
+                               </volist>
+                            </tbody>
+                            <tfoot class="audit_tfoot">
+                               <tr>
+                                   <td   colspan="8">
+                                       <span>共 <span id="audit_tbody_tr_num"  style="color:#14bce1;">{$reModi.audit_count_list|default=0}</span>条</span>
+                                       <span>每页5条</span>
+                                       <span>第<span  id="audit_tbody_page"  style="color:#14bce1;">1</span>页</span>
+                                       <span><i class='fa fa-caret-left fa-lg'    style="color:#14bce1;cursor:pointer;"  onclick="audit_pre_page(50)"></i></span>
+                                       <span><i class="fa fa-caret-right fa-lg"   style="color:#14bce1;cursor:pointer;"  onclick="audit_after_page(50)"></i></span>
+                                       <span>至
+                                           <input type="text" style="border:1px #CCCCCC solid;width:30px;height:30px;margin:5px;text-align:center" class="go_page">页
+                                           <button  style="border:none;margin-left:5px;padding:8px;cursor:pointer;"  onclick="audit_go_page()">GO</button>
+                                       </span>
+                                   </td>
+                               </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script>
+        var options=$("#tasktypeid option:selected");
+          if(options.val()==5||options.val()=='5'){
+              $('#widely_three').hide();
+              $('#widely_four').show();
+              $('.recommend').show();
+          }else{
+              $('#widely_four').hide();
+              $('.recommend').hide();
+              // document.getElementById("widely_four").style.top="1510px";
+          }
+
+        $(function(){
+            sublevel_out();//子窗口退出
+            // getTasktype();
+            $("#upfile").wrap("<form id='uplogo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+            //$("#upfile_ban").wrap("<form id='uplogo_ban' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+            
+            //公司自动补全
+            $("#companyName").bigAutocomplete({width:300,
+                url:"{:U('Taskadmin/Fun/searchCname')}",
+                callback:function(data){
+                    $('#companyId').val(data.result);
+                }
+            });
+            
+        });
+    </script>
+    <script type="text/javascript">
+     //实例化编译器
+     var ue=UM.getEditor('editor2',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     //通过getContent和setContent方法可以设置和读取编译器的内容
+     //读取配置
+     // var lang=ue.getOpt('lang');默认返回：zh-cn
+     
+     //加载三级联动
+     
+    //     _init_area();
+    //     getArea({$reModi.one.f_tid|default=0});
+    //     getPro({$reModi.one.f_tid|default=0});
+     
+     UM.getEditor('editor2').setContent('{$reModi.f_taskrequirements}');
+     UM.getEditor('editor2').setDisabled('fullscreen');
+
+     //实例化编译器
+     var ue=UM.getEditor('editor4',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     //通过getContent和setContent方法可以设置和读取编译器的内容
+     //读取配置
+     // var lang=ue.getOpt('lang');默认返回：zh-cn
+     
+     //加载三级联动
+     
+    //     _init_area();
+    //     getArea({$reModi.one.f_tid|default=0});
+    //     getPro({$reModi.one.f_tid|default=0});
+     
+     UM.getEditor('editor4').setContent('{$reModi.f_recommend}');
+     UM.getEditor('editor4').setDisabled('fullscreen');
+
+     $(function(){
+      var totalprice1=0;     
+      var taskbrand=$('#conven_taskProduct').val()===""?0:$('#conven_taskBrand').val();
+      var taskproduct=$('#conven_taskProduct').val()===""?0:$('#conven_taskProduct').val();
+      $('#conven_saleCommission').val(taskproduct);
+      totalprice1=2*Number(taskproduct)*Number(taskbrand);
+      $('#conven_saleCommission').html(taskproduct);
+      $('#conven_totalFee').val(totalprice1);
+      console.log(taskbrand+","+taskproduct+","+totalprice1);
+     });
+
+    </script>
+</html>

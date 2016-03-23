@@ -1,0 +1,98 @@
+<include file="Public/head" title="招商APP管理平台::用户信息管理" />
+<style type="text/css">
+.list{
+    margin-top: 20px;
+    margin-left: -200px;
+    font-size: 14px;
+}
+.listreturn{
+    margin-top: 20px;
+}
+</style>
+    <body>
+        <div class="adminB">
+            <div class="adminRight">
+                <div class="list">
+                    <input type="hidden" id="userIDMobile" value="{$re.list.mobile}"/>
+                    <input type="hidden" id="userIDuserId" value="{$re.list.userId}"/>
+                    <input type="hidden" id="userAccountCount" value="{$AccountCount}"/>
+                    身份证姓名：<input type="text" id="inUserIDName" placeholder="请输入身份证姓名" value="{$re.list.trueName}" style="width:100%;height: 30px;line-height: 30px;" readonly/><br>
+                    身份证地址：<input type="text" id="inUserIDAddress" placeholder="请输入身份证地址" value="{$re.list.homeAddress}" style="width:100%;height: 30px;line-height: 30px;" readonly/><br>
+                    身份证编号：<input type="text" id="inUserIDNumber" placeholder="请输入身份证编号" value="{$re.list.idCard}" style="width:100%;height: 30px;line-height: 30px;" readonly/><br>
+                    <br>
+                    <volist name="re_1" id="re_1" key="k">
+                        提款记录{$k}：提取
+                        <?php echo $re_1['f_shopingtype']==1?金币:银票 ?>
+                        数量：{$re_1.f_amount}个
+                        状态：
+                        <?php echo $re_1['f_strats']==0?申请:完成 ?>
+                        <?php $date=date('Y-m-d H:i:s',$re_1['f_optiondate']); ?>
+                        时间：<?php echo $date; ?>
+                        <br>
+                    </volist>
+                    <br>
+                    剩余金币：{$re_2.f_goldcoin}个<br><br>
+                    <volist name="re_3" id="re_3" key="k">
+                        提现帐号{$k}：<br>
+                        <input type="hidden" id="userAccountIndexID{$k}" value="{$re_3.f_indexid}"/>
+                        <input type="hidden" id="accounttype{$k}" value="{$re_3.f_accounttype}"/>
+                        <?php echo $re_3['f_accounttype']==1?银行:淘宝 ?><br>
+                        <?php if ($re_3['f_accounttype']==1) { ?>
+                            开户银行：<input type="text" id="inUserAccountName{$k}" value="{$re_3.f_accountname}" style="width:70%;height: 30px;line-height: 30px;" readonly/><br>
+                            帐号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="inUserAccountNumber{$k}" value="{$re_3.f_bankaccount}" style="width:70%;height: 30px;line-height: 30px;" readonly/><br>
+                        <?php }elseif ($re_3['f_accounttype']==2){ ?>
+                            提现名：<input type="text" id="inUserAccountName{$k}" placeholder="请输入提现名" value="{$re_3.f_accountname}" style="width:70%;height: 30px;line-height: 30px;"/><br>
+                            帐号：&nbsp;&nbsp;&nbsp;<input type="text" id="inUserAccountNumber{$k}" placeholder="请输入提现帐号" value="{$re_3.f_bankaccount}" style="width:70%;height: 30px;line-height: 30px;"/><br>
+                        <?php } ?>
+                        状态：
+                        <?php echo $re_3['f_status']==0?"<span style='color:green'>正常</span>":"<span style='color:red'>删除</span>" ?>
+                        <br>
+                    </volist>
+                </div>
+                <div class="listreturn">
+                    <button type="button" id="modiUserAccount" style="width:60px;height: 30px;line-height: 30px;border: 0px;background:#3c8dbc;color: #fff;">修改</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+
+        $('#modiUserAccount').click(function(){
+           var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+           var inUserIDName=$('#inUserIDName').val();
+           var userAccountCount=$('#userAccountCount').val();
+           for (var i = 1; i <= userAccountCount; i++) {
+               var userAccountIndexID=$('#userAccountIndexID'+i).val();
+               var inUserAccountName=$('#inUserAccountName'+i).val();
+               var inUserAccountNumber=$('#inUserAccountNumber'+i).val();
+               var accounttype=$('#accounttype'+i).val();
+               if(accounttype==2||accounttype=="2"){
+                   if(inUserAccountName===""){
+                        layer.msg('请输入提现名', {icon: 8});
+                        $('#inUserAccountName').focus();
+                        return false;
+                    }
+                   if(inUserAccountNumber===""){
+                        layer.msg('请输入提现帐号', {icon: 8});
+                        $('#inUserAccountNumber').focus();
+                        return false;
+                    }
+                    if(inUserIDName===inUserAccountName){
+                       $.post(APP+"/Taskadmin/UserInfo/userAccountUpdate","userAccountIndexID="+userAccountIndexID+"&inUserAccountName="+inUserAccountName+"&inUserAccountNumber="+inUserAccountNumber,"json");
+                    }else{
+                        $('#inUserAccountName'+i).focus();
+                        layer.msg('身份证姓名与提现帐号不相同', {icon: 8});
+                        return false;
+                    }
+                }
+                if (i==userAccountCount) {
+                     parent.location.reload();
+                     parent.layer.close(index);
+                };
+
+           };
+    });
+
+    </script>
+</html>

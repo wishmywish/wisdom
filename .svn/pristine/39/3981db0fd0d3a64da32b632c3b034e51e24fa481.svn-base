@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<input type="text" name="mobile">
+
+我是未绑定微信来注册的，哈哈哈
+
+</body>
+</html>

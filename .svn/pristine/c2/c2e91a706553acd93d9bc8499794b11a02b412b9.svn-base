@@ -1,0 +1,129 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            <?php if($areaId) echo "编辑区域"; else echo "新增区域";?>
+        </div>
+    </div>
+    <div class="area_center">
+        <!--输入框-->
+        <div class="area_head">
+            <span style="display: inline-block;">通讯录&nbsp;>&nbsp;区域管理&nbsp;>&nbsp;<?php if($areaId) echo "编辑区域"; else echo "新增区域";?></span>
+        </div>
+        <p style="margin-bottom: 40px;"><input onclick="location.href='{:U('Office/contact')}?return=2'" type="button" value="返回" style="float:right;border: 1px; height: 25px;width: 70px;background: #14bce1;color: #fff; cursor: pointer;"></p>
+        <!--列表-->
+        <div class="area_list">
+            <form id="form">
+            <div class="titleAdd"><?php if($areaId) echo "编辑区域"; else echo "新增区域";?></div>
+            <div class="contentListAdd">
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>区域编号</span>
+                    <input id="no" name="no" style="width: 280px;" type="text" value="{$area_data.list.no}">
+                </div>
+                <div class="lineTop">
+                    <span><i style="color: red;">*</i>区域名称</span>
+                    <input id="areaName" name="areaName" style="width: 280px;" type="text" value="{$area_data.list.areaName}">
+                </div>
+                <div class="lineTop">
+                    <span>上级区域</span>
+                    <input id="cusArea" style="width: 280px;" type="text" readonly="readonly" onclick="selectcusAreas();" value="{$area_data.parentAreaName}">
+                    <span style="position: absolute;margin-left: -65px;margin-top: 2px;color: #CCCCCC" class="fa fa-search fa-lg" onclick="selectcusAreas();"></span>
+                    <input id="hidcusArea" name="parentAreaId" type="hidden" value="{$area_data.list.parentAreaId}">
+                </div>
+                <div class="lineTop">
+                    <span>备注</span>
+                    <textarea style="width: 400px;height: 100px;" id="areaRemakr" name="areaRemakr">{$area_data.list.areaRemakr}</textarea>
+                </div>
+                <div class="lineTop">
+                    <span>是否启用</span>
+                    <label style="float: left;margin-right: 20px;">
+                        <input style="vertical-align: middle;margin-top: -2px;margin-bottom: 1px;" type="radio" name="areaActive" value="1" <eq name="area_data.list.areaActive" value="1">checked="checked"</eq> />&nbsp;是
+                    </label>
+                    <label style="float: left;">
+                        <input style="vertical-align: middle;margin-top: -2px;margin-bottom: 1px;"  type="radio" name="areaActive" value="0" <neq name="area_data.list.areaActive" value="1">checked="checked"</neq> />&nbsp;否
+                    </label>
+                </div>
+            </div>
+            <input type="hidden" id="areaId" name="areaId" value="{$areaId}">
+            </form>
+            <div class="area_btn" style="float: left;margin: -40px 0 0 -100px;">
+                <button class="bntns" onclick="doSubmit();">提交</button>
+                <button class="bntns" style="background: #fafafa;color: #595758;" onclick="location.href='{:U('Office/contact')}?return=2'">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />
+<script>
+    function doSubmit() {
+        var noObj = $("#no");
+        if (getValLen(noObj) == 0) {
+            layer.msg("区域编号不能为空",{icon: 8});
+            noObj.focus();
+            return false;
+        } else if (getValLen(noObj) > 16) {
+            layer.msg("区域编号最多为16字",{icon: 8});
+            noObj.focus();
+            return false;
+        }
+
+        var areaNameObj = $("#areaName");
+        if (getValLen(areaNameObj) == 0) {
+            layer.msg("区域名称不能为空",{icon: 8});
+            areaNameObj.focus();
+            return false;
+        } else if (getValLen(areaNameObj) > 16) {
+            layer.msg("区域名称最多为16字",{icon: 8});
+            areaNameObj.focus();
+            return false;
+        }
+
+        // var parentAreaIdObj = $("#hidcusArea");
+        // if (getValLen(parentAreaIdObj) == 0) {
+        //     layer.msg("上级区域不能为空",{icon: 8});
+        //     return false;
+        // } else if (getValLen(parentAreaIdObj) > 100) {
+        //     layer.msg("上级区域最多为100字",{icon: 8});
+        //     return false;
+        // }
+
+        var areaRemakrObj = $("#areaRemakr");
+        if (getValLen(areaRemakrObj) > 0 && getValLen(areaRemakrObj) > 16) {
+            layer.msg("备注最多为16字",{icon: 8});
+            areaRemakrObj.focus();
+            return false;
+        }
+
+        var loadIdx = layer.load(0);
+        var formData = $("#form").serializeArray();
+        $.post("{:U('Office/saveArea')}", formData, function(data) {
+            layer.close(loadIdx);
+            if(data.error_code == "success") {
+                layer.msg("成功", {time: 2*1000});
+                location.href="{:U('Office/contact')}?return=2";
+            } else{
+                layer.msg("发送失败，" + data.error_text,{icon: 8});
+            }
+        }, 'json');
+    }
+
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+
+    function selectcusAreas() {
+        var cusArea = $("#cusArea").val();
+        var hidcusArea = $("#hidcusArea").val();
+        layer.open({
+            type:2,
+            title :['选择区域','color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+            area: ['400px', '520px'],
+            shadeClose: true, //点击遮罩关闭
+            content: "{:U('Office/selectcusAreas')}" + "?cusArea=" + cusArea + "&hidcusArea=" + hidcusArea,
+        });
+    }
+</script>
+</body>
+</html>

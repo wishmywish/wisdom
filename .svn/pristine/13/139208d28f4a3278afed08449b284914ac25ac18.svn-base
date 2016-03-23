@@ -1,0 +1,41 @@
+<include file="Public/head" title="招商APP管理平台::用户信息管理" />
+    <body>
+        <div class="adminB">
+            <include file="Public/menu" />
+            <div class="adminRight">
+                <include file="Public/action" />
+                <div class="tabli">
+                    <ul id="tabli_userInfo">
+                        <li value="1" class='selected' id="userIDInfo"><a href="__APP__/Taskadmin/UserInfo/index?access=1300" style="text-decoration:none;">实名认证修改</a></li>
+                        <li value="2" id="userExtractPassword"><a href="__APP__/Taskadmin/UserInfo/userExtractPassword" style="text-decoration:none;">提现密码修改</a></li>
+                        <li value="3" id="userMoneyAccount"><a href="__APP__/Taskadmin/UserInfo/userMoneyAccount" style="text-decoration:none;">收款帐号修改</a></li>
+                    </ul>
+                    <div class="action">
+                        <input type="text" id="inUserMobile" placeholder="请输入手机号" style="width:140px;height: 30px;line-height: 30px;"/>
+                        <button type="button" id="searchUserMobile" style="width:60px;height: 30px;line-height: 30px;border: 0px;background:#3c8dbc;color: #fff;">搜索</button>
+                    </div>
+                </div><br>
+            </div>
+        </div>
+    </body>
+    <include file="Public/loadjs" />
+    <script type="text/javascript">
+        $('#searchUserMobile').click(function(){
+            var inUserMobile=$('#inUserMobile').val();
+            if(inUserMobile===""||!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(inUserMobile)){
+                layer.msg('请输入正确的手机号', {icon: 8});
+                $('#inUserMobile').focus();
+                return false;
+            }
+            
+           var index = layer.open({
+                title: '实名认证修改',
+                type: 2,
+                area: ['600px', '400px'],
+                content: APP + '/Taskadmin/UserInfo/userIDInfoSelect?inUserMobile=' + inUserMobile
+            });
+        });
+
+
+    </script>
+</html>

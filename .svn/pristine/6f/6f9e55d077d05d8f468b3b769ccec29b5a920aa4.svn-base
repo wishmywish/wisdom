@@ -1,0 +1,160 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <div class='org_box org_box_select'>
+            <span class='org_bot_cor'></span>
+            消息
+        </div>
+    </div>
+    <div class="message_center">
+        <!--输入框-->
+        <div class="message_head">
+            <span style="display: inline-block;">首页&nbsp;>&nbsp;消息</span>
+
+            <div class="column">
+                <span style="float: left;">筛选：</span>
+
+                <!-- 员工部门-->
+                <div class="personmsg">
+                    <ul>
+                        <li>
+                            <label>范围&nbsp;</label>
+                            <select id="searchBoard">
+                                <option value="">--请选择--</option>
+                                <volist name="queryAllmessageBoard_list" id="vo">
+                                    <option value="{$vo.boardId}">{$vo.boardName}</option>
+                                </volist>
+                            </select>
+                        </li>
+                        <li>
+                            <label style="height: 25px;">发起时间&nbsp;</label>
+                            <!--<input id="searchSubject" type="text" />-->
+                            <input id="startdate"  name="startdate" class="laydate-icon"  style="width: 150px; height: 25px;" value={$startdate} >
+                            &nbsp;至&nbsp;
+                            <input id="enddate"  name="enddate" class="laydate-icon"   style="width: 150px; height: 25px;" value={$enddate} >
+                        </li>
+                    </ul>
+                    <form id="searchForm">
+                    <input type="hidden" id="currentPage" name="page" value="{$getmessageList_page}" />
+                    <input type="hidden" id="hidSearchSubject" name="subject" value="" />
+                    <input type="hidden" id="hidSearchBoard" name="boardId" value="" />
+                    </form>
+                </div>
+                <!-- 按钮-->
+                <p style="height: 25px;float: right;margin-right: 8px;">
+                    <input id="searchButton" class="bntns" type="button" value="搜索" onclick="doSearch();" />
+                    <input id="resetButton" class="bntns" type="button" value="清空" onclick="doClear();" />
+                </p>
+            </div>
+            <div class="addbtn">
+                <p> <input class="bntns1" type="button" value="新增" onclick="addMessage();"/> </p>
+            </div>
+        </div>
+        <!--列表-->
+
+        <div class="message_list">
+
+
+            <div id="contentList" class="contentList">
+
+                <?php for($i=0;$i<4;$i++){?>
+                <ul id="message_list_<?php echo $i?>">
+                    <img src="__IMG__/touxiang.jpg" width="50" height="50" />
+            <div class="msgList">
+                <?php for($j=0;$j<4;$j++){?>
+                <div>
+                    <li>
+                        <div>
+                            <span style="margin-right: 15px;">董如赞</span>
+                            <span>2015-01-02 00:00:00&nbsp;<a style="margin-left: 18px;" href="#">附件</a></span>
+                        </div>
+                        <div>
+                            <span>今天进行了会议确认需求<a>@天天@飞飞@等等</a></span>
+                            <p>
+                                <a>
+                            <span style="margin-top: -11px;" class="fa-stack fa-lg">
+                                <i  class="fa fa-comment fa-stack-1x"></i>
+                                <i class="fa fa-ellipsis-h fa-fw  fa-stack-1x fa-inverse"></i>
+                            </span>
+                                    <span style="margin-left: -5px;margin-top: -11px;" onclick="replyMessage();">回复</span>
+                                </a>
+                            </p>
+                        </div>
+
+                    </li>
+                </div>
+                <?php }?>
+                    <!--</volist>-->
+                    <!--<empty name="getmessageList_list">-->
+                        <!--<ul><li style="width: 100%;color:#f47469;">暂无数据，请创建公告!</li></ul>-->
+                    <!--</empty>-->
+            </div>
+                </ul>
+                <?php }?>
+            </div>
+            <div id="pagebar" class="pagebar" style="margin-top:20px;border-top:1px dotted #EAEAEA;float: left;"></div>
+
+        </div>
+
+</div>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        Cookie.eraseCookie("bigMenuIndex");
+        Cookie.eraseCookie("smallMenuIndex");
+        Cookie.createCookie("bigMenuIndex",0);
+        Cookie.createCookie("smallMenuIndex",0);
+        createPageBar('{$getmessageList_total}', '{$getmessageList_pageSize}', '{$getmessageList_page}', '{$getmessageList_totalPage}');
+        $(document).on('click','#pagebar span a', function() {
+            $("#currentPage").val($(this).attr("rel"));
+            getmessageList();
+        });
+    });
+
+    function doClear() {
+        $("#searchSubject").val("");
+        $("#searchBoard").val("");
+    }
+
+    function doSearch() {
+        $("#currentPage").val("1");
+        $("#hidSearchSubject").val($("#searchSubject").val());
+        $("#hidSearchBoard").val($("#searchBoard").val());
+        getmessageList();
+    }
+
+
+
+    //新增消息
+    function addMessage(){
+        layer.open({
+            type:2,
+            title :['新增消息','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/addMessage'
+        });
+    }
+    //回复消息
+    function replyMessage(){
+        layer.open({
+            type:2,
+            title :['回复消息','color:#506390;font-size: 16px;height: 45px;line-height: 45px;padding-left:20px;'],
+            area: ['900px', '505px'],
+            shadeClose: false, //点击遮罩关闭
+            content: APP+'/Home/Office/replyMessage'
+        });
+    }
+
+
+    function createPageBar(t,ps,p,tp) {
+        total = t;                  //总记录数
+        pageSize = ps;              //每页显示条数
+        page = parseInt(p);         //当前页
+        totalPage = parseInt(tp);   //总页数
+        getPageBar1("pagebar");
+    }
+</script>
+</body>
+</html>

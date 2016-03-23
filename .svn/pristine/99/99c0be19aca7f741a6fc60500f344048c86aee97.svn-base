@@ -1,0 +1,62 @@
+<include file="Public/head" title="招商进度管理" />
+<style type="text/css">
+
+</style>
+<body>
+<div class="adminB">
+    <include file="Public/menu" />
+    <div class="adminRight">
+        <include file="Public/action" />
+        <div class="breadlist">首页 / 招商进度管理</div>
+        <div class="tabli">
+            <ul id="tabli_Ad">
+                <li value="1" class='selected' id="messages" onclick="plist_dealerPro(0)">全部</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(1)">中标</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(2)">合同</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(3)">打款</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(4)">发货</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(5)">收货</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(6)">佣金结算</li>
+                <li value="3" id="activities" onclick="plist_dealerPro(7)">货款结算</li>
+            </ul>
+            <ul class="action">
+                <li id="check" value="0">查看进程</li>
+                <li id="moneyCheck" value="1">到账确认</li>
+                <li id="squareCheck" value="0">佣金结算</li>
+                <li id="settlementCheck" value="0">货款结算</li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul >
+                <li style='width:5%;'><input id="allcheck" type='checkbox' value='0'></li>
+                <li style='width:20%;'>招商任务名称</li>
+                <li style='width:35%;cursor:pointer;' onclick='order();'>经销商名称</li>
+                <li style='width:10%;'>操作用户</li>
+                <li style='width:20%;cursor:pointer;' onclick='order1();'>进程状态</li>
+                <li style='width:10%;'>操作时间</li>
+            </ul>
+            <div class='listinfo'></div>
+            <div class="page"></div>
+        </div>
+    </div>
+</div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    $(function(){
+        
+        
+        //获取列表信息
+        plist_dealerPro();
+    });
+
+    function order(){
+        plist_dealerPro($("#type").val(),'f_companynameone');
+    }
+
+    function order1(){
+        plist_dealerPro($("#type").val(),'f_prostatus');
+    }
+
+</script>
+</html>

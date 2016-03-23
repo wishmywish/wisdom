@@ -1,0 +1,13 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+
+<div class="content_right">
+
+</div>
+
+<!--页面内容 end-->
+</div>
+</div>
+<div class="k0"></div>
+<include file="Public/footer"/>
+</div>

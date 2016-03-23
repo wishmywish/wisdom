@@ -1,0 +1,398 @@
+<include file="Public/admin_head" title='{$companyName}' />
+<include file="Public/admin_menu" />
+<div class="body_right">
+	<div class="c_head">
+       <h4>企业设置：</h4>
+    <div class="c_nav">
+ 		<ul class="nav nav-tabs nav-justified">
+		  <li role="presentation" class="active" id="one"><a href="#">基本信息</a></li>
+		  <li role="presentation"  id="two"><a href="#">上传资料</a></li>
+		</ul>
+    </div>
+	</div>
+
+	<div class="c_content">
+
+        <!--企业设置start-->
+		<div id="c0" style="min-height: 500px;">
+	    <ul>
+			<li>
+				<label class="c_name">企业全称</label>
+			    <input type="text" id="fullname" value="{$cInfo['companyName']}"/>
+                <span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+
+        <ul>
+            <li>
+                <label class="c_name">法人代表</label>
+                <input type="text" id="c_legal" value="{$cInfo['companyLegal']}" />
+                <span class="c_spanText">*必填</span>
+            </li>
+        </ul>
+
+
+        <ul>
+            <li>
+                <label class="c_name">联系人</label>
+                <input type="text" id="c_link" value="{$cInfo['contactPerson']}" />
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">固定电话</label>
+                <input type="text" id="c_phone"  value="{$cInfo['phone']}" />
+                <span class="c_spanText">*必填</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">联系手机</label>
+                <input type="text" id="c_tel"  value="{$cInfo['contactMobile']}" />
+                <span class="c_spanText">*必填</span>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <label class="c_name">联系邮箱</label>
+                <input type="text" id="c_email" value="{$cInfo['email']}" />
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">官网地址</label>
+                <input type="text" id="c_websit" value="{$cInfo['website']}" />
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">注册资金</label>
+                <input style="width: 150px;margin-right: 5px;" type="text" id="c_regCapital" value="{$cInfo['regCapital']}" />万元
+                <span class="c_spanText">*必填</span>
+            </li>
+        </ul>
+
+		<ul>
+			<li>
+				<label class="c_name">所处行业</label>
+                <select style="width: 180px;height:28px;" id="c_business">
+                    <foreach name="industry" item="vo">
+                        <option value="{$vo['industryId']}" <if condition="$cInfo['industryId'] eq $vo['industryId']">selected</if > >{$vo['industryName']}</option>
+                    </foreach>
+                </select>
+			<span class="c_spanText">*必填</span>
+			</li>
+		</ul>
+
+
+        <ul>
+            <li>
+                <label class="c_name">主销产品</label>
+                <input type="text" id="c_products" value="{$cInfo['mainProduct']}" />
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">主销区域</label>
+                <input type="text" id="c_area" value="{$cInfo['mainArea']}" />
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">年营业额</label>
+                <input style="width: 150px;margin-right: 5px;" type="text" id="c_year" value="{$cInfo['turnOver']}" />万元
+                <span class="c_spanText">*必填</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">现有经销商人数</label>
+                <input type="text" id="c_dealer" value="{$cInfo['ageCount']}" placeholder="请输入数字"/>
+                <!--<span class="c_spanText">*必须是数字</span>-->
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">现有员工总数</label>
+                <input type="text" id="c_staff" value="{$cInfo['employeeCount']}" placeholder="请输入数字"/>
+                <!--<span class="c_spanText">*必须是数字</span>-->
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">现有销售人员数</label>
+                <input type="text" id="c_salesman" value="{$cInfo['salesCount']}" placeholder="请输入数字"/>
+                <!--<span class="c_spanText">*必须是数字</span>-->
+            </li>
+        </ul>
+
+
+        <ul>
+            <li>
+                <label class="c_name">有无质量管理部门</label>
+                <input type="radio" id="quality" name="quality"  value="1" <if condition="$cInfo['qualityManagDep'] eq 1">checked</if>  /><span  style="margin-right:10px">有</span>
+                <input type="radio" id="quality"  name="quality"  value="2" <if condition="$cInfo['qualityManagDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">有无技术研发部门</label>
+                <input type="radio" id="technology" name="technology"  value="1" <if condition="$cInfo['techDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                <input type="radio" id="technology"  name="technology"  value="2" <if condition="$cInfo['techDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">有无市场策划部门</label>
+                <input type="radio" id="market" name="market"  value="1" <if condition="$cInfo['markDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                <input type="radio" id="market"  name="market"  value="2" <if condition="$cInfo['markDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label class="c_name">有无售后服务部门</label>
+                <input type="radio" id="service" name="service"  value="1"  <if condition="$cInfo['aftersaleDep'] eq 1">checked</if> /><span  style="margin-right:10px">有</span>
+                <input type="radio" id="service"  name="service"  value="2" <if condition="$cInfo['aftersaleDep'] eq 2">checked</if> /><span  style="margin-right:10px">无</span>
+            </li>
+        </ul>
+
+
+
+
+		<div class="c_footer" style="margin:20px 0 100px 150px;">
+                        <ul>
+                            <li style="background-color:#15BCE0;color:#fff;" id="c_set_submit">下一步</li>
+                       </ul>
+                   </div>
+		</div>
+        <!--企业设置end-->
+
+
+        <!--上传资料 start-->
+		<div id="c1" style="display:none;min-height: 700px;">
+            <div class="line_input" style="min-height: 0px;">
+                <div class="upfile_pack">
+                    <div>营业执照上传资料：<span style="color: red;">*必选</span></div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name" />-->
+                    <button id="btn_up_other" class="btn btn-default" style="float: left;" onclick="$('#business_licence_logo').click();">上传</button>
+                    <button class="btn btn-default" id="btnBusiness_licence_" style="margin-left: 30px;" onclick="business_licence_upload();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="business_licence_logo" name="upfile" accept="image/jpg,image/gif,image/png">
+                    </div>
+                 <input type="hidden" id="fileid_other_1" name="fileid_other" value="{$business_licence.f_id}">
+                </div>
+                <div id="c_pic_1" <if condition="$business_licence neq null"> style="display: block;"<else/>style="display:none"</if> >
+
+                    <div id="pic_1" class="c_pic_up"  style="float: left;">
+                        <div class="show_progress_no" id="show_progress_no_other_1"><if condition="$business_licence neq null">100%<else/>0% </if></div>
+                        <div class="progress_up" id="progress_up_other_1">
+                            <div class="bar" id="bar_other_1"  <if condition="$business_licence neq null"> style="width: 100%;"</if> ></div>
+                        </div>
+                        <div class="show_img" id="show_img_other_1">
+                            <if condition="$business_licence neq null"><a target="_blank"  href="__UPFILE__/{$business_licence.f_filepath}{$business_licence.f_filename}"><img  width="100px" height="100px" src="__UPFILE__/{$business_licence.f_filepath}{$business_licence.f_filename}"></a></if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="line_input"  style="min-height:0px;">-->
+                <!--<div class="upfile_pack">-->
+
+                    <!--<div>税务登记证：</div>-->
+                    <!--<br/>-->
+                    <!--&lt;!&ndash;<input type="text" style="width: 180px;height:25px;" id="data_name_2" />&ndash;&gt;-->
+                    <!--<button id="btn_up_other2" class="btn btn-default" onclick="$('#tax_registration_logo').click();">上传</button>-->
+                    <!--<button class="btn btn-default" id="btnTax_registration" style="margin-left: 30px;" onclick="tax_registration_upload();">请确认上传</button>-->
+
+                    <!--<div style="display: none;">-->
+                        <!--<input type="file" id="tax_registration_logo" name="upfile" accept="image/jpg,image/gif,image/png">-->
+                    <!--</div>-->
+                    <!--<input type="hidden" id="fileid_other_2" name="fileid_other" value="">-->
+                <!--</div>-->
+                <!--<div id="c_pic_2" style="display: none;">-->
+
+                    <!--<div id="pic_2" class="c_pic_up"  style="float: left;">-->
+                    <!--<div class="show_progress_no" id="show_progress_no_other_2">0%</div>-->
+                    <!--<div class="progress_up" id="progress_up_other_2">-->
+                        <!--<div class="bar" id="bar_other_2"></div>-->
+                    <!--</div>-->
+                    <!--<div class="show_img" id="show_img_other_2"></div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <!--<br/>-->
+
+            <!--<div class="line_input"  style="min-height:0px;">-->
+                <!--<div class="upfile_pack">-->
+
+                    <!--<div>组织机构代码证：</div>-->
+                    <!--<br/>-->
+                    <!--&lt;!&ndash;<input type="text" style="width: 180px;height:25px;" id="data_name_2" />&ndash;&gt;-->
+                    <!--<button id="btn_up_other3" class="btn btn-default" onclick="$('#tax_registration_logo3').click();">上传</button>-->
+                    <!--<button class="btn btn-default" id="btnTax_registration3" style="margin-left: 30px;" onclick="tax_registration_upload3();">请确认上传</button>-->
+
+                    <!--<div style="display: none;">-->
+                        <!--<input type="file" id="tax_registration_logo3" name="upfile" accept="image/jpg,image/gif,image/png">-->
+                    <!--</div>-->
+                    <!--<input type="hidden" id="fileid_other_3" name="fileid_other" value="">-->
+                <!--</div>-->
+                <!--<div id="c_pic_3" style="display: none;">-->
+
+                    <!--<div id="pic_3" class="c_pic_up"  style="float: left;">-->
+                        <!--<div class="show_progress_no" id="show_progress_no_other_3">0%</div>-->
+                        <!--<div class="progress_up" id="progress_up_other_3">-->
+                            <!--<div class="bar" id="bar_other_3"></div>-->
+                        <!--</div>-->
+                        <!--<div class="show_img" id="show_img_other_3"></div>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <br/>
+
+            <div class="line_input"  style="min-height:0px;">
+                <div class="upfile_pack">
+
+                    <div>公司标志(logo)：<span style="color: red;">*必选</span></div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name_2" />-->
+                    <button id="btn_up_other4" class="btn btn-default" onclick="$('#tax_registration_logo4').click();">上传</button>
+                    <button class="btn btn-default" id="btnTax_registration4" style="margin-left: 30px;" onclick="tax_registration_upload4();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="tax_registration_logo4" name="upfile" accept="image/jpg,image/gif,image/png">
+                    </div>
+                    <input type="hidden" id="fileid_other_4" name="fileid_other" value="{$core_logo.f_id}">
+                </div>
+                <div id="c_pic_4" <if condition="$business_licence neq null"> style="display: block;"<else/>style="display:none"</if>>
+                    <div id="pic_4" class="c_pic_up"  style="float: left;">
+                        <div class="show_progress_no" id="show_progress_no_other_4"><if condition="$business_licence neq null">100%<else/>0% </if></div>
+                        <div class="progress_up" id="progress_up_other_4">
+                            <div class="bar" id="bar_other_4"  <if condition="$business_licence neq null"> style="width: 100%;"</if> ></div>
+                        </div>
+                        <div class="show_img" id="show_img_other_4">
+                            <if condition="$core_logo neq null"><a target="_blank"  href="__UPFILE__/{$core_logo.f_filepath}{$core_logo.f_filename}"><img  width="100px" height="100px" src="__UPFILE__/{$core_logo.f_filepath}{$core_logo.f_filename}"></a></if>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br/>
+
+            <div class="line_input" style="min-height:0px;">
+                <div class="upfile_pack">
+
+                    <div>生产许可证：<span style="color: red;">*可选</span></div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name_2" />-->
+                    <button id="btn_up_other5" class="btn btn-default" onclick="$('#tax_registration_logo5').click();">上传</button>
+                    <button class="btn btn-default" id="btnTax_registration5" style="margin-left: 30px;" onclick="tax_registration_upload5();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="tax_registration_logo5" name="upfile" accept="image/jpg,image/gif,image/png">
+                    </div>
+                    <input type="hidden" id="fileid_other_5" name="fileid_other" value="{$prod_licence.f_id}">
+                </div>
+                <div id="c_pic_5"  <if condition="$prod_licence neq null"> style="display: block;"<else/>style="display:none"</if> >
+
+                    <div id="pic_5" class="c_pic_up" >
+                        <div class="show_progress_no" id="show_progress_no_other_5"><if condition="$prod_licence neq null">100%<else/>0% </if></div>
+                        <div class="progress_up" id="progress_up_other_5">
+                            <div class="bar" id="bar_other_5" <if condition="$prod_licence neq null"> style="width: 100%;"</if>></div>
+                        </div>
+                        <div class="show_img" id="show_img_other_5">
+                            <if condition="$prod_licence neq null"><a  target="_blank"  href="__UPFILE__/{$prod_licence.f_filepath}{$prod_licence.f_filename}"><img  width="100px" height="100px" src="__UPFILE__/{$prod_licence.f_filepath}{$prod_licence.f_filename}"></a></if>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <br/>
+            <div class="line_input" style="min-height:0px;">
+                <div class="upfile_pack">
+
+                    <div>食品流通许可证：<span style="color: red;">*可选</span></div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name_2" />-->
+                    <button id="btn_up_other6" class="btn btn-default" onclick="$('#tax_registration_logo6').click();">上传</button>
+                    <button class="btn btn-default" id="btnTax_registration6" style="margin-left: 30px;" onclick="tax_registration_upload6();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="tax_registration_logo6" name="upfile" accept="image/jpg,image/gif,image/png">
+                    </div>
+                    <input type="hidden" id="fileid_other_6" name="fileid_other" value="{$food_per.f_id}">
+                </div>
+                <div id="c_pic_6" <if condition="$food_per neq null"> style="display: block;"<else/>style="display:none"</if>>
+
+                    <div id="pic_6" class="c_pic_up"  style="float: left;">
+                        <div class="show_progress_no" id="show_progress_no_other_6"><if condition="$food_per neq null">100%<else/>0% </if></div>
+                        <div class="progress_up" id="progress_up_other_6">
+                            <div class="bar" id="bar_other_6"  <if condition="$food_per neq null"> style="width: 100%;"</if>></div>
+                        </div>
+                        <div class="show_img" id="show_img_other_6">
+                            <if condition="$food_per neq null"><a target="_blank"   href="__UPFILE__/{$food_per.f_filepath}{$food_per.f_filename}"><img  width="100px" height="100px" src="__UPFILE__/{$food_per.f_filepath}{$food_per.f_filename}"></a></if>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <br/>
+            <div class="line_input" style="min-height:0px;margin-bottom:200px;">
+                <div class="upfile_pack">
+
+                    <div>卫生许可证：<span style="color: red;">*可选</span></div>
+                    <br/>
+                    <!--<input type="text" style="width: 180px;height:25px;" id="data_name_2" />-->
+                    <button id="btn_up_other7" class="btn btn-default" onclick="$('#tax_registration_logo7').click();">上传</button>
+                    <button class="btn btn-default" id="btnTax_registration7" style="margin-left: 30px;" onclick="tax_registration_upload7();">请确认上传</button>
+
+                    <div style="display: none;">
+                        <input type="file" id="tax_registration_logo7" name="upfile" accept="image/jpg,image/gif,image/png">
+                    </div>
+                    <input type="hidden" id="fileid_other_7" name="fileid_other" value="{$$san_license.f_id}">
+                </div>
+                <div id="c_pic_7" <if condition="$san_license neq null"> style="display: block;"<else/>style="display:none"</if>>
+
+                    <div id="pic_7" class="c_pic_up"  style="float: left;">
+                        <div class="show_progress_no" id="show_progress_no_other_7"><if condition="$san_license neq null">100%<else/>0% </if></div>
+                        <div class="progress_up" id="progress_up_other_7">
+                            <div class="bar" id="bar_other_7"  <if condition="$san_license neq null"> style="width: 100%;"</if> ></div>
+                        </div>
+                        <div class="show_img" id="show_img_other_7">
+                            <if condition="$san_license neq null"><a  target="_blank"  href="__UPFILE__/{$san_license.f_filepath}{$san_license.f_filename}"><img width="100px" height="100px" src="__UPFILE__/{$san_license.f_filepath}{$san_license.f_filename}"></a></if>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+            <!--<div class="c_footer" style="margin:30px 0 100px 150px;">-->
+                <!--<ul>-->
+                    <!--<li style="background-color:#15BCE0;color:#fff;"  id="submit_pic">提交</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+		</div>
+
+        <input type="hidden" id="url" value="{:U('Api/Upfile/upF/type/2')}" />
+        <!--上传资料 end-->
+	</div>
+  
+</div>
+<include file="Public/loadjs" />
+<js href="__JS__/comset_index.js"/>
+    </body>
+</html>

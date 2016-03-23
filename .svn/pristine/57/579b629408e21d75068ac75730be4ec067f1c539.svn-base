@@ -1,0 +1,183 @@
+<include file="Public/head" title="小宝商城" />
+<body>
+<div data-role="page" id="pageone">
+    <!--data-fullscreen="true"-->
+    <div data-role="header" data-position="inline">
+        <h1>小宝商城</h1>
+    </div>
+    <div data-role="content">
+        <div class="shopclass">
+            <div class="cname">全部>></div>
+            <div class="cselect"><a href="#showClass" data-rel="dialog">选择分类</a></div>
+        </div>
+        <div class="shoplist">
+            <a href="#pagetwo" data-transition="slide">
+                <div class="shopframe">
+                    <div class="img"><img src="http://xyk.cebbank.com/upload/portal/201507/18050.jpg"></div>
+                    <div class="text">
+                        <div class="shopname">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopdesc">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopprice"><span style="color:red;font-size: 18px;">800</span>金币</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#pagetwo" data-transition="slide">
+                <div class="shopframe">
+                    <div class="img"><img src="http://xyk.cebbank.com/upload/portal/201507/18050.jpg"></div>
+                    <div class="text">
+                        <div class="shopname">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopdesc">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                        <div class="shopprice"><span style="color:red;font-size: 18px;">800</span>金币</div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div><!-- /content -->
+    <!--<div data-role="footer" data-position="fixed" >-->
+        <!--<h1>行内页眉</h1>-->
+    <!--</div>-->
+</div>
+
+
+<div data-role="page" id="pagetwo">
+    <!--data-fullscreen="true"-->
+    <div data-role="header" data-position="inline">
+        <a style="top: 0;" href="#pageone" data-role="button" data-transition="slide" data-direction="reverse" data-icon="back" data-iconpos="notext">back</a>
+        <h5>商品详情</h5>
+    </div>
+    <div data-role="content">
+        <div class="shopnote">
+            <div class="shopline">
+                <div class="shopNprice"><span id="shopprice" style="color:red;font-size: 30px;">800</span>金币</div>
+                <div class="shopNsum">剩余:20</div>
+            </div>
+            <div class="shoptitle">
+            </div>
+            <div class="shopN">
+            </div>
+        </div>
+    </div><!-- /content -->
+    <div data-role="footer" data-position="fixed" >
+        <div data-role="navbar">
+            <ul id="order">
+                <li><a href="#showOrder" onclick="" data-rel="dialog">马上抢购</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="showClass">
+    <div data-role="content">
+        <div class="classlist">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="showOrder">
+    <div data-role="content">
+        <div class="order">
+            <div id="title"></div>
+            <div><span id="price"></span><input type="hidden" id="pricesum" value=""><span id="surplus"></span></div>
+            <div><span>订购数量：</span><input value="" id="prosum" type="text"></div>
+            <div><button id="ordertrue">确定</button><a href="#pagetwo"><button>取消</button></a></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<include file="Public/foot" />
+<script>
+    $(function(){
+        showshoplist(0,0);
+    });
+
+    //显示加载器
+    function showLoader() {
+        //显示加载器.for jQuery Mobile 1.2.0
+        $.mobile.loading('show', {
+            text: '加载中...', //加载器中显示的文字
+            textVisible: true, //是否显示文字
+            theme: 'e',        //加载器主题样式a-e
+            textonly: false,   //是否只显示文字
+            html: ""           //要显示的html内容，如图片等
+        });
+    }
+
+    //隐藏加载器.for jQuery Mobile 1.2.0
+    function hideLoader()
+    {
+        //隐藏加载器
+        $.mobile.loading('hide');
+    }
+
+    $(".cselect").click(function(){
+        $.getJSON("{:U('showcname')}",function(v){
+            $('.classlist').empty();
+            var list="";
+            $.each(v,function(i,val){
+                list +="<ul>";
+                list +="<a href='#pageone'><li class='classstyle' onclick='showshoplist("+val.f_id+",\""+val.f_classname+"\");'>"+val.f_classname+"</li></a>";
+                list +="</ul>";
+            });
+            $('.classlist').append(list);
+        });
+    });
+    //获取商品列表
+    function showshoplist(cid,cname){
+        if(cname!==0){
+            $(".cname").html(cname+">>");
+        }
+        showLoader();
+        $.getJSON("{:U('showshop')}","cid="+cid,function(v){
+            //console.log(v);
+            $(".shoplist").empty();
+            var list = "";
+            $.each(v,function(i,val){
+                list += "<a href='#pagetwo' data-transition='slide' onclick='openN("+val.f_sid+")'>";
+                list += "<div class='shopframe'>";
+                list += "<div class='img'><img src='"+UPFILE+"/"+val.f_filepath+val.f_filename+"'></div>";
+                list += "<div class='text'>";
+                list += "<div class='shopname'>"+val.f_shopname+"</div>";
+                list += "<div class='shopdesc'>"+val.f_description+"</div>";
+                list += "<div class='shopprice'><span style='color:red;font-size: 18px;'>"+val.f_price+"</span>金币</div>";
+                list += "</div>";
+                list += "</div>";
+                list += "</a>";
+            });
+            $(".shoplist").append(list);
+            hideLoader();
+        });
+    }
+
+    //加载详情
+    function openN(sid){
+        showLoader();
+        $.getJSON("{:U('showshopN')}","sid="+sid,function(v){
+            $("#shopprice").html(v.f_price);
+            $(".shopNsum").html("剩余:"+v.f_shopsum);
+            $(".shoptitle").html(v.f_shopname);
+            $(".shopN").html(v.f_note);
+            $("#order a").attr("onclick","placerder("+sid+")");
+            hideLoader();
+        });
+    }
+
+    function placerder(sid){
+        //$re = M("shoplist")->where("f_sid=".sid)
+        //alert("{$userid}");
+        $.getJSON("{:U('order')}","sid="+sid+"&userid={$userid}",function(v){
+            console.log(v);
+            $("#title").html(v.title);
+        });
+    }
+
+    $("#ordertrue").click(function(){
+        alert("完善中...");
+    });
+
+</script>

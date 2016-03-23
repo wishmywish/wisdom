@@ -1,0 +1,80 @@
+<include file="Public/head" title="{$webtitle}"/>
+</head>
+ <include file="Public/loadjs"/>
+ <body>
+    <neq name="re" value="">
+        <volist name="re" id="vo" key="k">
+            <div data-role="page" id="page{$k}">
+                <div  class="heads">
+                    <a  href=":U{'Mobileweb/Events/taskdeatail?taskid={$taskid}&type_label={$type_label}&userid={$userid}&invitationCode={$invitationCode}'}" style="color:#FFFFFF;display: inline-block;margin-top:15px;font-weight:bold;font-size:20px;padding-left:20px"><</a>
+                    <h1 style="margin-top:-40px">任务预览</h1>
+                </div>
+                <div data-role="content">
+                    <div class="head_top">
+                        <p title="{$vo.f_title}" style="font-size: 16px">{$vo.f_title}</p>
+                    </div>
+                    <div class="head_nav">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a">
+                                <a class="ui-btns a4" data-icon="arrow-l" data-ajax="false" data-role="button" onclick="lastProblem({$k},{$vo.f_type})")> </a>
+                            </div>
+                            <div class="ui-block-b nav_cent">
+                                <span class="sp5">{$k}</span>
+                                <span>/{$count}</span>
+                            </div>
+                            <div class="ui-block-c">
+                                <a class="ui-btns a5" data-icon="arrow-r" data-ajax="false" data-role="button" onclick="nextProblem({$k},{$vo.f_type},{$count})"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="head_con">
+                        <p title="{$vo.f_problemtatile}" style="font-size: 14px">{$vo.f_problemtatile}</p>
+                    </div>
+                    <div class="head_con2">
+                        <volist name="vo.f_options" id="voy" key="ky">
+                            <?php if ($vo['f_type']==1||$vo['f_type']=='1') { ?>
+                                <div style=" margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="radio" class="inps" name="inps{$k}" value="{$ky-1}" id="ss{$ky-1}" 
+                                    <?php if ($ky-1==0) { ?>
+                                    <?php echo "checked"; ?>
+                                    <?php } ?>
+                                    />
+                                    <div  style="margin-left: 0.5em;margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <?php }else if ($vo['f_type']==2||$vo['f_type']=='2') { ?>
+                                <div style="margin: 0 1.3em; overflow: hidden; margin-bottom: 0.6em;">
+                                    <input type="checkbox" class="inps" name="inps{$k}" value="{$ky-1}" />
+                                    <div  style="margin-left: 0.5em;margin-top: -2px; float: left;vertical-align:middle;  display:table-cell;">{$voy}</div>
+                                </div>
+                            <?php } ?>
+                         </volist>
+                    </div>
+                </div>
+            </div>
+
+         </volist>
+         <div>
+             <input type="hidden" id="userid" value="{$userid}">
+             <input type="hidden" id="taskid" value="{$taskid}">
+         </div>
+
+    </neq>
+</body>
+ <script type="text/javascript">
+        function nextProblem(k,f_type,count){
+            // location.hash="#page"+(++k);
+            // location.hash="#page2";
+            location.href=APP+"/Mobileweb/Events/problemPreview?userid="+$("#userid").val()+"&taskid="+$("#taskid").val()+"#page"+(++k);
+            if (k>count) {
+                layer.msg("当前页是最后页");
+            }
+        }
+
+        function lastProblem(k,f_type){
+            location.hash="#page"+(--k);
+            if (k<1) {
+                layer.msg("当前页是第一页");
+            }
+        }
+    </script>
+</html>

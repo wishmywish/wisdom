@@ -1,0 +1,493 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+var i = 0;
+;
+!function () {
+//其他
+
+    $('#upfile_other').change(function () {
+        //  $("#c_pic").empty();
+        $("#c_pic").append("<div id='pic_" + i + "' class='c_pic_up' >" +
+                "<div class='show_progress_no' id='show_progress_no_other_" + i + "'>0%</div>" +
+                "<div class='progress_up' id='progress_up_other_" + i + "'><div class='bar' id='bar_other_" + i + "'></div></div>" +
+                "<div class='show_img' id='show_img_other_" + i + "'></div>" +
+                "</div>");
+        ajaxSub('#upfile_up_other', '#progress_up_other_' + i + '', '#show_progress_no_other_' + i + '', '#bar_other_' + i + '', '#show_img_other_' + i + '', '#btn_up_other', '#fileid_other', 'img');
+        i++;
+        console.log(i);
+    });
+
+    //新增员工头像上传
+    $('#upfile').change(function () {
+        ajaxSub('#uplogo', '#progress_up', '#show_progress_no', '#bar', '#show_img', '#btn_up', '#fileid', 'img', '#line_input_one');
+    });
+
+
+}();
+
+function ajaxSub(submitkey, progresskey, progressnokey, barkey, showkey, btnkey, hiddenkey, filetype) {
+    // alert(2);
+//   console.log(submitkey);
+    $(submitkey).ajaxSubmit({
+        dataType: 'json', //数据格式为json 
+        beforeSend: function () { //开始上传 
+            //$('.show_img').empty(); //清空显示的图片 
+            $(progresskey).show(); //显示进度条 
+            $(progressnokey).show();
+            var percentVal = '0%'; //开始进度为0% 
+            $(barkey).width(percentVal); //进度条的宽度 
+            $(progressnokey).html(percentVal); //显示进度为0%
+            $(btnkey).html("上传中..."); //上传按钮显示上传中
+        },
+        uploadProgress: function (event, position, total, percentComplete) {
+            var percentVal = percentComplete + '%'; //获得进度
+            $(barkey).width(percentVal); //上传进度条宽度变宽 
+            $(progressnokey).html(percentVal); //显示上传进度百分比
+        },
+        success: function (data) { //成功
+            console.log(data);
+            if (data.error_no === '999999') {
+                $(btnkey).html("上传失败");
+                $(barkey).width('0');
+                $(progressnokey).html('0%'); //显示上传进度百分比
+            } else {
+                if (filetype === 'file') {
+
+                } else if (filetype === 'img') {
+                    //显示上传后的图片
+                    var img = UPFILE + "/" + data.upfile.savepath + data.upfile.savename;
+                    console.log(img + showkey);
+
+                    $(showkey).html("<a href='" + img + " target='_blank'><img src='" + img + "' width='100' height='100'></a>");
+                }
+                //获得后台返回的json数据，显示文件名，大小，以及删除按钮
+                //$('.show_img_pack').html("<b>"+data.name+"("+data.size+"k)</b>  <span class='delimg' rel='"+data.pic+"'>删除</span>"); 
+
+                $(hiddenkey).val(data.fileid);
+                //console.log(data);
+                $(btnkey).html("上传"); //上传按钮还原
+            }
+        },
+        error: function (xhr) { //上传失败
+            $(btnkey).html("上传失败");
+            $(barkey).width('0');
+            //files.html(xhr.responseText); //返回失败信息 
+        }
+    });
+}
+//企业资料设置
+$('#c_submit').click(function () {
+    if ($('#fullname').val() === "") {
+        layer.msg('名称不能为空', {icon: 8});
+        $('#fullname').focus();
+        return false;
+    }
+    if ($('#c_business').val() === "") {
+        layer.msg('任务标题不能为空', {icon: 8});
+        return false;
+    }
+    if ($('#c_address').val() === "") {
+        layer.msg('企业地址不能为空', {icon: 8});
+        $('#c_address').focus();
+        return false;
+    }
+    if ($('#c_phone').val() === "") {
+        layer.msg('电话不能为空', {icon: 8});
+        $('#c_phone').focus();
+        return false;
+    }
+    var c_phone = $.trim($('#c_phone').val());
+    var c_email = $.trim($('#c_email').val());
+    var c_fix = $.trim($('#c_fix').val());
+    var c_websit = $.trim($('#c_websit').val());
+    var c_dealer = $.trim($('#c_dealer').val());
+    var c_staff = $.trim($('#c_staff').val());
+    var c_salesman = $.trim($('#c_salesman').val());
+    var c_webnumber = $.trim($('#c_webnumber').val());
+    var quality = $("#quality:checked").val();
+    var technology = $("#technology:checked").val();
+    var market = $("#market:checked").val();
+    var service = $("#service:checked").val();
+//    console.log(quality);
+
+	console.log(c_phone);
+//  if (!(/^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/).test(c_phone)) {
+    if (!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(c_phone)) {
+        layer.msg('请检查电话号码是否正确', {icon: 8});
+        $('#c_phone').focus();
+        return false;
+    }
+    if (!(/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/).test(c_fix)) {
+        layer.msg('请检查传真格式是否正确', {icon: 8});
+        $('#c_fix').focus();
+        return false;
+    }
+    if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/).test(c_email)) {
+        layer.msg('请检查邮箱格式是否正确', {icon: 8});
+        $('#c_email').focus();
+        return false;
+    }
+    if (!(/^((https?|ftp|news):\/\/)?([a-z]([a-z0-9\-]*[\.。])+([a-z]{2}|aero|arpa|biz|com|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|pro|travel)|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))(\/[a-z0-9_\-\.~]+)*(\/([a-z0-9_\-\.]*)(\?[a-z0-9+_\-\.%=&]*)?)?(#[a-z][a-z0-9_]*)?$/).test(c_websit)) {
+        layer.msg('请检查网址格式是否正确', {icon: 8});
+        $('#c_websit').focus();
+        return false;
+    }
+    if (c_dealer != "") {
+        if (!(/^-?\d+$/).test(c_dealer)) {
+            layer.msg('请输入数字', {icon: 8});
+            $('#c_dealer').focus();
+            return false;
+        }
+    }
+
+    if (c_staff != "") {
+        if (!(/^-?\d+$/).test(c_staff)) {
+            layer.msg('请输入数字', {icon: 8});
+            $('#c_staff').focus();
+            return false;
+        }
+    }
+    if (c_salesman != "") {
+        if (!(/^-?\d+$/).test(c_salesman)) {
+            layer.msg('请输入数字', {icon: 8});
+            $('#c_salesman').focus();
+            return false;
+        }
+    }
+    if (c_webnumber != "") {
+        if (!(/^-?\d+$/).test(c_webnumber)) {
+            layer.msg('请输入数字', {icon: 8});
+            $('#c_webnumber').focus();
+            return false;
+        }
+    }
+
+
+
+});
+
+
+//新增员工
+$('#s_submit').click(function () {
+    //if ($('#nickname').val() === "") {
+    //    layer.msg('昵称为空', {icon: 8});
+    //    $('#nickname').focus();
+    //    return false;
+    //}
+    if ($('#realname').val() === "") {
+        layer.msg('真实姓名不能为空', {icon: 8});
+        $('#realname').focus();
+        return false;
+    }
+    //if (sex === "") {
+    //    layer.msg('请选择性别', {icon: 8});
+    //    return false;
+    //}
+    //if (IDcard === "") {
+    //    layer.msg('请输入身份证号码', {icon: 8});
+    //    $('#IDcard').focus();
+    //    return false;
+    //}
+    //if ($('#addr').val() === "") {
+    //    layer.msg('地址不能为空', {icon: 8});
+    //    $('#addr').focus();
+    //    return false;
+    //}
+    if ($('#phone').val() === "") {
+        layer.msg('电话不能为空', {icon: 8});
+        $('#phone').focus();
+        return false;
+    }
+
+    var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+    var companyId = $.trim($('#companyId').val());	//公司id
+    var departId = $.trim($('#s_depart').val());	//部门id
+    var nickName = $.trim($('#nickname').val());	//员工昵称
+    var trueName = $.trim($('#realname').val());	//员工真实姓名
+//  var phone = $.trim($('#phone').val());		//
+    var email = $.trim($('#s_email').val());	//邮箱
+    var userLevel = $.trim($('#userLevel').val());	//员工层级
+    var mobile = $.trim($('#phone').val());	//手机号码
+    var sex = $("#sex:checked").val();		//性别
+    //var idCard = $.trim($('#IDcard').val());	//身份证号码
+    var fax = "0";	//没有定义为空
+    var homePhone = "0";	//没有定义为空
+    var homeAddress = $("#addr").val();	//没有定义为空
+    var birthday = $("#bithdate").val();	//生日日期
+    // var headLogo = "0";	//没有定义为空
+    var officePhone = "0"	//办公电话
+    var otherPhone = "0";	//其他电话
+    var password = "123456";		//密码
+    var headLogo = $("#fileid").val();		//头像的f_id
+    var userLevel = "1";		//密码
+	var	invitationCode = "0"; 	//邀请码必填
+
+    //console.log(birthday);return;
+    if (!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(mobile)) {
+        layer.msg('请检查手机号码格式是否正确', {icon: 8});
+        $('#phone').focus();
+        return false;
+    }
+    //if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/).test(email)) {
+    //    layer.msg('请检查邮箱格式是否正确', {icon: 8});
+    //    $('#s_email').focus();
+    //    return false;
+    //}
+   /* if (!(/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/).test(idCard)) {
+        layer.msg('请检查身份证号码格式是否正确', {icon: 8});
+        $('#IDcard').focus();
+        return false;
+    }*/
+
+
+    //入库
+    $.post(APP+"/Api/Info/conf","command=addDeptuser&companyId="+companyId+"&departId="+departId+"&nickName="+nickName+"&trueName="+trueName+"&officePhone="+officePhone+"&otherPhone="+otherPhone+"&email="+email+"&userLevel="+userLevel+"&mobile="+mobile+"&sex="+sex+"&password="+password+"&headLogo="+headLogo+"&fax="+fax+"&homePhone="+homePhone+"&homeAddress="+homeAddress+"&birthday="+birthday+"&invitationCode="+invitationCode,function(rel){
+	
+        if(rel.error_code=="success"){
+            layer.msg("新增成功");
+            setTimeout(function(){
+                parent.location.reload();
+                parent.layer.close(index);
+            },2000);
+        }else{
+            layer.msg("添加失败");          
+        }
+        
+    },"json");
+
+});
+
+
+
+//编辑员工
+$('#e_submit').click(function () {
+    if ($('#nickname').val() === "") {
+        layer.msg('昵称为空', {icon: 8});
+        $('#nickname').focus();
+        return false;
+    }
+    if ($('#realname').val() === "") {
+        layer.msg('真实姓名不能为空', {icon: 8});
+        $('#realname').focus();
+        return false;
+    }
+    if (sex === "") {
+        layer.msg('请选择性别', {icon: 8});
+        return false;
+    }
+    //if (IDcard === "") {
+    //    layer.msg('请输入身份证号码', {icon: 8});
+    //    $('#IDcard').focus();
+    //    return false;
+    //}
+    if ($('#addr').val() === "") {
+        layer.msg('地址不能为空', {icon: 8});
+        $('#addr').focus();
+        return false;
+    }
+    if ($('#phone').val() === "") {
+        layer.msg('电话不能为空', {icon: 8});
+        $('#phone').focus();
+        return false;
+    }
+
+    var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+    var companyId = $.trim($('#companyId').val());	//公司id
+    var departId = $.trim($('#s_depart').val());	//部门id
+    var nickName = $.trim($('#nickname').val());	//员工昵称
+    var trueName = $.trim($('#realname').val());	//员工真实姓名
+//  var phone = $.trim($('#phone').val());		//
+    var email = $.trim($('#s_email').val());	//邮箱
+    var userLevel = $.trim($('#userLevel').val());	//员工层级
+    var mobile = $.trim($('#phone').val());	//手机号码
+    var sex = $("#sex:checked").val();		//性别
+    //var idCard = $.trim($('#IDcard').val());    //身份证号码
+    var fax = "0";  //没有定义为空
+    var homePhone = "0";    //没有定义为空
+    var homeAddress = $("#addr").val(); //没有定义为空
+    var birthday = $("#bithdate").val();    //生日日期
+    // var headLogo = "0";  //没有定义为空
+    var officePhone = "0"   //办公电话
+    var otherPhone = "0";   //其他电话
+    var password = "123456";        //密码
+    var headLogo = $("#fileid").val();      //头像的f_id
+    var userLevel = "1";        //密码
+    var invitationCode = "0";   //邀请码必填
+	
+	var userId = $.trim($('#userId').val());
+	var fieldkey = "nickName|trueName|email|userLevel|mobile|sex|headLogo|fax|homePhone|homeAddress|birthday|invitationCode|companyId|departId";
+	var fieldval = nickName+"|"+trueName+"|"+email+"|"+userLevel+"|"+mobile+"|"+sex+"|"+headLogo+"|"+fax+"|"+homePhone+"|"+homeAddress+"|"+birthday+"|"+invitationCode+"|"+companyId+"|"+departId;
+
+	
+//  if (!(/^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/).test(phone)) {
+    if (!(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/).test(mobile)) {
+        layer.msg('请检查手机号码格式是否正确', {icon: 8});
+        $('#phone').focus();
+        return false;
+    }
+    if (!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/).test(email)) {
+        layer.msg('请检查邮箱格式是否正确', {icon: 8});
+        $('#s_email').focus();
+        return false;
+    }
+    //if (!(/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/).test(idCard)) {
+    //    layer.msg('请检查身份证号码格式是否正确', {icon: 8});
+    //    $('#IDcard').focus();
+    //    return false;
+    //}
+//  $.post(APP+"/Api/Info/conf","command=modiUserInfo&companyId="+companyId+"&departId="+departId+"&nickName="+nickName+"&trueName="+trueName+"&officePhone="+officePhone+"&otherPhone="+otherPhone+"&email="+email+"&userLevel="+userLevel+"&mobile="+mobile+"&sex="+sex+"&password="+password+"&headLogo="+headLogo+"&fax="+fax+"&homePhone="+homePhone+"&homeAddress="+homeAddress+"&birthday="+birthday+"&invitationCode="+invitationCode,function(rel){
+    $.post(APP+"/Api/Info/conf","command=modiUserInfo&userid="+userId+"&fieldkey="+fieldkey+"&fieldval="+fieldval,function(result){
+		console.log(result);
+	
+        if(result.error_code=="success"){
+            layer.msg("修改成功");
+
+            setTimeout(function(){
+                parent.location.reload();
+                parent.layer.close(index);
+            }, 2000);
+
+
+            $("#depart_name").val("");
+            $("#departpt").val("");
+            $("#departptId").val(0);
+        }else{
+            layer.msg("修改失败");
+            $("#depart_name").val("");
+            $("#departpt").val("");
+        }
+        
+    },"json");
+
+});
+
+
+
+function  getDeptList(url, data, Type, DType) {
+    $('#deptList').empty();
+    $.ajax({
+        url: url,
+        type: Type,
+        data: data,
+        dataType: DType,
+        success: function (data) {
+            new getDepttree({menuArrs: data.list});
+        }
+
+    });
+}
+
+
+//分页bar的添加
+//获取分页条 
+function getPageBar2(id) {
+    //var page;
+    // var act_type=arguments[0]?arguments[0]:'';  //0可以替换成默认值
+    //页码大于最大页数 
+    if (page > totalPage)
+        page = totalPage;
+    //页码小于1 
+    if (page < 1)
+        page = 1;
+
+    pageStr = "<span>共" + total + "条</span> <span>每页" + pageSize + "条</span> <span>" + page + "/" + totalPage + "</span> ";
+
+    //如果是第一页 
+    if (page === 1) {
+        pageStr += " <span>首页</span> <span>上一页</span>";
+    } else {
+        pageStr += " <span><a href='javascript:void(0)' rel='1'>首页</a></span> <span><a href='javascript:void(0)'  rel='" + (page - 1) + "'>上一页</a></span>";
+    }
+
+    //如果是最后页 
+    if (page >= totalPage) {
+        pageStr += " <span>下一页</span> <span>尾页</span>";
+    } else {
+        pageStr += " <span><a href='javascript:void(0)'  rel='" + (parseInt(page) + 1) + "'>下一页</a></span> <span><a href='javascript:void(0)'  rel='" + totalPage + "'>尾页</a></span>";
+    }
+    $("#" + id).html(pageStr);//底部
+
+}
+
+function  buslistData1(url, data, type, datatype, page1) {
+    var load = "";
+    $.ajax({
+        type: type,
+        url: url,
+        data: data,
+        dataType: datatype,
+        beforeSend: function () {
+            load = layer.load(0);
+        },
+        success: function (rel) {
+            total = rel.total; //总记录数
+            pageSize = rel.pageSize; //每页显示条数
+            page = rel.page; //当前页
+            totalPage = rel.totalPage; //总页数
+            if (rel.list.length > 0) {
+                showrole(rel.list);
+            } else {
+                $('#role_list').empty();
+                var list = "<ul style='text-align:center;color:red'><li>暂无数据！</li></ul>"
+                $('#role_list').append(list);
+            }
+        },
+        complete: function () {
+            layer.close(load);
+            getPageBar2(page1);
+        },
+    });
+}
+
+function  showrole(list) {
+    var list1 = "";
+    $('#role_list').empty();
+
+    $.each(list, function (i, v) {
+        console.log(v.f_name);
+        list1 += "<ul   class=role_" + (i + 1) + ">";
+        list1 += "<li>" + (i + 1) + "</li><li>" + v.f_name + "</li><li><span onclick='role_delete(" + v.f_id + "," + (i + 1) + ")'>删除</span><span  onclick='show(" + v.f_id + ")'>查看</span></li></ul>";
+        list1 += "</ul>";
+    });
+
+    $('#role_list').append(list1);
+}
+
+function  role_delete(id,i) {
+    $.post(APP + "/Api/Web/role_del", "f_id=" + id, function (rel) {
+        if (rel.code == "false") {
+            layer.msg("角色有用户存在,删除失败");
+        } else if (rel.code > 0) {
+            layer.msg("删除成功");
+            $(".role_" + i).remove();
+            buslistData1(APP+"/Api/Web/role_list","companyid="+Cookie.readCookie("LYX_companyId"),'get',"json","pagerolelist");
+        } else {
+            layer.msg("角色不存在删除失败");
+        }
+    }, "json");
+}
+
+function   show(id) {
+    layer.open({
+        type: 2,
+        title: ['角色查看(可修改)', 'color:#506390;font-size: 16px;height: 45px;line-height: 45px;'],
+        area: ['480px', '330px'],
+        shadeClose: false, //点击遮罩关闭
+        content: APP + '/Admin/Access/show_nodelist?roleid=' + id
+    });
+
+}
+
+
+//返回首页
+function returnHome(){
+    Cookie.eraseCookie("bigMenuIndex");
+    Cookie.eraseCookie("smallMenuIndex");
+    Cookie.createCookie("bigMenuIndex",0);
+    Cookie.createCookie("smallMenuIndex",0);
+    window.location.href="/Home/Business/index";
+}
+

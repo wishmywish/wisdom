@@ -1,0 +1,179 @@
+<include file="Public/head"/>
+<style type="text/css">
+p 
+{
+    text-indent: 1cm
+}
+.wenzi
+{
+    text-decoration: underline;
+    line-height:22px;
+}
+</style>
+<body>
+    <div class="cause">
+        <div class="title">::卸载情况::</div>
+        <div class="cause_note"><input type="checkbox" name="uninstall" id="uninstall" /><label for="uninstall">是否已经卸载</label></div>
+    </div>
+    <div class="cause">
+        <div class="title">::了解渠道::</div>
+        <div class="cause_note">
+            <input type="radio" name="ditch" id="ditch_1" value="1" /><label for="ditch_1">朋友推荐</label>
+            <input type="radio" name="ditch" id="ditch_2" value="2" /><label for="ditch_2">微信朋友圈</label>
+            <input type="radio" name="ditch" id="ditch_3" value="3" /><label for="ditch_3">大型会议</label>
+            <input type="radio" name="ditch" id="ditch_4" value="4" /><label for="ditch_4">合作商家</label>
+            <input type="radio" name="ditch" id="ditch_5" value="5" /><label for="ditch_5">招聘网站</label>
+            <input type="radio" name="ditch" id="ditch_6" value="6" /><label for="ditch_6">网上随便搜索</label>
+            <input type="radio" name="ditch" id="ditch_7" value="7" /><label for="ditch_7">不记得</label>
+            <input type="radio" name="ditch" id="ditch_8" value="8" checked /><label for="ditch_8">其他</label>
+        </div>
+    </div>
+    <div class="cause">
+        <div class="title">::所属行业::</div>
+        <div class="cause_note">
+            <select id="industry">
+                <option value="0">请选择所属行业</option>
+                <option value="1">食品</option>
+                <option value="2">酒业</option>
+                <option value="3">餐饮</option>
+                <option value="4">汽车用品</option>
+                <option value="5">计算机</option>
+                <option value="6">广告</option>
+                <option value="7">教育</option>
+                <option value="8">服装</option>
+                <option value="9">保险</option>
+                <option value="10">美容</option>
+                <option value="11">媒体</option>
+                <option value="12">零售</option>
+                <option value="13">食品</option>
+                <option value="14">农业</option>
+                <option value="15">旅游</option>
+                <option value="16">医疗服务</option>
+                <option value="17">银行</option>
+                <option value="18">金融</option>
+                <option value="19">机械制造</option>
+                <option value="20">建筑</option>
+                <option value="21">会计</option>
+                <option value="22">服务</option>
+                <option value="23">艺术</option>
+                <option value="24">设计</option>
+                <option value="25">保健</option>
+                <option value="26">能源</option>
+                <option value="27">电讯</option>
+                <option value="28">司机</option>
+                <option value="29">律师</option>
+                <option value="30">出版</option>
+                <option value="31">公益组织</option>
+                <option value="32">互联网</option>
+                <option value="33">其他</option>
+            </select>
+        </div>
+    </div>
+    <div class="cause">
+        <div class="title">::从事岗位::</div>
+        <div class="cause_note">
+            <input type="radio" name="job" id="job_1" value="1" /><label for="job_1">企业主</label>
+            <input type="radio" name="job" id="job_2" value="2" /><label for="job_2">业务员</label>
+            <input type="radio" name="job" id="job_3" value="3" checked /><label for="job_3">其他</label>
+        </div>
+    </div>
+    <div class="cause">
+        <div class="title">::参与任务::</div>
+        <div class="cause_note"><input type="checkbox" name="task" id="task" /><label for="task">是否参与过任务</label></div>
+    </div>
+    <div class="cause">
+        <div class="title">::所在区域::</div>
+        <div class="cause_note">
+            <select id="area">
+                <option value="0">请选择所属行业</option>
+                <option value="1">北京市</option>
+                <option value="2">天津市</option>
+                <option value="3">上海市</option>
+                <option value="4">重庆市</option>
+                <option value="5">计算机</option>
+                <option value="6">河北省</option>
+                <option value="7">河南省</option>
+                <option value="8">云南省</option>
+                <option value="9">辽宁省</option>
+                <option value="10">黑龙江省</option>
+                <option value="11">湖南省</option>
+                <option value="12">安徽省</option>
+                <option value="13">山东省</option>
+                <option value="14">新疆维吾尔</option>
+                <option value="15">江苏省</option>
+                <option value="16">浙江省</option>
+                <option value="17">江西省</option>
+                <option value="18">湖北省</option>
+                <option value="19">广西壮族</option>
+                <option value="20">甘肃省</option>
+                <option value="21">山西省</option>
+                <option value="22">内蒙古</option>
+                <option value="23">陕西省</option>
+                <option value="24">吉林省</option>
+                <option value="25">福建省</option>
+                <option value="26">贵州省</option>
+                <option value="27">广东省</option>
+                <option value="28">青海省</option>
+                <option value="29">西藏</option>
+                <option value="30">四川省</option>
+                <option value="31">宁夏回族</option>
+                <option value="32">海南省</option>
+                <option value="33">台湾省</option>
+                <option value="34">香港特别行政区</option>
+                <option value="35">澳门特别行政区</option>
+            </select>
+        </div>
+    </div>
+    <div class="cause">
+        <div class="title">::备注::</div>
+        <div class="cause_note">
+            <!-- <input type="textarea" name="remark" id="remark" style="width: 100%;"/> -->
+            <textarea name="remark" id="remark" cols ="93" rows="3"></textarea>
+    </div><br>
+    <div class="cause">
+        <div class="btn_cause"><button id="noteBtn">提交</button></div>
+    </div>
+</body>
+<include file="Public/loadjs" />
+<script>
+    sublevel_out();//子窗口退出
+    $("#noteBtn").click(function(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        var uninstall=0;//卸载
+        $('input[name="uninstall"]').each(function(){
+            //console.log($(this).prop("checked"));
+            if($(this).prop("checked")){
+                uninstall = 1;
+            }else{
+                uninstall = 0;
+            }
+        });
+        var ditch = $('input[name="ditch"]:checked').val();//渠道
+        var industry = $('#industry').val();//行业
+        var job = $('input[name="job"]:checked').val();//岗位
+        var task = 0;//任务
+        $('input[name="task"]').each(function(){
+            //console.log($(this).prop("checked"));
+            if($(this).prop("checked")){
+                task = 1;
+            }else{
+                task = 0;
+            }
+        });
+        var area = $('#area').val();//区域
+
+        var remark=$('#remark').val();//备注
+
+        //添加原因
+        $.post("{:U('Fun/addsalecause')}","uninstall="+uninstall+"&ditch="+ditch+"&industry="+industry+"&job="+job+"&task="+task+"&area="+area+"&remark="+remark+"&id={$saleId}",function(v){
+            console.log(v);
+            layer.msg("添加原因成功");
+            setTimeout(function(){
+                parent.layer.close(index);
+            }, 2000);
+            //parent.layer.close(index);
+        });
+        //console.log(uninstall+ditch+industry+job+task+area);
+    });
+
+</script>

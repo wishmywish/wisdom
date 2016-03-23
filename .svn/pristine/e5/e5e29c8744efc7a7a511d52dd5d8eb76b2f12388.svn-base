@@ -1,0 +1,162 @@
+<include file="Public/head" title="{$webtitle}"/>
+<style>
+    .heads span{
+        float: left;
+        line-height: 49px;
+        color: #fff;
+        text-shadow: none;
+        padding-left: 15px;
+    }
+
+    .list{
+        padding: 10px;
+        line-height: 22px;
+        min-width: 87%;
+        height: 90px;
+        margin: 0 10px;
+    }
+    .btn{
+        border-radius: 5px;
+        border: 1px solid #ff6600;
+         /*padding: 4px 20px; */
+        color: #ff6600;
+        margin-right: 2px;
+        float: right;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor:pointer;
+    }
+    *{padding: 0; margin: 0}
+
+    .show_tips1{
+        position: absolute;
+        display: none;
+        z-index: 3000;
+        background-color: #FFF;
+        top: 25%;
+        left: 7%;
+        width: 85%;
+        height: 10%;
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding-top: 10px;
+        text-shadow: none;
+        border-radius: 10px;
+    }
+    .btns{
+        position: absolute;
+        background-color: #fff;
+        top: 85px;
+        height:30px;
+        width:100%;
+        line-height:40px;
+        text-align:center;
+        color: #36F;
+        border-top: 1px solid #ccc;
+    }
+    .btns span:first-child{
+        width: 48%;
+        border-right: 1px solid #ccc;
+        height: 40px;
+        display: block;
+        float: left;
+    }
+
+</style>
+</head>
+<include file="Public/loadjs"/>
+<body>
+<div data-role="page">
+    <div  class="heads">
+        <span  class="fa fa-angle-left fa-2x" onclick="goBack()"></span>
+        <h1>督查网点列表</h1>
+    </div>
+    <div style="width: 100%;" data-role="content">
+        <volist name="re" id="vo" key="k">
+          <ul class="list" style="border-bottom: 1px solid #ccc;">
+              <li><span>网点：{$vo.f_network_name}</span></li>
+              <li><span>地址：{$vo.f_network_address}</span></li>
+              <li><span style="color: #ff6600;margin-right: 20px;">金币：{$vo.f_eachcoin}</span><span>距离：{$vo.f_range}米</span></li>
+              <li style="width: 100%;"><span>余量：{$vo.f_claim_num}</span>
+                <if condition="$vo.f_utask_status eq 2"><span class="btn" onclick="do_task(this,{$k})">继续参与</span>
+                <elseif condition="$vo.f_utask_status eq 1"/><span class="btn" style="color:gray">等待审核</span>
+                <elseif condition="$vo.f_utask_status eq 3"/><span class="btn">已结束</span>
+                <else /><span class="btn" onclick="do_task(this,{$k})">立即参与</span>
+                </if>
+              </li>
+          </ul>
+          <input type="hidden" id="state{$k}" value="{$vo.f_utask_status}">
+          <input type="hidden" id="superid{$k}" value="{$vo.f_super_id}">
+        </volist>
+    </div>
+        <div  class="show_tips1">
+            <ul>
+                <li><b>申请成功</b></li>
+                <li>请在2小时内完成此任务。</li>
+                <li>是否立即开始工作？</li>
+            </ul>
+            <div id="embedding" class="btns">
+                <span>稍后</span>
+                <span>立即开始</span>
+            </div>
+        </div>
+
+
+</div>
+<input type="hidden" id="userid" value="{$userid}">
+<input type="hidden" id="taskid" value="{$taskid}">
+
+</body>
+<script type="text/javascript">
+
+
+        function do_task(obj,k){
+            //点击按钮时根据状态判断，如状态为2，则不修改，如没有数据则添加数据到表taskdraw中，还有把数据序号也也加入进去
+            var taskid=$("#taskid").val();
+            var userid=$("#userid").val();
+            var state=$("#state"+k).val();
+            var superid=$("#superid"+k).val();
+            if (state=="") {
+                $.post(APP+"/Mobileweb/Events/superviseDraw",
+                "taskid="+taskid+"&userid="+userid+"&superid="+superid);
+            }
+            $(".show_tips1").slideDown();
+
+            // $(document).on('click','.btns span',function(){
+            //     if($(this).text()=='稍后'){
+            //         $(".show_tips1").slideUp();
+            //         $(obj).text("继续参与");
+            //     }else{
+                    location.href=APP+'/Mobileweb/Events/superviseCheck?userid='+$('#userid').val()+'&taskid='+$('#taskid').val()+'&netserial='+k+'&superid='+superid;
+            //     }
+            // });
+        }
+
+        function goBack(){
+               document.getElementById("surveyOver").click();
+               function connectWebViewJavascriptBridge(callback) {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge)
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge)
+                        }, false)
+                    }
+                }
+                connectWebViewJavascriptBridge(function(bridge) {
+                    bridge.init(function(message, responseCallback) {
+                    });
+
+                    var data = 'goBack';
+                    bridge.send(data);
+                });
+            }
+
+
+
+
+</script>
+</html>

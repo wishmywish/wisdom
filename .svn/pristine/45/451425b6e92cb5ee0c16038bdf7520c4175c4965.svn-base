@@ -1,0 +1,527 @@
+<include file="Public/home_head" title="招商任务管理::新增"/>
+<include file="Public/home_menu"/>
+<style type="text/css">
+.business_taskAdd_contener .line_input {
+  width: 400px;
+  min-height: 110px;
+  text-align: center;
+  margin-left: 60px;
+  display: none;
+  float: right;
+  margin-top: -33px;
+}
+.line_input1 {
+  width: 100%;
+  min-height: 50px;
+  line-height: 50px;
+}
+.line_input1.height {
+  height: 100px;
+}
+.line_input1.height.aaa {
+  margin-top: 40px;
+}
+</style>
+<div class="index">
+    <div class="index_left">
+        <div class='org_box  org_box_select'><span class='org_bot_cor'></span>全部任务</div>
+    </div>
+    <div class="index_right_bus">
+        <div class="task_list1">
+            <div style='height:20px;width:200px;text-align:left;float:left'  id="business_task_title_top"></div>
+        </div>
+        <div  class='taskAdd_conter'>
+                <div  class="business_taskAdd_step">
+                    <ul>
+                      <li  class="step_one  business_taskAdd_step_selected">创建任务</li>
+                      <li  class="step_two">基本信息</li>
+                      <li  class="step_three">产品及区域</li>
+                      <li  class="step_four">任务详情</li>
+                      <li  class="step_five">上传附件</li>
+                    </ul>
+                </div>
+            <!--创建任务-->
+           
+            <div  class="business_taskAdd_contener">
+                <!--创建任务-->
+                <div  id="business_taskAdd_step_contener0" >
+                    
+                    <div class="line_input1">
+                       
+                        <span>任务图标：</span><button  id="btn_up" onclick="$('#upfile').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传图片</button><span class="business_taskAdd_spanText">*1:1比例，大小50K以内</span>
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile" name="upfile" accept="image/jpeg,image/gif,image/png">
+                        </div>
+                        <input type="hidden" id="fileid" name="fileid" value="{$reModi.one.f_fileid}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input"  id="line_input_one" style="margin-top: -70px;display:block;">
+                            <div class="show_progress_no" id='show_progress_no'></div>
+                            <div class="progress_up" id='progress_up'><div class="bar" id='bar'></div></div>
+                            <div class="show_img" id='show_img'>
+                            	 <?php if ($reModi['one']['f_name']) {?>
+                            <div id="showPic">
+                                <img src="__UPFILE__/<?php  echo  $reModi[one][f_name][f_filepath],$reModi[one][f_name][f_filename];?>" width="100" height="100">
+                            </div>
+                            <?php }?>
+                            </div>
+                    </div>
+                    
+                    
+                    <div class="line_input1 height">
+                       
+                        <span>任务广告：</span><button  id="btn_ban" onclick="$('#upfile_ban').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传图片</button><span class="business_taskAdd_spanText">*3:1比例，大小50K以内</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_ban" name="upfile" accept="image/jpeg,image/gif,image/png">
+                        </div>
+                               <input type="hidden" id="fileid_ban" name="fileid_ban"  value="{$reModi.one.f_fileid_ban}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input" id="line_input_two" style="display:block;">
+                            <div class="show_progress_no" id='show_progress_no_ban'></div>
+                            <div class="progress_up" id='progress_up_ban'><div class="bar"  id='bar_ban'></div></div>
+                            <div class="show_img" id='show_img_ban'>
+                            	 <?php if ($reModi['one']['f_ban']) {?>
+                            <div id="showBan">                            		                               
+                                <img src="__UPFILE__/<?php  echo  $reModi[one][f_ban][f_filepath],$reModi[one][f_ban][f_filename];?>" width="100" height="100">
+                           </div>
+                            <?php }?>
+                            </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="line_input1">
+                       <span>发布单位：</span> <input type="text" id="companyName" placeholder="录入发布单位" value="{$companyName}"/>
+                       <input type="hidden" id="companyId1" name="companyId" value="{$companyId}"/>
+                       <span  class="business_taskAdd_spanText">*输入时自动检索，没有请先开户</span> 
+                    </div>
+
+                      
+                    <div class="line_input1">
+                        <span>任务标题：</span> <input type="text" id="title" name="title"  value="{$reModi.one.f_title}"  placeholder="请输入任务标题"><span class="business_taskAdd_spanText"> *任务标题,显示在客户端</span>
+                    </div>
+                    
+                    <div class="line_input1">
+                       <span>任务时间：</span> 
+                        <input id="startdate" class="laydate-icon" style="width: 120px;" placeholder="起始时间"  value="{$reModi.one.f_begindate}"/>  至
+                        <input id="enddate" class="laydate-icon" style="width: 120px;" placeholder="终止时间"  value="{$reModi.one.f_enddate}"/>
+                        
+                        <span  class="business_taskAdd_spanText">*最多不超过180天</span>
+                       
+                    </div>
+                    
+                    
+                    <div class="line_input1">
+                        <span>任务联系：</span> <input type="text" id="linkman" name="linkman" placeholder="业务联系人" value="{$reModi.one.f_linkman}">
+                                
+                    </div>
+                     
+                    
+                    <div class="line_input1">
+                        <span>联系电话：</span> <input type="text" id="linkphone" name="linkphone" placeholder="企业联系人电话"  value="{$reModi.one.f_linkphone||default=$mobile}">
+                    </div>
+                    
+                    <div class="line_input1">
+                        <span>任务详情描述：</span><br>
+                        <textarea  value="" name="pro_taskDescription"  id="pro_taskDescription" style="width:550px;height:100px;">{$reModi.one.f_description}</textarea>
+                    </div>
+                    
+                    <input type="hidden" id="tasktypeid" name="tasktypeid" value="3">
+                    <input type="hidden" id="taskid" name="taskid" value="{$reModi.one.f_tid|default=0}">
+                    <button  class="business_taskAdd_button   business_taskAdd_button_next" id="task_one" >下一步</button> 
+                    
+                </div>
+                 
+                
+                <!--基本信息-->
+                <div  id="business_taskAdd_step_contener1" style="display: none" >
+                    <div class="line_input1" style="padding-top:80px">
+                        <span>任务品牌：</span> <input type="text" id="mtbrand" placeholder="招商品牌" value="{$reModi.two.f_mtbrand}">
+                    </div>
+                    
+                    
+                    <div class="line_input1">
+                       <span>任务产品：</span> <input type="text" id="mtgoods" placeholder="招商产品，多个用英文逗号分开"  value="{$reModi.two.f_mtgoods}">
+                    </div>
+                    
+                    
+                    <div class="line_input1">
+                            <span>总首批款：</span> <input type="text" id="payment" value="{$reModi.two.f_unitfirstamount}"  placeholder="首批发货款" style="width: 70px;" oninput="psum();">
+                            <input type="text" id="bond" placeholder="保证金"  value="{$reModi.two.f_unitcashdeposit}" style="width: 60px;" oninput="psum();">
+                            <input type="text" id="franchise" placeholder="加盟费" value="{$reModi.two.f_unitfranchisefee}"  style="width: 60px;" oninput="psum();">
+                            <input type="text" id="otherprice" placeholder="其他费用" style="width: 60px;" value="{$reModi.two.f_unitotheramount}" oninput="psum();">
+                            <span>合计：<span id="pricesum_txt" style="color:red;">0</span>元<input type="hidden"  value="{$reModi.two.f_unittotalamount}" id="pricesum" value="0"></span>
+                    </div>
+                    
+                    <div class="line_input1">
+                            <span>任务佣金：</span> <input type="text" id="agents_commission" placeholder="业务员佣金" style="width: 90px;" oninput="a_comm();"  value="{$reModi.two.f_unitcommission}"><br/>
+                            <span>成功招商一个的总佣金：<span id="commission_txt" style="color:red;">{$reModi.two.f_unitpreownedgold|default=0}</span>元<input type="hidden" id="commission" value="{$reModi.two.f_unitpreownedgold|default=0}">，其中业务员佣金(任务佣金)：<span id="agents_commission_txt" style="color:red;">{$reModi.two.f_unitcommission|default=0}</span>元</span>
+                    </div>
+                    
+                    
+                    
+                    <div class="line_input1">
+<!--                            {$reModi.two.f_tradeid}-->
+                            <span>所属行业：</span>
+                            <select id="big">
+                                <option>选择行业大类</option>
+                            </select>
+                            <select id="tradeid">
+                                <option>选择行业小类</option>
+                            </select>
+                    </div>
+                    
+                    <input type="hidden" id="indexid" name="indexid" value="{$reModi.two.f_indexid|default=0}">
+                    <button  class="business_taskAdd_button" id="task_two_to_one">上一步</button> 
+                    <button  class="business_taskAdd_button   business_taskAdd_button_next" id="task_two" >下一步</button> 
+                </div>
+                
+                
+                <!--产品及区域-->
+                <div  id="business_taskAdd_step_contener2" style="display: none" >
+                    <div class="line_input2" style="padding-top:80px">
+                            <span>招商情况：</span> 
+                            <select id="s_province" name="s_province">
+                                
+                            </select>
+                            <select id="s_city"  name="s_province">
+                              
+                            </select>
+                            <select id="s_county"  name="s_county">
+                              
+                              </select>
+                            <input type="text" id="business_sum" placeholder="招商数量" style="width:60px;">
+                            <button id="add_area" class="btn">+</button>
+                            <input type="hidden" id="area_stats" value="0">
+                    </div>
+                    
+                    <div  class="line_input2" id="business_situation_list" style="margin-top:20px"  >
+                        <div class="business_taskAdd_step  step"  id="business_situation_list_top" style="display:none">
+                            <ul>
+                                <li>招商区域</li>
+                                <li>招商数量</li>
+                                <li>操作</li>
+                            </ul>
+                        </div>
+                         <div class="business_taskAdd_step step " style="background-color: #fff" id="business_situation_list_conter" >
+                          
+                         </div>
+                    </div>
+                    
+                   <!--  <div  class="line_input2" >
+                        <span>产品说明：</span>
+                        <input type="text" id="goodsname" placeholder="产品名称"/>
+                        <input type="text" id="modle" placeholder="产品规格" />
+                        <input type="text" id="unit" placeholder="计量单位" />
+                        <input type="text" id="agencyprice" placeholder="经销价" />
+                        <input type="text" id="sellingprice" placeholder="分销价" />
+                        <input type="text" id="saleprice" placeholder="零售价"/>
+                        <button id="add_pro" class="btn">+</button>
+                        <input type="hidden" id="pro_stats" value="0">
+                    </div>
+                    
+                    <div class="line_input2"  id="product_descript_list" style="margin-top:20px">
+                        <div class="business_taskAdd_step  product_list_step"  id="product_descript_list_top"  style="display:none">
+                            <ul>
+                                <li>产品名称</li>
+                                <li>产品规格</li>
+                                <li>计量单位</li>
+                                <li>经销价</li>
+                                <li>分销价</li>
+                                <li>零售价</li>
+                                <li>操作</li>
+                            </ul>
+                        </div>
+                        <div class="business_taskAdd_step  product_list_step" style="background-color: #fff" id="product_descript_list_conter">
+
+                        </div>
+                    </div> -->
+                   <input type="hidden" id="taskid" name="taskid" value="{$reModi.one.f_tid|default=0}">
+                   <button  class="business_taskAdd_button" id="task_three_to_two">上一步</button> 
+                   <button  class="business_taskAdd_button   business_taskAdd_button_next" id="task_three" >下一步</button>  
+                    
+                </div>
+                
+                
+                <!--任务详情-->
+                <div  id="business_taskAdd_step_contener3"  style="display: none">
+                   <!-- <div class="line_input2" style="padding-top:80px">
+                        <span>品牌的定位：</span>
+                        <input type="text" id="brandlocation" placeholder="最多输入30个字" maxlength="30" value="{$reModi.four.f_brandlocation}"/>
+                        <span>品牌广告语：</span>
+                        <input type="text" id="slogan" placeholder="最多输入30个字" maxlength="30"  value="{$reModi.four.f_slogan}"/>
+                        <span>产品的卖点：</span>
+                        <input type="text" id="sellingpoint" placeholder="最多输入30个字" maxlength="30" value="{$reModi.four.f_sellingpoint}"/> 
+                        <span>目标消费者：</span>
+                        <input type="text" id="targetgroup" placeholder="最多输入30个字" maxlength="30" value="{$reModi.four.f_targetgroup}"/>
+                    </div>
+                    
+                    <div class="line_input2">
+                        <span>经销商要求：</span>
+                        <input type="text" id="distributorsrequir" placeholder="最多输入30个字" maxlength="30" value="{$reModi.four.f_distributorsrequir}"/>
+                        <span>主销售网点：</span>
+                        <input type="text" id="retailoutlets" placeholder="最多输入30个字"  maxlength="30"  value="{$reModi.four.f_retailoutlets}"/>
+                        <span>主推广宣传：</span>
+                        <input type="text" id="channelpolicy" placeholder="最多输入30个字" maxlength="30"  value="{$reModi.four.f_channelpolicy}"/>
+                    </div>  -->
+                 
+                    <div class="line_input2">
+                        <span>招商详情描述：</span><span class="business_taskAdd_spanText">* 插入的图片宽度小于720，不要手动缩小</span>
+                     </div>
+                    
+                     <div class="editor" style="min-height:400px;width:100%;float:left;margin-top:20px">
+                        <script type="text/plain" id="editor" style="width:800px;min-height:400px;" name="editor"></script>
+                     </div>
+                   
+                   
+                     <input type="hidden" id="tindexid" name="tindexid" value="{$reModi.four.f_indexid|default=0}">
+                    <button  class="business_taskAdd_button" id="task_four_to_three">上一步</button> 
+                    <button  class="business_taskAdd_button   business_taskAdd_button_next" id="task_four" >下一步</button>
+                    
+                </div>
+                
+                
+                
+                <!--上传附件-->
+                <div  id="business_taskAdd_step_contener4" style="display: none" >
+                    <div class="line_input1 height">
+                       
+                        <span>产品包装：</span><button  id="btn_up_pack" onclick="$('#upfile_pack').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_pack" name="upfile" accept="application/zip"/>
+                        </div>
+                        <input type="hidden" id="fileid_pack" name="fileid_pack" value="{$reModi.five.f_fileid1}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input" id="line_input_three" >
+                            <div class="show_progress_no" id="show_progress_no_pack">0%</div>
+                            <div class="progress_up" id="progress_up_pack"><div class="bar" id="bar_pack"></div></div>
+                            <div class="show_img" id="show_img_pack"></div>
+                    </div>
+                    
+                    
+                    <div class="line_input1 height aaa">
+                       
+                        <span>宣传资料：</span><button  id="btn_up_propaganda" onclick="$('#upfile_propaganda').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_propaganda" name="upfile" accept="application/zip">
+                        </div>
+                        <input type="hidden" id="fileid_propaganda" name="fileid_propaganda" value="{$reModi.five.f_fileid2}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input" id="line_input_four" style="margin-top: -90px;">
+                            <div class="show_progress_no" id="show_progress_no_propaganda">0%</div>
+                            <div class="progress_up" id="progress_up_propaganda"><div class="bar" id='bar_propaganda'></div></div>
+                            <div class="show_img" id='show_img_propaganda'></div>
+                    </div>
+                    
+                    
+                    <div class="line_input1 height">
+                       
+                        <span>合格证书：</span><button  id="btn_up_certificate" onclick="$('#upfile_certificate').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_certificate" name="upfile" accept="application/zip">
+                        </div>
+                        <input type="hidden" id="fileid_certificate" name="fileid_certificate" value="{$reModi.five.f_fileid2}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input"  id="line_input_five" style="margin-top: -90px;">
+                            <div class="show_progress_no" id="show_progress_no_certificate">0%</div>
+                            <div class="progress_up" id="progress_up_certificate"><div class="bar" id='bar_certificate'></div></div>
+                            <div class="show_img" id='show_img_certificate'></div>
+                    </div>
+                    
+                    
+                    
+                    <div class="line_input1 height">
+                       
+                        <span>销售政策：</span><button  id="btn_up_policy" onclick="$('#upfile_policy').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_policy" name="upfile" accept="application/zip">
+                        </div>
+                        <input type="hidden" id="fileid_policy" name="fileid_policy" value="{$reModi.five.f_fileid4}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input" id="line_input_six" style="margin-top: -90px;">
+                            <div class="show_progress_no" id="show_progress_no_policy">0%</div>
+                            <div class="progress_up" id="progress_up_policy"><div class="bar" id='bar_policy'></div></div>
+                            <div class="show_img" id='show_img_policy'></div>
+                    </div>
+                    
+                    
+                    
+                    
+                    <div class="line_input1 height">
+                       
+                        <span>产品价格：</span><button  id="btn_up_price" onclick="$('#upfile_price').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_price" name="upfile" accept="application/zip">
+                        </div>
+                        <input type="hidden" id="fileid_price" name="fileid_price" value="{$reModi.five.f_fileid5}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input"  id="line_input_seven" style="margin-top: -100px;">
+                            <div class="show_progress_no" id="show_progress_no_price">0%</div>
+                            <div class="progress_up" id="progress_up_price"><div class="bar" id='bar_price'></div></div>
+                            <div class="show_img" id='show_img_price'></div>
+                    </div>
+                    
+                    
+                     <div class="line_input1 height" >
+                       
+                        <span>其他资料：</span><button  id="btn_up_other" onclick="$('#upfile_other').click()" class="business_taskAdd_button" style="margin-top:35px;" >上传文件</button><span class="business_taskAdd_spanText">*</span> 
+         
+                        <div style="display: none;">
+                               <input type="file" id="upfile_other" name="upfile" accept="application/zip">
+                        </div>
+                        <input type="hidden" id="fileid_other" name="fileid_other" value="{$reModi.five.f_fileid6}">
+                        
+                    </div>
+                    
+                    
+                    <div class="line_input" id="line_input_eight" style="margin-top: -100px;">
+                            <div class="show_progress_no" id="show_progress_no_other">0%</div>
+                            <div class="progress_up" id="progress_up_other"><div class="bar" id='bar_other'></div></div>
+                            <div class="show_img" id='show_img_other'></div>
+                    </div>
+                    
+                    <input type="hidden" id="findexid" name="findexid" value="{$reModi.five.f_indexid|default=0}">
+                    <button  class="business_taskAdd_button" id="task_five_to_four">上一步</button> 
+                    <button  class="business_taskAdd_button   business_taskAdd_button_next" id="task_five" >完成</button>
+                </div>
+                
+                
+                
+            </div>
+            
+         
+        </div>
+    </div>
+</div>
+<include file="Public/loadjs" />    
+ <script type="text/javascript">
+     //实例化编译器
+     var ue=UM.getEditor('editor',{
+         toolbar: ['source bold italic underline insertorderedlist insertunorderedlist forecolor emotion image video fontsize link unlink'],
+         UMEDITOR_HOME_URL:"__STATIC__/um/",
+         autoClearinitialContent: true,
+         elementPathEnabled: false,
+         autoFloatEnabled: false,
+        // textarea: 'content'
+     });
+     //通过getContent和setContent方法可以设置和读取编译器的内容
+     //读取配置
+     // var lang=ue.getOpt('lang');默认返回：zh-cn
+     
+     //加载三级联动
+     
+     _init_area();
+     getArea({$reModi.one.f_tid|default=0});
+     getPro({$reModi.one.f_tid|default=0});
+         console.log($('#taskid').val()+"===========");
+ 
+  </script>
+  <script>
+              
+        $(function(){
+             getBigTrade();
+             $("#upfile").wrap("<form id='uplogo' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_ban").wrap("<form id='uplogo_ban' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_pack").wrap("<form id='upfile_up' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_propaganda").wrap("<form id='upfile_up_propaganda' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_certificate").wrap("<form id='upfile_up_certificate' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_policy").wrap("<form id='upfile_up_policy' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_price").wrap("<form id='upfile_up_price' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+             $("#upfile_other").wrap("<form id='upfile_up_other' action='{:U('Api/Upfile/upF/type/2')}' method='post' enctype='multipart/form-data'></form>");
+            
+            //公司自动补全
+//             $("#companyName").bigAutocomplete({width:200,
+//                 url:"{:U('Taskadmin/Fun/searchCname')}",
+//                 callback:function(data){
+//                    $('#companyId1').val(data.result);
+//                }
+//            });
+            
+        var start = {
+            elem: '#startdate',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(), //设定最小日期为当前日期
+            max: '2099-06-16', //最大日期
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                 end.min = datas; //开始日选好后，重置结束日的最小日期
+                 end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+        var end = {
+            elem: '#enddate',
+            format: 'YYYY-MM-DD',
+            min: laydate.now(),
+            max: laydate.now(+180),
+            //istime: true,
+            istoday: false,
+            choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+         laydate(start);
+         laydate(end);
+         
+         //标题路径改变
+         if($('#taskid').val()==="0"&&$('#indexid').val()==="0"&&$('#tindexid').val()==="0"&&$('#findexid').val()==="0"){
+             $('#business_task_title_top').append("<span>首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 新增</span>");
+             UM.getEditor('editor').setContent('<html>'+
+    '<p><strong>标题</strong></p><p><br/><strong><span style="font-size:12px;font-family: 宋体;color:red"></span></strong><strong></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体">参与说明：&nbsp;</span></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体"><br/></span></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体;color:red">招商要求：</span></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体;color:red">招商区域及数量：</span></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体;color:red">招商产品：</span></strong></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体;color:red">招商详情</span></strong></p>'+
+    '<p style="margin-left:0"><span style="font-size:12px;font-family:宋体;color:red">经销要求：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">主销网点：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">广宣支持：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">品牌定位：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">品牌广告：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">产品卖点：</span></p>'+
+    '<p><span style="font-size:12px;font-family:宋体;color:red">目标消费者：</span><span style="font-size:12px;font-family:宋体"></span></p>'+
+    '<p><strong><span style="font-size:12px;font-family:宋体;color:red">品牌介绍：</span></strong></p>'+
+    '<p><span style="font-size:12px;font-family:宋体"><br/><span></span><span></span></span></p>'+
+    '<p><br/></p>'+
+'</html>',true);
+         }else{
+             $('#business_task_title_top').append("<span>首页&nbsp>&nbsp 任务管理&nbsp>&nbsp 全部任务&nbsp>&nbsp 编辑</span>");
+             UM.getEditor('editor').setContent('{$reModi.four.f_note}',true);
+         }
+         }); 
+          
+      
+	
+    </script>
+    
+
+    </body>
+</html>

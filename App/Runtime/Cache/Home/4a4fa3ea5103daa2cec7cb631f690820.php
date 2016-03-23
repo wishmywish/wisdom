@@ -1,0 +1,227 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*清除默认样式*/
+        body,h1,ul,li,p,img,div,dl,dd,dt,span,a{ margin: 0; padding: 0; list-style: none;}
+        /*公共的样式*/
+       a{ text-decoration: none; color: #646464; margin-left: 20px;}
+        body{ font-family: '宋体'; color: #646464; font-size: 14px;}
+        .fl{ float: left;}
+        .rg{float:right;}
+        /*主体*/
+        .main{overflow: hidden; margin: 20px 80px; }
+        .main dl{ width: 100%;}
+        .main dl dt{width: 60px; height: 60px; border-radius: 30px; background: #ccc; }
+        .main dl dd{ line-height: 60px; margin-left: 10px;}
+        .main ul{ margin-top:20px; width: 100%;}
+        .main ul li{ float: left; margin-right: 25px;width: 100%;}
+        .c_name{font-weight: 100;height: 20px;margin-right: 55px;text-align: center;width: 125px;}
+        .main span{color: red;}
+        .titname{  text-align: right;width: 70px;margin-right: 7px;float: left;}
+        .main input{height:25px;width:200px;}
+        .main select{height:28px;width:200px;}
+        .submit{margin: 30px 5px;border:1px;height: 25px;width: 70px;background: #14bce1;color: #fff;cursor: pointer;}
+        .reset{background-color: #eaeaea;margin: 30px 5px;border:1px;height: 25px;width: 70px;cursor: pointer;color: #000;}
+
+        #show_img img{width: 60px;height: 60px;margin-left: -20px;}
+    </style>
+    <script>
+        var ROOT = "/wisdom";//网站根目录地址,例:/根目录
+        var APP = "/wisdom/Index.php";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "/wisdom/Public/Home/Default/images";
+        var STATIC = "/wisdom/Public/static";
+        var UPFILE = "/wisdom/Public/upfile";
+        var THEME = "/wisdom/Public/Home/Default";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+    </script>
+    <link rel="stylesheet" type="text/css" href="/wisdom/Public/static/css/font-awesome.min.css" />
+</head>
+<body>
+<div class="main">
+    <ul class="fl">
+        <li><label class="titname">客户名称</label><input type="text" style="width: 217px;" readonly="readonly" value="<?php echo ($customerDetail["cusName"]); ?>"/></li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname"><span>*</span>姓名</label><input type="text" id="clientName" value="<?php echo ($linkDetail["clientName"]); ?>" /></li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname">性别</label>
+            <select name="sex" id="clientSex">
+                <option value="0" <?php if($linkDetail['clientSex'] == '0'){echo "selected='selected'";} ?>>男</option>
+                <option value="1" <?php if($linkDetail['clientSex'] == '1'){echo "selected='selected'";} ?>>女</option>
+            </select>
+        </li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname">部门</label><input type="text" id="clientDeptName" value="<?php echo ($linkDetail["clientDeptName"]); ?>" /></li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname"><span>*</span>职位</label><input type="text" id="clientStation" value="<?php echo ($linkDetail["clientStation"]); ?>"/></li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname"><span>*</span>电话</label><input type="text" id="clientPhone" style="width: 217px;" value="<?php echo ($linkDetail["clientPhone"]); ?>"/></li>
+    </ul>
+    <ul class="fl">
+        <li><label class="titname">邮箱</label><input type="text" id="clientEmail" style="width: 217px;" value="<?php echo ($linkDetail["clientEmail"]); ?>"/></li>
+    </ul>
+</div>
+<input type="hidden" id="cusId" value="<?php echo ($customerDetail["cusId"]); ?>">
+<input type="hidden" id="cusName" value="<?php echo ($customerDetail["cusName"]); ?>">
+<input type="hidden" id="clientId" value="<?php echo ($linkDetail["clientId"]); ?>">
+<div style="text-align: center;">
+    <button class="submit" id="s_submit" onclick="doSave();">提交</button>
+    <button class="reset" onclick="reset()">取消</button>
+</div>
+<script type="text/javascript" src="/wisdom/Public/static/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/jquery.form.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/js/jquery.bigautocomplete.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/layer/layer.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/layer/skin/layer.css"></script>
+<script type="text/javascript" src="/wisdom/Public/static/laypage/laypage.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/laydate/laydate.js"></script>
+
+<script type="text/javascript" src="/wisdom/Public/static/js/area.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/cookie.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/js/fun.js"></script>
+<script type="text/javascript" src="/wisdom/Public/Home/Default/js/fun.js"></script>
+<!--ueditor编译器配置文件-->
+
+<script type="text/javascript" src="/wisdom/Public/static/um/umeditor.config.js"></script>
+
+<!--ueditor编译器源码文件-->
+<script type="text/javascript" src="/wisdom/Public/static/um/umeditor.js"></script>
+
+<script type="text/javascript" src="/wisdom/Public/static/um/umeditor.min.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/um/umeditor.config.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/um/umeditor.min.js"></script>
+<script type="text/javascript" src="/wisdom/Public/static/um/lang/zh-cn/zh-cn.js"></script>
+<div style="display: none;"><script src="http://s11.cnzz.com/z_stat.php?id=1256375228&web_id=1256375228" language="JavaScript"></script></div>
+
+ 
+ 
+ 
+<script>
+    function  reset(){
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        parent.layer.close(index);
+    }
+
+    function doSave() {
+        var clientName = $("#clientName").val();
+        var clientSex = $("#clientSex").val();
+        var clientDeptName = $("#clientDeptName").val();
+        var clientStation = $("#clientStation").val();
+        var clientPhone = $("#clientPhone").val();
+        var clientEmail = $("#clientEmail").val();
+        var cusId = $("#cusId").val();
+        var cusName = $("#cusName").val();
+        var clientId = $("#clientId").val();
+
+        var clientNameObj = $("#clientName");
+        if (getValLen(clientNameObj) == 0) {
+            layer.msg("客户名称不能为空",{icon: 8});
+            clientNameObj.focus();
+            return false;
+        } else if (getValLen(clientNameObj) > 64) {
+            layer.msg("客户名称最多为64字",{icon: 8});
+            clientNameObj.focus();
+            return false;
+        }
+
+        var clientDeptNameObj = $("#clientDeptName");
+        if (getValLen(clientDeptNameObj) > 16) {
+            layer.msg("部门最多为16字",{icon: 8});
+            clientDeptNameObj.focus();
+            return false;
+        }
+
+        var clientStationObj = $("#clientStation");
+        if (getValLen(clientStationObj) > 64) {
+            layer.msg("职务最多为64字",{icon: 8});
+            clientStationObj.focus();
+            return false;
+        }
+
+        var clientPhoneObj = $("#clientPhone");
+        if(getValLen(clientPhoneObj) > 0) {
+            if(!$("#clientPhone").val().match(/^((\+?86)|(\(\+86\)))?(13[012356789][0-9]{8}|15[012356789][0-9]{8}|18[02356789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/) && !$("#clientPhone").val().match(/^((\+?0)|(\(\+0\)))?(13[012356789][0-9]{8}|15[012356789][0-9]{8}|18[02356789][0-9]{8}|147[0-9]{8}|1349[0-9]{7})$/) && !$("#clientPhone").val().match(/^(((0\d{3})?\d{7}|(0\d{2})?\d{8}))(\d{2,4})?$/) && !$("#clientPhone").val().match(/^([0-9]{3,4}-)?[0-9]{7,8}$/) ){
+                layer.msg("电话格式不正确",{icon: 8});
+                clientPhoneObj.focus();
+                return false;
+            }
+        }
+
+        var clientEmailObj = $("#clientEmail");
+        if(getValLen(clientEmailObj) > 0) {
+            if(!(/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/).test(clientEmail)){
+                layer.msg("邮箱格式不正确",{icon: 8});
+                clientEmailObj.focus();
+                return false;
+            }
+        }
+        
+        var loadIdx = layer.load(0);
+        $.post("<?php echo U('Office/addOrEditCusClient');?>", {"clientName":clientName, "clientSex":clientSex, "clientDeptName":clientDeptName, "clientStation":clientStation, "clientPhone":clientPhone, "clientEmail":clientEmail, "cusId":cusId, "cusName":cusName, "clientId":clientId}, function(data) {
+
+            if(data.error_code != 'success') {
+                layer.msg(data.error_text,{icon: 8});
+                layer.close(loadIdx);
+            } else {
+                $.post("<?php echo U('Office/searchCusClient');?>", {"cusId":cusId}, function(data) {
+                    var content = '<tr style="height: 25px;">';
+                    content += '<th width="67" height="25">选择</th>';
+                    content += '<th width="155">姓名</th>';
+                    content += '<th width="48">性别</th>';
+                    content += '<th width="150">部门</th>';
+                    content += '<th width="150">职位</th>';
+                    content += '<th width="150">联系电话</th>';
+                    content += '<th width="300">电子邮箱</th>';
+                    content += '</tr>';
+                    // 设定用户列表
+                    $.each(data.list, function(k, v) {
+                        content += '<tr style="height: 50px;">';
+                        content += '<td><input type="checkbox" name="link_checkbox" value="' + v.clientId + '"></td>';
+                        content += '<td><a onclick="editLinkman('+cusId+','+v.clientId+')">' + v.clientName + '</a></td>';
+                        var sex = "男";
+                        if(v.clientSex == '1') {
+                            sex = "女";
+                        }
+                        content += '<td>' + sex + '</td>';
+                        content += '<td>' + v.clientDeptName + '</td>';
+
+                        var clientStation = v.clientStation;
+                        if(!clientStation) {
+                            clientStation = "";
+                        }
+                        var phone = v.phone;
+                        if(!phone) {
+                            phone = "";
+                        }
+                        content += '<td>' + clientStation + '</td>';
+                        content += '<td>' + phone + '</td>';
+                        content += '<td>' + v.clientEmail + '</td>';
+                        content += '</tr>';
+                    });
+
+                    parent.$("#cusClientList").empty();
+                    parent.$("#cusClientList").append(content);
+                    layer.close(loadIdx);
+                    
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                }, 'json');
+            }
+        }, 'json');
+    }
+
+    function getValLen(obj) {
+        return $.trim(obj.val()).length;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<?php
+namespace Taskadmin\Controller;
+use Think\Controller;
+class PowerController extends Controller {
+    
+    public function index(){
+        header("Content-Type: text/html;charset=utf-8");
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+       $this->display();
+
+    }
+
+    //增加用户
+    public function add_user(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $result = M('sysaccess')->select();
+        $this->assign('result', $result);
+        // var_dump($result);exit();
+        $this->display();
+    }
+
+
+    //修改用户
+     public function modi_user(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $reModi = A('Api/Web')->modiUserData();//取要修改的记录数据
+        if($reModi['result']=="000000"){
+            $this->assign('reModi', $reModi);
+
+        }
+        
+        $result = M('sysaccess')->select();
+        $this->assign('result', $result);
+
+// var_dump($reModi);exit();
+
+        $this->display();
+    }
+
+    //增加角色
+    public function add_access(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $map['f_fieldpid'] = 0;
+        $count = M('sysaccessfield')->where($map)->count();
+        $this->assign('count', $count);
+
+        $this->display();
+    }
+
+    //修改角色
+     public function modi_access(){
+        set_theme();
+        A("Taskadmin/Fun")->islogin();//检测是否登录
+
+        $re = M("sysaccessfield")->select();
+
+        $reModi = A('Api/Web')->modiAccessClass();//取要修改的记录数据
+
+        foreach ($re as $key => $value) {
+            $re[$key]['isChecked'] = 0;
+        }
+
+        $result = $reModi['list']['accessvalue'];
+        foreach ($result as $key => $value) {
+            if ($value[0]=='100') {
+                $re[0]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[1]['isChecked'] = 1;
+                    }
+                    if ($value=='b') {
+                        $re[2]['isChecked'] = 1;
+                    }
+                    if ($value=='c') {
+                        $re[3]['isChecked'] = 1;
+                    }
+                    if ($value=='d') {
+                        $re[4]['isChecked'] = 1;
+                    }
+                    if ($value=='e') {
+                        $re[5]['isChecked'] = 1;
+                    }
+                    if ($value=='f') {
+                        $re[6]['isChecked'] = 1;
+                    }
+                    if ($value=='g') {
+                        $re[7]['isChecked'] = 1;
+                    }
+                    if ($value=='h') {
+                        $re[8]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='200') {
+                $re[9]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[10]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='300') {
+                $re[11]['isChecked'] = 1;
+            }
+            if ($value[0]=='400') {
+                $re[12]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[13]['isChecked'] = 1;
+                    }
+                    if ($value=='b') {
+                        $re[14]['isChecked'] = 1;
+                    }
+                    if ($value=='c') {
+                        $re[15]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='500') {
+                $re[16]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[17]['isChecked'] = 1;
+                    }
+                    if ($value=='b') {
+                        $re[18]['isChecked'] = 1;
+                    }
+                    if ($value=='c') {
+                        $re[19]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='600') {
+                $re[20]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[21]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='800') {
+                $re[22]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[23]['isChecked'] = 1;
+                    }
+                    if ($value=='b') {
+                        $re[24]['isChecked'] = 1;
+                    }
+                    if ($value=='c') {
+                        $re[25]['isChecked'] = 1;
+                    }
+                    if ($value=='d') {
+                        $re[26]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='900') {
+                $re[27]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[28]['isChecked'] = 1;
+                    }
+                    if ($value=='b') {
+                        $re[29]['isChecked'] = 1;
+                    }
+                    if ($value=='c') {
+                        $re[30]['isChecked'] = 1;
+                    }
+                    if ($value=='d') {
+                        $re[31]['isChecked'] = 1;
+                    }
+                    if ($value=='e') {
+                        $re[32]['isChecked'] = 1;
+                    }
+                }
+            }
+            if ($value[0]=='1000') {
+                $re[33]['isChecked'] = 1;
+                foreach ($value[1] as $key => $value) {
+                    if ($value=='a') {
+                        $re[34]['isChecked'] = 1;
+                    }
+                }
+            }
+
+        }
+        
+        $relist = A("Fun")->showAccess($re,$idField='f_id',$pidField='f_fieldpid');
+        // pt($re);
+        // var_dump($relist);exit();
+
+        $this->assign('relist', $relist);
+        $this->assign('reModi', $reModi);
+
+        $this->display();
+    }
+
+
+
+}

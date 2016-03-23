@@ -1,0 +1,165 @@
+<include file="Public/home_head" title="智慧运营平台::工作管理" />
+<include file="Public/home_menu" />
+<div class="index">
+    <div class="index_left">
+        <!--个人信息-->
+        <div class="index_left_pro">
+            <div class="pro_img">
+            </div>
+            <div class="pro_info">
+                <ul>
+                    <li style="line-height: 25px; font-size: 16px; font-weight: bold;">罗青钦</li>
+                    <li>岗位</li>
+                    <li>职责</li>
+                </ul>
+            </div>
+        </div>
+        <!--快捷导航-->
+        <div class="index_left_url">
+            <div class="left_url">我发起的</div>
+            <div class="left_url">@我的</div>
+            <div class="left_url">待处理的</div>
+            <div class="left_url">已处理的</div>
+        </div>
+        <!--其他-->
+        <div class="index_left_other">
+            
+        </div>
+        <!--任务记录-->
+        <div class="index_left_count">
+            <div class="index_left_count_1" style="float: left;"><p style="margin-top: 10px;">超期任务</p><p style="font-size: 25px;">0</p></div>
+            <div class="index_left_count_1" style="float: right;"><p style="margin-top: 10px;">未完成任务</p><p style="font-size: 25px;">0</p></div>
+            <div class="index_left_count_2"><p style="padding-top:  10px;">待处理流程</p><p style="font-size: 25px;">0</p></div>
+        </div>
+        <!--积分榜-->
+        <div class="index_left_scoreboard">
+            <div class="index_left_scoreboard_title">
+                <div class="index_left_scoreboard_title_ico"></div>
+                <div class="index_left_scoreboard_title_name">积分榜</div>
+            </div>
+            <div class="index_left_scoreboard_list">
+                <?PHP for($i=0;$i<6;$i++){?>
+                <ul>
+                    <li style="width: 45px;font-size: 25px;font-weight: bold;text-align: right;padding-right: 15px;"><?PHP echo $i+1?></li>
+                    <li style="width: 85px;border-bottom: 1px solid #e6e6e6;padding-left: 15px;">罗青钦</li>
+                    <li style="width: 23px;border-bottom: 1px solid #e6e6e6;color:#f6736b;">4</li>
+                </ul>
+                <?PHP }?>
+            </div>
+        </div>
+    </div>
+    <div class="index_center">
+        <!--输入框-->
+        <div class="index_from">
+            <div class="index_from_button">
+                <ul>
+                    <li>消息</li>
+                    <li>任务</li>
+                    <li>日志</li>
+                    <li>报销</li>
+                    <li>请假</li>
+                </ul>
+            </div>
+            <div class="index_from_text">
+                <textarea name="" style="width: 670px;height: 130px;border-radius: 8px;"></textarea>
+            </div>
+        </div>
+        <!--列表-->
+        <div class="index_list">
+            <div class="index_list_button">
+                <ul>
+                    <li style="margin-left: 15px;">全部</li>
+                    <li>我发起的</li>
+                    <li>@我的</li>
+                    <li>待处理</li>
+                    <li>已处理</li>
+                </ul>
+            </div>
+            <?PHP for($i=0;$i<6;$i++){?>
+            <div class="index_list_list">
+                
+                <ul>
+                    <li style="margin-left: 15px;margin-right: 25px;"><img src="" width="50" height="50" /></li>
+                    <li>
+                        <div class="index_list_list_name"><span>董如赞</span> <span>2015-01-02 00:00:00</span></div>
+                        <div class="index_list_list_note">fdsafdsafdsafdsafdsafdsafdsafdsafdsafd</div>
+                        <div class="index_list_list_time"></div>
+                    </li>
+                </ul>
+                
+            </div>
+            <?PHP }?>
+        </div>
+    </div>
+    <div class="index_right">
+        <!--公告-->
+        <div class="index_right_scoreboard">
+            <div class="index_right_scoreboard_title">
+                <div class="index_right_scoreboard_title_ico"></div>
+                <div class="index_right_scoreboard_title_name">公告通知</div>
+            </div>
+            <div class="index_right_scoreboard_list">
+                <?PHP for($i=0;$i<6;$i++){?>
+                <ul>
+                    <li style="width: 15px;font-size: 14px;font-weight: bold;text-align: right;"><?PHP echo $i+1?></li>
+                    <li style="width: 185px;border-bottom: 1px solid #e6e6e6;padding-left: 5px;">罗青钦</li>
+                </ul>
+                <?PHP }?>
+            </div>
+        </div>
+        <!--快捷-->
+        <div class="index_right_quick">
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">发起电话会议</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">体验中心</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">帮助视频</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">业务指标设置</div>
+            </div>
+            <div class="index_right_line_20"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">签到报表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">考勤报表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">任务图</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">任务统计表</div>
+            </div>
+            <div class="index_right_line_1"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">员工使用动态图</div>
+            </div>
+            <div class="index_right_line_20"></div>
+            <div class="index_right_link">
+                <div class="index_right_nb_30" style="float: left;"><div class="">图</div></div>
+                <div class="index_right_nb_24" style="float: left;">栏目设置</div>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

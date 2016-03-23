@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>导入员工</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var ROOT = "__ROOT__";//网站根目录地址,例:/根目录
+        var APP = "__APP__";//当前应用（入口文件）地址,例:/根目录/index.php
+        var APP_NAME = "__APP_NAME__";//网站应用根目录,例:/根目录/应用目录
+        var IMG = "__IMG__";
+        var STATIC = "__STATIC__";
+        var UPFILE = "__UPFILE__";
+        var THEME = "__THEME__";
+        var bigMenuIndex = 0; //大类LI下标
+        var smallMenuIndex = 0;//小类LI下标
+    </script>
+    <js href="__STATIC__/jquery-1.11.2.min.js" />
+    <!--cookie插件-->
+    <js href="__STATIC__/cookie.js" />
+    <js href="__JS__/fun.js"/>
+    <js href="__JS__/fg.menu.js"/>
+    <css href="__STATIC__/css/bootstrap.min.css" />
+    <css href="__STATIC__/css/font-awesome.min.css" />
+    <css href="__STATIC__/layer/skin/layer.css" />
+    <js href="__STATIC__/layer/layer.js" />
+    <style>
+
+    </style>
+</head>
+<body>
+<div style="padding:20px;">
+    <a href="__PUBLIC__/upfile/download/userList.xls">下载导入样例</a>
+    <br>
+    <br>
+    <form method="post" action="{:U('Group/import_do')}" enctype="multipart/form-data" name="frm1">
+        <input type="file" style="height:50px;" value="上传文件" name="filename">
+        <input type="submit" value="导入" name="submit">
+    </form>
+</div>
+</body>
+
+</html>

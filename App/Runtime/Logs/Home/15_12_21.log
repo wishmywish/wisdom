@@ -1,0 +1,2241 @@
+[ 2015-12-21T09:14:59+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.605035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.605035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.121007s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.121007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.042002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.042002s ]
+
+[ 2015-12-21T09:15:01+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T09:15:17+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T09:15:18+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2015-12-21T11:25:49+08:00 ] ::1 /wisdom/index.php/Home/Business/review
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2015-12-21T11:26:08+08:00 ] ::1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2015-12-21T11:26:09+08:00 ] ::1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T11:26:09+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2015-12-21T11:26:09+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-21T11:26:28+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:26:31+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2015-12-21T11:26:33+08:00 ] ::1 /wisdom/index.php/Home/Business/review
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:31:39+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T11:31:44+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=671&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0060s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 0 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 671 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.008000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.288017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.290017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017001s ]
+
+[ 2015-12-21T11:31:56+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=671&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 0 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 671 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T11:32:06+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-12-21T11:32:10+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=671&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=266 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=74 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0030s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 0 LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 671 LIMIT 1   [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.247014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.249015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-12-21T11:32:33+08:00 ] ::1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2015-12-21T11:32:34+08:00 ] ::1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T11:32:34+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2015-12-21T11:32:34+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T11:33:20+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:33:26+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11262 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 93 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 96 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 113 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 115 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 273 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 274 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 288 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 384 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 385 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2015-12-21T11:34:27+08:00 ] ::1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-12-21T11:34:27+08:00 ] ::1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+
+[ 2015-12-21T11:34:28+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.146009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017001s ]
+
+[ 2015-12-21T11:34:28+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:34:49+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-12-21T11:36:52+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html?0.5504716837313026
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T11:36:55+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T11:36:58+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11270 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+NOTIC: [8] Undefined variable: access_array D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 93 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 96 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 113 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 115 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 273 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 274 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 288 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 384 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp\www\wisdom\App\Runtime\Cache\Home\bda83ac39a4bf4ace6f94f25389ef6c6.php 第 385 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018001s ]
+
+[ 2015-12-21T11:37:02+08:00 ] ::1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T11:37:02+08:00 ] ::1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:37:03+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.221012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.221012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.021001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.021001s ]
+
+[ 2015-12-21T11:37:03+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2015-12-21T11:37:42+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T11:37:42+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.112006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.032002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.033002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018001s ]
+
+[ 2015-12-21T11:37:46+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:37:50+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T11:43:34+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-12-21T11:44:52+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T11:44:56+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2015-12-21T11:45:08+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2015-12-21T11:50:33+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.260015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.261015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.039002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2015-12-21T11:54:07+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2015-12-21T11:55:16+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017001s ]
+
+[ 2015-12-21T11:55:22+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd?taskid=677&tasktypeid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=677 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9680 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=677 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 898 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 899 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 900 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 901 行.
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Undefined index: detailCount D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined index: detail D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.231013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.232013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.033002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.035002s ]
+
+[ 2015-12-21T11:55:34+08:00 ] ::1 /wisdom/index.php/Home/Promotion/trackAudit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T11:55:37+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T11:55:41+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.184010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2015-12-21T11:56:17+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 281 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 285 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 287 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 306 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 311 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 313 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 317 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 327 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 332 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 336 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 412 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 415 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 417 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 433 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 438 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 440 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 444 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 468 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 474 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 524 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 525 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 526 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 539 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 652 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 664 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 678 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 682 行.
+NOTIC: [8] Undefined variable: reModi D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 683 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.184011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.184011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T11:56:56+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.005000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.014001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.204012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.024001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+
+[ 2015-12-21T11:57:03+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd?taskid=678&tasktypeid=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=678 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9683 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=678 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 906 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 907 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 908 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 909 行.
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_surveytaskdetail` WHERE ( f_taskid=678 )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.370021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.370021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2015-12-21T11:57:13+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014000s ]
+
+[ 2015-12-21T11:57:19+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=666&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022002s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=666 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 2 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_tradeID=2 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 666 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.003000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.240013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.240013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016001s ]
+
+[ 2015-12-21T11:58:18+08:00 ] ::1 /wisdom/index.php/Home/Business/show_taskbanner?imgsrc=/wisdom/Public/upfile/20151221/567778d81b3f3.jpg&tasktitle=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&coin=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2015-12-21T11:58:24+08:00 ] ::1 /wisdom/index.php/Home/Business/show_taskbanner?imgsrc=/wisdom/Public/upfile/20151221/567778d81b3f3.jpg&tasktitle=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&coin=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2015-12-21T11:58:28+08:00 ] ::1 /wisdom/index.php/Home/Business/show_tasklogo?imgsrc=/wisdom/Public/upfile/20151221/567778b93ef2e.jpg&tasktitle=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&pro_Descrip=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&coin=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2015-12-21T11:58:44+08:00 ] ::1 /wisdom/index.php/Home/Business/show_tasklogo?imgsrc=/wisdom/Public/upfile/20151221/567778b93ef2e.jpg&tasktitle=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&pro_Descrip=%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E5%85%AC%E5%8F%B8%E6%8B%9B%E5%95%86&coin=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-12-21T12:04:32+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T12:04:38+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=666&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0020s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=666 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_tradeID=2 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 666 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 339 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T12:05:19+08:00 ] ::1 /wisdom/index.php/Home/Promotion/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2015-12-21T12:05:23+08:00 ] ::1 /wisdom/index.php/Home/Promotion/taskAdd?taskid=678&tasktypeid=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=10862 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=112 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=3 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=678 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=9683 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_tasksmallinfo` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tasksmallinfo` WHERE ( f_taskid=678 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 906 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 907 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 908 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 909 行.
+SQL: SHOW COLUMNS FROM `t_surveytaskdetail` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_surveytaskdetail` WHERE ( f_taskid=678 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 291 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filepath - assumed 'f_filepath' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_name - assumed 'f_name' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+NOTIC: [8] Use of undefined constant f_filename - assumed 'f_filename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\bcd77696eb869a1f1d7c6b2b2cd529ff.php 第 420 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-12-21T12:05:30+08:00 ] ::1 /wisdom/index.php/Home/Api/outLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-12-21T12:05:30+08:00 ] ::1 /wisdom/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-12-21T12:05:30+08:00 ] ::1 /wisdom/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2015-12-21T12:05:31+08:00 ] ::1 /wisdom/index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T12:07:05+08:00 ] ::1 /wisdom/index.php/Home/Login/check_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T12:07:09+08:00 ] ::1 /wisdom/index.php/Home/Business/task
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11271 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2015-12-21T12:07:15+08:00 ] ::1 /wisdom/index.php/Home/Business/taskAdd?taskid=671&tasktypeid=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `t_user_role` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_user_role` WHERE ( f_user_id=11271 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_role` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_role` WHERE ( f_id=73 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: headLogo D:\wamp\www\wisdom\App\Home\Controller\CommonController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `t_syscolumn` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=0 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn` WHERE ( F_SYS_COLUMN_PID=2 and F_SYS_COLUMN_STATE=1 ) ORDER BY F_SYS_COLUMN_SORT  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_syscolumn`  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtareaqty` [ RunTime:0.0040s ]
+SQL: SELECT SUM(f_qty) AS tp_sum FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_task` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_task` WHERE ( f_tid=671 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_files` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_files` WHERE ( f_id=0 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `t_taskmtbaseinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtbaseinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_tradetype` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE `f_tradeID` = 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_taskmtareaqty` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtgoodsdetail` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtgoodsdetail` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `t_taskmtdetailedinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtdetailedinfo` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0050s ]
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 938 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 939 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 940 行.
+NOTIC: [8192] Function ereg_replace() is deprecated D:\wamp\www\wisdom\App\Api\Controller\WebController.class.php 第 941 行.
+SQL: SHOW COLUMNS FROM `t_taskmtattach` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE ( f_taskid=671 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=0 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=1 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=3 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=14 )  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=15 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=16 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=17 )  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `t_tradetype` WHERE ( f_parentID=19 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_taskmtattach` WHERE `f_taskid` = 671 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradeid - assumed 'f_tradeid' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Use of undefined constant f_tradename - assumed 'f_tradename' D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 334 行.
+NOTIC: [8] Undefined variable: supervisonUser D:\wamp\www\wisdom\App\Runtime\Cache\Home\1aefbfb5a367d4ed8e3c326b05d05342.php 第 722 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2015-12-21T17:23:00+08:00 ] ::1 /wisdom/Index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T17:23:03+08:00 ] ::1 /wisdom/Index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
+
+[ 2015-12-21T17:23:12+08:00 ] ::1 /wisdom/Index.php/Home/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Admin
+
+[ 2015-12-21T17:23:25+08:00 ] ::1 /wisdom/Index.php/Home/Office/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-12-21T17:23:25+08:00 ] ::1 /wisdom/Index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-12-21T17:23:25+08:00 ] ::1 /wisdom/Index.php/Home/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

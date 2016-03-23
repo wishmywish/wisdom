@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+/*清除默认样式*/
+body, h1, ul, li, p, img, div, dl, dd, dt, span, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*公共的样式*/
+body {
+    font-family: '宋体';
+    color: #646464;
+    font-size: 14px;
+}
+.main {
+    overflow: hidden;
+    margin: 20px 0 0 20px;
+    height: 380px;
+}
+.submitBtn {
+    background-color: #409ad6;
+    border: 1px solid #409ad6;
+    border-radius: 3px;
+    padding: 0 20px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 20px;
+}
+.resetBtn {
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    padding: 0 20px;
+    line-height: 28px;
+    cursor: pointer;
+    color: #000;
+}
+.menuTree {
+    overflow-y: scroll;
+    width: 290px;
+    height: 350px;
+    border: 1px #A0A0A4 outset;
+}
+</style>
+</head>
+<body>
+    <div class="main">
+        <div id="menuTree" class="menuTree"></div>
+    </div>
+    <div style="text-align: center;margin-bottom: 30px;">
+        <button class="submitBtn" onclick="doSubmit();">确定</button>
+        <button class="resetBtn" onclick="doReset();">关闭</button>
+    </div>
+    <include file="Public/loadjs" />
+    <css href="__JS__/EasyTree/ui.easytree.css" />
+    <js href="__JS__/EasyTree/jquery.easytree.min.js" />
+    <script>
+        $(function(){
+            // 生成树形菜单
+            $('#menuTree').easytree({
+                data: {$area_list},
+                // checkIcons: true,
+                radioIcons: true,
+                checkFunction: "doCheck(this);",
+            });
+
+            // 初始化右侧选择数据
+            initCheck();
+        });
+
+        /*初始化右侧选择数据*/
+        function initCheck() {
+            var hidcusArea = '{$hidcusArea}';
+            if (hidcusArea == "") {
+                return;
+            }
+            var ids = hidcusArea.split(",");
+
+            for (var i = 0; i < ids.length; i++) {
+                $(".easyChk[value='" + ids[i] + "']").attr("checked", "checked");
+            }
+        }
+
+        /*点击确定按钮*/
+        function doSubmit() {
+            var hidcusArea = "";
+            var cusArea = "";
+            $(".easyChk:checked").each(function(k, v) {
+                var childChk = $("[id^='" + v.id + "']");
+                if (childChk.length == 1) {
+                    if (hidcusArea.length > 0) {
+                    	hidcusArea += ",";
+                    	cusArea += ",";
+                    }
+                    hidcusArea += $(v).val();
+                    cusArea += $(v).attr("rel");
+                }
+            });
+
+            // 将部门名设定到父画面
+            parent.$("#cusArea").val(cusArea);
+            // 将部门ID设定到父画面
+            parent.$("#hidcusName").val(cusArea);
+            parent.$("#hidcusArea").val(hidcusArea);
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+
+        /*点击关闭按钮*/
+        function doReset() {
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+
+        function doCheck(obj) {
+            $("[id^='" + obj.id + "']").prop("checked", $(obj).is(":checked"));
+        }
+    </script>
+</body>
+</html>

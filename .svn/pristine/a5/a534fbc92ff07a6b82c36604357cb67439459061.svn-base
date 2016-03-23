@@ -1,0 +1,36 @@
+<include file="Public/home_head" title="智慧招商平台::首页"/>
+<include file="Public/home_menu" />
+
+                <div class="content_right"></div>
+            </div>
+
+        </div>
+        <div class="k0"></div>
+        <include file="Public/footer"/>
+    </div>
+
+
+
+<script>
+    $(function(){
+        $('#lanPos').css('top',$('.hover').offset().top-150);
+        $('.menu_ul .menu_li').hover(function(){
+            $('#lanPos').css('top',$(this).offset().top-150);
+        },function(){
+            $('#lanPos').css('top',$('.hover').offset().top-150);
+        })
+
+        $('.menu_ul .menu_li').click(function(){
+            for(var i=0;i<$('.menu_ul .menu_li').size();i++){
+                if(this==$('.menu_ul .menu_li').get(i)){
+                    $('.menu_ul .menu_li').eq(i).children('a').addClass('hover');
+                }else{
+                    $('.menu_ul .menu_li').eq(i).children('a').removeClass('hover');
+                }
+            }
+        })
+
+    })
+</script>
+</body>
+</html>
